@@ -38,9 +38,9 @@ risk:
   correlation_threshold: 0.85
   correlated_size_factor: 0.5   # halve the size if it moves with something we already hold
   max_correlated_positions: 2   # reject if 2 held positions already move with it
-  # PLACEHOLDERS - Quincy, please confirm these two:
-  max_daily_loss_pct: 8     # stop opening trades for the day after losing 8% today
-  max_total_loss_pct: 25    # halt the strategy if it is down 25% from money put in
+  # Loss limits confirmed by Quincy on 2026-10-24
+  max_daily_loss_pct: 10    # stop opening trades for the day after losing 10% today
+  max_total_loss_pct: 40    # halt the strategy if it is down 40% from money put in
   min_order_usd: 2
 
 decision:

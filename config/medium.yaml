@@ -36,9 +36,9 @@ risk:
   correlation_threshold: 0.85
   correlated_size_factor: 0.5
   max_correlated_positions: 1
-  # PLACEHOLDERS - Quincy, please confirm these two:
-  max_daily_loss_pct: 3
-  max_total_loss_pct: 10
+  # Loss limits confirmed by Quincy on 2026-10-24
+  max_daily_loss_pct: 3     # stop opening trades for the day after losing 3% today
+  max_total_loss_pct: 15    # halt the strategy if it is down 15% from money put in
   min_order_usd: 2
 
 decision:

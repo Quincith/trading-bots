@@ -26,10 +26,10 @@ The code is the same for both. Each strategy has its own settings file and its o
 | Candles it reads | 15 minutes | 1 hour |
 | Looks for new trades | every 30 min | every 2 hours |
 | Buys when | Decision says BUY with 55%+ confidence | Decision says BUY with 70%+ confidence |
-| Daily loss limit ⚠️ | 8% (placeholder) | 3% (placeholder) |
-| Total loss limit ⚠️ | 25% (placeholder) | 10% (placeholder) |
+| Daily loss limit | 10% | 3% |
+| Total loss limit | 40% | 15% |
 
-⚠️ **The loss limits are placeholders until you confirm them.** When the daily limit is hit, no new trades are opened until the next day (UTC). When the total limit is hit (measured against the money you put in), the strategy halts until you resume it.
+When the daily limit is hit, no new trades are opened until the next day (UTC). When the total limit is hit (measured against the money you put in), the strategy halts until you resume it.
 
 Every trade is sized as a percent of the account, so the bots scale up as you add money.
 
