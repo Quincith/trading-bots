@@ -1,0 +1,56 @@
+# AGGRESSIVE strategy: bigger bets, short holds (hours).
+# Runs in its own Alpaca paper account so its results stay separate.
+# All percents are percent of the account's current equity.
+
+name: aggressive
+# GitHub secret names that hold this account's Alpaca paper keys.
+alpaca_key_secret: ALPACA_AGGRESSIVE_KEY_ID
+alpaca_secret_secret: ALPACA_AGGRESSIVE_SECRET_KEY
+
+markets:
+  crypto: [BTC/USD, ETH/USD, SOL/USD, AVAX/USD, LINK/USD, DOGE/USD, LTC/USD, XRP/USD]
+  # Add stock tickers here to trade stocks too (only during market hours), e.g. [NVDA, AMD, TSLA]
+  stocks: []
+
+scout:
+  scan_every_minutes: 30  # how often to look for new trades (exits are checked every run)
+  bar_timeframe: 15Min      # candle size the bots look at
+  lookback_bars: 200        # how much history to load
+  volume_window: 20         # compare the latest volume to this many bars before it
+  min_volume_ratio: 1.5     # volume must be at least 1.5x normal
+  min_move_pct: 1.0         # price must have moved at least 1% over the last few bars
+  move_bars: 4
+  max_candidates: 3         # only the best 3 go on to the other bots
+
+charts:
+  ema_fast: 20
+  ema_slow: 50
+  swing_window: 5           # bars on each side used to find support / resistance
+  atr_period: 14
+  stop_atr_mult: 1.5        # stop goes 1.5 ATR below entry (or just under support)
+  min_reward_risk: 1.5      # target must pay at least 1.5x what the stop risks
+
+risk:
+  risk_per_trade_pct: 7.5   # lose at most ~7.5% of the account if the stop is hit
+  max_position_pct: 40      # one position can be at most 40% of the account
+  max_total_exposure_pct: 90
+  max_open_positions: 3
+  correlation_threshold: 0.85
+  correlated_size_factor: 0.5   # halve the size if it moves with something we already hold
+  max_correlated_positions: 2   # reject if 2 held positions already move with it
+  # PLACEHOLDERS - Quincy, please confirm these two:
+  max_daily_loss_pct: 8     # stop opening trades for the day after losing 8% today
+  max_total_loss_pct: 25    # halt the strategy if it is down 25% from money put in
+  min_order_usd: 2
+
+decision:
+  buy_only_on: BUY
+  min_confidence: 0.55
+
+exits:
+  max_hold_hours: 12
+  move_stop_to_breakeven_at_r: 1.0   # once up 1x the risk, move the stop to the entry price
+
+ai:
+  model: claude-opus-5-5
+  effort: low
