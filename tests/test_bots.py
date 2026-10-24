@@ -145,3 +145,7 @@ def test_alpaca_parses_bars_and_positions():
     df = a.get_bars(["BTC/USD"], "15Min", 100, "crypto")["BTC/USD"]
     assert list(df.columns) == ["open", "high", "low", "close", "volume"] and df["close"].iloc[-1] == 1.5
     assert a.get_positions()[0]["symbol"] == "BTCUSD"
+
+
+def test_ai_check_without_key():
+    assert "not set" in NO_AI.check()

@@ -27,6 +27,19 @@ class AI:
     def enabled(self) -> bool:
         return self.client is not None
 
+    def check(self) -> str:
+        """Free call that confirms the key works, so a bad key shows up in the very first run."""
+        if not self.client:
+            return "Claude key not set: News, Sentiment and Decision are using simple rules."
+        import anthropic
+        try:
+            self.client.models.retrieve(self.model)
+            return f"Claude key works ({self.model})."
+        except anthropic.AuthenticationError:
+            return "Claude key was REJECTED. Make a new key and update the ANTHROPIC_API_KEY secret."
+        except anthropic.APIError as e:
+            return f"Could not check the Claude key: {e.__class__.__name__}."
+
     def ask(self, system: str, prompt: str, schema: dict) -> dict | None:
         """Ask Claude for JSON matching `schema`. Returns None if Claude is unavailable or declines."""
         if not self.client:

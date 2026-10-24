@@ -81,10 +81,9 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     ai = AI(cfg["ai"]["model"], cfg["ai"].get("effort", "low"))
-    if not ai.enabled:
-        logging.warning("ANTHROPIC_API_KEY not set: News, Sentiment and Decision will use simple rules.")
     dry = args.dry_run or truthy(os.environ.get("DRY_RUN"))
     res = pipeline.run(cfg, broker, ai, store, kill_switch=truthy(os.environ.get("TRADING_HALTED")), dry_run=dry, now=now)
+    res.notes.insert(0, ai.check())
     text = report.render(res, store, dry)
     (store.dir / "summary.md").write_text(text)
     write_summary(text)
