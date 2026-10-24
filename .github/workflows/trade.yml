@@ -1,0 +1,58 @@
+name: Trade (paper)
+
+# Runs both strategies every 30 minutes. Scheduled runs only start once this file is on the main branch.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      strategy:
+        description: Which strategy to run
+        type: choice
+        options: [both, aggressive, medium]
+        default: both
+      dry_run:
+        description: Dry run (think, but don't place orders)
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bot-data
+  cancel-in-progress: false
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      ALPACA_AGGRESSIVE_KEY_ID: ${{ secrets.ALPACA_AGGRESSIVE_KEY_ID }}
+      ALPACA_AGGRESSIVE_SECRET_KEY: ${{ secrets.ALPACA_AGGRESSIVE_SECRET_KEY }}
+      ALPACA_MEDIUM_KEY_ID: ${{ secrets.ALPACA_MEDIUM_KEY_ID }}
+      ALPACA_MEDIUM_SECRET_KEY: ${{ secrets.ALPACA_MEDIUM_SECRET_KEY }}
+      TRADING_HALTED: ${{ vars.TRADING_HALTED }}
+      DRY_RUN: ${{ inputs.dry_run }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Load saved bot data
+        run: ./scripts/data-branch.sh pull
+      - name: Aggressive
+        if: ${{ github.event_name == 'schedule' || inputs.strategy != 'medium' }}
+        run: python -m tradebots run --strategy aggressive
+        continue-on-error: true
+      - name: Medium
+        if: ${{ github.event_name == 'schedule' || inputs.strategy != 'aggressive' }}
+        run: python -m tradebots run --strategy medium
+        continue-on-error: true
+      - name: Save bot data
+        if: always()
+        run: ./scripts/data-branch.sh push "run ${{ github.run_number }}"

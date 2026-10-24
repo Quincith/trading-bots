@@ -1,0 +1,61 @@
+name: Control panel
+
+# Manual buttons: Actions tab -> "Control panel" -> Run workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: What to do
+        type: choice
+        options:
+          - log a deposit
+          - log a withdrawal
+          - close all positions
+          - resume after a loss-limit halt
+      strategy:
+        description: Which strategy account
+        type: choice
+        options: [aggressive, medium]
+      amount:
+        description: Dollar amount (deposits and withdrawals only)
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bot-data
+  cancel-in-progress: false
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ALPACA_AGGRESSIVE_KEY_ID: ${{ secrets.ALPACA_AGGRESSIVE_KEY_ID }}
+      ALPACA_AGGRESSIVE_SECRET_KEY: ${{ secrets.ALPACA_AGGRESSIVE_SECRET_KEY }}
+      ALPACA_MEDIUM_KEY_ID: ${{ secrets.ALPACA_MEDIUM_KEY_ID }}
+      ALPACA_MEDIUM_SECRET_KEY: ${{ secrets.ALPACA_MEDIUM_SECRET_KEY }}
+      ACTION: ${{ inputs.action }}
+      STRATEGY: ${{ inputs.strategy }}
+      AMOUNT: ${{ inputs.amount }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: ./scripts/data-branch.sh pull
+      - name: Do it
+        run: |
+          case "$ACTION" in
+            "log a deposit")       python -m tradebots deposit --strategy "$STRATEGY" --amount "$AMOUNT" ;;
+            "log a withdrawal")    python -m tradebots deposit --strategy "$STRATEGY" --amount "-$AMOUNT" ;;
+            "close all positions") python -m tradebots close-all --strategy "$STRATEGY" ;;
+            "resume after a loss-limit halt") python -m tradebots resume --strategy "$STRATEGY" ;;
+          esac
+      - if: always()
+        run: ./scripts/data-branch.sh push "control - $ACTION ($STRATEGY)"
