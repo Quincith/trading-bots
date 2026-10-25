@@ -28,6 +28,8 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 - No trades.
 - Holding: nothing, all cash.
 
+## Copycat: no runs logged on 2026-10-25.
+
 ## Words to know
 
 - **account value**: What everything in the account is worth right now: cash plus coins, at today's prices.
