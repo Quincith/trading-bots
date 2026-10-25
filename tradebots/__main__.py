@@ -20,6 +20,7 @@ from . import pipeline, report
 from .ai import AI
 from .alpaca import AlpacaPaper
 from .store import Store
+from . import runlog
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -93,6 +94,7 @@ def main(argv: list[str] | None = None) -> int:
     res.notes.insert(0, ai.check())
     text = report.render(res, store, dry)
     (store.dir / "summary.md").write_text(text)
+    runlog.save(res, store, dry)
     write_summary(text)
     return 0
 

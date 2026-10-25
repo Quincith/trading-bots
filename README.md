@@ -69,6 +69,20 @@ In this repo, go to **Settings → Secrets and variables → Actions → New rep
 
 Profit is always measured as **account value minus the money you put in**, so adding money never looks like a gain. The "time-weighted return" also ignores when deposits happened, which makes it the fair number for comparing the two strategies.
 
+## Bot World page and daily recap
+
+After every run, the bots rebuild a web page that shows the crew at work: each bot's latest report, a replay of the last run, the account value chart, recent trades, and a **daily recap** written for beginners (a short description, then key-takeaway bullets, plus a "Words to know" list).
+
+- **Where:** your GitHub Pages address, `https://quincith.github.io/trading-bots/` (after the one-time setup below).
+- **Effects:** a green laser and a party on a winning trade, tomatoes on a losing one. Use the **Win / Loss / Buy** buttons under the ship to show them off any time. Sound is off until you press **Sound**.
+- **Accounts:** the switch at the top flips between Aggressive (light-blue denim crew) and Medium (dark-blue denim crew).
+- **Recaps as files:** `recaps/<date>.md` and `recaps/latest.md` on the `bot-data` branch.
+- **Without Pages:** the same page is saved as `world/index.html` on the `bot-data` branch. Download it and open it in a browser.
+
+One-time setup: the repository must be **public** (GitHub Pages is free only for public repositories), then go to **Settings → Pages → Build and deployment → Source** and pick **GitHub Actions**. The page appears after the next run.
+
+The characters are original designs. They aren't copies of any movie characters, so the page is safe to share.
+
 ## Buttons you might need
 
 All of these are under **Actions → Control panel → Run workflow**:

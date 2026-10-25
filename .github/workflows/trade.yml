@@ -55,11 +55,38 @@ jobs:
         if: ${{ github.event_name == 'schedule' || inputs.strategy != 'aggressive' }}
         run: python -m tradebots run --strategy medium
         continue-on-error: true
+      - name: Build the bot world page and daily recap
+        if: always()
+        run: python -m tradebots.world
+        continue-on-error: true
       - name: Save bot data
         if: always()
         run: ./scripts/data-branch.sh push "run ${{ github.run_number }}"
+      - name: Upload the bot world page
+        if: always()
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: data/world
+        continue-on-error: true
       - name: Report failures
         if: ${{ steps.aggressive.outcome == 'failure' || steps.medium.outcome == 'failure' }}
         run: |
           echo "One of the strategies failed. Open its step above to see why." >> "$GITHUB_STEP_SUMMARY"
           exit 1
+
+  # Publishes the page to GitHub Pages. Needs Settings > Pages > Source: "GitHub Actions" (one time).
+  # It never turns a trading run red: if Pages isn't set up yet, this job just shows a warning.
+  world:
+    needs: trade
+    if: always()
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
