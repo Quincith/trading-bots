@@ -246,8 +246,27 @@ def equity_series(store: Store, max_points: int = 400) -> list[list]:
     return [[r["time"], float(r["equity"]), float(r["net_deposits"])] for r in picked]
 
 
+def levels(store: Store, days: list[str]) -> tuple[int, dict]:
+    """How many runs this account has done, and each bot's level for its desk name plate.
+
+    Every bot earns a point for each run it checks in on, and extra points for real work:
+    Scout for each scan, the analysts for each coin or stock they review, Decision for each buy.
+    """
+    runs, xp = 0, {k: 0 for k, *_ in CREW}
+    for d in days:
+        for r in runlog.load_day(store, d):
+            runs += 1
+            seen = len(r.get("candidates") or [])
+            xp["scout"] += 2 if r.get("scanned") or r.get("filings") else 1
+            for k in ("charts", "news", "sentiment", "risk", "decision"):
+                xp[k] += 1 + 3 * seen
+            xp["decision"] += 5 * len(r.get("buys") or [])
+    return runs, {k: 1 + v // 12 for k, v in xp.items()}
+
+
 def strategy_data(store: Store, cfg: dict, days_back: int = 7) -> dict:
     days = runlog.days(store)
+    run_count, lv = levels(store, days)
     latest = None
     for d in reversed(days):
         runs = runlog.load_day(store, d)
@@ -272,6 +291,8 @@ def strategy_data(store: Store, cfg: dict, days_back: int = 7) -> dict:
         "latest": latest,
         "stations": copycat_stations(latest, cfg) if copy else stations(latest, cfg),
         "captain": captain(latest, cfg["name"]),
+        "runs": run_count,
+        "levels": lv,
         "event": event(store, latest),
         "equity": equity_series(store),
         "trades": store.rows("trades.csv")[-25:][::-1],

@@ -50,6 +50,8 @@ def test_daily_recap_and_world_page(tmp_path):
     html = page.read_text()
     assert "/*__DATA__*/" not in html and '"aggressive"' in html and '"medium"' in html
     assert "/*__PIXELWORLD__*/" not in html and "PixelWorld" in html
+    data = world.strategy_data(store, AGG)
+    assert data["runs"] == 2 and data["levels"]["scout"] >= 1 and set(data["levels"]) == {k for k, *_ in world.CREW}
     assert (tmp_path / "recaps" / "2026-10-24.md").read_text().count("Key takeaways") == 2
 
 
