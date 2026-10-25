@@ -1,0 +1,130 @@
+{
+ "time": "2026-10-25T23:25:27+00:00",
+ "coins": {
+  "BTC": {
+   "recent": 1,
+   "before": 5,
+   "buzz": 1.0,
+   "tone": -1,
+   "headlines": [
+    "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
+   ],
+   "trending": 14,
+   "rule_score": 0.05,
+   "score": 0.1,
+   "note": "Bitcoin ETFs snapped a two-week outflow streak, a small positive, but the headline sentiment is mostly generic."
+  },
+  "ETH": {
+   "recent": 1,
+   "before": 1,
+   "buzz": 5.0,
+   "tone": -1,
+   "headlines": [
+    "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
+   ],
+   "trending": null,
+   "rule_score": -0.1,
+   "score": -0.5,
+   "note": "About $1 billion in ETH ETF outflows and high buzz point to building bearish pressure."
+  },
+  "SOL": {
+   "recent": 0,
+   "before": 1,
+   "buzz": 0.0,
+   "tone": 0,
+   "headlines": [],
+   "trending": null,
+   "rule_score": 0.0,
+   "score": 0.0,
+   "note": "No new headlines in recent hours, so nothing new."
+  },
+  "AVAX": {
+   "recent": 0,
+   "before": 0,
+   "buzz": 0.0,
+   "tone": 0,
+   "headlines": [],
+   "trending": null,
+   "rule_score": 0.0,
+   "score": 0.0,
+   "note": "No new headlines in recent hours, so nothing new."
+  },
+  "LINK": {
+   "recent": 0,
+   "before": 0,
+   "buzz": 0.0,
+   "tone": 0,
+   "headlines": [],
+   "trending": null,
+   "rule_score": 0.0,
+   "score": 0.0,
+   "note": "No new headlines in recent hours, so nothing new."
+  },
+  "DOGE": {
+   "recent": 0,
+   "before": 0,
+   "buzz": 0.0,
+   "tone": 0,
+   "headlines": [],
+   "trending": null,
+   "rule_score": 0.0,
+   "score": 0.0,
+   "note": "No new headlines in recent hours, so nothing new."
+  },
+  "LTC": {
+   "recent": 0,
+   "before": 0,
+   "buzz": 0.0,
+   "tone": 0,
+   "headlines": [],
+   "trending": null,
+   "rule_score": 0.0,
+   "score": 0.0,
+   "note": "No new headlines in recent hours, so nothing new."
+  },
+  "XRP": {
+   "recent": 0,
+   "before": 1,
+   "buzz": 0.0,
+   "tone": 0,
+   "headlines": [],
+   "trending": 7,
+   "rule_score": 0.15,
+   "score": 0.0,
+   "note": "No headlines in recent hours despite a top-10 search rank, so watch for unexplained interest."
+  }
+ },
+ "themes": [
+  {
+   "title": "Ethereum ETF outflows pressuring ETH",
+   "note": "Ethereum ETFs saw about $1 billion in October outflows, and ETH buzz is 5x normal, so this is a bearish signal.",
+   "coins": [
+    "ETH"
+   ]
+  },
+  {
+   "title": "Glamsterdam upgrade progress",
+   "note": "AI-assisted rescue of ETH's Glamsterdam fork is a mildly positive development, but details are thin and it could be recycled hype.",
+   "coins": [
+    "ETH"
+   ]
+  },
+  {
+   "title": "Tokenization and digital euro regulation",
+   "note": "Regulators in Latvia, the EU and the UK are moving on tokenization and crypto rules, a slow-building backdrop rather than a sharp catalyst.",
+   "coins": [
+    "BTC",
+    "ETH",
+    "LINK"
+   ]
+  }
+ ],
+ "trending_elsewhere": [],
+ "headlines": 11,
+ "sources": {
+  "Alpaca/Benzinga": 4,
+  "crypto news sites": 7,
+  "CoinGecko trending": 15
+ },
+ "ai_time": "2026-10-25T23:25:27+00:00"
+}
