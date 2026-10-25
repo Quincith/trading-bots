@@ -30,7 +30,21 @@ def render(res: RunResult, store: Store, dry_run: bool) -> str:
         out += ["## Open trades managed"] + [f"- {x}" for x in res.exits] + [""]
     if res.buys:
         out += ["## New buys"] + [f"- {x}" for x in res.buys] + [""]
-    if res.candidates:
+    if res.filings:
+        f = res.filings
+        out += ["## Insider buys on the watchlist", "",
+                f"Read {f['read']} new SEC filings this run. {f['watchlist']} stocks on the watchlist.", ""]
+        if f["top"]:
+            out += ["| Stock | Score | Who bought |", "|---|---|---|"]
+            out += [f"| {t['ticker']} ({t['company']}) | {t['score']} | {t['note']} |" for t in f["top"]]
+            out.append("")
+    if res.candidates and res.filings:
+        out += ["## Copy decisions", "", "| Stock | Price check | Risk | Decision |", "|---|---|---|---|"]
+        for c in res.candidates:
+            out.append(f"| {c.symbol} | {c.sentiment_note or '-'} | {c.risk_verdict or '-'} {c.risk_note} "
+                       f"| **{c.decision}** — {c.decision_note} |")
+        out.append("")
+    elif res.candidates:
         out += ["## What the bots thought", "",
                 "| Asset | Scout | News | Sentiment | Chart plan | Risk | Decision |",
                 "|---|---|---|---|---|---|---|"]
@@ -44,5 +58,5 @@ def render(res: RunResult, store: Store, dry_run: bool) -> str:
         out.append("")
     if res.notes:
         out += ["## Notes"] + [f"- {n}" for n in res.notes] + [""]
-    out.append(f"_Claude calls this run: {res.ai_calls}_")
+    out.append("_Copycat uses no AI._" if res.filings else f"_Claude calls this run: {res.ai_calls}_")
     return "\n".join(out) + "\n"

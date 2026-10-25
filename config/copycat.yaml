@@ -1,0 +1,50 @@
+# COPYCAT strategy: copies company insiders. When a CEO, CFO or board member buys their own
+# company's stock with their own money, they must tell the SEC within 2 business days (a "Form 4").
+# Copycat reads those filings and buys the same stocks. No AI: the picks come from the insiders.
+# Runs in its own Alpaca paper account so its results stay separate.
+# All percents are percent of the account's current equity.
+
+name: copycat
+alpaca_key_secret: ALPACA_COPYCAT_KEY_ID
+alpaca_secret_secret: ALPACA_COPYCAT_SECRET_KEY
+
+markets:
+  crypto: []
+  stocks: []          # filled in by the insider filings, not a fixed list
+
+copycat:
+  max_filings_per_run: 300      # newest Form 4 filings read each run (already-read ones are skipped)
+  min_buy_usd: 50000            # ignore small buys; we want insiders betting real money
+  min_price: 5                  # no penny stocks
+  insider_roles: [officer, director]   # big outside funds ("10% owners") are skipped
+  max_signal_age_days: 5        # copy a buy only while the filing is fresh
+  max_chase_pct: 10             # skip if the price is already 10%+ above what the insider paid
+  stop_pct: 10                  # safety exit 10% below our entry
+  target_pct: 20                # profit goal 20% above our entry
+  max_buys_per_run: 2
+
+# These three sections keep the shared code (risk checks, Bot World) working the same way.
+scout:
+  scan_every_minutes: 30
+  bar_timeframe: 1Day
+  lookback_bars: 60
+
+risk:
+  risk_per_trade_pct: 2         # with a 10% stop this makes 20% positions
+  max_position_pct: 20
+  max_total_exposure_pct: 100   # stocks can't be bought on margin here, so cash is the real cap
+  max_open_positions: 5
+  correlation_threshold: 0.9
+  correlated_size_factor: 0.5
+  max_correlated_positions: 2
+  max_daily_loss_pct: 5         # stop opening trades for the day after losing 5% today
+  max_total_loss_pct: 20        # halt the strategy if it is down 20% from money put in
+  min_order_usd: 2
+
+decision:
+  buy_only_on: BUY
+  min_confidence: 0
+
+exits:
+  max_hold_hours: 720           # 30 days
+  move_stop_to_breakeven_at_r: 1.5

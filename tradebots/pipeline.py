@@ -41,6 +41,7 @@ class RunResult:
     scanned: bool = False                                  # False when this run only managed exits
     scan: dict[str, dict] = field(default_factory=dict)    # Scout's measurements for every market it looked at
     last_scan: str | None = None
+    filings: dict = field(default_factory=dict)            # Copycat only: what it read from the SEC this run
 
 
 def _iso(dt: datetime) -> str:
@@ -230,10 +231,10 @@ def _order_symbol(p: dict) -> str:
     return s
 
 
-def _finish(res: RunResult, store: Store, equity: float, now: datetime, ai: AI) -> RunResult:
+def _finish(res: RunResult, store: Store, equity: float, now: datetime, ai: AI | None) -> RunResult:
     store.append("equity.csv", {"time": _iso(now), "equity": f"{equity:.2f}", "net_deposits": f"{store.net_deposits():.2f}"})
     store.save()
-    res.ai_calls = ai.calls
+    res.ai_calls = ai.calls if ai else 0
     res.day_start_equity = store.state["day_start_equity"]
     res.last_scan = store.state.get("last_scan")
     return res

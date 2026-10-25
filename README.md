@@ -33,6 +33,47 @@ When the daily limit is hit, no new trades are opened until the next day (UTC). 
 
 Every trade is sized as a percent of the account, so the bots scale up as you add money.
 
+## Third account: Copycat (copies company insiders)
+
+Copycat doesn't use the six-bot team's guesses. It copies people who know their companies best: **insiders**,
+meaning a company's CEO, CFO, other officers and board members. When one of them buys their own company's
+stock with their own money, US law says they must report it to the SEC within 2 business days on a public
+form called a **Form 4**. Copycat reads those filings (free, official, no extra key) and buys the same stocks.
+
+| | Copycat ([config/copycat.yaml](config/copycat.yaml)) |
+|---|---|
+| What it buys | US stocks that officers or directors just bought, at least $50,000 worth, in the last 5 days |
+| Ranks picks by | how much was bought, how many insiders bought together, and whether a top boss (CEO, CFO, ...) was one of them |
+| Skips a pick when | the price is already 10%+ above what the insiders paid (too late to copy), or it's under $5 |
+| Biggest single position | 20% of the account, up to 5 stocks |
+| Safety exit / profit goal | 10% below / 20% above our buy price |
+| Hold time | up to 30 days |
+| Daily loss limit | 5% |
+| Total loss limit | 20% |
+| AI | none, so it costs nothing to run |
+
+Stocks only trade on weekdays, 9:30am to 4pm New York time. Insiders often file in the evening, so Copycat
+keeps a watchlist and buys at the next open if the pick still checks out. It compares itself with the
+**S&P 500** (the 500 biggest US companies) in the Sunday report, since that's the fair yardstick for stocks.
+
+Honest caveats: research has found that insider buying has, on average, been followed by slightly better than
+normal returns, but it's a small edge, it's an average over thousands of trades, and some years it doesn't work.
+A few weeks of results on $100 will mostly be luck either way.
+
+**Setup:** make a third Alpaca paper account named "Copycat" with $100 (same as step 1 below), then add its keys as
+two more GitHub secrets, `ALPACA_COPYCAT_KEY_ID` and `ALPACA_COPYCAT_SECRET_KEY` (same as step 3 below).
+Then add one **variable** (not a secret): **Settings → Secrets and variables → Actions → Variables tab → New repository
+variable**, name `SEC_CONTACT_EMAIL`, value: an email address you check. The SEC requires every program that reads
+its filings to say who's asking, and it refuses GitHub's "noreply" addresses. Variables aren't shown publicly.
+Until the Copycat secrets exist, Copycat is simply skipped and the other two keep running.
+
+## Timer (why the runs happen on time)
+
+GitHub's built-in schedule skipped most runs on this repo (on October 25, 2026 only 5 of about 38 ran).
+So the **Timer** workflow keeps the beat instead: it starts **Trade (paper)** every 30 minutes, and every 5.5 hours
+it hands over to a fresh copy of itself. GitHub's schedule is still there as a backup. Start it once with
+**Actions → Timer → Run workflow**. To stop it: **Actions → Timer → ⋯ → Disable workflow**.
+
 ## Setup (about 20 minutes, one time)
 
 **Never paste keys into chat, email or code.** They only go into GitHub secrets (step 3).
@@ -47,7 +88,7 @@ Every trade is sized as a percent of the account, so the bots scale up as you ad
 1. Go to [console.anthropic.com](https://console.anthropic.com), add a payment method, and create an API key.
 
 ### 3. Add the keys to GitHub
-In this repo, go to **Settings → Secrets and variables → Actions → New repository secret** and add these five secrets, using exactly these names:
+In this repo, go to **Settings → Secrets and variables → Actions → New repository secret** and add these secrets, using exactly these names:
 
 | Secret name | Value |
 |---|---|
@@ -55,6 +96,8 @@ In this repo, go to **Settings → Secrets and variables → Actions → New rep
 | `ALPACA_AGGRESSIVE_SECRET_KEY` | Secret from the Aggressive paper account |
 | `ALPACA_MEDIUM_KEY_ID` | Key ID from the Medium paper account |
 | `ALPACA_MEDIUM_SECRET_KEY` | Secret from the Medium paper account |
+| `ALPACA_COPYCAT_KEY_ID` | Key ID from the Copycat paper account (optional, see above) |
+| `ALPACA_COPYCAT_SECRET_KEY` | Secret from the Copycat paper account (optional, see above) |
 | `ANTHROPIC_API_KEY` | Your Claude API key |
 
 ### 4. Turn it on
@@ -76,7 +119,7 @@ After every run, the bots rebuild a web page that shows the crew at work in **3D
 
 - **Where:** your GitHub Pages address, `https://quincith.github.io/trading-bots/` (after the one-time setup below).
 - **Effects:** a green laser and a party on a winning trade, tomatoes on a losing one. Use the **Win / Loss / Buy** buttons on the ship to show them off any time. Sound is off until you press **Sound**.
-- **Accounts:** the switch at the top flips between Aggressive (light-blue denim crew) and Medium (dark-blue denim crew).
+- **Accounts:** the switch at the top flips between Aggressive (light-blue denim crew), Medium (dark-blue denim crew) and Copycat (black denim crew).
 - **Recaps as files:** `recaps/<date>.md` and `recaps/latest.md` on the `bot-data` branch.
 - **Without Pages:** the same page is saved as `world/index.html` on the `bot-data` branch. Download it and open it in a browser.
 
@@ -101,11 +144,11 @@ All of these are under **Actions → Control panel → Run workflow**:
 - **Close all positions:** sell everything in one strategy's account right away.
 - **Resume after a loss-limit halt:** restart a strategy that hit its total loss limit.
 
-**Kill switch:** go to **Settings → Secrets and variables → Actions → Variables → New repository variable**, name it `TRADING_HALTED` and set it to `true`. Both strategies stop opening trades, but they keep managing exits on the trades already open. Set it to `false` to resume.
+**Kill switch:** go to **Settings → Secrets and variables → Actions → Variables → New repository variable**, name it `TRADING_HALTED` and set it to `true`. All strategies stop opening trades, but they keep managing exits on the trades already open. Set it to `false` to resume.
 
 ## Changing settings
 
-Open `config/aggressive.yaml` or `config/medium.yaml` on GitHub, click the pencil icon, edit, and commit. Every line has a comment. Useful ones:
+Open `config/aggressive.yaml`, `config/medium.yaml` or `config/copycat.yaml` on GitHub, click the pencil icon, edit, and commit. Every line has a comment. Useful ones:
 - `stocks: [NVDA, AMD]` adds stocks. They're only traded while the US market is open.
 - `max_daily_loss_pct` / `max_total_loss_pct` are the loss limits.
 - `model` sets which Claude model the bots use.
@@ -130,4 +173,4 @@ python -m pytest -q
 ALPACA_MEDIUM_KEY_ID=... ALPACA_MEDIUM_SECRET_KEY=... python -m tradebots run --strategy medium --dry-run
 ```
 
-Code map: `tradebots/bots/` (one file per bot), `tradebots/pipeline.py` (runs the team), `tradebots/alpaca.py` (paper broker and market data), `tradebots/ai.py` (Claude), `tradebots/store.py` (memory and deposit-adjusted returns), `tradebots/backtest.py` (replay over past prices).
+Code map: `tradebots/bots/` (one file per bot), `tradebots/pipeline.py` (runs the team), `tradebots/copycat.py` and `tradebots/sec.py` (Copycat and the SEC insider feed; `python -m tradebots copycat-preview` shows the latest insider buys with no keys), `tradebots/alpaca.py` (paper broker and market data), `tradebots/ai.py` (Claude), `tradebots/store.py` (memory and deposit-adjusted returns), `tradebots/backtest.py` (replay over past prices).

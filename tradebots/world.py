@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = Path(__file__).with_name("world_template.html")
 WORLD3D = Path(__file__).with_name("world3d.js")
 VENDOR = Path(__file__).with_name("vendor")
-STRATEGIES = ("aggressive", "medium")
+STRATEGIES = ("aggressive", "medium", "copycat")
 CREW = [  # pipeline order: Charts runs before News and Sentiment so Claude isn't paid for dead-end setups
     ("scout", "Scout", "Scans every coin for sudden jumps in trading activity with the price moving up."),
     ("charts", "Charts", "Draws the trade plan: where to buy, where the safety exit goes, and the profit goal."),
@@ -31,6 +31,16 @@ CREW = [  # pipeline order: Charts runs before News and Sentiment so Claude isn'
     ("risk", "Risk", "The safety officer. Plain rules, no AI. Approves, shrinks or blocks every trade."),
     ("decision", "Decision", "Reads everyone's notes and makes the final call: BUY, WAIT or SKIP."),
 ]
+
+# Copycat uses the same six rooms, but each bot does a copy-trading job.
+COPYCAT_JOBS = {
+    "scout": "Reads the newest SEC insider filings and keeps a watchlist of stocks that company bosses just bought.",
+    "charts": "Sets the safety exit 10% below our buy price and the profit goal 20% above it.",
+    "news": "Reports who bought: their job at the company, how much, and at what price.",
+    "sentiment": "Checks the price now against what the insiders paid, so we don't copy too late.",
+    "risk": "The safety officer. Plain rules, no AI. Approves, shrinks or blocks every trade.",
+    "decision": "Plain rule: if a pick passes every check, copy it. No AI on this account.",
+}
 
 
 def coin(symbol: str) -> str:
@@ -137,6 +147,68 @@ def stations(run: dict | None, cfg: dict) -> dict:
     return s
 
 
+def copycat_stations(run: dict | None, cfg: dict) -> dict:
+    """What each bot says on the Copycat account."""
+    s = {k: {"status": "idle", "say": "", "detail": []} for k, *_ in CREW}
+    if not run:
+        for k in s:
+            s[k]["say"] = "Waiting for the first run."
+        return s
+    f, cands, cc = run.get("filings") or {}, run["candidates"], cfg["copycat"]
+    top = f.get("top") or []
+    sc = s["scout"]
+    sc["status"] = "found" if top else "working"
+    sc["say"] = (f"Read {f.get('read', 0)} new insider filings. Watchlist: {f.get('watchlist', 0)} stocks."
+                 + (f" Best: {top[0]['ticker']}, {top[0]['insiders']} insider(s) bought ${top[0]['usd']:,.0f}." if top
+                    else " Nothing big enough to copy yet."))
+    if f.get("error"):
+        sc["status"], sc["say"] = "blocked", f["error"]
+    sc["detail"] = [f"{t['ticker']} ({t['company']}), score {t['score']}" for t in top]
+    nw = s["news"]
+    nw["status"] = "working" if top else "idle"
+    nw["say"] = f"{top[0]['ticker']}: {top[0]['note']}" if top else "No big insider buys this week so far."
+    nw["detail"] = [f"{t['ticker']}: {t['note']}" for t in top]
+    ch, se, rk, de = (s[k] for k in ("charts", "sentiment", "risk", "decision"))
+    ch["say"] = (f"Safety exit {cc['stop_pct']}% below the buy price, profit goal {cc['target_pct']}% above. "
+                 f"Holds up to {cfg['exits']['max_hold_hours'] // 24} days.")
+    checked = [c for c in cands if c.get("entry")]
+    if checked:
+        ch["status"] = "working"
+        ch["detail"] = [f"{c['symbol']}: buy {price(c['entry'])}, safety exit {price(c['stop'])}, "
+                        f"goal {price(c['target'])}" for c in checked]
+    priced = [c for c in cands if c.get("sentiment")]
+    se["say"] = (f"{priced[0]['symbol']}: {priced[0]['sentiment']}" if priced
+                 else "Checks prices when the stock market is open.")
+    se["status"] = "working" if priced else "idle"
+    se["detail"] = [f"{c['symbol']}: {c['sentiment']}" for c in priced]
+    if cands:
+        buys = [c for c in cands if c["decision"] == "BUY"]
+        c0 = buys[0] if buys else cands[0]
+        de["status"] = "buy" if buys else "working"
+        de["say"] = f"{c0['decision']} {c0['symbol']}. {c0['decision_note']}"
+        de["detail"] = [f"{c['symbol']}: {c['decision']}. {c['decision_note']}" for c in cands]
+    else:
+        de["say"] = "Standing by. Nothing on the watchlist is ready to copy."
+    lim = cfg["risk"]
+    today = (run["equity"] - run["day_start_equity"]) / run["day_start_equity"] * 100 if run["day_start_equity"] else 0
+    blocked = [c for c in cands if c["risk"] == "REJECT"]
+    if run["gate"] and run["gate"] != "ok":
+        rk["status"], rk["say"] = "blocked", f"New buys paused. {run['gate']}"
+    elif blocked:
+        rk["status"], rk["say"] = "blocked", f"Blocked {blocked[0]['symbol']}: {blocked[0]['risk_note']}"
+    else:
+        rk["status"] = "working"
+        rk["say"] = f"All limits clear. Today {today:+.1f}%; new buys stop at -{lim['max_daily_loss_pct']}%."
+    rk["detail"] = [f"{c['symbol']}: {c['risk']} {price(c['size_usd'])}. {c['risk_note']}" for c in cands if c["risk"]]
+    rk["detail"] += [f"Today so far: {today:+.2f}% (daily loss limit -{lim['max_daily_loss_pct']}%)",
+                     f"Total loss limit: -{lim['max_total_loss_pct']}% of the money put in",
+                     f"Never more than {lim['max_position_pct']}% of the account in one stock, "
+                     f"at most {lim['max_open_positions']} stocks at once"]
+    if run["exits"] or run["buys"]:
+        de["detail"] += run["buys"] + run["exits"]
+    return s
+
+
 def captain(run: dict | None, name: str) -> str:
     if not run:
         return "Awaiting first run."
@@ -148,8 +220,8 @@ def captain(run: dict | None, name: str) -> str:
         bits.append(f"Sold {', '.join(coin(x.split()[1].rstrip(':')) for x in sold)}.")
     if not bits:
         bits.append("No trades this run.")
-    n = len(run["positions"])
-    bits.append(f"Holding {n} coin{'s' if n != 1 else ''}." if n else "All cash.")
+    n, what = len(run["positions"]), "stock" if name == "copycat" else "coin"
+    bits.append(f"Holding {n} {what}{'s' if n != 1 else ''}." if n else "All cash.")
     pl = run["profit"]
     bits.append(f"Since start: {'+' if pl >= 0 else ''}{recap.money(pl)}.")
     return f"{name.title()} status. " + " ".join(bits)
@@ -183,15 +255,23 @@ def strategy_data(store: Store, cfg: dict, days_back: int = 7) -> dict:
         if runs:
             latest = runs[-1]
             break
+    copy = "copycat" in cfg
     return {
         "name": cfg["name"],
+        "crew": [{"id": k, "name": n, "job": COPYCAT_JOBS[k]} for k, n, _ in CREW] if copy else None,
+        "rules": (f"Rules for this account: copies company insiders who bought at least "
+                  f"${cfg['copycat']['min_buy_usd']:,} of their own stock in the last "
+                  f"{cfg['copycat']['max_signal_age_days']} days, skips it if the price already rose "
+                  f"{cfg['copycat']['max_chase_pct']}%+, puts at most {cfg['risk']['max_position_pct']}% of the "
+                  f"account in one stock, holds up to {cfg['exits']['max_hold_hours'] // 24} days. "
+                  f"Stocks only trade on weekdays, 9:30am to 4pm New York time.") if copy else None,
         "limits": {k: cfg["risk"][k] for k in ("max_daily_loss_pct", "max_total_loss_pct", "risk_per_trade_pct")},
         "scan_every": cfg["scout"]["scan_every_minutes"],
         "min_confidence": cfg["decision"]["min_confidence"],
         "max_hold_hours": cfg["exits"]["max_hold_hours"],
         "performance": store.performance(),
         "latest": latest,
-        "stations": stations(latest, cfg),
+        "stations": copycat_stations(latest, cfg) if copy else stations(latest, cfg),
         "captain": captain(latest, cfg["name"]),
         "event": event(store, latest),
         "equity": equity_series(store),

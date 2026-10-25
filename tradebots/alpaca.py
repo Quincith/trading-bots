@@ -69,6 +69,22 @@ class AlpacaPaper:
     def is_market_open(self) -> bool:
         return bool(self._trade("GET", "/v2/clock")["is_open"])
 
+    def can_buy_fractional(self, symbol: str) -> bool:
+        """True if Alpaca trades this stock and lets us buy a dollar amount (part of a share)."""
+        try:
+            a = self._trade("GET", f"/v2/assets/{symbol}")
+        except RuntimeError:
+            return False
+        return bool(a.get("tradable") and a.get("fractionable") and a.get("status") == "active")
+
+    def latest_price(self, symbol: str) -> float | None:
+        try:
+            t = self._data(f"/v2/stocks/{symbol}/trades/latest", {"feed": "iex"})
+        except RuntimeError:
+            return None
+        p = (t or {}).get("trade", {}).get("p")
+        return float(p) if p else None
+
     # ---- orders ----------------------------------------------------------
     def buy_notional(self, symbol: str, usd: float, asset_class: str, client_order_id: str) -> dict:
         body = {

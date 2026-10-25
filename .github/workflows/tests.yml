@@ -16,3 +16,11 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: python -m pytest -q
+      # Live check that the SEC insider feed Copycat reads still works. Needs no keys, only the
+      # SEC_CONTACT_EMAIL repository variable.
+      # It never fails the tests, because the SEC site can be briefly down.
+      - name: Copycat feed check (live, SEC)
+        run: python -m tradebots copycat-preview
+        continue-on-error: true
+        env:
+          SEC_CONTACT_EMAIL: ${{ vars.SEC_CONTACT_EMAIL }}

@@ -15,7 +15,7 @@ on:
       strategy:
         description: Which strategy account
         type: choice
-        options: [aggressive, medium]
+        options: [aggressive, medium, copycat]
       amount:
         description: Dollar amount (deposits and withdrawals only)
         required: false
@@ -38,6 +38,8 @@ jobs:
       ALPACA_AGGRESSIVE_SECRET_KEY: ${{ secrets.ALPACA_AGGRESSIVE_SECRET_KEY }}
       ALPACA_MEDIUM_KEY_ID: ${{ secrets.ALPACA_MEDIUM_KEY_ID }}
       ALPACA_MEDIUM_SECRET_KEY: ${{ secrets.ALPACA_MEDIUM_SECRET_KEY }}
+      ALPACA_COPYCAT_KEY_ID: ${{ secrets.ALPACA_COPYCAT_KEY_ID }}
+      ALPACA_COPYCAT_SECRET_KEY: ${{ secrets.ALPACA_COPYCAT_SECRET_KEY }}
       ACTION: ${{ inputs.action }}
       STRATEGY: ${{ inputs.strategy }}
       AMOUNT: ${{ inputs.amount }}
