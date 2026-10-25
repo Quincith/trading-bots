@@ -1,0 +1,38 @@
+name: Weekly report
+
+# Every Sunday: how Aggressive and Medium did this week, compared with just holding Bitcoin.
+# The report is opened as a GitHub issue (GitHub emails you) and saved to bot-data/weekly/.
+on:
+  schedule:
+    - cron: "7 13 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: bot-data
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ALPACA_AGGRESSIVE_KEY_ID: ${{ secrets.ALPACA_AGGRESSIVE_KEY_ID }}
+      ALPACA_AGGRESSIVE_SECRET_KEY: ${{ secrets.ALPACA_AGGRESSIVE_SECRET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: ./scripts/data-branch.sh pull
+      - run: python -m tradebots weekly
+      - run: ./scripts/data-branch.sh push "weekly report"
+      - name: Post as an issue
+        run: gh issue create --title "Weekly bot report $(date -u +%Y-%m-%d)" --body-file data/weekly/latest.md --assignee "${{ github.repository_owner }}"
