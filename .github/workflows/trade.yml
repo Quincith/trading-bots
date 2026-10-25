@@ -1,16 +1,18 @@
 name: Trade (paper)
 
-# Runs both strategies every 30 minutes. Scheduled runs only start once this file is on the main branch.
+# Runs every strategy every 30 minutes. The Timer workflow (timer.yml) starts it on the beat, because
+# GitHub's own schedule skips many runs. The schedule here is a backup. Off the hour on purpose: GitHub
+# is busiest at :00 and :30. Scheduled runs only start once this file is on the main branch.
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "11,41 * * * *"
   workflow_dispatch:
     inputs:
       strategy:
         description: Which strategy to run
         type: choice
-        options: [both, aggressive, medium]
-        default: both
+        options: [all, aggressive, medium, copycat]
+        default: all
       dry_run:
         description: Dry run (think, but don't place orders)
         type: boolean
@@ -34,6 +36,8 @@ jobs:
       ALPACA_AGGRESSIVE_SECRET_KEY: ${{ secrets.ALPACA_AGGRESSIVE_SECRET_KEY }}
       ALPACA_MEDIUM_KEY_ID: ${{ secrets.ALPACA_MEDIUM_KEY_ID }}
       ALPACA_MEDIUM_SECRET_KEY: ${{ secrets.ALPACA_MEDIUM_SECRET_KEY }}
+      ALPACA_COPYCAT_KEY_ID: ${{ secrets.ALPACA_COPYCAT_KEY_ID }}
+      ALPACA_COPYCAT_SECRET_KEY: ${{ secrets.ALPACA_COPYCAT_SECRET_KEY }}
       TRADING_HALTED: ${{ vars.TRADING_HALTED }}
       DRY_RUN: ${{ inputs.dry_run }}
     steps:
@@ -47,13 +51,19 @@ jobs:
         run: ./scripts/data-branch.sh pull
       - name: Aggressive
         id: aggressive
-        if: ${{ github.event_name == 'schedule' || inputs.strategy != 'medium' }}
+        if: ${{ github.event_name == 'schedule' || !inputs.strategy || inputs.strategy == 'all' || inputs.strategy == 'aggressive' }}
         run: python -m tradebots run --strategy aggressive
         continue-on-error: true
       - name: Medium
         id: medium
-        if: ${{ github.event_name == 'schedule' || inputs.strategy != 'aggressive' }}
+        if: ${{ github.event_name == 'schedule' || !inputs.strategy || inputs.strategy == 'all' || inputs.strategy == 'medium' }}
         run: python -m tradebots run --strategy medium
+        continue-on-error: true
+      - name: Copycat
+        id: copycat
+        # Skipped until its Alpaca keys are added, so the other two stay green in the meantime.
+        if: ${{ env.ALPACA_COPYCAT_KEY_ID != '' && (github.event_name == 'schedule' || !inputs.strategy || inputs.strategy == 'all' || inputs.strategy == 'copycat') }}
+        run: python -m tradebots run --strategy copycat
         continue-on-error: true
       - name: Build the bot world page and daily recap
         if: always()
@@ -69,7 +79,7 @@ jobs:
           path: data/world
         continue-on-error: true
       - name: Report failures
-        if: ${{ steps.aggressive.outcome == 'failure' || steps.medium.outcome == 'failure' }}
+        if: ${{ steps.aggressive.outcome == 'failure' || steps.medium.outcome == 'failure' || steps.copycat.outcome == 'failure' }}
         run: |
           echo "One of the strategies failed. Open its step above to see why." >> "$GITHUB_STEP_SUMMARY"
           exit 1

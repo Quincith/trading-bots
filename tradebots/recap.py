@@ -36,6 +36,9 @@ GLOSSARY = {
     "daily loss limit": "If the account drops this much in one day, the bots stop buying until tomorrow.",
     "total loss limit": "If the account drops this much below the money put in, the strategy stops until you restart it.",
     "unrealized": "A gain or loss on a coin we still own. It only becomes real when we sell.",
+    "insider": "A company's own bosses (CEO, CFO and so on) and board members. They know the company best.",
+    "Form 4": "The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.",
+    "S&P 500": "The 500 biggest US companies. Its fund, SPY, is the usual yardstick: did you beat just owning the market?",
 }
 
 
@@ -112,11 +115,23 @@ def build(store: Store, day: str) -> dict:
     flagged = Counter(c["symbol"] for r in runs for c in r["candidates"])
     busiest = max(((s, m["volume_ratio"], m["move_pct"]) for r in scans for s, m in r["scan"].items()),
                   key=lambda x: x[1], default=None)
-    b.append(f"Scout scanned {len(coins)} coins, {len(scans)} times."
-             + (f" Most active: {short(busiest[0])} at {busiest[1]:.1f}x normal volume, price {busiest[2]:+.1f}%."
-                if busiest else ""))
-    terms.add("volume")
-    if flagged:
+    copy = [r["filings"] for r in runs if r.get("filings")]
+    if copy:
+        b.append(f"Spotter read {sum(f['read'] for f in copy)} insider filings from the SEC and found "
+                 f"{sum(f['insider_buys'] for f in copy)} insider purchases. Watchlist at day end: "
+                 f"{copy[-1]['watchlist']} stocks.")
+        if copy[-1]["top"]:
+            t = copy[-1]["top"][0]
+            b.append(f"Top pick: {t['ticker']} ({t['company']}). {t['note']}")
+        terms |= {"insider", "Form 4"}
+    else:
+        b.append(f"Scout scanned {len(coins)} coins, {len(scans)} times."
+                 + (f" Most active: {short(busiest[0])} at {busiest[1]:.1f}x normal volume, price {busiest[2]:+.1f}%."
+                    if busiest else ""))
+        terms.add("volume")
+    if copy and not flagged:
+        b.append("Nothing was ready to copy, so no trade was considered.")
+    elif flagged:
         b.append("Sent for review: " + ", ".join(f"{short(s)} ({n}x)" for s, n in flagged.most_common()) + ".")
     else:
         b.append("Nothing passed Scout's filter, so no trade was considered.")
@@ -181,7 +196,10 @@ def build(store: Store, day: str) -> dict:
                          f"({len(wins)} win{'s' if len(wins) != 1 else ''}, {len(losses)} loss{'es' if len(losses) != 1 else ''})")
         summary = f"Active day. The bots {' and '.join(parts)}."
     elif flagged:
-        summary = "Watchful day. Scout flagged some moves, but none met the bar for a trade."
+        summary = ("Watchful day. Insiders bought some stocks, but none passed the copy checks yet." if copy else
+                   "Watchful day. Scout flagged some moves, but none met the bar for a trade.")
+    elif copy:
+        summary = "Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash."
     else:
         summary = "Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash."
     summary += (f" The account ended {word}" + (f" {money(abs(change))} ({pct:+.2f}%)" if word != "flat" else "")

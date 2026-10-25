@@ -1,6 +1,7 @@
 name: Weekly report
 
-# Every Sunday: how Aggressive and Medium did this week, compared with just holding Bitcoin.
+# Every Sunday: how Aggressive, Medium and Copycat did this week, compared with just holding Bitcoin
+# (and, for Copycat, the S&P 500).
 # The report is opened as a GitHub issue (GitHub emails you) and saved to bot-data/weekly/.
 on:
   schedule:

@@ -1,0 +1,37 @@
+name: Timer
+
+# GitHub's built-in schedule skips many runs on small repos (on 2026-10-25 only 5 of about 38 ran).
+# This keeps the 30-minute beat instead: it starts "Trade (paper)", waits 30 minutes, and repeats.
+# A job can only last 6 hours, so after 5.5 hours it starts a fresh copy of itself and stops.
+# The schedule below is a safety net that restarts the chain if it ever breaks.
+# To turn the timer off: Actions > Timer > "..." > Disable workflow.
+on:
+  schedule:
+    - cron: "23 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+# Only one timer runs at a time. An extra one waits in line and starts only if the running one stops.
+concurrency:
+  group: timer
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Start a trade run every 30 minutes
+        run: |
+          end=$(( $(date +%s) + 330 * 60 ))
+          while [ "$(date +%s)" -lt "$end" ]; do
+            gh workflow run trade.yml -R "$GITHUB_REPOSITORY" --ref main && echo "started a trade run at $(date -u +%H:%M) UTC" \
+              || echo "::warning::couldn't start a trade run"
+            sleep 1800
+          done
+      - name: Hand over to a fresh timer
+        run: gh workflow run timer.yml -R "$GITHUB_REPOSITORY" --ref main

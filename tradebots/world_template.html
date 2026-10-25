@@ -339,9 +339,10 @@ $('snd').onclick = () => { soundOn = !soundOn; store.set('botworld-sound', sound
 renderSound();
 
 /* ---------- characters (original designs) ---------- */
-const OUTFITS = {   // denim overalls: light wash for Aggressive, dark wash for Medium
+const OUTFITS = {   // denim overalls: light wash for Aggressive, dark wash for Medium, black denim for Copycat
   aggressive: {cloth:'#8db8e3', pocket:'#74a2d2', stitch:'#eef6ff'},
-  medium:     {cloth:'#203c69', pocket:'#182f55', stitch:'#d9ac5c'}
+  medium:     {cloth:'#203c69', pocket:'#182f55', stitch:'#d9ac5c'},
+  copycat:    {cloth:'#2b2d33', pocket:'#1f2126', stitch:'#e8b45a'}
 };
 const PROPS = {
   scout: `<g transform="translate(58 70)"><circle r="11" fill="none" stroke="#5b4636" stroke-width="4"/><circle r="8" fill="#bfe6ff" opacity=".7"/><rect x="7" y="7" width="5" height="16" rx="2" transform="rotate(-45 9 9)" fill="#5b4636"/></g>`,
@@ -436,7 +437,7 @@ function renderStats(S){
     <div class="tile"><div class="k">Account value</div><div class="v">${money(p.equity)}</div><div class="s">Money put in: ${money(p.net_deposits)}</div></div>
     <div class="tile"><div class="k">Profit / loss since start</div><div class="v ${cls(p.profit)}">${signed(p.profit)}</div><div class="s">${pct(p.simple_return_pct)} of money put in</div></div>
     <div class="tile"><div class="k">Today</div><div class="v ${cls(today)}">${signed(today)}</div><div class="s">${pct(todayPct)} · buys stop at -${S.limits.max_daily_loss_pct}%</div></div>
-    <div class="tile"><div class="k">Coins held</div><div class="v">${held.length}</div><div class="s">${held.length ? esc(held.map(h => h.symbol.replace(/USD$/,'')).join(', ')) : 'All cash'}</div></div>`;
+    <div class="tile"><div class="k">${S.name === 'copycat' ? 'Stocks' : 'Coins'} held</div><div class="v">${held.length}</div><div class="s">${held.length ? esc(held.map(h => h.symbol.replace(/USD$/,'')).join(', ')) : 'All cash'}</div></div>`;
   const mins = Math.round((Date.now() - new Date(DATA.built)) / 60000);
   $('updated').textContent = `Updated ${when(DATA.built)}` + (mins >= 0 && mins < 600 ? ` (${mins < 1 ? 'just now' : mins + ' min ago'})` : '') + (L && L.dry_run ? ' · last run was a dry run (no orders sent)' : '');
 }
@@ -468,7 +469,7 @@ function renderDetail(S){
   const L = S.latest;
   document.querySelectorAll('.bay').forEach(r => r.classList.toggle('active', r.dataset.id === selected));
   if(selected === 'captain'){
-    const rules = `Rules for this account: scans for new trades every ${S.scan_every} minutes, buys only at ${Math.round(S.min_confidence*100)}%+ confidence, holds a trade up to ${S.max_hold_hours} hours, risks about ${S.limits.risk_per_trade_pct}% of the account per trade.`;
+    const rules = S.rules || `Rules for this account: scans for new trades every ${S.scan_every} minutes, buys only at ${Math.round(S.min_confidence*100)}%+ confidence, holds a trade up to ${S.max_hold_hours} hours, risks about ${S.limits.risk_per_trade_pct}% of the account per trade.`;
     const notes = L ? L.notes.concat(L.exits, L.buys) : [];
     $('detail').innerHTML = `<h3>The Captain <span class="badge">Overseer</span></h3>
       <p class="job">Oversees the crew and reports the mission status. The six bots make the trades.</p>
@@ -476,7 +477,7 @@ function renderDetail(S){
       ${notes.length ? `<h3 style="font-size:.8rem;margin-top:14px">Log, last run${L ? ' · ' + esc(when(L.time)) : ''}</h3><ul>${notes.map(n => `<li>${esc(n)}</li>`).join('')}</ul>` : ''}`;
     return;
   }
-  const c = DATA.crew.find(x => x.id === selected), st = S.stations[selected];
+  const c = (S.crew || DATA.crew).find(x => x.id === selected), st = S.stations[selected];
   $('detail').innerHTML = `<h3>${esc(c.name)}</h3><p class="job">${esc(c.job)}</p><p>${withTerms(st.say)}</p>
     ${st.detail.length ? `<ul>${st.detail.map(d => `<li>${withTerms(d)}</li>`).join('')}</ul>` : ''}`;
 }
@@ -489,7 +490,7 @@ function replay(){
   const S = DATA.strategies[current];
   const courier = $('courier'), bays = [...document.querySelectorAll('.bay')], deck = document.querySelector('.deck');
   const L = S.latest, first = L && L.candidates[0];
-  const tags = {scout: L && L.scanned ? `${Object.keys(L.scan).length} coins` : 'standby', charts: first ? first.symbol.split('/')[0] : 'no signal',
+  const tags = {scout: L && L.filings && L.filings.top ? `${L.filings.read} filings` : L && L.scanned ? `${Object.keys(L.scan).length} coins` : 'standby', charts: first ? first.symbol.split('/')[0] : 'no signal',
     news: first ? 'trade plan' : '—', sentiment: first ? 'news notes' : '—', risk: first ? 'mood notes' : 'limit check', decision: first ? 'approved size' : '—'};
   let i = 0;
   const step = () => {
