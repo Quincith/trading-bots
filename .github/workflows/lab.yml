@@ -1,0 +1,66 @@
+name: Strategy lab
+
+# Every Sunday after the weekly report: Claude studies each strategy's losing trades from the past
+# months and suggests one change; the lab tests it on months it has never seen, with fees.
+# A change that passes every check becomes a pull request. Nothing changes until you merge it.
+# Everything tried is logged on the bot-data branch in lab/, and summed up in one issue.
+#
+# You can also test your own idea: Actions > Strategy lab > Run workflow, pick a strategy and fill in
+# "change", for example  filters.btc_ema_bars=200  (see README for the list of settings).
+on:
+  schedule:
+    - cron: "37 14 * * 0"
+  workflow_dispatch:
+    inputs:
+      strategy:
+        description: Which strategy
+        type: choice
+        options: [all, aggressive, medium, copycat]
+        default: all
+      change:
+        description: "Your own change to test, e.g. filters.btc_ema_bars=200 (leave empty to let Claude suggest one)"
+        default: ""
+      idea:
+        description: Your idea in plain words (only used with a change)
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: lab
+  cancel-in-progress: false
+
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      ALPACA_MEDIUM_KEY_ID: ${{ secrets.ALPACA_MEDIUM_KEY_ID }}
+      ALPACA_MEDIUM_SECRET_KEY: ${{ secrets.ALPACA_MEDIUM_SECRET_KEY }}
+      ALPACA_COPYCAT_KEY_ID: ${{ secrets.ALPACA_COPYCAT_KEY_ID }}
+      ALPACA_COPYCAT_SECRET_KEY: ${{ secrets.ALPACA_COPYCAT_SECRET_KEY }}
+      SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
+      # Inputs go through env, never pasted into the script, so odd text can't run as a command.
+      LAB_STRATEGY: ${{ inputs.strategy || 'all' }}
+      LAB_CHANGE: ${{ inputs.change }}
+      LAB_IDEA: ${{ inputs.idea }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: ./scripts/data-branch.sh pull
+      - name: Run the lab
+        run: python -m tradebots.improve --out lab-out --strategy "$LAB_STRATEGY" --change "$LAB_CHANGE" --idea "$LAB_IDEA"
+      - name: Save the experiment log to the bot-data branch
+        run: ./scripts/data-branch.sh push "strategy lab ${{ github.run_number }}"
+      - name: Open pull requests for kept changes, and the weekly lab issue
+        run: ./scripts/lab-publish.sh lab-out

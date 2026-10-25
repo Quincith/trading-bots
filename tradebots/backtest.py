@@ -42,7 +42,7 @@ import yaml
 from . import pipeline
 from .ai import AI
 from .alpaca import TIMEFRAME_MINUTES, AlpacaPaper, norm
-from .bots import charts, decision, news, radar, risk, scout, sentiment
+from .bots import charts, decision, filters, news, radar, risk, scout, sentiment
 from .store import Store
 
 log = logging.getLogger(__name__)
@@ -254,6 +254,14 @@ def simulate(cfg: dict, hist: History, start: datetime, end: datetime, cash: flo
         while t <= end:
             broker.now = _CLOCK.now = t
             run = pipeline.run(cfg, broker, rules, store, now=t)
+            for x in run.exits:   # "SOLD BTCUSD: stop hit (...)" -> remember why each trade ended
+                if x.startswith("SOLD ") and broker.round_trips and broker.round_trips[-1]["closed"] == t.isoformat():
+                    sym, why = x[5:].split(": ", 1)
+                    for rt in broker.round_trips[::-1]:
+                        if rt["closed"] != t.isoformat():
+                            break
+                        if norm(rt["symbol"]) == sym:
+                            rt["exit"] = why.split(" (")[0]
             if run.candidates:
                 has_news = any(c.news_note != "no recent news" for c in run.candidates)
                 approved = any(c.risk_verdict in ("APPROVE", "REDUCE") for c in run.candidates)
@@ -337,7 +345,9 @@ def _setups(cfg: dict, broker: SimBroker) -> list:
     cands = sorted(scout.scan(bars, "crypto", sc), key=lambda c: c.scout_score, reverse=True)[: sc["max_candidates"] * 2]
     for c in cands:
         c.plan = charts.make_plan(c, cfg["charts"])
-    return [c for c in cands if c.plan][: sc["max_candidates"]]
+    btc = broker.get_bars(["BTC/USD"], sc["bar_timeframe"], sc["lookback_bars"], "crypto").get("BTC/USD")
+    cands, _ = filters.apply([c for c in cands if c.plan], cfg.get("filters"), btc, sentiment.fear_greed)
+    return cands[: sc["max_candidates"]]
 
 
 def judge_moment(cfg: dict, hist: History, t: datetime, models: list[str]) -> dict | None:

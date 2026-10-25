@@ -18,7 +18,7 @@ from pathlib import Path
 
 import yaml
 
-from . import copycat, pipeline, report, sec, weekly
+from . import copycat, lab, pipeline, report, sec, weekly
 from .ai import AI
 from .alpaca import AlpacaPaper
 from .store import Store
@@ -127,7 +127,7 @@ def weekly_report() -> int:
         logging.warning("no S&P 500 prices: %s", e)
         spy = None
     text = weekly.render({n: weekly.strategy_stats(s, now, btc, spy if n == "copycat" else None)
-                          for n, s in stores.items()}, now)
+                          for n, s in stores.items()}, now, weekly.lab_section(lab.read_log(data), now))
     out = data / "weekly"
     out.mkdir(exist_ok=True)
     (out / f"{now:%Y-%m-%d}.md").write_text(text)

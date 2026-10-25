@@ -165,6 +165,47 @@ The characters are original designs. They aren't copies of any movie characters,
 
 Limits: Reddit chatter has no history, so Sentiment only sees the Fear & Greed index. Claude may remember news from before its training cutoff, so Part 2 only uses moments from July 2026 on.
 
+## Strategy lab (keep only what works)
+
+The backtest showed both crypto strategies losing money, so the bots now have a lab that looks for improvements and only keeps the ones that hold up. **Every Sunday** (after the weekly report), **Actions → Strategy lab** does this for each strategy:
+
+1. **Observe:** replay the current version over the "study months" (the first 60% of the past year).
+2. **Diagnose and suggest:** Claude reads every trade from those months: what the market looked like when it bought and how the trade ended. It names the pattern behind the losses (for example "most losses came when Bitcoin itself was falling") and suggests **one** change from a fixed menu of settings. It also sees every idea tried before, so it doesn't repeat rejected ones.
+3. **Test honestly:** the lab replays the change, with fees and price slip, and keeps it only if it passes **every** check:
+   - better than the current version by at least 1 point on the **unseen months** (the last 40% of the year, which Claude was never shown),
+   - not worse in more than one of the 5 month-long slices of those months, so one lucky stretch can't carry it,
+   - still better with fees and slip doubled,
+   - still better when each new number is nudged one step up or down (a number that only works at one exact value is probably luck, which traders call "overfitting"),
+   - beats the yardstick on the unseen months: just holding Bitcoin (for Copycat, the S&P 500),
+   - enough trades to judge (10, or 8 for Copycat), no deeper losing streak, and not worse on the study months either.
+4. **You decide:** a change that passes becomes a **pull request** that edits the strategy's config file. **Nothing changes until you merge it.** Merge to switch it on for that paper account, or close it to say no. Rejected ideas are just logged.
+
+You get one issue each Sunday ("Strategy lab <date>") saying what was tried and why it was kept or rejected, and the weekly report lists the week's experiments. Every experiment is logged on the `bot-data` branch in `lab/experiments.csv`, with a full report per experiment in `lab/reports/`.
+
+**Test your own idea:** Actions → Strategy lab → Run workflow, pick a strategy and type the change, for example `filters.btc_ema_bars=200` (two changes: `scout.min_rsi=54 scout.max_rsi=72`). Use `off` to switch a filter off.
+
+What the lab can change (loss limits and bet sizes are yours, so it never touches those):
+
+| Setting | Meaning |
+|---|---|
+| `scout.min_volume_ratio`, `scout.min_move_pct` | how unusual the volume and the price move must be |
+| `scout.min_rsi`, `scout.max_rsi` | the momentum window (RSI) Scout accepts |
+| `charts.stop_atr_mult`, `charts.min_reward_risk` | how far away the safety exit is, and how big the profit goal must be compared with the risk |
+| `exits.max_hold_hours`, `exits.move_stop_to_breakeven_at_r` | when to give up on a trade, and when to move the stop to the entry price |
+| `filters.max_atr_pct` | skip coins that swing too wildly |
+| `filters.trend_ema_bars` | only buy coins in an uptrend (above their N-candle average) |
+| `filters.btc_ema_bars` | only buy when Bitcoin itself is above its N-candle average (a healthy market) |
+| `filters.min_fear_greed`, `filters.max_fear_greed` | skip days of panic or greed |
+| Copycat: `copycat.min_buy_usd`, `min_insiders`, `min_score`, `max_signal_age_days`, `max_chase_pct`, `stop_pct`, `target_pct`, `exits.max_hold_hours` | which insider buys to copy, and its exits |
+
+**One-time setup** so the bot can open the pull requests itself: **Settings → Actions → General → Workflow permissions**, tick **Allow GitHub Actions to create and approve pull requests**, and Save. (The bot never approves or merges anything; only you do.) Without it, the issue gives you a one-click link to open the pull request yourself.
+
+Good to know:
+- The lab tests the rule-based versions of News, Sentiment and Decision (like the backtest). Claude still makes the live calls; the lab's changes are to the parts before and after Claude (Scout, Charts, the filters, the exits), which work the same either way.
+- Copycat's past insider buys come from the SEC's free quarterly files, which appear a few weeks after each quarter ends, so its lab stops at the newest file. It replays one trading day at a time (buying at the open), while the live bot checks every 30 minutes, so prices differ a little.
+- Trying many ideas on the same months makes a lucky pass more likely, even with these checks. The report says how many ideas were already tested on the same months, and a kept change still has to prove itself on paper before any real money.
+- Cost: one Claude Opus call per strategy per week, a few cents.
+
 ## Buttons you might need
 
 All of these are under **Actions → Control panel → Run workflow**:
@@ -202,4 +243,4 @@ python -m pytest -q
 ALPACA_MEDIUM_KEY_ID=... ALPACA_MEDIUM_SECRET_KEY=... python -m tradebots run --strategy medium --dry-run
 ```
 
-Code map: `tradebots/bots/` (one file per bot), `tradebots/pipeline.py` (runs the team), `tradebots/copycat.py` and `tradebots/sec.py` (Copycat and the SEC insider feed; `python -m tradebots copycat-preview` shows the latest insider buys with no keys), `tradebots/alpaca.py` (paper broker and market data), `tradebots/ai.py` (Claude), `tradebots/store.py` (memory and deposit-adjusted returns), `tradebots/backtest.py` (replay over past prices).
+Code map: `tradebots/bots/` (one file per bot), `tradebots/pipeline.py` (runs the team), `tradebots/copycat.py` and `tradebots/sec.py` (Copycat and the SEC insider feed; `python -m tradebots copycat-preview` shows the latest insider buys with no keys), `tradebots/alpaca.py` (paper broker and market data), `tradebots/ai.py` (Claude), `tradebots/store.py` (memory and deposit-adjusted returns), `tradebots/backtest.py` (replay over past prices), `tradebots/lab.py` (strategy lab checks; `python -m tradebots.lab --strategy medium --set filters.btc_ema_bars=200` tests one change), `tradebots/improve.py` (weekly loop with Claude), `tradebots/insider_history.py` (past SEC insider buys for Copycat), `tradebots/bots/filters.py` (optional entry filters).

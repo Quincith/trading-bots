@@ -20,6 +20,8 @@ scout:
   min_volume_ratio: 1.5     # volume must be at least 1.5x normal
   min_move_pct: 1.0         # price must have moved at least 1% over the last few bars
   move_bars: 4
+  min_rsi: 50               # momentum (RSI) must be between these two
+  max_rsi: 78
   max_candidates: 3         # only the best 3 go on to the other bots
 
 radar:
@@ -69,3 +71,12 @@ exits:
 ai:
   model: claude-opus-5-5
   effort: low
+
+# Extra "don't buy when..." rules. 0 means off. The strategy lab tests changes like these each week,
+# and only a change you approve (by merging its pull request) switches one on.
+filters:
+  max_atr_pct: 0      # skip coins swinging more than this % per candle (too wild)
+  trend_ema_bars: 0   # only buy when the coin is above its N-candle average (uptrend)
+  btc_ema_bars: 0     # only buy when Bitcoin is above its N-candle average (healthy market)
+  min_fear_greed: 0   # skip when the crypto Fear & Greed index is below this (panic)
+  max_fear_greed: 0   # skip when it is above this (greed)
