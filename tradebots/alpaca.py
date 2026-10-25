@@ -95,12 +95,19 @@ class AlpacaPaper:
         # Stocks only trade ~6.5h a day, so reach further back to get enough bars.
         stretch = 1.3 if asset_class == "crypto" else 5
         start = datetime.now(timezone.utc) - timedelta(minutes=minutes * lookback * stretch)
+        return {s: df.tail(lookback) for s, df in self.get_bars_range(symbols, timeframe, start, None, asset_class).items()}
+
+    def get_bars_range(self, symbols: list[str], timeframe: str, start: datetime, end: datetime | None,
+                       asset_class: str) -> dict[str, pd.DataFrame]:
+        """All bars between start and end (default: now). Used by get_bars and by the backtest."""
         if asset_class == "crypto":
             path, params = "/v1beta3/crypto/us/bars", {}
         else:
             path, params = "/v2/stocks/bars", {"feed": "iex", "adjustment": "split"}
         params.update({"symbols": ",".join(symbols), "timeframe": timeframe,
                        "start": start.strftime("%Y-%m-%dT%H:%M:%SZ"), "limit": 10000})
+        if end:
+            params["end"] = end.strftime("%Y-%m-%dT%H:%M:%SZ")
         raw: dict[str, list] = {}
         while True:
             page = self._data(path, params)
@@ -114,7 +121,7 @@ class AlpacaPaper:
         for sym, bars in raw.items():
             df = pd.DataFrame(bars).rename(columns={"o": "open", "h": "high", "l": "low", "c": "close", "v": "volume"})
             df["t"] = pd.to_datetime(df["t"])
-            out[sym] = df.set_index("t")[["open", "high", "low", "close", "volume"]].tail(lookback)
+            out[sym] = df.set_index("t")[["open", "high", "low", "close", "volume"]]
         return out
 
     def get_news(self, symbols: list[str], hours: int = 48, limit: int = 50) -> list[dict]:
@@ -124,8 +131,22 @@ class AlpacaPaper:
             "start": start.strftime("%Y-%m-%dT%H:%M:%SZ"),
             "limit": limit, "sort": "desc",
         })
-        return [
-            {"headline": n.get("headline", ""), "summary": (n.get("summary") or "")[:300],
-             "symbols": n.get("symbols", []), "created_at": n.get("created_at", ""), "source": n.get("source", "")}
-            for n in page.get("news", [])
-        ]
+        return [_news_item(n) for n in page.get("news", [])]
+
+    def get_news_range(self, symbols: list[str], start: datetime, end: datetime) -> list[dict]:
+        """Every headline for these symbols between start and end, oldest first (for the backtest)."""
+        params = {"symbols": ",".join(norm(s) for s in symbols), "start": start.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                  "end": end.strftime("%Y-%m-%dT%H:%M:%SZ"), "limit": 50, "sort": "asc"}
+        out = []
+        while True:
+            page = self._data("/v1beta1/news", params)
+            out += [_news_item(n) for n in page.get("news", [])]
+            token = page.get("next_page_token")
+            if not token:
+                return out
+            params["page_token"] = token
+
+
+def _news_item(n: dict) -> dict:
+    return {"headline": n.get("headline", ""), "summary": (n.get("summary") or "")[:300],
+            "symbols": n.get("symbols", []), "created_at": n.get("created_at", ""), "source": n.get("source", "")}

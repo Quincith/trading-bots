@@ -1,0 +1,60 @@
+name: Backtest
+
+# Replays both strategies over past prices and compares them with just holding Bitcoin.
+# Run it from Actions > Backtest > Run workflow. The report shows on the run page and is saved
+# to the bot-data branch in backtest/. The Claude check spends real money, capped below.
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: How many days back to test
+        default: "365"
+      sample:
+        description: How many past moments to re-ask Claude Opus and Haiku (0 = skip, free)
+        default: "30"
+      max_claude_usd:
+        description: Most the Claude check may spend, in dollars
+        default: "4"
+  push:
+    branches: [claude/project-thread-rtllx5]   # temporary: lets the PR branch run it once
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backtest
+  cancel-in-progress: false
+
+jobs:
+  backtest:
+    # On a push, only run when the commit message asks for it.
+    if: ${{ github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[run backtest]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      ALPACA_MEDIUM_KEY_ID: ${{ secrets.ALPACA_MEDIUM_KEY_ID }}
+      ALPACA_MEDIUM_SECRET_KEY: ${{ secrets.ALPACA_MEDIUM_SECRET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run backtest
+        run: >
+          python -m tradebots.backtest --out backtest-results
+          --days "${{ inputs.days || '365' }}"
+          --sample "${{ inputs.sample || '30' }}"
+          --max-claude-usd "${{ inputs.max_claude_usd || '4' }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: backtest-results
+          path: backtest-results
+      - name: Save report to the bot-data branch
+        run: |
+          ./scripts/data-branch.sh pull
+          mkdir -p data/backtest && cp backtest-results/* data/backtest/
+          ./scripts/data-branch.sh push "backtest ${{ github.run_number }}"
