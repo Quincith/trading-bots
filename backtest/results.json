@@ -33,6 +33,34 @@
    },
    "label": "Aggressive bots"
   },
+  "aggressive_nostop": {
+   "name": "aggressive",
+   "start_value": 100.0,
+   "end_value": 40.693802767324485,
+   "return_pct": -59.306197232675515,
+   "max_drawdown_pct": -59.306197232675515,
+   "worst_day_pct": -3.121385838807067,
+   "trades": 406,
+   "win_rate_pct": 29.55665024630542,
+   "fees": 40.99415577134661,
+   "halted": null,
+   "monthly_values": {
+    "2025-10": 95.86,
+    "2025-11": 81.56,
+    "2025-12": 76.7,
+    "2026-01": 68.13,
+    "2026-02": 65.72,
+    "2026-03": 58.04,
+    "2026-04": 54.92,
+    "2026-05": 51.97,
+    "2026-06": 48.39,
+    "2026-07": 46.85,
+    "2026-08": 48.37,
+    "2026-09": 43.99,
+    "2026-10": 40.69
+   },
+   "label": "Aggressive, never stopped"
+  },
   "medium": {
    "name": "medium",
    "start_value": 100.0,
@@ -60,6 +88,34 @@
     "2026-10": 84.76
    },
    "label": "Medium bots"
+  },
+  "medium_nostop": {
+   "name": "medium",
+   "start_value": 100.0,
+   "end_value": 86.40765370478131,
+   "return_pct": -13.592346295218693,
+   "max_drawdown_pct": -20.34110200131738,
+   "worst_day_pct": -4.069010177450149,
+   "trades": 143,
+   "win_rate_pct": 31.46853146853147,
+   "fees": 15.99669750301949,
+   "halted": null,
+   "monthly_values": {
+    "2025-10": 98.83,
+    "2025-11": 97.81,
+    "2025-12": 94.59,
+    "2026-01": 95.68,
+    "2026-02": 95.26,
+    "2026-03": 91.94,
+    "2026-04": 86.35,
+    "2026-05": 84.43,
+    "2026-06": 82.4,
+    "2026-07": 79.89,
+    "2026-08": 88.41,
+    "2026-09": 88.3,
+    "2026-10": 86.41
+   },
+   "label": "Medium, never stopped"
   },
   "hold_btc": {
    "name": "hold_btc",
@@ -119,26 +175,26 @@
   }
  },
  "claude_cost": {
-  "estimated": true,
+  "estimated": false,
   "aggressive": {
-   "events": 247,
-   "calls": 662,
-   "claude-opus-5-5": 26.48,
-   "claude-haiku-5-5": 0.662
+   "events": 545,
+   "calls": 1465,
+   "claude-opus-5-5": 11.172149795918365,
+   "claude-haiku-5-5": 0.28971421428571437
   },
   "medium": {
-   "events": 186,
-   "calls": 471,
-   "claude-opus-5-5": 18.84,
-   "claude-haiku-5-5": 0.47100000000000003
+   "events": 331,
+   "calls": 841,
+   "claude-opus-5-5": 6.4135003265306105,
+   "claude-haiku-5-5": 0.1663137571428572
   }
  },
  "models": {
   "rules": {
-   "trades_taken": 0,
-   "wins": 0,
-   "avg_return_pct": 0.0,
-   "total_return_pct": 0.0,
+   "trades_taken": 36,
+   "wins": 15,
+   "avg_return_pct": -0.008165815482556547,
+   "total_return_pct": -0.29396935737203655,
    "claude_calls": 0,
    "input_tokens": 0,
    "output_tokens": 0,
@@ -147,15 +203,15 @@
    "fell_back": 0
   },
   "claude-opus-5-5": {
-   "trades_taken": 0,
-   "wins": 0,
-   "avg_return_pct": 0.0,
-   "total_return_pct": 0.0,
-   "claude_calls": 0,
-   "input_tokens": 0,
-   "output_tokens": 0,
-   "cost": 0.0,
-   "cost_per_call": null,
+   "trades_taken": 8,
+   "wins": 3,
+   "avg_return_pct": -0.36408712678263205,
+   "total_return_pct": -2.9126970142610564,
+   "claude_calls": 49,
+   "input_tokens": 57449,
+   "output_tokens": 7194,
+   "cost": 0.37367599999999995,
+   "cost_per_call": 0.0076260408163265295,
    "fell_back": 0
   },
   "claude-haiku-5-5": {
@@ -163,24 +219,1616 @@
    "wins": 0,
    "avg_return_pct": 0.0,
    "total_return_pct": 0.0,
-   "claude_calls": 0,
-   "input_tokens": 0,
-   "output_tokens": 0,
-   "cost": 0.0,
-   "cost_per_call": null,
+   "claude_calls": 49,
+   "input_tokens": 57796,
+   "output_tokens": 7821,
+   "cost": 0.009690100000000004,
+   "cost_per_call": 0.00019775714285714293,
    "fell_back": 0
   },
   "every setup": {
-   "trades_taken": 0,
-   "wins": 0,
-   "avg_return_pct": 0.0,
-   "total_return_pct": 0.0
-  }
+   "trades_taken": 47,
+   "wins": 16,
+   "avg_return_pct": -0.3782206518806863,
+   "total_return_pct": -17.776370638392258
+  },
+  "agreement_pct": 82.97872340425532
  },
  "check": {
-  "rows": [],
-  "spent": 0.0,
-  "pool": 0,
+  "rows": [
+   {
+    "time": "2026-07-04T18:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "LINK/USD": {
+      "exit": "stop",
+      "return_pct": -2.6117818215821376,
+      "hours": 6.5
+     },
+     "AVAX/USD": {
+      "exit": "stop",
+      "return_pct": -2.9730740753576734,
+      "hours": 6.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "LINK/USD"
+      ],
+      "decisions": {
+       "LINK/USD": "BUY 0.72: Signals mostly agree (rule-based).",
+       "AVAX/USD": "BUY 0.66: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "LINK/USD": "WAIT 0.35: Uptrend with strong volume, but RSI 72.7 overextended, news is not a real catalyst, sentiment negative amid extreme fear. Recheck on pullback.",
+       "AVAX/USD": "SKIP 0.30: No catalyst, negative sentiment, RSI overbought, modest volume. Trend alone doesn't meet the alignment requirement."
+      },
+      "claude_calls": 2,
+      "input_tokens": 1787,
+      "output_tokens": 313,
+      "cost": 0.013408,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "LINK/USD": "WAIT 0.30: Uptrend and volume are good, but RSI 72.7 is overbought, news is weak and sentiment is negative. Medium strategy needs clear alignment; recheck next run.",
+       "AVAX/USD": "SKIP 0.20: No news catalyst, negative sentiment, and RSI 72.8 is overbought. Trend alone doesn't justify entry under a medium-term strategy."
+      },
+      "claude_calls": 2,
+      "input_tokens": 1799,
+      "output_tokens": 333,
+      "cost": 0.00034639999999999996,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-07-06T00:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "LINK/USD": {
+      "exit": "stop",
+      "return_pct": -2.3305033688432286,
+      "hours": 5.5
+     },
+     "XRP/USD": {
+      "exit": "stop",
+      "return_pct": -2.295038880828648,
+      "hours": 5.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [],
+      "decisions": {
+       "LINK/USD": "BUY 0.65: Signals mostly agree (rule-based).",
+       "XRP/USD": "WAIT 0.63: Signals mixed (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "LINK/USD": "WAIT 0.40: Uptrend with 2.17x volume and decent reward/risk, but no news catalyst and negative sentiment amid extreme fear. Signals don't align for a medium-term entry.",
+       "XRP/USD": "WAIT 0.35: Uptrend but RSI near 67, modest volume, no news and negative sentiment. Lacks the trend, news and sentiment alignment required; recheck next run."
+      },
+      "claude_calls": 1,
+      "input_tokens": 1149,
+      "output_tokens": 196,
+      "cost": 0.008516,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "LINK/USD": "WAIT 0.35: Uptrend and 2.2x volume, but no news catalyst and sentiment is negative with extreme fear. Medium strategy needs trend, news and sentiment aligned; recheck next run.",
+       "XRP/USD": "WAIT 0.30: Uptrend with modest volume, but no news and negative sentiment in extreme fear. RSI near 67 is getting stretched. Signals not aligned; recheck next run."
+      },
+      "claude_calls": 1,
+      "input_tokens": 1149,
+      "output_tokens": 203,
+      "cost": 0.0002164,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-07-06T16:00:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "AVAX/USD": {
+      "exit": "stop",
+      "return_pct": -0.7023732834822827,
+      "hours": 2.0
+     },
+     "BTC/USD": {
+      "exit": "target",
+      "return_pct": 0.48087654616948416,
+      "hours": 5.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.51: Signals mixed (rule-based).",
+       "BTC/USD": "WAIT 0.50: Signals mixed (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.40: Volume spike 2.37x but no catalyst, negative sentiment, sideways trend and RSI near overbought. Thin 1.5 R/R; recheck for confirmation.",
+       "BTC/USD": "SKIP 0.60: RSI 71.9 overbought, negative news (Strategy loss sale, capitulation talk), fearful sentiment, sideways trend. Modest volume doesn't justify chasing."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2545,
+      "output_tokens": 333,
+      "cost": 0.01684,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.35: Volume spike 2.37x with RSI 67.5 is promising, but no news catalyst, negative sentiment, and sideways trend. Recheck next run for confirmation.",
+       "BTC/USD": "WAIT 0.30: Momentum up 2.41% on 1.6x volume, but RSI 71.9 is overextended, news is mixed, and sentiment is negative in a sideways trend."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2565,
+      "output_tokens": 345,
+      "cost": 0.000429,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-07-09T10:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "AVAX/USD": {
+      "exit": "stop",
+      "return_pct": -1.1612370035683384,
+      "hours": 0.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.62: Signals mixed (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "SKIP 0.75: Volume spike lacks a news catalyst; sentiment is negative amid extreme fear, the trend is sideways, and RSI is near overbought. The signals don't align for a medium-term hold."
+      },
+      "claude_calls": 1,
+      "input_tokens": 879,
+      "output_tokens": 111,
+      "cost": 0.005736,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "SKIP 0.80: Trend sideways, no news catalyst, negative sentiment with fear/greed at 22, and a tight stop-to-target setup. Volume spike alone doesn't justify a medium-term hold; not aligned."
+      },
+      "claude_calls": 1,
+      "input_tokens": 879,
+      "output_tokens": 117,
+      "cost": 0.0001464,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-07-13T00:30:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "ETH/USD": {
+      "exit": "stop",
+      "return_pct": -1.4498215159989725,
+      "hours": 1.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "ETH/USD"
+      ],
+      "decisions": {
+       "ETH/USD": "BUY 0.84: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [
+       "ETH/USD"
+      ],
+      "decisions": {
+       "ETH/USD": "BUY 0.60: 10x volume, uptrend, RSI 63.8 not overbought, mild ETF-inflow support, 2:1 R/R with tight stop. Negative sentiment/fear tempers conviction; small reduced size."
+      },
+      "claude_calls": 2,
+      "input_tokens": 1681,
+      "output_tokens": 210,
+      "cost": 0.010924,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "ETH/USD": "WAIT 0.50: Strong volume spike and uptrend with 2:1 setup, but news is promotional and sentiment is negative with fear at 28. Wait for stronger confirmation next run."
+      },
+      "claude_calls": 2,
+      "input_tokens": 1689,
+      "output_tokens": 204,
+      "cost": 0.00027089999999999997,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-07-13T09:30:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "AVAX/USD": {
+      "exit": "stop",
+      "return_pct": -2.024628475596091,
+      "hours": 7.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.64: Signals mixed (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.45: Volume 2x and uptrend with 2.25 R:R, but RSI near 70, no news, negative sentiment, fear market. Recheck after a pullback."
+      },
+      "claude_calls": 1,
+      "input_tokens": 882,
+      "output_tokens": 101,
+      "cost": 0.005548,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.40: Volume ratio 1.99 and uptrend are constructive, but RSI 69.6 is near overbought, sentiment is negative, and there is no news catalyst. Reward-risk is thin. Recheck next run."
+      },
+      "claude_calls": 1,
+      "input_tokens": 882,
+      "output_tokens": 119,
+      "cost": 0.00014769999999999999,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-07-14T14:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "AVAX/USD": {
+      "exit": "stop",
+      "return_pct": -1.293381632130719,
+      "hours": 0.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.60: Signals mixed (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "SKIP 0.75: Volume spike but sideways trend, no news catalyst, negative sentiment amid extreme fear. Signals don't align for medium-hold strategy."
+      },
+      "claude_calls": 1,
+      "input_tokens": 881,
+      "output_tokens": 97,
+      "cost": 0.005464,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "SKIP 0.80: Sideways trend, no news, negative sentiment and fear/greed at 22, and RSI already elevated at 65.7. Medium-term trend and catalysts don't line up, so no entry."
+      },
+      "claude_calls": 1,
+      "input_tokens": 881,
+      "output_tokens": 110,
+      "cost": 0.00014310000000000004,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-07-17T04:00:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "LTC/USD": {
+      "exit": "stop",
+      "return_pct": -1.2397504497046907,
+      "hours": 0.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "LTC/USD"
+      ],
+      "decisions": {
+       "LTC/USD": "BUY 0.78: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "LTC/USD": "WAIT 0.45: Huge 133x volume spike with uptrend, but no news, negative sentiment, fear market, and thin 1.5 R:R. Anomalous volume needs confirmation."
+      },
+      "claude_calls": 1,
+      "input_tokens": 880,
+      "output_tokens": 104,
+      "cost": 0.0056,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "LTC/USD": "WAIT 0.40: Volume spike and uptrend with RSI 62.8 are constructive, but news is absent and sentiment is negative (-0.23, fear 27). Risk flagged REDUCE. Recheck next run for confirmation."
+      },
+      "claude_calls": 1,
+      "input_tokens": 880,
+      "output_tokens": 119,
+      "cost": 0.0001475,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-07-25T14:30:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "AVAX/USD": {
+      "exit": "target",
+      "return_pct": 1.8403859896428454,
+      "hours": 2.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "AVAX/USD"
+      ],
+      "decisions": {
+       "AVAX/USD": "BUY 0.78: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.40: Huge 14.6x volume and uptrend, but RSI 77 overbought, negative sentiment, no news catalyst, fear market. Wait for pullback or confirmation."
+      },
+      "claude_calls": 1,
+      "input_tokens": 883,
+      "output_tokens": 106,
+      "cost": 0.005652,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.40: Strong volume spike and uptrend, but RSI 77 is overbought, news is absent, and sentiment is negative. Wait for a pullback or confirmation."
+      },
+      "claude_calls": 1,
+      "input_tokens": 883,
+      "output_tokens": 101,
+      "cost": 0.0001388,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-07-26T16:30:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "LINK/USD": {
+      "exit": "stop",
+      "return_pct": -1.3962845050898398,
+      "hours": 1.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "LINK/USD"
+      ],
+      "decisions": {
+       "LINK/USD": "BUY 0.78: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "LINK/USD": "WAIT 0.55: Huge volume and uptrend, but RSI 77 overbought, negative sentiment, extreme fear, no catalyst. Wait for a pullback or confirmation."
+      },
+      "claude_calls": 1,
+      "input_tokens": 882,
+      "output_tokens": 102,
+      "cost": 0.005568,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "LINK/USD": "WAIT 0.35: Volume spike is strong, but RSI 77.4 is overextended, news is absent, and sentiment is negative. Reassess on a pullback or news confirmation."
+      },
+      "claude_calls": 1,
+      "input_tokens": 882,
+      "output_tokens": 100,
+      "cost": 0.0001382,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-07-27T08:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "LINK/USD": {
+      "exit": "stop",
+      "return_pct": -2.1981713061775654,
+      "hours": 6.5
+     },
+     "ETH/USD": {
+      "exit": "stop",
+      "return_pct": -1.9351005243818942,
+      "hours": 6.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "LINK/USD",
+       "ETH/USD"
+      ],
+      "decisions": {
+       "LINK/USD": "BUY 0.72: Signals mostly agree (rule-based).",
+       "ETH/USD": "BUY 0.76: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "LINK/USD": "WAIT 0.35: Uptrend with strong volume, but there is no news catalyst, sentiment is negative and RSI is near 67. Signals don't line up; recheck next run.",
+       "ETH/USD": "WAIT 0.40: RSI 75.5 is overbought, news is only mildly positive and sentiment is negative amid fear. Wait for a pullback or better alignment."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2183,
+      "output_tokens": 308,
+      "cost": 0.014892,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "LINK/USD": "WAIT 0.30: Uptrend and volume spike, but no news catalyst, negative sentiment, and RSI 67 leaves the setup unconfirmed for a multi-day hold.",
+       "ETH/USD": "WAIT 0.35: Trend is up with mild macro news, but sentiment is negative and RSI 75.5 is overextended; wait for a pullback and better confirmation."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2189,
+      "output_tokens": 317,
+      "cost": 0.00037739999999999996,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-08-04T00:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "AVAX/USD": {
+      "exit": "target",
+      "return_pct": 3.6692057897481423,
+      "hours": 2.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "AVAX/USD"
+      ],
+      "decisions": {
+       "AVAX/USD": "BUY 0.77: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.35: Uptrend and big volume, but no news catalyst, negative sentiment, fear market. Medium strategy needs alignment; recheck next run."
+      },
+      "claude_calls": 1,
+      "input_tokens": 879,
+      "output_tokens": 95,
+      "cost": 0.005416,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.35: Uptrend and volume spike are positive, but no news catalyst and negative sentiment with fear at 25. Medium strategy needs trend, news and sentiment aligned; they are not."
+      },
+      "claude_calls": 1,
+      "input_tokens": 879,
+      "output_tokens": 108,
+      "cost": 0.0001419,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-08-19T15:30:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "LINK/USD": {
+      "exit": "target",
+      "return_pct": 2.5492821263111365,
+      "hours": 5.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "LINK/USD"
+      ],
+      "decisions": {
+       "LINK/USD": "BUY 0.80: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "LINK/USD": "WAIT 0.55: Strong 5.6x volume and uptrend, but RSI 71.7 overextended, weak catalyst, neutral sentiment. Wait for pullback or confirmation next run."
+      },
+      "claude_calls": 2,
+      "input_tokens": 1589,
+      "output_tokens": 191,
+      "cost": 0.010176,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "LINK/USD": "WAIT 0.40: Strong volume spike and uptrend, but RSI 71.7 is overextended, news has no direct catalyst, and sentiment is slightly negative. Recheck on a pullback or confirmed catalyst."
+      },
+      "claude_calls": 2,
+      "input_tokens": 1601,
+      "output_tokens": 212,
+      "cost": 0.0002661,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-08-21T22:30:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "LTC/USD": {
+      "exit": "target",
+      "return_pct": 2.4020468782011584,
+      "hours": 5.0
+     },
+     "LINK/USD": {
+      "exit": "stop",
+      "return_pct": -2.266310851868658,
+      "hours": 1.5
+     },
+     "XRP/USD": {
+      "exit": "target",
+      "return_pct": 5.1882620020245795,
+      "hours": 4.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "LTC/USD",
+       "LINK/USD",
+       "XRP/USD"
+      ],
+      "decisions": {
+       "LTC/USD": "BUY 0.82: Signals mostly agree (rule-based).",
+       "LINK/USD": "BUY 0.82: Signals mostly agree (rule-based).",
+       "XRP/USD": "BUY 0.91: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [
+       "XRP/USD"
+      ],
+      "decisions": {
+       "LTC/USD": "WAIT 0.45: 163x volume is extreme and possibly anomalous, with no catalyst and RSI 73.8 overbought. Verify the volume is real and wait for a pullback.",
+       "LINK/USD": "WAIT 0.40: Decent volume and uptrend, but no catalyst, weak sentiment and RSI above 70. Not enough confirmation; recheck next run.",
+       "XRP/USD": "BUY 0.60: Real catalysts, 3.3x volume, uptrend and a 2:1 setup with a tight stop. Small reduced size limits the overextension risk."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2883,
+      "output_tokens": 440,
+      "cost": 0.020332,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "LTC/USD": "WAIT 0.45: Strong volume spike and uptrend, but RSI 73.8 is overbought and there is no news catalyst. Wait for a pullback or fresh confirmation.",
+       "LINK/USD": "WAIT 0.40: Uptrend with moderate volume, but RSI 70.4 is overextended and no news supports the move. Wait for a cleaner entry.",
+       "XRP/USD": "WAIT 0.40: Momentum and volume are present, but the 40% surge already prices in much of the news and RSI is 70.5. Wait for consolidation."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2906,
+      "output_tokens": 456,
+      "cost": 0.0005186,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-08-22T06:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "XRP/USD": {
+      "exit": "stop",
+      "return_pct": -10.16884039604472,
+      "hours": 103.5
+     },
+     "SOL/USD": {
+      "exit": "time limit",
+      "return_pct": 7.725956445452953,
+      "hours": 120.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "XRP/USD",
+       "SOL/USD"
+      ],
+      "decisions": {
+       "XRP/USD": "BUY 0.92: Signals mostly agree (rule-based).",
+       "SOL/USD": "BUY 0.92: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "XRP/USD": "WAIT 0.55: Real catalysts and uptrend, but 10% move after 40% run, extreme greed and weak sentiment suggest overextension. Wait for pullback toward support.",
+       "SOL/USD": "SKIP 0.60: No SOL-specific catalyst, weak sentiment, merely riding broad rally. Medium strategy requires news and sentiment alignment; not present."
+      },
+      "claude_calls": 2,
+      "input_tokens": 3160,
+      "output_tokens": 357,
+      "cost": 0.01978,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "XRP/USD": "WAIT 0.45: Uptrend and strong volume, but news is momentum-driven and promotional with extreme greed (71) raising reversal risk. Medium style needs clear news confirmation; recheck next run.",
+       "SOL/USD": "SKIP 0.30: No Solana-specific catalyst; move is just broad crypto rally, sentiment is modest, and greed levels add risk. Setup doesn't clearly line up for a multi-day hold."
+      },
+      "claude_calls": 2,
+      "input_tokens": 3165,
+      "output_tokens": 382,
+      "cost": 0.0005075,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-08-23T20:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "LTC/USD": {
+      "exit": "stop",
+      "return_pct": -3.3575519676027232,
+      "hours": 41.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [],
+      "decisions": {
+       "LTC/USD": "WAIT 0.63: Signals mixed (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "LTC/USD": "WAIT 0.55: Uptrend, neutral RSI and 2:1 reward/risk, but no news catalyst and weak sentiment; medium strategy needs trend, news and sentiment aligned."
+      },
+      "claude_calls": 1,
+      "input_tokens": 876,
+      "output_tokens": 106,
+      "cost": 0.005624,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "LTC/USD": "WAIT 0.40: Uptrend and modest volume support, but no news catalyst and weak sentiment (0.16). Medium strategy needs news and sentiment aligned; recheck next run."
+      },
+      "claude_calls": 1,
+      "input_tokens": 876,
+      "output_tokens": 102,
+      "cost": 0.00013860000000000004,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-08-27T08:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "DOGE/USD": {
+      "exit": "stop",
+      "return_pct": -0.6153711769693815,
+      "hours": 25.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [],
+      "decisions": {
+       "DOGE/USD": "WAIT 0.59: Signals mixed (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "DOGE/USD": "SKIP 0.30: Sideways trend, negative news (CleanCore selling 463M DOGE), weak sentiment; good R:R alone doesn't meet medium-style alignment requirement."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2108,
+      "output_tokens": 202,
+      "cost": 0.012472,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "DOGE/USD": "WAIT 0.70: Trend is sideways, news is slightly negative with a broad crypto dip, and sentiment is only mildly positive. Medium-term setup lacks clear alignment; recheck next run."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2119,
+      "output_tokens": 217,
+      "cost": 0.0003204,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-09-03T15:30:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "SOL/USD": {
+      "exit": "time limit",
+      "return_pct": -1.060913213254,
+      "hours": 12.0
+     },
+     "AVAX/USD": {
+      "exit": "time limit",
+      "return_pct": 0.14323784855962973,
+      "hours": 12.0
+     },
+     "LINK/USD": {
+      "exit": "target",
+      "return_pct": 1.4274288032666727,
+      "hours": 6.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "SOL/USD",
+       "AVAX/USD",
+       "LINK/USD"
+      ],
+      "decisions": {
+       "SOL/USD": "BUY 0.82: Signals mostly agree (rule-based).",
+       "AVAX/USD": "BUY 0.81: Signals mostly agree (rule-based).",
+       "LINK/USD": "BUY 0.72: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [
+       "AVAX/USD"
+      ],
+      "decisions": {
+       "SOL/USD": "WAIT 0.45: Huge volume and uptrend, but RSI 73.6 overbought, slightly negative news backdrop, no catalyst. Wait for pullback or confirmation.",
+       "AVAX/USD": "BUY 0.58: Extreme 83x volume, uptrend, tight stop with 8.6 R:R; small reduced size limits risk despite RSI 74 and no catalyst.",
+       "LINK/USD": "SKIP 0.60: Weak 2.5x volume, overbought RSI, no catalyst, modest 2:1 R:R. Not enough confirmation."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2605,
+      "output_tokens": 448,
+      "cost": 0.01938,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "SOL/USD": "WAIT 0.50: Strong volume spike but RSI 73.6 is overbought and news is weak with no SOL-specific catalyst. Recheck on a pullback or confirmation.",
+       "AVAX/USD": "WAIT 0.45: Huge volume spike and uptrend, but RSI 74.2 is overextended and no news support. Wait for a cooldown before entering.",
+       "LINK/USD": "SKIP 0.30: Volume ratio only 2.49, RSI 72.3 overbought, no catalyst, and a 2.0 reward-risk on a small move. Not enough confirmation."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2609,
+      "output_tokens": 454,
+      "cost": 0.00048790000000000004,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-09-11T14:30:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "SOL/USD": {
+      "exit": "stop",
+      "return_pct": -2.780674492347268,
+      "hours": 1.5
+     },
+     "AVAX/USD": {
+      "exit": "stop",
+      "return_pct": -2.475582676614463,
+      "hours": 1.5
+     },
+     "DOGE/USD": {
+      "exit": "stop",
+      "return_pct": -2.508599176035886,
+      "hours": 1.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "SOL/USD",
+       "AVAX/USD",
+       "DOGE/USD"
+      ],
+      "decisions": {
+       "SOL/USD": "BUY 0.81: Signals mostly agree (rule-based).",
+       "AVAX/USD": "BUY 0.81: Signals mostly agree (rule-based).",
+       "DOGE/USD": "BUY 0.76: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [
+       "AVAX/USD"
+      ],
+      "decisions": {
+       "SOL/USD": "WAIT 0.45: Strong 6x volume and uptrend, but RSI 72 overextended and negative macro news. Wait for pullback toward entry before chasing.",
+       "AVAX/USD": "BUY 0.55: 6.5x volume, uptrend, RSI below 70, neutral news. Tight stop but small risk; modest 1.5 R/R acceptable for a short momentum hold.",
+       "DOGE/USD": "SKIP 0.60: Weaker volume, negative macro news, speculative catalyst, RSI near 70. Bounce looks fragile despite 2.5 R/R."
+      },
+      "claude_calls": 2,
+      "input_tokens": 3664,
+      "output_tokens": 466,
+      "cost": 0.023976,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "SOL/USD": "WAIT 0.40: Strong volume and uptrend, but RSI 72 is overextended, news is macro-negative with no Solana-specific catalyst. Recheck next run.",
+       "AVAX/USD": "WAIT 0.35: Volume surge and uptrend are good, but RSI 68.7 is elevated and news is neutral. Risk reduced; wait for cleaner confirmation.",
+       "DOGE/USD": "SKIP 0.25: Momentum is present, but news is negative or unrelated, sentiment is flat, and the signal is mostly promotional. Not worth the risk."
+      },
+      "claude_calls": 2,
+      "input_tokens": 3726,
+      "output_tokens": 525,
+      "cost": 0.0006351,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-09-18T10:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "XRP/USD": {
+      "exit": "stop",
+      "return_pct": -1.7510236220939612,
+      "hours": 1.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "XRP/USD"
+      ],
+      "decisions": {
+       "XRP/USD": "BUY 0.81: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "XRP/USD": "WAIT 0.55: Uptrend with strong volume, but RSI 68 near overbought, news mixed, sentiment near neutral. Medium style needs clearer alignment; tight stop risks whipsaw. Recheck next run."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2288,
+      "output_tokens": 200,
+      "cost": 0.013152,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "XRP/USD": "WAIT 0.45: Uptrend and utility catalyst, but sentiment is weak (0.06), RSI 68 is extended, and macro headwinds from a Fed hike and CLARITY setback muddy the picture. Recheck next run."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2310,
+      "output_tokens": 225,
+      "cost": 0.0003435,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-09-18T14:00:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "SOL/USD": {
+      "exit": "target",
+      "return_pct": 1.5233091863772419,
+      "hours": 1.0
+     },
+     "XRP/USD": {
+      "exit": "target",
+      "return_pct": 2.2506013624251864,
+      "hours": 1.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "SOL/USD",
+       "XRP/USD"
+      ],
+      "decisions": {
+       "SOL/USD": "BUY 0.83: Signals mostly agree (rule-based).",
+       "XRP/USD": "BUY 0.73: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [
+       "SOL/USD"
+      ],
+      "decisions": {
+       "SOL/USD": "BUY 0.60: Huge 13.9x volume with uptrend and 2:1 R/R justifies an aggressive momentum entry despite RSI 77 and no news; reduced size and tight stop limit risk.",
+       "XRP/USD": "WAIT 0.50: Modest catalyst but weak 1.6x volume confirmation and overbought RSI 75; wait for a pullback or a volume surge."
+      },
+      "claude_calls": 2,
+      "input_tokens": 3536,
+      "output_tokens": 356,
+      "cost": 0.021264,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "SOL/USD": "WAIT 0.40: Huge volume spike and uptrend, but RSI 77 is overbought and news is macro-negative with no SOL-specific catalyst. Recheck on a pullback.",
+       "XRP/USD": "WAIT 0.35: Uptrend and mild positive news, but RSI 75 is overextended, volume is only modestly elevated, and ETF flows are mixed. Wait for a cooler entry."
+      },
+      "claude_calls": 2,
+      "input_tokens": 3564,
+      "output_tokens": 390,
+      "cost": 0.0005514000000000001,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-09-18T16:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "XRP/USD": {
+      "exit": "target",
+      "return_pct": 1.2711574493804223,
+      "hours": 4.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "XRP/USD"
+      ],
+      "decisions": {
+       "XRP/USD": "BUY 0.83: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "XRP/USD": "WAIT 0.40: Uptrend and moderate news, but RSI 72 overextended after 4.4% spike, sentiment near neutral, Risk reduced size. Recheck after pullback."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2314,
+      "output_tokens": 203,
+      "cost": 0.013316,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "XRP/USD": "WAIT 0.30: Overextended with RSI 72 and a 4.4% spike on heavy volume. News and sentiment are weak or mixed, with ETF outflows and a Fed hike headwind. Recheck after a pullback."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2331,
+      "output_tokens": 233,
+      "cost": 0.00034960000000000004,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-09-19T02:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "SOL/USD": {
+      "exit": "stop",
+      "return_pct": -2.791147652090775,
+      "hours": 16.5
+     },
+     "XRP/USD": {
+      "exit": "stop",
+      "return_pct": -0.7230672483690248,
+      "hours": 6.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "SOL/USD",
+       "XRP/USD"
+      ],
+      "decisions": {
+       "SOL/USD": "BUY 0.80: Signals mostly agree (rule-based).",
+       "XRP/USD": "BUY 0.79: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "SOL/USD": "WAIT 0.40: Uptrend but RSI 75.7 overextended, no SOL-specific catalyst, weak sentiment. Wait for pullback and clearer news alignment.",
+       "XRP/USD": "WAIT 0.50: Solid specific catalysts and uptrend, but RSI 71.5 stretched, sentiment only mild, whale inflows and ETF outflows. Recheck after cooling."
+      },
+      "claude_calls": 2,
+      "input_tokens": 3208,
+      "output_tokens": 370,
+      "cost": 0.020232,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "SOL/USD": "WAIT 0.40: Uptrend and broad risk-on support, but RSI 75.7 is overextended and news lacks SOL-specific catalyst. Recheck on pullback.",
+       "XRP/USD": "WAIT 0.40: Uptrend with some specific news support, but RSI 71.5 is elevated and ETF outflows and sentiment are mixed. Recheck next run."
+      },
+      "claude_calls": 2,
+      "input_tokens": 3227,
+      "output_tokens": 379,
+      "cost": 0.0005122000000000001,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-09-19T04:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "AVAX/USD": {
+      "exit": "target",
+      "return_pct": 5.3307059150799585,
+      "hours": 5.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "AVAX/USD"
+      ],
+      "decisions": {
+       "AVAX/USD": "BUY 0.82: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.60: Uptrend on strong volume, but no news catalyst, weak sentiment and RSI near 70. Medium strategy needs alignment; recheck next run."
+      },
+      "claude_calls": 1,
+      "input_tokens": 879,
+      "output_tokens": 99,
+      "cost": 0.005496,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.35: Uptrend and volume are strong, but there is no news catalyst, sentiment is only mildly positive, and RSI 68 looks stretched. Medium-term setup not clearly aligned yet; recheck next run."
+      },
+      "claude_calls": 1,
+      "input_tokens": 879,
+      "output_tokens": 118,
+      "cost": 0.0001469,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-09-21T10:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "DOGE/USD": {
+      "exit": "target",
+      "return_pct": 5.360344853407906,
+      "hours": 7.5
+     },
+     "SOL/USD": {
+      "exit": "target",
+      "return_pct": 4.398023841658749,
+      "hours": 104.5
+     },
+     "ETH/USD": {
+      "exit": "stop",
+      "return_pct": -0.774606474195294,
+      "hours": 51.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "DOGE/USD",
+       "SOL/USD",
+       "ETH/USD"
+      ],
+      "decisions": {
+       "DOGE/USD": "BUY 0.84: Signals mostly agree (rule-based).",
+       "SOL/USD": "BUY 0.88: Signals mostly agree (rule-based).",
+       "ETH/USD": "BUY 0.88: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "DOGE/USD": "WAIT 0.35: RSI 75.7 overextended, no DOGE-specific catalyst, weak sentiment. Huge volume is notable but wait for pullback and real news.",
+       "SOL/USD": "WAIT 0.50: Best catalyst (ETF/staking inflows) and uptrend, but RSI 76.8 overbought and sentiment only mild. Wait for a cooler entry.",
+       "ETH/USD": "WAIT 0.40: Strong volume and uptrend, but RSI 73.6 is stretched and the news is mostly promotional. Signals aren't aligned enough yet."
+      },
+      "claude_calls": 2,
+      "input_tokens": 3387,
+      "output_tokens": 505,
+      "cost": 0.023648,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "DOGE/USD": "SKIP 0.80: RSI 75.7 is overextended, news is only generic market roundup, and sentiment is weak at 0.2. Medium-term trend case not clearly aligned.",
+       "SOL/USD": "WAIT 0.60: Trend up with concrete ETF and staking inflow news, but RSI 76.8 is overbought and sentiment only 0.2. Wait for a pullback to a cleaner entry.",
+       "ETH/USD": "WAIT 0.60: Trend up and ETF inflows support it, but RSI 73.6 is overextended and the $3,000 target is promotional. Sentiment is only moderate; recheck next run."
+      },
+      "claude_calls": 2,
+      "input_tokens": 3395,
+      "output_tokens": 528,
+      "cost": 0.0006035,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-09-24T14:00:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "SOL/USD": {
+      "exit": "target",
+      "return_pct": 0.5261000744204658,
+      "hours": 0.5
+     },
+     "LINK/USD": {
+      "exit": "stop",
+      "return_pct": -0.8046122717337068,
+      "hours": 1.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "SOL/USD",
+       "LINK/USD"
+      ],
+      "decisions": {
+       "SOL/USD": "BUY 0.71: Signals mostly agree (rule-based).",
+       "LINK/USD": "BUY 0.66: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "SOL/USD": "SKIP 0.30: High volume but only a 1% move in a sideways trend. Negative news (macro headwinds, fund exit) and a thin 1.5 reward/risk make this not worth it.",
+       "LINK/USD": "WAIT 0.50: Strong volume and a solid 2.66 reward/risk, but RSI 72 looks overextended, there is no catalyst and the trend is sideways. Recheck next run for a pullback or confirmation."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2824,
+      "output_tokens": 348,
+      "cost": 0.018256,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "SOL/USD": "WAIT 0.40: Volume surge is strong, but news is macro-negative with no Solana catalyst, trend is sideways, and sentiment is only mildly positive. Recheck next run.",
+       "LINK/USD": "WAIT 0.35: Volume and reward-risk are decent, but RSI at 72 looks overextended, there is no LINK-specific catalyst, and trend is sideways. Wait for a pullback."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2856,
+      "output_tokens": 531,
+      "cost": 0.0005511,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-09-26T02:30:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "AVAX/USD": {
+      "exit": "stop",
+      "return_pct": -2.317071751594002,
+      "hours": 1.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "AVAX/USD"
+      ],
+      "decisions": {
+       "AVAX/USD": "BUY 0.87: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [
+       "AVAX/USD"
+      ],
+      "decisions": {
+       "AVAX/USD": "BUY 0.60: Huge 15.6x volume with uptrend, RSI 68.6 not yet overbought, 2:1 reward/risk, small reduced size. Weak news, but momentum is confirmed for a short hold."
+      },
+      "claude_calls": 2,
+      "input_tokens": 1660,
+      "output_tokens": 198,
+      "cost": 0.0106,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "AVAX/USD": "WAIT 0.45: Strong volume spike and uptrend, but RSI 68.6 is getting stretched and news is weak with no AVAX-specific catalyst. Recheck next run for cleaner confirmation."
+      },
+      "claude_calls": 2,
+      "input_tokens": 1678,
+      "output_tokens": 212,
+      "cost": 0.0002738,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-10-02T14:00:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "LTC/USD": {
+      "exit": "stop",
+      "return_pct": -2.1648590718608918,
+      "hours": 0.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "LTC/USD"
+      ],
+      "decisions": {
+       "LTC/USD": "BUY 0.82: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [
+       "LTC/USD"
+      ],
+      "decisions": {
+       "LTC/USD": "BUY 0.60: Huge 18.8x volume with uptrend and 2:1 R/R; RSI 71 slightly hot, no news, but small reduced size fits aggressive momentum play."
+      },
+      "claude_calls": 1,
+      "input_tokens": 882,
+      "output_tokens": 103,
+      "cost": 0.005588,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "LTC/USD": "WAIT 0.45: Volume spike and uptrend are promising, but RSI 71.4 is overextended, news is absent, and sentiment is only mildly positive. Recheck next run for a pullback."
+      },
+      "claude_calls": 1,
+      "input_tokens": 882,
+      "output_tokens": 105,
+      "cost": 0.00014069999999999998,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-10-16T11:30:00+00:00",
+    "strategy": "aggressive",
+    "outcomes": {
+     "ETH/USD": {
+      "exit": "stop",
+      "return_pct": -1.1216278671371538,
+      "hours": 1.0
+     },
+     "LINK/USD": {
+      "exit": "stop",
+      "return_pct": -1.3601710351541785,
+      "hours": 1.0
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [
+       "ETH/USD",
+       "LINK/USD"
+      ],
+      "decisions": {
+       "ETH/USD": "BUY 0.89: Signals mostly agree (rule-based).",
+       "LINK/USD": "BUY 0.83: Signals mostly agree (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [
+       "LINK/USD"
+      ],
+      "decisions": {
+       "ETH/USD": "WAIT 0.40: Big volume and uptrend, but RSI 76.6 is overextended and news is negative (hot CPI, ETF outflows). Recheck after a pullback.",
+       "LINK/USD": "BUY 0.58: Volume is 82x normal, trend is up, RSI 71 is acceptable and reward/risk is 3.05. News is neutral. Small reduced size, tight stop."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2616,
+      "output_tokens": 337,
+      "cost": 0.017204,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "ETH/USD": "WAIT 0.40: Huge volume spike and uptrend, but RSI 76.6 is overextended, news is macro-negative with no ETH catalyst, and risk flagged reduce. Recheck next run.",
+       "LINK/USD": "WAIT 0.35: Volume spike 82x and uptrend look strong, but RSI 71 is stretched and news is mildly negative with no direct catalyst. Wait for a cleaner pullback entry."
+      },
+      "claude_calls": 2,
+      "input_tokens": 2645,
+      "output_tokens": 383,
+      "cost": 0.000456,
+      "fell_back": false
+     }
+    }
+   },
+   {
+    "time": "2026-10-19T02:00:00+00:00",
+    "strategy": "medium",
+    "outcomes": {
+     "XRP/USD": {
+      "exit": "stop",
+      "return_pct": -1.2101179628106196,
+      "hours": 8.5
+     }
+    },
+    "calls": {
+     "rules": {
+      "picks": [],
+      "decisions": {
+       "XRP/USD": "SKIP 0.50: Weak setup (rule-based)."
+      },
+      "claude_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "fell_back": false
+     },
+     "claude-opus-5-5": {
+      "picks": [],
+      "decisions": {
+       "XRP/USD": "SKIP 0.75: Negative news (ETF outflows, bearish pattern), neutral sentiment, sideways trend. Signals don't align for medium-hold strategy despite good reward/risk."
+      },
+      "claude_calls": 2,
+      "input_tokens": 1459,
+      "output_tokens": 189,
+      "cost": 0.009616,
+      "fell_back": false
+     },
+     "claude-haiku-5-5": {
+      "picks": [],
+      "decisions": {
+       "XRP/USD": "SKIP 0.85: News is negative with ETF outflows and cooling demand, sentiment is weak, and trend is sideways. Medium-term signals do not line up for a buy."
+      },
+      "claude_calls": 2,
+      "input_tokens": 1470,
+      "output_tokens": 193,
+      "cost": 0.0002435,
+      "fell_back": false
+     }
+    }
+   }
+  ],
+  "spent": 0.38336610000000004,
+  "pool": 279,
   "requested": 30
  }
 }
