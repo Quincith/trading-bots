@@ -144,11 +144,20 @@ Profit is always measured as **account value minus the money you put in**, so ad
 
 ## Bot World page and daily recap
 
-After every run, the bots rebuild a web page that shows the crew at work in a **90s pixel-art night trading office**, seen from above like a floor plan. Each bot has its own walled room built for its job, with big wall screens showing the real numbers from the last run (Scout's scanner and radar, Charts' trade plan and levels, News' headlines, Sentiment's mood gauge, Risk's limits, Decision's BUY / WAIT / SKIP board). The Captain, a chrome villain titan in black and red, sits on a throne at the top. A courier on a scooter carries each bot's findings from room to room, cables run from every bot into Decision, and a gold cable runs from Decision to the laser in the center beam room. Tap a room to zoom in, and tap again to zoom out. The page also shows each bot's latest report, a replay of the last run, the account value chart, recent trades, and a **daily recap** written for beginners (a short description, then key-takeaway bullets, plus a "Words to know" list).
+After every run, the bots rebuild a web page called **Bot World HQ**: a 90s pixel-art space station seen from above, like a floor plan.
+
+- **The Trading Wing** holds one office per account, side by side: Aggressive (light-blue denim crew), Medium (dark-blue denim crew) and Copycat (black denim crew). Each office has six walled rooms, one per bot, with big wall screens showing the real numbers from that account's last run (Scout's scanner and radar, Charts' trade plan, News' headlines, Sentiment's mood gauge, Risk's limits, Decision's BUY / WAIT / SKIP board).
+- **The bots walk.** They get up from their desks to check their screens, and walk to the door when the courier arrives. Bots with nothing to do this run doze at their desk. Each desk has a name plate with the bot's level (it grows with every run and every trade it works on) and a timer since the crew's last run.
+- **Shared rooms:** the Captain (a chrome villain titan in black and red) sits in the throne room, and the beam room shows the whole wing's value. Cables run from every bot into its office's Decision room, and a gold cable runs from each Decision room to the beam.
+- **Room to grow:** two more wings sit dark, with boxes and cobwebs, waiting for future businesses.
+- **Crew list:** the panel on the left lists every bot, whether it's working or idle, what it said on the last run, and the time since that run. Click a bot to fly to it.
+- **Moving around:** drag to move, scroll or pinch to zoom, click a room or a bot to fly to it, and press **Zoom out** to see the whole station. On a phone, the crew list sits under the map.
+
+The page also shows the chosen bot's full report, a replay of the last run, the account value chart, recent trades, and a **daily recap** written for beginners (a short description, then key-takeaway bullets, plus a "Words to know" list). There is no chat box, because the page is public.
 
 - **Where:** your GitHub Pages address, `https://quincith.github.io/trading-bots/` (after the one-time setup below).
-- **Effects:** a green laser and a party on a winning trade, tomatoes on a losing one. Use the **Win / Loss / Buy** buttons under the map to show them off any time. Sound is off until you press **Sound**.
-- **Accounts:** the switch at the top flips between Aggressive (light-blue denim crew), Medium (dark-blue denim crew) and Copycat (black denim crew).
+- **Effects:** a green laser out of the beam room and a party on a winning trade, tomatoes on a losing one. Use the **Win / Loss / Buy** buttons under the map to show them off any time. Sound is off until you press **Sound**.
+- **Accounts:** the switch at the top picks which office you're watching (it glows gold) and flies the camera there.
 - **Recaps as files:** `recaps/<date>.md` and `recaps/latest.md` on the `bot-data` branch.
 - **Without Pages:** the same page is saved as `world/index.html` on the `bot-data` branch. Download it and open it in a browser.
 

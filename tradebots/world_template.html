@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bot World</title>
-<meta name="description" content="Six AI trading bots and their captain at work in a pixel-art night trading office, trading paper money. Updated after every run.">
+<meta name="description" content="Bot World HQ: a pixel-art space station where three crews of AI trading bots and their captain trade paper money. Updated after every run.">
 <meta name="color-scheme" content="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,11 +104,39 @@ header h1 b{font-weight:700;color:var(--amber)}
 .splat{position:absolute;width:56px;height:40px;background:#c8261c;opacity:.85;
   clip-path:polygon(50% 0,60% 25%,85% 8%,75% 38%,100% 45%,74% 60%,90% 92%,58% 74%,45% 100%,38% 72%,8% 88%,24% 58%,0 40%,26% 34%,16% 6%,42% 24%)}
 
-/* pixel world stage (the flat SVG ship above is only a fallback) */
-.stage{display:none;position:relative;overflow:hidden;background:#04070e}
-.hasworld .stage,.hasworld .stage-bar{display:flex}
-.hasworld .viewport,.hasworld .bridge,.hasworld .courier,.hasworld .ship-foot .fx-2d{display:none}
-.stage canvas{display:block;width:100%;height:100%;image-rendering:pixelated;image-rendering:crisp-edges}
+/* pixel world HQ: crew list on the left, the station on the right (the flat SVG ship is only a fallback) */
+.hq{display:none;grid-template-columns:272px minmax(0,1fr);border-bottom:1px solid var(--bay-edge)}
+.hasworld .hq{display:grid}
+.hasworld .stage-bar{display:flex}
+.hasworld .viewport,.hasworld .bridge,.hasworld .courier,.hasworld .deck,.hasworld .ship-foot .fx-2d{display:none}
+.stage{position:relative;overflow:hidden;background:#060918;height:620px}
+.stage canvas{display:block;width:100%;height:100%;image-rendering:pixelated;image-rendering:crisp-edges;outline:none}
+.stage canvas:focus-visible{outline:2px solid var(--amber);outline-offset:-2px}
+.cam{position:absolute;right:10px;top:10px;display:flex;gap:6px;z-index:2}
+.cam .ctl{padding:4px 10px;min-width:34px}
+.crew{display:flex;flex-direction:column;min-height:0;height:620px;border-right:1px solid var(--bay-edge);background:var(--hull-1)}
+.crew-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;padding:10px 12px;border-bottom:1px solid var(--bay-edge);font-size:.78rem;color:var(--ink-2)}
+.crew-title{font-family:"Silkscreen",ui-monospace,monospace;color:var(--amber);letter-spacing:.16em;text-transform:uppercase;font-size:.8rem}
+.crew-next{width:100%;font-size:.72rem;color:var(--ink-3)}
+.crew-list{overflow-y:auto;flex:1;min-height:0;padding:4px 0 8px}
+.crew-grp{margin-top:6px;border-left:2px solid transparent}
+.crew-grp.sel{border-left-color:var(--amber);background:rgba(232,180,90,.05)}
+.crew-office{display:flex;width:100%;justify-content:space-between;gap:8px;border:0;background:none;cursor:pointer;padding:6px 12px 4px;
+  font-family:"Silkscreen",ui-monospace,monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber)}
+.crew-office b{color:var(--ink);font-weight:400}
+.crew-row{display:flex;align-items:center;gap:8px;width:100%;border:0;background:none;cursor:pointer;text-align:left;padding:4px 12px;color:var(--ink)}
+.crew-row:hover,.crew-row:focus-visible{background:rgba(232,180,90,.1);outline:none}
+.crew-row img{width:22px;height:34px;image-rendering:pixelated;flex:none}
+.crew-row.cap img{width:30px;height:38px}
+.cr-main{flex:1;min-width:0;display:flex;flex-direction:column}
+.cr-name{font-size:.82rem;font-weight:600}
+.cr-name i{font-style:normal;font-weight:400;font-size:.7rem;color:var(--amber);margin-left:4px}
+.cr-say{font-size:.72rem;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cr-side{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex:none}
+.cr-chip{font-family:"Silkscreen",ui-monospace,monospace;font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;padding:0 5px;border:1px solid var(--line);color:var(--ink-3)}
+.cr-chip.work{color:var(--good);border-color:#2f6a4a}
+.cr-chip.on{color:var(--amber);border-color:var(--amber-2)}
+.cr-time{font-size:.68rem;color:var(--ink-3);font-variant-numeric:tabular-nums}
 .labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .lbl{position:absolute;left:0;top:0;pointer-events:none;will-change:transform}
 .lbl-say{max-width:240px;background:var(--bubble);color:var(--bubble-ink);font-size:.78rem;line-height:1.35;padding:7px 9px;border:2px solid #05080f;box-shadow:3px 3px 0 #05080f}
@@ -185,6 +213,11 @@ footer{font-size:.82rem;color:var(--ink-3);margin-top:20px}
 footer p{margin:6px 0}
 
 @media (max-width:860px){.bays{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){
+  .hq{grid-template-columns:minmax(0,1fr)}
+  .stage{height:360px;order:1}
+  .crew{order:2;height:auto;max-height:380px;border-right:0;border-top:1px solid var(--bay-edge)}
+}
 @media (max-width:560px){
   .seg button{padding:6px 8px;font-size:.78rem;letter-spacing:0}
   .lbl-say{max-width:170px;font-size:.72rem}
@@ -215,13 +248,17 @@ footer p{margin:6px 0}
   <section class="stats" id="stats" aria-label="Account numbers"></section>
 
   <section class="ship" id="ship" aria-label="The bot crew at work in their trading office">
-    <div class="stage" id="stage">
-      <canvas id="gl" aria-label="Pixel-art floor plan of the bot crew at work in their trading office"></canvas>
-      <div class="labels" id="labels"></div>
+    <div class="hq">
+      <aside class="crew" id="crew" aria-label="Every bot, what it is doing, and how long since its last run"></aside>
+      <div class="stage" id="stage">
+        <canvas id="gl" tabindex="0" aria-label="Pixel-art space station seen from above: the Trading Wing with one office per account, the Captain's throne room and the beam room. Drag to move, scroll or pinch to zoom, click a room to fly to it."></canvas>
+        <div class="labels" id="labels"></div>
+        <div class="cam"><button class="ctl" type="button" data-cam="in" aria-label="Zoom in">+</button><button class="ctl" type="button" data-cam="out" aria-label="Zoom out a step">&minus;</button><button class="ctl" type="button" data-cam="fit">Zoom out</button></div>
+      </div>
     </div>
     <div class="stage-bar">
       <button class="ctl" id="replay3d" type="button">&#9654; Replay last run</button>
-      <span class="stage-hint">Tap a room to zoom in. Tap again to zoom out.</span>
+      <span class="stage-hint">Drag to move. Scroll or pinch to zoom. Click a room or a bot to fly to it.</span>
       <span class="spacer"></span>
       <span class="stage-fx"><span>Preview:</span><button class="ctl" type="button" data-fx="win">Win</button><button class="ctl" type="button" data-fx="loss">Loss</button><button class="ctl" type="button" data-fx="buy">Buy</button></span>
     </div>
@@ -427,9 +464,10 @@ let selected = 'captain';
 
 function renderAcct(){
   $('acct').innerHTML = names.map(n => `<button type="button" data-n="${n}" aria-pressed="${n === current}">${esc(n[0].toUpperCase() + n.slice(1))}</button>`).join('');
-  $('acct').querySelectorAll('button').forEach(b => b.onclick = () => { if(b.dataset.n === current) return; current = b.dataset.n; store.set('botworld-acct', current); render(); replay(); });
+  $('acct').querySelectorAll('button').forEach(b => b.onclick = () => { if(b.dataset.n === current) return; setAccount(b.dataset.n); if(w3) w3.focusOffice(current); replay(); });
 }
 
+function setAccount(n){ current = n; store.set('botworld-acct', current); render(); }
 function renderStats(S){
   const p = S.performance, L = S.latest;
   const today = L && L.day_start_equity ? (L.equity - L.day_start_equity) : 0;
@@ -558,13 +596,15 @@ let w3 = null;
 function start3d(){
   try {
     w3 = window.PixelWorld && window.PixelWorld.init({
-      stage: $('stage'), canvas: $('gl'), labels: $('labels'), data: DATA, strategy: DATA.strategies[current],
+      stage: $('stage'), canvas: $('gl'), labels: $('labels'), panel: $('crew'), data: DATA, current,
       outfits: OUTFITS, sfx: SFX, money, reduced,
-      onSelect: id => { selected = id; renderDetail(DATA.strategies[current]); $('detail').scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block: 'nearest'}); },
+      // a click on a bot, a room or an office: switch to that account and show the bot's full report below
+      onSelect: (id, acct) => { if(acct && acct !== current) setAccount(acct); if(id){ selected = id; renderDetail(DATA.strategies[current]); } },
       onVisit: id => document.querySelectorAll('.bay').forEach(r => r.classList.toggle('active', r.dataset.id === id))
     });
   } catch(e){ console.error(e); w3 = null; }
-  if(w3){ document.body.classList.add('hasworld'); $('replay3d').onclick = () => w3.replay(); }
+  if(w3){ document.body.classList.add('hasworld'); $('replay3d').onclick = () => w3.replay();
+    document.querySelectorAll('[data-cam]').forEach(b => b.onclick = () => ({in: w3.zoomIn, out: w3.zoomOut, fit: w3.fit})[b.dataset.cam]()); }
 }
 
 /* ---------- chart: account value vs money put in ---------- */
@@ -633,7 +673,7 @@ function renderTrades(S){
 
 function render(){
   const S = DATA.strategies[current];
-  if(w3) w3.setStrategy(S);
+  if(w3) w3.setStrategy(current);
   renderAcct(); renderStats(S); renderShip(S); renderDetail(S); renderRecap(S); renderChart(S); renderTrades(S);
 }
 render();
