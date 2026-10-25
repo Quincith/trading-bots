@@ -1,4 +1,4 @@
-# Medium strategy — 2026-10-25 08:38 UTC
+# Medium strategy — 2026-10-25 13:33 UTC
 
 | | |
 |---|---|
@@ -9,6 +9,7 @@
 
 ## Notes
 - Claude key works (claude-opus-5-5).
-- Next scan for new trades is due 120 min after the last one.
+- Scout scanned 8 markets.
+- Scout found nothing worth a closer look this run.
 
 _Claude calls this run: 0_
