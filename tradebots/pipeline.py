@@ -2,6 +2,7 @@
 
 Order of work each run:
   0. Manage open trades: sell anything that hit its stop, its target, or its time limit (no AI needed).
+  2a. The News radar reads all the news for every coin and notes trends that are forming.
   1. Scout scans the market for unusual volume + price moves with momentum.
   4. Charts draws the trade plan first, because it is free - setups with no clean plan are
      dropped before we spend money asking Claude about them.
@@ -17,7 +18,7 @@ from datetime import datetime, timezone
 
 from .ai import AI
 from .alpaca import norm
-from .bots import charts, decision, filters, news, risk, scout, sentiment
+from .bots import charts, decision, filters, news, radar, risk, scout, sentiment
 from .models import Candidate
 from .store import Store
 
@@ -42,6 +43,8 @@ class RunResult:
     scan: dict[str, dict] = field(default_factory=dict)    # Scout's measurements for every market it looked at
     last_scan: str | None = None
     filings: dict = field(default_factory=dict)            # Copycat only: what it read from the SEC this run
+    radar: dict = field(default_factory=dict)              # what the News radar saw in the news this run
+    radar_calls: int = 0
 
 
 def _iso(dt: datetime) -> str:
@@ -146,11 +149,32 @@ def run(cfg: dict, broker, ai: AI, store: Store, kill_switch: bool = False, dry_
         universe["stocks"] = stocks
     elif stocks:
         res.notes.append("Stock market closed; scanning crypto only.")
+
+    # 2a. News radar: read the news for every coin first, so a story can be spotted before the price moves
+    rcfg, rad = cfg.get("radar") or {}, None
+    if rcfg.get("enabled") and universe["crypto"]:
+        radar_ai = AI(rcfg["model"], ai.effort, api_key=None if ai.enabled else "")
+        rad = radar.scan(universe["crypto"], broker, radar_ai, rcfg, store.dir.parent, now)
+        res.radar, res.radar_calls = rad.to_dict(), radar_ai.calls
+    watch = set(rad.watch(rcfg["early_min_score"])) if rad and rcfg.get("early_watch") else set()
+
     all_bars, cands = {}, []
     for ac, syms in universe.items():
         bars = broker.get_bars(syms, sc["bar_timeframe"], sc["lookback_bars"], ac)
         all_bars.update(bars)
-        cands += scout.scan(bars, ac, sc)
+        found = scout.scan(bars, ac, sc)
+        if watch and ac == "crypto":
+            # Early watch: coins with strong news buzz pass with looser volume and move rules
+            f = rcfg["early_factor"]
+            loose = dict(sc, min_volume_ratio=max(1.0, sc["min_volume_ratio"] * f), min_move_pct=sc["min_move_pct"] * f)
+            seen = {c.symbol for c in found}
+            early = scout.scan({s: df for s, df in bars.items() if radar.ticker(s) in watch and s not in seen}, ac, loose)
+            for c in early:
+                c.early = True
+            if early:
+                res.notes.append(f"News radar early watch let in: {', '.join(c.symbol for c in early)}")
+            found += early
+        cands += found
         for s, df in bars.items():
             if (m := scout.measure(df, sc)) is not None:
                 res.scan[s] = m
@@ -179,7 +203,11 @@ def run(cfg: dict, broker, ai: AI, store: Store, kill_switch: bool = False, dry_
         return _finish(res, store, acct["equity"], now, ai)
 
     # 2. News, 3. Sentiment
-    news.analyze(cands, broker, ai)
+    if rad:
+        for c in cands:
+            if (x := rad.coins.get(radar.ticker(c.symbol))):
+                c.radar_score, c.radar_note = x["score"], x["note"]
+    news.analyze(cands, broker, ai, rad.themes if rad else None)
     sentiment.analyze(cands, ai)
 
     # 5. Risk
@@ -239,7 +267,7 @@ def _order_symbol(p: dict) -> str:
 def _finish(res: RunResult, store: Store, equity: float, now: datetime, ai: AI | None) -> RunResult:
     store.append("equity.csv", {"time": _iso(now), "equity": f"{equity:.2f}", "net_deposits": f"{store.net_deposits():.2f}"})
     store.save()
-    res.ai_calls = ai.calls if ai else 0
+    res.ai_calls = (ai.calls if ai else 0) + res.radar_calls
     res.day_start_equity = store.state["day_start_equity"]
     res.last_scan = store.state.get("last_scan")
     return res

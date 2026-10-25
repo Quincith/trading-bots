@@ -38,7 +38,7 @@ def test_every_knob_exists_in_the_config_and_is_inside_its_range():
         for k in lab.knobs_for(s):
             v = lab.get_value(c, k.path, k)
             assert v is not None, k.path
-            assert v == 0 and k.path.startswith("filters.") or k.lo <= v <= k.hi, (s, k.path, v)
+            assert v == 0 and (k.path.startswith("filters.") or k.switch) or k.lo <= v <= k.hi, (s, k.path, v)
 
 
 def test_clean_changes_snaps_to_steps_and_refuses_off_menu_or_no_op():
@@ -56,6 +56,15 @@ def test_nudges_move_each_number_one_step_and_skip_switched_off_filters():
     n = lab.nudged("aggressive", {"charts.min_reward_risk": 2.0, "filters.btc_ema_bars": 0})
     assert {x["charts.min_reward_risk"] for x in n} == {1.75, 2.25}
     assert lab.nudged("aggressive", {"filters.btc_ema_bars": 200}) == [{"filters.btc_ema_bars": 175}]  # 225 is past the top
+
+
+def test_news_radar_early_watch_can_be_switched_on_but_not_nudged():
+    c = cfg("aggressive")
+    ch, _ = lab.clean_changes("aggressive", c, {"radar.early_watch": 1, "radar.early_min_score": 0.62})
+    assert ch == {"radar.early_watch": 1, "radar.early_min_score": 0.6}
+    assert {x["radar.early_watch"] for x in lab.nudged("aggressive", ch)} == {1}
+    new = improve.edit_config_text((ROOT / "config/aggressive.yaml").read_text(), ch, "lab X")
+    assert yaml.safe_load(new)["radar"]["early_watch"] is True and "early_watch: true  # lab X, was false" in new
 
 
 def test_split_keeps_study_months_before_unseen_slices():

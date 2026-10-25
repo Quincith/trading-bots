@@ -42,7 +42,7 @@ import yaml
 from . import pipeline
 from .ai import AI
 from .alpaca import TIMEFRAME_MINUTES, AlpacaPaper, norm
-from .bots import charts, decision, filters, news, risk, scout, sentiment
+from .bots import charts, decision, filters, news, radar, risk, scout, sentiment
 from .store import Store
 
 log = logging.getLogger(__name__)
@@ -136,15 +136,18 @@ _CLOCK = threading.local()   # the moment being replayed, per thread (Sentiment 
 
 @contextmanager
 def offline_sentiment(hist: History):
-    """Sentiment normally reads live websites. In the past, only Fear & Greed has a history."""
-    saved = sentiment.fear_greed, sentiment.mentions, sentiment.reddit_titles
+    """Sentiment and the News radar normally read live websites. In the past, only Fear & Greed has a history."""
+    saved = sentiment.fear_greed, sentiment.mentions, sentiment.reddit_titles, radar.rss_headlines, radar.trending
     sentiment.fear_greed = lambda: hist.fear_greed(_CLOCK.now)
     sentiment.mentions = lambda asset_class: {}
     sentiment.reddit_titles = lambda c: []
+    # The News radar's news sites and trending list have no history; it counts Alpaca's past headlines only.
+    radar.rss_headlines = lambda: []
+    radar.trending = lambda: []
     try:
         yield
     finally:
-        sentiment.fear_greed, sentiment.mentions, sentiment.reddit_titles = saved
+        sentiment.fear_greed, sentiment.mentions, sentiment.reddit_titles, radar.rss_headlines, radar.trending = saved
 
 
 class SimBroker:
@@ -240,6 +243,10 @@ def simulate(cfg: dict, hist: History, start: datetime, end: datetime, cash: flo
              fee: float = FEE, slippage: float = SLIPPAGE) -> SimResult:
     broker = SimBroker(hist, cash, fee, slippage)
     rules = AI(cfg["ai"]["model"], api_key="")
+    if not (cfg.get("radar") or {}).get("early_watch"):
+        # With early watch off the radar's notes only reach Claude, which isn't used here, so skip the work
+        cfg = copy.deepcopy(cfg)
+        cfg.setdefault("radar", {})["enabled"] = False
     res = SimResult(cfg["name"], [])
     with tempfile.TemporaryDirectory() as tmp, offline_sentiment(hist):
         store = Store(tmp, cfg["name"])

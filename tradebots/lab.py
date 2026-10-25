@@ -63,6 +63,7 @@ class Knob:
     step: float
     what: str            # plain-English meaning, shown to Claude and in reports
     default: float | None = None   # value when the config doesn't set it (filters: 0 = switched off)
+    switch: bool = False           # an on/off setting (0 or 1): nothing to nudge
 
 
 CRYPTO_KNOBS = [
@@ -79,6 +80,11 @@ CRYPTO_KNOBS = [
     Knob("filters.btc_ema_bars", 50, 200, 25, "Filter: only buy when Bitcoin is above its N-candle average (healthy market)", 0),
     Knob("filters.min_fear_greed", 5, 60, 5, "Filter: skip when the Fear & Greed index is below this (panic)", 0),
     Knob("filters.max_fear_greed", 40, 95, 5, "Filter: skip when the Fear & Greed index is above this (greed)", 0),
+    Knob("radar.early_watch", 0, 1, 1, "News radar early watch: 1 lets coins with strong news buzz past Scout with "
+         "looser volume and move rules (0 = off)", 0, switch=True),
+    Knob("radar.early_min_score", 0.3, 0.8, 0.05, "News radar early watch: news score (-1..+1) a coin needs to qualify"),
+    Knob("radar.early_factor", 0.3, 0.9, 0.1, "News radar early watch: share of Scout's usual volume and move rules "
+         "an early-watch coin must still meet"),
 ]
 COPYCAT_KNOBS = [
     Knob("copycat.min_buy_usd", 25000, 1000000, 25000, "Only copy when insiders bought at least this many dollars in total"),
@@ -157,9 +163,9 @@ def nudged(strategy: str, changes: dict) -> list[dict]:
     menu = {k.path: k for k in knobs_for(strategy)}
     out = []
     for path, v in changes.items():
-        if not v and path.startswith("filters."):
-            continue
         k = menu[path]
+        if k.switch or (not v and path.startswith("filters.")):
+            continue
         for d in (-k.step, k.step):
             w = _snap(k, v + d)
             if w != v:

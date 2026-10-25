@@ -167,8 +167,10 @@ def edit_config_text(text: str, changes: dict, note: str = "") -> str:
             lines.pop(hit)
         else:
             m = re.match(rf"^(\s+{key}:\s*)([^#]*?)(\s*#.*)?$", lines[hit])
-            comment = f"  # {note}, was {m.group(2).strip()}" if note else (m.group(3) or "")
-            lines[hit] = f"{m.group(1)}{_fmt(v)}{comment}"
+            old = m.group(2).strip()
+            comment = f"  # {note}, was {old}" if note else (m.group(3) or "")
+            new = ("true" if v else "false") if old in ("true", "false") else _fmt(v)   # keep on/off settings yes/no
+            lines[hit] = f"{m.group(1)}{new}{comment}"
     return "\n".join(lines) + "\n"
 
 

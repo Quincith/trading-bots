@@ -24,6 +24,21 @@ scout:
   max_rsi: 78
   max_candidates: 3         # only the best 3 go on to the other bots
 
+radar:
+  # News radar: reads all crypto news every scan (Alpaca/Benzinga, CoinDesk, Cointelegraph, Decrypt,
+  # and CoinGecko's most-searched coins) to spot trends while they're forming. Both strategies share one
+  # sweep, so keep this section the same in aggressive.yaml and medium.yaml.
+  enabled: true
+  window_hours: 24          # how much news to read
+  recent_hours: 4           # "buzz" = headlines in the last 4 hours vs. the usual pace before that
+  model: claude-haiku-5-5   # Claude reads the headlines once an hour; Haiku costs about $0.50/month for this
+  claude_every_minutes: 60  # between Claude reads the free counts still update every scan
+  # Early watch: let coins with strong news buzz past Scout with looser rules, to get in before the crowd.
+  # Off until it has been tested in the strategy lab (see README).
+  early_watch: false
+  early_min_score: 0.5      # radar score (-1..+1) a coin needs to get on the early watch list
+  early_factor: 0.5         # early-watch coins need only half the usual volume jump and price move
+
 charts:
   ema_fast: 20
   ema_slow: 50
