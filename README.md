@@ -97,7 +97,7 @@ Open `config/aggressive.yaml` or `config/medium.yaml` on GitHub, click the penci
 
 ## Costs
 
-- **Claude:** Claude is only asked when Scout and Charts find a real setup, and then it makes 3 calls per scan. On `claude-opus-5-5` that should come to roughly $1–2 a day across both strategies, depending on how busy the market is. Changing `model` to `claude-haiku-5-5` in both config files cuts that to pennies, but the judgment is weaker.
+- **Claude:** Claude is only asked when Scout and Charts find a real setup, and then it makes up to 3 calls. The October 2026 backtest measured about $0.008 per call on `claude-opus-5-5`, which over a year of setups comes to roughly $18 a year (about $1.50 a month) for both strategies together. `claude-haiku-5-5` measured about $0.0002 per call, under $1 a year. Busier markets mean more setups and more calls.
 - **GitHub Actions:** a private repo gets 2,000 free minutes a month. One run every 30 minutes uses about 1,500.
 
 ## Honest limitations

@@ -15,8 +15,6 @@ on:
       max_claude_usd:
         description: Most the Claude check may spend, in dollars
         default: "4"
-  push:
-    branches: [claude/project-thread-rtllx5]   # temporary: lets the PR branch run it once
 
 permissions:
   contents: write
@@ -27,8 +25,6 @@ concurrency:
 
 jobs:
   backtest:
-    # On a push, only run when the commit message asks for it.
-    if: ${{ github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[run backtest]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
