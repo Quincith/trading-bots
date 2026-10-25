@@ -53,7 +53,6 @@ header h1 b{font-weight:700;color:var(--amber)}
 .viewport svg.sky{position:absolute;inset:0;width:100%;height:100%}
 .viewport .frame{position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(90deg,var(--hull-1) 0,transparent 7%,transparent 93%,var(--hull-1) 100%)}
-.ribs{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0 calc(12.5% - 3px),rgba(11,13,18,.92) calc(12.5% - 3px) 12.5%)}
 .ship-top{position:absolute;top:12px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between;gap:8px;z-index:2}
 .ship-top .label{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--amber)}
 .ctl{border:1px solid var(--amber-2);background:rgba(7,8,11,.7);color:var(--amber);padding:6px 12px;cursor:pointer;font-size:.8rem;font-weight:600;letter-spacing:.06em}
@@ -225,7 +224,7 @@ footer p{margin:6px 0}
     </div>
     <div class="viewport">
       <svg class="sky" id="sky" viewBox="0 0 1000 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
-      <div class="ribs"></div><div class="frame"></div>
+      <div class="frame"></div>
       <div class="ship-top"><span class="label">Bridge</span><button class="ctl" id="replay" type="button">&#9654; Replay last run</button></div>
     </div>
     <div class="bridge">
@@ -377,24 +376,30 @@ function helper(id, outfit){
   </g></svg>`;
 }
 function captainSvg(){
-  return `<svg viewBox="0 0 120 160" aria-hidden="true"><g class="bob">
+  // an original chrome robot titan: mirror-polished armor, gold trim, glowing visor
+  return `<svg viewBox="0 0 120 160" aria-hidden="true"><defs>
+      <linearGradient id="chr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f9fc"/><stop offset=".35" stop-color="#9aa3b2"/><stop offset=".5" stop-color="#eef2f7"/><stop offset=".7" stop-color="#4c5361"/><stop offset="1" stop-color="#c9d0db"/></linearGradient>
+      <linearGradient id="chd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d8696"/><stop offset=".5" stop-color="#2b303a"/><stop offset="1" stop-color="#5b6270"/></linearGradient>
+      <linearGradient id="gld" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe2a0"/><stop offset=".5" stop-color="#b9842f"/><stop offset="1" stop-color="#f3c66d"/></linearGradient></defs>
+    <g class="bob">
     <ellipse cx="60" cy="155" rx="34" ry="5" fill="rgba(0,0,0,.5)"/>
-    <path d="M30 70 L2 58 L8 96 L32 92 Z" fill="#e9edf4" stroke="#9aa6bb" stroke-width="2"/><path d="M90 70 L118 58 L112 96 L88 92 Z" fill="#e9edf4" stroke="#9aa6bb" stroke-width="2"/>
-    <path d="M6 66 L28 74 M114 66 L92 74" stroke="#d6413a" stroke-width="3"/>
-    <rect x="42" y="128" width="14" height="22" rx="4" fill="#f2f4f8" stroke="#9aa6bb"/><rect x="64" y="128" width="14" height="22" rx="4" fill="#f2f4f8" stroke="#9aa6bb"/>
-    <rect x="42" y="144" width="14" height="8" rx="3" fill="#6a4fb3"/><rect x="64" y="144" width="14" height="8" rx="3" fill="#6a4fb3"/>
-    <path d="M32 66 Q60 54 88 66 L90 118 Q60 136 30 118 Z" fill="#f2f4f8" stroke="#9aa6bb" stroke-width="2"/>
-    <path d="M42 70 Q60 64 78 70 L76 104 Q60 112 44 104 Z" fill="#39b54a"/>
-    <rect x="50" y="78" width="20" height="16" rx="3" fill="#2a2f45"/><circle cx="55" cy="83" r="2.4" fill="#e33"/><circle cx="61" cy="83" r="2.4" fill="#3c6"/><circle cx="67" cy="83" r="2.4" fill="#39f"/><rect x="53" y="88" width="14" height="3" rx="1.5" fill="#888"/>
-    <rect x="30" y="112" width="60" height="8" rx="3" fill="#6a4fb3"/>
-    <g class="arm-l"><path d="M32 72 q-14 14 -10 34" stroke="#f2f4f8" stroke-width="11" fill="none" stroke-linecap="round"/><circle cx="22" cy="108" r="7" fill="#39b54a"/></g>
-    <g class="arm-r"><path d="M88 72 q14 14 10 34" stroke="#f2f4f8" stroke-width="11" fill="none" stroke-linecap="round"/><circle cx="98" cy="108" r="7" fill="#39b54a"/></g>
-    <path d="M36 40 Q36 10 60 10 Q84 10 84 40 L84 54 Q60 70 36 54 Z" fill="#6a4fb3"/>
-    <path d="M42 36 Q42 20 60 20 Q78 20 78 36 L78 50 Q60 62 42 50 Z" fill="#c8946a"/>
-    <path class="mouth" d="M52 52 Q60 56 68 52" stroke="#5a2f1f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M48 31 l8 2 M72 31 l-8 2" stroke="#5a3a1a" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="53" cy="38" r="3" fill="#2a4a7a"/><circle cx="67" cy="38" r="3" fill="#2a4a7a"/>
-    <path d="M30 44 Q30 2 60 2 Q90 2 90 44" fill="rgba(190,220,255,.14)" stroke="rgba(220,235,255,.6)" stroke-width="2"/>
+    <circle cx="60" cy="34" r="30" fill="none" stroke="#e8b45a" stroke-width="2" opacity=".7"/>
+    <path d="M44 120 L40 150 L54 150 L56 120 Z M76 120 L80 150 L66 150 L64 120 Z" fill="url(#chd)"/>
+    <path d="M38 146 h18 v6 h-18 z M64 146 h18 v6 h-18 z" fill="url(#chr)"/>
+    <path d="M40 112 h40 l-4 12 h-32 z" fill="url(#chd)"/><rect x="40" y="110" width="40" height="4" fill="url(#gld)"/>
+    <path d="M28 62 L92 62 L80 110 L40 110 Z" fill="url(#chr)" stroke="#3a404c" stroke-width="1"/>
+    <path d="M60 62 L60 108" stroke="#3a404c" stroke-width="1"/>
+    <path d="M52 80 L60 70 L68 80 L60 96 Z" fill="#e8b45a"/><circle cx="60" cy="82" r="11" fill="none" stroke="url(#gld)" stroke-width="2.5"/>
+    <g class="arm-l"><path d="M28 66 L18 70 L14 104 L24 106 L30 76 Z" fill="url(#chd)"/><rect x="11" y="102" width="15" height="12" rx="3" fill="url(#chr)"/></g>
+    <g class="arm-r"><path d="M92 66 L102 70 L106 104 L96 106 L90 76 Z" fill="url(#chd)"/><rect x="94" y="102" width="15" height="12" rx="3" fill="url(#chr)"/></g>
+    <path d="M14 66 Q16 50 34 52 L36 66 Z" fill="url(#chr)" stroke="#3a404c"/><path d="M106 66 Q104 50 86 52 L84 66 Z" fill="url(#chr)" stroke="#3a404c"/>
+    <path d="M14 66 h22 v4 h-22 z M84 66 h22 v4 h-22 z" fill="url(#gld)"/>
+    <path d="M20 52 L16 34 L26 50 Z M100 52 L104 34 L94 50 Z" fill="url(#chr)"/>
+    <path d="M46 24 L74 24 L76 50 L60 58 L44 50 Z" fill="url(#chr)" stroke="#3a404c" stroke-width="1"/>
+    <path d="M60 4 L65 24 L55 24 Z" fill="url(#gld)"/><path d="M46 26 L38 10 L50 24 Z M74 26 L82 10 L70 24 Z" fill="url(#chr)"/>
+    <rect x="48" y="32" width="24" height="6" rx="2" fill="#7fd8ff"/><rect x="48" y="32" width="24" height="6" rx="2" fill="none" stroke="#c9f0ff" stroke-width=".8"/>
+    <path class="mouth" d="M53 47 L67 47" stroke="#2b303a" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="43" y="28" width="4" height="16" fill="url(#gld)"/><rect x="73" y="28" width="4" height="16" fill="url(#gld)"/>
   </g></svg>`;
 }
 

@@ -72,10 +72,10 @@ Profit is always measured as **account value minus the money you put in**, so ad
 
 ## Bot World page and daily recap
 
-After every run, the bots rebuild a web page that shows the crew at work in **3D** aboard their ship: they work at their consoles, wander around, and a courier walks each bot's findings over to the next one. Drag to look around, tap a bot to read its report. The page also shows each bot's latest report, a replay of the last run, the account value chart, recent trades, and a **daily recap** written for beginners (a short description, then key-takeaway bullets, plus a "Words to know" list).
+After every run, the bots rebuild a web page that shows the crew at work in **3D** aboard their ship. Each bot has its own room built for its job (Scout's observatory, Charts' trading floor, News' newsroom, Sentiment's listening post, Risk's vault, Decision's command room). The Captain, a chrome robot titan, watches from a throne room at the back. A courier on a scooter carries each bot's findings to the next room, and a cable runs from Decision to the laser in the center room. Nothing blocks the view: there are no columns or ceilings. Drag to look around, tap a bot to read its report. The page also shows each bot's latest report, a replay of the last run, the account value chart, recent trades, and a **daily recap** written for beginners (a short description, then key-takeaway bullets, plus a "Words to know" list).
 
 - **Where:** your GitHub Pages address, `https://quincith.github.io/trading-bots/` (after the one-time setup below).
-- **Effects:** a green laser and a party on a winning trade, tomatoes on a losing one. Use the **Win / Loss / Buy** buttons under the ship to show them off any time. Sound is off until you press **Sound**.
+- **Effects:** a green laser and a party on a winning trade, tomatoes on a losing one. Use the **Win / Loss / Buy** buttons on the ship to show them off any time. Sound is off until you press **Sound**.
 - **Accounts:** the switch at the top flips between Aggressive (light-blue denim crew) and Medium (dark-blue denim crew).
 - **Recaps as files:** `recaps/<date>.md` and `recaps/latest.md` on the `bot-data` branch.
 - **Without Pages:** the same page is saved as `world/index.html` on the `bot-data` branch. Download it and open it in a browser.
