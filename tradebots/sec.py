@@ -7,7 +7,7 @@ file a "Form 4" with the SEC within 2 business days. Every filing is public on E
 
 The SEC asks every program to say who is asking, with a real contact email, and to make at most
 10 requests a second. It refuses requests without one (and refuses GitHub's "noreply" addresses).
-The email comes from the SEC_CONTACT_EMAIL repository variable. We stay well under the speed limit.
+The email comes from the SEC_CONTACT_EMAIL secret (a secret, so GitHub hides it in the public logs). We stay well under the speed limit.
 """
 from __future__ import annotations
 
@@ -27,8 +27,8 @@ FEED_URL = "https://www.sec.gov/cgi-bin/browse-edgar"
 ARCHIVE_URL = "https://www.sec.gov/Archives/edgar/data/{cik}/{folder}/{accession}.txt"
 ATOM = "{http://www.w3.org/2005/Atom}"
 LINK_RE = re.compile(r"/data/(\d+)/(\d{18})/(\d{10}-\d{2}-\d{6})-index")
-NEEDS_EMAIL = ("The SEC needs a contact email before it will share filings. Add a repository variable named "
-               "SEC_CONTACT_EMAIL (Settings > Secrets and variables > Actions > Variables tab).")
+NEEDS_EMAIL = ("The SEC needs a contact email before it will share filings. Add a repository secret named "
+               "SEC_CONTACT_EMAIL (Settings > Secrets and variables > Actions > New repository secret).")
 
 
 @dataclass

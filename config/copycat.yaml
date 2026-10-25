@@ -16,6 +16,7 @@ copycat:
   max_filings_per_run: 300      # newest Form 4 filings read each run (already-read ones are skipped)
   min_buy_usd: 50000            # ignore small buys; we want insiders betting real money
   min_price: 5                  # no penny stocks
+  skip_names_with: [Fund, ETF]  # funds' trustees buying fund shares tells us little about a business
   insider_roles: [officer, director]   # big outside funds ("10% owners") are skipped
   max_signal_age_days: 5        # copy a buy only while the filing is fresh
   max_chase_pct: 10             # skip if the price is already 10%+ above what the insider paid
