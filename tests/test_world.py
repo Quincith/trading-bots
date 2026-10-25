@@ -49,6 +49,7 @@ def test_daily_recap_and_world_page(tmp_path):
     page = world.build(tmp_path, tmp_path / "site", now=t0 + timedelta(hours=1))
     html = page.read_text()
     assert "/*__DATA__*/" not in html and '"aggressive"' in html and '"medium"' in html
+    assert "/*__THREE__*/" not in html and "World3D" in html and "WebGLRenderer" in html
     assert (tmp_path / "recaps" / "2026-10-24.md").read_text().count("Key takeaways") == 2
 
 

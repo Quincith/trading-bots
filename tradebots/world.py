@@ -20,6 +20,8 @@ from .store import Store
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = Path(__file__).with_name("world_template.html")
+WORLD3D = Path(__file__).with_name("world3d.js")
+VENDOR = Path(__file__).with_name("vendor")
 STRATEGIES = ("aggressive", "medium")
 CREW = [  # pipeline order: Charts runs before News and Sentiment so Claude isn't paid for dead-end setups
     ("scout", "Scout", "Scans every coin for sudden jumps in trading activity with the price moving up."),
@@ -222,6 +224,9 @@ def build(data_dir: Path, out_dir: Path, now: datetime | None = None) -> Path:
     }
     blob = json.dumps(payload, separators=(",", ":")).replace("</", "<\\/")
     html = TEMPLATE.read_text().replace("/*__DATA__*/null", blob)
+    # three.js (MIT, see vendor/three.LICENSE) and the 3D scene are inlined so the page is one file
+    for mark, path in (("/*__THREE__*/", VENDOR / "three.min.js"), ("/*__WORLD3D__*/", WORLD3D)):
+        html = html.replace(mark, path.read_text().replace("</script", "<\\/script"), 1)
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(html)
     (out_dir / ".nojekyll").write_text("")
