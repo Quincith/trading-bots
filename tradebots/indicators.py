@@ -1,6 +1,7 @@
 """Small set of chart math used by Scout and Charts."""
 from __future__ import annotations
 
+import numpy as np
 import pandas as pd
 
 
@@ -10,8 +11,9 @@ def ema(series: pd.Series, span: int) -> pd.Series:
 
 def rsi(close: pd.Series, period: int = 14) -> pd.Series:
     delta = close.diff()
-    gain = delta.clip(lower=0).ewm(alpha=1 / period, adjust=False).mean()
-    loss = (-delta.clip(upper=0)).ewm(alpha=1 / period, adjust=False).mean()
+    # numpy instead of Series.clip: same result, much faster (the backtest calls this ~100k times)
+    gain = pd.Series(np.maximum(delta.values, 0), index=delta.index).ewm(alpha=1 / period, adjust=False).mean()
+    loss = pd.Series(np.maximum(-delta.values, 0), index=delta.index).ewm(alpha=1 / period, adjust=False).mean()
     rs = gain / loss.replace(0, 1e-12)
     return 100 - 100 / (1 + rs)
 

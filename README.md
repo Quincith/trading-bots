@@ -70,6 +70,15 @@ In this repo, go to **Settings → Secrets and variables → Actions → New rep
 
 Profit is always measured as **account value minus the money you put in**, so adding money never looks like a gain. The "time-weighted return" also ignores when deposits happened, which makes it the fair number for comparing the two strategies.
 
+## Backtest (how would it have done last year?)
+
+**Actions → Backtest → Run workflow** replays both strategies over the past year of prices, with trading fees, and compares them with simply buying and holding Bitcoin. It takes about 15–30 minutes. The report shows on the run page and is saved on the `bot-data` branch in `backtest/summary.md`.
+
+- **Part 1** runs the real bot code every 30 minutes of the year against a pretend $100 account. Claude isn't used here, because asking it ~20,000 times would cost too much, so News, Sentiment and Decision use their simple rules.
+- **Part 2** picks a few dozen of those moments at random and asks both Claude Opus (what the bots use now) and Claude Haiku (much cheaper) to decide, then plays each chosen trade forward to see how it ended. This shows whether Claude beats the rules and whether Haiku is good enough. It spends real Claude money, capped at $4 by default; set the sample to 0 to skip it.
+
+Limits: Reddit chatter has no history, so Sentiment only sees the Fear & Greed index. Claude may remember news from before its training cutoff, so Part 2 only uses moments from July 2026 on.
+
 ## Buttons you might need
 
 All of these are under **Actions → Control panel → Run workflow**:
@@ -89,7 +98,7 @@ Open `config/aggressive.yaml` or `config/medium.yaml` on GitHub, click the penci
 
 ## Costs
 
-- **Claude:** Claude is only asked when Scout and Charts find a real setup, and then it makes 3 calls per scan. On `claude-opus-5-5` that should come to roughly $1–2 a day across both strategies, depending on how busy the market is. Changing `model` to `claude-haiku-5-5` in both config files cuts that to pennies, but the judgment is weaker.
+- **Claude:** Claude is only asked when Scout and Charts find a real setup, and then it makes up to 3 calls. The October 2026 backtest measured about $0.008 per call on `claude-opus-5-5`, which over a year of setups comes to roughly $18 a year (about $1.50 a month) for both strategies together. `claude-haiku-5-5` measured about $0.0002 per call, under $1 a year. Busier markets mean more setups and more calls.
 - **GitHub Actions:** a private repo gets 2,000 free minutes a month. One run every 30 minutes uses about 1,500.
 
 ## Honest limitations
@@ -107,4 +116,4 @@ python -m pytest -q
 ALPACA_MEDIUM_KEY_ID=... ALPACA_MEDIUM_SECRET_KEY=... python -m tradebots run --strategy medium --dry-run
 ```
 
-Code map: `tradebots/bots/` (one file per bot), `tradebots/pipeline.py` (runs the team), `tradebots/alpaca.py` (paper broker and market data), `tradebots/ai.py` (Claude), `tradebots/store.py` (memory and deposit-adjusted returns).
+Code map: `tradebots/bots/` (one file per bot), `tradebots/pipeline.py` (runs the team), `tradebots/alpaca.py` (paper broker and market data), `tradebots/ai.py` (Claude), `tradebots/store.py` (memory and deposit-adjusted returns), `tradebots/backtest.py` (replay over past prices).
