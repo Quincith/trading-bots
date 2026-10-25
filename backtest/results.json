@@ -1,0 +1,186 @@
+{
+ "start": "2025-10-25T00:00:00+00:00",
+ "end": "2026-10-25T00:00:00+00:00",
+ "days": 365.0,
+ "cash": 100.0,
+ "ai_from": "2026-07-01T00:00:00+00:00",
+ "stats": {
+  "aggressive": {
+   "name": "aggressive",
+   "start_value": 100.0,
+   "end_value": 59.68162759459818,
+   "return_pct": -40.31837240540182,
+   "max_drawdown_pct": -40.31837240540182,
+   "worst_day_pct": -2.7589478941016488,
+   "trades": 137,
+   "win_rate_pct": 18.248175182481752,
+   "fees": 18.584537663144335,
+   "halted": "2026-03-13: Total loss -40.0% hit the 40% limit.",
+   "monthly_values": {
+    "2025-10": 95.86,
+    "2025-11": 81.56,
+    "2025-12": 76.7,
+    "2026-01": 68.13,
+    "2026-02": 65.72,
+    "2026-03": 59.68,
+    "2026-04": 59.68,
+    "2026-05": 59.68,
+    "2026-06": 59.68,
+    "2026-07": 59.68,
+    "2026-08": 59.68,
+    "2026-09": 59.68,
+    "2026-10": 59.68
+   },
+   "label": "Aggressive bots"
+  },
+  "medium": {
+   "name": "medium",
+   "start_value": 100.0,
+   "end_value": 84.76022567746733,
+   "return_pct": -15.239774322532673,
+   "max_drawdown_pct": -15.418883253421722,
+   "worst_day_pct": -1.6809094038100936,
+   "trades": 67,
+   "win_rate_pct": 26.865671641791046,
+   "fees": 7.813732269868339,
+   "halted": "2026-05-22: Total loss -15.1% hit the 15% limit.",
+   "monthly_values": {
+    "2025-10": 98.83,
+    "2025-11": 97.81,
+    "2025-12": 94.59,
+    "2026-01": 95.68,
+    "2026-02": 95.26,
+    "2026-03": 91.94,
+    "2026-04": 86.35,
+    "2026-05": 84.76,
+    "2026-06": 84.76,
+    "2026-07": 84.76,
+    "2026-08": 84.76,
+    "2026-09": 84.76,
+    "2026-10": 84.76
+   },
+   "label": "Medium bots"
+  },
+  "hold_btc": {
+   "name": "hold_btc",
+   "start_value": 100.0,
+   "end_value": 72.53633258905535,
+   "return_pct": -27.463667410944648,
+   "max_drawdown_pct": -49.82292685641127,
+   "worst_day_pct": -12.210605110092299,
+   "trades": 0,
+   "win_rate_pct": 0.0,
+   "fees": 0.25,
+   "halted": null,
+   "monthly_values": {
+    "2025-10": 98.39,
+    "2025-11": 81.44,
+    "2025-12": 78.61,
+    "2026-01": 70.84,
+    "2026-02": 60.08,
+    "2026-03": 61.25,
+    "2026-04": 68.53,
+    "2026-05": 66.19,
+    "2026-06": 52.56,
+    "2026-07": 56.5,
+    "2026-08": 70.55,
+    "2026-09": 75.09,
+    "2026-10": 72.54
+   },
+   "label": "Just hold Bitcoin"
+  },
+  "hold_all": {
+   "name": "hold_all",
+   "start_value": 100.0,
+   "end_value": 55.615406894505846,
+   "return_pct": -44.384593105494154,
+   "max_drawdown_pct": -63.25189568081525,
+   "worst_day_pct": -13.387995951281685,
+   "trades": 0,
+   "win_rate_pct": 0.0,
+   "fees": 0.25,
+   "halted": null,
+   "monthly_values": {
+    "2025-10": 96.84,
+    "2025-11": 77.21,
+    "2025-12": 70.09,
+    "2026-01": 59.26,
+    "2026-02": 50.91,
+    "2026-03": 50.85,
+    "2026-04": 53.78,
+    "2026-05": 51.64,
+    "2026-06": 40.5,
+    "2026-07": 42.79,
+    "2026-08": 54.09,
+    "2026-09": 64.52,
+    "2026-10": 55.62
+   },
+   "label": "Hold all 8 coins"
+  }
+ },
+ "claude_cost": {
+  "estimated": true,
+  "aggressive": {
+   "events": 247,
+   "calls": 662,
+   "claude-opus-5-5": 26.48,
+   "claude-haiku-5-5": 0.662
+  },
+  "medium": {
+   "events": 186,
+   "calls": 471,
+   "claude-opus-5-5": 18.84,
+   "claude-haiku-5-5": 0.47100000000000003
+  }
+ },
+ "models": {
+  "rules": {
+   "trades_taken": 0,
+   "wins": 0,
+   "avg_return_pct": 0.0,
+   "total_return_pct": 0.0,
+   "claude_calls": 0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost": 0.0,
+   "cost_per_call": null,
+   "fell_back": 0
+  },
+  "claude-opus-5-5": {
+   "trades_taken": 0,
+   "wins": 0,
+   "avg_return_pct": 0.0,
+   "total_return_pct": 0.0,
+   "claude_calls": 0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost": 0.0,
+   "cost_per_call": null,
+   "fell_back": 0
+  },
+  "claude-haiku-5-5": {
+   "trades_taken": 0,
+   "wins": 0,
+   "avg_return_pct": 0.0,
+   "total_return_pct": 0.0,
+   "claude_calls": 0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost": 0.0,
+   "cost_per_call": null,
+   "fell_back": 0
+  },
+  "every setup": {
+   "trades_taken": 0,
+   "wins": 0,
+   "avg_return_pct": 0.0,
+   "total_return_pct": 0.0
+  }
+ },
+ "check": {
+  "rows": [],
+  "spent": 0.0,
+  "pool": 0,
+  "requested": 30
+ }
+}
