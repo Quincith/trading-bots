@@ -20,6 +20,25 @@ def performance_block(store: Store) -> list[str]:
     ]
 
 
+def radar_block(r: dict) -> list[str]:
+    """What the News radar sees forming in the news, for every coin, not just the ones Scout flagged."""
+    if not r:
+        return []
+    src = ", ".join(f"{k} {v}" for k, v in r["sources"].items())
+    out = ["## News radar (trends forming)", "", f"Read {r['headlines']} headlines from the last day ({src})."
+           + ("" if r.get("ai_time") else " Claude hasn't read them yet, so these are simple counts."), ""]
+    out += [f"- **{t['title']}**: {t['note']}" + (f" ({', '.join(t['coins'])})" if t["coins"] else "")
+            for t in r["themes"]] + ([""] if r["themes"] else [])
+    busy = sorted(((t, c) for t, c in r["coins"].items() if c["recent"] or c["score"] or c["trending"] is not None),
+                  key=lambda tc: -tc[1]["score"])
+    if busy:
+        out += ["| Coin | Radar score | Headlines lately | Note |", "|---|---|---|---|"]
+        out += [f"| {t} | {c['score']:+.2f} | {c['recent']} ({c['buzz']}x usual) | {c['note']} |" for t, c in busy]
+    if r["trending_elsewhere"]:
+        out += ["", f"Also trending, but not in our coin list: {', '.join(r['trending_elsewhere'])}."]
+    return out + [""]
+
+
 def render(res: RunResult, store: Store, dry_run: bool) -> str:
     out = [f"# {res.strategy.title()} strategy — {res.started:%Y-%m-%d %H:%M} UTC"
            + (" (DRY RUN, no orders sent)" if dry_run else ""), ""]
@@ -56,6 +75,7 @@ def render(res: RunResult, store: Store, dry_run: bool) -> str:
                 f"| {c.sentiment_score:+.2f} (hype {c.hype:.1f}) {c.sentiment_note} | {plan} "
                 f"| {c.risk_verdict} {c.risk_note} | **{c.decision}** {c.confidence:.2f} — {c.decision_note} |")
         out.append("")
+    out += radar_block(res.radar)
     if res.notes:
         out += ["## Notes"] + [f"- {n}" for n in res.notes] + [""]
     out.append("_Copycat uses no AI._" if res.filings else f"_Claude calls this run: {res.ai_calls}_")

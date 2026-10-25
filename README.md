@@ -6,13 +6,42 @@ The code cannot place real-money trades: it only talks to Alpaca's paper trading
 | # | Bot | What it does |
 |---|---|---|
 | 1 | **Scout** | Scans crypto (and stocks if you add them) for unusual volume and price moves, then checks momentum. |
-| 2 | **News** | Pulls recent headlines from Alpaca's free news feed and has Claude judge whether there's a real catalyst. |
+| 2 | **News** | Runs the **News radar** (below) over all crypto news to spot trends while they're forming, then reads the headlines for each coin Scout flagged and has Claude judge whether there's a real catalyst (a news event that could move the price). |
 | 3 | **Sentiment** | Reads Reddit chatter (mention counts from ApeWisdom plus recent post titles) and the crypto Fear & Greed index. Claude scores it bullish, bearish or pure hype. X/Twitter has no realistic free option, so it's not used. |
 | 4 | **Charts** | Finds the trend, support and resistance, and sets an entry, stop and target. |
 | 5 | **Risk** | Plain rules, no AI. Approves, shrinks or rejects each trade. It enforces the daily loss limit, total loss limit, position size, total exposure and correlation limits, plus the kill switch. |
 | 6 | **Decision** | Claude reads all five and makes the final call: **BUY**, **WAIT** or **SKIP**. Only BUY places an order. |
 
-If Claude can't be reached, bots 2, 3 and 6 fall back to simple rules, so a run never crashes.
+If Claude can't be reached, bots 2, 3 and 6 fall back to simple rules, so a run never crashes. If a news site is down, the radar just skips it.
+
+## News radar (spotting the next trend early)
+
+Scout only notices a coin once its price and trading volume are already jumping. By then the news that
+caused it is often hours old. So on every scan, before Scout looks at prices, the News bot reads **all**
+the crypto news from the last day, for every coin in the list:
+
+| Source | What it gives | Cost |
+|---|---|---|
+| Alpaca news (Benzinga) | Headlines tagged by coin | free, uses the Alpaca keys |
+| CoinDesk, Cointelegraph, Decrypt | Headlines from the big crypto news sites (public RSS feeds) | free, no key |
+| CoinGecko "trending" | The coins people searched for most in the last 24 hours. A rush of people looking up a coin often comes before a rush of people buying it. | free, no key |
+
+For each coin it counts **buzz**: headlines in the last 4 hours compared with the usual pace before that
+(3x means three times more news than normal). Once an hour Claude (Haiku, the cheapest model, under $1 a
+month for this) reads all the headlines together and names up to 3 **themes** that are building, like
+"ETF hopes for Solana", and scores each coin from -1 (bad news building) to +1 (good news building).
+Between Claude's reads the free counts still update every scan. Every Claude read is saved in
+`data/radar/` on the bot-data branch, so we can check later whether its early calls came true.
+
+What it changes today: News and Decision get the radar's notes as background, and the run report and bot
+world show the themes. It does **not** change which coins get looked at yet.
+
+**Early watch (off for now):** with `radar.early_watch: true`, a coin with a radar score of 0.5 or more
+gets past Scout with half the usual volume jump and price move, so the team can look at it before the
+crowd arrives. The catch: getting in earlier also means acting on more stories that go nowhere. That's
+why it stays off until it has been tested in the strategy lab on past prices and past Alpaca headlines.
+(The news sites and the trending list don't keep history, so the lab can only test it with Alpaca's
+headlines.)
 
 ## Two strategies, two accounts
 

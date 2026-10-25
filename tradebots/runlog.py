@@ -40,6 +40,7 @@ def record(res: RunResult, store: Store, dry_run: bool) -> dict:
         "notes": res.notes,
         "ai_calls": res.ai_calls,
         "filings": res.filings,
+        "radar": res.radar,
     }
 
 

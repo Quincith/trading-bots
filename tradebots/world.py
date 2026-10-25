@@ -25,7 +25,7 @@ STRATEGIES = ("aggressive", "medium", "copycat")
 CREW = [  # pipeline order: Charts runs before News and Sentiment so Claude isn't paid for dead-end setups
     ("scout", "Scout", "Scans every coin for sudden jumps in trading activity with the price moving up."),
     ("charts", "Charts", "Draws the trade plan: where to buy, where the safety exit goes, and the profit goal."),
-    ("news", "News", "Reads recent headlines and asks Claude if there's a real reason for the move."),
+    ("news", "News", "Watches all the crypto news for trends that are starting, and checks if there's a real reason for a move."),
     ("sentiment", "Sentiment", "Listens to Reddit chatter and the crypto mood score to spot real interest or empty hype."),
     ("risk", "Risk", "The safety officer. Plain rules, no AI. Approves, shrinks or blocks every trade."),
     ("decision", "Decision", "Reads everyone's notes and makes the final call: BUY, WAIT or SKIP."),
@@ -125,6 +125,27 @@ def stations(run: dict | None, cfg: dict) -> dict:
             rk["detail"].append(f"{coin(c['symbol'])}: {c['risk']} {price(c['size_usd'])}. {c['risk_note']}")
             de["detail"].append(f"{coin(c['symbol'])}: {c['decision']} ({int(c['confidence'] * 100)}%). "
                                 f"{c['decision_note']}")
+
+    # News also runs the radar on every scan, so it has something to say even when Scout found nothing
+    rad = run.get("radar") or {}
+    if rad:
+        nw = s["news"]
+        top = rad["themes"][0] if rad["themes"] else None
+        hot = max(rad["coins"].items(), key=lambda kv: kv[1]["score"], default=None)
+        if not cands:
+            nw["status"] = "working"
+            if top:
+                nw["say"] = f"Trend forming: {top['title']}. {top['note']}"
+            elif hot and hot[1]["score"] >= 0.3:
+                nw["say"] = f"{hot[0]} news is picking up: {hot[1]['note']}."
+            else:
+                nw["say"] = f"Read {rad['headlines']} headlines. Nothing building yet."
+        nw["detail"] += [f"Trend: {t['title']}. {t['note']}" for t in rad["themes"]]
+        nw["detail"] += [f"{c}: radar {x['score']:+.2f}. {x['note']}"
+                         for c, x in sorted(rad["coins"].items(), key=lambda kv: -kv[1]["score"])
+                         if x["recent"] or x["score"]]
+        if rad.get("trending_elsewhere"):
+            nw["detail"].append(f"Trending, not in our list: {', '.join(rad['trending_elsewhere'])}")
 
     # Risk always reports on the account, even on a quiet run
     rk = s["risk"]
