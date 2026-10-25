@@ -35,6 +35,12 @@ class RunResult:
     buys: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
     ai_calls: int = 0
+    # For the bot world page and daily recap
+    day_start_equity: float = 0.0
+    positions: list[dict] = field(default_factory=list)
+    scanned: bool = False                                  # False when this run only managed exits
+    scan: dict[str, dict] = field(default_factory=dict)    # Scout's measurements for every market it looked at
+    last_scan: str | None = None
 
 
 def _iso(dt: datetime) -> str:
@@ -114,6 +120,7 @@ def run(cfg: dict, broker, ai: AI, store: Store, kill_switch: bool = False, dry_
         positions = [p for p in positions if p["symbol"] in st["plans"]]
 
     # Account-level risk gate
+    res.positions = positions
     gate = risk.account_gate(acct["equity"], st["day_start_equity"], store.net_deposits(), kill_switch,
                              st["halted_reason"], cfg["risk"])
     res.gate = gate.reason
@@ -132,6 +139,7 @@ def run(cfg: dict, broker, ai: AI, store: Store, kill_switch: bool = False, dry_
         res.notes.append(f"Next scan for new trades is due {sc['scan_every_minutes']} min after the last one.")
         return _finish(res, store, acct["equity"], now, ai)
     st["last_scan"] = _iso(now)
+    res.scanned = True
     universe = {"crypto": cfg["markets"].get("crypto") or []}
     if market_open:
         universe["stocks"] = stocks
@@ -142,6 +150,9 @@ def run(cfg: dict, broker, ai: AI, store: Store, kill_switch: bool = False, dry_
         bars = broker.get_bars(syms, sc["bar_timeframe"], sc["lookback_bars"], ac)
         all_bars.update(bars)
         cands += scout.scan(bars, ac, sc)
+        for s, df in bars.items():
+            if (m := scout.measure(df, sc)) is not None:
+                res.scan[s] = m
     res.notes.append(f"Scout scanned {len(all_bars)} markets"
                      + (f" (no price data for: {', '.join(s for v in universe.values() for s in v if s not in all_bars)})"
                         if len(all_bars) < sum(len(v) for v in universe.values()) else "") + ".")
@@ -223,4 +234,6 @@ def _finish(res: RunResult, store: Store, equity: float, now: datetime, ai: AI) 
     store.append("equity.csv", {"time": _iso(now), "equity": f"{equity:.2f}", "net_deposits": f"{store.net_deposits():.2f}"})
     store.save()
     res.ai_calls = ai.calls
+    res.day_start_equity = store.state["day_start_equity"]
+    res.last_scan = store.state.get("last_scan")
     return res
