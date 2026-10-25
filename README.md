@@ -62,9 +62,9 @@ A few weeks of results on $100 will mostly be luck either way.
 
 **Setup:** make a third Alpaca paper account named "Copycat" with $100 (same as step 1 below), then add its keys as
 two more GitHub secrets, `ALPACA_COPYCAT_KEY_ID` and `ALPACA_COPYCAT_SECRET_KEY` (same as step 3 below).
-Then add one **variable** (not a secret): **Settings → Secrets and variables → Actions → Variables tab → New repository
-variable**, name `SEC_CONTACT_EMAIL`, value: an email address you check. The SEC requires every program that reads
-its filings to say who's asking, and it refuses GitHub's "noreply" addresses. Variables aren't shown publicly.
+Then add one more **secret** the same way: name `SEC_CONTACT_EMAIL`, value: an email address you check.
+The SEC requires every program that reads its filings to say who's asking, and it refuses GitHub's "noreply"
+addresses. Keep it a secret, not a variable: this repo is public, and GitHub prints variables in the run logs.
 Until the Copycat secrets exist, Copycat is simply skipped and the other two keep running.
 
 ## Timer (why the runs happen on time)

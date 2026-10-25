@@ -38,7 +38,7 @@ jobs:
       ALPACA_MEDIUM_SECRET_KEY: ${{ secrets.ALPACA_MEDIUM_SECRET_KEY }}
       ALPACA_COPYCAT_KEY_ID: ${{ secrets.ALPACA_COPYCAT_KEY_ID }}
       ALPACA_COPYCAT_SECRET_KEY: ${{ secrets.ALPACA_COPYCAT_SECRET_KEY }}
-      SEC_CONTACT_EMAIL: ${{ vars.SEC_CONTACT_EMAIL }}
+      SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}   # a secret, so it's hidden in the public logs
       TRADING_HALTED: ${{ vars.TRADING_HALTED }}
       DRY_RUN: ${{ inputs.dry_run }}
     steps:

@@ -106,9 +106,11 @@ def test_watchlist_ranks_clusters_and_drops_stale_and_outsiders():
             buy("BIGF", "Fund LP", 5_000_000, acc="3", officer=False, role="10% owner"),
             buy("SOLO", "C", 300_000, acc="4", role="VP Sales"),
             buy("OLD", "D", 900_000, acc="5", filed="2026-10-10T00:00:00+00:00"),
-            buy("PNNY", "E", 900_000, price=1.5, acc="6")]
+            buy("PNNY", "E", 900_000, price=1.5, acc="6"),
+            sec.InsiderBuy("7", "NXG", "NXG NextGen Infrastructure Income Fund", "F", "Trustee", False, True,
+                           10_000, 44.0, "2026-10-23", "2026-10-26T21:00:00+00:00")]
     copycat.update_watchlist(st, buys, CFG["copycat"], NOW)
-    assert set(st["watchlist"]) == {"ACME", "SOLO"}            # outside fund, stale filing, penny stock dropped
+    assert set(st["watchlist"]) == {"ACME", "SOLO"}            # outside fund, stale filing, penny stock, closed-end fund dropped
     order = [e["ticker"] for e in copycat.ranked(st, CFG["copycat"], set(), NOW)]
     assert order == ["ACME", "SOLO"]                            # two insiders incl. the CEO beat one VP
     copycat.update_watchlist(st, buys[:1], CFG["copycat"], NOW)   # the same filing again is not double counted

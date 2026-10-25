@@ -64,6 +64,8 @@ def update_watchlist(st: dict, buys: list[sec.InsiderBuy], cc: dict, now: dateti
             continue
         if b.price < cc["min_price"]:
             continue
+        if any(w.lower() in b.company.lower().split() for w in cc.get("skip_names_with", [])):
+            continue
         e = wl.setdefault(b.ticker, {"ticker": b.ticker, "company": b.company, "buys": []})
         if any(x["accession"] == b.accession and x["date"] == b.date and x["usd"] == round(b.usd, 2)
                for x in e["buys"]):
