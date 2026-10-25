@@ -18,6 +18,17 @@ FILES = {
 }
 
 
+def time_weighted_return(snaps: list[dict]) -> float:
+    """Chain the return between each pair of equity snapshots, removing any deposit made in between."""
+    growth = 1.0
+    for prev, cur in zip(snaps, snaps[1:]):
+        e0, e1 = float(prev["equity"]), float(cur["equity"])
+        flow = float(cur["net_deposits"]) - float(prev["net_deposits"])
+        if e0 > 0:
+            growth *= (e1 - flow) / e0
+    return growth - 1
+
+
 class Store:
     def __init__(self, root: Path | str, strategy: str):
         self.dir = Path(root) / strategy
@@ -69,16 +80,10 @@ class Store:
         net = self.net_deposits()
         if not snaps:
             return {"equity": 0.0, "net_deposits": net, "profit": 0.0, "simple_return_pct": 0.0, "twr_pct": 0.0}
-        growth = 1.0
-        for prev, cur in zip(snaps, snaps[1:]):
-            e0, e1 = float(prev["equity"]), float(cur["equity"])
-            flow = float(cur["net_deposits"]) - float(prev["net_deposits"])
-            if e0 > 0:
-                growth *= (e1 - flow) / e0
         equity = float(snaps[-1]["equity"])
         profit = equity - net
         return {
             "equity": equity, "net_deposits": net, "profit": profit,
             "simple_return_pct": profit / net * 100 if net else 0.0,
-            "twr_pct": (growth - 1) * 100,
+            "twr_pct": time_weighted_return(snaps) * 100,
         }

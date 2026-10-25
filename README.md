@@ -65,6 +65,7 @@ In this repo, go to **Settings → Secrets and variables → Actions → New rep
 ## Checking results
 
 - **After each run:** go to **Actions → Trade (paper)** and click a run. The page shows the account value, the money you put in, profit or loss, and what each bot thought about every coin it looked at.
+- **Every Sunday:** a **Weekly bot report** issue shows up in the repo's **Issues** tab (GitHub also emails you). It shows how each strategy did that week and since the start, next to what you'd have if you had just bought Bitcoin with the same money. Old reports are kept in `bot-data/weekly/`. To get one right now: **Actions → Weekly report → Run workflow**.
 - **History:** the `bot-data` branch has a folder for each strategy with `summary.md` (latest run), `trades.csv`, `decisions.csv`, `deposits.csv` and `equity.csv`.
 
 Profit is always measured as **account value minus the money you put in**, so adding money never looks like a gain. The "time-weighted return" also ignores when deposits happened, which makes it the fair number for comparing the two strategies.

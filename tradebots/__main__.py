@@ -4,6 +4,7 @@
   python -m tradebots deposit --strategy medium --amount 50
   python -m tradebots close-all --strategy aggressive
   python -m tradebots resume --strategy medium
+  python -m tradebots weekly
 """
 from __future__ import annotations
 
@@ -11,12 +12,12 @@ import argparse
 import logging
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import yaml
 
-from . import pipeline, report
+from . import pipeline, report, weekly
 from .ai import AI
 from .alpaca import AlpacaPaper
 from .store import Store
@@ -54,12 +55,17 @@ def write_summary(text: str) -> None:
 def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser(prog="tradebots")
-    ap.add_argument("command", choices=["run", "deposit", "close-all", "resume"])
-    ap.add_argument("--strategy", required=True, choices=["aggressive", "medium"])
+    ap.add_argument("command", choices=["run", "deposit", "close-all", "resume", "weekly"])
+    ap.add_argument("--strategy", choices=["aggressive", "medium"])
     ap.add_argument("--amount", type=float, help="deposit amount; negative for a withdrawal")
     ap.add_argument("--note", default="")
     ap.add_argument("--dry-run", action="store_true", help="do everything except send orders")
     args = ap.parse_args(argv)
+
+    if args.command == "weekly":
+        return weekly_report()
+    if not args.strategy:
+        ap.error("--strategy is required")
 
     cfg = load_config(args.strategy)
     store = Store(os.environ.get("DATA_DIR", ROOT / "data"), cfg["name"])
@@ -93,6 +99,21 @@ def main(argv: list[str] | None = None) -> int:
     res.notes.insert(0, ai.check())
     text = report.render(res, store, dry)
     (store.dir / "summary.md").write_text(text)
+    write_summary(text)
+    return 0
+
+
+def weekly_report() -> int:
+    data, now = Path(os.environ.get("DATA_DIR", ROOT / "data")), datetime.now(timezone.utc)
+    stores = {name: Store(data, name) for name in ("aggressive", "medium")}
+    first = min((datetime.fromisoformat(r["time"]) for s in stores.values() for r in s.rows("deposits.csv")),
+                default=now - timedelta(days=7))
+    btc = weekly.btc_prices(broker_for(load_config("aggressive")), min(first, now - timedelta(days=7)))
+    text = weekly.render({n: weekly.strategy_stats(s, now, btc) for n, s in stores.items()}, now)
+    out = data / "weekly"
+    out.mkdir(exist_ok=True)
+    (out / f"{now:%Y-%m-%d}.md").write_text(text)
+    (out / "latest.md").write_text(text)
     write_summary(text)
     return 0
 

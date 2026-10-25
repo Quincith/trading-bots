@@ -149,3 +149,30 @@ def test_alpaca_parses_bars_and_positions():
 
 def test_ai_check_without_key():
     assert "not set" in NO_AI.check()
+
+
+def test_weekly_report_nets_out_deposits_and_compares_to_bitcoin(tmp_path):
+    from tradebots import weekly
+    s = Store(tmp_path, "medium")
+    t0 = datetime(2026, 10, 18, tzinfo=timezone.utc)
+    s.add_deposit(100, "start", t0)
+    s.append("equity.csv", {"time": t0.isoformat(), "equity": "100.00", "net_deposits": "100.00"})
+    s.add_deposit(50, "top up", t0 + timedelta(days=3))
+    s.append("equity.csv", {"time": (t0 + timedelta(days=3)).isoformat(), "equity": "160.00", "net_deposits": "150.00"})
+    s.append("equity.csv", {"time": (t0 + timedelta(days=7)).isoformat(), "equity": "160.00", "net_deposits": "150.00"})
+    btc = lambda when: 100.0 if when < t0 + timedelta(days=3) else 120.0   # Bitcoin up 20% mid-week
+    st = weekly.strategy_stats(s, t0 + timedelta(days=7), btc)
+    assert abs(st["week_profit"] - 10) < 1e-9          # the $50 deposit is not profit
+    assert abs(st["week_pct"] - 10) < 1e-9             # 100 -> 110 before the deposit, flat after
+    assert abs(st["btc_week_pct"] - 20) < 1e-9
+    assert abs(st["btc_value"] - 170) < 1e-9           # $100 bought at 100, $50 bought at 120
+    text = weekly.render({"medium": st, "aggressive": None}, t0 + timedelta(days=7))
+    assert "trailed Bitcoin by 10.0 points" in text and "No runs recorded yet" in text
+
+
+def test_bitcoin_price_lookup_uses_last_close_before_the_time():
+    from tradebots import weekly
+    bars = make_bars(seed=4)
+    at = weekly.btc_prices(FakeBroker(bars={"BTC/USD": bars}), bars.index[0])
+    assert at(bars.index[10] + timedelta(minutes=5)) == bars["close"].iloc[10]
+    assert at(bars.index[0] - timedelta(days=1)) == bars["close"].iloc[0]
