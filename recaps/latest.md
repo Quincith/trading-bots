@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 1 times. Most active: LINK at 117.8x normal volume, price -0.4%.
+- Scout scanned 8 coins, 2 times. Most active: LINK at 117.8x normal volume, price -0.4%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
