@@ -25,7 +25,11 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - run: nproc
+      - name: Which SEC insider files exist
+        run: |
+          curl -s -A "Paper trading research bot $SEC_CONTACT_EMAIL" \
+            https://www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets \
+            | grep -oE 'href="[^"]*(form345|insider)[^"]*\.zip"' | sort -u | tail -12
       - name: Run the lab (Claude suggests one change per strategy)
         run: time python -m tradebots.improve --out lab-out
       - uses: actions/upload-artifact@v4

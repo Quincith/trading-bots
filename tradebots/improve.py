@@ -63,7 +63,9 @@ def schema(strategy: str) -> dict:
             "pattern": {"type": "string", "description": "What the losing trades have in common, with numbers"},
             "idea": {"type": "string", "description": "The change in one plain sentence"},
             "why": {"type": "string", "description": "Why it should help, for a beginner, under 80 words"},
-            "changes": {"type": "array", "minItems": 1, "maxItems": 2, "items": {
+            # One idea = one setting, or two that belong together (the API doesn't take maxItems, so
+            # anything past the second is dropped in propose()).
+            "changes": {"type": "array", "items": {
                 "type": "object",
                 "properties": {"setting": {"type": "string", "enum": [k.path for k in lab.knobs_for(strategy)]},
                                "value": {"type": "number"}},
@@ -125,7 +127,7 @@ def propose(ai: AI, strategy: str, cfg: dict, split: lab.Split, study_pct: float
                      schema(strategy))
         if not ans:
             return None, {}, ["Claude did not answer"]
-        raw = {c["setting"]: c["value"] for c in ans["changes"]}
+        raw = {c["setting"]: c["value"] for c in ans["changes"][:2]}
         changes, problems = lab.clean_changes(strategy, cfg, raw)
         if changes and json.dumps(changes) in {r["changes"] for r in past}:
             problems.append("that exact change was already tested")
