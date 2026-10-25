@@ -353,10 +353,12 @@ def load_engine(cfg: dict, days: int = 365, cache: str | None = None, end: datet
         hist = pickle.loads(Path(cache).read_bytes())
     else:
         today = (end or datetime.now(timezone.utc)).date()
-        # Ask for a bit more than a year: the newest quarter usually isn't published yet.
-        hist = fetch_history(cfg, today - timedelta(days=days + 120), today,
+        # Reach back further than a year: the newest SEC files can be 6+ months behind today.
+        hist = fetch_history(cfg, today - timedelta(days=days + 300), today,
                              os.environ.get(cfg["alpaca_key_secret"], ""), os.environ.get(cfg["alpaca_secret_secret"], ""))
         if cache:
             Path(cache).write_bytes(pickle.dumps(hist))
     last = datetime.combine(hist.last_data_day, datetime.min.time(), timezone.utc) + timedelta(hours=23)
-    return CopycatEngine(hist, last - timedelta(days=days), last)
+    # Never start before the first filing we have, or the early "study months" would be empty.
+    first = datetime.fromisoformat(hist.buys[0].filed) + timedelta(days=7)
+    return CopycatEngine(hist, max(last - timedelta(days=days), first), last)
