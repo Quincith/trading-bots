@@ -18,6 +18,8 @@ class AI:
         self.effort = effort
         self.client = None
         self.calls = 0
+        self.input_tokens = 0
+        self.output_tokens = 0
         key = api_key if api_key is not None else os.environ.get("ANTHROPIC_API_KEY")
         if key:
             import anthropic
@@ -66,6 +68,11 @@ class AI:
         except anthropic.APIConnectionError:
             log.warning("Could not reach Claude")
             return None
+        usage = getattr(resp, "usage", None)
+        if usage is not None:
+            self.input_tokens += (usage.input_tokens or 0) + (getattr(usage, "cache_read_input_tokens", 0) or 0) \
+                + (getattr(usage, "cache_creation_input_tokens", 0) or 0)
+            self.output_tokens += usage.output_tokens or 0
         if resp.stop_reason == "refusal":
             log.warning("Claude declined this request; using rules instead")
             return None
