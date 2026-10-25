@@ -230,6 +230,12 @@ class SimResult:
     halted: str | None = None
 
 
+def without_total_limit(cfg: dict) -> dict:
+    cfg = copy.deepcopy(cfg)
+    cfg["risk"]["max_total_loss_pct"] = 1e9
+    return cfg
+
+
 def simulate(cfg: dict, hist: History, start: datetime, end: datetime, cash: float = 100.0,
              fee: float = FEE, slippage: float = SLIPPAGE) -> SimResult:
     broker = SimBroker(hist, cash, fee, slippage)
@@ -434,23 +440,26 @@ def render(results: dict) -> str:
          "## 1. Full replay with the rule-based bots", "",
          "| | End value | Return | Worst drop from a high | Worst day | Trades | Wins | Fees paid |",
          "|---|---|---|---|---|---|---|---|"]
-    for k in ("aggressive", "medium", "hold_btc", "hold_all"):
+    rows = [k for k in ("aggressive", "aggressive_nostop", "medium", "medium_nostop", "hold_btc", "hold_all") if k in s]
+    for k in rows:
         x = s[k]
         wins = f"{x['win_rate_pct']:.0f}%" if x["trades"] else "-"
         o.append(f"| {x['label']} | {money(x['end_value'])} | {x['return_pct']:+.1f}% | {x['max_drawdown_pct']:.1f}% "
                  f"| {x['worst_day_pct']:.1f}% | {x['trades'] or '-'} | {wins} | {money(x['fees'])} |")
     for k in ("aggressive", "medium"):
         if s[k]["halted"]:
-            o.append(f"\n**{s[k]['label']} hit its total loss limit** on {s[k]['halted']} and stopped trading "
-                     "(the live bot would wait for you to press Resume).")
-    o += ["", "Month-end values:", "", "| Month | " + " | ".join(s[k]["label"] for k in ("aggressive", "medium", "hold_btc", "hold_all")) + " |",
-          "|---|---|---|---|---|"]
+            day, why = s[k]["halted"].split(": ", 1)
+            o.append(f"\n**{s[k]['label']} hit its total loss limit on {day}** ({why.rstrip('.')}) and stopped trading, "
+                     "as the live bot would until you press Resume. The \"never stopped\" line shows what would have "
+                     "happened if it had kept going.")
+    o += ["", "Month-end values:", "", "| Month | " + " | ".join(s[k]["label"] for k in rows) + " |",
+          "|---|" + "---|" * len(rows)]
     for m in s["aggressive"]["monthly_values"]:
-        o.append(f"| {m} | " + " | ".join(money(s[k]["monthly_values"].get(m, 0)) for k in ("aggressive", "medium", "hold_btc", "hold_all")) + " |")
+        o.append(f"| {m} | " + " | ".join(money(s[k]["monthly_values"].get(m, 0)) for k in rows) + " |")
 
     o += ["", "## 2. Claude cost for a year", "",
-          "How often each strategy found a setup (that is when the live bots ask Claude), times the cost per call "
-          "measured in part 3.", "", "| | Setups found | Claude calls | Opus per year | Haiku per year |", "|---|---|---|---|---|"]
+          "How often each strategy found a setup over the year (that is when the live bots ask Claude), times the "
+          "cost per call measured in part 3.", "", "| | Setups found | Claude calls | Opus per year | Haiku per year |", "|---|---|---|---|---|"]
     for k in ("aggressive", "medium"):
         c = results["claude_cost"][k]
         o.append(f"| {s[k]['label']} | {c['events']} | {c['calls']} | {money(c['claude-opus-5-5'])} | {money(c['claude-haiku-5-5'])} |")
@@ -525,23 +534,32 @@ def main(argv: list[str] | None = None) -> int:
     for name, cfg in cfgs.items():
         log.warning("Replaying %s...", name)
         sims[name] = simulate(cfg, hist, start, end, args.cash)
+        if sims[name].halted:
+            # Also run it as if you had pressed Resume every time, to see whether it would have recovered.
+            log.warning("Replaying %s without the total loss limit...", name)
+            sims[f"{name}_nostop"] = simulate(without_total_limit(cfg), hist, start, end, args.cash)
     sims["hold_btc"] = buy_and_hold("hold_btc", hist, ["BTC/USD"], start, end, args.cash)
     sims["hold_all"] = buy_and_hold("hold_all", hist, symbols, start, end, args.cash)
     labels = {"aggressive": "Aggressive bots", "medium": "Medium bots", "hold_btc": "Just hold Bitcoin",
-              "hold_all": "Hold all 8 coins"}
+              "hold_all": "Hold all 8 coins", "aggressive_nostop": "Aggressive, never stopped",
+              "medium_nostop": "Medium, never stopped"}
     st = {k: {**stats(v, args.cash), "label": labels[k]} for k, v in sims.items()}
 
-    events = sims["aggressive"].events + sims["medium"].events
+    # A strategy that hit its loss limit stops looking for trades, so take the moments the bots found a
+    # setup (for the Claude check and the cost estimate) from the run that kept going.
+    running = {k: sims.get(f"{k}_nostop", sims[k]) for k in cfgs}
+    events = running["aggressive"].events + running["medium"].events
     ai_from = datetime.fromisoformat(args.ai_from).replace(tzinfo=timezone.utc)
     check, models = {"rows": [], "spent": 0.0, "pool": 0}, None
     if args.sample and os.environ.get("ANTHROPIC_API_KEY"):
+        log.warning("Claude check on up to %d moments (cap $%.2f)...", args.sample, args.max_claude_usd)
         check = compare_models(cfgs, hist, events, args.sample, args.max_claude_usd, ai_from)
         models = summarize_models(check)
 
     days = (end - start).total_seconds() / 86400
     claude_cost = {"estimated": not (models and models["claude-opus-5-5"]["cost_per_call"])}
     for k in ("aggressive", "medium"):
-        evs = sims[k].events
+        evs = running[k].events
         claude_cost[k] = {"events": len(evs), "calls": sum(e.claude_calls for e in evs)}
         for mdl in MODELS:
             per = (models or {}).get(mdl, {}).get("cost_per_call") or cost_usd(mdl, 2500, 1500)  # rough guess per call

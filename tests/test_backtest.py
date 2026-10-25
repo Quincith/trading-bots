@@ -140,3 +140,21 @@ def test_cli_end_to_end(tmp_path, hist, monkeypatch):
     text = (out / "summary.md").read_text()
     assert "Just hold Bitcoin" in text and "Did not run" in text
     assert (out / "daily_values.csv").exists() and (out / "results.json").exists()
+
+
+def test_halted_strategy_also_runs_without_the_limit(tmp_path, hist, monkeypatch):
+    import pickle
+    real = bt.load_config
+
+    def touchy(name):            # a "loss" limit that trips at once (any total below +1%)
+        cfg = real(name)
+        cfg["risk"]["max_total_loss_pct"] = -1
+        return cfg
+
+    monkeypatch.setattr(bt, "load_config", touchy)
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    cache = tmp_path / "h.pkl"
+    cache.write_bytes(pickle.dumps(hist))
+    bt.main(["--days", "5", "--end", "2026-07-22", "--cache", str(cache), "--out", str(tmp_path / "o")])
+    text = (tmp_path / "o" / "summary.md").read_text()
+    assert "hit its total loss limit" in text and "Aggressive, never stopped" in text
