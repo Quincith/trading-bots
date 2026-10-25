@@ -166,3 +166,9 @@ def test_copycat_on_world_page_recap_and_weekly(tmp_path):
     stats = weekly.strategy_stats(store, NOW + timedelta(days=1), flat, flat)
     text = weekly.render({"aggressive": None, "medium": None, "copycat": stats}, NOW + timedelta(days=1))
     assert "## Copycat" in text and "S&P 500" in text
+
+
+def test_sec_feed_explains_missing_contact_email(monkeypatch):
+    monkeypatch.delenv("SEC_CONTACT_EMAIL", raising=False)
+    got = sec.SecFeed().latest(set(), 10)
+    assert got.filings_read == 0 and "SEC_CONTACT_EMAIL" in got.error

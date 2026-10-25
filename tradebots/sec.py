@@ -5,7 +5,9 @@ file a "Form 4" with the SEC within 2 business days. Every filing is public on E
   - the "latest filings" feed lists the newest Form 4s, a few hundred per day, and
   - each filing has a small XML document saying who traded, what, how many shares and at what price.
 
-The SEC asks for a User-Agent with contact details and at most 10 requests a second. We stay well under.
+The SEC asks every program to say who is asking, with a real contact email, and to make at most
+10 requests a second. It refuses requests without one (and refuses GitHub's "noreply" addresses).
+The email comes from the SEC_CONTACT_EMAIL repository variable. We stay well under the speed limit.
 """
 from __future__ import annotations
 
@@ -25,7 +27,8 @@ FEED_URL = "https://www.sec.gov/cgi-bin/browse-edgar"
 ARCHIVE_URL = "https://www.sec.gov/Archives/edgar/data/{cik}/{folder}/{accession}.txt"
 ATOM = "{http://www.w3.org/2005/Atom}"
 LINK_RE = re.compile(r"/data/(\d+)/(\d{18})/(\d{10}-\d{2}-\d{6})-index")
-DEFAULT_AGENT = "Quincith trading-bots (paper trading research) trading-bots@users.noreply.github.com"
+NEEDS_EMAIL = ("The SEC needs a contact email before it will share filings. Add a repository variable named "
+               "SEC_CONTACT_EMAIL (Settings > Secrets and variables > Actions > Variables tab).")
 
 
 @dataclass
@@ -155,7 +158,8 @@ def parse_feed(atom_text: str) -> list[dict]:
 class SecFeed:
     def __init__(self, session: requests.Session | None = None, pause: float = 0.15):
         self.http = session or requests.Session()
-        self.http.headers.update({"User-Agent": os.environ.get("SEC_USER_AGENT") or DEFAULT_AGENT,
+        self.email = (os.environ.get("SEC_CONTACT_EMAIL") or "").strip()
+        self.http.headers.update({"User-Agent": f"Paper trading research bot {self.email}",
                                   "Accept-Encoding": "gzip, deflate"})
         self.pause = pause
 
@@ -166,6 +170,9 @@ class SecFeed:
             if r.status_code in (429, 503) or r.status_code >= 500:
                 time.sleep(2 ** attempt)
                 continue
+            if r.status_code == 403:
+                raise RuntimeError("the SEC refused the request (403). Check that SEC_CONTACT_EMAIL is a real email "
+                                   "address; GitHub noreply addresses are refused")
             r.raise_for_status()
             return r.text
         raise RuntimeError(f"SEC kept failing for {url}")
@@ -173,6 +180,9 @@ class SecFeed:
     def latest(self, seen: set[str], limit: int = 300) -> FeedResult:
         """Reads up to `limit` Form 4 filings not in `seen`, newest first, and returns the insider buys."""
         res = FeedResult()
+        if "@" not in self.email:
+            res.error = NEEDS_EMAIL
+            return res
         try:
             todo = []
             for start in range(0, 1000, 100):
