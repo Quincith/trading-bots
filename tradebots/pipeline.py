@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 
 from .ai import AI
 from .alpaca import norm
-from .bots import charts, decision, news, risk, scout, sentiment
+from .bots import charts, decision, filters, news, risk, scout, sentiment
 from .models import Candidate
 from .store import Store
 
@@ -167,7 +167,12 @@ def run(cfg: dict, broker, ai: AI, store: Store, kill_switch: bool = False, dry_
     dropped = [c.symbol for c in cands if c.plan is None]
     if dropped:
         res.notes.append(f"Charts found no clean setup for: {', '.join(dropped)}")
-    cands = [c for c in cands if c.plan][: sc["max_candidates"]]
+    cands = [c for c in cands if c.plan]
+    # Optional "don't buy when..." rules from the config (all off unless switched on)
+    cands, blocked = filters.apply(cands, cfg.get("filters"), all_bars.get("BTC/USD"), sentiment.fear_greed)
+    if blocked:
+        res.notes.append("Filters skipped: " + "; ".join(f"{s} ({why})" for s, why in blocked.items()))
+    cands = cands[: sc["max_candidates"]]
     res.candidates = cands
     if not cands:
         res.notes.append("Scout found nothing worth a closer look this run.")

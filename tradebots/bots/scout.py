@@ -22,7 +22,8 @@ def measure(df: pd.DataFrame, cfg: dict) -> dict | None:
     # 3. Momentum: above the 20 EMA, 20 EMA rising, RSI strong but not exhausted
     e20 = ema(close, 20)
     r = float(rsi(close).iloc[-1])
-    momentum_ok = bool(close.iloc[-1] > e20.iloc[-1] and e20.iloc[-1] > e20.iloc[-4] and 50 <= r <= 78)
+    momentum_ok = bool(close.iloc[-1] > e20.iloc[-1] and e20.iloc[-1] > e20.iloc[-4]
+                       and cfg.get("min_rsi", 50) <= r <= cfg.get("max_rsi", 78))
     passed = volume_ratio >= cfg["min_volume_ratio"] and move_pct >= cfg["min_move_pct"] and momentum_ok
     return {"price": float(close.iloc[-1]), "volume_ratio": float(volume_ratio), "move_pct": float(move_pct),
             "rsi": r, "momentum_ok": momentum_ok, "passed": bool(passed)}

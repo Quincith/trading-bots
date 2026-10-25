@@ -67,7 +67,7 @@ def _vs(mine: float, btc: float) -> str:
     return f"**{'beat' if gap > 0 else 'trailed'} Bitcoin by {abs(gap):.1f} points**"
 
 
-def render(stats: dict[str, dict | None], now: datetime) -> str:
+def render(stats: dict[str, dict | None], now: datetime, lab: str = "") -> str:
     out = [f"# Weekly bot report: week ending {now:%B %-d, %Y}", ""]
     live = {n: s for n, s in stats.items() if s}
     if len(live) > 1:
@@ -97,9 +97,25 @@ def render(stats: dict[str, dict | None], now: datetime) -> str:
         if s["halted"]:
             out.append(f"- **Stopped:** {s['halted']}")
         out.append("")
+    if lab:
+        out += [lab, ""]
     out.append("_Paper money only. Percentages leave out deposits, so adding money never looks like a gain. "
                "Claude's running cost is not included. Copycat uses no AI, so it costs nothing to run._")
     return "\n".join(out) + "\n"
+
+
+def lab_section(experiments: list[dict], now: datetime, days: int = 7) -> str:
+    """What the strategy lab tested this past week (from data/lab/experiments.csv)."""
+    recent = [r for r in experiments if datetime.fromisoformat(r["time"]) > now - timedelta(days=days)]
+    if not recent:
+        return ""
+    out = ["## Strategy lab", "", "Ideas tested on past prices this week (only kept ones become a pull request "
+           "for you to approve):", ""]
+    for r in recent:
+        mark = "✅ kept" if r["verdict"] == "kept" else "❌ rejected"
+        out.append(f"- **{r['strategy'].title()}**, {mark}: {r['idea']} (unseen months {float(r['unseen_new_pct']):+.1f}% "
+                   f"vs {float(r['unseen_old_pct']):+.1f}% now)")
+    return "\n".join(out)
 
 
 def btc_prices(broker, since: datetime) -> PriceAt:

@@ -87,7 +87,9 @@ def ranked(st: dict, cc: dict, held: set[str], now: datetime) -> list[dict]:
     recent = {t for t, when in st.get("copied", {}).items()
               if datetime.fromisoformat(when) > now - timedelta(days=30)}
     picks = [e for t, e in st.get("watchlist", {}).items()
-             if t not in held and t not in recent and sum(b["usd"] for b in e["buys"]) >= cc["min_buy_usd"]]
+             if t not in held and t not in recent and sum(b["usd"] for b in e["buys"]) >= cc["min_buy_usd"]
+             and len({b["who"] for b in e["buys"]}) >= cc.get("min_insiders", 1)
+             and e.get("score", score(e)) >= cc.get("min_score", 0)]
     return sorted(picks, key=lambda e: -e["score"])
 
 
