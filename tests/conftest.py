@@ -54,6 +54,7 @@ class FakeBroker:
 
 @pytest.fixture(autouse=True)
 def no_network(monkeypatch):
-    """Sentiment sources are public websites; keep tests offline."""
-    from tradebots.bots import sentiment
+    """Sentiment and News radar sources are public websites; keep tests offline."""
+    from tradebots.bots import radar, sentiment
     monkeypatch.setattr(sentiment, "_get", lambda url, **p: None)
+    monkeypatch.setattr(radar, "_get", lambda url: None)

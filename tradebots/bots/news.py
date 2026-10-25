@@ -1,4 +1,7 @@
-"""Bot 2 - News: picks up catalysts from Alpaca's free news feed (Benzinga headlines)."""
+"""Bot 2 - News: picks up catalysts from Alpaca's free news feed (Benzinga headlines).
+
+News also runs the radar (radar.py), which watches all the news before Scout looks at prices.
+Its themes and per-coin notes are added here as background."""
 from __future__ import annotations
 
 import logging
@@ -42,7 +45,7 @@ def rule_score(items: list[dict]) -> float:
     return max(-1.0, min(1.0, s))
 
 
-def analyze(cands: list[Candidate], broker, ai: AI) -> None:
+def analyze(cands: list[Candidate], broker, ai: AI, themes: list[dict] | None = None) -> None:
     if not cands:
         return
     try:
@@ -52,10 +55,15 @@ def analyze(cands: list[Candidate], broker, ai: AI) -> None:
         news = []
     per = {c.symbol: headlines_for(c, news) for c in cands}
 
+    radar_notes = {c.symbol: c.radar_note for c in cands if c.radar_note}
     prompt = "\n\n".join(
         f"## {sym}\n" + ("\n".join(f"- [{n['created_at'][:16]}] {n['headline']} — {n['summary']}" for n in items)
                          or "(no headlines in the last 48 hours)")
+        + (f"\nRadar (all crypto news): {radar_notes[sym]}" if sym in radar_notes else "")
         for sym, items in per.items())
+    if themes:
+        prompt = "Themes the radar sees forming across crypto news:\n" + "\n".join(
+            f"- {t['title']}: {t['note']}" for t in themes) + "\n\n" + prompt
     result = ai.ask(SYSTEM, prompt, SCHEMA) if any(per.values()) else None
     scored = {a["symbol"]: a for a in (result or {}).get("assets", [])}
 

@@ -41,6 +41,10 @@ class Candidate:
     sentiment_score: float = 0.0
     hype: float = 0.0               # 0..1, how much of the buzz looks like pure hype
     sentiment_note: str = ""
+    # News radar (watches all the news, not just this coin's): -1..+1, and whether it got in early
+    radar_score: float = 0.0
+    radar_note: str = ""
+    early: bool = False              # let through by Scout's looser "early watch" rules because of news buzz
     # Charts
     plan: Plan | None = None
     # Risk
@@ -61,6 +65,7 @@ class Candidate:
             "news_score": round(self.news_score, 2), "news": self.news_note,
             "sentiment_score": round(self.sentiment_score, 2), "hype": round(self.hype, 2),
             "sentiment": self.sentiment_note,
+            "radar_score": round(self.radar_score, 2), "radar": self.radar_note, "early": self.early,
             "trend": p.trend if p else None,
             "entry": round(p.entry, 6) if p else None, "stop": round(p.stop, 6) if p else None,
             "target": round(p.target, 6) if p else None,

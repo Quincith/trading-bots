@@ -8,7 +8,8 @@ from ..models import Candidate
 
 SYSTEM = (
     "You are the Decision maker on a six-bot crypto/stock trading team. Scout found unusual volume and "
-    "price moves, News looked for catalysts, Sentiment read social chatter, Charts set entry/stop/target, "
+    "price moves, News looked for catalysts (its radar also reads all crypto news for trends that are just "
+    "forming: radar_score and radar; early=true means Scout let it in early because of that news), Sentiment read social chatter, Charts set entry/stop/target, "
     "and Risk sized the position (Risk has already rejected anything unsafe). For each asset, make the "
     "final call: BUY (signals agree, setup is clean), WAIT (promising but mixed or overextended - check "
     "again next run) or SKIP (not worth it). Give a confidence from 0 to 1 and a reason under 30 words. "
