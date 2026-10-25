@@ -33,7 +33,14 @@ def truthy(v: str | None) -> bool:
 
 
 def broker_for(cfg: dict) -> AlpacaPaper:
-    return AlpacaPaper(os.environ.get(cfg["alpaca_key_secret"], ""), os.environ.get(cfg["alpaca_secret_secret"], ""))
+    key, secret = os.environ.get(cfg["alpaca_key_secret"], ""), os.environ.get(cfg["alpaca_secret_secret"], "")
+    missing = [n for n, v in ((cfg["alpaca_key_secret"], key), (cfg["alpaca_secret_secret"], secret)) if not v]
+    if missing:
+        write_summary(f"**{cfg['name']}: GitHub can't see the secret(s) {', '.join(missing)}.** Add them under "
+                      "Settings > Secrets and variables > Actions > Secrets tab > New repository secret, "
+                      "spelled exactly like this.")
+        sys.exit(1)
+    return AlpacaPaper(key, secret)
 
 
 def write_summary(text: str) -> None:

@@ -142,6 +142,9 @@ def run(cfg: dict, broker, ai: AI, store: Store, kill_switch: bool = False, dry_
         bars = broker.get_bars(syms, sc["bar_timeframe"], sc["lookback_bars"], ac)
         all_bars.update(bars)
         cands += scout.scan(bars, ac, sc)
+    res.notes.append(f"Scout scanned {len(all_bars)} markets"
+                     + (f" (no price data for: {', '.join(s for v in universe.values() for s in v if s not in all_bars)})"
+                        if len(all_bars) < sum(len(v) for v in universe.values()) else "") + ".")
     cands.sort(key=lambda c: c.scout_score, reverse=True)
     held_keys = {p["symbol"] for p in positions}
     cands = [c for c in cands if norm(c.symbol) not in held_keys][: sc["max_candidates"] * 2]

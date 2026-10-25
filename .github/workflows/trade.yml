@@ -46,13 +46,20 @@ jobs:
       - name: Load saved bot data
         run: ./scripts/data-branch.sh pull
       - name: Aggressive
+        id: aggressive
         if: ${{ github.event_name == 'schedule' || inputs.strategy != 'medium' }}
         run: python -m tradebots run --strategy aggressive
         continue-on-error: true
       - name: Medium
+        id: medium
         if: ${{ github.event_name == 'schedule' || inputs.strategy != 'aggressive' }}
         run: python -m tradebots run --strategy medium
         continue-on-error: true
       - name: Save bot data
         if: always()
         run: ./scripts/data-branch.sh push "run ${{ github.run_number }}"
+      - name: Report failures
+        if: ${{ steps.aggressive.outcome == 'failure' || steps.medium.outcome == 'failure' }}
+        run: |
+          echo "One of the strategies failed. Open its step above to see why." >> "$GITHUB_STEP_SUMMARY"
+          exit 1
