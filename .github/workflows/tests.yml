@@ -18,6 +18,8 @@ jobs:
       - run: python -m pytest -q
       # Live check that the SEC insider feed Copycat reads still works. Needs no keys.
       # It never fails the tests, because the SEC site can be briefly down.
+      - run: python scripts/sec_probe.py
+        continue-on-error: true
       - name: Copycat feed check (live, SEC)
         run: python -m tradebots copycat-preview
         continue-on-error: true
