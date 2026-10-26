@@ -1,48 +1,46 @@
 {
- "time": "2026-10-26T05:55:53+00:00",
+ "time": "2026-10-26T06:25:54+00:00",
  "coins": {
   "BTC": {
    "recent": 6,
-   "before": 5,
-   "buzz": 6.0,
+   "before": 6,
+   "buzz": 5.0,
    "tone": -1,
    "headlines": [
+    "XRP to Drop Below $1? Crypto Analyst Warns Losing This Key Support May Intensify Selling Pressure",
     "Benjamin Netanyahu\u2019s Plans to Beat Potential Sanctions With Crypto Called Destructive By Rival: He Has \u2018Gone Off the Rails...\u2019",
-    "Anthony Scaramucci Says Vivek Ramaswamy 'Disgraced Himself' in Ohio Governor Race: 'He\u2019s Finished Himself as a Future Candidate'",
-    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
+    "Anthony Scaramucci Says Vivek Ramaswamy 'Disgraced Himself' in Ohio Governor Race: 'He\u2019s Finished Himself as a Future Candidate'"
    ],
-   "trending": 1,
+   "trending": 0,
    "rule_score": 0.7,
    "score": -0.4,
-   "note": "Wallet bug and Keystone breach plus Fed-driven de-risking; price slipping under $80,000."
+   "note": "Heavy buzz is mostly price-drop and security news; slipping below $80K ahead of Fed meeting."
   },
   "ETH": {
-   "recent": 2,
-   "before": 2,
-   "buzz": 5.0,
+   "recent": 1,
+   "before": 3,
+   "buzz": 1.67,
    "tone": 0,
    "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
     "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
    ],
    "trending": null,
-   "rule_score": 0.5,
-   "score": -0.4,
-   "note": "ETH ETF outflows reached $1 billion this month; Fed caution adds pressure."
+   "rule_score": 0.0,
+   "score": -0.3,
+   "note": "ETF outflows reached $1B this month; the Glamsterdam fork news is mild and not a strong catalyst."
   },
   "SOL": {
-   "recent": 2,
-   "before": 1,
-   "buzz": 10.0,
+   "recent": 1,
+   "before": 2,
+   "buzz": 2.5,
    "tone": 0,
    "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
     "Hong Kong names Nasdaq-listed Solana Company a strategic enterprise"
    ],
-   "trending": 8,
-   "rule_score": 0.65,
-   "score": 0.3,
-   "note": "Hong Kong strategic enterprise recognition is a genuine positive, though only two headlines so far."
+   "trending": 14,
+   "rule_score": 0.15,
+   "score": 0.2,
+   "note": "Hong Kong naming a Nasdaq-listed Solana company a strategic enterprise is a small positive."
   },
   "AVAX": {
    "recent": 0,
@@ -53,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz, so nothing new."
+   "note": "No recent headlines about AVAX; nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -64,20 +62,18 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz, so nothing new."
+   "note": "No recent headlines about LINK; nothing new."
   },
   "DOGE": {
-   "recent": 1,
-   "before": 0,
-   "buzz": 5.0,
+   "recent": 0,
+   "before": 1,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
-   ],
+   "headlines": [],
    "trending": null,
    "rule_score": 0.0,
    "score": -0.1,
-   "note": "Only a dip mention alongside majors ahead of the Fed; little independent news."
+   "note": "Only mentioned in a general dip story; no specific catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -88,55 +84,58 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz, so nothing new."
+   "note": "No recent headlines about LTC; nothing new."
   },
   "XRP": {
    "recent": 2,
-   "before": 1,
-   "buzz": 10.0,
+   "before": 2,
+   "buzz": 5.0,
    "tone": 0,
    "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
+    "XRP to Drop Below $1? Crypto Analyst Warns Losing This Key Support May Intensify Selling Pressure",
     "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
    ],
    "trending": null,
    "rule_score": 0.5,
-   "score": -0.2,
-   "note": "Buzz is high but the only news is a dip recap tied to Fed expectations."
+   "score": -0.4,
+   "note": "Analyst warns of drop below $1 if key support fails; the buzz is mostly bearish price talk."
   }
  },
  "themes": [
   {
-   "title": "Bitcoin wallet security scare",
-   "note": "Wallet bug and Keystone breach could make holders nervous about security and cause selling pressure.",
+   "title": "Exchange and wallet security incidents",
+   "note": "Hacks and wallet bugs this morning (India exchange loss, wallet bug, Keystone breach) could spook users and hit trust in the sector.",
    "coins": [
-    "BTC"
+    "BTC",
+    "ETH",
+    "LTC"
    ]
   },
   {
-   "title": "Fed meeting and risk-off mood",
-   "note": "Traders are de-risking ahead of the Fed and Warsh rate signals, pressuring majors like BTC, ETH, XRP and DOGE.",
+   "title": "Macro jitters ahead of Fed and rate news",
+   "note": "Traders are de-risking before Fed/Warsh rate signals; BTC slipping under $80,000 shows pressure across majors.",
    "coins": [
     "BTC",
     "ETH",
     "XRP",
-    "DOGE"
+    "DOGE",
+    "SOL"
    ]
   },
   {
-   "title": "Solana institutional adoption",
-   "note": "Hong Kong naming a Nasdaq-listed Solana company a strategic enterprise is a real, if early, positive for SOL.",
+   "title": "Ethereum ETF outflows",
+   "note": "Roughly $1B in October ETH ETF outflows is a real negative flow signal, though it is partly older news.",
    "coins": [
-    "SOL"
+    "ETH"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 22,
+ "headlines": 23,
  "sources": {
-  "Alpaca/Benzinga": 6,
+  "Alpaca/Benzinga": 7,
   "crypto news sites": 16,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T05:25:53+00:00"
+ "ai_time": "2026-10-26T06:25:54+00:00"
 }
