@@ -1,42 +1,45 @@
 {
- "time": "2026-10-26T17:56:55+00:00",
+ "time": "2026-10-26T18:26:52+00:00",
  "coins": {
   "BTC": {
    "recent": 8,
-   "before": 25,
-   "buzz": 1.6,
+   "before": 26,
+   "buzz": 1.54,
    "tone": 2,
    "headlines": [
+    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat",
     "Bitcoin Can Retake $125,000, Galaxy Says: \u2018The Crowd Has Left\u2019",
-    "Neoclouds Face Guppy-Level Death; 36% Of S&P 500 Earnings This Week; Brazil Stocks Plunge On Election Outcome",
-    "Nasdaq 100 Rallies on Chip Rebound; Brazil ETF Sinks 21%: Stock Market Today"
+    "Neoclouds Face Guppy-Level Death; 36% Of S&P 500 Earnings This Week; Brazil Stocks Plunge On Election Outcome"
    ],
    "trending": 0,
-   "rule_score": 0.62,
+   "rule_score": 0.61,
    "score": -0.3,
    "note": "Wallet flaw and Strategy pausing purchases weigh, though Galaxy calls the bear market over."
   },
   "ETH": {
-   "recent": 2,
+   "recent": 3,
    "before": 6,
-   "buzz": 1.67,
+   "buzz": 2.5,
    "tone": 1,
    "headlines": [
+    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat",
     "Tom Lee's Bitmine favors share buybacks to ether purchases as crypto declines",
     "Tom Lee's Bitmine Keeps Buying Ethereum But Pivots to Record Share Buybacks"
    ],
    "trending": null,
-   "rule_score": 0.23,
+   "rule_score": 0.4,
    "score": -0.1,
    "note": "Bitmine still buying ETH, but it pivoted to buybacks and crypto is declining."
   },
   "SOL": {
-   "recent": 0,
+   "recent": 1,
    "before": 2,
-   "buzz": 0.0,
+   "buzz": 2.5,
    "tone": 0,
-   "headlines": [],
-   "trending": 6,
+   "headlines": [
+    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
+   ],
+   "trending": 9,
    "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines; Hong Kong naming a Solana company is minor and not new."
@@ -64,11 +67,13 @@
    "note": "No recent headlines for this coin."
   },
   "DOGE": {
-   "recent": 0,
+   "recent": 1,
    "before": 2,
-   "buzz": 0.0,
+   "buzz": 2.5,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
+   ],
    "trending": null,
    "rule_score": 0.0,
    "score": -0.2,
@@ -86,16 +91,17 @@
    "note": "No recent headlines for this coin."
   },
   "XRP": {
-   "recent": 2,
+   "recent": 3,
    "before": 4,
-   "buzz": 2.5,
+   "buzz": 3.75,
    "tone": 4,
    "headlines": [
+    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat",
     "Evernorth Raises $80M to Buy More XRP but Analysts Warn $1 Is in Danger",
     "XRP Poised For 'Significant Move' as Ripple Deepens Institutional Adoption"
    ],
    "trending": null,
-   "rule_score": 0.7,
+   "rule_score": 0.9,
    "score": 0.4,
    "note": "Aviva tokenized fund on XRP Ledger is a real adoption catalyst, but buzz is only two headlines."
   }
@@ -126,10 +132,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 63,
+ "headlines": 65,
  "sources": {
-  "Alpaca/Benzinga": 20,
-  "crypto news sites": 43,
+  "Alpaca/Benzinga": 21,
+  "crypto news sites": 44,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-26T17:56:55+00:00"
