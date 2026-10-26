@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-26 13:56 UTC
+# Aggressive strategy — 2026-10-26 14:26 UTC
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## News radar (trends forming)
 
-Read 47 headlines from the last day (Alpaca/Benzinga 14, crypto news sites 33, CoinGecko trending 15).
+Read 48 headlines from the last day (Alpaca/Benzinga 15, crypto news sites 33, CoinGecko trending 15).
 
 - **Bitcoin slipping below $80K ahead of Fed and midterms**: Many headlines about BTC dipping under $80,000 before Fed decision; mostly price moves, but fear could spread to alts. (BTC, ETH, SOL, XRP, DOGE)
 - **Strategy pauses Bitcoin buying, spends $205M on buybacks**: Major treasury buyer stopped adding BTC; removes a steady demand source and may weigh on sentiment. (BTC)
@@ -23,11 +23,11 @@ Read 47 headlines from the last day (Alpaca/Benzinga 14, crypto news sites 33, C
 | DOGE | -0.20 | 1 (5.0x usual) | Phishing alarm after a hardware wallet data breach; single headline, but a small negative buzz. |
 | BTC | -0.40 | 15 (5.36x usual) | Strategy paused buying and price fell under $80K; some bullish analyst calls exist but bad news dominates. |
 
-Also trending, but not in our coin list: AAVE.
+Also trending, but not in our coin list: DOT.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_

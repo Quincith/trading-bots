@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26T13:56:28+00:00",
+ "time": "2026-10-26T14:26:42+00:00",
  "coins": {
   "BTC": {
    "recent": 15,
@@ -7,9 +7,9 @@
    "buzz": 5.36,
    "tone": 0,
    "headlines": [
+    "Strive Eyes $1 Billion Raise as Strategy Pauses Bitcoin Buying",
     "What's Going On With BitMine Stock Monday?",
-    "Bitmine Adds 10,452 ETH as BMNR Struggles Below $24: What's Going On?",
-    "Bitcoin Drops to $80,000: Are Bears 'Back in Control?'"
+    "Bitmine Adds 10,452 ETH as BMNR Struggles Below $24: What's Going On?"
    ],
    "trending": 1,
    "rule_score": 0.8,
@@ -26,8 +26,8 @@
     "Bitmine Adds 10,452 ETH as BMNR Struggles Below $24: What's Going On?",
     "Bitcoin Drops to $80,000: Are Bears 'Back in Control?'"
    ],
-   "trending": null,
-   "rule_score": 0.5,
+   "trending": 9,
+   "rule_score": 0.65,
    "score": -0.1,
    "note": "BitMine buying helps, but $1B ETF outflows this month offset it."
   },
@@ -37,7 +37,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 6,
+   "trending": 11,
    "rule_score": 0.15,
    "score": 0.1,
    "note": "Hong Kong named a Solana company strategic enterprise; minor and no recent SOL headlines."
@@ -130,11 +130,11 @@
   }
  ],
  "trending_elsewhere": [
-  "AAVE"
+  "DOT"
  ],
- "headlines": 47,
+ "headlines": 48,
  "sources": {
-  "Alpaca/Benzinga": 14,
+  "Alpaca/Benzinga": 15,
   "crypto news sites": 33,
   "CoinGecko trending": 15
  },
