@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-26 08:26 UTC
+# Aggressive strategy — 2026-10-26 08:56 UTC
 
 | | |
 |---|---|
@@ -17,16 +17,16 @@ Read 26 headlines from the last day (Alpaca/Benzinga 8, crypto news sites 18, Co
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| BTC | +0.10 | 8 (5.71x usual) | ETF inflows return, but macro fear and security stories offset the gain. |
+| BTC | +0.10 | 7 (4.38x usual) | ETF inflows return, but macro fear and security stories offset the gain. |
 | SOL | +0.10 | 0 (0.0x usual) | Hong Kong named a Solana company a strategic enterprise, but no SOL-specific headlines today. |
-| ETH | -0.30 | 1 (1.67x usual) | Heavy ETF outflows of $1 billion this month weigh on price; little fresh positive news. |
-| XRP | -0.30 | 2 (5.0x usual) | Analyst warns of a drop below $1 if key support fails; buzz is high but mostly bearish. |
+| ETH | -0.30 | 0 (0.0x usual) | Heavy ETF outflows of $1 billion this month weigh on price; little fresh positive news. |
+| XRP | -0.30 | 1 (1.67x usual) | Analyst warns of a drop below $1 if key support fails; buzz is high but mostly bearish. |
 
-Also trending, but not in our coin list: AAVE.
+Also trending, but not in our coin list: PEPE.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_

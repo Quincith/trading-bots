@@ -1,10 +1,10 @@
 {
- "time": "2026-10-26T08:26:07+00:00",
+ "time": "2026-10-26T08:56:15+00:00",
  "coins": {
   "BTC": {
-   "recent": 8,
-   "before": 7,
-   "buzz": 5.71,
+   "recent": 7,
+   "before": 8,
+   "buzz": 4.38,
    "tone": 1,
    "headlines": [
     "'Something We Haven't Seen Before': Bitcoin and Gold Are the Two Worst-Performing Assets of 2026",
@@ -17,13 +17,11 @@
    "note": "ETF inflows return, but macro fear and security stories offset the gain."
   },
   "ETH": {
-   "recent": 1,
-   "before": 3,
-   "buzz": 1.67,
+   "recent": 0,
+   "before": 4,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
-   ],
+   "headlines": [],
    "trending": null,
    "rule_score": 0.0,
    "score": -0.3,
@@ -85,16 +83,15 @@
    "note": "No recent headlines; nothing new to act on."
   },
   "XRP": {
-   "recent": 2,
-   "before": 2,
-   "buzz": 5.0,
+   "recent": 1,
+   "before": 3,
+   "buzz": 1.67,
    "tone": 0,
    "headlines": [
-    "XRP to Drop Below $1? Crypto Analyst Warns Losing This Key Support May Intensify Selling Pressure",
-    "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
+    "XRP to Drop Below $1? Crypto Analyst Warns Losing This Key Support May Intensify Selling Pressure"
    ],
    "trending": null,
-   "rule_score": 0.5,
+   "rule_score": 0.0,
    "score": -0.3,
    "note": "Analyst warns of a drop below $1 if key support fails; buzz is high but mostly bearish."
   }
@@ -132,7 +129,7 @@
   }
  ],
  "trending_elsewhere": [
-  "AAVE"
+  "PEPE"
  ],
  "headlines": 26,
  "sources": {
