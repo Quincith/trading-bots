@@ -1,17 +1,17 @@
 {
- "time": "2026-10-26T14:56:38+00:00",
+ "time": "2026-10-26T15:26:43+00:00",
  "coins": {
   "BTC": {
-   "recent": 15,
-   "before": 15,
-   "buzz": 5.0,
+   "recent": 13,
+   "before": 17,
+   "buzz": 3.82,
    "tone": 0,
    "headlines": [
     "Strategy Stock Slides Monday: What's Happening?",
     "Strive Eyes $1 Billion Raise as Strategy Pauses Bitcoin Buying",
     "What's Going On With BitMine Stock Monday?"
    ],
-   "trending": 1,
+   "trending": 0,
    "rule_score": 0.8,
    "score": -0.4,
    "note": "Strategy stopped buying and price keeps slipping under $80K; mostly negative pressure."
@@ -37,7 +37,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 8,
+   "trending": 12,
    "rule_score": 0.15,
    "score": 0.1,
    "note": "Hong Kong named a Solana company a strategic enterprise; small positive, but few headlines."
@@ -129,10 +129,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 51,
+ "headlines": 50,
  "sources": {
   "Alpaca/Benzinga": 16,
-  "crypto news sites": 35,
+  "crypto news sites": 34,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-26T14:56:38+00:00"
