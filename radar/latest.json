@@ -1,25 +1,25 @@
 {
- "time": "2026-10-26T15:56:44+00:00",
+ "time": "2026-10-26T16:26:49+00:00",
  "coins": {
   "BTC": {
    "recent": 12,
-   "before": 18,
-   "buzz": 3.33,
+   "before": 19,
+   "buzz": 3.16,
    "tone": 0,
    "headlines": [
+    "Bitcoin Flashes Bullish Signal Against NASDAQ: Is $100,000 in 2026 Possible?",
     "Strategy Stock Slides Monday: What's Happening?",
-    "Strive Eyes $1 Billion Raise as Strategy Pauses Bitcoin Buying",
-    "What's Going On With BitMine Stock Monday?"
+    "Strive Eyes $1 Billion Raise as Strategy Pauses Bitcoin Buying"
    ],
    "trending": 0,
-   "rule_score": 0.77,
+   "rule_score": 0.73,
    "score": -0.3,
    "note": "Strategy paused buying and price slipped under $80K; ETF flows just turned positive, so mixed."
   },
   "ETH": {
-   "recent": 4,
+   "recent": 5,
    "before": 4,
-   "buzz": 5.0,
+   "buzz": 6.25,
    "tone": 1,
    "headlines": [
     "What's Going On With BitMine Stock Monday?",
@@ -129,10 +129,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 53,
+ "headlines": 58,
  "sources": {
-  "Alpaca/Benzinga": 17,
-  "crypto news sites": 36,
+  "Alpaca/Benzinga": 18,
+  "crypto news sites": 40,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-26T15:56:44+00:00"

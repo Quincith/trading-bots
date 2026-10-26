@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 31 times. Most active: LTC at 284.5x normal volume, price +0.0%.
+- Scout scanned 8 coins, 32 times. Most active: LTC at 284.5x normal volume, price +0.0%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -28,20 +28,20 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.30 (+0.30%)
+## Copycat: up $0.36 (+0.36%)
 
-Active day. The bots bought 2 times. The account ended up $0.30 (+0.30%) at $100.30. Paper money only.
+Active day. The bots bought 2 times. The account ended up $0.36 (+0.36%) at $100.36. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.00 → $100.30 (+$0.30, +0.30%).
-- Profit / loss since start: +$0.30 on $100.00 money put in.
-- Spotter read 221 insider filings from the SEC and found 3 insider purchases. Watchlist at day end: 0 stocks.
+- Account value: $100.00 → $100.36 (+$0.36, +0.36%).
+- Profit / loss since start: +$0.36 on $100.00 money put in.
+- Spotter read 248 insider filings from the SEC and found 5 insider purchases. Watchlist at day end: 1 stocks.
 - Sent for review: CHCO (31x), MSM (31x).
 - Decisions: 2 buy, 60 wait, 0 skip.
 - Bought $20.00 of CHCO at 145.19. Reason: Copying CITY HOLDING CO insiders. 4 insiders bought $68,222 at about $142.13: Fisher Robert D (Director) $23,451; Strong-Treister Diane W (Director) $17,056; Hoyer James A (Director) $14,213 and 1 more.
 - Bought $20.00 of MSM at 117.925. Reason: Copying MSC INDUSTRIAL DIRECT CO INC insiders. 1 insider bought $50,129 at about $115.77: Slone Reuben E (Director) $50,129.
-- Holding: CHCO $19.97 (-$0.02 unrealized); MSM $20.30 (+$0.31 unrealized).
+- Holding: CHCO $19.96 (-$0.03 unrealized); MSM $20.38 (+$0.39 unrealized).
 
 ## Words to know
 
