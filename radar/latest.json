@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26T03:55:49+00:00",
+ "time": "2026-10-26T04:25:51+00:00",
  "coins": {
   "BTC": {
    "recent": 2,
@@ -12,8 +12,8 @@
    ],
    "trending": 1,
    "rule_score": 0.33,
-   "score": -0.1,
-   "note": "Buzz is normal and ETF flows just turned positive; little fresh catalyst, mild macro caution."
+   "score": 0.0,
+   "note": "Buzz is up but news is mostly macro talk and price recaps; nothing new and solid."
   },
   "ETH": {
    "recent": 1,
@@ -26,7 +26,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": -0.3,
-   "note": "Ethereum ETF outflows reached $1 billion this month, a real bearish signal despite only one headline."
+   "note": "About $1 billion of October ETF outflows and downside risk warnings are building."
   },
   "SOL": {
    "recent": 2,
@@ -37,10 +37,10 @@
     "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
     "Hong Kong names Nasdaq-listed Solana Company a strategic enterprise"
    ],
-   "trending": 7,
-   "rule_score": 0.65,
-   "score": 0.0,
-   "note": "Buzz spike of 5x comes from one thin headline with no clear new catalyst; treat with caution."
+   "trending": 4,
+   "rule_score": 0.8,
+   "score": 0.5,
+   "note": "Hong Kong strategic enterprise status for a Nasdaq Solana company is a real positive, with heavy buzz."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new building."
+   "note": "No recent headlines, so nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -62,7 +62,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new building."
+   "note": "No recent headlines, so nothing new."
   },
   "DOGE": {
    "recent": 1,
@@ -74,8 +74,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.1,
-   "note": "High buzz comes from a dip recap article, which is not a real catalyst."
+   "score": 0.0,
+   "note": "Buzz is up only on a generic market dip; no coin-specific news."
   },
   "LTC": {
    "recent": 0,
@@ -86,7 +86,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new building."
+   "note": "No recent headlines, so nothing new."
   },
   "XRP": {
    "recent": 1,
@@ -98,26 +98,29 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.1,
-   "note": "High buzz comes from a dip recap article; no fresh news driving it."
+   "score": 0.0,
+   "note": "Buzz is up only on a generic market dip; no coin-specific news."
   }
  },
  "themes": [
   {
-   "title": "Security breach at hardware wallet maker",
-   "note": "Keystone breach exposed buyer addresses; could dent trust in hardware wallets and mildly weigh on sentiment.",
-   "coins": []
-  },
-  {
-   "title": "AI and SpaceX debt financing",
-   "note": "Musk's $40B SpaceX debt for AI chips is a headline driver, but its link to listed coins is indirect and unproven.",
+   "title": "Solana institutional adoption",
+   "note": "Hong Kong naming a Nasdaq-listed Solana company a strategic enterprise is a real, fresh positive for SOL.",
    "coins": [
-    "BTC"
+    "SOL"
    ]
   },
   {
-   "title": "Rate-decision jitters ahead",
-   "note": "Traders await Fed signals; mostly recap-style dip stories, so this is a weak, shared macro risk.",
+   "title": "Keystone wallet data breach",
+   "note": "Exposed hardware wallet buyer addresses could raise security worries across crypto custody, a mild negative to sentiment.",
+   "coins": [
+    "BTC",
+    "ETH"
+   ]
+  },
+  {
+   "title": "Macro rate-decision wait",
+   "note": "Investors are waiting on Fed rate signals; dips in majors look macro-driven, not coin-specific news.",
    "coins": [
     "BTC",
     "ETH",
@@ -126,14 +129,12 @@
    ]
   }
  ],
- "trending_elsewhere": [
-  "PEPE"
- ],
+ "trending_elsewhere": [],
  "headlines": 17,
  "sources": {
   "Alpaca/Benzinga": 6,
   "crypto news sites": 11,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T03:25:41+00:00"
+ "ai_time": "2026-10-26T04:25:51+00:00"
 }
