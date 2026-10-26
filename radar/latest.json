@@ -1,19 +1,18 @@
 {
- "time": "2026-10-26T23:27:12+00:00",
+ "time": "2026-10-26T23:57:26+00:00",
  "coins": {
   "BTC": {
-   "recent": 2,
-   "before": 34,
-   "buzz": 0.29,
+   "recent": 1,
+   "before": 35,
+   "buzz": 0.14,
    "tone": 0,
    "headlines": [
-    "Bitcoin Bull Market Means 'Buy the Bigger Dips Harder,' Expert Says",
-    "'Value Investor' Bets $1M That Bitcoin Will Reach $100,000 Before $60,000"
+    "Bitcoin Bull Market Means 'Buy the Bigger Dips Harder,' Expert Says"
    ],
-   "trending": 12,
-   "rule_score": 0.01,
+   "trending": null,
+   "rule_score": 0.0,
    "score": -0.2,
-   "note": "Price dipped below $80,000 and Strategy paused buying; mild negative momentum, no fresh catalyst."
+   "note": "Price dipped below $80K on Iran and Fed worries. Most headlines are price recaps, and buzz is very low."
   },
   "ETH": {
    "recent": 0,
@@ -24,7 +23,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in recent hours; Bitmine buyback news is old and recycled."
+   "note": "No recent headlines. Bitmine buybacks are old news for the token itself."
   },
   "SOL": {
    "recent": 0,
@@ -32,10 +31,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 6,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new building."
+   "note": "No recent headlines and no new catalyst found."
   },
   "AVAX": {
    "recent": 0,
@@ -43,10 +42,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 13,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines; nothing new building."
+   "note": "Searched often but no fresh headlines. Searches alone are not a catalyst."
   },
   "LINK": {
    "recent": 0,
@@ -56,21 +55,19 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.1,
-   "note": "Canada and US stablecoin and bank-payment rules could help oracle and payment demand; indirect, small."
+   "score": 0.0,
+   "note": "No recent headlines. Prediction-market deals are not a direct LINK catalyst yet."
   },
   "DOGE": {
-   "recent": 1,
-   "before": 3,
-   "buzz": 1.67,
+   "recent": 0,
+   "before": 4,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "AI Agents Found a Way Into Anthropic's Business Systems in Under 12 Hours"
-   ],
-   "trending": 10,
+   "headlines": [],
+   "trending": 7,
    "rule_score": 0.15,
    "score": -0.2,
-   "note": "Buzz is up but the only news is a hardware wallet data breach and phishing alarm, which is negative."
+   "note": "Phishing alarm after a hardware wallet data breach. Minor negative, no recent buzz."
   },
   "LTC": {
    "recent": 0,
@@ -81,7 +78,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new building."
+   "note": "No recent headlines and no new catalyst."
   },
   "XRP": {
    "recent": 0,
@@ -89,34 +86,38 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 11,
-   "rule_score": 0.15,
-   "score": 0.3,
-   "note": "Aviva tokenized fund on XRP Ledger is real institutional adoption; ignore $1 price warnings."
+   "trending": null,
+   "rule_score": 0.0,
+   "score": 0.1,
+   "note": "Aviva tokenized fund on XRP Ledger is a real adoption item, though the Evernorth piece is recycled price talk."
   }
  },
  "themes": [
   {
-   "title": "Stablecoin rules and bank entry",
-   "note": "Canada and US regulators moving on stablecoins; supportive for stablecoin-linked and payment-focused tokens, though mostly policy talk so far.",
+   "title": "Stablecoin rules spreading (Canada, US banks)",
+   "note": "Canada drafted stablecoin rules and the US OCC invited community banks into stablecoin payments. Regulatory clarity can lift the sector, though these are early consultations.",
    "coins": [
+    "BTC",
+    "ETH",
     "XRP",
     "LINK"
    ]
   },
   {
-   "title": "Anthropic IPO and AI market mood",
-   "note": "Big AI IPO news is pulling attention and money toward AI stocks, away from crypto majors.",
+   "title": "Anthropic IPO and AI-versus-crypto money flow",
+   "note": "Anthropic's IPO filing is pulling attention and capital toward AI stocks, competing with crypto for risk appetite.",
    "coins": [
     "BTC",
-    "ETH"
+    "ETH",
+    "SOL",
+    "AVAX"
    ]
   },
   {
-   "title": "Institutional XRP adoption",
-   "note": "Aviva tokenized fund on XRP Ledger is real adoption news, but headlines on XRP price targets are noise.",
+   "title": "Prediction markets going mainstream",
+   "note": "NBA and Kalshi/Polymarket deals keep growing. Mostly a stock and exchange story, with little direct crypto token impact yet.",
    "coins": [
-    "XRP"
+    "LINK"
    ]
   }
  ],
@@ -127,5 +128,5 @@
   "crypto news sites": 54,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T22:57:11+00:00"
+ "ai_time": "2026-10-26T23:57:26+00:00"
 }
