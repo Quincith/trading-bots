@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-26 01:55 UTC
+# Aggressive strategy — 2026-10-26 02:25 UTC
 
 | | |
 |---|---|
@@ -9,21 +9,24 @@
 
 ## News radar (trends forming)
 
-Read 12 headlines from the last day (Alpaca/Benzinga 4, crypto news sites 8, CoinGecko trending 15).
+Read 13 headlines from the last day (Alpaca/Benzinga 5, crypto news sites 8, CoinGecko trending 15).
 
-- **Ethereum ETF outflows and downside pressure**: ETH buzz is 5x normal, driven by $1B October ETF outflows and downside risk warnings. Mostly bearish for ETH. (ETH)
-- **Bitcoin ETF flows turning mixed**: Bitcoin ETFs snapped a two-week losing streak, but the gain came with a late-week slide. Weak signal, mostly noise. (BTC)
-- **Tokenization and institutional crypto rules**: Banks and regulators are debating tokenized stocks, stablecoins, and digital euro rules. Long-term theme, no clear near-term price catalyst. (ETH, LINK)
+- **Ethereum ETF outflows and downside risk**: Large ETF selling near $1 billion this month is a bearish signal for ETH price pressure. (ETH)
+- **Macro rate uncertainty ahead of Warsh policy moves**: Traders are waiting on interest rate signals, which can pressure all risk assets including BTC, ETH, XRP, and DOGE. (BTC, ETH, XRP, DOGE)
+- **Bitcoin ETF flows turning around**: Bitcoin ETFs snapped a two-week losing streak, a mildly positive sign but not decisive. (BTC)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| BTC | +0.10 | 1 (1.0x usual) | Bitcoin ETFs snapped a losing streak; buzz is normal. Weak positive, mostly recycled market noise. |
-| SOL | +0.00 | 0 (0.0x usual) | No recent headlines or buzz. Nothing new. |
-| ETH | -0.50 | 1 (5.0x usual) | Heavy buzz from $1B ETF outflows and downside risk warnings. Bearish news building. |
+| BTC | +0.10 | 2 (2.0x usual) | ETF outflow streak ended, but macro rate worries and a price-prediction hype piece add little real catalyst. |
+| SOL | +0.00 | 1 (5.0x usual) | Only one headline with no clear new catalyst; buzz spike is not backed by news. |
+| LINK | +0.00 | 0 (0.0x usual) | No recent headlines and not much news flow; nothing new. |
+| DOGE | -0.20 | 1 (5.0x usual) | Named in a dip story tied to rate worries, but that is a recap-style mention, not a real catalyst. |
+| XRP | -0.20 | 1 (5.0x usual) | Included in a dip article tied to rate uncertainty; weak signal from one recap-style headline. |
+| ETH | -0.50 | 2 (10.0x usual) | About $1 billion in ETF outflows this month and downside risk warnings; Glamsterdam fork news is mostly technical. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_

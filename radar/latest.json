@@ -1,42 +1,46 @@
 {
- "time": "2026-10-26T01:55:35+00:00",
+ "time": "2026-10-26T02:25:33+00:00",
  "coins": {
   "BTC": {
-   "recent": 1,
+   "recent": 2,
    "before": 5,
-   "buzz": 1.0,
+   "buzz": 2.0,
    "tone": -1,
    "headlines": [
+    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
     "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
    ],
    "trending": 3,
-   "rule_score": 0.2,
+   "rule_score": 0.4,
    "score": 0.1,
-   "note": "Bitcoin ETFs snapped a losing streak; buzz is normal. Weak positive, mostly recycled market noise."
+   "note": "ETF outflow streak ended, but macro rate worries and a price-prediction hype piece add little real catalyst."
   },
   "ETH": {
+   "recent": 2,
+   "before": 1,
+   "buzz": 10.0,
+   "tone": -1,
+   "headlines": [
+    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
+    "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
+   ],
+   "trending": 4,
+   "rule_score": 0.7,
+   "score": -0.5,
+   "note": "About $1 billion in ETF outflows this month and downside risk warnings; Glamsterdam fork news is mostly technical."
+  },
+  "SOL": {
    "recent": 1,
    "before": 1,
    "buzz": 5.0,
-   "tone": -1,
-   "headlines": [
-    "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
-   ],
-   "trending": 6,
-   "rule_score": 0.05,
-   "score": -0.5,
-   "note": "Heavy buzz from $1B ETF outflows and downside risk warnings. Bearish news building."
-  },
-  "SOL": {
-   "recent": 0,
-   "before": 1,
-   "buzz": 0.0,
    "tone": 0,
-   "headlines": [],
-   "trending": 9,
-   "rule_score": 0.15,
+   "headlines": [
+    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
+   ],
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz. Nothing new."
+   "note": "Only one headline with no clear new catalyst; buzz spike is not backed by news."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz. Nothing new."
+   "note": "No recent headlines, nothing new to trade on."
   },
   "LINK": {
    "recent": 0,
@@ -55,21 +59,23 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 9,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines; tokenization stories are general and not specific to LINK."
+   "note": "No recent headlines and not much news flow; nothing new."
   },
   "DOGE": {
-   "recent": 0,
+   "recent": 1,
    "before": 0,
-   "buzz": 0.0,
+   "buzz": 5.0,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
+   ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.0,
-   "note": "No recent headlines or buzz. Nothing new."
+   "score": -0.2,
+   "note": "Named in a dip story tied to rate worries, but that is a recap-style mention, not a real catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -80,50 +86,54 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz. Nothing new."
+   "note": "No recent headlines, nothing new."
   },
   "XRP": {
-   "recent": 0,
+   "recent": 1,
    "before": 1,
-   "buzz": 0.0,
+   "buzz": 5.0,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
+   ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.0,
-   "note": "No recent headlines or buzz. Nothing new."
+   "score": -0.2,
+   "note": "Included in a dip article tied to rate uncertainty; weak signal from one recap-style headline."
   }
  },
  "themes": [
   {
-   "title": "Ethereum ETF outflows and downside pressure",
-   "note": "ETH buzz is 5x normal, driven by $1B October ETF outflows and downside risk warnings. Mostly bearish for ETH.",
+   "title": "Ethereum ETF outflows and downside risk",
+   "note": "Large ETF selling near $1 billion this month is a bearish signal for ETH price pressure.",
    "coins": [
     "ETH"
    ]
   },
   {
-   "title": "Bitcoin ETF flows turning mixed",
-   "note": "Bitcoin ETFs snapped a two-week losing streak, but the gain came with a late-week slide. Weak signal, mostly noise.",
+   "title": "Macro rate uncertainty ahead of Warsh policy moves",
+   "note": "Traders are waiting on interest rate signals, which can pressure all risk assets including BTC, ETH, XRP, and DOGE.",
    "coins": [
-    "BTC"
+    "BTC",
+    "ETH",
+    "XRP",
+    "DOGE"
    ]
   },
   {
-   "title": "Tokenization and institutional crypto rules",
-   "note": "Banks and regulators are debating tokenized stocks, stablecoins, and digital euro rules. Long-term theme, no clear near-term price catalyst.",
+   "title": "Bitcoin ETF flows turning around",
+   "note": "Bitcoin ETFs snapped a two-week losing streak, a mildly positive sign but not decisive.",
    "coins": [
-    "ETH",
-    "LINK"
+    "BTC"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 12,
+ "headlines": 13,
  "sources": {
-  "Alpaca/Benzinga": 4,
+  "Alpaca/Benzinga": 5,
   "crypto news sites": 8,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T01:25:27+00:00"
+ "ai_time": "2026-10-26T02:25:33+00:00"
 }
