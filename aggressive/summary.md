@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-26 20:57 UTC
+# Aggressive strategy — 2026-10-26 21:27 UTC
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## News radar (trends forming)
 
-Read 74 headlines from the last day (Alpaca/Benzinga 24, crypto news sites 50, CoinGecko trending 15).
+Read 76 headlines from the last day (Alpaca/Benzinga 24, crypto news sites 52, CoinGecko trending 15).
 
 - **Bitcoin breaks below $80K amid Fed and midterm jitters**: BTC slipped under $80,000 with a Fed decision and midterms ahead; mood is cautious, with analysts split on bear versus dip-buy. (BTC, ETH, SOL, XRP, DOGE)
 - **Prediction markets and CFTC approval momentum**: NBA and Kalshi deals grow the prediction-market trend. Little direct effect on our listed coins, mostly indirect. (BTC, ETH)
@@ -17,10 +17,10 @@ Read 74 headlines from the last day (Alpaca/Benzinga 24, crypto news sites 50, C
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.20 | 2 (2.0x usual) | Aviva tokenized fund on XRP Ledger and Ripple institutional adoption; some real positive news, though analysts warn on price. |
+| XRP | +0.20 | 1 (0.83x usual) | Aviva tokenized fund on XRP Ledger and Ripple institutional adoption; some real positive news, though analysts warn on price. |
 | SOL | +0.10 | 1 (2.5x usual) | Buzz 2.5x but only one headline with no clear catalyst; watch for follow-up. |
 | ETH | +0.00 | 1 (0.62x usual) | Only one headline; Bitmine buying continues but shifted to buybacks. Nothing new enough. |
-| BTC | -0.20 | 8 (1.38x usual) | Price dipped below $80K and ETF outflows lately; Strategy paused buying. Mixed, mildly negative near term. |
+| BTC | -0.20 | 6 (0.97x usual) | Price dipped below $80K and ETF outflows lately; Strategy paused buying. Mixed, mildly negative near term. |
 | DOGE | -0.30 | 2 (5.0x usual) | Buzz 5x from a hardware wallet data breach and phishing alarm. Security worry building. |
 
 ## Notes
@@ -28,4 +28,4 @@ Read 74 headlines from the last day (Alpaca/Benzinga 24, crypto news sites 50, C
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_

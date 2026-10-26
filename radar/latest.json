@@ -1,18 +1,18 @@
 {
- "time": "2026-10-26T20:57:07+00:00",
+ "time": "2026-10-26T21:27:10+00:00",
  "coins": {
   "BTC": {
-   "recent": 8,
-   "before": 29,
-   "buzz": 1.38,
-   "tone": 3,
+   "recent": 6,
+   "before": 31,
+   "buzz": 0.97,
+   "tone": 0,
    "headlines": [
     "Bitcoin Bull Market Means 'Buy the Bigger Dips Harder,' Expert Says",
-    "Neoclouds Face Guppy-Level Death; 36% Of S&P 500 Earnings This Week; Brazil Stocks Plunge On Election Outcome",
-    "'Value Investor' Bets $1M That Bitcoin Will Reach $100,000 Before $60,000"
+    "'Value Investor' Bets $1M That Bitcoin Will Reach $100,000 Before $60,000",
+    "Anthropic Could Be Worth More Than Bitcoin by Year-End, Polymarket Traders Say"
    ],
    "trending": 0,
-   "rule_score": 0.68,
+   "rule_score": 0.29,
    "score": -0.2,
    "note": "Price dipped below $80K and ETF outflows lately; Strategy paused buying. Mixed, mildly negative near term."
   },
@@ -90,16 +90,15 @@
    "note": "No headlines in the recent window. Nothing new."
   },
   "XRP": {
-   "recent": 2,
-   "before": 5,
-   "buzz": 2.0,
+   "recent": 1,
+   "before": 6,
+   "buzz": 0.83,
    "tone": 0,
    "headlines": [
-    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat",
-    "Evernorth Raises $80M to Buy More XRP but Analysts Warn $1 Is in Danger"
+    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
    ],
    "trending": null,
-   "rule_score": 0.2,
+   "rule_score": 0.0,
    "score": 0.2,
    "note": "Aviva tokenized fund on XRP Ledger and Ripple institutional adoption; some real positive news, though analysts warn on price."
   }
@@ -136,10 +135,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 74,
+ "headlines": 76,
  "sources": {
   "Alpaca/Benzinga": 24,
-  "crypto news sites": 50,
+  "crypto news sites": 52,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-26T20:57:07+00:00"
