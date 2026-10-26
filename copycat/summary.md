@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-10-26 22:27 UTC
+# Copycat strategy — 2026-10-26 22:57 UTC
 
 | | |
 |---|---|
@@ -9,11 +9,12 @@
 
 ## Insider buys on the watchlist
 
-Read 21 new SEC filings this run. 9 stocks on the watchlist.
+Read 31 new SEC filings this run. 10 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
 | THRM (Gentherm Inc) | 3.07 | 2 insiders bought $662,600 at about $26.50: Mascarenas Paul Anthony (Director) $532,600; Presley William T. (President & CEO, Director) $130,000. |
+| STC (STEWART INFORMATION SERVICES CORP) | 2.95 | 3 insiders bought $283,710 at about $47.28: Apel Thomas G (Director) $95,470; Bradley C Allen Jr (Director) $94,600; Corey William S. Jr. (Director) $93,640. |
 | NBIS (Nebius Group N.V.) | 1.09 | 1 insider bought $122,438 at about $159.01: Grimme Arne (Director) $122,438. |
 
 ## Copy decisions
@@ -21,10 +22,11 @@ Read 21 new SEC filings this run. 9 stocks on the watchlist.
 | Stock | Price check | Risk | Decision |
 |---|---|---|---|
 | THRM | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
+| STC | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
 | NBIS | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
 
 ## Notes
-- Spotter read 21 new insider filings and found 2 purchases (0 by officers or directors). Watchlist: 9 stocks, 2 big enough to copy.
+- Spotter read 31 new insider filings and found 10 purchases (4 by officers or directors). Watchlist: 10 stocks, 3 big enough to copy.
 - Stock market closed; picks wait for the next open.
 
 _Copycat uses no AI._

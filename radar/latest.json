@@ -1,31 +1,30 @@
 {
- "time": "2026-10-26T22:27:13+00:00",
+ "time": "2026-10-26T22:57:11+00:00",
  "coins": {
   "BTC": {
-   "recent": 3,
+   "recent": 2,
    "before": 34,
-   "buzz": 0.44,
-   "tone": 1,
+   "buzz": 0.29,
+   "tone": 0,
    "headlines": [
     "Bitcoin Bull Market Means 'Buy the Bigger Dips Harder,' Expert Says",
-    "'Value Investor' Bets $1M That Bitcoin Will Reach $100,000 Before $60,000",
-    "Anthropic Could Be Worth More Than Bitcoin by Year-End, Polymarket Traders Say"
+    "'Value Investor' Bets $1M That Bitcoin Will Reach $100,000 Before $60,000"
    ],
-   "trending": 0,
-   "rule_score": 0.29,
+   "trending": 13,
+   "rule_score": 0.01,
    "score": -0.2,
-   "note": "Strategy paused Bitcoin buying and BTC fell below $80,000. Many headlines are price recaps, so the signal is mildly negative."
+   "note": "Price dipped below $80,000 and Strategy paused buying; mild negative momentum, no fresh catalyst."
   },
   "ETH": {
    "recent": 0,
-   "before": 9,
+   "before": 8,
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 10,
-   "rule_score": 0.15,
-   "score": 0.1,
-   "note": "Bitmine keeps buying ether, but shifted toward buybacks. Little fresh news, so slightly positive at most."
+   "trending": 4,
+   "rule_score": 0.3,
+   "score": 0.0,
+   "note": "No new headlines in recent hours; Bitmine buyback news is old and recycled."
   },
   "SOL": {
    "recent": 0,
@@ -33,10 +32,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 13,
+   "trending": 7,
    "rule_score": 0.15,
    "score": 0.0,
-   "note": "Buzz is up 2.5x but only one headline, and nothing about Solana in the list. Nothing new to act on."
+   "note": "No recent headlines; nothing new building."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +46,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines at all. Nothing new building."
+   "note": "No recent headlines; nothing new building."
   },
   "LINK": {
    "recent": 0,
@@ -58,7 +57,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.1,
-   "note": "No direct Chainlink headlines. Prediction-market and tokenization news could help indirectly, but it is weak."
+   "note": "Canada and US stablecoin and bank-payment rules could help oracle and payment demand; indirect, small."
   },
   "DOGE": {
    "recent": 1,
@@ -71,7 +70,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": -0.2,
-   "note": "Buzz is 5x, driven by a phishing alarm after a hardware wallet data breach. Negative news building."
+   "note": "Buzz is up but the only news is a hardware wallet data breach and phishing alarm, which is negative."
   },
   "LTC": {
    "recent": 0,
@@ -82,7 +81,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines. Nothing new building."
+   "note": "No recent headlines; nothing new building."
   },
   "XRP": {
    "recent": 0,
@@ -93,44 +92,40 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.3,
-   "note": "Aviva tokenized a fund on XRP Ledger and Ripple institutional adoption is growing. Some real positive news, though buzz is normal."
+   "note": "Aviva tokenized fund on XRP Ledger is real institutional adoption; ignore $1 price warnings."
   }
  },
  "themes": [
   {
-   "title": "Stablecoin rules spreading to banks and new countries",
-   "note": "US OCC invites community banks into stablecoin payments and Canada opens stablecoin consultation. Regulatory clarity can help the broader crypto payments space.",
+   "title": "Stablecoin rules and bank entry",
+   "note": "Canada and US regulators moving on stablecoins; supportive for stablecoin-linked and payment-focused tokens, though mostly policy talk so far.",
    "coins": [
     "XRP",
-    "ETH",
     "LINK"
    ]
   },
   {
-   "title": "Prediction markets and CFTC approval",
-   "note": "NBA endorsing CFTC-regulated prediction markets is a regulatory tailwind, but mostly a sports and platform story rather than a direct coin catalyst.",
-   "coins": [
-    "LINK"
-   ]
-  },
-  {
-   "title": "Bitcoin sliding below $80K with weak sentiment",
-   "note": "Strategy paused Bitcoin buying and BTC dipped under $80,000 on Iran fears and Fed worries. Mostly price-recap and sentiment noise, not fresh catalysts.",
+   "title": "Anthropic IPO and AI market mood",
+   "note": "Big AI IPO news is pulling attention and money toward AI stocks, away from crypto majors.",
    "coins": [
     "BTC",
-    "ETH",
-    "SOL",
-    "XRP",
-    "DOGE"
+    "ETH"
+   ]
+  },
+  {
+   "title": "Institutional XRP adoption",
+   "note": "Aviva tokenized fund on XRP Ledger is real adoption news, but headlines on XRP price targets are noise.",
+   "coins": [
+    "XRP"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 79,
+ "headlines": 78,
  "sources": {
   "Alpaca/Benzinga": 24,
-  "crypto news sites": 55,
+  "crypto news sites": 54,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T21:57:10+00:00"
+ "ai_time": "2026-10-26T22:57:11+00:00"
 }
