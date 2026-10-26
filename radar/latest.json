@@ -1,18 +1,18 @@
 {
- "time": "2026-10-26T07:26:04+00:00",
+ "time": "2026-10-26T07:56:03+00:00",
  "coins": {
   "BTC": {
    "recent": 7,
-   "before": 6,
-   "buzz": 5.83,
-   "tone": -1,
+   "before": 7,
+   "buzz": 5.0,
+   "tone": 0,
    "headlines": [
+    "'Something We Haven't Seen Before': Bitcoin and Gold Are the Two Worst-Performing Assets of 2026",
     "XRP to Drop Below $1? Crypto Analyst Warns Losing This Key Support May Intensify Selling Pressure",
-    "Benjamin Netanyahu\u2019s Plans to Beat Potential Sanctions With Crypto Called Destructive By Rival: He Has \u2018Gone Off the Rails...\u2019",
-    "Anthony Scaramucci Says Vivek Ramaswamy 'Disgraced Himself' in Ohio Governor Race: 'He\u2019s Finished Himself as a Future Candidate'"
+    "Benjamin Netanyahu\u2019s Plans to Beat Potential Sanctions With Crypto Called Destructive By Rival: He Has \u2018Gone Off the Rails...\u2019"
    ],
    "trending": 0,
-   "rule_score": 0.7,
+   "rule_score": 0.8,
    "score": -0.3,
    "note": "Heavy buzz, but mostly security incidents and a Fed-driven dip; bearish tilt."
   },
@@ -125,10 +125,12 @@
    ]
   }
  ],
- "trending_elsewhere": [],
- "headlines": 24,
+ "trending_elsewhere": [
+  "AAVE"
+ ],
+ "headlines": 25,
  "sources": {
-  "Alpaca/Benzinga": 7,
+  "Alpaca/Benzinga": 8,
   "crypto news sites": 17,
   "CoinGecko trending": 15
  },
