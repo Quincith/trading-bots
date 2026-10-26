@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26T00:25:32+00:00",
+ "time": "2026-10-26T00:55:32+00:00",
  "coins": {
   "BTC": {
    "recent": 1,
@@ -9,8 +9,8 @@
    "headlines": [
     "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
    ],
-   "trending": 4,
-   "rule_score": 0.2,
+   "trending": 6,
+   "rule_score": 0.05,
    "score": 0.1,
    "note": "ETFs snapped a two-week outflow streak; small positive, but mostly recycled coverage."
   },
@@ -33,7 +33,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 11,
+   "trending": 7,
    "rule_score": 0.15,
    "score": 0.0,
    "note": "No new headlines and no buzz, despite being on the most-searched list."
