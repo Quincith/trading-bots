@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26T02:55:38+00:00",
+ "time": "2026-10-26T03:25:41+00:00",
  "coins": {
   "BTC": {
    "recent": 1,
@@ -11,8 +11,8 @@
    ],
    "trending": 1,
    "rule_score": 0.3,
-   "score": 0.1,
-   "note": "ETF outflow streak ended, but macro rate worries and a price-prediction hype piece add little real catalyst."
+   "score": -0.1,
+   "note": "Buzz is normal and ETF flows just turned positive; little fresh catalyst, mild macro caution."
   },
   "ETH": {
    "recent": 1,
@@ -22,10 +22,10 @@
    "headlines": [
     "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
    ],
-   "trending": 6,
-   "rule_score": 0.15,
-   "score": -0.5,
-   "note": "About $1 billion in ETF outflows this month and downside risk warnings; Glamsterdam fork news is mostly technical."
+   "trending": null,
+   "rule_score": 0.0,
+   "score": -0.3,
+   "note": "Ethereum ETF outflows reached $1 billion this month, a real bearish signal despite only one headline."
   },
   "SOL": {
    "recent": 1,
@@ -35,10 +35,10 @@
    "headlines": [
     "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
    ],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 8,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "Only one headline with no clear new catalyst; buzz spike is not backed by news."
+   "note": "Buzz spike of 5x comes from one thin headline with no clear new catalyst; treat with caution."
   },
   "AVAX": {
    "recent": 0,
@@ -46,10 +46,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 14,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines, nothing new to trade on."
+   "note": "No recent headlines; nothing new building."
   },
   "LINK": {
    "recent": 0,
@@ -60,7 +60,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines and not much news flow; nothing new."
+   "note": "No recent headlines; nothing new building."
   },
   "DOGE": {
    "recent": 1,
@@ -72,8 +72,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.2,
-   "note": "Named in a dip story tied to rate worries, but that is a recap-style mention, not a real catalyst."
+   "score": -0.1,
+   "note": "High buzz comes from a dip recap article, which is not a real catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -84,7 +84,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, nothing new."
+   "note": "No recent headlines; nothing new building."
   },
   "XRP": {
    "recent": 1,
@@ -96,42 +96,40 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.2,
-   "note": "Included in a dip article tied to rate uncertainty; weak signal from one recap-style headline."
+   "score": -0.1,
+   "note": "High buzz comes from a dip recap article; no fresh news driving it."
   }
  },
  "themes": [
   {
-   "title": "Ethereum ETF outflows and downside risk",
-   "note": "Large ETF selling near $1 billion this month is a bearish signal for ETH price pressure.",
+   "title": "Security breach at hardware wallet maker",
+   "note": "Keystone breach exposed buyer addresses; could dent trust in hardware wallets and mildly weigh on sentiment.",
+   "coins": []
+  },
+  {
+   "title": "AI and SpaceX debt financing",
+   "note": "Musk's $40B SpaceX debt for AI chips is a headline driver, but its link to listed coins is indirect and unproven.",
    "coins": [
-    "ETH"
+    "BTC"
    ]
   },
   {
-   "title": "Macro rate uncertainty ahead of Warsh policy moves",
-   "note": "Traders are waiting on interest rate signals, which can pressure all risk assets including BTC, ETH, XRP, and DOGE.",
+   "title": "Rate-decision jitters ahead",
+   "note": "Traders await Fed signals; mostly recap-style dip stories, so this is a weak, shared macro risk.",
    "coins": [
     "BTC",
     "ETH",
     "XRP",
     "DOGE"
    ]
-  },
-  {
-   "title": "Bitcoin ETF flows turning around",
-   "note": "Bitcoin ETFs snapped a two-week losing streak, a mildly positive sign but not decisive.",
-   "coins": [
-    "BTC"
-   ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 14,
+ "headlines": 15,
  "sources": {
   "Alpaca/Benzinga": 5,
-  "crypto news sites": 9,
+  "crypto news sites": 10,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T02:25:33+00:00"
+ "ai_time": "2026-10-26T03:25:41+00:00"
 }
