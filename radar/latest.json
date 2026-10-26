@@ -1,30 +1,32 @@
 {
- "time": "2026-10-26T04:25:51+00:00",
+ "time": "2026-10-26T04:55:53+00:00",
  "coins": {
   "BTC": {
-   "recent": 2,
+   "recent": 3,
    "before": 6,
-   "buzz": 1.67,
+   "buzz": 2.5,
    "tone": -1,
    "headlines": [
     "Anthony Scaramucci Says Vivek Ramaswamy 'Disgraced Himself' in Ohio Governor Race: 'He\u2019s Finished Himself as a Future Candidate'",
-    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
+    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
+    "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
    ],
-   "trending": 1,
-   "rule_score": 0.33,
+   "trending": 0,
+   "rule_score": 0.5,
    "score": 0.0,
    "note": "Buzz is up but news is mostly macro talk and price recaps; nothing new and solid."
   },
   "ETH": {
-   "recent": 1,
+   "recent": 2,
    "before": 2,
-   "buzz": 2.5,
+   "buzz": 5.0,
    "tone": 0,
    "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
+    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
+    "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
    ],
    "trending": null,
-   "rule_score": 0.0,
+   "rule_score": 0.5,
    "score": -0.3,
    "note": "About $1 billion of October ETF outflows and downside risk warnings are building."
   },
@@ -37,8 +39,8 @@
     "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
     "Hong Kong names Nasdaq-listed Solana Company a strategic enterprise"
    ],
-   "trending": 4,
-   "rule_score": 0.8,
+   "trending": 9,
+   "rule_score": 0.65,
    "score": 0.5,
    "note": "Hong Kong strategic enterprise status for a Nasdaq Solana company is a real positive, with heavy buzz."
   },
@@ -59,8 +61,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 6,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines, so nothing new."
   },
@@ -89,15 +91,16 @@
    "note": "No recent headlines, so nothing new."
   },
   "XRP": {
-   "recent": 1,
+   "recent": 2,
    "before": 1,
-   "buzz": 5.0,
+   "buzz": 10.0,
    "tone": 0,
    "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
+    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
+    "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
    ],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 10,
+   "rule_score": 0.65,
    "score": 0.0,
    "note": "Buzz is up only on a generic market dip; no coin-specific news."
   }
@@ -130,10 +133,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 17,
+ "headlines": 18,
  "sources": {
   "Alpaca/Benzinga": 6,
-  "crypto news sites": 11,
+  "crypto news sites": 12,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-26T04:25:51+00:00"
