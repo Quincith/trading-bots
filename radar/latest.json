@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26T01:25:27+00:00",
+ "time": "2026-10-26T01:55:35+00:00",
  "coins": {
   "BTC": {
    "recent": 1,
@@ -9,8 +9,8 @@
    "headlines": [
     "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
    ],
-   "trending": 5,
-   "rule_score": 0.05,
+   "trending": 3,
+   "rule_score": 0.2,
    "score": 0.1,
    "note": "Bitcoin ETFs snapped a losing streak; buzz is normal. Weak positive, mostly recycled market noise."
   },
@@ -22,8 +22,8 @@
    "headlines": [
     "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
    ],
-   "trending": null,
-   "rule_score": -0.1,
+   "trending": 6,
+   "rule_score": 0.05,
    "score": -0.5,
    "note": "Heavy buzz from $1B ETF outflows and downside risk warnings. Bearish news building."
   },
@@ -33,8 +33,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 9,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines or buzz. Nothing new."
   },
@@ -118,9 +118,7 @@
    ]
   }
  ],
- "trending_elsewhere": [
-  "PEPE"
- ],
+ "trending_elsewhere": [],
  "headlines": 12,
  "sources": {
   "Alpaca/Benzinga": 4,
