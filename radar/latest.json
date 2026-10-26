@@ -1,10 +1,10 @@
 {
- "time": "2026-10-26T05:25:53+00:00",
+ "time": "2026-10-26T05:55:53+00:00",
  "coins": {
   "BTC": {
-   "recent": 5,
+   "recent": 6,
    "before": 5,
-   "buzz": 5.0,
+   "buzz": 6.0,
    "tone": -1,
    "headlines": [
     "Benjamin Netanyahu\u2019s Plans to Beat Potential Sanctions With Crypto Called Destructive By Rival: He Has \u2018Gone Off the Rails...\u2019",
@@ -99,8 +99,8 @@
     "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
     "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
    ],
-   "trending": 9,
-   "rule_score": 0.65,
+   "trending": null,
+   "rule_score": 0.5,
    "score": -0.2,
    "note": "Buzz is high but the only news is a dip recap tied to Fed expectations."
   }
@@ -132,10 +132,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 20,
+ "headlines": 22,
  "sources": {
   "Alpaca/Benzinga": 6,
-  "crypto news sites": 14,
+  "crypto news sites": 16,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-26T05:25:53+00:00"
