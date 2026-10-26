@@ -1,20 +1,20 @@
 {
- "time": "2026-10-26T04:55:53+00:00",
+ "time": "2026-10-26T05:25:53+00:00",
  "coins": {
   "BTC": {
-   "recent": 3,
-   "before": 6,
-   "buzz": 2.5,
+   "recent": 5,
+   "before": 5,
+   "buzz": 5.0,
    "tone": -1,
    "headlines": [
+    "Benjamin Netanyahu\u2019s Plans to Beat Potential Sanctions With Crypto Called Destructive By Rival: He Has \u2018Gone Off the Rails...\u2019",
     "Anthony Scaramucci Says Vivek Ramaswamy 'Disgraced Himself' in Ohio Governor Race: 'He\u2019s Finished Himself as a Future Candidate'",
-    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
-    "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
+    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
    ],
-   "trending": 0,
-   "rule_score": 0.5,
-   "score": 0.0,
-   "note": "Buzz is up but news is mostly macro talk and price recaps; nothing new and solid."
+   "trending": 1,
+   "rule_score": 0.7,
+   "score": -0.4,
+   "note": "Wallet bug and Keystone breach plus Fed-driven de-risking; price slipping under $80,000."
   },
   "ETH": {
    "recent": 2,
@@ -27,8 +27,8 @@
    ],
    "trending": null,
    "rule_score": 0.5,
-   "score": -0.3,
-   "note": "About $1 billion of October ETF outflows and downside risk warnings are building."
+   "score": -0.4,
+   "note": "ETH ETF outflows reached $1 billion this month; Fed caution adds pressure."
   },
   "SOL": {
    "recent": 2,
@@ -39,10 +39,10 @@
     "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
     "Hong Kong names Nasdaq-listed Solana Company a strategic enterprise"
    ],
-   "trending": 9,
+   "trending": 8,
    "rule_score": 0.65,
-   "score": 0.5,
-   "note": "Hong Kong strategic enterprise status for a Nasdaq Solana company is a real positive, with heavy buzz."
+   "score": 0.3,
+   "note": "Hong Kong strategic enterprise recognition is a genuine positive, though only two headlines so far."
   },
   "AVAX": {
    "recent": 0,
@@ -53,7 +53,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No recent headlines or buzz, so nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -61,10 +61,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 6,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No recent headlines or buzz, so nothing new."
   },
   "DOGE": {
    "recent": 1,
@@ -76,8 +76,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.0,
-   "note": "Buzz is up only on a generic market dip; no coin-specific news."
+   "score": -0.1,
+   "note": "Only a dip mention alongside majors ahead of the Fed; little independent news."
   },
   "LTC": {
    "recent": 0,
@@ -88,7 +88,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No recent headlines or buzz, so nothing new."
   },
   "XRP": {
    "recent": 2,
@@ -99,45 +99,44 @@
     "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
     "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
    ],
-   "trending": 10,
+   "trending": 9,
    "rule_score": 0.65,
-   "score": 0.0,
-   "note": "Buzz is up only on a generic market dip; no coin-specific news."
+   "score": -0.2,
+   "note": "Buzz is high but the only news is a dip recap tied to Fed expectations."
   }
  },
  "themes": [
   {
-   "title": "Solana institutional adoption",
-   "note": "Hong Kong naming a Nasdaq-listed Solana company a strategic enterprise is a real, fresh positive for SOL.",
+   "title": "Bitcoin wallet security scare",
+   "note": "Wallet bug and Keystone breach could make holders nervous about security and cause selling pressure.",
    "coins": [
-    "SOL"
+    "BTC"
    ]
   },
   {
-   "title": "Keystone wallet data breach",
-   "note": "Exposed hardware wallet buyer addresses could raise security worries across crypto custody, a mild negative to sentiment.",
-   "coins": [
-    "BTC",
-    "ETH"
-   ]
-  },
-  {
-   "title": "Macro rate-decision wait",
-   "note": "Investors are waiting on Fed rate signals; dips in majors look macro-driven, not coin-specific news.",
+   "title": "Fed meeting and risk-off mood",
+   "note": "Traders are de-risking ahead of the Fed and Warsh rate signals, pressuring majors like BTC, ETH, XRP and DOGE.",
    "coins": [
     "BTC",
     "ETH",
     "XRP",
     "DOGE"
    ]
+  },
+  {
+   "title": "Solana institutional adoption",
+   "note": "Hong Kong naming a Nasdaq-listed Solana company a strategic enterprise is a real, if early, positive for SOL.",
+   "coins": [
+    "SOL"
+   ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 18,
+ "headlines": 20,
  "sources": {
   "Alpaca/Benzinga": 6,
-  "crypto news sites": 12,
+  "crypto news sites": 14,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T04:25:51+00:00"
+ "ai_time": "2026-10-26T05:25:53+00:00"
 }
