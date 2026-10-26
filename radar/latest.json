@@ -1,44 +1,44 @@
 {
- "time": "2026-10-26T16:56:43+00:00",
+ "time": "2026-10-26T17:26:55+00:00",
  "coins": {
   "BTC": {
-   "recent": 11,
-   "before": 21,
-   "buzz": 2.62,
-   "tone": 0,
+   "recent": 8,
+   "before": 23,
+   "buzz": 1.74,
+   "tone": 2,
    "headlines": [
+    "Nasdaq 100 Rallies on Chip Rebound; Brazil ETF Sinks 21%: Stock Market Today",
     "Peter Schiff Says $75,000 Bitcoin Is Coming: Watch These 5 Catalysts",
-    "Bitcoin Flashes Bullish Signal Against NASDAQ: Is $100,000 in 2026 Possible?",
-    "Strategy Stock Slides Monday: What's Happening?"
+    "Bitcoin Flashes Bullish Signal Against NASDAQ: Is $100,000 in 2026 Possible?"
    ],
    "trending": 0,
-   "rule_score": 0.62,
+   "rule_score": 0.65,
    "score": -0.3,
    "note": "Strategy paused buying and price fell below $80K; buzz high but mostly bearish macro and price recaps."
   },
   "ETH": {
    "recent": 4,
-   "before": 5,
-   "buzz": 4.0,
+   "before": 4,
+   "buzz": 5.0,
    "tone": 1,
    "headlines": [
     "What's Going On With BitMine Stock Monday?",
     "Bitmine Adds 10,452 ETH as BMNR Struggles Below $24: What's Going On?",
     "Tom Lee's Bitmine favors share buybacks to ether purchases as crypto declines"
    ],
-   "trending": null,
-   "rule_score": 0.6,
+   "trending": 12,
+   "rule_score": 0.75,
    "score": -0.3,
    "note": "Bitmine shifting from ETH buys to buybacks and ETF outflows; buzz is up but tone is negative."
   },
   "SOL": {
    "recent": 0,
-   "before": 3,
+   "before": 2,
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 8,
+   "rule_score": 0.15,
    "score": 0.1,
    "note": "No recent headlines; only a minor Hong Kong enterprise recognition, which is old and weak."
   },
@@ -89,15 +89,16 @@
    "note": "No recent headlines; nothing new to act on."
   },
   "XRP": {
-   "recent": 1,
-   "before": 5,
-   "buzz": 1.0,
+   "recent": 2,
+   "before": 4,
+   "buzz": 2.5,
    "tone": 4,
    "headlines": [
+    "Evernorth Raises $80M to Buy More XRP but Analysts Warn $1 Is in Danger",
     "XRP Poised For 'Significant Move' as Ripple Deepens Institutional Adoption"
    ],
-   "trending": 14,
-   "rule_score": 0.55,
+   "trending": null,
+   "rule_score": 0.7,
    "score": 0.2,
    "note": "Aviva tokenized fund on XRP Ledger is a real adoption win, but buzz is only normal and the search rank is high."
   }

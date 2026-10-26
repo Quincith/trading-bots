@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-26 16:56 UTC
+# Aggressive strategy — 2026-10-26 17:26 UTC
 
 | | |
 |---|---|
@@ -17,15 +17,15 @@ Read 60 headlines from the last day (Alpaca/Benzinga 19, crypto news sites 41, C
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.20 | 1 (1.0x usual) | Aviva tokenized fund on XRP Ledger is a real adoption win, but buzz is only normal and the search rank is high. |
+| XRP | +0.20 | 2 (2.5x usual) | Aviva tokenized fund on XRP Ledger is a real adoption win, but buzz is only normal and the search rank is high. |
 | SOL | +0.10 | 0 (0.0x usual) | No recent headlines; only a minor Hong Kong enterprise recognition, which is old and weak. |
 | DOGE | -0.20 | 1 (5.0x usual) | Buzz is high but from a phishing alarm after a hardware wallet data breach; a negative story. |
-| BTC | -0.30 | 11 (2.62x usual) | Strategy paused buying and price fell below $80K; buzz high but mostly bearish macro and price recaps. |
-| ETH | -0.30 | 4 (4.0x usual) | Bitmine shifting from ETH buys to buybacks and ETF outflows; buzz is up but tone is negative. |
+| BTC | -0.30 | 8 (1.74x usual) | Strategy paused buying and price fell below $80K; buzz high but mostly bearish macro and price recaps. |
+| ETH | -0.30 | 4 (5.0x usual) | Bitmine shifting from ETH buys to buybacks and ETF outflows; buzz is up but tone is negative. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_
