@@ -1,10 +1,10 @@
 {
- "time": "2026-10-26T20:27:10+00:00",
+ "time": "2026-10-26T20:57:07+00:00",
  "coins": {
   "BTC": {
-   "recent": 9,
-   "before": 28,
-   "buzz": 1.61,
+   "recent": 8,
+   "before": 29,
+   "buzz": 1.38,
    "tone": 3,
    "headlines": [
     "Bitcoin Bull Market Means 'Buy the Bigger Dips Harder,' Expert Says",
@@ -12,9 +12,9 @@
     "'Value Investor' Bets $1M That Bitcoin Will Reach $100,000 Before $60,000"
    ],
    "trending": 0,
-   "rule_score": 0.72,
-   "score": -0.3,
-   "note": "Price dipped below $80K and Strategy paused buying; bearish flow, though some bulls see recovery."
+   "rule_score": 0.68,
+   "score": -0.2,
+   "note": "Price dipped below $80K and ETF outflows lately; Strategy paused buying. Mixed, mildly negative near term."
   },
   "ETH": {
    "recent": 1,
@@ -26,8 +26,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.2,
-   "note": "Bitmine shifting from ETH buys to buybacks removes a supportive buyer; little other fresh news."
+   "score": 0.0,
+   "note": "Only one headline; Bitmine buying continues but shifted to buybacks. Nothing new enough."
   },
   "SOL": {
    "recent": 1,
@@ -39,8 +39,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.1,
-   "note": "Only one headline despite high buzz; no clear new catalyst, mild negative from weak market mood."
+   "score": 0.1,
+   "note": "Buzz 2.5x but only one headline with no clear catalyst; watch for follow-up."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new."
+   "note": "No headlines in the recent window. Nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -59,10 +59,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 13,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new."
+   "note": "No headlines in the recent window. Nothing new."
   },
   "DOGE": {
    "recent": 2,
@@ -75,8 +75,8 @@
    ],
    "trending": null,
    "rule_score": 0.5,
-   "score": -0.2,
-   "note": "Buzz is up, but the news is a phishing alarm after a hardware wallet data breach."
+   "score": -0.3,
+   "note": "Buzz 5x from a hardware wallet data breach and phishing alarm. Security worry building."
   },
   "LTC": {
    "recent": 0,
@@ -87,7 +87,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new."
+   "note": "No headlines in the recent window. Nothing new."
   },
   "XRP": {
    "recent": 2,
@@ -101,43 +101,46 @@
    "trending": null,
    "rule_score": 0.2,
    "score": 0.2,
-   "note": "Aviva Investors tokenized fund on XRP Ledger is real institutional use, but price warnings offset it."
+   "note": "Aviva tokenized fund on XRP Ledger and Ripple institutional adoption; some real positive news, though analysts warn on price."
   }
  },
  "themes": [
   {
-   "title": "Stablecoin rules expanding (Canada, US GENIUS Act, OCC banks)",
-   "note": "Regulators in Canada and US pushing stablecoin frameworks; slow-building, mildly supportive for crypto infrastructure rather than any single coin.",
-   "coins": [
-    "XRP",
-    "BTC",
-    "ETH"
-   ]
-  },
-  {
-   "title": "Anthropic IPO and AI-driven risk-off in markets",
-   "note": "Big AI IPO and neocloud selloff pull attention and money away from crypto; BTC trades near $80K support with weak sentiment.",
+   "title": "Bitcoin breaks below $80K amid Fed and midterm jitters",
+   "note": "BTC slipped under $80,000 with a Fed decision and midterms ahead; mood is cautious, with analysts split on bear versus dip-buy.",
    "coins": [
     "BTC",
     "ETH",
-    "SOL"
+    "SOL",
+    "XRP",
+    "DOGE"
    ]
   },
   {
-   "title": "Bitcoin treasury firms pausing buys (Strategy, Bitmine)",
-   "note": "Strategy paused BTC buying for buybacks and Bitmine shifted toward buybacks, removing a key corporate bid.",
+   "title": "Prediction markets and CFTC approval momentum",
+   "note": "NBA and Kalshi deals grow the prediction-market trend. Little direct effect on our listed coins, mostly indirect.",
    "coins": [
     "BTC",
     "ETH"
+   ]
+  },
+  {
+   "title": "Stablecoin rules expanding in Canada and US",
+   "note": "Canada opened stablecoin consultation citing the US GENIUS Act; regulatory clarity can help the sector, though impact on our coins is indirect.",
+   "coins": [
+    "ETH",
+    "SOL",
+    "XRP",
+    "LINK"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 73,
+ "headlines": 74,
  "sources": {
   "Alpaca/Benzinga": 24,
-  "crypto news sites": 49,
+  "crypto news sites": 50,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T19:57:00+00:00"
+ "ai_time": "2026-10-26T20:57:07+00:00"
 }

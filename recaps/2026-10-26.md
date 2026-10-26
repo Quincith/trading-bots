@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 40 times. Most active: LTC at 284.5x normal volume, price +0.0%.
+- Scout scanned 8 coins, 41 times. Most active: LTC at 288.0x normal volume, price +0.1%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,7 +36,7 @@ Active day. The bots bought 3 times. The account ended down $0.13 (-0.13%) at $9
 
 - Account value: $100.00 → $99.87 (-$0.13, -0.13%).
 - Profit / loss since start: -$0.13 on $100.00 money put in.
-- Spotter read 571 insider filings from the SEC and found 12 insider purchases. Watchlist at day end: 2 stocks.
+- Spotter read 673 insider filings from the SEC and found 21 insider purchases. Watchlist at day end: 5 stocks.
 - Sent for review: CHCO (31x), MSM (31x), BBT (1x).
 - Decisions: 3 buy, 60 wait, 0 skip.
 - Bought $20.00 of CHCO at 145.19. Reason: Copying CITY HOLDING CO insiders. 4 insiders bought $68,222 at about $142.13: Fisher Robert D (Director) $23,451; Strong-Treister Diane W (Director) $17,056; Hoyer James A (Director) $14,213 and 1 more.
