@@ -1,4 +1,4 @@
-# Daily recap: Sunday, October 25, 2026
+# Daily recap: Monday, October 26, 2026
 
 _Times are UTC. Paper money only._
 
@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 10 times. Most active: LINK at 117.8x normal volume, price -0.4%.
+- Scout scanned 0 coins, 0 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 6 times. Most active: ETH at 5.6x normal volume, price +0.1%.
+- Scout scanned 0 coins, 0 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,10 +36,10 @@ Watchful day. Insiders bought some stocks, but none passed the copy checks yet. 
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Spotter read 300 insider filings from the SEC and found 71 insider purchases. Watchlist at day end: 2 stocks.
+- Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 2 stocks.
 - Top pick: CHCO (CITY HOLDING CO). 4 insiders bought $68,222 at about $142.13: Fisher Robert D (Director) $23,451; Strong-Treister Diane W (Director) $17,056; Hoyer James A (Director) $14,213 and 1 more.
-- Sent for review: CHCO (7x), MSM (7x).
-- Decisions: 0 buy, 14 wait, 0 skip.
+- Sent for review: CHCO (1x), MSM (1x).
+- Decisions: 0 buy, 2 wait, 0 skip.
 - Passed on CHCO (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on MSM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
