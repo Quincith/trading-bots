@@ -1,33 +1,35 @@
 {
- "time": "2026-10-26T13:01:20+00:00",
+ "time": "2026-10-26T13:56:28+00:00",
  "coins": {
   "BTC": {
-   "recent": 9,
-   "before": 15,
-   "buzz": 3.0,
+   "recent": 15,
+   "before": 14,
+   "buzz": 5.36,
    "tone": 0,
    "headlines": [
-    "Bitcoin Drops to $80,000: Are Bears 'Back in Control?'",
-    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise After Trump Rules Out Iran Strike \u2014 ITUB, NON, CLS in Focus (UPDATED)",
-    "Strategy Gears Up to Report Q3 Financials \u2014 Crypto Bettors Expect the Bitcoin Hoarder to Beat Earnings"
+    "What's Going On With BitMine Stock Monday?",
+    "Bitmine Adds 10,452 ETH as BMNR Struggles Below $24: What's Going On?",
+    "Bitcoin Drops to $80,000: Are Bears 'Back in Control?'"
    ],
-   "trending": 0,
-   "rule_score": 0.7,
-   "score": -0.3,
-   "note": "Heavy buzz, but mostly price-drop and macro-fear stories; ETF inflow is a small offset."
+   "trending": 1,
+   "rule_score": 0.8,
+   "score": -0.4,
+   "note": "Strategy paused buying and price fell under $80K; some bullish analyst calls exist but bad news dominates."
   },
   "ETH": {
-   "recent": 1,
+   "recent": 3,
    "before": 4,
-   "buzz": 1.25,
+   "buzz": 3.75,
    "tone": 0,
    "headlines": [
+    "What's Going On With BitMine Stock Monday?",
+    "Bitmine Adds 10,452 ETH as BMNR Struggles Below $24: What's Going On?",
     "Bitcoin Drops to $80,000: Are Bears 'Back in Control?'"
    ],
    "trending": null,
-   "rule_score": 0.0,
-   "score": -0.2,
-   "note": "No fresh headlines; ETF outflows of $1B this month are a weak negative."
+   "rule_score": 0.5,
+   "score": -0.1,
+   "note": "BitMine buying helps, but $1B ETF outflows this month offset it."
   },
   "SOL": {
    "recent": 0,
@@ -35,10 +37,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 6,
+   "rule_score": 0.15,
    "score": 0.1,
-   "note": "No fresh coin headlines; a Hong Kong strategic enterprise nod is minor."
+   "note": "Hong Kong named a Solana company strategic enterprise; minor and no recent SOL headlines."
   },
   "AVAX": {
    "recent": 0,
@@ -49,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No headlines in the last day."
+   "note": "No new headlines about Avalanche today."
   },
   "LINK": {
    "recent": 0,
@@ -60,18 +62,20 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No headlines in the last day."
+   "note": "No new headlines about Chainlink today."
   },
   "DOGE": {
-   "recent": 0,
+   "recent": 1,
    "before": 1,
-   "buzz": 0.0,
+   "buzz": 5.0,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Dogecoin Community Sounds Phishing Alarm After Hardware Wallet Data Breach"
+   ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.0,
-   "note": "Only a passing mention in a dip story; nothing new."
+   "score": -0.2,
+   "note": "Phishing alarm after a hardware wallet data breach; single headline, but a small negative buzz."
   },
   "LTC": {
    "recent": 0,
@@ -82,7 +86,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No headlines in the last day."
+   "note": "No new headlines about Litecoin today."
   },
   "XRP": {
    "recent": 1,
@@ -92,49 +96,47 @@
    "headlines": [
     "Aviva Investors launches tokenized share class of $29B Sterling fund on XRP Ledger"
    ],
-   "trending": 12,
-   "rule_score": 0.25,
+   "trending": null,
+   "rule_score": 0.1,
    "score": 0.2,
-   "note": "Aviva's tokenized fund on XRP Ledger is a real institutional win; a bearish price-level warning offsets some of it."
+   "note": "Aviva Investors tokenized a $29B fund on XRP Ledger; a real institutional use case."
   }
  },
  "themes": [
   {
-   "title": "Bitcoin slipping below $80K ahead of Fed and Iran worries",
-   "note": "BTC is sliding on macro fear and a Fed decision this week; risk-off mood could drag other coins down too.",
+   "title": "Bitcoin slipping below $80K ahead of Fed and midterms",
+   "note": "Many headlines about BTC dipping under $80,000 before Fed decision; mostly price moves, but fear could spread to alts.",
    "coins": [
     "BTC",
     "ETH",
     "SOL",
-    "AVAX",
-    "LINK",
-    "DOGE",
-    "LTC",
-    "XRP"
+    "XRP",
+    "DOGE"
    ]
   },
   {
-   "title": "Bitcoin ETF flows turning positive again",
-   "note": "ETFs ended a two-week outflow streak with $301M inflow, a possible early sign of buying returning.",
+   "title": "Strategy pauses Bitcoin buying, spends $205M on buybacks",
+   "note": "Major treasury buyer stopped adding BTC; removes a steady demand source and may weigh on sentiment.",
    "coins": [
-    "BTC",
+    "BTC"
+   ]
+  },
+  {
+   "title": "Ethereum treasury buying and ETF outflows",
+   "note": "BitMine adding ETH buys support, but October ETH ETF outflows near $1B show selling pressure.",
+   "coins": [
     "ETH"
-   ]
-  },
-  {
-   "title": "Tokenization and institutional adoption on XRP Ledger",
-   "note": "Aviva Investors' tokenized fund on XRP Ledger is a real institutional use case, though small in scope.",
-   "coins": [
-    "XRP"
    ]
   }
  ],
- "trending_elsewhere": [],
- "headlines": 38,
+ "trending_elsewhere": [
+  "AAVE"
+ ],
+ "headlines": 47,
  "sources": {
-  "Alpaca/Benzinga": 11,
-  "crypto news sites": 27,
+  "Alpaca/Benzinga": 14,
+  "crypto news sites": 33,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T12:26:30+00:00"
+ "ai_time": "2026-10-26T13:56:28+00:00"
 }
