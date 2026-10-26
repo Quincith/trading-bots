@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 34 times. Most active: LTC at 284.5x normal volume, price +0.0%.
+- Scout scanned 8 coins, 35 times. Most active: LTC at 284.5x normal volume, price +0.0%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,25 +23,25 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 8 times. Most active: AVAX at 6.4x normal volume, price -1.5%.
+- Scout scanned 8 coins, 9 times. Most active: AVAX at 6.4x normal volume, price -1.5%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.06 (+0.06%)
+## Copycat: up $0.09 (+0.09%)
 
-Active day. The bots bought 2 times. The account ended up $0.06 (+0.06%) at $100.06. Paper money only.
+Active day. The bots bought 2 times. The account ended up $0.09 (+0.09%) at $100.09. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.00 → $100.06 (+$0.06, +0.06%).
-- Profit / loss since start: +$0.06 on $100.00 money put in.
-- Spotter read 303 insider filings from the SEC and found 5 insider purchases. Watchlist at day end: 1 stocks.
+- Account value: $100.00 → $100.09 (+$0.09, +0.09%).
+- Profit / loss since start: +$0.09 on $100.00 money put in.
+- Spotter read 311 insider filings from the SEC and found 5 insider purchases. Watchlist at day end: 1 stocks.
 - Sent for review: CHCO (31x), MSM (31x).
 - Decisions: 2 buy, 60 wait, 0 skip.
 - Bought $20.00 of CHCO at 145.19. Reason: Copying CITY HOLDING CO insiders. 4 insiders bought $68,222 at about $142.13: Fisher Robert D (Director) $23,451; Strong-Treister Diane W (Director) $17,056; Hoyer James A (Director) $14,213 and 1 more.
 - Bought $20.00 of MSM at 117.925. Reason: Copying MSC INDUSTRIAL DIRECT CO INC insiders. 1 insider bought $50,129 at about $115.77: Slone Reuben E (Director) $50,129.
-- Holding: CHCO $19.90 (-$0.09 unrealized); MSM $20.14 (+$0.15 unrealized).
+- Holding: CHCO $19.93 (-$0.06 unrealized); MSM $20.14 (+$0.15 unrealized).
 
 ## Words to know
 
