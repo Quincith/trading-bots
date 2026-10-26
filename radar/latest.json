@@ -1,35 +1,35 @@
 {
- "time": "2026-10-26T16:26:49+00:00",
+ "time": "2026-10-26T16:56:43+00:00",
  "coins": {
   "BTC": {
-   "recent": 12,
-   "before": 19,
-   "buzz": 3.16,
+   "recent": 11,
+   "before": 21,
+   "buzz": 2.62,
    "tone": 0,
    "headlines": [
+    "Peter Schiff Says $75,000 Bitcoin Is Coming: Watch These 5 Catalysts",
     "Bitcoin Flashes Bullish Signal Against NASDAQ: Is $100,000 in 2026 Possible?",
-    "Strategy Stock Slides Monday: What's Happening?",
-    "Strive Eyes $1 Billion Raise as Strategy Pauses Bitcoin Buying"
+    "Strategy Stock Slides Monday: What's Happening?"
    ],
    "trending": 0,
-   "rule_score": 0.73,
+   "rule_score": 0.62,
    "score": -0.3,
-   "note": "Strategy paused buying and price slipped under $80K; ETF flows just turned positive, so mixed."
+   "note": "Strategy paused buying and price fell below $80K; buzz high but mostly bearish macro and price recaps."
   },
   "ETH": {
-   "recent": 5,
-   "before": 4,
-   "buzz": 6.25,
+   "recent": 4,
+   "before": 5,
+   "buzz": 4.0,
    "tone": 1,
    "headlines": [
     "What's Going On With BitMine Stock Monday?",
     "Bitmine Adds 10,452 ETH as BMNR Struggles Below $24: What's Going On?",
-    "Bitcoin Drops to $80,000: Are Bears 'Back in Control?'"
+    "Tom Lee's Bitmine favors share buybacks to ether purchases as crypto declines"
    ],
    "trending": null,
    "rule_score": 0.6,
-   "score": 0.1,
-   "note": "Bitmine still adding ETH, but ETF outflows are large; little clear new direction."
+   "score": -0.3,
+   "note": "Bitmine shifting from ETH buys to buybacks and ETF outflows; buzz is up but tone is negative."
   },
   "SOL": {
    "recent": 0,
@@ -39,8 +39,8 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.0,
-   "note": "No recent headlines; only an older Hong Kong recognition story, nothing new."
+   "score": 0.1,
+   "note": "No recent headlines; only a minor Hong Kong enterprise recognition, which is old and weak."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new is building."
+   "note": "No recent headlines; nothing new to act on."
   },
   "LINK": {
    "recent": 0,
@@ -62,7 +62,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new is building."
+   "note": "No recent headlines; nothing new to act on."
   },
   "DOGE": {
    "recent": 1,
@@ -75,7 +75,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": -0.2,
-   "note": "Phishing alarm after a hardware wallet data breach; buzz is from one headline, so keep it small."
+   "note": "Buzz is high but from a phishing alarm after a hardware wallet data breach; a negative story."
   },
   "LTC": {
    "recent": 0,
@@ -86,7 +86,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new is building."
+   "note": "No recent headlines; nothing new to act on."
   },
   "XRP": {
    "recent": 1,
@@ -96,44 +96,44 @@
    "headlines": [
     "XRP Poised For 'Significant Move' as Ripple Deepens Institutional Adoption"
    ],
-   "trending": null,
-   "rule_score": 0.4,
+   "trending": 14,
+   "rule_score": 0.55,
    "score": 0.2,
-   "note": "Aviva tokenized fund on XRP Ledger is real institutional use, though the buzz is only one headline."
+   "note": "Aviva tokenized fund on XRP Ledger is a real adoption win, but buzz is only normal and the search rank is high."
   }
  },
  "themes": [
   {
-   "title": "Strategy pauses Bitcoin buying, buying back its own stock",
-   "note": "Largest corporate BTC buyer stopped purchases; removes a steady demand source and may pressure BTC sentiment.",
+   "title": "Strategy pauses BTC buying, buybacks instead",
+   "note": "Strategy halted Bitcoin purchases and spent $205M on buybacks, a possible sign of weaker corporate demand for BTC.",
    "coins": [
     "BTC"
    ]
   },
   {
-   "title": "Bitcoin slipping below $80K ahead of Fed and midterms",
-   "note": "Heavy coverage of BTC dips and bear-market debate; mostly price recaps, so treat as sentiment rather than fresh catalyst.",
+   "title": "Institutional ETH pivot to buybacks",
+   "note": "Bitmine keeps buying ether but shifts toward share buybacks as crypto declines; ETH ETF outflows also weigh.",
+   "coins": [
+    "ETH"
+   ]
+  },
+  {
+   "title": "Bitcoin dips below $80K on macro fears",
+   "note": "BTC slipping under $80,000 ahead of the Fed and Iran worries; mostly price-driven, not new fundamentals.",
    "coins": [
     "BTC",
     "ETH",
     "XRP",
     "DOGE"
    ]
-  },
-  {
-   "title": "Ethereum treasury buying and ETF outflows",
-   "note": "Bitmine keeps buying ETH, but ETH ETF outflows hit $1B in October, a mixed signal.",
-   "coins": [
-    "ETH"
-   ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 58,
+ "headlines": 60,
  "sources": {
-  "Alpaca/Benzinga": 18,
-  "crypto news sites": 40,
+  "Alpaca/Benzinga": 19,
+  "crypto news sites": 41,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T15:56:44+00:00"
+ "ai_time": "2026-10-26T16:56:43+00:00"
 }
