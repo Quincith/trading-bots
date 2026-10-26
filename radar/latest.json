@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26T18:56:54+00:00",
+ "time": "2026-10-26T19:26:58+00:00",
  "coins": {
   "BTC": {
    "recent": 8,
@@ -26,8 +26,8 @@
     "Tom Lee's Bitmine favors share buybacks to ether purchases as crypto declines",
     "Tom Lee's Bitmine Keeps Buying Ethereum But Pivots to Record Share Buybacks"
    ],
-   "trending": null,
-   "rule_score": 0.4,
+   "trending": 11,
+   "rule_score": 0.55,
    "score": -0.1,
    "note": "Bitmine keeps buying but shifts to buybacks; little fresh positive news."
   },
@@ -39,7 +39,7 @@
    "headlines": [
     "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
    ],
-   "trending": 10,
+   "trending": 12,
    "rule_score": 0.15,
    "score": 0.0,
    "note": "Only one headline with no real catalyst; nothing new to act on."
@@ -130,9 +130,7 @@
    ]
   }
  ],
- "trending_elsewhere": [
-  "AAVE"
- ],
+ "trending_elsewhere": [],
  "headlines": 68,
  "sources": {
   "Alpaca/Benzinga": 22,

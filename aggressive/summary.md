@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-26 18:56 UTC
+# Aggressive strategy — 2026-10-26 19:26 UTC
 
 | | |
 |---|---|
@@ -23,11 +23,9 @@ Read 68 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 46, C
 | DOGE | -0.20 | 1 (2.5x usual) | Phishing alarm after hardware wallet data breach; mild negative sentiment. |
 | BTC | -0.40 | 8 (1.48x usual) | Price dipped below $80K and Strategy paused buying; demand signals are weakening. |
 
-Also trending, but not in our coin list: AAVE.
-
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_
