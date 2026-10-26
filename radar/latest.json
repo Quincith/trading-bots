@@ -1,31 +1,29 @@
 {
- "time": "2026-10-26T02:25:33+00:00",
+ "time": "2026-10-26T02:55:38+00:00",
  "coins": {
   "BTC": {
-   "recent": 2,
-   "before": 5,
-   "buzz": 2.0,
-   "tone": -1,
+   "recent": 1,
+   "before": 6,
+   "buzz": 0.83,
+   "tone": 0,
    "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
-    "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
+    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
    ],
-   "trending": 3,
-   "rule_score": 0.4,
+   "trending": 1,
+   "rule_score": 0.3,
    "score": 0.1,
    "note": "ETF outflow streak ended, but macro rate worries and a price-prediction hype piece add little real catalyst."
   },
   "ETH": {
-   "recent": 2,
-   "before": 1,
-   "buzz": 10.0,
-   "tone": -1,
+   "recent": 1,
+   "before": 2,
+   "buzz": 2.5,
+   "tone": 0,
    "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC",
-    "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
+    "Bitcoin, Ethereum, XRP, Dogecoin Dip as Investors Await Kevin Warsh's Interest Rate Moves: Analyst Sees 'Interesting Week' Ahead for BTC"
    ],
-   "trending": 4,
-   "rule_score": 0.7,
+   "trending": 6,
+   "rule_score": 0.15,
    "score": -0.5,
    "note": "About $1 billion in ETF outflows this month and downside risk warnings; Glamsterdam fork news is mostly technical."
   },
@@ -59,8 +57,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 9,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "No recent headlines and not much news flow; nothing new."
   },
@@ -129,10 +127,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 13,
+ "headlines": 14,
  "sources": {
   "Alpaca/Benzinga": 5,
-  "crypto news sites": 8,
+  "crypto news sites": 9,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-26T02:25:33+00:00"
