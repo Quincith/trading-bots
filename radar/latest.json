@@ -1,20 +1,20 @@
 {
- "time": "2026-10-26T18:26:52+00:00",
+ "time": "2026-10-26T18:56:54+00:00",
  "coins": {
   "BTC": {
    "recent": 8,
-   "before": 26,
-   "buzz": 1.54,
-   "tone": 2,
+   "before": 27,
+   "buzz": 1.48,
+   "tone": 3,
    "headlines": [
+    "Anthropic Could Be Worth More Than Bitcoin by Year-End, Polymarket Traders Say",
     "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat",
-    "Bitcoin Can Retake $125,000, Galaxy Says: \u2018The Crowd Has Left\u2019",
-    "Neoclouds Face Guppy-Level Death; 36% Of S&P 500 Earnings This Week; Brazil Stocks Plunge On Election Outcome"
+    "Bitcoin Can Retake $125,000, Galaxy Says: \u2018The Crowd Has Left\u2019"
    ],
    "trending": 0,
-   "rule_score": 0.61,
-   "score": -0.3,
-   "note": "Wallet flaw and Strategy pausing purchases weigh, though Galaxy calls the bear market over."
+   "rule_score": 0.7,
+   "score": -0.4,
+   "note": "Price dipped below $80K and Strategy paused buying; demand signals are weakening."
   },
   "ETH": {
    "recent": 3,
@@ -29,7 +29,7 @@
    "trending": null,
    "rule_score": 0.4,
    "score": -0.1,
-   "note": "Bitmine still buying ETH, but it pivoted to buybacks and crypto is declining."
+   "note": "Bitmine keeps buying but shifts to buybacks; little fresh positive news."
   },
   "SOL": {
    "recent": 1,
@@ -39,10 +39,10 @@
    "headlines": [
     "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
    ],
-   "trending": 9,
+   "trending": 10,
    "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines; Hong Kong naming a Solana company is minor and not new."
+   "note": "Only one headline with no real catalyst; nothing new to act on."
   },
   "AVAX": {
    "recent": 0,
@@ -53,7 +53,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines for this coin."
+   "note": "No recent headlines; nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -64,7 +64,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines for this coin."
+   "note": "No recent headlines; nothing new."
   },
   "DOGE": {
    "recent": 1,
@@ -77,7 +77,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": -0.2,
-   "note": "Hardware wallet breach triggered phishing alarm in the Dogecoin community."
+   "note": "Phishing alarm after hardware wallet data breach; mild negative sentiment."
   },
   "LTC": {
    "recent": 0,
@@ -88,7 +88,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines for this coin."
+   "note": "No recent headlines; nothing new."
   },
   "XRP": {
    "recent": 3,
@@ -102,41 +102,42 @@
    ],
    "trending": null,
    "rule_score": 0.9,
-   "score": 0.4,
-   "note": "Aviva tokenized fund on XRP Ledger is a real adoption catalyst, but buzz is only two headlines."
+   "score": 0.2,
+   "note": "Buzz is high, but mostly institutional adoption news like Aviva's XRP Ledger fund; modest positive."
   }
  },
  "themes": [
   {
-   "title": "Bitcoin wallet security flaw and exchange losses",
-   "note": "Wallet bug redirected funds and an Indian exchange absorbed a $16M loss; hurts trust in BTC wallets and exchanges.",
+   "title": "Strategy pauses BTC buying, STRC buybacks",
+   "note": "Largest corporate BTC buyer paused purchases; bearish signal for bitcoin demand near term.",
+   "coins": [
+    "BTC"
+   ]
+  },
+  {
+   "title": "Ethereum treasury firm shifts to buybacks",
+   "note": "Bitmine still buying ETH but favoring share buybacks; mild sign of weaker ETH buying demand.",
+   "coins": [
+    "ETH"
+   ]
+  },
+  {
+   "title": "Bitcoin wallet and exchange security incidents",
+   "note": "Wallet flaw and CoinDCX loss plus Dogecoin hardware wallet phishing alarm make users cautious.",
    "coins": [
     "BTC",
     "DOGE"
    ]
-  },
-  {
-   "title": "XRP institutional adoption buzz",
-   "note": "Aviva tokenized fund on XRP Ledger and Evernorth buying XRP; buzz is high but some analysts warn of $1 support risk.",
-   "coins": [
-    "XRP"
-   ]
-  },
-  {
-   "title": "Bitcoin treasury and risk-off pressure",
-   "note": "Strategy paused BTC buying and BTC dipped below $80K on Fed and Iran worries; mixed signals from bulls and bears.",
-   "coins": [
-    "BTC",
-    "ETH"
-   ]
   }
  ],
- "trending_elsewhere": [],
- "headlines": 65,
+ "trending_elsewhere": [
+  "AAVE"
+ ],
+ "headlines": 68,
  "sources": {
-  "Alpaca/Benzinga": 21,
-  "crypto news sites": 44,
+  "Alpaca/Benzinga": 22,
+  "crypto news sites": 46,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T17:56:55+00:00"
+ "ai_time": "2026-10-26T18:56:54+00:00"
 }
