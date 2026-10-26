@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 19 times. Most active: AVAX at 66.9x normal volume, price -0.6%.
+- Scout scanned 8 coins, 20 times. Most active: LTC at 284.5x normal volume, price +0.0%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 4 times. Most active: AVAX at 6.4x normal volume, price -1.5%.
+- Scout scanned 8 coins, 5 times. Most active: AVAX at 6.4x normal volume, price -1.5%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -38,8 +38,8 @@ Watchful day. Insiders bought some stocks, but none passed the copy checks yet. 
 - Profit / loss since start: +$0.00 on $100.00 money put in.
 - Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 2 stocks.
 - Top pick: CHCO (CITY HOLDING CO). 4 insiders bought $68,222 at about $142.13: Fisher Robert D (Director) $23,451; Strong-Treister Diane W (Director) $17,056; Hoyer James A (Director) $14,213 and 1 more.
-- Sent for review: CHCO (21x), MSM (21x).
-- Decisions: 0 buy, 42 wait, 0 skip.
+- Sent for review: CHCO (22x), MSM (22x).
+- Decisions: 0 buy, 44 wait, 0 skip.
 - Passed on CHCO (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on MSM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
