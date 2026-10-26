@@ -1,20 +1,20 @@
 {
- "time": "2026-10-26T06:55:59+00:00",
+ "time": "2026-10-26T07:26:04+00:00",
  "coins": {
   "BTC": {
-   "recent": 6,
+   "recent": 7,
    "before": 6,
-   "buzz": 5.0,
+   "buzz": 5.83,
    "tone": -1,
    "headlines": [
     "XRP to Drop Below $1? Crypto Analyst Warns Losing This Key Support May Intensify Selling Pressure",
     "Benjamin Netanyahu\u2019s Plans to Beat Potential Sanctions With Crypto Called Destructive By Rival: He Has \u2018Gone Off the Rails...\u2019",
     "Anthony Scaramucci Says Vivek Ramaswamy 'Disgraced Himself' in Ohio Governor Race: 'He\u2019s Finished Himself as a Future Candidate'"
    ],
-   "trending": 1,
+   "trending": 0,
    "rule_score": 0.7,
-   "score": -0.4,
-   "note": "Heavy buzz is mostly price-drop and security news; slipping below $80K ahead of Fed meeting."
+   "score": -0.3,
+   "note": "Heavy buzz, but mostly security incidents and a Fed-driven dip; bearish tilt."
   },
   "ETH": {
    "recent": 1,
@@ -26,21 +26,19 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.3,
-   "note": "ETF outflows reached $1B this month; the Glamsterdam fork news is mild and not a strong catalyst."
+   "score": -0.4,
+   "note": "Ongoing ETF outflows of $1 billion and downside risk warnings; little fresh positive news."
   },
   "SOL": {
-   "recent": 1,
-   "before": 2,
-   "buzz": 2.5,
+   "recent": 0,
+   "before": 3,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Hong Kong names Nasdaq-listed Solana Company a strategic enterprise"
-   ],
-   "trending": 9,
+   "headlines": [],
+   "trending": 5,
    "rule_score": 0.15,
    "score": 0.2,
-   "note": "Hong Kong naming a Nasdaq-listed Solana company a strategic enterprise is a small positive."
+   "note": "Hong Kong strategic enterprise designation is a mild positive, but no real buzz surge."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +49,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines about AVAX; nothing new."
+   "note": "No headlines in the last day; nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -62,7 +60,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines about LINK; nothing new."
+   "note": "No headlines in the last day; nothing new."
   },
   "DOGE": {
    "recent": 0,
@@ -73,7 +71,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": -0.1,
-   "note": "Only mentioned in a general dip story; no specific catalyst."
+   "note": "Only mentioned in a generic dip article; no real catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -84,7 +82,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines about LTC; nothing new."
+   "note": "No headlines in the last day; nothing new."
   },
   "XRP": {
    "recent": 2,
@@ -95,47 +93,44 @@
     "XRP to Drop Below $1? Crypto Analyst Warns Losing This Key Support May Intensify Selling Pressure",
     "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
    ],
-   "trending": 11,
-   "rule_score": 0.65,
-   "score": -0.4,
-   "note": "Analyst warns of drop below $1 if key support fails; the buzz is mostly bearish price talk."
+   "trending": null,
+   "rule_score": 0.5,
+   "score": -0.2,
+   "note": "Buzz is high but the only news is a price-warning article about losing support."
   }
  },
  "themes": [
   {
-   "title": "Exchange and wallet security incidents",
-   "note": "Hacks and wallet bugs this morning (India exchange loss, wallet bug, Keystone breach) could spook users and hit trust in the sector.",
+   "title": "Bitcoin security and custody incidents",
+   "note": "Multiple wallet bugs, a hardware wallet breach, and a $16M exchange loss are raising safety worries around BTC holdings.",
    "coins": [
-    "BTC",
-    "ETH",
-    "LTC"
+    "BTC"
    ]
   },
   {
-   "title": "Macro jitters ahead of Fed and rate news",
-   "note": "Traders are de-risking before Fed/Warsh rate signals; BTC slipping under $80,000 shows pressure across majors.",
+   "title": "Fed rate uncertainty pressuring majors",
+   "note": "Traders are de-risking before the Fed meeting and Warsh rate outlook, with BTC slipping under $80,000 and ETH ETF outflows.",
    "coins": [
     "BTC",
     "ETH",
     "XRP",
-    "DOGE",
-    "SOL"
+    "DOGE"
    ]
   },
   {
-   "title": "Ethereum ETF outflows",
-   "note": "Roughly $1B in October ETH ETF outflows is a real negative flow signal, though it is partly older news.",
+   "title": "Institutional Solana adoption",
+   "note": "Hong Kong naming a Nasdaq-listed Solana company a strategic enterprise is a modest positive signal, but only one headline.",
    "coins": [
-    "ETH"
+    "SOL"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 23,
+ "headlines": 24,
  "sources": {
   "Alpaca/Benzinga": 7,
-  "crypto news sites": 16,
+  "crypto news sites": 17,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T06:25:54+00:00"
+ "ai_time": "2026-10-26T07:26:04+00:00"
 }
