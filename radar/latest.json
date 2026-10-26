@@ -1,20 +1,20 @@
 {
- "time": "2026-10-26T14:26:42+00:00",
+ "time": "2026-10-26T14:56:38+00:00",
  "coins": {
   "BTC": {
    "recent": 15,
-   "before": 14,
-   "buzz": 5.36,
+   "before": 15,
+   "buzz": 5.0,
    "tone": 0,
    "headlines": [
+    "Strategy Stock Slides Monday: What's Happening?",
     "Strive Eyes $1 Billion Raise as Strategy Pauses Bitcoin Buying",
-    "What's Going On With BitMine Stock Monday?",
-    "Bitmine Adds 10,452 ETH as BMNR Struggles Below $24: What's Going On?"
+    "What's Going On With BitMine Stock Monday?"
    ],
    "trending": 1,
    "rule_score": 0.8,
    "score": -0.4,
-   "note": "Strategy paused buying and price fell under $80K; some bullish analyst calls exist but bad news dominates."
+   "note": "Strategy stopped buying and price keeps slipping under $80K; mostly negative pressure."
   },
   "ETH": {
    "recent": 3,
@@ -26,10 +26,10 @@
     "Bitmine Adds 10,452 ETH as BMNR Struggles Below $24: What's Going On?",
     "Bitcoin Drops to $80,000: Are Bears 'Back in Control?'"
    ],
-   "trending": 9,
-   "rule_score": 0.65,
-   "score": -0.1,
-   "note": "BitMine buying helps, but $1B ETF outflows this month offset it."
+   "trending": null,
+   "rule_score": 0.5,
+   "score": -0.2,
+   "note": "Heavy ETF outflows and BitMine buying are mixed; slight negative overall."
   },
   "SOL": {
    "recent": 0,
@@ -37,10 +37,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 11,
+   "trending": 8,
    "rule_score": 0.15,
    "score": 0.1,
-   "note": "Hong Kong named a Solana company strategic enterprise; minor and no recent SOL headlines."
+   "note": "Hong Kong named a Solana company a strategic enterprise; small positive, but few headlines."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines about Avalanche today."
+   "note": "No new headlines today."
   },
   "LINK": {
    "recent": 0,
@@ -62,7 +62,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines about Chainlink today."
+   "note": "No new headlines today."
   },
   "DOGE": {
    "recent": 1,
@@ -74,8 +74,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.2,
-   "note": "Phishing alarm after a hardware wallet data breach; single headline, but a small negative buzz."
+   "score": -0.4,
+   "note": "Hardware wallet breach triggered phishing warnings in the Dogecoin community."
   },
   "LTC": {
    "recent": 0,
@@ -86,7 +86,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines about Litecoin today."
+   "note": "No new headlines today."
   },
   "XRP": {
    "recent": 1,
@@ -99,44 +99,41 @@
    "trending": null,
    "rule_score": 0.1,
    "score": 0.2,
-   "note": "Aviva Investors tokenized a $29B fund on XRP Ledger; a real institutional use case."
+   "note": "Aviva tokenized fund launched on XRP Ledger; a real-world adoption story, though small."
   }
  },
  "themes": [
   {
-   "title": "Bitcoin slipping below $80K ahead of Fed and midterms",
-   "note": "Many headlines about BTC dipping under $80,000 before Fed decision; mostly price moves, but fear could spread to alts.",
-   "coins": [
-    "BTC",
-    "ETH",
-    "SOL",
-    "XRP",
-    "DOGE"
-   ]
-  },
-  {
-   "title": "Strategy pauses Bitcoin buying, spends $205M on buybacks",
-   "note": "Major treasury buyer stopped adding BTC; removes a steady demand source and may weigh on sentiment.",
+   "title": "Strategy pauses bitcoin buying",
+   "note": "Strategy halted BTC purchases to buy back $205M of STRC; removes a major steady buyer.",
    "coins": [
     "BTC"
    ]
   },
   {
-   "title": "Ethereum treasury buying and ETF outflows",
-   "note": "BitMine adding ETH buys support, but October ETH ETF outflows near $1B show selling pressure.",
+   "title": "Bitcoin slips below $80K before Fed",
+   "note": "Many headlines about BTC dipping under $80,000 ahead of rate decision; mostly recap-style price news.",
    "coins": [
-    "ETH"
+    "BTC",
+    "ETH",
+    "DOGE",
+    "XRP"
+   ]
+  },
+  {
+   "title": "Dogecoin wallet phishing alarm",
+   "note": "Hardware wallet breach and phishing warnings hitting DOGE holders; a fresh negative story.",
+   "coins": [
+    "DOGE"
    ]
   }
  ],
- "trending_elsewhere": [
-  "DOT"
- ],
- "headlines": 48,
+ "trending_elsewhere": [],
+ "headlines": 51,
  "sources": {
-  "Alpaca/Benzinga": 15,
-  "crypto news sites": 33,
+  "Alpaca/Benzinga": 16,
+  "crypto news sites": 35,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T13:56:28+00:00"
+ "ai_time": "2026-10-26T14:56:38+00:00"
 }
