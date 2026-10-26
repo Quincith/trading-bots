@@ -38,8 +38,8 @@ Watchful day. Insiders bought some stocks, but none passed the copy checks yet. 
 - Profit / loss since start: +$0.00 on $100.00 money put in.
 - Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 2 stocks.
 - Top pick: CHCO (CITY HOLDING CO). 4 insiders bought $68,222 at about $142.13: Fisher Robert D (Director) $23,451; Strong-Treister Diane W (Director) $17,056; Hoyer James A (Director) $14,213 and 1 more.
-- Sent for review: CHCO (11x), MSM (11x).
-- Decisions: 0 buy, 22 wait, 0 skip.
+- Sent for review: CHCO (12x), MSM (12x).
+- Decisions: 0 buy, 24 wait, 0 skip.
 - Passed on CHCO (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on MSM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
