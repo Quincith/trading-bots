@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-26 10:56 UTC
+# Aggressive strategy — 2026-10-26 11:26 UTC
 
 | | |
 |---|---|
@@ -9,22 +9,21 @@
 
 ## News radar (trends forming)
 
-Read 32 headlines from the last day (Alpaca/Benzinga 10, crypto news sites 22, CoinGecko trending 15).
+Read 34 headlines from the last day (Alpaca/Benzinga 10, crypto news sites 24, CoinGecko trending 15).
 
-- **Bitcoin ETF flows turning positive**: Bitcoin ETFs broke a two-week outflow streak with $301M inflows, a possible early sign of renewed demand. (BTC)
-- **Fed and rate-decision week risk**: Traders are de-risking before Fed, ECB and BOJ decisions; a hawkish surprise could pressure crypto broadly. (BTC, ETH, SOL, XRP, DOGE, LTC, AVAX, LINK)
-- **Exchange and wallet security incidents**: Wallet bugs, a $16M exchange loss and a hardware wallet breach raise trust concerns, mostly for affected platforms. (BTC)
+- **Bitcoin slipping toward $80K ahead of Fed and FOMC decisions**: Traders are cutting risk before rate decisions; BTC is the only coin with a real headline spike. (BTC, ETH)
+- **Bitcoin ETF flows turning around after outflow streak**: ETFs posted a $301M inflow after two weeks of outflows, a possible mild positive for BTC. (BTC)
+- **AI neocloud sell-off and Musk warning hitting risk assets**: Investors pulling back from AI-linked stocks; spillover to crypto sentiment is unclear and mostly indirect. (BTC, ETH)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| BTC | +0.20 | 6 (2.5x usual) | ETF inflows returned and buzz is up, but Fed-week caution and security stories offset the gain. |
-| SOL | +0.10 | 0 (0.0x usual) | Hong Kong named a Solana company a strategic enterprise, but no recent buzz; mild positive only. |
-| XRP | -0.20 | 0 (0.0x usual) | Analyst warns of selling pressure if key support breaks; a weak, unconfirmed signal. |
-| ETH | -0.30 | 0 (0.0x usual) | October ETF outflows reached $1 billion and no fresh positive headlines appeared in recent hours. |
+| XRP | -0.10 | 0 (0.0x usual) | Only a price-warning analyst piece about support levels; weak signal, not a real catalyst. |
+| ETH | -0.20 | 0 (0.0x usual) | No fresh ETH headlines, but older news shows $1B October ETF outflows; mild negative lingering. |
+| BTC | -0.30 | 7 (2.69x usual) | Many recent headlines about slipping under $80K and de-risking, plus a wallet bug and exchange loss; mostly macro-driven. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_

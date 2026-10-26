@@ -1,20 +1,20 @@
 {
- "time": "2026-10-26T10:56:23+00:00",
+ "time": "2026-10-26T11:26:24+00:00",
  "coins": {
   "BTC": {
-   "recent": 6,
-   "before": 12,
-   "buzz": 2.5,
+   "recent": 7,
+   "before": 13,
+   "buzz": 2.69,
    "tone": 1,
    "headlines": [
     "Strategy Gears Up to Report Q3 Financials \u2014 Crypto Bettors Expect the Bitcoin Hoarder to Beat Earnings",
     "Stock Market Today: Dow Jones, S&P 500 Futures Rise After Trump Rules Out Iran Strike \u2014 ITUB, NON, CLS in Focus",
     "'Something We Haven't Seen Before': Bitcoin and Gold Are the Two Worst-Performing Assets of 2026"
    ],
-   "trending": 3,
-   "rule_score": 0.7,
-   "score": 0.2,
-   "note": "ETF inflows returned and buzz is up, but Fed-week caution and security stories offset the gain."
+   "trending": 2,
+   "rule_score": 0.74,
+   "score": -0.3,
+   "note": "Many recent headlines about slipping under $80K and de-risking, plus a wallet bug and exchange loss; mostly macro-driven."
   },
   "ETH": {
    "recent": 0,
@@ -22,10 +22,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
-   "score": -0.3,
-   "note": "October ETF outflows reached $1 billion and no fresh positive headlines appeared in recent hours."
+   "trending": 12,
+   "rule_score": 0.15,
+   "score": -0.2,
+   "note": "No fresh ETH headlines, but older news shows $1B October ETF outflows; mild negative lingering."
   },
   "SOL": {
    "recent": 0,
@@ -35,8 +35,8 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.1,
-   "note": "Hong Kong named a Solana company a strategic enterprise, but no recent buzz; mild positive only."
+   "score": 0.0,
+   "note": "Only a Hong Kong strategic enterprise mention; no real new catalyst."
   },
   "AVAX": {
    "recent": 0,
@@ -69,7 +69,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; only a dip mentioned in a general market piece."
+   "note": "No recent headlines; only a passing mention in a price-dip article."
   },
   "LTC": {
    "recent": 0,
@@ -90,46 +90,41 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.2,
-   "note": "Analyst warns of selling pressure if key support breaks; a weak, unconfirmed signal."
+   "score": -0.1,
+   "note": "Only a price-warning analyst piece about support levels; weak signal, not a real catalyst."
   }
  },
  "themes": [
   {
-   "title": "Bitcoin ETF flows turning positive",
-   "note": "Bitcoin ETFs broke a two-week outflow streak with $301M inflows, a possible early sign of renewed demand.",
-   "coins": [
-    "BTC"
-   ]
-  },
-  {
-   "title": "Fed and rate-decision week risk",
-   "note": "Traders are de-risking before Fed, ECB and BOJ decisions; a hawkish surprise could pressure crypto broadly.",
+   "title": "Bitcoin slipping toward $80K ahead of Fed and FOMC decisions",
+   "note": "Traders are cutting risk before rate decisions; BTC is the only coin with a real headline spike.",
    "coins": [
     "BTC",
-    "ETH",
-    "SOL",
-    "XRP",
-    "DOGE",
-    "LTC",
-    "AVAX",
-    "LINK"
+    "ETH"
    ]
   },
   {
-   "title": "Exchange and wallet security incidents",
-   "note": "Wallet bugs, a $16M exchange loss and a hardware wallet breach raise trust concerns, mostly for affected platforms.",
+   "title": "Bitcoin ETF flows turning around after outflow streak",
+   "note": "ETFs posted a $301M inflow after two weeks of outflows, a possible mild positive for BTC.",
    "coins": [
     "BTC"
+   ]
+  },
+  {
+   "title": "AI neocloud sell-off and Musk warning hitting risk assets",
+   "note": "Investors pulling back from AI-linked stocks; spillover to crypto sentiment is unclear and mostly indirect.",
+   "coins": [
+    "BTC",
+    "ETH"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 32,
+ "headlines": 34,
  "sources": {
   "Alpaca/Benzinga": 10,
-  "crypto news sites": 22,
+  "crypto news sites": 24,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T10:26:23+00:00"
+ "ai_time": "2026-10-26T11:26:24+00:00"
 }
