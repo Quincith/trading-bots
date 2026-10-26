@@ -1,5 +1,5 @@
 {
- "time": "2026-10-25T23:55:24+00:00",
+ "time": "2026-10-26T00:25:32+00:00",
  "coins": {
   "BTC": {
    "recent": 1,
@@ -9,10 +9,10 @@
    "headlines": [
     "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
    ],
-   "trending": null,
-   "rule_score": -0.1,
+   "trending": 4,
+   "rule_score": 0.2,
    "score": 0.1,
-   "note": "Bitcoin ETFs snapped a two-week outflow streak, a small positive, but the headline sentiment is mostly generic."
+   "note": "ETFs snapped a two-week outflow streak; small positive, but mostly recycled coverage."
   },
   "ETH": {
    "recent": 1,
@@ -25,7 +25,7 @@
    "trending": null,
    "rule_score": -0.1,
    "score": -0.5,
-   "note": "About $1 billion in ETH ETF outflows and high buzz point to building bearish pressure."
+   "note": "About $1B in ETH ETF outflows this month plus downside warnings; buzz is high."
   },
   "SOL": {
    "recent": 0,
@@ -33,10 +33,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 11,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No new headlines in recent hours, so nothing new."
+   "note": "No new headlines and no buzz, despite being on the most-searched list."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +47,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in recent hours, so nothing new."
+   "note": "No new headlines in the last day."
   },
   "LINK": {
    "recent": 0,
@@ -58,7 +58,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in recent hours, so nothing new."
+   "note": "No specific LINK news; tokenization talk is general, not a direct catalyst."
   },
   "DOGE": {
    "recent": 0,
@@ -69,7 +69,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in recent hours, so nothing new."
+   "note": "No new headlines in the last day."
   },
   "LTC": {
    "recent": 0,
@@ -80,7 +80,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in recent hours, so nothing new."
+   "note": "No new headlines in the last day."
   },
   "XRP": {
    "recent": 0,
@@ -91,42 +91,41 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No headlines in recent hours despite a top-10 search rank, so watch for unexplained interest."
+   "note": "No new headlines in the last day."
   }
  },
  "themes": [
   {
-   "title": "Ethereum ETF outflows pressuring ETH",
-   "note": "Ethereum ETFs saw about $1 billion in October outflows, and ETH buzz is 5x normal, so this is a bearish signal.",
+   "title": "Ethereum ETF outflows and downside pressure",
+   "note": "Investors pulled about $1B from ETH ETFs this month, and analysts warn of further downside risk for ETH.",
    "coins": [
     "ETH"
    ]
   },
   {
-   "title": "Glamsterdam upgrade progress",
-   "note": "AI-assisted rescue of ETH's Glamsterdam fork is a mildly positive development, but details are thin and it could be recycled hype.",
+   "title": "Tokenization and regulated stablecoin buildout",
+   "note": "Banks and regulators keep advancing tokenized assets and stablecoins, but mostly long-term plans, not immediate catalysts.",
    "coins": [
-    "ETH"
-   ]
-  },
-  {
-   "title": "Tokenization and digital euro regulation",
-   "note": "Regulators in Latvia, the EU and the UK are moving on tokenization and crypto rules, a slow-building backdrop rather than a sharp catalyst.",
-   "coins": [
-    "BTC",
     "ETH",
     "LINK"
+   ]
+  },
+  {
+   "title": "Bitcoin ETF flows turning",
+   "note": "Bitcoin ETFs snapped a two-week losing streak, a small possible sign of steadier demand.",
+   "coins": [
+    "BTC"
    ]
   }
  ],
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 11,
+ "headlines": 12,
  "sources": {
   "Alpaca/Benzinga": 4,
-  "crypto news sites": 7,
+  "crypto news sites": 8,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-25T23:25:27+00:00"
+ "ai_time": "2026-10-26T00:25:32+00:00"
 }
