@@ -1,20 +1,20 @@
 {
- "time": "2026-10-26T08:56:15+00:00",
+ "time": "2026-10-26T09:26:19+00:00",
  "coins": {
   "BTC": {
-   "recent": 7,
-   "before": 8,
-   "buzz": 4.38,
+   "recent": 5,
+   "before": 10,
+   "buzz": 2.5,
    "tone": 1,
    "headlines": [
     "'Something We Haven't Seen Before': Bitcoin and Gold Are the Two Worst-Performing Assets of 2026",
     "XRP to Drop Below $1? Crypto Analyst Warns Losing This Key Support May Intensify Selling Pressure",
-    "Benjamin Netanyahu\u2019s Plans to Beat Potential Sanctions With Crypto Called Destructive By Rival: He Has \u2018Gone Off the Rails...\u2019"
+    "Over 11 million bitcoin has no known owner. Here's what it means"
    ],
    "trending": 0,
-   "rule_score": 0.9,
-   "score": 0.1,
-   "note": "ETF inflows return, but macro fear and security stories offset the gain."
+   "rule_score": 0.7,
+   "score": 0.2,
+   "note": "ETF inflows are a small positive, but price slipped under $80,000 and security stories add caution."
   },
   "ETH": {
    "recent": 0,
@@ -22,10 +22,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 11,
+   "rule_score": 0.15,
    "score": -0.3,
-   "note": "Heavy ETF outflows of $1 billion this month weigh on price; little fresh positive news."
+   "note": "October ETH ETF outflows reached $1 billion, and the Glamsterdam upgrade news is mostly recycled."
   },
   "SOL": {
    "recent": 0,
@@ -33,10 +33,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 10,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.1,
-   "note": "Hong Kong named a Solana company a strategic enterprise, but no SOL-specific headlines today."
+   "note": "Hong Kong naming a Solana company a strategic enterprise is minor, but no real buzz in recent hours."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +47,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new to act on."
+   "note": "No new headlines in recent hours."
   },
   "LINK": {
    "recent": 0,
@@ -58,7 +58,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new to act on."
+   "note": "No new headlines in recent hours."
   },
   "DOGE": {
    "recent": 0,
@@ -69,7 +69,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No fresh news; only mentioned in a generic market dip story."
+   "note": "Only a price dip mention tied to rate-decision worries; nothing new."
   },
   "LTC": {
    "recent": 0,
@@ -80,7 +80,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new to act on."
+   "note": "No new headlines in recent hours."
   },
   "XRP": {
    "recent": 1,
@@ -92,30 +92,21 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.3,
-   "note": "Analyst warns of a drop below $1 if key support fails; buzz is high but mostly bearish."
+   "score": -0.2,
+   "note": "Analyst warns about losing key support and possible selling pressure; mostly price talk."
   }
  },
  "themes": [
   {
-   "title": "Bitcoin ETF flows turning back positive",
-   "note": "ETFs broke a two-week outflow streak with $301M inflows, a possible sign large buyers are returning.",
+   "title": "Spot bitcoin ETF flows turning positive",
+   "note": "Bitcoin ETFs broke a two-week outflow streak with $301M inflows, a possible early sign of buyers returning.",
    "coins": [
-    "BTC",
-    "ETH"
+    "BTC"
    ]
   },
   {
-   "title": "Bitcoin security incidents and wallet losses",
-   "note": "Wallet bug, exchange loss, and breach stories may weigh on sentiment, though mostly isolated events.",
-   "coins": [
-    "BTC",
-    "ETH"
-   ]
-  },
-  {
-   "title": "Fed meeting and macro risk-off",
-   "note": "Traders are de-risking ahead of the Fed; Bitcoin slipped under $80,000, so rate news could move the whole market.",
+   "title": "Fed rate decisions and risk-off mood",
+   "note": "Traders are cutting risk before Fed, ECB and BOJ rate decisions; rate outcomes could move all crypto either way.",
    "coins": [
     "BTC",
     "ETH",
@@ -126,16 +117,22 @@
     "LTC",
     "XRP"
    ]
+  },
+  {
+   "title": "Exchange and wallet security incidents",
+   "note": "Wallet bugs, a $16M exchange loss and a hardware wallet breach raise trust concerns, mostly for their own platforms.",
+   "coins": [
+    "BTC",
+    "ETH"
+   ]
   }
  ],
- "trending_elsewhere": [
-  "PEPE"
- ],
- "headlines": 26,
+ "trending_elsewhere": [],
+ "headlines": 27,
  "sources": {
   "Alpaca/Benzinga": 8,
-  "crypto news sites": 18,
+  "crypto news sites": 19,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T08:26:07+00:00"
+ "ai_time": "2026-10-26T09:26:19+00:00"
 }
