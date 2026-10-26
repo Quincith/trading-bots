@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-26 19:26 UTC
+# Aggressive strategy — 2026-10-26 19:57 UTC
 
 | | |
 |---|---|
@@ -9,23 +9,24 @@
 
 ## News radar (trends forming)
 
-Read 68 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 46, CoinGecko trending 15).
+Read 71 headlines from the last day (Alpaca/Benzinga 23, crypto news sites 48, CoinGecko trending 15).
 
-- **Strategy pauses BTC buying, STRC buybacks**: Largest corporate BTC buyer paused purchases; bearish signal for bitcoin demand near term. (BTC)
-- **Ethereum treasury firm shifts to buybacks**: Bitmine still buying ETH but favoring share buybacks; mild sign of weaker ETH buying demand. (ETH)
-- **Bitcoin wallet and exchange security incidents**: Wallet flaw and CoinDCX loss plus Dogecoin hardware wallet phishing alarm make users cautious. (BTC, DOGE)
+- **Stablecoin rules expanding (Canada, US GENIUS Act, OCC banks)**: Regulators in Canada and US pushing stablecoin frameworks; slow-building, mildly supportive for crypto infrastructure rather than any single coin. (XRP, BTC, ETH)
+- **Anthropic IPO and AI-driven risk-off in markets**: Big AI IPO and neocloud selloff pull attention and money away from crypto; BTC trades near $80K support with weak sentiment. (BTC, ETH, SOL)
+- **Bitcoin treasury firms pausing buys (Strategy, Bitmine)**: Strategy paused BTC buying for buybacks and Bitmine shifted toward buybacks, removing a key corporate bid. (BTC, ETH)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.20 | 3 (3.75x usual) | Buzz is high, but mostly institutional adoption news like Aviva's XRP Ledger fund; modest positive. |
-| SOL | +0.00 | 1 (2.5x usual) | Only one headline with no real catalyst; nothing new to act on. |
-| ETH | -0.10 | 3 (2.5x usual) | Bitmine keeps buying but shifts to buybacks; little fresh positive news. |
-| DOGE | -0.20 | 1 (2.5x usual) | Phishing alarm after hardware wallet data breach; mild negative sentiment. |
-| BTC | -0.40 | 8 (1.48x usual) | Price dipped below $80K and Strategy paused buying; demand signals are weakening. |
+| XRP | +0.20 | 2 (2.0x usual) | Aviva Investors tokenized fund on XRP Ledger is real institutional use, but price warnings offset it. |
+| LINK | +0.00 | 0 (0.0x usual) | No recent headlines; nothing new. |
+| SOL | -0.10 | 1 (2.5x usual) | Only one headline despite high buzz; no clear new catalyst, mild negative from weak market mood. |
+| ETH | -0.20 | 2 (1.43x usual) | Bitmine shifting from ETH buys to buybacks removes a supportive buyer; little other fresh news. |
+| DOGE | -0.20 | 2 (5.0x usual) | Buzz is up, but the news is a phishing alarm after a hardware wallet data breach. |
+| BTC | -0.30 | 9 (1.67x usual) | Price dipped below $80K and Strategy paused buying; bearish flow, though some bulls see recovery. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_

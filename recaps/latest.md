@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 38 times. Most active: LTC at 284.5x normal volume, price +0.0%.
+- Scout scanned 8 coins, 39 times. Most active: LTC at 284.5x normal volume, price +0.0%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,25 +23,27 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 9 times. Most active: AVAX at 6.4x normal volume, price -1.5%.
+- Scout scanned 8 coins, 10 times. Most active: LINK at 15.4x normal volume, price +0.4%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.09 (-0.09%)
+## Copycat: down $0.26 (-0.26%)
 
-Active day. The bots bought 2 times. The account ended down $0.09 (-0.09%) at $99.91. Paper money only.
+Active day. The bots bought 3 times. The account ended down $0.26 (-0.26%) at $99.74. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.00 → $99.91 (-$0.09, -0.09%).
-- Profit / loss since start: -$0.09 on $100.00 money put in.
-- Spotter read 417 insider filings from the SEC and found 7 insider purchases. Watchlist at day end: 1 stocks.
-- Sent for review: CHCO (31x), MSM (31x).
-- Decisions: 2 buy, 60 wait, 0 skip.
+- Account value: $100.00 → $99.74 (-$0.26, -0.26%).
+- Profit / loss since start: -$0.26 on $100.00 money put in.
+- Spotter read 451 insider filings from the SEC and found 8 insider purchases. Watchlist at day end: 2 stocks.
+- Top pick: BBT (Beacon Financial Corp). 1 insider bought $104,984 at about $30.43: Hollister Thomas J (Director) $104,984.
+- Sent for review: CHCO (31x), MSM (31x), BBT (1x).
+- Decisions: 3 buy, 60 wait, 0 skip.
 - Bought $20.00 of CHCO at 145.19. Reason: Copying CITY HOLDING CO insiders. 4 insiders bought $68,222 at about $142.13: Fisher Robert D (Director) $23,451; Strong-Treister Diane W (Director) $17,056; Hoyer James A (Director) $14,213 and 1 more.
 - Bought $20.00 of MSM at 117.925. Reason: Copying MSC INDUSTRIAL DIRECT CO INC insiders. 1 insider bought $50,129 at about $115.77: Slone Reuben E (Director) $50,129.
-- Holding: CHCO $19.90 (-$0.09 unrealized); MSM $19.99 (+$0.00 unrealized).
+- Bought $19.95 of BBT at 30.775. Reason: Copying Beacon Financial Corp insiders. 1 insider bought $104,984 at about $30.43: Hollister Thomas J (Director) $104,984.
+- Holding: CHCO $19.67 (-$0.32 unrealized); MSM $20.05 (+$0.06 unrealized).
 
 ## Words to know
 

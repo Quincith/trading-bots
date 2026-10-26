@@ -1,35 +1,34 @@
 {
- "time": "2026-10-26T19:26:58+00:00",
+ "time": "2026-10-26T19:57:00+00:00",
  "coins": {
   "BTC": {
-   "recent": 8,
+   "recent": 9,
    "before": 27,
-   "buzz": 1.48,
+   "buzz": 1.67,
    "tone": 3,
    "headlines": [
-    "Anthropic Could Be Worth More Than Bitcoin by Year-End, Polymarket Traders Say",
-    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat",
-    "Bitcoin Can Retake $125,000, Galaxy Says: \u2018The Crowd Has Left\u2019"
+    "Neoclouds Face Guppy-Level Death; 36% Of S&P 500 Earnings This Week; Brazil Stocks Plunge On Election Outcome",
+    "'Value Investor' Bets $1M That Bitcoin Will Reach $100,000 Before $60,000",
+    "Anthropic Could Be Worth More Than Bitcoin by Year-End, Polymarket Traders Say"
    ],
    "trending": 0,
-   "rule_score": 0.7,
-   "score": -0.4,
-   "note": "Price dipped below $80K and Strategy paused buying; demand signals are weakening."
+   "rule_score": 0.73,
+   "score": -0.3,
+   "note": "Price dipped below $80K and Strategy paused buying; bearish flow, though some bulls see recovery."
   },
   "ETH": {
-   "recent": 3,
-   "before": 6,
-   "buzz": 2.5,
-   "tone": 1,
+   "recent": 2,
+   "before": 7,
+   "buzz": 1.43,
+   "tone": 0,
    "headlines": [
     "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat",
-    "Tom Lee's Bitmine favors share buybacks to ether purchases as crypto declines",
-    "Tom Lee's Bitmine Keeps Buying Ethereum But Pivots to Record Share Buybacks"
+    "Tom Lee's Bitmine favors share buybacks to ether purchases as crypto declines"
    ],
-   "trending": 11,
-   "rule_score": 0.55,
-   "score": -0.1,
-   "note": "Bitmine keeps buying but shifts to buybacks; little fresh positive news."
+   "trending": 9,
+   "rule_score": 0.24,
+   "score": -0.2,
+   "note": "Bitmine shifting from ETH buys to buybacks removes a supportive buyer; little other fresh news."
   },
   "SOL": {
    "recent": 1,
@@ -39,10 +38,10 @@
    "headlines": [
     "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
    ],
-   "trending": 12,
+   "trending": 14,
    "rule_score": 0.15,
-   "score": 0.0,
-   "note": "Only one headline with no real catalyst; nothing new to act on."
+   "score": -0.1,
+   "note": "Only one headline despite high buzz; no clear new catalyst, mild negative from weak market mood."
   },
   "AVAX": {
    "recent": 0,
@@ -61,23 +60,24 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 11,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines; nothing new."
   },
   "DOGE": {
-   "recent": 1,
+   "recent": 2,
    "before": 2,
-   "buzz": 2.5,
+   "buzz": 5.0,
    "tone": 0,
    "headlines": [
-    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
+    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat",
+    "AI Agents Found a Way Into Anthropic's Business Systems in Under 12 Hours"
    ],
    "trending": null,
-   "rule_score": 0.0,
+   "rule_score": 0.5,
    "score": -0.2,
-   "note": "Phishing alarm after hardware wallet data breach; mild negative sentiment."
+   "note": "Buzz is up, but the news is a phishing alarm after a hardware wallet data breach."
   },
   "LTC": {
    "recent": 0,
@@ -91,51 +91,54 @@
    "note": "No recent headlines; nothing new."
   },
   "XRP": {
-   "recent": 3,
-   "before": 4,
-   "buzz": 3.75,
-   "tone": 4,
+   "recent": 2,
+   "before": 5,
+   "buzz": 2.0,
+   "tone": 0,
    "headlines": [
     "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat",
-    "Evernorth Raises $80M to Buy More XRP but Analysts Warn $1 Is in Danger",
-    "XRP Poised For 'Significant Move' as Ripple Deepens Institutional Adoption"
+    "Evernorth Raises $80M to Buy More XRP but Analysts Warn $1 Is in Danger"
    ],
    "trending": null,
-   "rule_score": 0.9,
+   "rule_score": 0.2,
    "score": 0.2,
-   "note": "Buzz is high, but mostly institutional adoption news like Aviva's XRP Ledger fund; modest positive."
+   "note": "Aviva Investors tokenized fund on XRP Ledger is real institutional use, but price warnings offset it."
   }
  },
  "themes": [
   {
-   "title": "Strategy pauses BTC buying, STRC buybacks",
-   "note": "Largest corporate BTC buyer paused purchases; bearish signal for bitcoin demand near term.",
+   "title": "Stablecoin rules expanding (Canada, US GENIUS Act, OCC banks)",
+   "note": "Regulators in Canada and US pushing stablecoin frameworks; slow-building, mildly supportive for crypto infrastructure rather than any single coin.",
    "coins": [
-    "BTC"
-   ]
-  },
-  {
-   "title": "Ethereum treasury firm shifts to buybacks",
-   "note": "Bitmine still buying ETH but favoring share buybacks; mild sign of weaker ETH buying demand.",
-   "coins": [
+    "XRP",
+    "BTC",
     "ETH"
    ]
   },
   {
-   "title": "Bitcoin wallet and exchange security incidents",
-   "note": "Wallet flaw and CoinDCX loss plus Dogecoin hardware wallet phishing alarm make users cautious.",
+   "title": "Anthropic IPO and AI-driven risk-off in markets",
+   "note": "Big AI IPO and neocloud selloff pull attention and money away from crypto; BTC trades near $80K support with weak sentiment.",
    "coins": [
     "BTC",
-    "DOGE"
+    "ETH",
+    "SOL"
+   ]
+  },
+  {
+   "title": "Bitcoin treasury firms pausing buys (Strategy, Bitmine)",
+   "note": "Strategy paused BTC buying for buybacks and Bitmine shifted toward buybacks, removing a key corporate bid.",
+   "coins": [
+    "BTC",
+    "ETH"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 68,
+ "headlines": 71,
  "sources": {
-  "Alpaca/Benzinga": 22,
-  "crypto news sites": 46,
+  "Alpaca/Benzinga": 23,
+  "crypto news sites": 48,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T18:56:54+00:00"
+ "ai_time": "2026-10-26T19:57:00+00:00"
 }
