@@ -1,10 +1,10 @@
 {
- "time": "2026-10-26T21:57:10+00:00",
+ "time": "2026-10-26T22:27:13+00:00",
  "coins": {
   "BTC": {
-   "recent": 4,
-   "before": 33,
-   "buzz": 0.61,
+   "recent": 3,
+   "before": 34,
+   "buzz": 0.44,
    "tone": 1,
    "headlines": [
     "Bitcoin Bull Market Means 'Buy the Bigger Dips Harder,' Expert Says",
@@ -12,33 +12,29 @@
     "Anthropic Could Be Worth More Than Bitcoin by Year-End, Polymarket Traders Say"
    ],
    "trending": 0,
-   "rule_score": 0.32,
+   "rule_score": 0.29,
    "score": -0.2,
    "note": "Strategy paused Bitcoin buying and BTC fell below $80,000. Many headlines are price recaps, so the signal is mildly negative."
   },
   "ETH": {
-   "recent": 1,
-   "before": 8,
-   "buzz": 0.62,
+   "recent": 0,
+   "before": 9,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
-   ],
-   "trending": 14,
+   "headlines": [],
+   "trending": 10,
    "rule_score": 0.15,
    "score": 0.1,
    "note": "Bitmine keeps buying ether, but shifted toward buybacks. Little fresh news, so slightly positive at most."
   },
   "SOL": {
-   "recent": 1,
-   "before": 2,
-   "buzz": 2.5,
+   "recent": 0,
+   "before": 3,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
-   ],
-   "trending": null,
-   "rule_score": 0.0,
+   "headlines": [],
+   "trending": 13,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "Buzz is up 2.5x but only one headline, and nothing about Solana in the list. Nothing new to act on."
   },
@@ -65,16 +61,15 @@
    "note": "No direct Chainlink headlines. Prediction-market and tokenization news could help indirectly, but it is weak."
   },
   "DOGE": {
-   "recent": 2,
-   "before": 2,
-   "buzz": 5.0,
+   "recent": 1,
+   "before": 3,
+   "buzz": 1.67,
    "tone": 0,
    "headlines": [
-    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat",
     "AI Agents Found a Way Into Anthropic's Business Systems in Under 12 Hours"
    ],
    "trending": null,
-   "rule_score": 0.5,
+   "rule_score": 0.0,
    "score": -0.2,
    "note": "Buzz is 5x, driven by a phishing alarm after a hardware wallet data breach. Negative news building."
   },
@@ -90,13 +85,11 @@
    "note": "No recent headlines. Nothing new building."
   },
   "XRP": {
-   "recent": 1,
-   "before": 6,
-   "buzz": 0.83,
+   "recent": 0,
+   "before": 7,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
-   ],
+   "headlines": [],
    "trending": null,
    "rule_score": 0.0,
    "score": 0.3,
@@ -133,10 +126,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 78,
+ "headlines": 79,
  "sources": {
   "Alpaca/Benzinga": 24,
-  "crypto news sites": 54,
+  "crypto news sites": 55,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-26T21:57:10+00:00"
