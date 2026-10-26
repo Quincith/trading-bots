@@ -1,18 +1,18 @@
 {
- "time": "2026-10-26T10:26:23+00:00",
+ "time": "2026-10-26T10:56:23+00:00",
  "coins": {
   "BTC": {
-   "recent": 4,
+   "recent": 6,
    "before": 12,
-   "buzz": 1.67,
+   "buzz": 2.5,
    "tone": 1,
    "headlines": [
+    "Strategy Gears Up to Report Q3 Financials \u2014 Crypto Bettors Expect the Bitcoin Hoarder to Beat Earnings",
     "Stock Market Today: Dow Jones, S&P 500 Futures Rise After Trump Rules Out Iran Strike \u2014 ITUB, NON, CLS in Focus",
-    "'Something We Haven't Seen Before': Bitcoin and Gold Are the Two Worst-Performing Assets of 2026",
-    "Over 11 million bitcoin has no known owner. Here's what it means"
+    "'Something We Haven't Seen Before': Bitcoin and Gold Are the Two Worst-Performing Assets of 2026"
    ],
    "trending": 3,
-   "rule_score": 0.53,
+   "rule_score": 0.7,
    "score": 0.2,
    "note": "ETF inflows returned and buzz is up, but Fed-week caution and security stories offset the gain."
   },
@@ -33,8 +33,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 8,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.1,
    "note": "Hong Kong named a Solana company a strategic enterprise, but no recent buzz; mild positive only."
   },
@@ -88,8 +88,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 13,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": -0.2,
    "note": "Analyst warns of selling pressure if key support breaks; a weak, unconfirmed signal."
   }
@@ -125,10 +125,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 28,
+ "headlines": 32,
  "sources": {
-  "Alpaca/Benzinga": 9,
-  "crypto news sites": 19,
+  "Alpaca/Benzinga": 10,
+  "crypto news sites": 22,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-26T10:26:23+00:00"
