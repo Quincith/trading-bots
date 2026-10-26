@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 45 times. Most active: LTC at 288.0x normal volume, price +0.1%.
+- Scout scanned 8 coins, 46 times. Most active: LTC at 288.0x normal volume, price +0.1%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,10 +36,10 @@ Active day. The bots bought 3 times. The account ended down $0.13 (-0.13%) at $9
 
 - Account value: $100.00 → $99.87 (-$0.13, -0.13%).
 - Profit / loss since start: -$0.13 on $100.00 money put in.
-- Spotter read 826 insider filings from the SEC and found 51 insider purchases. Watchlist at day end: 10 stocks.
+- Spotter read 835 insider filings from the SEC and found 51 insider purchases. Watchlist at day end: 10 stocks.
 - Top pick: THRM (Gentherm Inc). 2 insiders bought $662,600 at about $26.50: Mascarenas Paul Anthony (Director) $532,600; Presley William T. (President & CEO, Director) $130,000.
-- Sent for review: CHCO (31x), MSM (31x), NBIS (5x), THRM (4x), BBT (1x), STC (1x).
-- Decisions: 3 buy, 70 wait, 0 skip.
+- Sent for review: CHCO (31x), MSM (31x), NBIS (6x), THRM (5x), STC (2x), BBT (1x).
+- Decisions: 3 buy, 73 wait, 0 skip.
 - Passed on NBIS (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on THRM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Bought $20.00 of CHCO at 145.19. Reason: Copying CITY HOLDING CO insiders. 4 insiders bought $68,222 at about $142.13: Fisher Robert D (Director) $23,451; Strong-Treister Diane W (Director) $17,056; Hoyer James A (Director) $14,213 and 1 more.

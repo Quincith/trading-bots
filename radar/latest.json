@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26T22:57:11+00:00",
+ "time": "2026-10-26T23:27:12+00:00",
  "coins": {
   "BTC": {
    "recent": 2,
@@ -10,7 +10,7 @@
     "Bitcoin Bull Market Means 'Buy the Bigger Dips Harder,' Expert Says",
     "'Value Investor' Bets $1M That Bitcoin Will Reach $100,000 Before $60,000"
    ],
-   "trending": 13,
+   "trending": 12,
    "rule_score": 0.01,
    "score": -0.2,
    "note": "Price dipped below $80,000 and Strategy paused buying; mild negative momentum, no fresh catalyst."
@@ -21,8 +21,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 4,
-   "rule_score": 0.3,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "No new headlines in recent hours; Bitmine buyback news is old and recycled."
   },
@@ -32,7 +32,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 7,
+   "trending": 6,
    "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines; nothing new building."
@@ -67,8 +67,8 @@
    "headlines": [
     "AI Agents Found a Way Into Anthropic's Business Systems in Under 12 Hours"
    ],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 10,
+   "rule_score": 0.15,
    "score": -0.2,
    "note": "Buzz is up but the only news is a hardware wallet data breach and phishing alarm, which is negative."
   },
@@ -89,8 +89,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 11,
+   "rule_score": 0.15,
    "score": 0.3,
    "note": "Aviva tokenized fund on XRP Ledger is real institutional adoption; ignore $1 price warnings."
   }

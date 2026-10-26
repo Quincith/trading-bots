@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-26 22:57 UTC
+# Aggressive strategy — 2026-10-26 23:27 UTC
 
 | | |
 |---|---|
@@ -19,7 +19,6 @@ Read 78 headlines from the last day (Alpaca/Benzinga 24, crypto news sites 54, C
 |---|---|---|---|
 | XRP | +0.30 | 0 (0.0x usual) | Aviva tokenized fund on XRP Ledger is real institutional adoption; ignore $1 price warnings. |
 | LINK | +0.10 | 0 (0.0x usual) | Canada and US stablecoin and bank-payment rules could help oracle and payment demand; indirect, small. |
-| ETH | +0.00 | 0 (0.0x usual) | No new headlines in recent hours; Bitmine buyback news is old and recycled. |
 | SOL | +0.00 | 0 (0.0x usual) | No recent headlines; nothing new building. |
 | BTC | -0.20 | 2 (0.29x usual) | Price dipped below $80,000 and Strategy paused buying; mild negative momentum, no fresh catalyst. |
 | DOGE | -0.20 | 1 (1.67x usual) | Buzz is up but the only news is a hardware wallet data breach and phishing alarm, which is negative. |
@@ -29,4 +28,4 @@ Read 78 headlines from the last day (Alpaca/Benzinga 24, crypto news sites 54, C
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_
