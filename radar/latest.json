@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26T00:55:32+00:00",
+ "time": "2026-10-26T01:25:27+00:00",
  "coins": {
   "BTC": {
    "recent": 1,
@@ -9,10 +9,10 @@
    "headlines": [
     "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
    ],
-   "trending": 6,
+   "trending": 5,
    "rule_score": 0.05,
    "score": 0.1,
-   "note": "ETFs snapped a two-week outflow streak; small positive, but mostly recycled coverage."
+   "note": "Bitcoin ETFs snapped a losing streak; buzz is normal. Weak positive, mostly recycled market noise."
   },
   "ETH": {
    "recent": 1,
@@ -25,7 +25,7 @@
    "trending": null,
    "rule_score": -0.1,
    "score": -0.5,
-   "note": "About $1B in ETH ETF outflows this month plus downside warnings; buzz is high."
+   "note": "Heavy buzz from $1B ETF outflows and downside risk warnings. Bearish news building."
   },
   "SOL": {
    "recent": 0,
@@ -33,10 +33,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 7,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines and no buzz, despite being on the most-searched list."
+   "note": "No recent headlines or buzz. Nothing new."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +47,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in the last day."
+   "note": "No recent headlines or buzz. Nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -58,7 +58,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No specific LINK news; tokenization talk is general, not a direct catalyst."
+   "note": "No recent headlines; tokenization stories are general and not specific to LINK."
   },
   "DOGE": {
    "recent": 0,
@@ -69,7 +69,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in the last day."
+   "note": "No recent headlines or buzz. Nothing new."
   },
   "LTC": {
    "recent": 0,
@@ -80,7 +80,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in the last day."
+   "note": "No recent headlines or buzz. Nothing new."
   },
   "XRP": {
    "recent": 0,
@@ -91,30 +91,30 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in the last day."
+   "note": "No recent headlines or buzz. Nothing new."
   }
  },
  "themes": [
   {
    "title": "Ethereum ETF outflows and downside pressure",
-   "note": "Investors pulled about $1B from ETH ETFs this month, and analysts warn of further downside risk for ETH.",
+   "note": "ETH buzz is 5x normal, driven by $1B October ETF outflows and downside risk warnings. Mostly bearish for ETH.",
    "coins": [
     "ETH"
    ]
   },
   {
-   "title": "Tokenization and regulated stablecoin buildout",
-   "note": "Banks and regulators keep advancing tokenized assets and stablecoins, but mostly long-term plans, not immediate catalysts.",
+   "title": "Bitcoin ETF flows turning mixed",
+   "note": "Bitcoin ETFs snapped a two-week losing streak, but the gain came with a late-week slide. Weak signal, mostly noise.",
    "coins": [
-    "ETH",
-    "LINK"
+    "BTC"
    ]
   },
   {
-   "title": "Bitcoin ETF flows turning",
-   "note": "Bitcoin ETFs snapped a two-week losing streak, a small possible sign of steadier demand.",
+   "title": "Tokenization and institutional crypto rules",
+   "note": "Banks and regulators are debating tokenized stocks, stablecoins, and digital euro rules. Long-term theme, no clear near-term price catalyst.",
    "coins": [
-    "BTC"
+    "ETH",
+    "LINK"
    ]
   }
  ],
@@ -127,5 +127,5 @@
   "crypto news sites": 8,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T00:25:32+00:00"
+ "ai_time": "2026-10-26T01:25:27+00:00"
 }

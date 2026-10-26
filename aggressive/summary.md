@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-26 00:55 UTC
+# Aggressive strategy — 2026-10-26 01:25 UTC
 
 | | |
 |---|---|
@@ -11,15 +11,14 @@
 
 Read 12 headlines from the last day (Alpaca/Benzinga 4, crypto news sites 8, CoinGecko trending 15).
 
-- **Ethereum ETF outflows and downside pressure**: Investors pulled about $1B from ETH ETFs this month, and analysts warn of further downside risk for ETH. (ETH)
-- **Tokenization and regulated stablecoin buildout**: Banks and regulators keep advancing tokenized assets and stablecoins, but mostly long-term plans, not immediate catalysts. (ETH, LINK)
-- **Bitcoin ETF flows turning**: Bitcoin ETFs snapped a two-week losing streak, a small possible sign of steadier demand. (BTC)
+- **Ethereum ETF outflows and downside pressure**: ETH buzz is 5x normal, driven by $1B October ETF outflows and downside risk warnings. Mostly bearish for ETH. (ETH)
+- **Bitcoin ETF flows turning mixed**: Bitcoin ETFs snapped a two-week losing streak, but the gain came with a late-week slide. Weak signal, mostly noise. (BTC)
+- **Tokenization and institutional crypto rules**: Banks and regulators are debating tokenized stocks, stablecoins, and digital euro rules. Long-term theme, no clear near-term price catalyst. (ETH, LINK)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| BTC | +0.10 | 1 (1.0x usual) | ETFs snapped a two-week outflow streak; small positive, but mostly recycled coverage. |
-| SOL | +0.00 | 0 (0.0x usual) | No new headlines and no buzz, despite being on the most-searched list. |
-| ETH | -0.50 | 1 (5.0x usual) | About $1B in ETH ETF outflows this month plus downside warnings; buzz is high. |
+| BTC | +0.10 | 1 (1.0x usual) | Bitcoin ETFs snapped a losing streak; buzz is normal. Weak positive, mostly recycled market noise. |
+| ETH | -0.50 | 1 (5.0x usual) | Heavy buzz from $1B ETF outflows and downside risk warnings. Bearish news building. |
 
 Also trending, but not in our coin list: PEPE.
 
@@ -28,4 +27,4 @@ Also trending, but not in our coin list: PEPE.
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
