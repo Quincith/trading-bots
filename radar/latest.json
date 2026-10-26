@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26T06:25:54+00:00",
+ "time": "2026-10-26T06:55:59+00:00",
  "coins": {
   "BTC": {
    "recent": 6,
@@ -11,7 +11,7 @@
     "Benjamin Netanyahu\u2019s Plans to Beat Potential Sanctions With Crypto Called Destructive By Rival: He Has \u2018Gone Off the Rails...\u2019",
     "Anthony Scaramucci Says Vivek Ramaswamy 'Disgraced Himself' in Ohio Governor Race: 'He\u2019s Finished Himself as a Future Candidate'"
    ],
-   "trending": 0,
+   "trending": 1,
    "rule_score": 0.7,
    "score": -0.4,
    "note": "Heavy buzz is mostly price-drop and security news; slipping below $80K ahead of Fed meeting."
@@ -37,7 +37,7 @@
    "headlines": [
     "Hong Kong names Nasdaq-listed Solana Company a strategic enterprise"
    ],
-   "trending": 14,
+   "trending": 9,
    "rule_score": 0.15,
    "score": 0.2,
    "note": "Hong Kong naming a Nasdaq-listed Solana company a strategic enterprise is a small positive."
@@ -95,8 +95,8 @@
     "XRP to Drop Below $1? Crypto Analyst Warns Losing This Key Support May Intensify Selling Pressure",
     "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting"
    ],
-   "trending": null,
-   "rule_score": 0.5,
+   "trending": 11,
+   "rule_score": 0.65,
    "score": -0.4,
    "note": "Analyst warns of drop below $1 if key support fails; the buzz is mostly bearish price talk."
   }
