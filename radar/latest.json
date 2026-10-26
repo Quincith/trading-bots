@@ -1,27 +1,29 @@
 {
- "time": "2026-10-26T12:26:30+00:00",
+ "time": "2026-10-26T13:01:20+00:00",
  "coins": {
   "BTC": {
-   "recent": 7,
+   "recent": 9,
    "before": 15,
-   "buzz": 2.33,
+   "buzz": 3.0,
    "tone": 0,
    "headlines": [
-    "Strategy Gears Up to Report Q3 Financials \u2014 Crypto Bettors Expect the Bitcoin Hoarder to Beat Earnings",
-    "Stock Market Today: Dow Jones, S&P 500 Futures Rise After Trump Rules Out Iran Strike \u2014 ITUB, NON, CLS in Focus",
-    "A $68 million bitcoin bet is targeting a post-midterm election breakout to $90,000"
+    "Bitcoin Drops to $80,000: Are Bears 'Back in Control?'",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise After Trump Rules Out Iran Strike \u2014 ITUB, NON, CLS in Focus (UPDATED)",
+    "Strategy Gears Up to Report Q3 Financials \u2014 Crypto Bettors Expect the Bitcoin Hoarder to Beat Earnings"
    ],
-   "trending": 1,
-   "rule_score": 0.57,
+   "trending": 0,
+   "rule_score": 0.7,
    "score": -0.3,
    "note": "Heavy buzz, but mostly price-drop and macro-fear stories; ETF inflow is a small offset."
   },
   "ETH": {
-   "recent": 0,
+   "recent": 1,
    "before": 4,
-   "buzz": 0.0,
+   "buzz": 1.25,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Bitcoin Drops to $80,000: Are Bears 'Back in Control?'"
+   ],
    "trending": null,
    "rule_score": 0.0,
    "score": -0.2,
@@ -90,8 +92,8 @@
    "headlines": [
     "Aviva Investors launches tokenized share class of $29B Sterling fund on XRP Ledger"
    ],
-   "trending": null,
-   "rule_score": 0.1,
+   "trending": 12,
+   "rule_score": 0.25,
    "score": 0.2,
    "note": "Aviva's tokenized fund on XRP Ledger is a real institutional win; a bearish price-level warning offsets some of it."
   }
@@ -128,9 +130,9 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 37,
+ "headlines": 38,
  "sources": {
-  "Alpaca/Benzinga": 10,
+  "Alpaca/Benzinga": 11,
   "crypto news sites": 27,
   "CoinGecko trending": 15
  },
