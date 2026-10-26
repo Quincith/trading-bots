@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-10-26 11:56 UTC
+# Copycat strategy — 2026-10-26 12:26 UTC
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## Insider buys on the watchlist
 
-Read 3 new SEC filings this run. 2 stocks on the watchlist.
+Read 9 new SEC filings this run. 2 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -24,7 +24,7 @@ Read 3 new SEC filings this run. 2 stocks on the watchlist.
 | MSM | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
 
 ## Notes
-- Spotter read 3 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 2 stocks, 2 big enough to copy.
+- Spotter read 9 new insider filings and found 1 purchases (0 by officers or directors). Watchlist: 2 stocks, 2 big enough to copy.
 - Stock market closed; picks wait for the next open.
 
 _Copycat uses no AI._

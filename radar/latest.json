@@ -1,20 +1,20 @@
 {
- "time": "2026-10-26T11:56:25+00:00",
+ "time": "2026-10-26T12:26:30+00:00",
  "coins": {
   "BTC": {
    "recent": 7,
-   "before": 14,
-   "buzz": 2.5,
-   "tone": 1,
+   "before": 15,
+   "buzz": 2.33,
+   "tone": 0,
    "headlines": [
     "Strategy Gears Up to Report Q3 Financials \u2014 Crypto Bettors Expect the Bitcoin Hoarder to Beat Earnings",
     "Stock Market Today: Dow Jones, S&P 500 Futures Rise After Trump Rules Out Iran Strike \u2014 ITUB, NON, CLS in Focus",
     "A $68 million bitcoin bet is targeting a post-midterm election breakout to $90,000"
    ],
-   "trending": 0,
-   "rule_score": 0.7,
+   "trending": 1,
+   "rule_score": 0.57,
    "score": -0.3,
-   "note": "Many recent headlines about slipping under $80K and de-risking, plus a wallet bug and exchange loss; mostly macro-driven."
+   "note": "Heavy buzz, but mostly price-drop and macro-fear stories; ETF inflow is a small offset."
   },
   "ETH": {
    "recent": 0,
@@ -22,10 +22,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 11,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": -0.2,
-   "note": "No fresh ETH headlines, but older news shows $1B October ETF outflows; mild negative lingering."
+   "note": "No fresh headlines; ETF outflows of $1B this month are a weak negative."
   },
   "SOL": {
    "recent": 0,
@@ -35,8 +35,8 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.0,
-   "note": "Only a Hong Kong strategic enterprise mention; no real new catalyst."
+   "score": 0.1,
+   "note": "No fresh coin headlines; a Hong Kong strategic enterprise nod is minor."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +47,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new building."
+   "note": "No headlines in the last day."
   },
   "LINK": {
    "recent": 0,
@@ -58,7 +58,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new building."
+   "note": "No headlines in the last day."
   },
   "DOGE": {
    "recent": 0,
@@ -69,7 +69,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; only a passing mention in a price-dip article."
+   "note": "Only a passing mention in a dip story; nothing new."
   },
   "LTC": {
    "recent": 0,
@@ -80,7 +80,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new building."
+   "note": "No headlines in the last day."
   },
   "XRP": {
    "recent": 1,
@@ -92,41 +92,47 @@
    ],
    "trending": null,
    "rule_score": 0.1,
-   "score": -0.1,
-   "note": "Only a price-warning analyst piece about support levels; weak signal, not a real catalyst."
+   "score": 0.2,
+   "note": "Aviva's tokenized fund on XRP Ledger is a real institutional win; a bearish price-level warning offsets some of it."
   }
  },
  "themes": [
   {
-   "title": "Bitcoin slipping toward $80K ahead of Fed and FOMC decisions",
-   "note": "Traders are cutting risk before rate decisions; BTC is the only coin with a real headline spike.",
+   "title": "Bitcoin slipping below $80K ahead of Fed and Iran worries",
+   "note": "BTC is sliding on macro fear and a Fed decision this week; risk-off mood could drag other coins down too.",
+   "coins": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "AVAX",
+    "LINK",
+    "DOGE",
+    "LTC",
+    "XRP"
+   ]
+  },
+  {
+   "title": "Bitcoin ETF flows turning positive again",
+   "note": "ETFs ended a two-week outflow streak with $301M inflow, a possible early sign of buying returning.",
    "coins": [
     "BTC",
     "ETH"
    ]
   },
   {
-   "title": "Bitcoin ETF flows turning around after outflow streak",
-   "note": "ETFs posted a $301M inflow after two weeks of outflows, a possible mild positive for BTC.",
+   "title": "Tokenization and institutional adoption on XRP Ledger",
+   "note": "Aviva Investors' tokenized fund on XRP Ledger is a real institutional use case, though small in scope.",
    "coins": [
-    "BTC"
-   ]
-  },
-  {
-   "title": "AI neocloud sell-off and Musk warning hitting risk assets",
-   "note": "Investors pulling back from AI-linked stocks; spillover to crypto sentiment is unclear and mostly indirect.",
-   "coins": [
-    "BTC",
-    "ETH"
+    "XRP"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 36,
+ "headlines": 37,
  "sources": {
   "Alpaca/Benzinga": 10,
-  "crypto news sites": 26,
+  "crypto news sites": 27,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T11:26:24+00:00"
+ "ai_time": "2026-10-26T12:26:30+00:00"
 }
