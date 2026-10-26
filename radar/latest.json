@@ -1,32 +1,31 @@
 {
- "time": "2026-10-26T19:57:00+00:00",
+ "time": "2026-10-26T20:27:10+00:00",
  "coins": {
   "BTC": {
    "recent": 9,
-   "before": 27,
-   "buzz": 1.67,
+   "before": 28,
+   "buzz": 1.61,
    "tone": 3,
    "headlines": [
+    "Bitcoin Bull Market Means 'Buy the Bigger Dips Harder,' Expert Says",
     "Neoclouds Face Guppy-Level Death; 36% Of S&P 500 Earnings This Week; Brazil Stocks Plunge On Election Outcome",
-    "'Value Investor' Bets $1M That Bitcoin Will Reach $100,000 Before $60,000",
-    "Anthropic Could Be Worth More Than Bitcoin by Year-End, Polymarket Traders Say"
+    "'Value Investor' Bets $1M That Bitcoin Will Reach $100,000 Before $60,000"
    ],
    "trending": 0,
-   "rule_score": 0.73,
+   "rule_score": 0.72,
    "score": -0.3,
    "note": "Price dipped below $80K and Strategy paused buying; bearish flow, though some bulls see recovery."
   },
   "ETH": {
-   "recent": 2,
-   "before": 7,
-   "buzz": 1.43,
+   "recent": 1,
+   "before": 8,
+   "buzz": 0.62,
    "tone": 0,
    "headlines": [
-    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat",
-    "Tom Lee's Bitmine favors share buybacks to ether purchases as crypto declines"
+    "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
    ],
-   "trending": 9,
-   "rule_score": 0.24,
+   "trending": null,
+   "rule_score": 0.0,
    "score": -0.2,
    "note": "Bitmine shifting from ETH buys to buybacks removes a supportive buyer; little other fresh news."
   },
@@ -38,8 +37,8 @@
    "headlines": [
     "Bitcoin Defends Crucial $80,000 Support as ETH, XRP, DOGE Trade Flat"
    ],
-   "trending": 14,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": -0.1,
    "note": "Only one headline despite high buzz; no clear new catalyst, mild negative from weak market mood."
   },
@@ -60,7 +59,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 11,
+   "trending": 13,
    "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines; nothing new."
@@ -134,10 +133,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 71,
+ "headlines": 73,
  "sources": {
-  "Alpaca/Benzinga": 23,
-  "crypto news sites": 48,
+  "Alpaca/Benzinga": 24,
+  "crypto news sites": 49,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-26T19:57:00+00:00"

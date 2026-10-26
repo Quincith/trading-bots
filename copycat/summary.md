@@ -1,30 +1,18 @@
-# Copycat strategy — 2026-10-26 19:57 UTC
+# Copycat strategy — 2026-10-26 20:27 UTC
 
 | | |
 |---|---|
-| Account value | $99.74 |
+| Account value | $99.87 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$0.26 (-0.26%) |
-| Time-weighted return (ignores when deposits happened) | -0.26% |
-
-## New buys
-- BUY BBT $19.95 entry 30.775 stop 27.6975 target 36.93
+| Strategy profit / loss | -$0.13 (-0.13%) |
+| Time-weighted return (ignores when deposits happened) | -0.13% |
 
 ## Insider buys on the watchlist
 
-Read 34 new SEC filings this run. 2 stocks on the watchlist.
-
-| Stock | Score | Who bought |
-|---|---|---|
-| BBT (Beacon Financial Corp) | 1.02 | 1 insider bought $104,984 at about $30.43: Hollister Thomas J (Director) $104,984. |
-
-## Copy decisions
-
-| Stock | Price check | Risk | Decision |
-|---|---|---|---|
-| BBT | Now $30.77, +1.1% vs. what the insiders paid. | APPROVE $19.95 position, risking $1.99 (2.0% of account) | **BUY** — Copying Beacon Financial Corp insiders. 1 insider bought $104,984 at about $30.43: Hollister Thomas J (Director) $104,984. |
+Read 120 new SEC filings this run. 2 stocks on the watchlist.
 
 ## Notes
-- Spotter read 34 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 2 stocks, 1 big enough to copy.
+- Spotter read 120 new insider filings and found 4 purchases (1 by officers or directors). Watchlist: 2 stocks, 0 big enough to copy.
+- No insider buy on the watchlist is big enough to copy yet.
 
 _Copycat uses no AI._
