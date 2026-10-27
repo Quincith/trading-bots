@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27T06:27:44+00:00",
+ "time": "2026-10-27T06:57:52+00:00",
  "coins": {
   "BTC": {
    "recent": 4,
@@ -11,10 +11,10 @@
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
     "Israel Election Puts Netanyahu\u2019s Future At Stake After Trump Endorses \u2018Warrior\u2019 Prime Minister"
    ],
-   "trending": null,
-   "rule_score": -0.07,
-   "score": -0.3,
-   "note": "Strategy paused Bitcoin buys and price dipped below $80,000. Buzz is below normal, so the new negatives are modest."
+   "trending": 12,
+   "rule_score": 0.08,
+   "score": -0.2,
+   "note": "Price dipped below $80k and Strategy paused buying; mostly recap-style noise with a slight negative tilt."
   },
   "ETH": {
    "recent": 0,
@@ -24,8 +24,8 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.2,
-   "note": "Bitmine is favoring buybacks over ether purchases, and ETH slipped. No fresh ETH-specific headlines in recent hours."
+   "score": -0.1,
+   "note": "Few fresh headlines; Bitmine switching from ETH buys to buybacks is a mild negative."
   },
   "SOL": {
    "recent": 0,
@@ -33,10 +33,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 13,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent Solana headlines. Nothing new to act on."
+   "note": "No new Solana headlines in the window; nothing new."
   },
   "AVAX": {
    "recent": 0,
@@ -44,10 +44,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 11,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent Avalanche headlines. Nothing new to act on."
+   "note": "No new Avalanche headlines in the window; nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -58,7 +58,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent Chainlink headlines. Nothing new to act on."
+   "note": "No new Chainlink headlines in the window; nothing new."
   },
   "DOGE": {
    "recent": 0,
@@ -68,8 +68,8 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.2,
-   "note": "Dogecoin community warned of phishing after a hardware wallet data breach. Story is older, so impact is limited."
+   "score": -0.1,
+   "note": "Only a phishing alarm after a hardware wallet breach; minor negative, not a clear catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -80,7 +80,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent Litecoin headlines. Nothing new to act on."
+   "note": "No new Litecoin headlines in the window; nothing new."
   },
   "XRP": {
    "recent": 2,
@@ -91,34 +91,35 @@
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
     "Ripple gets a final go-ahead to launch its own U.S. national trust bank"
    ],
-   "trending": null,
-   "rule_score": 0.13,
-   "score": 0.5,
-   "note": "Ripple's national trust bank got final approval with rising buzz at 1.43x. Real positive news, though partly priced in."
+   "trending": 9,
+   "rule_score": 0.28,
+   "score": 0.6,
+   "note": "Final approval for Ripple's national trust bank is a real catalyst, and buzz is up 1.67x."
   }
  },
  "themes": [
   {
-   "title": "US bank and stablecoin rules moving forward",
-   "note": "Ripple got final approval for a national trust bank, and regulators are opening stablecoin rules. This helps XRP most, though the news is already partly priced in.",
+   "title": "XRP national trust bank approval",
+   "note": "Ripple got final U.S. approval for a national trust bank, a real regulatory win that is drawing extra XRP attention.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Big crypto treasury buyers slowing down",
-   "note": "Strategy paused Bitcoin buying and Bitmine is shifting toward buybacks. Less steady buying can weigh on BTC and ETH prices.",
+   "title": "Stablecoin rules expanding",
+   "note": "Canada consultation and U.S. OCC push for community banks to issue stablecoins signal growing regulated stablecoin adoption.",
    "coins": [
+    "XRP",
     "BTC",
     "ETH"
    ]
   },
   {
-   "title": "Wallet security breaches",
-   "note": "Keystone and hardware wallet breaches and a Bitcoin wallet flaw raise safety worries. Dogecoin users were warned of phishing, which may hurt sentiment.",
+   "title": "Bitcoin treasury buying pauses",
+   "note": "Strategy paused BTC buying and Bitmine favors buybacks, a mild negative sentiment signal for large holders.",
    "coins": [
-    "DOGE",
-    "BTC"
+    "BTC",
+    "ETH"
    ]
   }
  ],
@@ -129,5 +130,5 @@
   "crypto news sites": 51,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T05:57:50+00:00"
+ "ai_time": "2026-10-27T06:57:52+00:00"
 }
