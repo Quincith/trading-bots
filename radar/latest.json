@@ -1,10 +1,10 @@
 {
- "time": "2026-10-27T10:28:07+00:00",
+ "time": "2026-10-27T10:58:11+00:00",
  "coins": {
   "BTC": {
-   "recent": 7,
-   "before": 31,
-   "buzz": 1.13,
+   "recent": 8,
+   "before": 30,
+   "buzz": 1.33,
    "tone": 0,
    "headlines": [
     "China\u2019s AI Stock Rout Scary, but Crypto Punters Aren\u2019t Calling a US Bubble Burst Yet",
@@ -12,9 +12,9 @@
     "Polymarket Punters Raise Pete Hegseth Impeachment Odds as Thomas Massie Plans to Reintroduce Articles After Midterms"
    ],
    "trending": 1,
-   "rule_score": 0.33,
+   "rule_score": 0.37,
    "score": 0.1,
-   "note": "Mixed: ETF outflows reversed slightly and accumulation calls appear, but much is recycled price talk."
+   "note": "Buzz is up 1.33x with mixed news: ETF outflows partly reversed and dip-buying calls, but mostly recycled price talk."
   },
   "ETH": {
    "recent": 1,
@@ -27,7 +27,7 @@
    "trending": 11,
    "rule_score": 0.25,
    "score": -0.1,
-   "note": "Ethereum fixed a staking-deposit bug, but price articles show ETH slipping; buzz is below normal."
+   "note": "Few new headlines and buzz is below normal; a Glamsterdam bug was fixed, and Ethereum slipped in recent price reports."
   },
   "SOL": {
    "recent": 1,
@@ -37,10 +37,10 @@
    "headlines": [
     "Solana bug reports now cost 1 SOL as AI floods security teams with spam"
    ],
-   "trending": 3,
-   "rule_score": 0.3,
+   "trending": 6,
+   "rule_score": 0.15,
    "score": -0.2,
-   "note": "Solana bug bounty now costs 1 SOL due to AI spam; a minor negative for security perception."
+   "note": "Buzz at 2.5x, but the main story is a bug-bounty spam problem and a Solana security cost change, which is a mild negative."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines in the last day."
+   "note": "No recent headlines, so nothing new to act on."
   },
   "LINK": {
    "recent": 0,
@@ -59,10 +59,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 12,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines in the last day."
+   "note": "No recent headlines, so nothing new to act on."
   },
   "DOGE": {
    "recent": 0,
@@ -73,7 +73,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "Only passing mentions in price recaps; no real new catalyst."
+   "note": "No recent headlines; mentions are only price recaps, which are not catalysts."
   },
   "LTC": {
    "recent": 0,
@@ -84,7 +84,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines in the last day."
+   "note": "No recent headlines, so nothing new to act on."
   },
   "XRP": {
    "recent": 1,
@@ -96,40 +96,45 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.3,
-   "note": "Ripple got final approval for a national trust bank, a real positive, though some pieces are repeats."
+   "score": 0.4,
+   "note": "Ripple's final trust bank approval is a real positive catalyst, though it is already widely reported and partly priced in."
   }
  },
  "themes": [
   {
-   "title": "Ripple national trust bank approval",
-   "note": "Final US approval for Ripple's trust bank may support XRP sentiment, though XRP shows no recent headline volume.",
+   "title": "Ripple national trust bank final approval",
+   "note": "Final OCC approval for Ripple's trust bank is repeated across many outlets; a real but already-public catalyst that may help XRP sentiment.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Bitcoin ETF flows and accumulation calls",
-   "note": "BTC ETFs recovered $110M after a $774M outflow; mixed signals, with buzz near normal levels.",
+   "title": "Stablecoin rules expanding to banks and Canada",
+   "note": "OCC invites community banks into stablecoin issuance and Canada opens stablecoin consultation; slow-building regulatory tailwind for the sector.",
+   "coins": [
+    "ETH",
+    "SOL",
+    "XRP",
+    "AVAX",
+    "LINK"
+   ]
+  },
+  {
+   "title": "Bitcoin ETF flows and bitcoin dip-buying",
+   "note": "ETF outflows reversed partly and analysts urge accumulating; mixed signals keep bitcoin buzz elevated while price holds $80K support.",
    "coins": [
     "BTC"
    ]
-  },
-  {
-   "title": "Stablecoin regulation expansion",
-   "note": "Canada and US regulators advancing stablecoin rules and bank issuance; a slow, mostly structural story.",
-   "coins": [
-    "ETH",
-    "XRP"
-   ]
   }
  ],
- "trending_elsewhere": [],
- "headlines": 84,
+ "trending_elsewhere": [
+  "AAVE"
+ ],
+ "headlines": 83,
  "sources": {
   "Alpaca/Benzinga": 28,
-  "crypto news sites": 56,
+  "crypto news sites": 55,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T09:58:05+00:00"
+ "ai_time": "2026-10-27T10:58:11+00:00"
 }

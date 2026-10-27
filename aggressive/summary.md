@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 10:28 UTC
+# Aggressive strategy — 2026-10-27 10:58 UTC
 
 | | |
 |---|---|
@@ -9,22 +9,25 @@
 
 ## News radar (trends forming)
 
-Read 84 headlines from the last day (Alpaca/Benzinga 28, crypto news sites 56, CoinGecko trending 15).
+Read 83 headlines from the last day (Alpaca/Benzinga 28, crypto news sites 55, CoinGecko trending 15).
 
-- **Ripple national trust bank approval**: Final US approval for Ripple's trust bank may support XRP sentiment, though XRP shows no recent headline volume. (XRP)
-- **Bitcoin ETF flows and accumulation calls**: BTC ETFs recovered $110M after a $774M outflow; mixed signals, with buzz near normal levels. (BTC)
-- **Stablecoin regulation expansion**: Canada and US regulators advancing stablecoin rules and bank issuance; a slow, mostly structural story. (ETH, XRP)
+- **Ripple national trust bank final approval**: Final OCC approval for Ripple's trust bank is repeated across many outlets; a real but already-public catalyst that may help XRP sentiment. (XRP)
+- **Stablecoin rules expanding to banks and Canada**: OCC invites community banks into stablecoin issuance and Canada opens stablecoin consultation; slow-building regulatory tailwind for the sector. (ETH, SOL, XRP, AVAX, LINK)
+- **Bitcoin ETF flows and bitcoin dip-buying**: ETF outflows reversed partly and analysts urge accumulating; mixed signals keep bitcoin buzz elevated while price holds $80K support. (BTC)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.30 | 1 (0.62x usual) | Ripple got final approval for a national trust bank, a real positive, though some pieces are repeats. |
-| BTC | +0.10 | 7 (1.13x usual) | Mixed: ETF outflows reversed slightly and accumulation calls appear, but much is recycled price talk. |
-| ETH | -0.10 | 1 (0.71x usual) | Ethereum fixed a staking-deposit bug, but price articles show ETH slipping; buzz is below normal. |
-| SOL | -0.20 | 1 (2.5x usual) | Solana bug bounty now costs 1 SOL due to AI spam; a minor negative for security perception. |
+| XRP | +0.40 | 1 (0.62x usual) | Ripple's final trust bank approval is a real positive catalyst, though it is already widely reported and partly priced in. |
+| BTC | +0.10 | 8 (1.33x usual) | Buzz is up 1.33x with mixed news: ETF outflows partly reversed and dip-buying calls, but mostly recycled price talk. |
+| LINK | +0.00 | 0 (0.0x usual) | No recent headlines, so nothing new to act on. |
+| ETH | -0.10 | 1 (0.71x usual) | Few new headlines and buzz is below normal; a Glamsterdam bug was fixed, and Ethereum slipped in recent price reports. |
+| SOL | -0.20 | 1 (2.5x usual) | Buzz at 2.5x, but the main story is a bug-bounty spam problem and a Solana security cost change, which is a mild negative. |
+
+Also trending, but not in our coin list: AAVE.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
