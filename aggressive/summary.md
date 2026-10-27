@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 18:28 UTC
+# Aggressive strategy — 2026-10-27 18:41 UTC
 
 | | |
 |---|---|
@@ -7,26 +7,8 @@
 | Strategy profit / loss | $0.00 (+0.00%) |
 | Time-weighted return (ignores when deposits happened) | +0.00% |
 
-## News radar (trends forming)
-
-Read 79 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 54, CoinGecko trending 15).
-
-- **Ripple bank and RLUSD expansion**: Ripple got final OCC approval for a national trust bank, plus Robinhood and BNY deals using its RLUSD stablecoin. Real institutional progress, though some headlines repeat. (XRP)
-- **Tokenized stocks and Nasdaq-100 onchain**: Janus Henderson and Centrifuge launched a tokenized Nasdaq-100 fund on Stellar; OKX–ICE tokenized stock plans face pushback. Mostly builds on Stellar and infrastructure, less direct for our coins. (ETH, SOL)
-- **Bitcoin miners pivot to AI compute**: Luxor raised $16M and miners are moving into AI computing power. Mostly a BTC mining-sector story, with market attention on AI infrastructure. (BTC)
-
-| Coin | Radar score | Headlines lately | Note |
-|---|---|---|---|
-| XRP | +0.50 | 4 (3.33x usual) | Ripple's final OCC approval and Robinhood/BNY deals are real, building institutional good news; buzz is high. |
-| ETH | +0.00 | 2 (2.0x usual) | Only 2 headlines; OpenAI-ETH story is unclear and mostly noise. Nothing solid building. |
-| LINK | +0.00 | 0 (0.0x usual) | No recent headlines. Nothing new. |
-| DOGE | +0.00 | 1 (2.5x usual) | Only a price-recap mention. Buzz is up but no real catalyst. |
-| BTC | -0.20 | 7 (1.13x usual) | Mixed: high buzz and FOMC worries, but mostly price recaps. Keystone device recall is a small security story. |
-| SOL | -0.20 | 2 (3.33x usual) | Solana bug reports now cost 1 SOL due to AI spam; mildly negative security news, buzz rising. |
-
 ## Notes
 - Claude key works (claude-opus-5-5).
-- Scout scanned 8 markets.
-- Scout found nothing worth a closer look this run.
+- Next scan for new trades is due 30 min after the last one.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_
