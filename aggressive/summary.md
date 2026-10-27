@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 08:58 UTC
+# Aggressive strategy — 2026-10-27 09:28 UTC
 
 | | |
 |---|---|
@@ -22,11 +22,9 @@ Read 81 headlines from the last day (Alpaca/Benzinga 27, crypto news sites 54, C
 | BTC | -0.20 | 6 (1.0x usual) | ETF outflows and Strategy pausing buys weigh; recent recovery attempts are weak signals. |
 | ETH | -0.20 | 1 (0.71x usual) | Quiet coverage and Bitmine shifting to buybacks suggest less buying; slight negative. |
 
-Also trending, but not in our coin list: AAVE.
-
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_

@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27T08:58:01+00:00",
+ "time": "2026-10-27T09:28:05+00:00",
  "coins": {
   "BTC": {
    "recent": 6,
@@ -11,7 +11,7 @@
     "'We're Trading Them Like Baseball Cards': Mark Cuban Warns \u2018Everything\u2019s a Meme Stock\u2019 as AAPL, GOOGL and MU Fuel Market Bubble Fears",
     "Gold, Crypto or Trump? Bettors Wager on What Robinhood Will Talk About During Q3 Earnings Call"
    ],
-   "trending": 0,
+   "trending": 1,
    "rule_score": 0.2,
    "score": -0.2,
    "note": "ETF outflows and Strategy pausing buys weigh; recent recovery attempts are weak signals."
@@ -24,8 +24,8 @@
    "headlines": [
     "Ethereum fixes Glamsterdam bug that could have sent staking deposits to builders"
    ],
-   "trending": null,
-   "rule_score": 0.1,
+   "trending": 13,
+   "rule_score": 0.25,
    "score": -0.2,
    "note": "Quiet coverage and Bitmine shifting to buybacks suggest less buying; slight negative."
   },
@@ -92,7 +92,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 10,
+   "trending": 9,
    "rule_score": 0.15,
    "score": 0.4,
    "note": "Ripple's final trust bank approval is a real catalyst, but it is already widely reported; not fresh buzz."
@@ -124,9 +124,7 @@
    ]
   }
  ],
- "trending_elsewhere": [
-  "AAVE"
- ],
+ "trending_elsewhere": [],
  "headlines": 81,
  "sources": {
   "Alpaca/Benzinga": 27,
