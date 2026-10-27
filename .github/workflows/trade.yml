@@ -11,7 +11,7 @@ on:
       strategy:
         description: Which strategy to run
         type: choice
-        options: [all, aggressive, medium, copycat]
+        options: [all, aggressive, medium, copycat, forex, fxcopy]
         default: all
       dry_run:
         description: Dry run (think, but don't place orders)
@@ -39,6 +39,9 @@ jobs:
       ALPACA_COPYCAT_KEY_ID: ${{ secrets.ALPACA_COPYCAT_KEY_ID }}
       ALPACA_COPYCAT_SECRET_KEY: ${{ secrets.ALPACA_COPYCAT_SECRET_KEY }}
       SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}   # a secret, so it's hidden in the public logs
+      OANDA_API_TOKEN: ${{ secrets.OANDA_API_TOKEN }}
+      OANDA_FOREX_ACCOUNT_ID: ${{ secrets.OANDA_FOREX_ACCOUNT_ID }}
+      OANDA_FXCOPY_ACCOUNT_ID: ${{ secrets.OANDA_FXCOPY_ACCOUNT_ID }}
       TRADING_HALTED: ${{ vars.TRADING_HALTED }}
       DRY_RUN: ${{ inputs.dry_run }}
     steps:
@@ -66,6 +69,17 @@ jobs:
         if: ${{ env.ALPACA_COPYCAT_KEY_ID != '' && (github.event_name == 'schedule' || !inputs.strategy || inputs.strategy == 'all' || inputs.strategy == 'copycat') }}
         run: python -m tradebots run --strategy copycat
         continue-on-error: true
+      # The Forex wing (OANDA practice accounts). Skipped until its secrets are added.
+      - name: Forex
+        id: forex
+        if: ${{ env.OANDA_FOREX_ACCOUNT_ID != '' && env.OANDA_API_TOKEN != '' && (github.event_name == 'schedule' || !inputs.strategy || inputs.strategy == 'all' || inputs.strategy == 'forex') }}
+        run: python -m tradebots run --strategy forex
+        continue-on-error: true
+      - name: Copycat FX
+        id: fxcopy
+        if: ${{ env.OANDA_FXCOPY_ACCOUNT_ID != '' && env.OANDA_API_TOKEN != '' && (github.event_name == 'schedule' || !inputs.strategy || inputs.strategy == 'all' || inputs.strategy == 'fxcopy') }}
+        run: python -m tradebots run --strategy fxcopy
+        continue-on-error: true
       - name: Build the bot world page and daily recap
         if: always()
         run: python -m tradebots.world
@@ -80,7 +94,7 @@ jobs:
           path: data/world
         continue-on-error: true
       - name: Report failures
-        if: ${{ steps.aggressive.outcome == 'failure' || steps.medium.outcome == 'failure' || steps.copycat.outcome == 'failure' }}
+        if: ${{ steps.aggressive.outcome == 'failure' || steps.medium.outcome == 'failure' || steps.copycat.outcome == 'failure' || steps.forex.outcome == 'failure' || steps.fxcopy.outcome == 'failure' }}
         run: |
           echo "One of the strategies failed. Open its step above to see why." >> "$GITHUB_STEP_SUMMARY"
           exit 1

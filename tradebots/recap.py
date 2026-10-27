@@ -39,6 +39,16 @@ GLOSSARY = {
     "insider": "A company's own bosses (CEO, CFO and so on) and board members. They know the company best.",
     "Form 4": "The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.",
     "S&P 500": "The 500 biggest US companies. Its fund, SPY, is the usual yardstick: did you beat just owning the market?",
+    "forex": "Trading one country's money for another's, like euros for dollars. The biggest market in the world.",
+    "currency pair": "Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.",
+    "selling short": "Betting a price will fall. In forex you can sell a pair first and buy it back later, cheaper if you're right.",
+    "units": "How much currency a forex trade controls. 1,000 units (a 'micro lot') of EUR/USD is 1,000 euros, about $1,100.",
+    "pip": "The tiny step forex prices move in: 0.0001 for most pairs (0.01 for yen pairs).",
+    "spread": "The gap between the buying and selling price. It's the main cost of each forex trade.",
+    "leverage": "Controlling more money than you have. 3:1 means $100 controls up to $300. It makes wins and losses bigger.",
+    "breakout": "When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.",
+    "COT report": "The CFTC's free weekly report (Commitments of Traders) of who holds which futures bets, including currencies.",
+    "hedge fund": "A big investment firm that makes large, often leveraged bets. Copycat FX copies their currency bets.",
 }
 
 
@@ -62,6 +72,8 @@ def _day_rows(rows: list[dict], day: str) -> list[dict]:
 
 
 def short(symbol: str) -> str:
+    if "_" in symbol:   # a currency pair (Forex wing), e.g. EUR_USD -> EUR/USD
+        return symbol.replace("_", "/")
     return symbol.split("/")[0].removesuffix("USD")
 
 
@@ -108,6 +120,9 @@ def build(store: Store, day: str) -> dict:
     b.append(f"Profit / loss since start: {'+' if last['profit'] >= 0 else ''}{money(last['profit'])} "
              f"on {money(last['net_deposits'])} money put in.")
     terms |= {"account value", "profit / loss", "money put in"}
+
+    if any(r.get("forex") for r in runs):
+        return _forex_day(out, runs, store, day, b, terms, word, change, pct)
 
     # What the bots looked at
     scans = [r for r in runs if r["scanned"]]
@@ -206,6 +221,65 @@ def build(store: Store, day: str) -> dict:
                 + f" at {money(last['equity'])}. Paper money only.")
     terms.add("paper trading")
 
+    out["summary"], out["bullets"] = summary, b
+    out["terms"] = sorted(terms, key=str.lower)
+    return out
+
+
+def _forex_day(out: dict, runs: list[dict], store: Store, day: str, b: list[str], terms: set[str], word: str,
+               change: float, pct: float) -> dict:
+    """The day for a Forex wing office: what its rule saw, the trades it opened and closed, what it holds."""
+    last = runs[-1]
+    cot = last["forex"].get("style") == "cot"
+    reads = [r for r in runs if r["scanned"]]
+    pairs = (reads[-1] if reads else last)["forex"].get("pairs") or {}
+    if reads:
+        rep = reads[-1]["forex"].get("report")
+        b.append(f"Read the hedge funds' weekly report (as of {rep}) and checked {len(pairs)} currency pairs." if cot else
+                 f"Checked {len(pairs)} currency pairs at the end of the forex day for breakouts.")
+    else:
+        b.append("No new forex day finished yet, so no new trade decisions (forex days end at 5pm New York time).")
+    picks = [f"{short(p).replace('_', '/')} ({r['decision'].lower()})" for p, r in pairs.items() if r["decision"] != "WAIT"]
+    if picks:
+        b.append("Signals: " + ", ".join(picks) + ".")
+    terms |= {"forex", "currency pair"} | ({"COT report", "hedge fund"} if cot else {"breakout"})
+    opened = [t for t in _day_rows(store.rows("trades.csv"), day) if t["side"] == "buy"]
+    sells = [t for t in closed_trades(store) if t["time"][:10] == day]
+    for t in opened:
+        b.append(f"Opened {t['symbol'].replace('_', '/')} at {float(t['price']):,.6g}, controlling {money(float(t['usd']))}. "
+                 f"{t['reason'].strip()}")
+        terms |= {"units", "stop-loss", "leverage"}
+        if t["reason"].startswith("SELL"):
+            terms.add("selling short")
+    for t in sells:
+        why, extra = plain_exit(t["reason"])
+        if t["reason"].startswith("stop hit"):
+            why = "the price reached the safety stop, so OANDA closed it to keep the loss small"
+        elif t["reason"].startswith("rule exit: "):
+            why = t["reason"][len("rule exit: "):].rsplit(",", 1)[0]
+        terms |= set(extra)
+        b.append(f"Closed {t['symbol'].replace('_', '/')}: {why}." + (f" {'Gain' if t['pl'] >= 0 else 'Loss'}: "
+                                                                   f"{money(t['pl'])}." if t["pl"] is not None else ""))
+    out["closed"] = sells
+    if not opened and not sells:
+        b.append("No trades.")
+    gates = [r["gate"] for r in runs if r["gate"] and r["gate"] != "ok"]
+    if gates:
+        b.append(f"Risk paused new trades: {gates[-1]}")
+    if last["positions"]:
+        b.append("Open trades: " + "; ".join(
+            f"{p['symbol'].replace('_', '/')} {'bought' if p['qty'] > 0 else 'sold'} {abs(p['qty']):,.0f} units"
+            + (f" ({'+' if p['unrealized'] >= 0 else ''}{money(p['unrealized'])} so far)" if p.get("unrealized") is not None else "")
+            for p in last["positions"]) + ".")
+        terms |= {"position", "unrealized"}
+    else:
+        b.append("Open trades: none, all cash.")
+    summary = ("Active day. " + " and ".join(x for x in (f"opened {len(opened)} trade{'s' if len(opened) != 1 else ''}" if opened else "",
+                                                          f"closed {len(sells)}" if sells else "") if x).capitalize() + "."
+               if opened or sells else "Quiet day. No new currency trade.")
+    summary += (f" The office ended {word}" + (f" {money(abs(change))} ({pct:+.2f}%)" if word != "flat" else "")
+                + f" at {money(last['equity'])}. Practice money only.")
+    terms.add("paper trading")
     out["summary"], out["bullets"] = summary, b
     out["terms"] = sorted(terms, key=str.lower)
     return out

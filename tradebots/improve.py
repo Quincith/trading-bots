@@ -38,6 +38,10 @@ STYLE = {
     "medium": "Crypto, holds for days, smaller bets. Buys coins that move up on heavy volume in a clear trend.",
     "copycat": "US stocks. Copies company officers and directors who buy their own company's stock "
                "(SEC Form 4 filings), and holds for up to a month.",
+    "forex": "Currency pairs on daily candles, buys or sells. Trend following: trades breakouts past the N-day high "
+             "or low in the direction of the long-term average; holds days to months. result_pct is % of the account.",
+    "fxcopy": "Currency pairs. Copies the weekly CFTC report: buys a currency when hedge funds' net bet on it is large "
+              "(net = bets up minus bets down, as % of all contracts); holds until it flips. result_pct is % of the account.",
 }
 
 SYSTEM = (
@@ -109,7 +113,9 @@ def prompt(strategy: str, cfg: dict, split: lab.Split, study_pct: float, bench_p
         "candle size in % (ATR); vs_200avg_pct / btc_vs_200avg_pct = how far the coin / Bitcoin was above (+) or "
         "below (-) its 200-candle average; fear_greed = crypto Fear & Greed index; insiders / insider_usd / "
         "score / chase_pct = Copycat's signal (how many insiders, dollars, rank, and how far the price had "
-        "already risen past what they paid); sp500_vs_200day_avg_pct = stock market trend.",
+        "already risen past what they paid); sp500_vs_200day_avg_pct = stock market trend; pair / side / days_held / "
+        "net / prev = Forex wing: currency pair, buy or sell, how long it was held, and the hedge funds' net bet "
+        "that week and the week before.",
         "", "Trades in the study months (CSV):", _csv(rows),
     ]
     if problems:
@@ -254,7 +260,7 @@ def improve_one(strategy: str, engine, runner: lab.Runner, data: Path, out: Path
 def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser(prog="tradebots.improve")
-    ap.add_argument("--strategy", default="all", choices=["all", "aggressive", "medium", "copycat"])
+    ap.add_argument("--strategy", default="all", choices=["all", "aggressive", "medium", "copycat", *lab.FOREX_STRATEGIES])
     ap.add_argument("--change", default="", help="test this instead of asking Claude, e.g. 'filters.btc_ema_bars=200'")
     ap.add_argument("--idea", default="")
     ap.add_argument("--days", type=int, default=365)
@@ -267,7 +273,7 @@ def main(argv: list[str] | None = None) -> int:
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     manual = lab.parse_sets([s for s in re.split(r"[,\s]+", args.change) if s]) if args.change.strip() else None
-    strategies = ["aggressive", "medium", "copycat"] if args.strategy == "all" else [args.strategy]
+    strategies = ["aggressive", "medium", "copycat", *lab.FOREX_STRATEGIES] if args.strategy == "all" else [args.strategy]
     ai = AI(MODEL, "high") if manual is None else None
     body = [f"# Strategy lab: week of {now:%B %-d, %Y}", "",
             "Each week Claude studies the losing trades from the past months, suggests one change, and the lab "
@@ -279,7 +285,7 @@ def main(argv: list[str] | None = None) -> int:
 
     engines: dict[str, object] = {}
     for s in strategies:
-        kind = "copycat" if s == "copycat" else "crypto"
+        kind = s if s in ("copycat", *lab.FOREX_STRATEGIES) else "crypto"
         try:
             if kind not in engines:
                 cache = f"{args.cache_dir}/{kind}.pkl" if args.cache_dir else None

@@ -33,7 +33,8 @@ def record(res: RunResult, store: Store, dry_run: bool) -> dict:
         "last_scan": res.last_scan,
         "scan": {s: {k: (round(v, 4) if isinstance(v, float) else v) for k, v in m.items()} for s, m in res.scan.items()},
         "candidates": cands,
-        "positions": [{k: p.get(k) for k in ("symbol", "qty", "market_value", "avg_entry_price", "current_price")}
+        "positions": [{k: p.get(k) for k in ("symbol", "qty", "market_value", "avg_entry_price", "current_price")
+                       + (("stop", "unrealized") if res.forex else ())}
                       for p in res.positions],
         "exits": res.exits,
         "buys": res.buys,
@@ -41,6 +42,7 @@ def record(res: RunResult, store: Store, dry_run: bool) -> dict:
         "ai_calls": res.ai_calls,
         "filings": res.filings,
         "radar": res.radar,
+        "forex": res.forex,
     }
 
 

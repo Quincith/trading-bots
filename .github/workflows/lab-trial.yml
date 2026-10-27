@@ -1,0 +1,49 @@
+name: Forex lab trial (temporary)
+
+# Temporary: tests the Forex wing's two strategies on real past prices from this pull request, so we can see
+# honest results before merging. It saves nothing and opens no pull requests or issues. Removed before merge.
+on:
+  pull_request:
+    paths: [".github/workflows/lab-trial.yml"]
+
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Check the downloaded data
+        run: |
+          python - <<'PY'
+          from datetime import date
+          from tradebots import fxdata
+          df = fxdata.daily_history("EUR_USD", date(2025, 1, 1), date(2026, 10, 1))
+          print(df.head(3)); print(df.tail(3)); print(len(df), "days, median spread", df["spread"].median())
+          cot = fxdata.fetch_cot(date(2026, 6, 1))
+          print(cot.tail(8).to_string())
+          PY
+      - name: Forex (trend) check
+        run: python -m tradebots.lab --strategy forex --validate --cache fx.pkl
+      - name: Copycat FX check
+        run: python -m tradebots.lab --strategy fxcopy --validate --cache fx.pkl
+      - name: "For comparison: Copycat FX copying asset managers instead"
+        run: |
+          python - <<'PY'
+          from tradebots import lab
+          cfg = lab.load_config("fxcopy"); cfg["forex"]["group"] = "asset_managers"
+          eng = lab.load_engine("fxcopy", 365, "fx.pkl")
+          print(lab.validate("fxcopy", eng, lab.Runner(eng), cfg)[1])
+          PY
+      - name: "For comparison: Forex without the 200-day average filter"
+        run: |
+          python - <<'PY'
+          from tradebots import lab
+          cfg = lab.load_config("forex"); cfg["forex"]["trend_ema_days"] = 0
+          eng = lab.load_engine("forex", 365, "fx.pkl")
+          print(lab.validate("forex", eng, lab.Runner(eng), cfg)[1])
+          PY

@@ -13,6 +13,8 @@ from .report import money
 from .store import Store, time_weighted_return
 
 PriceAt = Callable[[datetime], float]
+# The Forex wing trades currencies, not coins, so its yardstick is doing nothing: keeping the cash.
+FOREX = {"forex", "fxcopy"}
 
 
 def _t(row: dict) -> datetime:
@@ -67,40 +69,48 @@ def _vs(mine: float, btc: float) -> str:
     return f"**{'beat' if gap > 0 else 'trailed'} Bitcoin by {abs(gap):.1f} points**"
 
 
-def render(stats: dict[str, dict | None], now: datetime, lab: str = "") -> str:
+def render(stats: dict[str, dict | None], now: datetime, lab: str = "", titles: dict | None = None) -> str:
+    title = lambda n: (titles or {}).get(n, n.title())
     out = [f"# Weekly bot report: week ending {now:%B %-d, %Y}", ""]
     live = {n: s for n, s in stats.items() if s}
     if len(live) > 1:
         best = max(live, key=lambda n: live[n]["week_pct"])
         out += ["| Strategy | This week | Since the start | Profit / loss |", "|---|---|---|---|"]
-        out += [f"| {n.title()}{' 🏆' if n == best else ''} | {s['week_pct']:+.1f}% | {s['total_pct']:+.1f}% "
+        out += [f"| {title(n)}{' 🏆' if n == best else ''} | {s['week_pct']:+.1f}% | {s['total_pct']:+.1f}% "
                 f"| {money(s['profit'])} |" for n, s in live.items()]
         out.append("")
     for name, s in stats.items():
-        out.append(f"## {name.title()}")
+        out.append(f"## {title(name)}")
         if not s:
             out += ["No runs recorded yet.", ""]
             continue
         period = "This week" if s["full_week"] else f"Since it started on {s['week_start']:%b %-d}"
-        out.append(f"- **{period}:** {s['week_pct']:+.1f}% ({money(s['week_profit'])}). "
-                   f"Holding Bitcoin did {s['btc_week_pct']:+.1f}%, so it {_vs(s['week_pct'], s['btc_week_pct'])}.")
+        fx = name in FOREX
+        if fx:
+            out.append(f"- **{period}:** {s['week_pct']:+.1f}% ({money(s['week_profit'])}). Doing nothing would have "
+                       f"made 0%, so it {_vs(s['week_pct'], 0).replace('Bitcoin', 'doing nothing')}.")
+        else:
+            out.append(f"- **{period}:** {s['week_pct']:+.1f}% ({money(s['week_profit'])}). "
+                       f"Holding Bitcoin did {s['btc_week_pct']:+.1f}%, so it {_vs(s['week_pct'], s['btc_week_pct'])}.")
         if "spy_week_pct" in s:
             out.append(f"- **Vs. the stock market:** the S&P 500 did {s['spy_week_pct']:+.1f}%, so it "
                        f"{_vs(s['week_pct'], s['spy_week_pct']).replace('Bitcoin', 'the S&P 500')}. "
                        f"The same money in the S&P 500 would be worth {money(s['spy_value'])}.")
-        out.append(f"- **Trades:** {s['buys']} buys, {s['sells']} sells.")
+        out.append(f"- **Trades:** {s['buys']} opened, {s['sells']} closed." if fx else
+                   f"- **Trades:** {s['buys']} buys, {s['sells']} sells.")
         if s["week_deposits"]:
             out.append(f"- **Money added this week:** {money(s['week_deposits'])} (not counted as profit).")
         out.append(f"- **Since the start ({s['started']:%b %-d}):** account is worth {money(s['equity'])} "
                    f"from {money(s['net_deposits'])} put in, {money(s['profit'])} profit ({s['total_pct']:+.1f}%). "
-                   f"The same money in Bitcoin would be worth {money(s['btc_value'])}.")
+                   + ("Practice (demo) money on OANDA." if fx else
+                      f"The same money in Bitcoin would be worth {money(s['btc_value'])}."))
         if s["halted"]:
             out.append(f"- **Stopped:** {s['halted']}")
         out.append("")
     if lab:
         out += [lab, ""]
     out.append("_Paper money only. Percentages leave out deposits, so adding money never looks like a gain. "
-               "Claude's running cost is not included. Copycat uses no AI, so it costs nothing to run._")
+               "Claude's running cost is not included. Copycat and the Forex wing use no AI, so they cost nothing to run._")
     return "\n".join(out) + "\n"
 
 

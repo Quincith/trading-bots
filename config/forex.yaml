@@ -1,0 +1,44 @@
+# FOREX office: trades currency pairs with a classic trend-following rule (the "Turtle traders" breakout).
+# Runs on its own OANDA practice (demo) account, so it uses pretend money only.
+# All percents are percent of this office's account value. No AI is used.
+
+name: forex
+title: Forex
+broker: oanda
+# GitHub secret names that hold the OANDA practice token and this office's practice account id.
+oanda_token_secret: OANDA_API_TOKEN
+oanda_account_secret: OANDA_FOREX_ACCOUNT_ID
+# The office acts as if it had this much, even if the practice account holds more (OANDA often starts
+# demo accounts with $100,000). Its trades are sized from this, and only its own gains and losses count.
+start_balance: 100
+lookback_days: 300          # daily candles loaded each day
+
+markets:
+  # The 7 "major" pairs: the busiest currencies, with the smallest buy/sell gaps. Each one includes the US dollar.
+  pairs: [EUR_USD, GBP_USD, USD_JPY, AUD_USD, USD_CAD, USD_CHF, NZD_USD]
+
+forex:
+  style: trend
+  entry_days: 55            # buy when the price closes above its highest price of the last 55 days (sell: below the lowest)
+  exit_days: 20             # get out when it closes past the opposite 20-day high or low
+  trend_ema_days: 200       # only buy above the 200-day average, only sell below it (0 = off)
+  atr_days: 20              # how many days are used to measure a "typical daily swing" (ATR)
+  stop_atr_mult: 2.0        # safety stop 2 typical daily swings away from the entry
+
+risk:
+  risk_per_trade_pct: 1     # hitting the safety stop loses about 1% of the account ($1 on $100)
+  max_position_pct: 100     # one trade controls at most 1x the account
+  max_total_exposure_pct: 300   # all trades together control at most 3x the account (3:1 leverage, US law allows 50:1)
+  max_open_positions: 4
+  max_same_usd_side: 3      # at most 3 trades that all win (or all lose) when the US dollar moves
+  # Loss limits PROPOSED, waiting for Quincy to confirm
+  max_daily_loss_pct: 3     # stop opening trades for the day after losing 3% today
+  max_total_loss_pct: 15    # halt the office if it is down 15% from money put in
+
+# These keep the shared code (Bot World, weekly report) working the same way.
+scout:
+  scan_every_minutes: 30
+decision:
+  min_confidence: 0
+exits:
+  max_hold_hours: 0

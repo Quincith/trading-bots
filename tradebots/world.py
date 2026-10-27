@@ -21,7 +21,7 @@ from .store import Store
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = Path(__file__).with_name("world_template.html")
 PIXELWORLD = Path(__file__).with_name("pixelworld.js")
-STRATEGIES = ("aggressive", "medium", "copycat")
+STRATEGIES = ("aggressive", "medium", "copycat", "forex", "fxcopy")
 CREW = [  # pipeline order: Charts runs before News and Sentiment so Claude isn't paid for dead-end setups
     ("scout", "Scout", "Scans every coin for sudden jumps in trading activity with the price moving up."),
     ("charts", "Charts", "Draws the trade plan: where to buy, where the safety exit goes, and the profit goal."),
@@ -40,6 +40,22 @@ COPYCAT_JOBS = {
     "risk": "The safety officer. Plain rules, no AI. Approves, shrinks or blocks every trade.",
     "decision": "Plain rule: if a pick passes every check, copy it. No AI on this account.",
 }
+
+
+# The Forex wing's two offices have three rooms each: a spotter, Risk and Decision.
+FOREX_JOBS = {
+    "forex": {
+        "scout": "Checks 7 currency pairs once a day for breakouts: a close past the highest or lowest price of 55 days.",
+        "risk": "The safety officer. Sizes each trade to risk about 1% of the account and caps leverage at 3:1.",
+        "decision": "Plain rule: buy an upward breakout, sell a downward one, both only with the long-term trend.",
+    },
+    "fxcopy": {
+        "scout": "Reads the CFTC's weekly report to see which currencies the big hedge funds are betting on.",
+        "risk": "The safety officer. Sizes each trade to risk about 1% of the account and caps leverage at 3:1.",
+        "decision": "Plain rule: copy the hedge funds' biggest currency bets, and get out when they flip.",
+    },
+}
+FOREX_IDS = ("scout", "risk", "decision")
 
 
 def coin(symbol: str) -> str:
@@ -229,22 +245,76 @@ def copycat_stations(run: dict | None, cfg: dict) -> dict:
     return s
 
 
+def forex_stations(run: dict | None, cfg: dict) -> dict:
+    """What each bot says in a Forex wing office."""
+    s = {k: {"status": "idle", "say": "", "detail": []} for k in FOREX_IDS}
+    if not run:
+        for k in s:
+            s[k]["say"] = "Waiting for the first run."
+        return s
+    fx = run.get("forex") or {}
+    pairs, cot = fx.get("pairs") or {}, fx.get("style") == "cot"
+    pair = lambda p: p.replace("_", "/")
+    sc, rk, de = s["scout"], s["risk"], s["decision"]
+    hot = [(p, r) for p, r in pairs.items() if r["direction"]]
+    if cot:
+        bets = sorted(((r.get("ccy"), r.get("net")) for r in pairs.values() if r.get("net") is not None),
+                      key=lambda x: -abs(x[1]))
+        sc["say"] = (f"Hedge funds' biggest bets (report of {fx.get('report')}): "
+                     + ", ".join(f"{c} {n:+.0f}%" for c, n in bets[:3]) + "." if bets else "No hedge fund report read yet.")
+    else:
+        sc["say"] = (f"Breakout in {', '.join(pair(p) for p, _ in hot)}." if hot else
+                     f"Checked {len(pairs)} pairs. No breakouts today." if pairs else "Waiting for the forex day to end.")
+    sc["status"] = "found" if hot else "working" if pairs else "resting"
+    if not run["scanned"] and pairs:
+        sc["say"] += " Next check when the forex day ends (5pm New York)."
+    sc["detail"] = [f"{pair(p)} {r['price']:.5g}: {r['note']}" for p, r in pairs.items()]
+    lim = cfg["risk"]
+    today = (run["equity"] - run["day_start_equity"]) / run["day_start_equity"] * 100 if run["day_start_equity"] else 0
+    blocked = [(p, r) for p, r in hot if r["decision"] == "SKIP"]
+    if run["gate"] and run["gate"] != "ok":
+        rk["status"], rk["say"] = "blocked", f"New trades paused. {run['gate']}"
+    elif blocked:
+        rk["status"], rk["say"] = "blocked", f"Blocked {pair(blocked[0][0])}: {blocked[0][1]['risk']}"
+    else:
+        rk["status"] = "working"
+        rk["say"] = f"All limits clear. Today {today:+.1f}%; new trades stop at -{lim['max_daily_loss_pct']}%."
+    rk["detail"] = [f"{pair(p)}: {r['risk']}" for p, r in hot if r.get("risk")]
+    rk["detail"] += [f"Today so far: {today:+.2f}% (daily loss limit -{lim['max_daily_loss_pct']}%)",
+                     f"Total loss limit: -{lim['max_total_loss_pct']}% of the money put in",
+                     f"About {lim['risk_per_trade_pct']}% of the account at risk per trade, at most "
+                     f"{lim['max_open_positions']} trades, leverage at most {lim['max_total_exposure_pct'] / 100:g}:1"]
+    new = [(p, r) for p, r in hot if r["decision"] in ("BUY", "SELL")]
+    if run["buys"]:
+        de["status"], de["say"] = "buy", run["buys"][0] + "."
+    elif new:
+        de["status"], de["say"] = "working", f"{new[0][1]['decision']} {pair(new[0][0])}."
+    else:
+        n = len(run["positions"])
+        de["status"] = "working" if n else "idle"
+        de["say"] = f"No new trade. Holding {n} trade{'s' if n != 1 else ''}." if n else "No new trade. All cash."
+    de["detail"] = [f"{pair(p)}: {r['decision']}. {r['note']}" for p, r in hot] + run["buys"] + run["exits"]
+    return s
+
+
 def captain(run: dict | None, name: str) -> str:
     if not run:
         return "Awaiting first run."
     bits = []
+    coin_ = (lambda x: x) if name in FOREX_JOBS else coin
     if run["buys"]:
-        bits.append(f"Bought {', '.join(coin(b.split()[1]) for b in run['buys'])}.")
+        bits.append(f"{'Opened' if name in FOREX_JOBS else 'Bought'} {', '.join(coin_(b.split()[1]) for b in run['buys'])}.")
     sold = [x for x in run["exits"] if x.startswith("SOLD")]
     if sold:
-        bits.append(f"Sold {', '.join(coin(x.split()[1].rstrip(':')) for x in sold)}.")
+        bits.append(f"{'Closed' if name in FOREX_JOBS else 'Sold'} {', '.join(coin_(x.split()[1].rstrip(':')) for x in sold)}.")
     if not bits:
         bits.append("No trades this run.")
-    n, what = len(run["positions"]), "stock" if name == "copycat" else "coin"
+    n, what = len(run["positions"]), {"copycat": "stock", "forex": "trade", "fxcopy": "trade"}.get(name, "coin")
     bits.append(f"Holding {n} {what}{'s' if n != 1 else ''}." if n else "All cash.")
     pl = run["profit"]
     bits.append(f"Since start: {'+' if pl >= 0 else ''}{recap.money(pl)}.")
-    return f"{name.title()} status. " + " ".join(bits)
+    title = {"fxcopy": "Copycat FX"}.get(name, name.title())
+    return f"{title} status. " + " ".join(bits)
 
 
 def event(store: Store, run: dict | None) -> dict | None:
@@ -295,6 +365,8 @@ def strategy_data(store: Store, cfg: dict, days_back: int = 7) -> dict:
             latest = runs[-1]
             break
     copy = "copycat" in cfg
+    if "forex" in cfg:
+        return forex_data(store, cfg, days, run_count, lv, latest, days_back)
     return {
         "name": cfg["name"],
         "crew": [{"id": k, "name": n, "job": COPYCAT_JOBS[k]} for k, n, _ in CREW] if copy else None,
@@ -317,6 +389,32 @@ def strategy_data(store: Store, cfg: dict, days_back: int = 7) -> dict:
         "event": event(store, latest),
         "equity": equity_series(store),
         "trades": store.rows("trades.csv")[-25:][::-1],
+        "recaps": [recap.build(store, d) for d in reversed(days[-days_back:])],
+    }
+
+
+def forex_data(store: Store, cfg: dict, days: list[str], run_count: int, lv: dict, latest: dict | None,
+               days_back: int) -> dict:
+    fx, rk = cfg["forex"], cfg["risk"]
+    rules = (f"Rules for this office: trades 7 currency pairs on an OANDA practice account. "
+             + (f"Buys a pair when it closes above its {fx['entry_days']}-day high and is above its "
+                f"{fx['trend_ema_days']}-day average, sells it when it closes below its {fx['entry_days']}-day low "
+                f"below the average, and gets out at the opposite {fx['exit_days']}-day high or low. "
+                if fx["style"] == "trend" else
+                f"Copies hedge funds' currency bets from the CFTC's weekly report when their net bet is "
+                f"{fx['min_net_pct']:g}%+ of all contracts, and gets out when it flips. ")
+             + f"Each trade risks about {rk['risk_per_trade_pct']}% of the account; leverage at most "
+               f"{rk['max_total_exposure_pct'] / 100:g}:1. Decides once a day, after 5pm New York time.")
+    return {
+        "name": cfg["name"], "title": cfg.get("title", cfg["name"].title()), "wing": "forex",
+        "crew": [{"id": k, "name": n, "job": FOREX_JOBS[cfg["name"]][k]} for k, n, _ in CREW if k in FOREX_IDS],
+        "rules": rules,
+        "limits": {k: rk[k] for k in ("max_daily_loss_pct", "max_total_loss_pct", "risk_per_trade_pct")},
+        "scan_every": cfg["scout"]["scan_every_minutes"], "min_confidence": 0, "max_hold_hours": 0,
+        "performance": store.performance(), "latest": latest,
+        "stations": forex_stations(latest, cfg), "captain": captain(latest, cfg["name"]),
+        "runs": run_count, "levels": {k: lv[k] for k in FOREX_IDS}, "event": event(store, latest),
+        "equity": equity_series(store), "trades": store.rows("trades.csv")[-25:][::-1],
         "recaps": [recap.build(store, d) for d in reversed(days[-days_back:])],
     }
 

@@ -15,7 +15,7 @@ on:
       strategy:
         description: Which strategy
         type: choice
-        options: [all, aggressive, medium, copycat]
+        options: [all, aggressive, medium, copycat, forex, fxcopy]
         default: all
       change:
         description: "Your own change to test, e.g. filters.btc_ema_bars=200 (leave empty to let Claude suggest one)"

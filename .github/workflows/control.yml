@@ -15,7 +15,7 @@ on:
       strategy:
         description: Which strategy account
         type: choice
-        options: [aggressive, medium, copycat]
+        options: [aggressive, medium, copycat, forex, fxcopy]
       amount:
         description: Dollar amount (deposits and withdrawals only)
         required: false
@@ -40,6 +40,9 @@ jobs:
       ALPACA_MEDIUM_SECRET_KEY: ${{ secrets.ALPACA_MEDIUM_SECRET_KEY }}
       ALPACA_COPYCAT_KEY_ID: ${{ secrets.ALPACA_COPYCAT_KEY_ID }}
       ALPACA_COPYCAT_SECRET_KEY: ${{ secrets.ALPACA_COPYCAT_SECRET_KEY }}
+      OANDA_API_TOKEN: ${{ secrets.OANDA_API_TOKEN }}
+      OANDA_FOREX_ACCOUNT_ID: ${{ secrets.OANDA_FOREX_ACCOUNT_ID }}
+      OANDA_FXCOPY_ACCOUNT_ID: ${{ secrets.OANDA_FXCOPY_ACCOUNT_ID }}
       ACTION: ${{ inputs.action }}
       STRATEGY: ${{ inputs.strategy }}
       AMOUNT: ${{ inputs.amount }}

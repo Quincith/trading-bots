@@ -1,8 +1,9 @@
 /* Bot World HQ: a space station drawn as flat 90s pixel art, seen from above like a floor plan.
    The Trading Wing holds one office per paper account (Aggressive, Medium, Copycat) side by side. Each office
    has six walled rooms, one per bot, with big wall screens showing the real numbers from that account's last run.
-   The whole wing shares one Captain's throne room and one beam room. Two more wings sit dark, waiting for
-   future businesses. Bots walk between their desk and their screens, couriers on scooters carry the work from
+   The whole station shares one Captain's throne room and one beam room. The Forex Wing (top left) holds two
+   smaller offices for the currency accounts (Forex and Copycat FX), three rooms each. One more wing sits dark,
+   waiting for a future business. Bots walk between their desk and their screens, couriers on scooters carry the work from
    room to room, and the camera can be dragged, zoomed and flown from room to room. Original art. */
 (function(){
 'use strict';
@@ -68,13 +69,14 @@ const COL = {scout: '#3ddc84', charts: '#3fd0e0', news: '#4aa3ff', sentiment: '#
 const ORDER = ['scout', 'charts', 'news', 'sentiment', 'risk', 'decision'];
 const NAMES = {scout: 'Scout', charts: 'Charts', news: 'News', sentiment: 'Sentiment', risk: 'Risk', decision: 'Decision'};
 // office accents and carpets, one per account (light denim, dark denim, black denim)
-const ACCENT = ['#8db8e3', '#4a7fd8', '#e8b45a'];
-const CARPET = [['#16304f', '#142c49'], ['#141f3d', '#121c37'], ['#1d1d26', '#1a1a22']];
+const ACCENT = ['#8db8e3', '#4a7fd8', '#e8b45a', '#5fe0b0', '#c48cff'];
+const CARPET = [['#16304f', '#142c49'], ['#141f3d', '#121c37'], ['#1d1d26', '#1a1a22'], ['#12302a', '#102b26'], ['#24183a', '#201535']];
+const FX_ORDER = ['scout', 'risk', 'decision'];   // a Forex wing office: spotter, Risk, Decision
 const WORKING = {found: 1, buy: 1, working: 1, blocked: 1};
 
 /* ---------- the station plan ---------- */
 const MOD = {
-  futureA: {x: 100, y: 70, w: 600, h: 400},
+  forex:   {x: 100, y: 70, w: 600, h: 400},
   throne:  {x: 760, y: 70, w: 280, h: 180},
   futureB: {x: 1100, y: 70, w: 600, h: 400},
   beam:    {x: 800, y: 300, w: 200, h: 170},
@@ -84,7 +86,7 @@ const MOD = {
 const EMIT = {x: 900, y: 396}, CAPTAIN = {x: 900, y: 200}, CAPSTOP = {x: 900, y: 236}, LANE = 550;
 const RW = 156, RH = 130;
 function officeGeo(i){
-  const ox = 80 + i * 560, oy = 580, g = {i, x: ox, y: oy, w: 520, h: 340, rooms: {}};
+  const ox = 80 + i * 560, oy = 580, g = {i, x: ox, y: oy, w: 520, h: 340, rooms: {}, ids: ORDER};
   g.home = {x: ox + 260, y: oy + 12};
   ORDER.forEach((id, n) => {
     const row = n < 3 ? 0 : 1, j = n % 3, rx = ox + 18 + j * 164, ry = oy + 26 + row * 154;
@@ -94,7 +96,20 @@ function officeGeo(i){
   });
   return g;
 }
-const OFFICES = [0, 1, 2].map(officeGeo);
+// Forex wing offices: one row of three rooms, stacked in the wing above the Trading Wing's left side
+const SPINE = 680, FXDOOR = 160;
+function fxGeo(i, n){
+  const ox = 140, oy = 96 + n * 192, g = {i, x: ox, y: oy, w: 520, h: 180, rooms: {}, ids: FX_ORDER, fx: true};
+  g.home = {x: ox + 260, y: oy + 12};
+  FX_ORDER.forEach((id, j) => {
+    const rx = ox + 18 + j * 164, ry = oy + 26;
+    g.rooms[id] = {id, x: rx, y: ry, w: RW, h: RH, row: 0, j, doorX: rx + 134, corrY: oy + 168,
+      seat: {x: rx + 60, y: ry + 84}, looks: [{x: rx + 20, y: ry + 70}, {x: rx + 112, y: ry + 70}],
+      greet: {x: rx + 106, y: ry + 108}, stop: {x: rx + 134, y: ry + 112}, hub: {x: rx + 142, y: ry + 72}};
+  });
+  return g;
+}
+const OFFICES = [0, 1, 2].map(officeGeo).concat([fxGeo(3, 0), fxGeo(4, 1)]);
 
 /* ---------- corridors as a little graph, so couriers and cables find their way ---------- */
 const GR = new Map();
@@ -110,6 +125,15 @@ function chain(...pts){
 const pt = (x, y) => ({x, y});
 for(const g of OFFICES){
   const ox = g.x, oy = g.y, hy = oy + 12, y1 = oy + 168, y2 = oy + 325, lx = ox + 9, rx = ox + 511;
+  if(g.fx){
+    // one corridor under the rooms; the office door is on the east side, onto the wing's spine
+    chain(pt(lx, hy), pt(ox + 260, hy), pt(rx, hy), pt(SPINE, hy));
+    chain(pt(lx, hy), pt(lx, y1)); chain(pt(rx, hy), pt(rx, y1));
+    const rooms = FX_ORDER.map(id => g.rooms[id]);
+    chain(pt(lx, y1), ...rooms.map(r => pt(r.doorX, y1)), pt(rx, y1));
+    for(const r of rooms) chain(pt(r.doorX, r.corrY), r.stop);
+    continue;
+  }
   chain(pt(lx, hy), pt(ox + 260, hy), pt(rx, hy));
   chain(pt(lx, hy), pt(lx, y1), pt(lx, y2));
   chain(pt(rx, hy), pt(rx, y1), pt(rx, y2));
@@ -120,6 +144,9 @@ for(const g of OFFICES){
   chain(pt(ox + 260, hy), pt(ox + 260, oy), pt(ox + 260, LANE));
 }
 chain(pt(340, LANE), pt(900, LANE), pt(1460, LANE));
+// the Forex wing's spine runs past both offices to the open door into the throne room
+chain(pt(SPINE, OFFICES[3].y + 12), pt(SPINE, FXDOOR), pt(SPINE, OFFICES[4].y + 12));
+chain(pt(SPINE, FXDOOR), pt(780, FXDOOR), pt(780, 236), CAPSTOP);
 chain(pt(900, LANE), pt(900, 470), pt(900, 458), pt(836, 458), pt(836, 362), pt(900, 362), pt(900, 300), pt(900, 250), CAPSTOP);
 function route(a, b){
   const start = key(a), goal = key(b), dist = new Map([[start, 0]]), prev = new Map(), todo = new Set([start]);
@@ -154,11 +181,17 @@ function along(cb, d){
 const LANES = {scout: -6, charts: -3, news: 0, sentiment: 3, risk: 6};
 for(const g of OFFICES){
   const dec = g.rooms.decision, shift = (pts, o) => pts.map(p => ({x: p.x + o, y: p.y + o}));
-  g.cables = ['scout', 'charts', 'news', 'sentiment', 'risk'].map(id => {
+  g.cables = g.ids.filter(id => id !== 'decision').map(id => {
     const r = g.rooms[id], o = LANES[id], mid = shift(route(r.stop, dec.stop), o);
     return measure({id, col: COL[id], pts: manhattan([{x: r.x + 92, y: r.y + 82}, {x: r.x + 92 + o, y: r.y + 118 + o}, ...mid, {x: dec.hub.x + o, y: dec.y + 118 + o}, {x: dec.hub.x + o, y: dec.hub.y + 4}])});
   });
-  const o = (g.i - 1) * 6, mid = shift(route(dec.stop, pt(900, 470)), o);
+  const o = (g.i - 1) * 6;
+  if(g.fx){   // from the Forex wing, through the throne room and into the beam room from the top
+    const mid = shift(route(dec.stop, pt(900, 300)), o);
+    g.gold = measure({id: 'beam', col: P.gold, pts: manhattan([dec.hub, {x: dec.hub.x, y: dec.y + 118 + o}, ...mid.slice(1), {x: 900 + o, y: EMIT.y - 18}])});
+    continue;
+  }
+  const mid = shift(route(dec.stop, pt(900, 470)), o);
   g.gold = measure({id: 'beam', col: P.gold, pts: manhattan([dec.hub, {x: dec.hub.x, y: dec.y + 118 + o}, ...mid.slice(1), {x: 900 + o, y: EMIT.y + 18}])});
 }
 
@@ -384,29 +417,31 @@ function officeStatic(c, g, S){
   const acc = ACCENT[g.i], [ca, cb] = CARPET[g.i], ox = g.x, oy = g.y;
   floor(c, ox, oy, g.w, g.h, ca, cb, 10);
   // corridors inside the office are a little lighter, with gold guide dashes for the couriers
-  for(const y of [oy + 156, oy + 310]) rect(c, ox, y, g.w, y === oy + 156 ? 24 : 30, '#1a2442');
+  const halls = g.fx ? [oy + 156] : [oy + 156, oy + 310], dashes = g.fx ? [oy + 168] : [oy + 168, oy + 325];
+  for(const y of halls) rect(c, ox, y, g.w, y === oy + 156 ? 24 : 30, '#1a2442');
   rect(c, ox, oy, g.w, 26, '#1a2442'); rect(c, ox, oy, 18, g.h, '#1a2442'); rect(c, ox + g.w - 18, oy, 18, g.h, '#1a2442');
-  for(let x = ox + 12; x < ox + g.w - 12; x += 8) for(const y of [oy + 168, oy + 325]) rect(c, x, y, 4, 1, P.lane);
+  for(let x = ox + 12; x < ox + g.w - 12; x += 8) for(const y of dashes) rect(c, x, y, 4, 1, P.lane);
   for(let y = oy + 16; y < oy + g.h - 8; y += 8) for(const x of [ox + 9, ox + 511]) rect(c, x, y, 1, 4, P.lane);
   // outer walls with the account's accent light and a door to the wing hall
   rect(c, ox - 4, oy - 4, g.w + 8, 4, P.wallTop); rect(c, ox - 4, oy + g.h, g.w + 8, 4, P.wallTop);
   rect(c, ox - 4, oy - 4, 4, g.h + 8, P.wallTop); rect(c, ox + g.w, oy - 4, 4, g.h + 8, P.wallTop);
   rect(c, ox, oy, g.w, 1, acc); rect(c, ox, oy + g.h - 1, g.w, 1, hexA(acc, .6));
-  rect(c, ox + 248, oy - 4, 24, 5, '#1a2442'); rect(c, ox + 247, oy - 4, 1, 5, acc); rect(c, ox + 272, oy - 4, 1, 5, acc);
+  if(g.fx){ rect(c, ox + g.w - 1, oy, 6, 24, '#1a2442'); rect(c, ox + g.w - 1, oy - 1, 6, 1, acc); rect(c, ox + g.w - 1, oy + 24, 6, 1, acc); }
+  else { rect(c, ox + 248, oy - 4, 24, 5, '#1a2442'); rect(c, ox + 247, oy - 4, 1, 5, acc); rect(c, ox + 272, oy - 4, 1, 5, acc); }
   // sign and account value
-  const name = (S.name || ['aggressive', 'medium', 'copycat'][g.i]) + ' office';
+  const name = (S.title || S.name || ['aggressive', 'medium', 'copycat', 'forex', 'copycat fx'][g.i]) + ' office';
   txt(c, name, ox + 24, oy + 8, acc, 2);
   const perf = S.performance || {}, v = perf.equity != null ? perf.equity : (S.latest ? S.latest.equity : 0), pl = perf.profit || 0;
   const vs = usd(v); txt(c, vs, ox + g.w - 26 - tw(vs, 2), oy + 8, P.ink, 2);
   const ps = signed(pl); txt(c, ps, ox + g.w - 26 - tw(vs, 2) - tw(ps) - 8, oy + 12, pl >= 0 ? P.good : P.bad);
-  for(const id of ORDER){
+  for(const id of g.ids){
     const r = g.rooms[id];
     room(c, r, COL[id], [{side: 'S', x: r.doorX}]);
   }
   // floor cables, drawn before the furniture so desks sit on top
   for(const cb of g.cables) cable(c, cb, hexA(cb.col, .5), 1);
   cable(c, g.gold, '#8a6a2c', 3); cable(c, g.gold, P.gold, 1);
-  for(const id of ORDER) roleStatic(c, g, g.rooms[id], id, S);
+  for(const id of g.ids) roleStatic(c, g, g.rooms[id], id, S);
 }
 function cable(c, cb, col, w){
   c.fillStyle = col;
@@ -416,6 +451,7 @@ function cable(c, cb, col, w){
 function roleStatic(c, g, r, id, S){
   const col = COL[id], st = (S.stations || {})[id] || {say: 'Waiting for the first run.', status: 'idle'}, L = S.latest, cands = L ? (L.candidates || []) : [];
   const c0 = cands[0], isCopy = S.name === 'copycat', f = L && L.filings || {};
+  if(S.wing === 'forex') return fxRoleStatic(c, g, r, id, S, st);
   const titles = {scout: isCopy ? 'FILINGS' : 'SCANNER', charts: c0 && c0.entry ? short(c0.symbol) + ' PLAN' : 'ACCOUNT', news: 'HEADLINES',
                   sentiment: 'MOOD    HYPE', risk: 'LIMITS', decision: 'THE CALL'};
   const A = screen(c, r.x + 6, r.y + 6, 72, 42, col, titles[id]), C = screen(c, r.x + 82, r.y + 6, 68, 42, col, 'STATUS');
@@ -480,10 +516,55 @@ function roleStatic(c, g, r, id, S){
   if(id === 'news'){ for(let i = 0; i < 5; i++){ rect(c, px - 8 + (i % 2), py + 26 - i * 4, 16, 4, i % 2 ? '#d8d2c4' : '#ece7dc'); rect(c, px - 6 + (i % 2), py + 27 - i * 4, 9, 1, '#7a7466'); } }
   if(id === 'sentiment'){ rect(c, px - 7, py, 14, 24, '#171b26'); circle(c, px, py + 7, 3, '#3a4258', true); circle(c, px, py + 17, 4, '#3a4258', true); rect(c, px - 1, py + 16, 2, 2, col); }
   if(id === 'risk'){ circle(c, px - 1, py + 14, 9, '#2a3045', true); circle(c, px - 1, py + 14, 9, '#5d6b85'); rect(c, px - 2, py + 8, 2, 12, '#8d97a6'); rect(c, px - 7, py + 13, 12, 2, '#8d97a6'); circle(c, px - 1, py + 14, 2, P.gold, true); }
+  namePlate(c, r, id, S);
+}
+function namePlate(c, r, id, S){
+  const col = COL[id];
   // the name plate below the desk; the level is static, the run timer is drawn live
   rect(c, r.x + 22, r.y + 95, 76, 16, '#070b16'); rect(c, r.x + 22, r.y + 95, 76, 1, P.goldDark); rect(c, r.x + 22, r.y + 95, 1, 16, col);
   const lv = (S.levels || {})[id] || 1;
   txt(c, `${NAMES[id]} LV ${lv}`, r.x + 26, r.y + 98, P.gold, 1, 17);
+}
+// Forex wing rooms: the spotter's board of pairs (or the hedge funds' bets), Risk's limits, and the call
+function fxRoleStatic(c, g, r, id, S, st){
+  const col = COL[id], L = S.latest, fx = L && L.forex || {}, pairs = Object.entries(fx.pairs || {}), cot = fx.style === 'cot';
+  const A = screen(c, r.x + 6, r.y + 6, 72, 42, col, id === 'scout' ? (cot ? 'FUNDS BET' : 'PAIRS') : id === 'risk' ? 'LIMITS' : 'THE CALL');
+  const C = screen(c, r.x + 82, r.y + 6, 68, 42, col, 'STATUS');
+  r.dyn = {};
+  if(id === 'scout'){
+    if(!pairs.length) lines(c, ['WAITING FOR', 'THE DAY TO', 'END: 5PM NY'], A.x, A.y, A.w, P.dim, 3);
+    else if(cot){ const bets = pairs.filter(([, x]) => x.net != null).sort((a, b) => Math.abs(b[1].net) - Math.abs(a[1].net));
+      lines(c, bets.map(([, x]) => `${x.ccy} ${(x.net >= 0 ? '+' : '') + x.net.toFixed(0)}%`), A.x, A.y, A.w, (i) => bets[i] && bets[i][1].direction ? col : P.ink, 4); }
+    else lines(c, pairs.map(([p, x]) => `${p.replace('_', '').slice(0, 6)} ${x.direction > 0 ? 'UP' : x.direction < 0 ? 'DN' : '--'}`), A.x, A.y, A.w,
+      (i) => pairs[i] && pairs[i][1].direction ? col : P.ink, 4);
+  } else if(id === 'risk'){
+    const lim = S.limits || {max_daily_loss_pct: 1, max_total_loss_pct: 1};
+    const today = L && L.day_start_equity ? (L.equity - L.day_start_equity) / L.day_start_equity * 100 : 0;
+    const perf = S.performance || {}, tot = perf.net_deposits ? Math.min(0, perf.profit) / perf.net_deposits * 100 : 0;
+    bar(c, A.x, A.y, A.w, 'DAY', Math.max(0, -today) / lim.max_daily_loss_pct);
+    bar(c, A.x, A.y + 7, A.w, 'TOTAL', Math.max(0, -tot) / lim.max_total_loss_pct);
+    bar(c, A.x, A.y + 14, A.w, 'HELD', L ? Math.min(1, (L.positions || []).length / 4) : 0);
+    txt(c, 'MAX 3:1', A.x, A.y + 23, P.dim);
+    r.dyn.alarm = {x: r.x + 74, y: r.y + 1};
+  } else {
+    const calls = pairs.map(([, x]) => x.decision), on = calls.includes('BUY') ? 'BUY' : calls.includes('SELL') ? 'SELL' : 'WAIT';
+    [['BUY', P.good], ['SELL', P.bad], ['WAIT', P.gold]].forEach(([w, cc], i) => {
+      const x = A.x + i * 22, y = A.y + 1, lit = on === w;
+      rect(c, x, y, 20, 14, lit ? hexA(cc, .25) : '#0a1420'); frame(c, x, y, 20, 14, lit ? cc : '#1d2a40');
+      txt(c, w, x + Math.round((20 - tw(w)) / 2), y + 5, lit ? cc : '#2c3850');
+    });
+    const n = L ? (L.positions || []).length : 0; txt(c, `${n} OPEN`, A.x, A.y + 20, P.dim);
+    rect(c, r.hub.x - 6, r.hub.y - 5, 12, 11, '#20283f'); rect(c, r.hub.x - 6, r.hub.y - 5, 12, 2, P.gold); rect(c, r.hub.x - 2, r.hub.y, 4, 3, '#36ff7a');
+    rect(c, r.x + 8, r.y + 80, 18, 10, '#2a3045'); for(let i = 0; i < 18; i += 4) rect(c, r.x + 8 + i, r.y + 88, 2, 2, P.gold);
+  }
+  lines(c, wrap(st.say, 15), C.x, C.y, C.w, P.ink, 5);
+  plant(c, r.x + 13, r.y + 124);
+  const px = r.x + 142, py = r.y + 56;
+  if(id === 'scout'){   // a little globe: currencies trade around the clock, around the world
+    circle(c, px, py + 12, 8, '#1f5a8a', true); rect(c, px - 5, py + 8, 4, 3, '#3a9a5a'); rect(c, px + 1, py + 13, 5, 4, '#3a9a5a'); circle(c, px, py + 12, 8, '#9aa3b5');
+    rect(c, px - 1, py + 20, 2, 3, '#5d6b85'); rect(c, px - 5, py + 23, 10, 2, '#3a4a72'); }
+  if(id === 'risk'){ circle(c, px - 1, py + 14, 9, '#2a3045', true); circle(c, px - 1, py + 14, 9, '#5d6b85'); rect(c, px - 2, py + 8, 2, 12, '#8d97a6'); rect(c, px - 7, py + 13, 12, 2, '#8d97a6'); circle(c, px - 1, py + 14, 2, P.gold, true); }
+  namePlate(c, r, id, S);
 }
 function candles(c, A, c0){
   const lo = Math.min(c0.stop, c0.support || c0.stop) * .997, hi = Math.max(c0.target, c0.resistance || c0.target) * 1.003;
@@ -529,7 +610,7 @@ function throneStatic(c, D, names){
   // wing totals on two screens
   let pl = 0, held = 0, runs = 0;
   for(const n of names){ const S = D.strategies[n]; pl += (S.performance || {}).profit || 0; held += S.latest ? (S.latest.positions || []).length : 0; runs += S.runs || 0; }
-  const A = screen(c, T.x + 14, T.y + 64, 50, 32, P.gold, 'WING P/L'), B = screen(c, T.x + T.w - 64, T.y + 64, 50, 32, P.gold, 'HELD');
+  const A = screen(c, T.x + 14, T.y + 64, 50, 32, P.gold, 'HQ P/L'), B = screen(c, T.x + T.w - 64, T.y + 64, 50, 32, P.gold, 'HELD');
   txt(c, signed(pl), A.x, A.y + 4, pl >= 0 ? P.good : P.bad, 1, 11);
   txt(c, String(held), B.x + Math.round((B.w - tw(String(held), 2)) / 2), B.y + 2, P.ink, 2);
   rect(c, T.x + 14, T.y + 150, 70, 16, '#070b16'); rect(c, T.x + 14, T.y + 150, 70, 1, P.goldDark);
@@ -540,9 +621,9 @@ function beamStatic(c, D, names){
   const B = MOD.beam;
   room(c, B, '#36ff7a', [{side: 'N', x: 900}, {side: 'S', x: 900}]);
   let total = 0;
-  const A = screen(c, B.x + 6, B.y + 6, 80, 40, P.gold, 'WING VALUE'), R = screen(c, B.x + 114, B.y + 6, 80, 40, P.gold, 'OFFICES');
+  const A = screen(c, B.x + 6, B.y + 6, 80, 44, P.gold, 'HQ VALUE'), R = screen(c, B.x + 114, B.y + 6, 80, 44, P.gold, 'OFFICES');
   names.forEach((n, i) => { const S = D.strategies[n], perf = S.performance || {}, v = perf.equity != null ? perf.equity : (S.latest ? S.latest.equity : 0); total += +v || 0;
-    txt(c, n.slice(0, 3) + ' ' + usd(v), R.x, R.y + i * 7, ACCENT[i], 1, 18); });
+    txt(c, (n === 'fxcopy' ? 'fxc' : n.slice(0, 3)) + ' ' + usd(v), R.x, R.y + i * 6, ACCENT[i], 1, 18); });
   const s = usd(total); txt(c, s, A.x + Math.max(0, Math.round((A.w - tw(s, 2)) / 2)), A.y + 6, P.ink, 2);
   for(let i = 0; i < 44; i++){ const a = i / 44 * Math.PI * 2; rect(c, Math.round(EMIT.x + Math.cos(a) * 26) - 1, Math.round(EMIT.y + Math.sin(a) * 17) - 1, 3, 2, i % 2 ? P.gold : '#111'); }
   circle(c, EMIT.x, EMIT.y, 14, '#1b2440', true); circle(c, EMIT.x, EMIT.y, 10, '#2a3658', true); circle(c, EMIT.x, EMIT.y, 14, '#4a5a86');
@@ -552,9 +633,9 @@ function loungeStatic(c, D, names){
   const L = MOD.lounge;
   room(c, L, P.gold, [{side: 'N', x: 900}]);
   // today's change for each office
-  const A = screen(c, L.x + 8, L.y + 6, 106, 40, P.gold, 'TODAY');
+  const A = screen(c, L.x + 8, L.y + 6, 106, 44, P.gold, 'TODAY');
   names.forEach((n, i) => { const R = D.strategies[n].latest, t = R && R.day_start_equity ? (R.equity - R.day_start_equity) / R.day_start_equity * 100 : 0;
-    txt(c, n, A.x, A.y + i * 7, ACCENT[i], 1, 11); const s = (t >= 0 ? '+' : '') + t.toFixed(2) + '%'; txt(c, s, A.x + A.w - tw(s), A.y + i * 7, t >= 0 ? P.good : P.bad); });
+    txt(c, D.strategies[n].title || n, A.x, A.y + i * 6, ACCENT[i], 1, 11); const s = (t >= 0 ? '+' : '') + t.toFixed(2) + '%'; txt(c, s, A.x + A.w - tw(s), A.y + i * 6, t >= 0 ? P.good : P.bad); });
   // two arcade cabinets and a row of servers
   for(const ax of [L.x + 190, L.x + 222]){ rect(c, ax, L.y + 10, 24, 40, '#2a1640'); rect(c, ax, L.y + 10, 24, 3, '#b06cff'); rect(c, ax + 4, L.y + 16, 16, 12, '#061018');
     rect(c, ax + 6, L.y + 34, 3, 3, '#ff5a5a'); rect(c, ax + 14, L.y + 34, 3, 3, '#3ddc84'); rect(c, ax + 2, L.y + 42, 20, 2, '#e8b45a'); }
@@ -599,6 +680,19 @@ function futureStatic(c, m, label, flip){
   rect(c, dx, 148, 4, 24, '#5a1a1a'); rect(c, dx, 158, 4, 4, '#ff3b3b');
   txt(c, 'LOCKED', flip ? m.x + 8 : m.x + m.w - 8 - tw('LOCKED'), 157, '#a33a3a');
 }
+function forexWingStatic(c, m){
+  floor(c, m.x, m.y, m.w, m.h, P.hallA, P.hallB, 16);
+  // the spine corridor to the throne room, with gold guide dashes, and an open, lit door
+  rect(c, SPINE - 16, m.y + 26, 32, m.h - 30, '#14283c');
+  for(let y = m.y + 34; y < m.y + m.h - 8; y += 10) rect(c, SPINE, y, 1, 5, P.lane);
+  for(let x = SPINE; x < m.x + m.w; x += 10) rect(c, x, FXDOOR, 5, 1, P.lane);
+  const dx = m.x + m.w - 4; rect(c, dx, FXDOOR - 12, 4, 24, P.hallB); rect(c, dx, FXDOOR - 13, 4, 1, '#5fe0b0'); rect(c, dx, FXDOOR + 12, 4, 1, '#5fe0b0');
+  txt(c, 'FOREX WING', m.x + 40, m.y + 8, P.gold, 2);
+  // three world clocks: forex trades around the clock, from Tokyo to London to New York
+  for(const [i, city] of [[0, 'TOKYO'], [1, 'LONDON'], [2, 'NEW YORK']]){ const x = m.x + 250 + i * 104;
+    rect(c, x, m.y + 4, 96, 18, P.bezel); rect(c, x + 1, m.y + 5, 94, 16, P.screen); txt(c, city, x + 4, m.y + 8, P.dim); }
+  for(const y of [m.y + 120, m.y + 300]) plant(c, SPINE + 8, y);
+}
 function hallStatic(c){
   const h = MOD.hall;
   floor(c, h.x, h.y, h.w, h.h, P.hallA, P.hallB, 16);
@@ -624,19 +718,21 @@ function drawStatic(c, D, names){
   // windows in the outer hull
   for(let x = MOD.hall.x + 20; x < MOD.hall.x + MOD.hall.w - 60; x += 70) if(Math.abs(x + 20 - 900) > 70){ windowH(c, x, MOD.hall.y - 8, 40); windowH(c, x, MOD.hall.y + MOD.hall.h + 3, 40); }
   for(let y = MOD.hall.y + 30; y < MOD.hall.y + MOD.hall.h - 40; y += 70){ windowV(c, MOD.hall.x - 8, y, 40); windowV(c, MOD.hall.x + MOD.hall.w + 3, y, 40); }
-  for(const m of [MOD.futureA, MOD.futureB]) for(let x = m.x + 30; x < m.x + m.w - 40; x += 80) windowH(c, x, m.y - 7, 40, true);
+  for(let x = MOD.forex.x + 30; x < MOD.forex.x + MOD.forex.w - 40; x += 80) windowH(c, x, MOD.forex.y - 7, 40);
+  for(let x = MOD.futureB.x + 30; x < MOD.futureB.x + MOD.futureB.w - 40; x += 80) windowH(c, x, MOD.futureB.y - 7, 40, true);
   for(const m of [MOD.beam, MOD.lounge]){ windowV(c, m.x - 7, m.y + 60, 50); windowV(c, m.x + m.w + 2, m.y + 60, 50); }
-  futureStatic(c, MOD.futureA, 'COMING SOON', false);
+  forexWingStatic(c, MOD.forex);
   futureStatic(c, MOD.futureB, 'COMING SOON', true);
   hallStatic(c);
-  OFFICES.forEach((g, i) => officeStatic(c, g, D.strategies[names[i]] || {name: ['aggressive', 'medium', 'copycat'][i], stations: {}}));
+  OFFICES.forEach((g, i) => officeStatic(c, g, D.strategies[names[i]] || {name: ['aggressive', 'medium', 'copycat', 'forex', 'fxcopy'][i],
+    wing: g.fx ? 'forex' : null, stations: {}}));
   throneStatic(c, D, names); beamStatic(c, D, names); loungeStatic(c, D, names);
 }
 
 /* ---------- the world ---------- */
 function init(o){
   const stage = o.stage, canvas = o.canvas, ctx = canvas.getContext('2d'), D = o.data;
-  const names = Object.keys(D.strategies).slice(0, OFFICES.length);   // one office per account; three slots for now
+  const names = Object.keys(D.strategies).slice(0, OFFICES.length);   // one office per account: 3 trading, 2 forex
   const map = document.createElement('canvas'); map.width = W; map.height = H; const mc = map.getContext('2d');
   const base = document.createElement('canvas'); base.width = W; base.height = H; const bc = base.getContext('2d');
   const reduced = !!o.reduced, sfx = o.sfx || {};
@@ -649,7 +745,7 @@ function init(o){
   let time = 0;
   const offices = OFFICES.map((g, i) => {
     const S = strat(i), bots = {};
-    for(const id of ORDER){ const r = g.rooms[id], st = (S.stations || {})[id] || {};
+    for(const id of g.ids){ const r = g.rooms[id], st = (S.stations || {})[id] || {};
       bots[id] = {id, r, x: r.seat.x, y: r.seat.y, path: [], at: 'seat', next: null, until: 1 + Math.random() * 6, face: 'front', walk: 0,
         working: !!WORKING[st.status], talk: 0, mood: null, moodUntil: 0, splat: 0}; }
     return {g, i, bots, courier: {x: g.home.x, y: g.home.y, at: g.home, path: [], dir: 1, done: null}};
@@ -707,7 +803,7 @@ function init(o){
       if(Math.abs(p.x - b.x) < 14 && p.y > b.y - 42 && p.y < b.y + 2) return pick(ofc.i, b.id);
     if(inside(p, {x: 840, y: 90, w: 120, h: 130})) return pick(cur, 'captain');
     for(const ofc of offices){
-      for(const id of ORDER){ const r = ofc.g.rooms[id]; if(inside(p, r)){ if(focus === ofc.i + id) return flyOffice(ofc.i); return pick(ofc.i, id); } }
+      for(const id of ofc.g.ids){ const r = ofc.g.rooms[id]; if(inside(p, r)){ if(focus === ofc.i + id) return flyOffice(ofc.i); return pick(ofc.i, id); } }
       if(inside(p, ofc.g)){ if(focus === 'o' + ofc.i){ fit(); return; } return flyOffice(ofc.i, true); }
     }
     for(const [k, m] of Object.entries(MOD)) if(inside(p, m)){ if(focus === k || k === 'hall'){ fit(); return; } if(k === 'throne') return pick(cur, 'captain'); focus = k; return fly(m, 12); }
@@ -759,8 +855,8 @@ function init(o){
     h += `<button type="button" class="crew-row cap" data-i="${cur}" data-id="captain"><img alt="" src="${capPic}"><span class="cr-main"><span class="cr-name">Captain <i>Lv ${1 + Math.floor(runs / 10)}</i></span><span class="cr-say">${esc(S0.captain || '')}</span></span><span class="cr-side"><span class="cr-chip on">Watching</span></span></button>`;
     offices.forEach(ofc => {
       const S = strat(ofc.i), perf = S.performance || {}, v = perf.equity != null ? perf.equity : (S.latest ? S.latest.equity : 0);
-      h += `<div class="crew-grp${ofc.i === cur ? ' sel' : ''}"><button type="button" class="crew-office" data-i="${ofc.i}"><span>${esc(names[ofc.i] || '')} office</span><b>${usd(v)}</b></button>`;
-      for(const id of ORDER){
+      h += `<div class="crew-grp${ofc.i === cur ? ' sel' : ''}"><button type="button" class="crew-office" data-i="${ofc.i}"><span>${esc(S.title || names[ofc.i] || '')} office</span><b>${usd(v)}</b></button>`;
+      for(const id of ofc.g.ids){
         const st = (S.stations || {})[id] || {}, on = !!WORKING[st.status]; on ? work++ : idle++;
         h += `<button type="button" class="crew-row" data-i="${ofc.i}" data-id="${id}"><img alt="" src="${sprite(id, outfit(ofc.i), 2)}"><span class="cr-main"><span class="cr-name">${NAMES[id]} <i>Lv ${(S.levels || {})[id] || 1}</i></span><span class="cr-say">${esc(st.say || '')}</span></span><span class="cr-side"><span class="cr-chip ${on ? 'work' : 'idle'}">${on ? 'Working' : 'Idle'}</span><span class="cr-time" data-t="${ofc.i}"></span></span></button>`;
       }
@@ -799,7 +895,7 @@ function init(o){
   }
   async function round(ofc, tok){
     const main = ofc.i === cur, S = strat(ofc.i), cr = ofc.courier;
-    for(const id of ORDER){
+    for(const id of ofc.g.ids){
       if(!(await goTo(cr, ofc.g.rooms[id].stop, tok))) return;
       const b = ofc.bots[id]; walkTo(b, 'greet', main ? 3.4 : 2.2); b.talk = time + (main ? 3.2 : 2);
       if(main){ o.onVisit && o.onVisit(id); sfx.beep && sfx.beep(); bubble(b, ((S.stations || {})[id] || {}).say || ''); }
@@ -818,6 +914,7 @@ function init(o){
   function replay(){ const tok = ++token; bubble(null, ''); offices.forEach(ofc => round(ofc, tok)); }
 
   /* effects for the office you're watching */
+  let clocks = [];
   let fx = [], parts = [], beamCharge = 0, buyPulse = 0, laser = 0, flash = 0, alarm = 0, fxOffice = cur;
   function play(kind){ fxOffice = cur; if(kind !== 'win' && fitted) flyOffice(cur); if(kind === 'win') win(); else if(kind === 'loss') loss(); else if(kind === 'buy') buy(); }
   function crew(mood, secs){ for(const b of Object.values(offices[cur].bots)){ b.mood = mood; b.moodUntil = time + secs; } }
@@ -830,7 +927,7 @@ function init(o){
   }
   function loss(){
     sfx.womp && sfx.womp(); crew('sad', 5); cap.glare = time + 4;
-    const ofc = offices[cur], targets = ORDER.map(id => ({b: ofc.bots[id], id})).concat([{id: 'captain', x: CAPTAIN.x, y: CAPTAIN.y - 70}]);
+    const ofc = offices[cur], targets = ofc.g.ids.map(id => ({b: ofc.bots[id], id})).concat([{id: 'captain', x: CAPTAIN.x, y: CAPTAIN.y - 70}]);
     targets.forEach((tg, i) => setTimeout(() => {
       const end = () => tg.b ? {x: tg.b.x, y: tg.b.y - 30} : tg, s = end(), sx = s.x + (Math.random() - .5) * 120, sy = tg.b ? OFFICES[cur].y + OFFICES[cur].h + 20 : MOD.beam.y + 60;
       fx.push({t: 0, dur: .8, update(dt){ this.t += dt; if(this.t >= this.dur){ splat(tg, end()); return false; } return true; },
@@ -887,14 +984,18 @@ function init(o){
     for(const [x, y, col] of [[32, 512, '#ff3b3b'], [1768, 512, '#36ff7a'], [32, 958, '#ff3b3b'], [1768, 958, '#36ff7a'], [900, 18, '#ff3b3b']]) rect(c, x - 1, y - 1, 3, 3, blink ? col : hexA(col, .3));
     const sx = ((t * 38) % 2600) - 400; rect(c, sx, 1174, 22, 7, '#9aa3b5'); rect(c, sx + 4, 1176, 14, 2, P.gold); rect(c, sx + 22, 1175, 4, 5, '#d6f2ff'); rect(c, sx - 5 - (Math.floor(t * 10) % 2) * 2, 1176, 5, 3, '#4aa3ff');
     // a light that flickers in each dark wing
-    for(const [m, ph] of [[MOD.futureA, 0], [MOD.futureB, 2.1]]){ const on = Math.sin(t * 13 + ph) + Math.sin(t * 7.3 + ph * 3) > 1.2;
+    for(const [m, ph] of [[MOD.futureB, 2.1]]){ const on = Math.sin(t * 13 + ph) + Math.sin(t * 7.3 + ph * 3) > 1.2;
       if(on){ for(let i = 0; i < 4; i++) circle(c, m.x + 300, m.y + 150, 70 - i * 15, 'rgba(255,230,170,.04)', true); } rect(c, m.x + 296, m.y + 147, 8, 3, on ? '#ffe6aa' : '#3a3424'); }
+    // the Forex wing's world clocks (forex trades 24 hours a day, 5 days a week)
+    if(Math.floor(t * 2) % 2 === 0 || !clocks.length){ const d = new Date();
+      clocks = ['Asia/Tokyo', 'Europe/London', 'America/New_York'].map(z => { try { return d.toLocaleTimeString('en-GB', {timeZone: z, hour: '2-digit', minute: '2-digit'}); } catch(e){ return '--:--'; } }); }
+    clocks.forEach((s, i) => txt(c, s, MOD.forex.x + 250 + i * 104 + 92 - tw(s), MOD.forex.y + 8, '#5fe0b0'));
     // the office you're watching glows gold at the edges
     const sg = OFFICES[cur], pulse = .45 + .35 * Math.sin(t * 2.4); frame(c, sg.x - 6, sg.y - 6, sg.w + 12, sg.h + 12, hexA(P.gold, pulse)); frame(c, sg.x - 7, sg.y - 7, sg.w + 14, sg.h + 14, hexA(P.gold, pulse * .4));
     const charging = beamCharge && t - beamCharge < 1.2, buying = buyPulse && t - buyPulse < 1.6, hot = charging || (laser && t - laser < 3);
     for(const ofc of offices){
       const S = strat(ofc.i), g = ofc.g, me = ofc.i === fxOffice;
-      for(const id of ORDER){
+      for(const id of g.ids){
         const d = g.rooms[id].dyn || {}, col = COL[id];
         if(d.radar){ const rr = d.radar; circle(c, rr.x, rr.y, rr.r, hexA(col, .35)); circle(c, rr.x, rr.y, rr.r / 2, hexA(col, .2));
           const a = t * 2.4 + ofc.i; for(let i = 0; i < rr.r; i++) rect(c, Math.round(rr.x + Math.cos(a) * i), Math.round(rr.y + Math.sin(a) * i), 1, 1, col);
@@ -916,10 +1017,10 @@ function init(o){
       }
       // name plate timers: how long since this crew's last run
       const lr = lastRun(ofc.i), secs = lr ? (Date.now() - lr) / 1000 : null;
-      for(const id of ORDER){ const r = g.rooms[id], b = ofc.bots[id];
+      for(const id of g.ids){ const r = g.rooms[id], b = ofc.bots[id];
         txt(c, secs == null ? 'NO RUNS YET' : (b.working ? 'RUN ' : 'IDLE ') + clock(secs), r.x + 26, r.y + 104, b.working ? '#36ff7a' : P.dim); }
       // bots and desks: a bot behind its desk is drawn first, a bot in front of it after
-      for(const id of ORDER){
+      for(const id of g.ids){
         const b = ofc.bots[id], r = b.r, cheer = b.mood === 'cheer', behind = b.y < r.y + 90;
         const sleeping = !b.working && b.at === 'seat' && !b.mood && b.talk < t;
         const drawBot = () => minion(c, Math.round(b.x), Math.round(b.y), id, outfit(ofc.i), {back: b.face === 'back' && !b.mood && b.talk < t,
