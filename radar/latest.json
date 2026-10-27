@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27T14:28:31+00:00",
+ "time": "2026-10-27T15:03:28+00:00",
  "coins": {
   "BTC": {
    "recent": 16,
@@ -13,8 +13,8 @@
    ],
    "trending": 1,
    "rule_score": 0.7,
-   "score": -0.3,
-   "note": "Heavy headline volume, but mostly price talk and a dip below $80K; mixed signals."
+   "score": -0.1,
+   "note": "Heavy buzz but mostly price recaps, profit-taking and cautious analysts ahead of FOMC; no clear new catalyst."
   },
   "ETH": {
    "recent": 3,
@@ -26,10 +26,10 @@
     "Robinhood Earnings Prediction Market Preview: What Will Vlad Tenev Say?",
     "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser"
    ],
-   "trending": null,
-   "rule_score": 0.4,
-   "score": -0.1,
-   "note": "Few headlines; a Glamsterdam bug was fixed early, otherwise quiet and mildly weak."
+   "trending": 6,
+   "rule_score": 0.55,
+   "score": 0.1,
+   "note": "Few headlines; tokenized fund news is mildly positive, but Glamsterdam bug fix is a minor risk being handled."
   },
   "SOL": {
    "recent": 1,
@@ -39,10 +39,10 @@
    "headlines": [
     "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser"
    ],
-   "trending": 6,
+   "trending": 7,
    "rule_score": 0.15,
    "score": -0.1,
-   "note": "Only one item; a bug bounty spam story is minor and not a real catalyst."
+   "note": "Solana bug bounty now costs 1 SOL due to AI spam; small security-process story, slightly negative tone."
   },
   "AVAX": {
    "recent": 0,
@@ -50,10 +50,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 12,
+   "trending": 9,
    "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No recent headlines, so nothing new is building."
   },
   "LINK": {
    "recent": 0,
@@ -64,7 +64,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No recent headlines, so nothing new is building."
   },
   "DOGE": {
    "recent": 0,
@@ -75,7 +75,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No recent headlines; only a recap mention of a price gain, which is not a catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -86,56 +86,55 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No recent headlines, so nothing new is building."
   },
   "XRP": {
-   "recent": 1,
+   "recent": 2,
    "before": 8,
-   "buzz": 0.62,
+   "buzz": 1.25,
    "tone": -1,
    "headlines": [
+    "Ripple, Robinhood Partner to Expand RLUSD Use for Institutional Settlement",
     "Bitcoin shows signs of weakness while Ripple's bank win fails to bolster XRP"
    ],
-   "trending": 9,
-   "rule_score": 0.05,
-   "score": 0.2,
-   "note": "Ripple's final trust bank approval is real news, but earlier coverage says XRP barely moved."
+   "trending": 11,
+   "rule_score": 0.1,
+   "score": 0.4,
+   "note": "Ripple's final OCC trust bank approval and RLUSD partnership are real, though price reaction has lagged."
   }
  },
  "themes": [
   {
-   "title": "Bitcoin slipping below $80K ahead of Fed meeting",
-   "note": "BTC dropped under $80,000 as traders wait on the Fed; risk-off mood could spread to other coins.",
+   "title": "Ripple/XRP bank and stablecoin approvals",
+   "note": "Ripple got final OCC trust bank approval and RLUSD partnerships; real institutional progress, but XRP reaction has been muted so far.",
    "coins": [
-    "BTC",
+    "XRP"
+   ]
+  },
+  {
+   "title": "Tokenized Wall Street funds and pricing onchain",
+   "note": "Nasdaq-100 fund and CF Benchmarks data moving onchain; institutional rails shift, mostly helps ETH and similar chains, though coverage is thin.",
+   "coins": [
     "ETH",
     "SOL",
-    "XRP"
+    "AVAX",
+    "LINK"
    ]
   },
   {
-   "title": "Ripple national trust bank final approval",
-   "note": "Ripple got final OCC approval for a US trust bank, but coverage says XRP price didn't react much.",
-   "coins": [
-    "XRP"
-   ]
-  },
-  {
-   "title": "Bitcoin miners pivoting to AI compute",
-   "note": "Miners like Luxor raising money for AI compute; a narrative tied to BTC miners rather than a direct price catalyst.",
+   "title": "Bitcoin miners pivot to AI compute",
+   "note": "Miners raising money and trading compute power; a BTC-adjacent narrative, mixed signal since it can also weigh on BTC sentiment.",
    "coins": [
     "BTC"
    ]
   }
  ],
- "trending_elsewhere": [
-  "PEPE"
- ],
- "headlines": 82,
+ "trending_elsewhere": [],
+ "headlines": 81,
  "sources": {
   "Alpaca/Benzinga": 26,
-  "crypto news sites": 56,
+  "crypto news sites": 55,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T13:58:26+00:00"
+ "ai_time": "2026-10-27T15:03:28+00:00"
 }

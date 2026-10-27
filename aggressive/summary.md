@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 14:28 UTC
+# Aggressive strategy — 2026-10-27 15:03 UTC
 
 | | |
 |---|---|
@@ -9,25 +9,23 @@
 
 ## News radar (trends forming)
 
-Read 82 headlines from the last day (Alpaca/Benzinga 26, crypto news sites 56, CoinGecko trending 15).
+Read 81 headlines from the last day (Alpaca/Benzinga 26, crypto news sites 55, CoinGecko trending 15).
 
-- **Bitcoin slipping below $80K ahead of Fed meeting**: BTC dropped under $80,000 as traders wait on the Fed; risk-off mood could spread to other coins. (BTC, ETH, SOL, XRP)
-- **Ripple national trust bank final approval**: Ripple got final OCC approval for a US trust bank, but coverage says XRP price didn't react much. (XRP)
-- **Bitcoin miners pivoting to AI compute**: Miners like Luxor raising money for AI compute; a narrative tied to BTC miners rather than a direct price catalyst. (BTC)
+- **Ripple/XRP bank and stablecoin approvals**: Ripple got final OCC trust bank approval and RLUSD partnerships; real institutional progress, but XRP reaction has been muted so far. (XRP)
+- **Tokenized Wall Street funds and pricing onchain**: Nasdaq-100 fund and CF Benchmarks data moving onchain; institutional rails shift, mostly helps ETH and similar chains, though coverage is thin. (ETH, SOL, AVAX, LINK)
+- **Bitcoin miners pivot to AI compute**: Miners raising money and trading compute power; a BTC-adjacent narrative, mixed signal since it can also weigh on BTC sentiment. (BTC)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.20 | 1 (0.62x usual) | Ripple's final trust bank approval is real news, but earlier coverage says XRP barely moved. |
-| AVAX | +0.00 | 0 (0.0x usual) | No recent headlines, so nothing new. |
-| ETH | -0.10 | 3 (3.0x usual) | Few headlines; a Glamsterdam bug was fixed early, otherwise quiet and mildly weak. |
-| SOL | -0.10 | 1 (1.67x usual) | Only one item; a bug bounty spam story is minor and not a real catalyst. |
-| BTC | -0.30 | 16 (3.64x usual) | Heavy headline volume, but mostly price talk and a dip below $80K; mixed signals. |
-
-Also trending, but not in our coin list: PEPE.
+| XRP | +0.40 | 2 (1.25x usual) | Ripple's final OCC trust bank approval and RLUSD partnership are real, though price reaction has lagged. |
+| ETH | +0.10 | 3 (3.0x usual) | Few headlines; tokenized fund news is mildly positive, but Glamsterdam bug fix is a minor risk being handled. |
+| AVAX | +0.00 | 0 (0.0x usual) | No recent headlines, so nothing new is building. |
+| BTC | -0.10 | 16 (3.64x usual) | Heavy buzz but mostly price recaps, profit-taking and cautious analysts ahead of FOMC; no clear new catalyst. |
+| SOL | -0.10 | 1 (1.67x usual) | Solana bug bounty now costs 1 SOL due to AI spam; small security-process story, slightly negative tone. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
