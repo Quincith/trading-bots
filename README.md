@@ -134,8 +134,8 @@ The catch: it's weekly and about 3 days late (Tuesday's positions are published 
 big bets, not quick trades. Research on following these positions is mixed: big speculators often just follow
 the trend themselves.
 
-**Testing.** The strategy lab replays both offices over the last **8 years** of daily bid and ask prices
-(free from Dukascopy), charging the spread (the buy/sell gap, at least OANDA's typical one), half a pip of
+**Testing.** The strategy lab replays both offices over the last **8 years** of daily prices (from OANDA once
+its key is saved, otherwise free from Dukascopy), charging the spread (the buy/sell gap, at least OANDA's typical one), half a pip of
 slippage per trade, and 2% a year of overnight interest. It's compared with **doing nothing** (keeping the cash).
 To run the check yourself: **Actions → Strategy lab → Run workflow**, pick forex or fxcopy (leave "change" empty
 and Claude suggests an improvement, like for the other strategies), or locally
