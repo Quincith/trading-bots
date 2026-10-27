@@ -1,20 +1,20 @@
 {
- "time": "2026-10-27T08:28:02+00:00",
+ "time": "2026-10-27T08:58:01+00:00",
  "coins": {
   "BTC": {
-   "recent": 4,
+   "recent": 6,
    "before": 30,
-   "buzz": 0.67,
-   "tone": 0,
+   "buzz": 1.0,
+   "tone": -1,
    "headlines": [
-    "Gold, Crypto or Trump? Bettors Wager on What Robinhood Will Talk About During Q3 Earnings Call",
-    "Creating 'Net-New' Gold With Alchemy Becoming Real: Coinbase CEO Says You Can't 'Invent Anything' That Raises Bitcoin Supply",
-    "Bitcoin ETFs claw back $110M after $774M exit"
+    "Polymarket Punters Raise Pete Hegseth Impeachment Odds as Thomas Massie Plans to Reintroduce Articles After Midterms",
+    "'We're Trading Them Like Baseball Cards': Mark Cuban Warns \u2018Everything\u2019s a Meme Stock\u2019 as AAPL, GOOGL and MU Fuel Market Bubble Fears",
+    "Gold, Crypto or Trump? Bettors Wager on What Robinhood Will Talk About During Q3 Earnings Call"
    ],
-   "trending": 1,
-   "rule_score": 0.23,
-   "score": -0.4,
-   "note": "ETF outflows and Strategy pausing bitcoin buying signal weaker demand near $80,000 support."
+   "trending": 0,
+   "rule_score": 0.2,
+   "score": -0.2,
+   "note": "ETF outflows and Strategy pausing buys weigh; recent recovery attempts are weak signals."
   },
   "ETH": {
    "recent": 1,
@@ -24,10 +24,10 @@
    "headlines": [
     "Ethereum fixes Glamsterdam bug that could have sent staking deposits to builders"
    ],
-   "trending": 13,
-   "rule_score": 0.25,
-   "score": -0.1,
-   "note": "Little fresh news; Bitmine buybacks and a staking bug fix are mostly neutral."
+   "trending": null,
+   "rule_score": 0.1,
+   "score": -0.2,
+   "note": "Quiet coverage and Bitmine shifting to buybacks suggest less buying; slight negative."
   },
   "SOL": {
    "recent": 1,
@@ -37,10 +37,10 @@
    "headlines": [
     "Solana bug reports now cost 1 SOL as AI floods security teams with spam"
    ],
-   "trending": 10,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": -0.1,
-   "note": "Buzz is up but the news is a bug-bounty cost change, not a clear catalyst."
+   "note": "Only one headline; Solana bug-report spam story is a minor operational concern."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new to act on."
+   "note": "No new headlines; nothing new to act on."
   },
   "LINK": {
    "recent": 0,
@@ -62,7 +62,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new to act on."
+   "note": "No new headlines; nothing new to act on."
   },
   "DOGE": {
    "recent": 0,
@@ -73,7 +73,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No fresh catalyst; only a recycled phishing alarm story."
+   "note": "Only recap-style mentions; no real catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -84,52 +84,54 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new to act on."
+   "note": "No new headlines; stablecoin rules are only indirect."
   },
   "XRP": {
-   "recent": 1,
-   "before": 7,
-   "buzz": 0.71,
+   "recent": 0,
+   "before": 8,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Ripple gets a final go-ahead to launch its own U.S. national trust bank"
-   ],
-   "trending": null,
-   "rule_score": 0.0,
+   "headlines": [],
+   "trending": 10,
+   "rule_score": 0.15,
    "score": 0.4,
-   "note": "Ripple trust bank final approval is real news, and buzz is up 1.67x."
+   "note": "Ripple's final trust bank approval is a real catalyst, but it is already widely reported; not fresh buzz."
   }
  },
  "themes": [
   {
    "title": "Ripple national trust bank approval",
-   "note": "Final US approval for Ripple's trust bank may support XRP sentiment, though it is already widely reported.",
+   "note": "Ripple got final US approval for a national trust bank; a real regulatory win that has repeated in many headlines.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Bitcoin ETF outflows and Strategy pausing BTC buys",
-   "note": "Large ETF exits and Strategy halting Bitcoin purchases are weighing on BTC demand near key support.",
+   "title": "Stablecoin regulation expanding",
+   "note": "Canada consultation on stablecoin rules and US OCC inviting banks into stablecoin payments; mild long-term positive for the sector.",
+   "coins": [
+    "BTC",
+    "ETH",
+    "LTC"
+   ]
+  },
+  {
+   "title": "Bitcoin ETF outflows and weak sentiment",
+   "note": "ETFs saw a $774M exit before a partial $110M rebound; Strategy paused buying; mixed-to-negative for BTC demand.",
    "coins": [
     "BTC",
     "ETH"
    ]
-  },
-  {
-   "title": "Solana security spam and bug costs",
-   "note": "Solana bug bounty changes amid AI spam is a mild, mixed headline with limited price impact so far.",
-   "coins": [
-    "SOL"
-   ]
   }
  ],
- "trending_elsewhere": [],
- "headlines": 79,
+ "trending_elsewhere": [
+  "AAVE"
+ ],
+ "headlines": 81,
  "sources": {
-  "Alpaca/Benzinga": 25,
+  "Alpaca/Benzinga": 27,
   "crypto news sites": 54,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T07:58:56+00:00"
+ "ai_time": "2026-10-27T08:58:01+00:00"
 }

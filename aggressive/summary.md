@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 08:28 UTC
+# Aggressive strategy — 2026-10-27 08:58 UTC
 
 | | |
 |---|---|
@@ -9,22 +9,24 @@
 
 ## News radar (trends forming)
 
-Read 79 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 54, CoinGecko trending 15).
+Read 81 headlines from the last day (Alpaca/Benzinga 27, crypto news sites 54, CoinGecko trending 15).
 
-- **Ripple national trust bank approval**: Final US approval for Ripple's trust bank may support XRP sentiment, though it is already widely reported. (XRP)
-- **Bitcoin ETF outflows and Strategy pausing BTC buys**: Large ETF exits and Strategy halting Bitcoin purchases are weighing on BTC demand near key support. (BTC, ETH)
-- **Solana security spam and bug costs**: Solana bug bounty changes amid AI spam is a mild, mixed headline with limited price impact so far. (SOL)
+- **Ripple national trust bank approval**: Ripple got final US approval for a national trust bank; a real regulatory win that has repeated in many headlines. (XRP)
+- **Stablecoin regulation expanding**: Canada consultation on stablecoin rules and US OCC inviting banks into stablecoin payments; mild long-term positive for the sector. (BTC, ETH, LTC)
+- **Bitcoin ETF outflows and weak sentiment**: ETFs saw a $774M exit before a partial $110M rebound; Strategy paused buying; mixed-to-negative for BTC demand. (BTC, ETH)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.40 | 1 (0.71x usual) | Ripple trust bank final approval is real news, and buzz is up 1.67x. |
-| ETH | -0.10 | 1 (0.71x usual) | Little fresh news; Bitmine buybacks and a staking bug fix are mostly neutral. |
-| SOL | -0.10 | 1 (2.5x usual) | Buzz is up but the news is a bug-bounty cost change, not a clear catalyst. |
-| BTC | -0.40 | 4 (0.67x usual) | ETF outflows and Strategy pausing bitcoin buying signal weaker demand near $80,000 support. |
+| XRP | +0.40 | 0 (0.0x usual) | Ripple's final trust bank approval is a real catalyst, but it is already widely reported; not fresh buzz. |
+| SOL | -0.10 | 1 (2.5x usual) | Only one headline; Solana bug-report spam story is a minor operational concern. |
+| BTC | -0.20 | 6 (1.0x usual) | ETF outflows and Strategy pausing buys weigh; recent recovery attempts are weak signals. |
+| ETH | -0.20 | 1 (0.71x usual) | Quiet coverage and Bitmine shifting to buybacks suggest less buying; slight negative. |
+
+Also trending, but not in our coin list: AAVE.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_

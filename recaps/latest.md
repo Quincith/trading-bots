@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 17 times. Most active: LTC at 699.0x normal volume, price -0.5%.
+- Scout scanned 8 coins, 18 times. Most active: LTC at 699.0x normal volume, price -0.5%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -38,8 +38,8 @@ Watchful day. Insiders bought some stocks, but none passed the copy checks yet. 
 - Profit / loss since start: -$0.14 on $100.00 money put in.
 - Spotter read 31 insider filings from the SEC and found 33 insider purchases. Watchlist at day end: 10 stocks.
 - Top pick: THRM (Gentherm Inc). 2 insiders bought $662,600 at about $26.50: Mascarenas Paul Anthony (Director) $532,600; Presley William T. (President & CEO, Director) $130,000.
-- Sent for review: THRM (19x), STC (19x), NBIS (19x).
-- Decisions: 0 buy, 57 wait, 0 skip.
+- Sent for review: THRM (20x), STC (20x), NBIS (20x).
+- Decisions: 0 buy, 60 wait, 0 skip.
 - Passed on THRM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on STC (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
