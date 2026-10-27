@@ -9,7 +9,7 @@
   "day": "2026-10-27",
   "day_start_equity": 99.87,
   "halted_reason": null,
-  "last_scan": "2026-10-27T23:29:14+00:00",
+  "last_scan": "2026-10-27T23:59:22+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -2442,7 +2442,13 @@
     "0001213900-26-113020",
     "0001213900-26-113018",
     "0001213900-26-113017",
-    "0001213900-26-113016"
+    "0001213900-26-113016",
+    "0001213900-26-113031",
+    "0001040470-26-000311",
+    "0001253170-26-000014",
+    "0001193125-26-434678",
+    "0001765836-26-000020",
+    "0001940272-26-000029"
   ],
   "watchlist": {
     "AIOK": {
@@ -2636,6 +2642,40 @@
       "score": 0.1,
       "ticker": "LITS"
     },
+    "LRN": {
+      "buys": [
+        {
+          "accession": "0001213900-26-113031",
+          "date": "2026-10-23",
+          "filed": "2026-10-27T19:50:49-04:00",
+          "price": 79.84,
+          "role": "Director, See Footnote (3)",
+          "usd": 4725569.92,
+          "who": "Haggart Dylan G. & Fivespan Partners, LP"
+        },
+        {
+          "accession": "0001213900-26-113031",
+          "date": "2026-10-26",
+          "filed": "2026-10-27T19:50:49-04:00",
+          "price": 78.47,
+          "role": "Director, See Footnote (3)",
+          "usd": 325807.44,
+          "who": "Haggart Dylan G. & Fivespan Partners, LP"
+        },
+        {
+          "accession": "0001213900-26-113031",
+          "date": "2026-10-26",
+          "filed": "2026-10-27T19:50:49-04:00",
+          "price": 78.44,
+          "role": "Director, See Footnote (3)",
+          "usd": 7126744.64,
+          "who": "Haggart Dylan G. & Fivespan Partners, LP"
+        }
+      ],
+      "company": "Stride, Inc.",
+      "score": 3.09,
+      "ticker": "LRN"
+    },
     "LXU": {
       "buys": [
         {
@@ -2776,6 +2816,67 @@
       "company": "PEOPLES BANCORP INC",
       "score": 0.06,
       "ticker": "PEBO"
+    },
+    "SRRK": {
+      "buys": [
+        {
+          "accession": "0001253170-26-000014",
+          "date": "2026-10-23",
+          "filed": "2026-10-27T19:47:37-04:00",
+          "price": 41.31,
+          "role": "Director",
+          "usd": 1941570.0,
+          "who": "AKKARAJU SRINIVAS"
+        },
+        {
+          "accession": "0001253170-26-000014",
+          "date": "2026-10-23",
+          "filed": "2026-10-27T19:47:37-04:00",
+          "price": 41.31,
+          "role": "Director",
+          "usd": 3883140.0,
+          "who": "AKKARAJU SRINIVAS"
+        },
+        {
+          "accession": "0001253170-26-000014",
+          "date": "2026-10-23",
+          "filed": "2026-10-27T19:47:37-04:00",
+          "price": 41.82,
+          "role": "Director",
+          "usd": 20910.0,
+          "who": "AKKARAJU SRINIVAS"
+        },
+        {
+          "accession": "0001253170-26-000014",
+          "date": "2026-10-23",
+          "filed": "2026-10-27T19:47:37-04:00",
+          "price": 41.82,
+          "role": "Director",
+          "usd": 41820.0,
+          "who": "AKKARAJU SRINIVAS"
+        },
+        {
+          "accession": "0001253170-26-000014",
+          "date": "2026-10-26",
+          "filed": "2026-10-27T19:47:37-04:00",
+          "price": 41.59,
+          "role": "Director",
+          "usd": 2037410.92,
+          "who": "AKKARAJU SRINIVAS"
+        },
+        {
+          "accession": "0001253170-26-000014",
+          "date": "2026-10-26",
+          "filed": "2026-10-27T19:47:37-04:00",
+          "price": 41.59,
+          "role": "Director",
+          "usd": 4075071.38,
+          "who": "AKKARAJU SRINIVAS"
+        }
+      ],
+      "company": "Scholar Rock Holding Corp",
+      "score": 3.08,
+      "ticker": "SRRK"
     },
     "STC": {
       "buys": [

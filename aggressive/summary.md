@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 23:29 UTC
+# Aggressive strategy — 2026-10-27 23:59 UTC
 
 | | |
 |---|---|
@@ -17,14 +17,14 @@ Read 80 headlines from the last day (Alpaca/Benzinga 23, crypto news sites 57, C
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.40 | 3 (1.5x usual) | Robinhood and Ripple partnership news is real, but buzz is modest and some stories are repeats. |
-| ETH | +0.00 | 1 (0.71x usual) | Only one headline with flat buzz; nothing meaningful new. |
+| XRP | +0.40 | 2 (0.91x usual) | Robinhood and Ripple partnership news is real, but buzz is modest and some stories are repeats. |
 | SOL | +0.00 | 0 (0.0x usual) | No recent headlines and no buzz, despite high search rank. |
-| BTC | -0.10 | 5 (0.76x usual) | Mostly price talk and Fed preview pieces; quantum-risk and profit-taking stories add mild caution. |
+| LINK | +0.00 | 0 (0.0x usual) | No recent headlines; tokenization stories mention no LINK-specific news. |
+| BTC | -0.10 | 3 (0.43x usual) | Mostly price talk and Fed preview pieces; quantum-risk and profit-taking stories add mild caution. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_

@@ -1,29 +1,27 @@
 {
- "time": "2026-10-27T23:29:06+00:00",
+ "time": "2026-10-27T23:59:13+00:00",
  "coins": {
   "BTC": {
-   "recent": 5,
-   "before": 33,
-   "buzz": 0.76,
+   "recent": 3,
+   "before": 35,
+   "buzz": 0.43,
    "tone": 2,
    "headlines": [
     "Bitcoin Will \u2018Never Break Its All-Time High Again,\u2019 All-In Podcast Host Jason Calacanis Says",
-    "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
-    "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure"
+    "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure",
+    "Quantum fears already limiting Bitcoin\u2019s growth, Stacks founder says"
    ],
    "trending": null,
-   "rule_score": 0.15,
+   "rule_score": 0.09,
    "score": -0.1,
    "note": "Mostly price talk and Fed preview pieces; quantum-risk and profit-taking stories add mild caution."
   },
   "ETH": {
-   "recent": 1,
-   "before": 7,
-   "buzz": 0.71,
+   "recent": 0,
+   "before": 8,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close"
-   ],
+   "headlines": [],
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
@@ -35,7 +33,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 12,
+   "trending": 10,
    "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines and no buzz, despite high search rank."
@@ -57,8 +55,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 6,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines; tokenization stories mention no LINK-specific news."
   },
@@ -85,17 +83,16 @@
    "note": "No recent headlines; nothing new."
   },
   "XRP": {
-   "recent": 3,
-   "before": 10,
-   "buzz": 1.5,
-   "tone": 0,
+   "recent": 2,
+   "before": 11,
+   "buzz": 0.91,
+   "tone": -1,
    "headlines": [
     "Treasury's Bessent sees crypto as America's next tool for keeping the U.S. dollar on top",
-    "Ripple, Robinhood expand partnership to bring RLUSD to retail and institutional markets",
     "Robinhood Taps Ripple's Stablecoin, Treasury Software and Trading Loans"
    ],
    "trending": null,
-   "rule_score": 0.1,
+   "rule_score": -0.12,
    "score": 0.4,
    "note": "Robinhood and Ripple partnership news is real, but buzz is modest and some stories are repeats."
   }
