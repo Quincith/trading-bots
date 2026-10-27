@@ -1,18 +1,18 @@
 {
- "time": "2026-10-27T03:57:39+00:00",
+ "time": "2026-10-27T04:27:43+00:00",
  "coins": {
   "BTC": {
-   "recent": 3,
+   "recent": 4,
    "before": 34,
-   "buzz": 0.44,
+   "buzz": 0.59,
    "tone": 0,
    "headlines": [
+    "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
     "Israel Election Puts Netanyahu\u2019s Future At Stake After Trump Endorses \u2018Warrior\u2019 Prime Minister",
-    "Cathie Wood Buys Joby, Archer Aviation as Air Taxi Bets Grow, Ark Pounces on Nu Holdings Stock After Lula\u2019s Brazil Win",
-    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
+    "Cathie Wood Buys Joby, Archer Aviation as Air Taxi Bets Grow, Ark Pounces on Nu Holdings Stock After Lula\u2019s Brazil Win"
    ],
-   "trending": 1,
-   "rule_score": 0.19,
+   "trending": 0,
+   "rule_score": 0.22,
    "score": -0.2,
    "note": "Price fell below $80K and Strategy paused buying; mostly price-driven news, modest downside."
   },
@@ -24,8 +24,8 @@
    "headlines": [
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
    ],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 6,
+   "rule_score": 0.15,
    "score": -0.2,
    "note": "Bitmine still buying ETH but shifting to buybacks; crypto weakness weighs on sentiment."
   },
@@ -90,15 +90,15 @@
   },
   "XRP": {
    "recent": 2,
-   "before": 6,
-   "buzz": 1.67,
+   "before": 7,
+   "buzz": 1.43,
    "tone": 0,
    "headlines": [
-    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'",
-    "Ripple wins final US approval for national trust bank"
+    "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
+    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
    ],
-   "trending": 2,
-   "rule_score": 0.43,
+   "trending": 1,
+   "rule_score": 0.39,
    "score": 0.4,
    "note": "Ripple won final US trust bank approval and Evernorth is buying XRP; genuine positive news."
   }
@@ -133,11 +133,11 @@
   }
  ],
  "trending_elsewhere": [
-  "UNI"
+  "DOT"
  ],
- "headlines": 77,
+ "headlines": 78,
  "sources": {
-  "Alpaca/Benzinga": 25,
+  "Alpaca/Benzinga": 26,
   "crypto news sites": 52,
   "CoinGecko trending": 15
  },
