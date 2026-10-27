@@ -11,6 +11,8 @@ on:
 env:
   FX_CACHE_DIR: fxcache
   END: "2026-01-01"
+  # once the OANDA practice key is saved, the test uses OANDA's own prices instead of Dukascopy's
+  OANDA_API_TOKEN: ${{ secrets.OANDA_API_TOKEN }}
 
 jobs:
   trial:
