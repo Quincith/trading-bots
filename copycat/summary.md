@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-10-27 22:56 UTC
+# Copycat strategy — 2026-10-27 22:59 UTC
 
 | | |
 |---|---|
-| Account value | $99.71 |
+| Account value | $99.68 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$0.29 (-0.29%) |
-| Time-weighted return (ignores when deposits happened) | -0.29% |
+| Strategy profit / loss | -$0.32 (-0.32%) |
+| Time-weighted return (ignores when deposits happened) | -0.32% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 13 new SEC filings this run. 19 stocks on the watchlist.
+Read 1 new SEC filings this run. 19 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -21,6 +21,6 @@ Read 13 new SEC filings this run. 19 stocks on the watchlist.
 | TIPT (TIPTREE INC.) | 2.2 | 1 insider bought $502,303 at about $16.24: Barnes Michael Gene (Chairman and CEO, Director, 10% owner) $502,303. |
 
 ## Notes
-- Spotter read 13 new insider filings and found 12 purchases (6 by officers or directors). Watchlist: 19 stocks, 4 big enough to copy.
+- Spotter read 1 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 19 stocks, 4 big enough to copy.
 
 _Copycat uses no AI._

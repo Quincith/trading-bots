@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27T22:29:01+00:00",
+ "time": "2026-10-27T22:58:56+00:00",
  "coins": {
   "BTC": {
    "recent": 5,
@@ -11,7 +11,7 @@
     "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
     "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure"
    ],
-   "trending": 7,
+   "trending": 9,
    "rule_score": 0.3,
    "score": 0.0,
    "note": "Mostly price previews ahead of the Fed meeting; nothing new that changes the outlook."
@@ -24,8 +24,8 @@
    "headlines": [
     "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close"
    ],
-   "trending": 10,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.1,
    "note": "Little fresh ETH news; the OpenAI ETH story is weak and tokenized-stock deals only loosely help."
   },
@@ -35,8 +35,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 9,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "No recent headlines or unusual buzz for Solana."
   },
