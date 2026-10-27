@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27T09:58:05+00:00",
+ "time": "2026-10-27T10:28:07+00:00",
  "coins": {
   "BTC": {
    "recent": 7,
@@ -7,9 +7,9 @@
    "buzz": 1.13,
    "tone": 0,
    "headlines": [
+    "China\u2019s AI Stock Rout Scary, but Crypto Punters Aren\u2019t Calling a US Bubble Burst Yet",
     "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as Fed Begins Its Two-Day Meet \u2014 NVS, HSBC, WELL in Focus",
-    "Polymarket Punters Raise Pete Hegseth Impeachment Odds as Thomas Massie Plans to Reintroduce Articles After Midterms",
-    "'We're Trading Them Like Baseball Cards': Mark Cuban Warns \u2018Everything\u2019s a Meme Stock\u2019 as AAPL, GOOGL and MU Fuel Market Bubble Fears"
+    "Polymarket Punters Raise Pete Hegseth Impeachment Odds as Thomas Massie Plans to Reintroduce Articles After Midterms"
    ],
    "trending": 1,
    "rule_score": 0.33,
@@ -24,7 +24,7 @@
    "headlines": [
     "Ethereum fixes Glamsterdam bug that could have sent staking deposits to builders"
    ],
-   "trending": 12,
+   "trending": 11,
    "rule_score": 0.25,
    "score": -0.1,
    "note": "Ethereum fixed a staking-deposit bug, but price articles show ETH slipping; buzz is below normal."
@@ -37,8 +37,8 @@
    "headlines": [
     "Solana bug reports now cost 1 SOL as AI floods security teams with spam"
    ],
-   "trending": 11,
-   "rule_score": 0.15,
+   "trending": 3,
+   "rule_score": 0.3,
    "score": -0.2,
    "note": "Solana bug bounty now costs 1 SOL due to AI spam; a minor negative for security perception."
   },
@@ -87,11 +87,13 @@
    "note": "No recent headlines in the last day."
   },
   "XRP": {
-   "recent": 0,
+   "recent": 1,
    "before": 8,
-   "buzz": 0.0,
+   "buzz": 0.62,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Ripple Wins Final OCC Approval for Trust Bank Behind $2.6B RLUSD Stablecoin"
+   ],
    "trending": null,
    "rule_score": 0.0,
    "score": 0.3,
@@ -123,10 +125,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 83,
+ "headlines": 84,
  "sources": {
   "Alpaca/Benzinga": 28,
-  "crypto news sites": 55,
+  "crypto news sites": 56,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-27T09:58:05+00:00"
