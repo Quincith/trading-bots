@@ -1,10 +1,10 @@
 {
- "time": "2026-10-27T03:27:34+00:00",
+ "time": "2026-10-27T03:57:39+00:00",
  "coins": {
   "BTC": {
    "recent": 3,
-   "before": 35,
-   "buzz": 0.43,
+   "before": 34,
+   "buzz": 0.44,
    "tone": 0,
    "headlines": [
     "Israel Election Puts Netanyahu\u2019s Future At Stake After Trump Endorses \u2018Warrior\u2019 Prime Minister",
@@ -13,8 +13,8 @@
    ],
    "trending": 1,
    "rule_score": 0.19,
-   "score": -0.3,
-   "note": "Bitcoin fell below $80,000 and wallet breaches add worry; buzz is quiet though."
+   "score": -0.2,
+   "note": "Price fell below $80K and Strategy paused buying; mostly price-driven news, modest downside."
   },
   "ETH": {
    "recent": 1,
@@ -24,10 +24,10 @@
    "headlines": [
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
    ],
-   "trending": 5,
-   "rule_score": 0.15,
-   "score": -0.1,
-   "note": "Quiet news; Bitmine buying ether is old news and firm is shifting to buybacks."
+   "trending": null,
+   "rule_score": 0.0,
+   "score": -0.2,
+   "note": "Bitmine still buying ETH but shifting to buybacks; crypto weakness weighs on sentiment."
   },
   "SOL": {
    "recent": 1,
@@ -40,7 +40,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "Buzz spike but only one headline and no clear new catalyst."
+   "note": "Buzz is 5x but headlines are not about Solana; no clear new catalyst found."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No recent headlines; nothing new to act on."
   },
   "LINK": {
    "recent": 0,
@@ -62,7 +62,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No recent headlines; nothing new to act on."
   },
   "DOGE": {
    "recent": 1,
@@ -74,8 +74,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.2,
-   "note": "Hardware wallet breach and phishing alarm are new negatives; small buzz."
+   "score": -0.1,
+   "note": "Dogecoin hardware wallet breach triggered phishing alarm; small negative risk."
   },
   "LTC": {
    "recent": 0,
@@ -86,7 +86,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No recent headlines; nothing new to act on."
   },
   "XRP": {
    "recent": 2,
@@ -97,44 +97,49 @@
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'",
     "Ripple wins final US approval for national trust bank"
    ],
-   "trending": 3,
+   "trending": 2,
    "rule_score": 0.43,
-   "score": 0.3,
-   "note": "Final US trust bank approval for Ripple is a real positive, with rising buzz."
+   "score": 0.4,
+   "note": "Ripple won final US trust bank approval and Evernorth is buying XRP; genuine positive news."
   }
  },
  "themes": [
   {
-   "title": "Ripple/XRP institutional adoption",
-   "note": "Ripple got final US trust bank approval and Aviva put a fund on XRP Ledger; real, but priced in partly.",
+   "title": "Ripple/XRP institutional and regulatory progress",
+   "note": "Final US trust bank approval and Evernorth XRP buying are real positives, though XRP price pressure persists.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Stablecoin regulation expanding",
-   "note": "Canada consultation and US OCC push banks into stablecoins; supportive long-term for crypto rails, mostly indirect for tokens.",
+   "title": "Stablecoin rules expanding in US and Canada",
+   "note": "Regulators opening stablecoin payments to banks may support the broader crypto payments story over time.",
    "coins": [
     "XRP",
+    "BTC",
     "ETH",
-    "BTC"
+    "SOL",
+    "AVAX",
+    "LINK"
    ]
   },
   {
-   "title": "Security breaches hitting wallets",
-   "note": "Keystone wallet key theft and Bitcoin wallet flaw, plus Dogecoin phishing alarm, raise trust risk.",
+   "title": "Bitcoin slide below $80K with treasury buying paused",
+   "note": "Strategy pausing BTC purchases and recent drop below $80K signal weak near-term sentiment.",
    "coins": [
     "BTC",
-    "DOGE"
+    "ETH"
    ]
   }
  ],
- "trending_elsewhere": [],
- "headlines": 78,
+ "trending_elsewhere": [
+  "UNI"
+ ],
+ "headlines": 77,
  "sources": {
-  "Alpaca/Benzinga": 26,
+  "Alpaca/Benzinga": 25,
   "crypto news sites": 52,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T02:57:32+00:00"
+ "ai_time": "2026-10-27T03:57:39+00:00"
 }
