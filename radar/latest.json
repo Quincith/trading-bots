@@ -1,31 +1,31 @@
 {
- "time": "2026-10-27T12:28:22+00:00",
+ "time": "2026-10-27T12:58:26+00:00",
  "coins": {
   "BTC": {
-   "recent": 12,
+   "recent": 10,
    "before": 28,
-   "buzz": 2.14,
-   "tone": -1,
+   "buzz": 1.79,
+   "tone": 0,
    "headlines": [
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 10 Futures Gain as Fed Begins Its Two-Day Meet\u2014 Novartis, HSBC, Welltower in Focus (UPDATED)",
     "Bitcoin Could Hit $100,000 or $60,000 by Year-End, Analyst Says",
-    "China\u2019s AI Stock Rout Scary, but Crypto Punters Aren\u2019t Calling a US Bubble Burst Yet",
-    "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as Fed Begins Its Two-Day Meet \u2014 NVS, HSBC, WELL in Focus"
+    "China\u2019s AI Stock Rout Scary, but Crypto Punters Aren\u2019t Calling a US Bubble Burst Yet"
    ],
-   "trending": 4,
-   "rule_score": 0.43,
-   "score": -0.4,
-   "note": "Heavy buzz but mostly negative: price slipped below $80K and ETFs saw large outflows before partial recovery."
+   "trending": 1,
+   "rule_score": 0.46,
+   "score": -0.3,
+   "note": "Buzz is up 1.8x, but mostly price talk and falling below $80K; weakness is building."
   },
   "ETH": {
    "recent": 0,
-   "before": 8,
+   "before": 7,
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
    "score": -0.1,
-   "note": "No recent headlines of its own; only a fixed staking bug, which is mildly positive but old news."
+   "note": "No recent headlines of its own; mild drag from Keystone breach and market mood."
   },
   "SOL": {
    "recent": 0,
@@ -33,10 +33,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
-   "score": -0.2,
-   "note": "Bug report spam costs and wallet breach stories are mild negatives; no fresh demand catalyst."
+   "trending": 9,
+   "rule_score": 0.15,
+   "score": -0.1,
+   "note": "Solana bug-report costs story is minor; no buzz pickup in recent hours."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +47,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No headlines in the recent window, so nothing new to act on."
+   "note": "No new headlines; nothing new to act on."
   },
   "LINK": {
    "recent": 0,
@@ -58,7 +58,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No headlines in the recent window, so nothing new to act on."
+   "note": "No new headlines; nothing new to act on."
   },
   "DOGE": {
    "recent": 0,
@@ -69,7 +69,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No headlines in the recent window, so nothing new to act on."
+   "note": "No new headlines; only recycled mentions in price recaps."
   },
   "LTC": {
    "recent": 0,
@@ -80,7 +80,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No headlines in the recent window, so nothing new to act on."
+   "note": "No new headlines; nothing new to act on."
   },
   "XRP": {
    "recent": 2,
@@ -91,46 +91,46 @@
     "Bitcoin shows signs of weakness while Ripple's bank win fails to bolster XRP",
     "Ripple Wins Final OCC Approval for Trust Bank Behind $2.6B RLUSD Stablecoin"
    ],
-   "trending": 8,
+   "trending": 14,
    "rule_score": 0.14,
-   "score": 0.3,
-   "note": "Ripple's final OCC approval for a trust bank is a real positive catalyst, but buzz is light and partly recycled."
+   "score": 0.1,
+   "note": "Ripple trust bank approval is real but already priced in; buzz is modest at 1.4x."
   }
  },
  "themes": [
   {
-   "title": "Bitcoin slipping below $80K amid Fed meeting and AI-stock jitters",
-   "note": "BTC buzz is elevated and headlines are bearish: falling below $80,000 while investors chase AI and ignore crypto.",
+   "title": "Keystone wallet breach spreading",
+   "note": "Hackers stole a verification key and the wallet maker is destroying devices; a security scare that could hit trust in hardware wallets.",
+   "coins": [
+    "BTC",
+    "ETH"
+   ]
+  },
+  {
+   "title": "Ripple national trust bank approval",
+   "note": "Final OCC approval for Ripple's trust bank behind RLUSD; a real regulatory step, but headlines already flooded and price reaction faded.",
+   "coins": [
+    "XRP"
+   ]
+  },
+  {
+   "title": "Bitcoin below $80K with Fed meeting and AI-stock fears",
+   "note": "BTC slipping under key support as macro risk and AI-bubble worries grow; a bearish mood building for majors.",
    "coins": [
     "BTC",
     "ETH",
     "SOL",
-    "XRP"
-   ]
-  },
-  {
-   "title": "Ripple final bank approval and stablecoin regulation",
-   "note": "Ripple's national trust bank approval is real news that may help XRP, though buzz is modest and some stories are repeats.",
-   "coins": [
-    "XRP"
-   ]
-  },
-  {
-   "title": "Crypto security breaches and hacks",
-   "note": "Keystone wallet breach, Bloom bot hack, and Solana bug spam add risk headlines across wallets and chains.",
-   "coins": [
-    "BTC",
-    "SOL",
-    "ETH"
+    "XRP",
+    "DOGE"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 85,
+ "headlines": 83,
  "sources": {
-  "Alpaca/Benzinga": 29,
+  "Alpaca/Benzinga": 27,
   "crypto news sites": 56,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T11:58:15+00:00"
+ "ai_time": "2026-10-27T12:58:26+00:00"
 }

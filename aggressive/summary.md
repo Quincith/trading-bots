@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 12:28 UTC
+# Aggressive strategy — 2026-10-27 12:58 UTC
 
 | | |
 |---|---|
@@ -9,22 +9,22 @@
 
 ## News radar (trends forming)
 
-Read 85 headlines from the last day (Alpaca/Benzinga 29, crypto news sites 56, CoinGecko trending 15).
+Read 83 headlines from the last day (Alpaca/Benzinga 27, crypto news sites 56, CoinGecko trending 15).
 
-- **Bitcoin slipping below $80K amid Fed meeting and AI-stock jitters**: BTC buzz is elevated and headlines are bearish: falling below $80,000 while investors chase AI and ignore crypto. (BTC, ETH, SOL, XRP)
-- **Ripple final bank approval and stablecoin regulation**: Ripple's national trust bank approval is real news that may help XRP, though buzz is modest and some stories are repeats. (XRP)
-- **Crypto security breaches and hacks**: Keystone wallet breach, Bloom bot hack, and Solana bug spam add risk headlines across wallets and chains. (BTC, SOL, ETH)
+- **Keystone wallet breach spreading**: Hackers stole a verification key and the wallet maker is destroying devices; a security scare that could hit trust in hardware wallets. (BTC, ETH)
+- **Ripple national trust bank approval**: Final OCC approval for Ripple's trust bank behind RLUSD; a real regulatory step, but headlines already flooded and price reaction faded. (XRP)
+- **Bitcoin below $80K with Fed meeting and AI-stock fears**: BTC slipping under key support as macro risk and AI-bubble worries grow; a bearish mood building for majors. (BTC, ETH, SOL, XRP, DOGE)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.30 | 2 (1.43x usual) | Ripple's final OCC approval for a trust bank is a real positive catalyst, but buzz is light and partly recycled. |
-| ETH | -0.10 | 0 (0.0x usual) | No recent headlines of its own; only a fixed staking bug, which is mildly positive but old news. |
-| SOL | -0.20 | 0 (0.0x usual) | Bug report spam costs and wallet breach stories are mild negatives; no fresh demand catalyst. |
-| BTC | -0.40 | 12 (2.14x usual) | Heavy buzz but mostly negative: price slipped below $80K and ETFs saw large outflows before partial recovery. |
+| XRP | +0.10 | 2 (1.43x usual) | Ripple trust bank approval is real but already priced in; buzz is modest at 1.4x. |
+| ETH | -0.10 | 0 (0.0x usual) | No recent headlines of its own; mild drag from Keystone breach and market mood. |
+| SOL | -0.10 | 0 (0.0x usual) | Solana bug-report costs story is minor; no buzz pickup in recent hours. |
+| BTC | -0.30 | 10 (1.79x usual) | Buzz is up 1.8x, but mostly price talk and falling below $80K; weakness is building. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
