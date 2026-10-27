@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 21:28 UTC
+# Aggressive strategy — 2026-10-27 21:59 UTC
 
 | | |
 |---|---|
@@ -21,11 +21,13 @@ Read 81 headlines from the last day (Alpaca/Benzinga 23, crypto news sites 58, C
 | ETH | +0.10 | 2 (1.67x usual) | Mostly neutral; tokenized-fund news helps a little, but one OpenAI-related story is noise. |
 | SOL | +0.10 | 1 (1.25x usual) | Few new headlines; tokenized Nasdaq fund on Stellar gives only faint indirect interest. |
 | DOGE | +0.00 | 1 (5.0x usual) | Buzz is high at 5x, but the single headline is a price-hold recap, not a real catalyst. |
-| BTC | -0.20 | 7 (1.17x usual) | Price is pressured by the Fed meeting and quantum-risk worries, but much of the news is price recap. |
+| BTC | -0.20 | 7 (1.13x usual) | Price is pressured by the Fed meeting and quantum-risk worries, but much of the news is price recap. |
+
+Also trending, but not in our coin list: UNI, PEPE.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_

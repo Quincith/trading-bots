@@ -1,18 +1,18 @@
 {
- "time": "2026-10-27T21:28:52+00:00",
+ "time": "2026-10-27T21:59:01+00:00",
  "coins": {
   "BTC": {
    "recent": 7,
-   "before": 30,
-   "buzz": 1.17,
-   "tone": 3,
+   "before": 31,
+   "buzz": 1.13,
+   "tone": 5,
    "headlines": [
     "Bitcoin Will \u2018Never Break Its All-Time High Again,\u2019 All-In Podcast Host Jason Calacanis Says",
     "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday"
    ],
-   "trending": 7,
-   "rule_score": 0.48,
+   "trending": null,
+   "rule_score": 0.43,
    "score": -0.2,
    "note": "Price is pressured by the Fed meeting and quantum-risk worries, but much of the news is price recap."
   },
@@ -25,8 +25,8 @@
     "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday"
    ],
-   "trending": 3,
-   "rule_score": 0.63,
+   "trending": 7,
+   "rule_score": 0.48,
    "score": 0.1,
    "note": "Mostly neutral; tokenized-fund news helps a little, but one OpenAI-related story is noise."
   },
@@ -38,8 +38,8 @@
    "headlines": [
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday"
    ],
-   "trending": 13,
-   "rule_score": 0.35,
+   "trending": null,
+   "rule_score": 0.2,
    "score": 0.1,
    "note": "Few new headlines; tokenized Nasdaq fund on Stellar gives only faint indirect interest."
   },
@@ -99,7 +99,7 @@
     "Treasury's Bessent sees crypto as America's next tool for keeping the U.S. dollar on top",
     "Ripple, Robinhood expand partnership to bring RLUSD to retail and institutional markets"
    ],
-   "trending": 9,
+   "trending": 12,
    "rule_score": 0.59,
    "score": 0.4,
    "note": "Repeated Ripple and Robinhood RLUSD partnership and bank approval news is real, though partly recycled."
@@ -134,7 +134,10 @@
    ]
   }
  ],
- "trending_elsewhere": [],
+ "trending_elsewhere": [
+  "UNI",
+  "PEPE"
+ ],
  "headlines": 81,
  "sources": {
   "Alpaca/Benzinga": 23,
