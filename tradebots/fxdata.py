@@ -111,6 +111,21 @@ def _decode(raw: bytes, start: datetime, pair: str) -> pd.DataFrame:
 PAUSE = 1.5   # seconds between downloads: Dukascopy limits how fast one visitor may download (HTTP 429)
 
 
+class SlowDown(RuntimeError):
+    """Dukascopy asked us to stop downloading for a while."""
+
+
+def daily_prices(pair: str, start: date, end: date) -> pd.DataFrame:
+    """Daily candles for the lab: from OANDA when OANDA_API_TOKEN is set, otherwise Dukascopy's bid prices."""
+    token = os.environ.get("OANDA_API_TOKEN")
+    if token:
+        from .oanda import OandaPractice
+        df = OandaPractice(token, os.environ.get("OANDA_FOREX_ACCOUNT_ID") or "-").daily_bars(pair, 5000)
+        s, e = pd.Timestamp(start, tz="UTC"), pd.Timestamp(end, tz="UTC")
+        return df[(df.index >= s) & (df.index < e)]
+    return daily_history(pair, start, end, sides=("BID",))
+
+
 def _cached(url: str) -> Path | None:
     root = os.environ.get("FX_CACHE_DIR")
     return Path(root) / url.removeprefix(DUKA + "/") if root else None
@@ -153,7 +168,7 @@ def daily_history(pair: str, start: date, end: date, session: requests.Session |
     today = datetime.now(timezone.utc).date()
     for side in sides:
         parts = []
-        for y in range(start.year, end.year + 1):
+        for y in range(start.year, (end - timedelta(days=1)).year + 1):   # `end` itself is left out
             if y < today.year:
                 t0 = datetime(y, 1, 1, tzinfo=timezone.utc)
                 parts.append(_decode(_get(http, f"{DUKA}/{sym}/{y}/{side}_candles_day_1.bi5"), t0, pair))
