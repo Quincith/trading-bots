@@ -1,18 +1,18 @@
 {
- "time": "2026-10-27T11:58:15+00:00",
+ "time": "2026-10-27T12:28:22+00:00",
  "coins": {
   "BTC": {
-   "recent": 9,
-   "before": 29,
-   "buzz": 1.55,
-   "tone": 0,
+   "recent": 12,
+   "before": 28,
+   "buzz": 2.14,
+   "tone": -1,
    "headlines": [
+    "Bitcoin Could Hit $100,000 or $60,000 by Year-End, Analyst Says",
     "China\u2019s AI Stock Rout Scary, but Crypto Punters Aren\u2019t Calling a US Bubble Burst Yet",
-    "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as Fed Begins Its Two-Day Meet \u2014 NVS, HSBC, WELL in Focus",
-    "Polymarket Punters Raise Pete Hegseth Impeachment Odds as Thomas Massie Plans to Reintroduce Articles After Midterms"
+    "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as Fed Begins Its Two-Day Meet \u2014 NVS, HSBC, WELL in Focus"
    ],
-   "trending": 1,
-   "rule_score": 0.41,
+   "trending": 4,
+   "rule_score": 0.43,
    "score": -0.4,
    "note": "Heavy buzz but mostly negative: price slipped below $80K and ETFs saw large outflows before partial recovery."
   },
@@ -22,8 +22,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 6,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": -0.1,
    "note": "No recent headlines of its own; only a fixed staking bug, which is mildly positive but old news."
   },
@@ -33,8 +33,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 9,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": -0.2,
    "note": "Bug report spam costs and wallet breach stories are mild negatives; no fresh demand catalyst."
   },
@@ -83,15 +83,16 @@
    "note": "No headlines in the recent window, so nothing new to act on."
   },
   "XRP": {
-   "recent": 1,
+   "recent": 2,
    "before": 7,
-   "buzz": 0.71,
-   "tone": 0,
+   "buzz": 1.43,
+   "tone": -1,
    "headlines": [
+    "Bitcoin shows signs of weakness while Ripple's bank win fails to bolster XRP",
     "Ripple Wins Final OCC Approval for Trust Bank Behind $2.6B RLUSD Stablecoin"
    ],
-   "trending": 10,
-   "rule_score": 0.15,
+   "trending": 8,
+   "rule_score": 0.14,
    "score": 0.3,
    "note": "Ripple's final OCC approval for a trust bank is a real positive catalyst, but buzz is light and partly recycled."
   }
@@ -125,10 +126,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 83,
+ "headlines": 85,
  "sources": {
-  "Alpaca/Benzinga": 28,
-  "crypto news sites": 55,
+  "Alpaca/Benzinga": 29,
+  "crypto news sites": 56,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-27T11:58:15+00:00"
