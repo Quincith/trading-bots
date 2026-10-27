@@ -5,3 +5,5 @@ time,symbol,decision,confidence,risk,size_usd,note
 2026-10-27T13:58:38+00:00,THRM,SKIP,0.00,,0.00,Price already up 16% since the insiders bought (limit 10%). Too late to copy.
 2026-10-27T13:58:38+00:00,STC,BUY,1.00,APPROVE,19.92,"Copying STEWART INFORMATION SERVICES CORP insiders. 3 insiders bought $283,710 at about $47.28: Apel Thomas G (Director) $95,470; Bradley C Allen Jr (Director) $94,600; Corey William S. Jr. (Director) $93,640."
 2026-10-27T13:58:38+00:00,NBIS,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure)
+2026-10-27T14:28:37+00:00,THRM,SKIP,0.00,,0.00,Price already up 18% since the insiders bought (limit 10%). Too late to copy.
+2026-10-27T14:28:37+00:00,NBIS,BUY,1.00,APPROVE,19.89,"Copying Nebius Group N.V. insiders. 1 insider bought $122,438 at about $159.01: Grimme Arne (Director) $122,438."

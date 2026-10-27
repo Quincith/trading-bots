@@ -1,17 +1,17 @@
 {
- "time": "2026-10-27T13:58:26+00:00",
+ "time": "2026-10-27T14:28:31+00:00",
  "coins": {
   "BTC": {
-   "recent": 17,
+   "recent": 16,
    "before": 22,
-   "buzz": 3.86,
+   "buzz": 3.64,
    "tone": -1,
    "headlines": [
     "Bitcoin Profit-Taking Cools but Analysts Remain Cautious Ahead of FOMC",
     "Robinhood Earnings Prediction Market Preview: What Will Vlad Tenev Say?",
     "Would a Bitcoin Selloff After the Midterms Present a Buying Opportunity?"
    ],
-   "trending": 2,
+   "trending": 1,
    "rule_score": 0.7,
    "score": -0.3,
    "note": "Heavy headline volume, but mostly price talk and a dip below $80K; mixed signals."
@@ -39,7 +39,7 @@
    "headlines": [
     "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser"
    ],
-   "trending": 7,
+   "trending": 6,
    "rule_score": 0.15,
    "score": -0.1,
    "note": "Only one item; a bug bounty spam story is minor and not a real catalyst."
@@ -50,8 +50,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 12,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines, so nothing new."
   },
@@ -89,16 +89,15 @@
    "note": "No recent headlines, so nothing new."
   },
   "XRP": {
-   "recent": 2,
-   "before": 7,
-   "buzz": 1.43,
+   "recent": 1,
+   "before": 8,
+   "buzz": 0.62,
    "tone": -1,
    "headlines": [
-    "Bitcoin shows signs of weakness while Ripple's bank win fails to bolster XRP",
-    "Ripple Wins Final OCC Approval for Trust Bank Behind $2.6B RLUSD Stablecoin"
+    "Bitcoin shows signs of weakness while Ripple's bank win fails to bolster XRP"
    ],
-   "trending": 13,
-   "rule_score": 0.14,
+   "trending": 9,
+   "rule_score": 0.05,
    "score": 0.2,
    "note": "Ripple's final trust bank approval is real news, but earlier coverage says XRP barely moved."
   }
@@ -129,10 +128,12 @@
    ]
   }
  ],
- "trending_elsewhere": [],
- "headlines": 83,
+ "trending_elsewhere": [
+  "PEPE"
+ ],
+ "headlines": 82,
  "sources": {
-  "Alpaca/Benzinga": 27,
+  "Alpaca/Benzinga": 26,
   "crypto news sites": 56,
   "CoinGecko trending": 15
  },

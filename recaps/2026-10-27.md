@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 28 times. Most active: LTC at 699.0x normal volume, price -0.5%.
+- Scout scanned 8 coins, 29 times. Most active: LTC at 699.0x normal volume, price -0.5%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -28,22 +28,22 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.29 (-0.29%)
+## Copycat: down $0.43 (-0.43%)
 
-Active day. The bots bought 1 time. The account ended down $0.29 (-0.29%) at $99.58. Paper money only.
+Active day. The bots bought 2 times. The account ended down $0.43 (-0.43%) at $99.44. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.87 → $99.58 (-$0.29, -0.29%).
-- Profit / loss since start: -$0.42 on $100.00 money put in.
-- Spotter read 130 insider filings from the SEC and found 41 insider purchases. Watchlist at day end: 13 stocks.
+- Account value: $99.87 → $99.44 (-$0.43, -0.43%).
+- Profit / loss since start: -$0.56 on $100.00 money put in.
+- Spotter read 183 insider filings from the SEC and found 41 insider purchases. Watchlist at day end: 12 stocks.
 - Top pick: THRM (Gentherm Inc). 2 insiders bought $662,600 at about $26.50: Mascarenas Paul Anthony (Director) $532,600; Presley William T. (President & CEO, Director) $130,000.
-- Sent for review: THRM (31x), STC (31x), NBIS (31x).
-- Decisions: 1 buy, 90 wait, 2 skip.
-- Passed on THRM (SKIP, 0% confident): Price already up 16% since the insiders bought (limit 10%). Too late to copy.
-- Passed on NBIS (SKIP, 0% confident): Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure)
+- Sent for review: THRM (32x), NBIS (32x), STC (31x).
+- Decisions: 2 buy, 90 wait, 3 skip.
+- Passed on THRM (SKIP, 0% confident): Price already up 18% since the insiders bought (limit 10%). Too late to copy.
 - Bought $19.92 of STC at 43.62. Reason: Copying STEWART INFORMATION SERVICES CORP insiders. 3 insiders bought $283,710 at about $47.28: Apel Thomas G (Director) $95,470; Bradley C Allen Jr (Director) $94,600; Corey William S. Jr. (Director) $93,640.
-- Holding: BBT $19.95 (+$0.01 unrealized); CHCO $19.46 (-$0.53 unrealized); MSM $20.10 (+$0.11 unrealized).
+- Bought $19.89 of NBIS at 167.66. Reason: Copying Nebius Group N.V. insiders. 1 insider bought $122,438 at about $159.01: Grimme Arne (Director) $122,438.
+- Holding: BBT $19.84 (-$0.10 unrealized); CHCO $19.45 (-$0.54 unrealized); MSM $19.97 (-$0.02 unrealized); STC $20.03 (+$0.12 unrealized).
 
 ## Words to know
 
