@@ -1,41 +1,42 @@
 {
- "time": "2026-10-27T01:57:27+00:00",
+ "time": "2026-10-27T02:27:30+00:00",
  "coins": {
   "BTC": {
-   "recent": 1,
-   "before": 36,
-   "buzz": 0.14,
+   "recent": 2,
+   "before": 35,
+   "buzz": 0.29,
    "tone": 0,
    "headlines": [
+    "Cathie Wood Buys Joby, Archer Aviation as Air Taxi Bets Grow, Ark Pounces on Nu Holdings Stock After Lula\u2019s Brazil Win",
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
    ],
-   "trending": 5,
-   "rule_score": 0.15,
+   "trending": 7,
+   "rule_score": 0.01,
    "score": -0.2,
    "note": "Price fell below $80,000 on Iran fears and Fed caution; bullish takes are mostly opinion, not new catalysts."
   },
   "ETH": {
    "recent": 1,
-   "before": 8,
-   "buzz": 0.62,
+   "before": 7,
+   "buzz": 0.71,
    "tone": 0,
    "headlines": [
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
    ],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 10,
+   "rule_score": 0.15,
    "score": -0.1,
    "note": "Slipping on bottom talk; Bitmine's buybacks over ether buying hint at weaker corporate demand."
   },
   "SOL": {
    "recent": 1,
-   "before": 3,
-   "buzz": 1.67,
+   "before": 2,
+   "buzz": 2.5,
    "tone": 0,
    "headlines": [
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
    ],
-   "trending": 12,
+   "trending": 9,
    "rule_score": 0.15,
    "score": 0.1,
    "note": "Buzz is up 1.67x but the only headline is a mild Injective-style onchain item, so little real catalyst yet."
@@ -64,8 +65,8 @@
   },
   "DOGE": {
    "recent": 1,
-   "before": 4,
-   "buzz": 1.25,
+   "before": 3,
+   "buzz": 1.67,
    "tone": 0,
    "headlines": [
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
@@ -88,15 +89,15 @@
   },
   "XRP": {
    "recent": 2,
-   "before": 7,
-   "buzz": 1.43,
+   "before": 6,
+   "buzz": 1.67,
    "tone": 0,
    "headlines": [
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'",
     "Ripple wins final US approval for national trust bank"
    ],
-   "trending": 3,
-   "rule_score": 0.39,
+   "trending": 6,
+   "rule_score": 0.28,
    "score": 0.6,
    "note": "Ripple's final US trust bank approval and Aviva's XRP Ledger fund are real institutional wins, with buzz at 1.43x."
   }
