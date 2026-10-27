@@ -1,10 +1,10 @@
 {
- "time": "2026-10-27T15:03:28+00:00",
+ "time": "2026-10-27T15:58:34+00:00",
  "coins": {
   "BTC": {
-   "recent": 16,
-   "before": 22,
-   "buzz": 3.64,
+   "recent": 13,
+   "before": 25,
+   "buzz": 2.6,
    "tone": -1,
    "headlines": [
     "Bitcoin Profit-Taking Cools but Analysts Remain Cautious Ahead of FOMC",
@@ -12,22 +12,22 @@
     "Would a Bitcoin Selloff After the Midterms Present a Buying Opportunity?"
    ],
    "trending": 1,
-   "rule_score": 0.7,
+   "rule_score": 0.52,
    "score": -0.1,
    "note": "Heavy buzz but mostly price recaps, profit-taking and cautious analysts ahead of FOMC; no clear new catalyst."
   },
   "ETH": {
    "recent": 3,
-   "before": 5,
-   "buzz": 3.0,
+   "before": 4,
+   "buzz": 3.75,
    "tone": 0,
    "headlines": [
     "Bitcoin Profit-Taking Cools but Analysts Remain Cautious Ahead of FOMC",
     "Robinhood Earnings Prediction Market Preview: What Will Vlad Tenev Say?",
     "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser"
    ],
-   "trending": 6,
-   "rule_score": 0.55,
+   "trending": null,
+   "rule_score": 0.5,
    "score": 0.1,
    "note": "Few headlines; tokenized fund news is mildly positive, but Glamsterdam bug fix is a minor risk being handled."
   },
@@ -39,7 +39,7 @@
    "headlines": [
     "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser"
    ],
-   "trending": 7,
+   "trending": 11,
    "rule_score": 0.15,
    "score": -0.1,
    "note": "Solana bug bounty now costs 1 SOL due to AI spam; small security-process story, slightly negative tone."
@@ -50,8 +50,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 9,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "No recent headlines, so nothing new is building."
   },
@@ -90,15 +90,15 @@
   },
   "XRP": {
    "recent": 2,
-   "before": 8,
-   "buzz": 1.25,
+   "before": 7,
+   "buzz": 1.43,
    "tone": -1,
    "headlines": [
     "Ripple, Robinhood Partner to Expand RLUSD Use for Institutional Settlement",
     "Bitcoin shows signs of weakness while Ripple's bank win fails to bolster XRP"
    ],
-   "trending": 11,
-   "rule_score": 0.1,
+   "trending": 3,
+   "rule_score": 0.29,
    "score": 0.4,
    "note": "Ripple's final OCC trust bank approval and RLUSD partnership are real, though price reaction has lagged."
   }
@@ -130,10 +130,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 81,
+ "headlines": 77,
  "sources": {
-  "Alpaca/Benzinga": 26,
-  "crypto news sites": 55,
+  "Alpaca/Benzinga": 25,
+  "crypto news sites": 52,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-27T15:03:28+00:00"
