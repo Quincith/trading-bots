@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 02:27 UTC
+# Aggressive strategy — 2026-10-27 02:57 UTC
 
 | | |
 |---|---|
@@ -11,21 +11,21 @@
 
 Read 79 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 54, CoinGecko trending 15).
 
-- **Ripple and XRP institutional adoption**: Ripple's national trust bank approval and Aviva's XRP Ledger fund add real institutional use, supporting XRP. (XRP)
-- **Stablecoin rules expanding**: US OCC push for community bank stablecoin issuers and Canada's draft rules signal regulatory clarity, mildly helpful to the crypto sector. (XRP, ETH, SOL)
-- **Bitcoin dip below $80,000 and bear-market debate**: Price slipped below $80,000 with mixed analyst views; recap-style coverage adds little new catalyst, so risk stays mixed. (BTC, ETH, DOGE)
+- **Ripple/XRP institutional adoption**: Ripple got final US trust bank approval and Aviva put a fund on XRP Ledger; real, but priced in partly. (XRP)
+- **Stablecoin regulation expanding**: Canada consultation and US OCC push banks into stablecoins; supportive long-term for crypto rails, mostly indirect for tokens. (XRP, ETH, BTC)
+- **Security breaches hitting wallets**: Keystone wallet key theft and Bitcoin wallet flaw, plus Dogecoin phishing alarm, raise trust risk. (BTC, DOGE)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.60 | 2 (1.67x usual) | Ripple's final US trust bank approval and Aviva's XRP Ledger fund are real institutional wins, with buzz at 1.43x. |
-| SOL | +0.10 | 1 (2.5x usual) | Buzz is up 1.67x but the only headline is a mild Injective-style onchain item, so little real catalyst yet. |
-| ETH | -0.10 | 1 (0.71x usual) | Slipping on bottom talk; Bitmine's buybacks over ether buying hint at weaker corporate demand. |
-| DOGE | -0.10 | 1 (1.67x usual) | Phishing alarm after a hardware wallet data breach is a small negative, despite a modest price bounce. |
-| BTC | -0.20 | 2 (0.29x usual) | Price fell below $80,000 on Iran fears and Fed caution; bullish takes are mostly opinion, not new catalysts. |
+| XRP | +0.30 | 2 (1.67x usual) | Final US trust bank approval for Ripple is a real positive, with rising buzz. |
+| SOL | +0.00 | 1 (2.5x usual) | Buzz spike but only one headline and no clear new catalyst. |
+| ETH | -0.10 | 1 (0.71x usual) | Quiet news; Bitmine buying ether is old news and firm is shifting to buybacks. |
+| DOGE | -0.20 | 1 (1.67x usual) | Hardware wallet breach and phishing alarm are new negatives; small buzz. |
+| BTC | -0.30 | 2 (0.29x usual) | Bitcoin fell below $80,000 and wallet breaches add worry; buzz is quiet though. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
