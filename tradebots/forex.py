@@ -349,7 +349,7 @@ def load_engine(strategy: str, cfg: dict, years: int = 8, cache: str | None = No
     if cache and Path(cache).exists():
         bars, cot = pickle.loads(Path(cache).read_bytes())
     else:
-        bars = {p: fxdata.daily_history(p, (start - timedelta(days=400)).date(), end.date())
+        bars = {p: fxdata.daily_prices(p, (start - timedelta(days=400)).date(), end.date())
                 for p in cfg["markets"]["pairs"]}
         cot = fxdata.fetch_cot((start - timedelta(days=60)).date())
         if cache:

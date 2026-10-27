@@ -1,9 +1,10 @@
 """Free data for the Forex wing: past currency prices (for the lab) and the CFTC's weekly report on who
 holds which currency bets (for Copycat FX, live and in the lab). Neither needs a key.
 
-Past prices come from Dukascopy, a Swiss bank that publishes years of bid and ask prices for free. Bid and
-ask let the lab charge the real gap between buying and selling (the "spread"). The live bots use OANDA's
-own prices instead.
+Past prices come from Yahoo Finance's free daily candles, with Dukascopy (a Swiss bank that publishes years
+of bid and ask prices) as the backup. Yahoo has no spread, so the lab charges OANDA's usual gap between the
+buy and sell price instead (see forex.MIN_SPREAD_PIPS); Dukascopy's real spread is smaller than that anyway.
+The live bots use OANDA's own prices.
 
 The CFTC (the US futures regulator) publishes the "Commitments of Traders" report every Friday at 3:30pm
 New York time. It shows, as of the Tuesday before, how many currency futures contracts each type of big
@@ -124,6 +125,52 @@ def _get(http: requests.Session, url: str) -> bytes:
         wait = r.headers.get("Retry-After") if r is not None else None
         time.sleep(float(wait) if wait and wait.isdigit() else 5 * 2 ** attempt)   # slow down as asked
     raise RuntimeError(f"couldn't download {url} ({why})")
+
+
+YAHOO = "https://query1.finance.yahoo.com/v8/finance/chart/{sym}=X"
+AGENT = "trading-bots-lab/1.0 (+https://github.com/Quincith/trading-bots)"
+
+
+def yahoo_daily(pair: str, start: date, end: date, session: requests.Session | None = None) -> pd.DataFrame:
+    """Daily candles from Yahoo Finance in one request per pair. Days are dated in UTC."""
+    http = session or requests.Session()
+    http.headers.setdefault("User-Agent", AGENT)
+    t0 = int(datetime(start.year, start.month, start.day, tzinfo=timezone.utc).timestamp())
+    t1 = int(datetime(end.year, end.month, end.day, tzinfo=timezone.utc).timestamp())
+    r = None
+    for attempt in range(4):
+        time.sleep(PAUSE)
+        r = http.get(YAHOO.format(sym=pair.replace("_", "")), timeout=60,
+                     params={"period1": t0, "period2": t1, "interval": "1d"})
+        if r.status_code == 200:
+            break
+        time.sleep(5 * 2 ** attempt)
+    if r is None or r.status_code != 200:
+        raise RuntimeError(f"Yahoo {pair}: HTTP {r.status_code if r is not None else '?'}")
+    res = r.json()["chart"]["result"][0]
+    q = res["indicators"]["quote"][0]
+    df = pd.DataFrame({k: q[k] for k in ("open", "high", "low", "close")},
+                      index=pd.to_datetime(res["timestamp"], unit="s", utc=True).normalize(), dtype=float).dropna()
+    df = df[(df > 0).all(axis=1) & ~df.index.duplicated(keep="last")]
+    # Yahoo's currency candles sometimes have a high or low that doesn't contain the open and close
+    df["high"] = df[["open", "high", "close"]].max(axis=1)
+    df["low"] = df[["open", "low", "close"]].min(axis=1)
+    df["spread"], df["volume"] = 0.0, 0.0
+    return df
+
+
+def daily_prices(pair: str, start: date, end: date) -> pd.DataFrame:
+    """Daily candles for the lab: Yahoo first, Dukascopy if Yahoo won't answer."""
+    try:
+        df = yahoo_daily(pair, start, end)
+        if len(df) > 200:
+            log.info("%s: %d days from Yahoo", pair, len(df))
+            return df
+        why = f"only {len(df)} days"
+    except Exception as e:   # noqa: BLE001
+        why = str(e)
+    log.warning("%s: Yahoo failed (%s), trying Dukascopy", pair, why)
+    return daily_history(pair, start, end)
 
 
 def daily_history(pair: str, start: date, end: date, session: requests.Session | None = None) -> pd.DataFrame:

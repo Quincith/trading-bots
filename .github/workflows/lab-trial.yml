@@ -22,8 +22,9 @@ jobs:
           python - <<'PY'
           from datetime import date
           from tradebots import fxdata
-          df = fxdata.daily_history("EUR_USD", date(2025, 1, 1), date(2026, 10, 1))
+          df = fxdata.yahoo_daily("EUR_USD", date(2018, 1, 1), date(2026, 10, 1))
           print(df.head(3)); print(df.tail(3)); print(len(df), "days, median spread", df["spread"].median())
+          print(df.describe().to_string())
           cot = fxdata.fetch_cot(date(2026, 6, 1))
           print(cot.tail(8).to_string())
           PY
