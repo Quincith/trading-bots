@@ -1,17 +1,18 @@
 {
- "time": "2026-10-27T02:57:32+00:00",
+ "time": "2026-10-27T03:27:34+00:00",
  "coins": {
   "BTC": {
-   "recent": 2,
+   "recent": 3,
    "before": 35,
-   "buzz": 0.29,
+   "buzz": 0.43,
    "tone": 0,
    "headlines": [
+    "Israel Election Puts Netanyahu\u2019s Future At Stake After Trump Endorses \u2018Warrior\u2019 Prime Minister",
     "Cathie Wood Buys Joby, Archer Aviation as Air Taxi Bets Grow, Ark Pounces on Nu Holdings Stock After Lula\u2019s Brazil Win",
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
    ],
-   "trending": 2,
-   "rule_score": 0.16,
+   "trending": 1,
+   "rule_score": 0.19,
    "score": -0.3,
    "note": "Bitcoin fell below $80,000 and wallet breaches add worry; buzz is quiet though."
   },
@@ -30,14 +31,14 @@
   },
   "SOL": {
    "recent": 1,
-   "before": 2,
-   "buzz": 2.5,
+   "before": 1,
+   "buzz": 5.0,
    "tone": 0,
    "headlines": [
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
    ],
-   "trending": 11,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "Buzz spike but only one headline and no clear new catalyst."
   },
@@ -96,7 +97,7 @@
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'",
     "Ripple wins final US approval for national trust bank"
    ],
-   "trending": 4,
+   "trending": 3,
    "rule_score": 0.43,
    "score": 0.3,
    "note": "Final US trust bank approval for Ripple is a real positive, with rising buzz."
@@ -129,10 +130,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 79,
+ "headlines": 78,
  "sources": {
-  "Alpaca/Benzinga": 25,
-  "crypto news sites": 54,
+  "Alpaca/Benzinga": 26,
+  "crypto news sites": 52,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-27T02:57:32+00:00"
