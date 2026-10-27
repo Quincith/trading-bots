@@ -1,20 +1,20 @@
 {
- "time": "2026-10-27T07:28:00+00:00",
+ "time": "2026-10-27T07:58:56+00:00",
  "coins": {
   "BTC": {
-   "recent": 4,
-   "before": 31,
-   "buzz": 0.65,
+   "recent": 5,
+   "before": 30,
+   "buzz": 0.83,
    "tone": 0,
    "headlines": [
     "Gold, Crypto or Trump? Bettors Wager on What Robinhood Will Talk About During Q3 Earnings Call",
     "Creating 'Net-New' Gold With Alchemy Becoming Real: Coinbase CEO Says You Can't 'Invent Anything' That Raises Bitcoin Supply",
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together"
    ],
-   "trending": 5,
-   "rule_score": 0.08,
-   "score": -0.2,
-   "note": "Price dipped below $80k and Strategy paused buying; mostly recap-style noise with a slight negative tilt."
+   "trending": 3,
+   "rule_score": 0.27,
+   "score": -0.4,
+   "note": "ETF outflows and Strategy pausing bitcoin buying signal weaker demand near $80,000 support."
   },
   "ETH": {
    "recent": 1,
@@ -27,18 +27,20 @@
    "trending": null,
    "rule_score": 0.1,
    "score": -0.1,
-   "note": "Few fresh headlines; Bitmine switching from ETH buys to buybacks is a mild negative."
+   "note": "Little fresh news; Bitmine buybacks and a staking bug fix are mostly neutral."
   },
   "SOL": {
-   "recent": 0,
+   "recent": 1,
    "before": 2,
-   "buzz": 0.0,
+   "buzz": 2.5,
    "tone": 0,
-   "headlines": [],
-   "trending": 3,
-   "rule_score": 0.3,
-   "score": 0.0,
-   "note": "No new Solana headlines in the window; nothing new."
+   "headlines": [
+    "Solana bug reports now cost 1 SOL as AI floods security teams with spam"
+   ],
+   "trending": 5,
+   "rule_score": 0.15,
+   "score": -0.1,
+   "note": "Buzz is up but the news is a bug-bounty cost change, not a clear catalyst."
   },
   "AVAX": {
    "recent": 0,
@@ -49,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new Avalanche headlines in the window; nothing new."
+   "note": "No recent headlines, so nothing new to act on."
   },
   "LINK": {
    "recent": 0,
@@ -57,10 +59,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 14,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No new Chainlink headlines in the window; nothing new."
+   "note": "No recent headlines, so nothing new to act on."
   },
   "DOGE": {
    "recent": 0,
@@ -70,8 +72,8 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.1,
-   "note": "Only a phishing alarm after a hardware wallet breach; minor negative, not a clear catalyst."
+   "score": 0.0,
+   "note": "No fresh catalyst; only a recycled phishing alarm story."
   },
   "LTC": {
    "recent": 0,
@@ -82,7 +84,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new Litecoin headlines in the window; nothing new."
+   "note": "No recent headlines, so nothing new to act on."
   },
   "XRP": {
    "recent": 2,
@@ -93,44 +95,42 @@
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
     "Ripple gets a final go-ahead to launch its own U.S. national trust bank"
    ],
-   "trending": 12,
-   "rule_score": 0.28,
-   "score": 0.6,
-   "note": "Final approval for Ripple's national trust bank is a real catalyst, and buzz is up 1.67x."
+   "trending": null,
+   "rule_score": 0.13,
+   "score": 0.4,
+   "note": "Ripple trust bank final approval is real news, and buzz is up 1.67x."
   }
  },
  "themes": [
   {
-   "title": "XRP national trust bank approval",
-   "note": "Ripple got final U.S. approval for a national trust bank, a real regulatory win that is drawing extra XRP attention.",
+   "title": "Ripple national trust bank approval",
+   "note": "Final US approval for Ripple's trust bank may support XRP sentiment, though it is already widely reported.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Stablecoin rules expanding",
-   "note": "Canada consultation and U.S. OCC push for community banks to issue stablecoins signal growing regulated stablecoin adoption.",
+   "title": "Bitcoin ETF outflows and Strategy pausing BTC buys",
+   "note": "Large ETF exits and Strategy halting Bitcoin purchases are weighing on BTC demand near key support.",
    "coins": [
-    "XRP",
     "BTC",
     "ETH"
    ]
   },
   {
-   "title": "Bitcoin treasury buying pauses",
-   "note": "Strategy paused BTC buying and Bitmine favors buybacks, a mild negative sentiment signal for large holders.",
+   "title": "Solana security spam and bug costs",
+   "note": "Solana bug bounty changes amid AI spam is a mild, mixed headline with limited price impact so far.",
    "coins": [
-    "BTC",
-    "ETH"
+    "SOL"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 77,
+ "headlines": 78,
  "sources": {
-  "Alpaca/Benzinga": 26,
-  "crypto news sites": 51,
+  "Alpaca/Benzinga": 25,
+  "crypto news sites": 53,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T06:57:52+00:00"
+ "ai_time": "2026-10-27T07:58:56+00:00"
 }

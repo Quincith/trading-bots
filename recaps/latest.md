@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 15 times. Most active: LTC at 699.0x normal volume, price -0.5%.
+- Scout scanned 8 coins, 16 times. Most active: LTC at 699.0x normal volume, price -0.5%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,23 +23,23 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 3 times. Most active: LINK at 10.5x normal volume, price -0.8%.
+- Scout scanned 8 coins, 4 times. Most active: LTC at 100.0x normal volume, price +0.2%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: flat
+## Copycat: down $0.01 (-0.01%)
 
-Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended flat at $99.87. Paper money only.
+Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended down $0.01 (-0.01%) at $99.86. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.87 → $99.87 (no change).
-- Profit / loss since start: -$0.13 on $100.00 money put in.
+- Account value: $99.87 → $99.86 (-$0.01, -0.01%).
+- Profit / loss since start: -$0.14 on $100.00 money put in.
 - Spotter read 31 insider filings from the SEC and found 33 insider purchases. Watchlist at day end: 10 stocks.
 - Top pick: THRM (Gentherm Inc). 2 insiders bought $662,600 at about $26.50: Mascarenas Paul Anthony (Director) $532,600; Presley William T. (President & CEO, Director) $130,000.
-- Sent for review: THRM (17x), STC (17x), NBIS (17x).
-- Decisions: 0 buy, 51 wait, 0 skip.
+- Sent for review: THRM (18x), STC (18x), NBIS (18x).
+- Decisions: 0 buy, 54 wait, 0 skip.
 - Passed on THRM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on STC (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
