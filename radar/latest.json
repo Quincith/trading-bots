@@ -1,10 +1,10 @@
 {
- "time": "2026-10-27T10:58:11+00:00",
+ "time": "2026-10-27T11:28:11+00:00",
  "coins": {
   "BTC": {
-   "recent": 8,
-   "before": 30,
-   "buzz": 1.33,
+   "recent": 7,
+   "before": 29,
+   "buzz": 1.21,
    "tone": 0,
    "headlines": [
     "China\u2019s AI Stock Rout Scary, but Crypto Punters Aren\u2019t Calling a US Bubble Burst Yet",
@@ -12,20 +12,18 @@
     "Polymarket Punters Raise Pete Hegseth Impeachment Odds as Thomas Massie Plans to Reintroduce Articles After Midterms"
    ],
    "trending": 1,
-   "rule_score": 0.37,
+   "rule_score": 0.34,
    "score": 0.1,
    "note": "Buzz is up 1.33x with mixed news: ETF outflows partly reversed and dip-buying calls, but mostly recycled price talk."
   },
   "ETH": {
-   "recent": 1,
-   "before": 7,
-   "buzz": 0.71,
-   "tone": 1,
-   "headlines": [
-    "Ethereum fixes Glamsterdam bug that could have sent staking deposits to builders"
-   ],
-   "trending": 11,
-   "rule_score": 0.25,
+   "recent": 0,
+   "before": 8,
+   "buzz": 0.0,
+   "tone": 0,
+   "headlines": [],
+   "trending": 6,
+   "rule_score": 0.15,
    "score": -0.1,
    "note": "Few new headlines and buzz is below normal; a Glamsterdam bug was fixed, and Ethereum slipped in recent price reports."
   },
@@ -37,7 +35,7 @@
    "headlines": [
     "Solana bug reports now cost 1 SOL as AI floods security teams with spam"
    ],
-   "trending": 6,
+   "trending": 14,
    "rule_score": 0.15,
    "score": -0.2,
    "note": "Buzz at 2.5x, but the main story is a bug-bounty spam problem and a Solana security cost change, which is a mild negative."
@@ -59,8 +57,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 12,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "No recent headlines, so nothing new to act on."
   },
@@ -70,8 +68,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 11,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines; mentions are only price recaps, which are not catalysts."
   },
@@ -127,13 +125,11 @@
    ]
   }
  ],
- "trending_elsewhere": [
-  "AAVE"
- ],
- "headlines": 83,
+ "trending_elsewhere": [],
+ "headlines": 82,
  "sources": {
   "Alpaca/Benzinga": 28,
-  "crypto news sites": 55,
+  "crypto news sites": 54,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-27T10:58:11+00:00"
