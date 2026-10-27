@@ -1,18 +1,18 @@
 {
- "time": "2026-10-27T05:57:50+00:00",
+ "time": "2026-10-27T06:27:44+00:00",
  "coins": {
   "BTC": {
    "recent": 4,
-   "before": 32,
-   "buzz": 0.62,
+   "before": 31,
+   "buzz": 0.65,
    "tone": 0,
    "headlines": [
     "Creating 'Net-New' Gold With Alchemy Becoming Real: Coinbase CEO Says You Can't 'Invent Anything' That Raises Bitcoin Supply",
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
     "Israel Election Puts Netanyahu\u2019s Future At Stake After Trump Endorses \u2018Warrior\u2019 Prime Minister"
    ],
-   "trending": 4,
-   "rule_score": 0.22,
+   "trending": null,
+   "rule_score": -0.07,
    "score": -0.3,
    "note": "Strategy paused Bitcoin buys and price dipped below $80,000. Buzz is below normal, so the new negatives are modest."
   },
@@ -22,8 +22,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 11,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": -0.2,
    "note": "Bitmine is favoring buybacks over ether purchases, and ETH slipped. No fresh ETH-specific headlines in recent hours."
   },
@@ -44,8 +44,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 11,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent Avalanche headlines. Nothing new to act on."
   },
@@ -84,15 +84,15 @@
   },
   "XRP": {
    "recent": 2,
-   "before": 7,
-   "buzz": 1.43,
+   "before": 6,
+   "buzz": 1.67,
    "tone": 0,
    "headlines": [
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
     "Ripple gets a final go-ahead to launch its own U.S. national trust bank"
    ],
    "trending": null,
-   "rule_score": 0.09,
+   "rule_score": 0.13,
    "score": 0.5,
    "note": "Ripple's national trust bank got final approval with rising buzz at 1.43x. Real positive news, though partly priced in."
   }
@@ -125,8 +125,8 @@
  "trending_elsewhere": [],
  "headlines": 76,
  "sources": {
-  "Alpaca/Benzinga": 26,
-  "crypto news sites": 50,
+  "Alpaca/Benzinga": 25,
+  "crypto news sites": 51,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-27T05:57:50+00:00"
