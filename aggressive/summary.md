@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 17:28 UTC
+# Aggressive strategy — 2026-10-27 17:58 UTC
 
 | | |
 |---|---|
@@ -17,17 +17,17 @@ Read 77 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 52, C
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.30 | 2 (1.43x usual) | Real bank approval and BNY/Robinhood partnerships, but some stories are repeats and XRP only rose about 2%. |
-| BTC | +0.00 | 7 (1.13x usual) | Mostly price commentary and recycled analyst calls; buzz is normal and no fresh catalyst. |
+| XRP | +0.30 | 3 (2.14x usual) | Real bank approval and BNY/Robinhood partnerships, but some stories are repeats and XRP only rose about 2%. |
+| BTC | +0.00 | 5 (0.78x usual) | Mostly price commentary and recycled analyst calls; buzz is normal and no fresh catalyst. |
 | LINK | +0.00 | 0 (0.0x usual) | No LINK headlines; Chainlink data-feed mention in CF Benchmarks is only indirectly relevant. |
-| ETH | -0.20 | 4 (6.67x usual) | Buzz spike is mostly a confusing 'OpenAI proves ETH is false' headline and a Glamsterdam bug fix; net mildly negative. |
-| SOL | -0.20 | 2 (3.33x usual) | Few headlines; Solana bug-report spam costs are a minor negative, while onchain fund news is only indirectly helpful. |
+| ETH | -0.20 | 1 (0.83x usual) | Buzz spike is mostly a confusing 'OpenAI proves ETH is false' headline and a Glamsterdam bug fix; net mildly negative. |
+| SOL | -0.20 | 1 (1.25x usual) | Few headlines; Solana bug-report spam costs are a minor negative, while onchain fund news is only indirectly helpful. |
 
-Also trending, but not in our coin list: PEPE.
+Also trending, but not in our coin list: PEPE, AAVE.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_

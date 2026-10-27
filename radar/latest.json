@@ -1,47 +1,44 @@
 {
- "time": "2026-10-27T17:28:40+00:00",
+ "time": "2026-10-27T17:58:51+00:00",
  "coins": {
   "BTC": {
-   "recent": 7,
-   "before": 31,
-   "buzz": 1.13,
+   "recent": 5,
+   "before": 32,
+   "buzz": 0.78,
    "tone": 1,
    "headlines": [
+    "Bitcoin Fed Meeting Preview: Drop to $76,000 or Reclaim $82,000?",
     "Nasdaq 100 Climbs on Chip Rally, Boeing Sinks 10%: Stock Market Today",
-    "Datavault AI Stock Crashes \u2014 Financials Cannot Be Trusted: What You Need to Know",
-    "Bitcoin Profit-Taking Cools but Analysts Remain Cautious Ahead of FOMC"
+    "Datavault AI Stock Crashes \u2014 Financials Cannot Be Trusted: What You Need to Know"
    ],
-   "trending": null,
-   "rule_score": 0.13,
+   "trending": 13,
+   "rule_score": 0.21,
    "score": 0.0,
    "note": "Mostly price commentary and recycled analyst calls; buzz is normal and no fresh catalyst."
   },
   "ETH": {
-   "recent": 4,
-   "before": 3,
-   "buzz": 6.67,
+   "recent": 1,
+   "before": 6,
+   "buzz": 0.83,
    "tone": 0,
    "headlines": [
-    "Bitcoin Profit-Taking Cools but Analysts Remain Cautious Ahead of FOMC",
-    "Robinhood Earnings Prediction Market Preview: What Will Vlad Tenev Say?",
-    "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser"
+    "OpenAI Proves ETH Is False, and Crypto Twitter Has Questions"
    ],
    "trending": null,
-   "rule_score": 0.5,
+   "rule_score": 0.0,
    "score": -0.2,
    "note": "Buzz spike is mostly a confusing 'OpenAI proves ETH is false' headline and a Glamsterdam bug fix; net mildly negative."
   },
   "SOL": {
-   "recent": 2,
-   "before": 3,
-   "buzz": 3.33,
+   "recent": 1,
+   "before": 4,
+   "buzz": 1.25,
    "tone": 0,
    "headlines": [
-    "Galaxy Digital Posts $323M Profit as AI Expansion Gains Steam",
-    "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser"
+    "Galaxy Digital Posts $323M Profit as AI Expansion Gains Steam"
    ],
-   "trending": 14,
-   "rule_score": 0.62,
+   "trending": null,
+   "rule_score": 0.0,
    "score": -0.2,
    "note": "Few headlines; Solana bug-report spam costs are a minor negative, while onchain fund news is only indirectly helpful."
   },
@@ -62,8 +59,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 4,
-   "rule_score": 0.3,
+   "trending": 9,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No LINK headlines; Chainlink data-feed mention in CF Benchmarks is only indirectly relevant."
   },
@@ -90,16 +87,17 @@
    "note": "No recent headlines and no new news."
   },
   "XRP": {
-   "recent": 2,
+   "recent": 3,
    "before": 7,
-   "buzz": 1.43,
-   "tone": 1,
+   "buzz": 2.14,
+   "tone": 2,
    "headlines": [
     "Ripple Expands BNY Partnership as XRP Jumps 2%",
-    "Ripple, Robinhood Partner to Expand RLUSD Use for Institutional Settlement"
+    "Ripple, Robinhood Partner to Expand RLUSD Use for Institutional Settlement",
+    "Robinhood taps Ripple\u2019s $2.5 billion RLUSD stablecoin despite backing rival USDG"
    ],
-   "trending": 13,
-   "rule_score": 0.34,
+   "trending": null,
+   "rule_score": 0.43,
    "score": 0.3,
    "note": "Real bank approval and BNY/Robinhood partnerships, but some stories are repeats and XRP only rose about 2%."
   }
@@ -131,7 +129,8 @@
   }
  ],
  "trending_elsewhere": [
-  "PEPE"
+  "PEPE",
+  "AAVE"
  ],
  "headlines": 77,
  "sources": {
