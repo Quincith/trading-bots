@@ -1,42 +1,48 @@
 {
- "time": "2026-10-27T13:28:25+00:00",
+ "time": "2026-10-27T13:58:26+00:00",
  "coins": {
   "BTC": {
-   "recent": 15,
-   "before": 23,
-   "buzz": 3.26,
-   "tone": 0,
+   "recent": 17,
+   "before": 22,
+   "buzz": 3.86,
+   "tone": -1,
    "headlines": [
-    "Would a Bitcoin Selloff After the Midterms Present a Buying Opportunity?",
-    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 10 Futures Gain as Fed Begins Its Two-Day Meet\u2014 Novartis, HSBC, Welltower in Focus (UPDATED)",
-    "Bitcoin Could Hit $100,000 or $60,000 by Year-End, Analyst Says"
+    "Bitcoin Profit-Taking Cools but Analysts Remain Cautious Ahead of FOMC",
+    "Robinhood Earnings Prediction Market Preview: What Will Vlad Tenev Say?",
+    "Would a Bitcoin Selloff After the Midterms Present a Buying Opportunity?"
    ],
-   "trending": 1,
-   "rule_score": 0.75,
+   "trending": 2,
+   "rule_score": 0.7,
    "score": -0.3,
-   "note": "Buzz is up 1.8x, but mostly price talk and falling below $80K; weakness is building."
+   "note": "Heavy headline volume, but mostly price talk and a dip below $80K; mixed signals."
   },
   "ETH": {
-   "recent": 0,
-   "before": 7,
-   "buzz": 0.0,
+   "recent": 3,
+   "before": 5,
+   "buzz": 3.0,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Bitcoin Profit-Taking Cools but Analysts Remain Cautious Ahead of FOMC",
+    "Robinhood Earnings Prediction Market Preview: What Will Vlad Tenev Say?",
+    "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser"
+   ],
    "trending": null,
-   "rule_score": 0.0,
+   "rule_score": 0.4,
    "score": -0.1,
-   "note": "No recent headlines of its own; mild drag from Keystone breach and market mood."
+   "note": "Few headlines; a Glamsterdam bug was fixed early, otherwise quiet and mildly weak."
   },
   "SOL": {
-   "recent": 0,
+   "recent": 1,
    "before": 3,
-   "buzz": 0.0,
+   "buzz": 1.67,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser"
+   ],
    "trending": 7,
    "rule_score": 0.15,
    "score": -0.1,
-   "note": "Solana bug-report costs story is minor; no buzz pickup in recent hours."
+   "note": "Only one item; a bug bounty spam story is minor and not a real catalyst."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +53,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines; nothing new to act on."
+   "note": "No recent headlines, so nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -58,18 +64,18 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines; nothing new to act on."
+   "note": "No recent headlines, so nothing new."
   },
   "DOGE": {
    "recent": 0,
-   "before": 4,
+   "before": 3,
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines; only recycled mentions in price recaps."
+   "note": "No recent headlines, so nothing new."
   },
   "LTC": {
    "recent": 0,
@@ -80,7 +86,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines; nothing new to act on."
+   "note": "No recent headlines, so nothing new."
   },
   "XRP": {
    "recent": 2,
@@ -91,46 +97,44 @@
     "Bitcoin shows signs of weakness while Ripple's bank win fails to bolster XRP",
     "Ripple Wins Final OCC Approval for Trust Bank Behind $2.6B RLUSD Stablecoin"
    ],
-   "trending": 12,
+   "trending": 13,
    "rule_score": 0.14,
-   "score": 0.1,
-   "note": "Ripple trust bank approval is real but already priced in; buzz is modest at 1.4x."
+   "score": 0.2,
+   "note": "Ripple's final trust bank approval is real news, but earlier coverage says XRP barely moved."
   }
  },
  "themes": [
   {
-   "title": "Keystone wallet breach spreading",
-   "note": "Hackers stole a verification key and the wallet maker is destroying devices; a security scare that could hit trust in hardware wallets.",
+   "title": "Bitcoin slipping below $80K ahead of Fed meeting",
+   "note": "BTC dropped under $80,000 as traders wait on the Fed; risk-off mood could spread to other coins.",
    "coins": [
     "BTC",
-    "ETH"
+    "ETH",
+    "SOL",
+    "XRP"
    ]
   },
   {
-   "title": "Ripple national trust bank approval",
-   "note": "Final OCC approval for Ripple's trust bank behind RLUSD; a real regulatory step, but headlines already flooded and price reaction faded.",
+   "title": "Ripple national trust bank final approval",
+   "note": "Ripple got final OCC approval for a US trust bank, but coverage says XRP price didn't react much.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Bitcoin below $80K with Fed meeting and AI-stock fears",
-   "note": "BTC slipping under key support as macro risk and AI-bubble worries grow; a bearish mood building for majors.",
+   "title": "Bitcoin miners pivoting to AI compute",
+   "note": "Miners like Luxor raising money for AI compute; a narrative tied to BTC miners rather than a direct price catalyst.",
    "coins": [
-    "BTC",
-    "ETH",
-    "SOL",
-    "XRP",
-    "DOGE"
+    "BTC"
    ]
   }
  ],
  "trending_elsewhere": [],
  "headlines": 83,
  "sources": {
-  "Alpaca/Benzinga": 28,
-  "crypto news sites": 55,
+  "Alpaca/Benzinga": 27,
+  "crypto news sites": 56,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T12:58:26+00:00"
+ "ai_time": "2026-10-27T13:58:26+00:00"
 }

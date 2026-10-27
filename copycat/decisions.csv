@@ -2,3 +2,6 @@ time,symbol,decision,confidence,risk,size_usd,note
 2026-10-26T13:56:40+00:00,CHCO,BUY,1.00,APPROVE,20.00,"Copying CITY HOLDING CO insiders. 4 insiders bought $68,222 at about $142.13: Fisher Robert D (Director) $23,451; Strong-Treister Diane W (Director) $17,056; Hoyer James A (Director) $14,213 and 1 more."
 2026-10-26T13:56:40+00:00,MSM,BUY,1.00,APPROVE,20.00,"Copying MSC INDUSTRIAL DIRECT CO INC insiders. 1 insider bought $50,129 at about $115.77: Slone Reuben E (Director) $50,129."
 2026-10-26T19:57:11+00:00,BBT,BUY,1.00,APPROVE,19.95,"Copying Beacon Financial Corp insiders. 1 insider bought $104,984 at about $30.43: Hollister Thomas J (Director) $104,984."
+2026-10-27T13:58:38+00:00,THRM,SKIP,0.00,,0.00,Price already up 16% since the insiders bought (limit 10%). Too late to copy.
+2026-10-27T13:58:38+00:00,STC,BUY,1.00,APPROVE,19.92,"Copying STEWART INFORMATION SERVICES CORP insiders. 3 insiders bought $283,710 at about $47.28: Apel Thomas G (Director) $95,470; Bradley C Allen Jr (Director) $94,600; Corey William S. Jr. (Director) $93,640."
+2026-10-27T13:58:38+00:00,NBIS,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure)

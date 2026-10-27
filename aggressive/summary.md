@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 13:28 UTC
+# Aggressive strategy — 2026-10-27 13:58 UTC
 
 | | |
 |---|---|
@@ -9,22 +9,22 @@
 
 ## News radar (trends forming)
 
-Read 83 headlines from the last day (Alpaca/Benzinga 28, crypto news sites 55, CoinGecko trending 15).
+Read 83 headlines from the last day (Alpaca/Benzinga 27, crypto news sites 56, CoinGecko trending 15).
 
-- **Keystone wallet breach spreading**: Hackers stole a verification key and the wallet maker is destroying devices; a security scare that could hit trust in hardware wallets. (BTC, ETH)
-- **Ripple national trust bank approval**: Final OCC approval for Ripple's trust bank behind RLUSD; a real regulatory step, but headlines already flooded and price reaction faded. (XRP)
-- **Bitcoin below $80K with Fed meeting and AI-stock fears**: BTC slipping under key support as macro risk and AI-bubble worries grow; a bearish mood building for majors. (BTC, ETH, SOL, XRP, DOGE)
+- **Bitcoin slipping below $80K ahead of Fed meeting**: BTC dropped under $80,000 as traders wait on the Fed; risk-off mood could spread to other coins. (BTC, ETH, SOL, XRP)
+- **Ripple national trust bank final approval**: Ripple got final OCC approval for a US trust bank, but coverage says XRP price didn't react much. (XRP)
+- **Bitcoin miners pivoting to AI compute**: Miners like Luxor raising money for AI compute; a narrative tied to BTC miners rather than a direct price catalyst. (BTC)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.10 | 2 (1.43x usual) | Ripple trust bank approval is real but already priced in; buzz is modest at 1.4x. |
-| ETH | -0.10 | 0 (0.0x usual) | No recent headlines of its own; mild drag from Keystone breach and market mood. |
-| SOL | -0.10 | 0 (0.0x usual) | Solana bug-report costs story is minor; no buzz pickup in recent hours. |
-| BTC | -0.30 | 15 (3.26x usual) | Buzz is up 1.8x, but mostly price talk and falling below $80K; weakness is building. |
+| XRP | +0.20 | 2 (1.43x usual) | Ripple's final trust bank approval is real news, but earlier coverage says XRP barely moved. |
+| ETH | -0.10 | 3 (3.0x usual) | Few headlines; a Glamsterdam bug was fixed early, otherwise quiet and mildly weak. |
+| SOL | -0.10 | 1 (1.67x usual) | Only one item; a bug bounty spam story is minor and not a real catalyst. |
+| BTC | -0.30 | 17 (3.86x usual) | Heavy headline volume, but mostly price talk and a dip below $80K; mixed signals. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
