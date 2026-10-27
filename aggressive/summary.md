@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 00:57 UTC
+# Aggressive strategy — 2026-10-27 01:27 UTC
 
 | | |
 |---|---|
@@ -18,6 +18,7 @@ Read 78 headlines from the last day (Alpaca/Benzinga 24, crypto news sites 54, C
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
 | XRP | +0.30 | 1 (0.71x usual) | Ripple won final US trust bank approval and Aviva put a fund on XRP Ledger; buzz is still low, so only a mild positive. |
+| SOL | +0.00 | 0 (0.0x usual) | No recent headlines, so nothing new is building. |
 | DOGE | -0.10 | 0 (0.0x usual) | Phishing alarm after a hardware wallet data breach is a mild negative; no price-moving news. |
 | BTC | -0.20 | 0 (0.0x usual) | Price fell under $80K on macro fears and Strategy paused buying; sentiment is cautious, though Galaxy calls the bear market over. |
 
@@ -26,4 +27,4 @@ Read 78 headlines from the last day (Alpaca/Benzinga 24, crypto news sites 54, C
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_

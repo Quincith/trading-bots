@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27T00:57:22+00:00",
+ "time": "2026-10-27T01:27:32+00:00",
  "coins": {
   "BTC": {
    "recent": 0,
@@ -7,7 +7,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 1,
+   "trending": 3,
    "rule_score": 0.3,
    "score": -0.2,
    "note": "Price fell under $80K on macro fears and Strategy paused buying; sentiment is cautious, though Galaxy calls the bear market over."
@@ -29,8 +29,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 13,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines, so nothing new is building."
   },
