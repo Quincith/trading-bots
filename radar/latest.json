@@ -1,20 +1,20 @@
 {
- "time": "2026-10-27T19:58:56+00:00",
+ "time": "2026-10-27T20:28:53+00:00",
  "coins": {
   "BTC": {
    "recent": 8,
-   "before": 28,
-   "buzz": 1.43,
+   "before": 27,
+   "buzz": 1.48,
    "tone": 4,
    "headlines": [
     "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday",
     "Bitcoin Fed Meeting Preview: Drop to $76,000 or Reclaim $82,000?"
    ],
-   "trending": 8,
-   "rule_score": 0.64,
-   "score": -0.1,
-   "note": "Mostly Fed preview and price recaps; slight weakness signs, no clear new catalyst."
+   "trending": 9,
+   "rule_score": 0.65,
+   "score": 0.0,
+   "note": "Mostly price recaps and FOMC previews; no fresh catalyst, despite high search interest."
   },
   "ETH": {
    "recent": 3,
@@ -28,8 +28,8 @@
    ],
    "trending": null,
    "rule_score": 0.6,
-   "score": 0.1,
-   "note": "Buzz is up but the OpenAI-ETH story is unclear; modest interest only."
+   "score": -0.1,
+   "note": "Buzz is up, but headlines are mostly noise, including a dubious OpenAI-ETH story."
   },
   "SOL": {
    "recent": 2,
@@ -40,10 +40,10 @@
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday",
     "Galaxy Digital Posts $323M Profit as AI Expansion Gains Steam"
    ],
-   "trending": 6,
+   "trending": 5,
    "rule_score": 0.82,
    "score": -0.2,
-   "note": "Solana bug reports now cost 1 SOL due to AI spam; a small negative for security perception."
+   "note": "Buzz is up, but the news is a bug-report spam problem, which is negative."
   },
   "AVAX": {
    "recent": 0,
@@ -54,7 +54,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new."
+   "note": "No recent headlines at all."
   },
   "LINK": {
    "recent": 0,
@@ -62,10 +62,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 8,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines; nothing new."
+   "note": "No recent headlines; high search interest is not backed by new news."
   },
   "DOGE": {
    "recent": 1,
@@ -77,8 +77,8 @@
    ],
    "trending": null,
    "rule_score": 0.2,
-   "score": 0.1,
-   "note": "Buzz up 2.5x but only one mention and just price-hold talk; weak signal."
+   "score": 0.0,
+   "note": "Only one headline with a 5x buzz spike; too thin to act on."
   },
   "LTC": {
    "recent": 0,
@@ -89,55 +89,59 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new."
+   "note": "No recent headlines."
   },
   "XRP": {
-   "recent": 3,
+   "recent": 5,
    "before": 7,
-   "buzz": 2.14,
-   "tone": 4,
+   "buzz": 3.57,
+   "tone": 5,
    "headlines": [
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday",
     "Ripple Expands BNY Partnership as XRP Jumps 2%",
     "Robinhood taps Ripple\u2019s $2.5 billion RLUSD stablecoin despite backing rival USDG"
    ],
-   "trending": 5,
-   "rule_score": 0.78,
-   "score": 0.4,
-   "note": "Ripple's OCC trust bank approval and Robinhood RLUSD deal are real news; buzz is 2.1x."
+   "trending": null,
+   "rule_score": 0.9,
+   "score": 0.5,
+   "note": "Real partnership news with Robinhood and BNY for Ripple's stablecoin, though price moves are small."
   }
  },
  "themes": [
   {
-   "title": "Ripple/XRP institutional expansion",
-   "note": "Ripple got final OCC approval for a trust bank and expanded Robinhood and BNY ties. Real, but XRP already jumped 2%.",
+   "title": "Ripple/XRP institutional expansion via Robinhood and BNY",
+   "note": "Robinhood adopting Ripple's RLUSD stablecoin and BNY partnership is real, new adoption news; XRP buzz is 3.57x.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Tokenized stocks and onchain funds",
-   "note": "Nasdaq-100 fund on Stellar and objections to OKX-ICE tokenized stocks. Mixed news, some firms pushing back.",
+   "title": "Tokenized stocks and onchain Wall Street products",
+   "note": "Nasdaq-100 fund on Stellar, CF Benchmarks onchain data, and OKX-ICE tokenized stock objections; mixed signal with rising pushback.",
    "coins": [
-    "XRP",
-    "SOL",
+    "BTC",
     "ETH"
    ]
   },
   {
-   "title": "Bitcoin pre-Fed uncertainty",
-   "note": "BTC is trading between $76k and $82k ahead of FOMC; mostly preview articles, not a new catalyst.",
+   "title": "Bitcoin pre-FOMC volatility",
+   "note": "Bitcoin swinging between $76K and $82K ahead of Fed meeting; much of the coverage is price recap, so treat with caution.",
    "coins": [
-    "BTC"
+    "BTC",
+    "ETH",
+    "XRP",
+    "DOGE"
    ]
   }
  ],
- "trending_elsewhere": [],
+ "trending_elsewhere": [
+  "AAVE"
+ ],
  "headlines": 78,
  "sources": {
-  "Alpaca/Benzinga": 23,
-  "crypto news sites": 55,
+  "Alpaca/Benzinga": 22,
+  "crypto news sites": 56,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T19:28:54+00:00"
+ "ai_time": "2026-10-27T20:28:53+00:00"
 }

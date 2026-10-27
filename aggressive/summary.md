@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 19:58 UTC
+# Aggressive strategy — 2026-10-27 20:28 UTC
 
 | | |
 |---|---|
@@ -9,23 +9,26 @@
 
 ## News radar (trends forming)
 
-Read 78 headlines from the last day (Alpaca/Benzinga 23, crypto news sites 55, CoinGecko trending 15).
+Read 78 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 56, CoinGecko trending 15).
 
-- **Ripple/XRP institutional expansion**: Ripple got final OCC approval for a trust bank and expanded Robinhood and BNY ties. Real, but XRP already jumped 2%. (XRP)
-- **Tokenized stocks and onchain funds**: Nasdaq-100 fund on Stellar and objections to OKX-ICE tokenized stocks. Mixed news, some firms pushing back. (XRP, SOL, ETH)
-- **Bitcoin pre-Fed uncertainty**: BTC is trading between $76k and $82k ahead of FOMC; mostly preview articles, not a new catalyst. (BTC)
+- **Ripple/XRP institutional expansion via Robinhood and BNY**: Robinhood adopting Ripple's RLUSD stablecoin and BNY partnership is real, new adoption news; XRP buzz is 3.57x. (XRP)
+- **Tokenized stocks and onchain Wall Street products**: Nasdaq-100 fund on Stellar, CF Benchmarks onchain data, and OKX-ICE tokenized stock objections; mixed signal with rising pushback. (BTC, ETH)
+- **Bitcoin pre-FOMC volatility**: Bitcoin swinging between $76K and $82K ahead of Fed meeting; much of the coverage is price recap, so treat with caution. (BTC, ETH, XRP, DOGE)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.40 | 3 (2.14x usual) | Ripple's OCC trust bank approval and Robinhood RLUSD deal are real news; buzz is 2.1x. |
-| ETH | +0.10 | 3 (3.0x usual) | Buzz is up but the OpenAI-ETH story is unclear; modest interest only. |
-| DOGE | +0.10 | 1 (5.0x usual) | Buzz up 2.5x but only one mention and just price-hold talk; weak signal. |
-| BTC | -0.10 | 8 (1.43x usual) | Mostly Fed preview and price recaps; slight weakness signs, no clear new catalyst. |
-| SOL | -0.20 | 2 (3.33x usual) | Solana bug reports now cost 1 SOL due to AI spam; a small negative for security perception. |
+| XRP | +0.50 | 5 (3.57x usual) | Real partnership news with Robinhood and BNY for Ripple's stablecoin, though price moves are small. |
+| BTC | +0.00 | 8 (1.48x usual) | Mostly price recaps and FOMC previews; no fresh catalyst, despite high search interest. |
+| LINK | +0.00 | 0 (0.0x usual) | No recent headlines; high search interest is not backed by new news. |
+| DOGE | +0.00 | 1 (5.0x usual) | Only one headline with a 5x buzz spike; too thin to act on. |
+| ETH | -0.10 | 3 (3.0x usual) | Buzz is up, but headlines are mostly noise, including a dubious OpenAI-ETH story. |
+| SOL | -0.20 | 2 (3.33x usual) | Buzz is up, but the news is a bug-report spam problem, which is negative. |
+
+Also trending, but not in our coin list: AAVE.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
