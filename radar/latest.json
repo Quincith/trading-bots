@@ -1,18 +1,18 @@
 {
- "time": "2026-10-27T07:58:56+00:00",
+ "time": "2026-10-27T08:28:02+00:00",
  "coins": {
   "BTC": {
-   "recent": 5,
+   "recent": 4,
    "before": 30,
-   "buzz": 0.83,
+   "buzz": 0.67,
    "tone": 0,
    "headlines": [
     "Gold, Crypto or Trump? Bettors Wager on What Robinhood Will Talk About During Q3 Earnings Call",
     "Creating 'Net-New' Gold With Alchemy Becoming Real: Coinbase CEO Says You Can't 'Invent Anything' That Raises Bitcoin Supply",
-    "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together"
+    "Bitcoin ETFs claw back $110M after $774M exit"
    ],
-   "trending": 3,
-   "rule_score": 0.27,
+   "trending": 1,
+   "rule_score": 0.23,
    "score": -0.4,
    "note": "ETF outflows and Strategy pausing bitcoin buying signal weaker demand near $80,000 support."
   },
@@ -24,8 +24,8 @@
    "headlines": [
     "Ethereum fixes Glamsterdam bug that could have sent staking deposits to builders"
    ],
-   "trending": null,
-   "rule_score": 0.1,
+   "trending": 13,
+   "rule_score": 0.25,
    "score": -0.1,
    "note": "Little fresh news; Bitmine buybacks and a staking bug fix are mostly neutral."
   },
@@ -37,7 +37,7 @@
    "headlines": [
     "Solana bug reports now cost 1 SOL as AI floods security teams with spam"
    ],
-   "trending": 5,
+   "trending": 10,
    "rule_score": 0.15,
    "score": -0.1,
    "note": "Buzz is up but the news is a bug-bounty cost change, not a clear catalyst."
@@ -59,8 +59,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 14,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "No recent headlines, so nothing new to act on."
   },
@@ -87,16 +87,15 @@
    "note": "No recent headlines, so nothing new to act on."
   },
   "XRP": {
-   "recent": 2,
-   "before": 6,
-   "buzz": 1.67,
+   "recent": 1,
+   "before": 7,
+   "buzz": 0.71,
    "tone": 0,
    "headlines": [
-    "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
     "Ripple gets a final go-ahead to launch its own U.S. national trust bank"
    ],
    "trending": null,
-   "rule_score": 0.13,
+   "rule_score": 0.0,
    "score": 0.4,
    "note": "Ripple trust bank final approval is real news, and buzz is up 1.67x."
   }
@@ -126,10 +125,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 78,
+ "headlines": 79,
  "sources": {
   "Alpaca/Benzinga": 25,
-  "crypto news sites": 53,
+  "crypto news sites": 54,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-27T07:58:56+00:00"
