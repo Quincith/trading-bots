@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 36 times. Most active: LTC at 699.0x normal volume, price -0.5%.
+- Scout scanned 8 coins, 37 times. Most active: LTC at 699.0x normal volume, price -0.5%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,14 +36,14 @@ Active day. The bots bought 2 times. The account ended down $0.42 (-0.42%) at $9
 
 - Account value: $99.87 → $99.45 (-$0.42, -0.42%).
 - Profit / loss since start: -$0.55 on $100.00 money put in.
-- Spotter read 566 insider filings from the SEC and found 45 insider purchases. Watchlist at day end: 12 stocks.
+- Spotter read 583 insider filings from the SEC and found 45 insider purchases. Watchlist at day end: 12 stocks.
 - Top pick: THRM (Gentherm Inc). 2 insiders bought $662,600 at about $26.50: Mascarenas Paul Anthony (Director) $532,600; Presley William T. (President & CEO, Director) $130,000.
 - Sent for review: THRM (32x), NBIS (32x), STC (31x).
 - Decisions: 2 buy, 90 wait, 3 skip.
 - Passed on THRM (SKIP, 0% confident): Price already up 18% since the insiders bought (limit 10%). Too late to copy.
 - Bought $19.92 of STC at 43.62. Reason: Copying STEWART INFORMATION SERVICES CORP insiders. 3 insiders bought $283,710 at about $47.28: Apel Thomas G (Director) $95,470; Bradley C Allen Jr (Director) $94,600; Corey William S. Jr. (Director) $93,640.
 - Bought $19.89 of NBIS at 167.66. Reason: Copying Nebius Group N.V. insiders. 1 insider bought $122,438 at about $159.01: Grimme Arne (Director) $122,438.
-- Holding: BBT $19.90 (-$0.04 unrealized); CHCO $19.49 (-$0.50 unrealized); MSM $19.96 (-$0.03 unrealized); NBIS $20.19 (+$0.31 unrealized); STC $19.64 (-$0.27 unrealized).
+- Holding: BBT $19.88 (-$0.06 unrealized); CHCO $19.52 (-$0.47 unrealized); MSM $20.00 (+$0.01 unrealized); NBIS $20.18 (+$0.30 unrealized); STC $19.58 (-$0.33 unrealized).
 
 ## Words to know
 
