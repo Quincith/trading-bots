@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27T00:27:22+00:00",
+ "time": "2026-10-27T00:57:22+00:00",
  "coins": {
   "BTC": {
    "recent": 0,
@@ -7,10 +7,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 3,
+   "trending": 1,
    "rule_score": 0.3,
    "score": -0.2,
-   "note": "Price dipped below $80K on Iran and Fed worries. Most headlines are price recaps, and buzz is very low."
+   "note": "Price fell under $80K on macro fears and Strategy paused buying; sentiment is cautious, though Galaxy calls the bear market over."
   },
   "ETH": {
    "recent": 0,
@@ -21,7 +21,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines. Bitmine buybacks are old news for the token itself."
+   "note": "No recent headlines; Bitmine's ETH buying is old news and it has shifted toward buybacks."
   },
   "SOL": {
    "recent": 0,
@@ -32,7 +32,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines and no new catalyst found."
+   "note": "No recent headlines, so nothing new is building."
   },
   "AVAX": {
    "recent": 0,
@@ -40,10 +40,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 8,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "Searched often but no fresh headlines. Searches alone are not a catalyst."
+   "note": "No recent headlines, so nothing new is building."
   },
   "LINK": {
    "recent": 0,
@@ -54,7 +54,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines. Prediction-market deals are not a direct LINK catalyst yet."
+   "note": "No recent headlines, so nothing new is building."
   },
   "DOGE": {
    "recent": 0,
@@ -64,8 +64,8 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.2,
-   "note": "Phishing alarm after a hardware wallet data breach. Minor negative, no recent buzz."
+   "score": -0.1,
+   "note": "Phishing alarm after a hardware wallet data breach is a mild negative; no price-moving news."
   },
   "LTC": {
    "recent": 0,
@@ -76,7 +76,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines and no new catalyst."
+   "note": "No recent headlines, so nothing new is building."
   },
   "XRP": {
    "recent": 1,
@@ -86,38 +86,37 @@
    "headlines": [
     "Ripple wins final US approval for national trust bank"
    ],
-   "trending": 7,
-   "rule_score": 0.15,
-   "score": 0.1,
-   "note": "Aviva tokenized fund on XRP Ledger is a real adoption item, though the Evernorth piece is recycled price talk."
+   "trending": 2,
+   "rule_score": 0.3,
+   "score": 0.3,
+   "note": "Ripple won final US trust bank approval and Aviva put a fund on XRP Ledger; buzz is still low, so only a mild positive."
   }
  },
  "themes": [
   {
-   "title": "Stablecoin rules spreading (Canada, US banks)",
-   "note": "Canada drafted stablecoin rules and the US OCC invited community banks into stablecoin payments. Regulatory clarity can lift the sector, though these are early consultations.",
+   "title": "Stablecoin rules and bank entry",
+   "note": "Canada consultation and US OCC push banks into stablecoins; long-term positive for stablecoin-linked coins, but mostly policy talk so far.",
    "coins": [
-    "BTC",
-    "ETH",
     "XRP",
-    "LINK"
+    "BTC"
    ]
   },
   {
-   "title": "Anthropic IPO and AI-versus-crypto money flow",
-   "note": "Anthropic's IPO filing is pulling attention and capital toward AI stocks, competing with crypto for risk appetite.",
+   "title": "Ripple and XRP institutional adoption",
+   "note": "Ripple's national trust bank approval and Aviva's XRP Ledger fund are real-world uses, though XRP buzz is still modest.",
+   "coins": [
+    "XRP"
+   ]
+  },
+  {
+   "title": "Bitcoin pressure and bear-versus-bull debate",
+   "note": "BTC slipped below $80,000 on Iran fears and Fed worries; the bull/bear argument is mostly opinion, not a fresh catalyst.",
    "coins": [
     "BTC",
     "ETH",
     "SOL",
-    "AVAX"
-   ]
-  },
-  {
-   "title": "Prediction markets going mainstream",
-   "note": "NBA and Kalshi/Polymarket deals keep growing. Mostly a stock and exchange story, with little direct crypto token impact yet.",
-   "coins": [
-    "LINK"
+    "DOGE",
+    "XRP"
    ]
   }
  ],
@@ -128,5 +127,5 @@
   "crypto news sites": 54,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-26T23:57:26+00:00"
+ "ai_time": "2026-10-27T00:57:22+00:00"
 }
