@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 17:58 UTC
+# Aggressive strategy — 2026-10-27 18:28 UTC
 
 | | |
 |---|---|
@@ -9,25 +9,24 @@
 
 ## News radar (trends forming)
 
-Read 77 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 52, CoinGecko trending 15).
+Read 79 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 54, CoinGecko trending 15).
 
-- **Ripple/XRP bank approvals and partnerships**: Ripple's national trust bank got final approval and new BNY and Robinhood partnerships; XRP is up modestly, but several items are repeats of the same approval news. (XRP)
-- **Tokenized Nasdaq-100 and onchain finance**: Janus Henderson and Centrifuge tokenized fund on Stellar plus CF Benchmarks data onchain; mostly institutional infrastructure, indirect benefit to crypto networks. (LINK, SOL)
-- **Stablecoin regulation and adoption**: Brazil firms using stablecoins, USDC gaining in euro trading, Canada draft rules, OCC payment stablecoin push; broad sector tailwind, not coin-specific. (XRP, SOL, ETH)
+- **Ripple bank and RLUSD expansion**: Ripple got final OCC approval for a national trust bank, plus Robinhood and BNY deals using its RLUSD stablecoin. Real institutional progress, though some headlines repeat. (XRP)
+- **Tokenized stocks and Nasdaq-100 onchain**: Janus Henderson and Centrifuge launched a tokenized Nasdaq-100 fund on Stellar; OKX–ICE tokenized stock plans face pushback. Mostly builds on Stellar and infrastructure, less direct for our coins. (ETH, SOL)
+- **Bitcoin miners pivot to AI compute**: Luxor raised $16M and miners are moving into AI computing power. Mostly a BTC mining-sector story, with market attention on AI infrastructure. (BTC)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.30 | 3 (2.14x usual) | Real bank approval and BNY/Robinhood partnerships, but some stories are repeats and XRP only rose about 2%. |
-| BTC | +0.00 | 5 (0.78x usual) | Mostly price commentary and recycled analyst calls; buzz is normal and no fresh catalyst. |
-| LINK | +0.00 | 0 (0.0x usual) | No LINK headlines; Chainlink data-feed mention in CF Benchmarks is only indirectly relevant. |
-| ETH | -0.20 | 1 (0.83x usual) | Buzz spike is mostly a confusing 'OpenAI proves ETH is false' headline and a Glamsterdam bug fix; net mildly negative. |
-| SOL | -0.20 | 1 (1.25x usual) | Few headlines; Solana bug-report spam costs are a minor negative, while onchain fund news is only indirectly helpful. |
-
-Also trending, but not in our coin list: PEPE, AAVE.
+| XRP | +0.50 | 4 (3.33x usual) | Ripple's final OCC approval and Robinhood/BNY deals are real, building institutional good news; buzz is high. |
+| ETH | +0.00 | 2 (2.0x usual) | Only 2 headlines; OpenAI-ETH story is unclear and mostly noise. Nothing solid building. |
+| LINK | +0.00 | 0 (0.0x usual) | No recent headlines. Nothing new. |
+| DOGE | +0.00 | 1 (2.5x usual) | Only a price-recap mention. Buzz is up but no real catalyst. |
+| BTC | -0.20 | 7 (1.13x usual) | Mixed: high buzz and FOMC worries, but mostly price recaps. Keystone device recall is a small security story. |
+| SOL | -0.20 | 2 (3.33x usual) | Solana bug reports now cost 1 SOL due to AI spam; mildly negative security news, buzz rising. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
