@@ -28,22 +28,22 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.71 (-0.71%)
+## Copycat: down $0.55 (-0.55%)
 
-Active day. The bots bought 2 times. The account ended down $0.71 (-0.71%) at $99.16. Paper money only.
+Active day. The bots bought 2 times. The account ended down $0.55 (-0.55%) at $99.32. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.87 → $99.16 (-$0.71, -0.71%).
-- Profit / loss since start: -$0.84 on $100.00 money put in.
-- Spotter read 252 insider filings from the SEC and found 41 insider purchases. Watchlist at day end: 11 stocks.
+- Account value: $99.87 → $99.32 (-$0.55, -0.55%).
+- Profit / loss since start: -$0.68 on $100.00 money put in.
+- Spotter read 285 insider filings from the SEC and found 41 insider purchases. Watchlist at day end: 11 stocks.
 - Top pick: THRM (Gentherm Inc). 2 insiders bought $662,600 at about $26.50: Mascarenas Paul Anthony (Director) $532,600; Presley William T. (President & CEO, Director) $130,000.
 - Sent for review: THRM (32x), NBIS (32x), STC (31x).
 - Decisions: 2 buy, 90 wait, 3 skip.
 - Passed on THRM (SKIP, 0% confident): Price already up 18% since the insiders bought (limit 10%). Too late to copy.
 - Bought $19.92 of STC at 43.62. Reason: Copying STEWART INFORMATION SERVICES CORP insiders. 3 insiders bought $283,710 at about $47.28: Apel Thomas G (Director) $95,470; Bradley C Allen Jr (Director) $94,600; Corey William S. Jr. (Director) $93,640.
 - Bought $19.89 of NBIS at 167.66. Reason: Copying Nebius Group N.V. insiders. 1 insider bought $122,438 at about $159.01: Grimme Arne (Director) $122,438.
-- Holding: BBT $19.85 (-$0.09 unrealized); CHCO $19.52 (-$0.47 unrealized); MSM $19.92 (-$0.07 unrealized); NBIS $19.75 (-$0.13 unrealized); STC $19.85 (-$0.06 unrealized).
+- Holding: BBT $19.93 (-$0.01 unrealized); CHCO $19.47 (-$0.52 unrealized); MSM $19.95 (-$0.04 unrealized); NBIS $19.92 (+$0.04 unrealized); STC $19.77 (-$0.14 unrealized).
 
 ## Words to know
 
