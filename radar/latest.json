@@ -1,10 +1,10 @@
 {
- "time": "2026-10-27T11:28:11+00:00",
+ "time": "2026-10-27T11:58:15+00:00",
  "coins": {
   "BTC": {
-   "recent": 7,
+   "recent": 9,
    "before": 29,
-   "buzz": 1.21,
+   "buzz": 1.55,
    "tone": 0,
    "headlines": [
     "China\u2019s AI Stock Rout Scary, but Crypto Punters Aren\u2019t Calling a US Bubble Burst Yet",
@@ -12,9 +12,9 @@
     "Polymarket Punters Raise Pete Hegseth Impeachment Odds as Thomas Massie Plans to Reintroduce Articles After Midterms"
    ],
    "trending": 1,
-   "rule_score": 0.34,
-   "score": 0.1,
-   "note": "Buzz is up 1.33x with mixed news: ETF outflows partly reversed and dip-buying calls, but mostly recycled price talk."
+   "rule_score": 0.41,
+   "score": -0.4,
+   "note": "Heavy buzz but mostly negative: price slipped below $80K and ETFs saw large outflows before partial recovery."
   },
   "ETH": {
    "recent": 0,
@@ -25,20 +25,18 @@
    "trending": 6,
    "rule_score": 0.15,
    "score": -0.1,
-   "note": "Few new headlines and buzz is below normal; a Glamsterdam bug was fixed, and Ethereum slipped in recent price reports."
+   "note": "No recent headlines of its own; only a fixed staking bug, which is mildly positive but old news."
   },
   "SOL": {
-   "recent": 1,
-   "before": 2,
-   "buzz": 2.5,
+   "recent": 0,
+   "before": 3,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Solana bug reports now cost 1 SOL as AI floods security teams with spam"
-   ],
-   "trending": 14,
+   "headlines": [],
+   "trending": 9,
    "rule_score": 0.15,
    "score": -0.2,
-   "note": "Buzz at 2.5x, but the main story is a bug-bounty spam problem and a Solana security cost change, which is a mild negative."
+   "note": "Bug report spam costs and wallet breach stories are mild negatives; no fresh demand catalyst."
   },
   "AVAX": {
    "recent": 0,
@@ -49,7 +47,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new to act on."
+   "note": "No headlines in the recent window, so nothing new to act on."
   },
   "LINK": {
    "recent": 0,
@@ -60,7 +58,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new to act on."
+   "note": "No headlines in the recent window, so nothing new to act on."
   },
   "DOGE": {
    "recent": 0,
@@ -68,10 +66,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 11,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; mentions are only price recaps, which are not catalysts."
+   "note": "No headlines in the recent window, so nothing new to act on."
   },
   "LTC": {
    "recent": 0,
@@ -82,55 +80,56 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new to act on."
+   "note": "No headlines in the recent window, so nothing new to act on."
   },
   "XRP": {
    "recent": 1,
-   "before": 8,
-   "buzz": 0.62,
+   "before": 7,
+   "buzz": 0.71,
    "tone": 0,
    "headlines": [
     "Ripple Wins Final OCC Approval for Trust Bank Behind $2.6B RLUSD Stablecoin"
    ],
-   "trending": null,
-   "rule_score": 0.0,
-   "score": 0.4,
-   "note": "Ripple's final trust bank approval is a real positive catalyst, though it is already widely reported and partly priced in."
+   "trending": 10,
+   "rule_score": 0.15,
+   "score": 0.3,
+   "note": "Ripple's final OCC approval for a trust bank is a real positive catalyst, but buzz is light and partly recycled."
   }
  },
  "themes": [
   {
-   "title": "Ripple national trust bank final approval",
-   "note": "Final OCC approval for Ripple's trust bank is repeated across many outlets; a real but already-public catalyst that may help XRP sentiment.",
+   "title": "Bitcoin slipping below $80K amid Fed meeting and AI-stock jitters",
+   "note": "BTC buzz is elevated and headlines are bearish: falling below $80,000 while investors chase AI and ignore crypto.",
+   "coins": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP"
+   ]
+  },
+  {
+   "title": "Ripple final bank approval and stablecoin regulation",
+   "note": "Ripple's national trust bank approval is real news that may help XRP, though buzz is modest and some stories are repeats.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Stablecoin rules expanding to banks and Canada",
-   "note": "OCC invites community banks into stablecoin issuance and Canada opens stablecoin consultation; slow-building regulatory tailwind for the sector.",
+   "title": "Crypto security breaches and hacks",
+   "note": "Keystone wallet breach, Bloom bot hack, and Solana bug spam add risk headlines across wallets and chains.",
    "coins": [
-    "ETH",
+    "BTC",
     "SOL",
-    "XRP",
-    "AVAX",
-    "LINK"
-   ]
-  },
-  {
-   "title": "Bitcoin ETF flows and bitcoin dip-buying",
-   "note": "ETF outflows reversed partly and analysts urge accumulating; mixed signals keep bitcoin buzz elevated while price holds $80K support.",
-   "coins": [
-    "BTC"
+    "ETH"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 82,
+ "headlines": 83,
  "sources": {
   "Alpaca/Benzinga": 28,
-  "crypto news sites": 54,
+  "crypto news sites": 55,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T10:58:11+00:00"
+ "ai_time": "2026-10-27T11:58:15+00:00"
 }

@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 23 times. Most active: LTC at 699.0x normal volume, price -0.5%.
+- Scout scanned 8 coins, 24 times. Most active: LTC at 699.0x normal volume, price -0.5%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,27 +23,27 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 5 times. Most active: LTC at 100.0x normal volume, price +0.2%.
+- Scout scanned 8 coins, 6 times. Most active: LTC at 100.0x normal volume, price +0.2%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.07 (+0.07%)
+## Copycat: up $0.04 (+0.04%)
 
-Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended up $0.07 (+0.07%) at $99.94. Paper money only.
+Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended up $0.04 (+0.04%) at $99.91. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.87 → $99.94 (+$0.07, +0.07%).
-- Profit / loss since start: -$0.06 on $100.00 money put in.
-- Spotter read 62 insider filings from the SEC and found 34 insider purchases. Watchlist at day end: 10 stocks.
+- Account value: $99.87 → $99.91 (+$0.04, +0.04%).
+- Profit / loss since start: -$0.09 on $100.00 money put in.
+- Spotter read 64 insider filings from the SEC and found 36 insider purchases. Watchlist at day end: 10 stocks.
 - Top pick: THRM (Gentherm Inc). 2 insiders bought $662,600 at about $26.50: Mascarenas Paul Anthony (Director) $532,600; Presley William T. (President & CEO, Director) $130,000.
-- Sent for review: THRM (25x), STC (25x), NBIS (25x).
-- Decisions: 0 buy, 75 wait, 0 skip.
+- Sent for review: THRM (26x), STC (26x), NBIS (26x).
+- Decisions: 0 buy, 78 wait, 0 skip.
 - Passed on THRM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on STC (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
-- Holding: BBT $20.08 (+$0.14 unrealized); CHCO $19.75 (-$0.24 unrealized); MSM $20.04 (+$0.05 unrealized).
+- Holding: BBT $20.08 (+$0.14 unrealized); CHCO $19.75 (-$0.24 unrealized); MSM $20.01 (+$0.02 unrealized).
 
 ## Words to know
 
