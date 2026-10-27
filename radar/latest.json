@@ -1,38 +1,44 @@
 {
- "time": "2026-10-27T01:27:32+00:00",
+ "time": "2026-10-27T01:57:27+00:00",
  "coins": {
   "BTC": {
-   "recent": 0,
+   "recent": 1,
    "before": 36,
-   "buzz": 0.0,
+   "buzz": 0.14,
    "tone": 0,
-   "headlines": [],
-   "trending": 3,
-   "rule_score": 0.3,
+   "headlines": [
+    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
+   ],
+   "trending": 5,
+   "rule_score": 0.15,
    "score": -0.2,
-   "note": "Price fell under $80K on macro fears and Strategy paused buying; sentiment is cautious, though Galaxy calls the bear market over."
+   "note": "Price fell below $80,000 on Iran fears and Fed caution; bullish takes are mostly opinion, not new catalysts."
   },
   "ETH": {
-   "recent": 0,
+   "recent": 1,
    "before": 8,
-   "buzz": 0.0,
+   "buzz": 0.62,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
+   ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.0,
-   "note": "No recent headlines; Bitmine's ETH buying is old news and it has shifted toward buybacks."
+   "score": -0.1,
+   "note": "Slipping on bottom talk; Bitmine's buybacks over ether buying hint at weaker corporate demand."
   },
   "SOL": {
-   "recent": 0,
+   "recent": 1,
    "before": 3,
-   "buzz": 0.0,
+   "buzz": 1.67,
    "tone": 0,
-   "headlines": [],
-   "trending": 13,
+   "headlines": [
+    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
+   ],
+   "trending": 12,
    "rule_score": 0.15,
-   "score": 0.0,
-   "note": "No recent headlines, so nothing new is building."
+   "score": 0.1,
+   "note": "Buzz is up 1.67x but the only headline is a mild Injective-style onchain item, so little real catalyst yet."
   },
   "AVAX": {
    "recent": 0,
@@ -43,7 +49,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new is building."
+   "note": "No recent headlines; nothing new building."
   },
   "LINK": {
    "recent": 0,
@@ -54,18 +60,20 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new is building."
+   "note": "No recent headlines; nothing new building."
   },
   "DOGE": {
-   "recent": 0,
+   "recent": 1,
    "before": 4,
-   "buzz": 0.0,
+   "buzz": 1.25,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
+   ],
    "trending": null,
    "rule_score": 0.0,
    "score": -0.1,
-   "note": "Phishing alarm after a hardware wallet data breach is a mild negative; no price-moving news."
+   "note": "Phishing alarm after a hardware wallet data breach is a small negative, despite a modest price bounce."
   },
   "LTC": {
    "recent": 0,
@@ -76,56 +84,56 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new is building."
+   "note": "No recent headlines; nothing new building."
   },
   "XRP": {
-   "recent": 1,
+   "recent": 2,
    "before": 7,
-   "buzz": 0.71,
+   "buzz": 1.43,
    "tone": 0,
    "headlines": [
+    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'",
     "Ripple wins final US approval for national trust bank"
    ],
-   "trending": 2,
-   "rule_score": 0.3,
-   "score": 0.3,
-   "note": "Ripple won final US trust bank approval and Aviva put a fund on XRP Ledger; buzz is still low, so only a mild positive."
+   "trending": 3,
+   "rule_score": 0.39,
+   "score": 0.6,
+   "note": "Ripple's final US trust bank approval and Aviva's XRP Ledger fund are real institutional wins, with buzz at 1.43x."
   }
  },
  "themes": [
   {
-   "title": "Stablecoin rules and bank entry",
-   "note": "Canada consultation and US OCC push banks into stablecoins; long-term positive for stablecoin-linked coins, but mostly policy talk so far.",
-   "coins": [
-    "XRP",
-    "BTC"
-   ]
-  },
-  {
    "title": "Ripple and XRP institutional adoption",
-   "note": "Ripple's national trust bank approval and Aviva's XRP Ledger fund are real-world uses, though XRP buzz is still modest.",
+   "note": "Ripple's national trust bank approval and Aviva's XRP Ledger fund add real institutional use, supporting XRP.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Bitcoin pressure and bear-versus-bull debate",
-   "note": "BTC slipped below $80,000 on Iran fears and Fed worries; the bull/bear argument is mostly opinion, not a fresh catalyst.",
+   "title": "Stablecoin rules expanding",
+   "note": "US OCC push for community bank stablecoin issuers and Canada's draft rules signal regulatory clarity, mildly helpful to the crypto sector.",
+   "coins": [
+    "XRP",
+    "ETH",
+    "SOL"
+   ]
+  },
+  {
+   "title": "Bitcoin dip below $80,000 and bear-market debate",
+   "note": "Price slipped below $80,000 with mixed analyst views; recap-style coverage adds little new catalyst, so risk stays mixed.",
    "coins": [
     "BTC",
     "ETH",
-    "SOL",
-    "DOGE",
-    "XRP"
+    "DOGE"
    ]
   }
  ],
  "trending_elsewhere": [],
- "headlines": 78,
+ "headlines": 79,
  "sources": {
-  "Alpaca/Benzinga": 24,
+  "Alpaca/Benzinga": 25,
   "crypto news sites": 54,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T00:57:22+00:00"
+ "ai_time": "2026-10-27T01:57:27+00:00"
 }
