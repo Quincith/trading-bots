@@ -1,20 +1,20 @@
 {
- "time": "2026-10-27T20:58:50+00:00",
+ "time": "2026-10-27T21:28:52+00:00",
  "coins": {
   "BTC": {
-   "recent": 8,
-   "before": 28,
-   "buzz": 1.43,
-   "tone": 4,
+   "recent": 7,
+   "before": 30,
+   "buzz": 1.17,
+   "tone": 3,
    "headlines": [
+    "Bitcoin Will \u2018Never Break Its All-Time High Again,\u2019 All-In Podcast Host Jason Calacanis Says",
     "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
-    "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday",
-    "Bitcoin Fed Meeting Preview: Drop to $76,000 or Reclaim $82,000?"
+    "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday"
    ],
-   "trending": 2,
-   "rule_score": 0.79,
-   "score": 0.0,
-   "note": "Mostly price recaps and FOMC previews; no fresh catalyst, despite high search interest."
+   "trending": 7,
+   "rule_score": 0.48,
+   "score": -0.2,
+   "note": "Price is pressured by the Fed meeting and quantum-risk worries, but much of the news is price recap."
   },
   "ETH": {
    "recent": 2,
@@ -25,10 +25,10 @@
     "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday"
    ],
-   "trending": 5,
-   "rule_score": 0.48,
-   "score": -0.1,
-   "note": "Buzz is up, but headlines are mostly noise, including a dubious OpenAI-ETH story."
+   "trending": 3,
+   "rule_score": 0.63,
+   "score": 0.1,
+   "note": "Mostly neutral; tokenized-fund news helps a little, but one OpenAI-related story is noise."
   },
   "SOL": {
    "recent": 1,
@@ -38,10 +38,10 @@
    "headlines": [
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday"
    ],
-   "trending": 3,
-   "rule_score": 0.5,
-   "score": -0.2,
-   "note": "Buzz is up, but the news is a bug-report spam problem, which is negative."
+   "trending": 13,
+   "rule_score": 0.35,
+   "score": 0.1,
+   "note": "Few new headlines; tokenized Nasdaq fund on Stellar gives only faint indirect interest."
   },
   "AVAX": {
    "recent": 0,
@@ -52,7 +52,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines at all."
+   "note": "No recent headlines, so nothing new to act on."
   },
   "LINK": {
    "recent": 0,
@@ -60,10 +60,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 12,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; high search interest is not backed by new news."
+   "note": "No recent headlines, so nothing new to act on."
   },
   "DOGE": {
    "recent": 1,
@@ -76,7 +76,7 @@
    "trending": null,
    "rule_score": 0.2,
    "score": 0.0,
-   "note": "Only one headline with a 5x buzz spike; too thin to act on."
+   "note": "Buzz is high at 5x, but the single headline is a price-hold recap, not a real catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -87,7 +87,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines."
+   "note": "No recent headlines, so nothing new to act on."
   },
   "XRP": {
    "recent": 4,
@@ -99,34 +99,36 @@
     "Treasury's Bessent sees crypto as America's next tool for keeping the U.S. dollar on top",
     "Ripple, Robinhood expand partnership to bring RLUSD to retail and institutional markets"
    ],
-   "trending": null,
-   "rule_score": 0.44,
-   "score": 0.5,
-   "note": "Real partnership news with Robinhood and BNY for Ripple's stablecoin, though price moves are small."
+   "trending": 9,
+   "rule_score": 0.59,
+   "score": 0.4,
+   "note": "Repeated Ripple and Robinhood RLUSD partnership and bank approval news is real, though partly recycled."
   }
  },
  "themes": [
   {
-   "title": "Ripple/XRP institutional expansion via Robinhood and BNY",
-   "note": "Robinhood adopting Ripple's RLUSD stablecoin and BNY partnership is real, new adoption news; XRP buzz is 3.57x.",
+   "title": "Ripple/Robinhood RLUSD stablecoin partnerships",
+   "note": "Multiple recent stories about Ripple's RLUSD stablecoin expanding with Robinhood; some are repeats of the same deal, so treat as moderate.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Tokenized stocks and onchain Wall Street products",
-   "note": "Nasdaq-100 fund on Stellar, CF Benchmarks onchain data, and OKX-ICE tokenized stock objections; mixed signal with rising pushback.",
+   "title": "Tokenized stocks and Wall Street onchain push",
+   "note": "Janus Henderson Nasdaq-100 fund on Stellar, CF Benchmarks, and OKX-ICE objections show institutions moving onchain; mixed signal for the broader market.",
    "coins": [
-    "BTC",
-    "ETH"
+    "SOL",
+    "ETH",
+    "XRP"
    ]
   },
   {
-   "title": "Bitcoin pre-FOMC volatility",
-   "note": "Bitcoin swinging between $76K and $82K ahead of Fed meeting; much of the coverage is price recap, so treat with caution.",
+   "title": "Fed meeting and macro risk-off",
+   "note": "Bitcoin dropped below $80,000 ahead of the FOMC; traders are cautious, so near-term price pressure is likely across majors.",
    "coins": [
     "BTC",
     "ETH",
+    "SOL",
     "XRP",
     "DOGE"
    ]
@@ -135,9 +137,9 @@
  "trending_elsewhere": [],
  "headlines": 81,
  "sources": {
-  "Alpaca/Benzinga": 22,
-  "crypto news sites": 59,
+  "Alpaca/Benzinga": 23,
+  "crypto news sites": 58,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T20:28:53+00:00"
+ "ai_time": "2026-10-27T21:28:52+00:00"
 }

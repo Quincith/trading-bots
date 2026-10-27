@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 20:58 UTC
+# Aggressive strategy — 2026-10-27 21:28 UTC
 
 | | |
 |---|---|
@@ -9,24 +9,23 @@
 
 ## News radar (trends forming)
 
-Read 81 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 59, CoinGecko trending 15).
+Read 81 headlines from the last day (Alpaca/Benzinga 23, crypto news sites 58, CoinGecko trending 15).
 
-- **Ripple/XRP institutional expansion via Robinhood and BNY**: Robinhood adopting Ripple's RLUSD stablecoin and BNY partnership is real, new adoption news; XRP buzz is 3.57x. (XRP)
-- **Tokenized stocks and onchain Wall Street products**: Nasdaq-100 fund on Stellar, CF Benchmarks onchain data, and OKX-ICE tokenized stock objections; mixed signal with rising pushback. (BTC, ETH)
-- **Bitcoin pre-FOMC volatility**: Bitcoin swinging between $76K and $82K ahead of Fed meeting; much of the coverage is price recap, so treat with caution. (BTC, ETH, XRP, DOGE)
+- **Ripple/Robinhood RLUSD stablecoin partnerships**: Multiple recent stories about Ripple's RLUSD stablecoin expanding with Robinhood; some are repeats of the same deal, so treat as moderate. (XRP)
+- **Tokenized stocks and Wall Street onchain push**: Janus Henderson Nasdaq-100 fund on Stellar, CF Benchmarks, and OKX-ICE objections show institutions moving onchain; mixed signal for the broader market. (SOL, ETH, XRP)
+- **Fed meeting and macro risk-off**: Bitcoin dropped below $80,000 ahead of the FOMC; traders are cautious, so near-term price pressure is likely across majors. (BTC, ETH, SOL, XRP, DOGE)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.50 | 4 (2.22x usual) | Real partnership news with Robinhood and BNY for Ripple's stablecoin, though price moves are small. |
-| BTC | +0.00 | 8 (1.43x usual) | Mostly price recaps and FOMC previews; no fresh catalyst, despite high search interest. |
-| LINK | +0.00 | 0 (0.0x usual) | No recent headlines; high search interest is not backed by new news. |
-| DOGE | +0.00 | 1 (5.0x usual) | Only one headline with a 5x buzz spike; too thin to act on. |
-| ETH | -0.10 | 2 (1.67x usual) | Buzz is up, but headlines are mostly noise, including a dubious OpenAI-ETH story. |
-| SOL | -0.20 | 1 (1.25x usual) | Buzz is up, but the news is a bug-report spam problem, which is negative. |
+| XRP | +0.40 | 4 (2.22x usual) | Repeated Ripple and Robinhood RLUSD partnership and bank approval news is real, though partly recycled. |
+| ETH | +0.10 | 2 (1.67x usual) | Mostly neutral; tokenized-fund news helps a little, but one OpenAI-related story is noise. |
+| SOL | +0.10 | 1 (1.25x usual) | Few new headlines; tokenized Nasdaq fund on Stellar gives only faint indirect interest. |
+| DOGE | +0.00 | 1 (5.0x usual) | Buzz is high at 5x, but the single headline is a price-hold recap, not a real catalyst. |
+| BTC | -0.20 | 7 (1.17x usual) | Price is pressured by the Fed meeting and quantum-risk worries, but much of the news is price recap. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
