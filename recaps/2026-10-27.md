@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 40 times. Most active: LTC at 699.0x normal volume, price -0.5%.
+- Scout scanned 8 coins, 41 times. Most active: LTC at 699.0x normal volume, price -0.5%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -28,22 +28,22 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.19 (-0.19%)
+## Copycat: down $0.08 (-0.08%)
 
-Active day. The bots bought 2 times. The account ended down $0.19 (-0.19%) at $99.68. Paper money only.
+Active day. The bots bought 2 times. The account ended down $0.08 (-0.08%) at $99.79. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.87 → $99.68 (-$0.19, -0.19%).
-- Profit / loss since start: -$0.32 on $100.00 money put in.
-- Spotter read 947 insider filings from the SEC and found 55 insider purchases. Watchlist at day end: 16 stocks.
+- Account value: $99.87 → $99.79 (-$0.08, -0.08%).
+- Profit / loss since start: -$0.21 on $100.00 money put in.
+- Spotter read 1077 insider filings from the SEC and found 66 insider purchases. Watchlist at day end: 17 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 3 insiders bought $1,771,951 at about $15.38: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800.
 - Sent for review: THRM (32x), NBIS (32x), STC (31x).
 - Decisions: 2 buy, 90 wait, 3 skip.
 - Passed on THRM (SKIP, 0% confident): Price already up 18% since the insiders bought (limit 10%). Too late to copy.
 - Bought $19.92 of STC at 43.62. Reason: Copying STEWART INFORMATION SERVICES CORP insiders. 3 insiders bought $283,710 at about $47.28: Apel Thomas G (Director) $95,470; Bradley C Allen Jr (Director) $94,600; Corey William S. Jr. (Director) $93,640.
 - Bought $19.89 of NBIS at 167.66. Reason: Copying Nebius Group N.V. insiders. 1 insider bought $122,438 at about $159.01: Grimme Arne (Director) $122,438.
-- Holding: BBT $19.90 (-$0.04 unrealized); CHCO $19.51 (-$0.48 unrealized); MSM $19.99 ($-0.00 unrealized); NBIS $20.23 (+$0.35 unrealized); STC $19.77 (-$0.14 unrealized).
+- Holding: BBT $19.90 (-$0.04 unrealized); CHCO $19.51 (-$0.48 unrealized); MSM $19.99 ($-0.00 unrealized); NBIS $20.20 (+$0.32 unrealized); STC $19.92 (+$0.01 unrealized).
 
 ## Words to know
 

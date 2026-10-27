@@ -1,47 +1,45 @@
 {
- "time": "2026-10-27T20:28:53+00:00",
+ "time": "2026-10-27T20:58:50+00:00",
  "coins": {
   "BTC": {
    "recent": 8,
-   "before": 27,
-   "buzz": 1.48,
+   "before": 28,
+   "buzz": 1.43,
    "tone": 4,
    "headlines": [
     "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday",
     "Bitcoin Fed Meeting Preview: Drop to $76,000 or Reclaim $82,000?"
    ],
-   "trending": 9,
-   "rule_score": 0.65,
+   "trending": 2,
+   "rule_score": 0.79,
    "score": 0.0,
    "note": "Mostly price recaps and FOMC previews; no fresh catalyst, despite high search interest."
   },
   "ETH": {
-   "recent": 3,
-   "before": 5,
-   "buzz": 3.0,
+   "recent": 2,
+   "before": 6,
+   "buzz": 1.67,
    "tone": 2,
    "headlines": [
     "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
-    "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday",
-    "OpenAI Proves ETH Is False, and Crypto Twitter Has Questions"
+    "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday"
    ],
-   "trending": null,
-   "rule_score": 0.6,
+   "trending": 5,
+   "rule_score": 0.48,
    "score": -0.1,
    "note": "Buzz is up, but headlines are mostly noise, including a dubious OpenAI-ETH story."
   },
   "SOL": {
-   "recent": 2,
-   "before": 3,
-   "buzz": 3.33,
+   "recent": 1,
+   "before": 4,
+   "buzz": 1.25,
    "tone": 2,
    "headlines": [
-    "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday",
-    "Galaxy Digital Posts $323M Profit as AI Expansion Gains Steam"
+    "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday"
    ],
-   "trending": 5,
-   "rule_score": 0.82,
+   "trending": 3,
+   "rule_score": 0.5,
    "score": -0.2,
    "note": "Buzz is up, but the news is a bug-report spam problem, which is negative."
   },
@@ -62,7 +60,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 8,
+   "trending": 12,
    "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines; high search interest is not backed by new news."
@@ -92,17 +90,17 @@
    "note": "No recent headlines."
   },
   "XRP": {
-   "recent": 5,
-   "before": 7,
-   "buzz": 3.57,
-   "tone": 5,
+   "recent": 4,
+   "before": 9,
+   "buzz": 2.22,
+   "tone": 2,
    "headlines": [
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday",
-    "Ripple Expands BNY Partnership as XRP Jumps 2%",
-    "Robinhood taps Ripple\u2019s $2.5 billion RLUSD stablecoin despite backing rival USDG"
+    "Treasury's Bessent sees crypto as America's next tool for keeping the U.S. dollar on top",
+    "Ripple, Robinhood expand partnership to bring RLUSD to retail and institutional markets"
    ],
    "trending": null,
-   "rule_score": 0.9,
+   "rule_score": 0.44,
    "score": 0.5,
    "note": "Real partnership news with Robinhood and BNY for Ripple's stablecoin, though price moves are small."
   }
@@ -134,13 +132,11 @@
    ]
   }
  ],
- "trending_elsewhere": [
-  "AAVE"
- ],
- "headlines": 78,
+ "trending_elsewhere": [],
+ "headlines": 81,
  "sources": {
   "Alpaca/Benzinga": 22,
-  "crypto news sites": 56,
+  "crypto news sites": 59,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-27T20:28:53+00:00"
