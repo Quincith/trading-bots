@@ -104,9 +104,13 @@ def _decode(raw: bytes, start: datetime, pair: str) -> pd.DataFrame:
     return df[df["volume"] > 0]
 
 
+PAUSE = 1.5   # seconds between downloads: Dukascopy limits how fast one visitor may download (HTTP 429)
+
+
 def _get(http: requests.Session, url: str) -> bytes:
     why = ""
-    for attempt in range(4):
+    for attempt in range(6):
+        time.sleep(PAUSE)
         try:
             r = http.get(url, timeout=60)
         except requests.RequestException as e:
@@ -117,7 +121,8 @@ def _get(http: requests.Session, url: str) -> bytes:
             return b""
         if r is not None:
             why = f"HTTP {r.status_code}"
-        time.sleep(2 ** attempt)
+        wait = r.headers.get("Retry-After") if r is not None else None
+        time.sleep(float(wait) if wait and wait.isdigit() else 5 * 2 ** attempt)   # slow down as asked
     raise RuntimeError(f"couldn't download {url} ({why})")
 
 

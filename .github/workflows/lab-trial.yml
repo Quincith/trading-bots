@@ -9,7 +9,7 @@ on:
 jobs:
   trial:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -17,12 +17,6 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Probe the price source
-        continue-on-error: true
-        run: |
-          for u in EURUSD/2025/BID_candles_day_1.bi5 EURUSD/2025/00/BID_candles_hour_1.bi5 EURUSD/2025/00/02/BID_candles_min_1.bi5; do
-            echo "$u -> $(curl -s -o /tmp/x -w '%{http_code} %{size_download}' https://datafeed.dukascopy.com/datafeed/$u)"
-          done
       - name: Check the downloaded data
         run: |
           python - <<'PY'
