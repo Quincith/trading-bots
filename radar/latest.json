@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27T06:57:52+00:00",
+ "time": "2026-10-27T07:28:00+00:00",
  "coins": {
   "BTC": {
    "recent": 4,
@@ -7,23 +7,25 @@
    "buzz": 0.65,
    "tone": 0,
    "headlines": [
+    "Gold, Crypto or Trump? Bettors Wager on What Robinhood Will Talk About During Q3 Earnings Call",
     "Creating 'Net-New' Gold With Alchemy Becoming Real: Coinbase CEO Says You Can't 'Invent Anything' That Raises Bitcoin Supply",
-    "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
-    "Israel Election Puts Netanyahu\u2019s Future At Stake After Trump Endorses \u2018Warrior\u2019 Prime Minister"
+    "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together"
    ],
-   "trending": 12,
+   "trending": 5,
    "rule_score": 0.08,
    "score": -0.2,
    "note": "Price dipped below $80k and Strategy paused buying; mostly recap-style noise with a slight negative tilt."
   },
   "ETH": {
-   "recent": 0,
+   "recent": 1,
    "before": 7,
-   "buzz": 0.0,
-   "tone": 0,
-   "headlines": [],
+   "buzz": 0.71,
+   "tone": 1,
+   "headlines": [
+    "Ethereum fixes Glamsterdam bug that could have sent staking deposits to builders"
+   ],
    "trending": null,
-   "rule_score": 0.0,
+   "rule_score": 0.1,
    "score": -0.1,
    "note": "Few fresh headlines; Bitmine switching from ETH buys to buybacks is a mild negative."
   },
@@ -33,8 +35,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 13,
-   "rule_score": 0.15,
+   "trending": 3,
+   "rule_score": 0.3,
    "score": 0.0,
    "note": "No new Solana headlines in the window; nothing new."
   },
@@ -91,7 +93,7 @@
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
     "Ripple gets a final go-ahead to launch its own U.S. national trust bank"
    ],
-   "trending": 9,
+   "trending": 12,
    "rule_score": 0.28,
    "score": 0.6,
    "note": "Final approval for Ripple's national trust bank is a real catalyst, and buzz is up 1.67x."
@@ -124,9 +126,9 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 76,
+ "headlines": 77,
  "sources": {
-  "Alpaca/Benzinga": 25,
+  "Alpaca/Benzinga": 26,
   "crypto news sites": 51,
   "CoinGecko trending": 15
  },

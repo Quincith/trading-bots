@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 06:57 UTC
+# Aggressive strategy — 2026-10-27 07:28 UTC
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## News radar (trends forming)
 
-Read 76 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 51, CoinGecko trending 15).
+Read 77 headlines from the last day (Alpaca/Benzinga 26, crypto news sites 51, CoinGecko trending 15).
 
 - **XRP national trust bank approval**: Ripple got final U.S. approval for a national trust bank, a real regulatory win that is drawing extra XRP attention. (XRP)
 - **Stablecoin rules expanding**: Canada consultation and U.S. OCC push for community banks to issue stablecoins signal growing regulated stablecoin adoption. (XRP, BTC, ETH)
@@ -19,7 +19,7 @@ Read 76 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 51, C
 |---|---|---|---|
 | XRP | +0.60 | 2 (1.67x usual) | Final approval for Ripple's national trust bank is a real catalyst, and buzz is up 1.67x. |
 | SOL | +0.00 | 0 (0.0x usual) | No new Solana headlines in the window; nothing new. |
-| ETH | -0.10 | 0 (0.0x usual) | Few fresh headlines; Bitmine switching from ETH buys to buybacks is a mild negative. |
+| ETH | -0.10 | 1 (0.71x usual) | Few fresh headlines; Bitmine switching from ETH buys to buybacks is a mild negative. |
 | DOGE | -0.10 | 0 (0.0x usual) | Only a phishing alarm after a hardware wallet breach; minor negative, not a clear catalyst. |
 | BTC | -0.20 | 4 (0.65x usual) | Price dipped below $80k and Strategy paused buying; mostly recap-style noise with a slight negative tilt. |
 
@@ -28,4 +28,4 @@ Read 76 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 51, C
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_
