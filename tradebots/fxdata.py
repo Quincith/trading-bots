@@ -15,6 +15,7 @@ from __future__ import annotations
 import logging
 import lzma
 import struct
+import time
 from datetime import date, datetime, timedelta, timezone
 
 import numpy as np
@@ -104,16 +105,20 @@ def _decode(raw: bytes, start: datetime, pair: str) -> pd.DataFrame:
 
 
 def _get(http: requests.Session, url: str) -> bytes:
+    why = ""
     for attempt in range(4):
         try:
             r = http.get(url, timeout=60)
-        except requests.RequestException:
-            r = None
+        except requests.RequestException as e:
+            r, why = None, str(e)
         if r is not None and r.status_code == 200:
             return r.content
         if r is not None and r.status_code == 404:
             return b""
-    raise RuntimeError(f"couldn't download {url}")
+        if r is not None:
+            why = f"HTTP {r.status_code}"
+        time.sleep(2 ** attempt)
+    raise RuntimeError(f"couldn't download {url} ({why})")
 
 
 def daily_history(pair: str, start: date, end: date, session: requests.Session | None = None) -> pd.DataFrame:

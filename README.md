@@ -96,6 +96,69 @@ The SEC requires every program that reads its filings to say who's asking, and i
 addresses. Keep it a secret, not a variable: this repo is public, and GitHub prints variables in the run logs.
 Until the Copycat secrets exist, Copycat is simply skipped and the other two keep running.
 
+## The Forex wing (currency trading, practice money)
+
+Forex means trading one country's money for another's, like euros for US dollars. Prices are quoted as
+**currency pairs**: EUR/USD at 1.10 means 1 euro costs $1.10. You can bet a pair goes up (buy) or down
+(sell first and buy back later, called **selling short**). Alpaca has no forex, so this wing uses
+**OANDA practice (demo) accounts**: free, real prices, pretend money. The code only talks to OANDA's practice
+address, so it can't place a real-money trade.
+
+| | Forex office ([config/forex.yaml](config/forex.yaml)) | Copycat FX office ([config/fxcopy.yaml](config/fxcopy.yaml)) |
+|---|---|---|
+| Idea | Follow the trend (the 1980s "Turtle traders" rule) | Copy the big hedge funds' currency bets |
+| Gets in when | a pair closes above its 55-day high and above its 200-day average (buy), or below its 55-day low and below the average (sell) | hedge funds' net bet on a currency is 10%+ of all open contracts in the CFTC's weekly report |
+| Gets out when | it closes past the opposite 20-day high or low, or the safety stop is hit | their net bet flips to the other side, or the safety stop is hit |
+| Safety stop | 2 typical daily swings away | 3 typical daily swings away |
+| Pairs | EUR/USD, GBP/USD, USD/JPY, AUD/USD, USD/CAD, USD/CHF, NZD/USD | same |
+| Decides | once a day, after the forex day ends at 5pm New York time | same (the report comes out Fridays) |
+| Loss limits (proposed) | 3% daily, 15% total | 3% daily, 15% total |
+| AI | none | none |
+
+**Sizing with $100.** Forex trades are measured in **units** of currency. A "standard lot" is 100,000 units,
+a "micro lot" is 1,000. OANDA lets us trade any number of units, even 1, so $100 works. Each trade is sized
+so that hitting the safety stop loses about **1% of the account** ($1 on $100). Example: EUR/USD at 1.10
+usually swings about 0.006 a day, so the stop goes 0.012 away, and $1 / 0.012 = about **83 units**
+(controlling about $91). Hard limits on top: one trade controls at most 1x the account, and all trades together
+at most **3x** (3:1 **leverage**; US rules allow up to 50:1, which is how beginners blow up accounts). At most 4
+trades open, and at most 3 that win or lose together when the US dollar moves. OANDA holds the stop, so it
+fills even between the bot's 30-minute checks.
+
+**Why copy the CFTC report and not a copy-trading site?** Sites like Myfxbook, MQL5 Signals, ZuluTrade or
+cTrader Copy rank traders by past returns, but: accounts that blew up quietly disappear from the rankings
+(survivorship bias); many top "signals" use risky grid or doubling-down systems that look smooth until one
+bad week wipes them out; the track records are short and hand-picked; and none of them offers a free API to
+read another trader's trades (copying only works inside their own apps, at their partner brokers). The CFTC
+report is official, free, has 20+ years of history so the lab can test it, and says exactly whose bets we copy.
+The catch: it's weekly and about 3 days late (Tuesday's positions are published Friday), so we copy slow,
+big bets, not quick trades. Research on following these positions is mixed: big speculators often just follow
+the trend themselves.
+
+**Testing.** The strategy lab replays both offices over the last **8 years** of daily bid and ask prices
+(free from Dukascopy), charging the spread (the buy/sell gap, at least OANDA's typical one), half a pip of
+slippage per trade, and 2% a year of overnight interest. It's compared with **doing nothing** (keeping the cash).
+To run the check yourself: **Actions → Strategy lab → Run workflow**, pick forex or fxcopy (leave "change" empty
+and Claude suggests an improvement, like for the other strategies), or locally
+`python -m tradebots.lab --strategy forex --validate`.
+
+**Setup (about 15 minutes):**
+1. Go to [oanda.com](https://www.oanda.com), pick your country, and open a free **demo (practice)** account.
+   No money or ID is needed for demo.
+2. In the OANDA hub, switch to **Demo**. Create a second demo sub-account, so you have two: name one
+   "Forex" and one "Copycat FX". If it lets you choose or reset the balance, pick the smallest it allows.
+   (Either way, each office acts as if it had $100 and counts only its own gains and losses.)
+3. Write down each sub-account's **account number** (it looks like `101-001-1234567-001`).
+4. Go to **Manage API Access** (in the hub's tools or profile menu) and click **Generate** to make an API
+   token. One token works for both practice sub-accounts. OANDA shows it once.
+5. In GitHub, add 3 **secrets** (Settings → Secrets and variables → Actions → New repository secret; the name
+   and the value are two separate boxes): `OANDA_API_TOKEN` (the token), `OANDA_FOREX_ACCOUNT_ID` and
+   `OANDA_FXCOPY_ACCOUNT_ID` (the account numbers). Never paste the token into chat.
+6. Try it: **Actions → Trade (paper) → Run workflow**, pick `forex`, tick Dry run. Until the secrets exist,
+   the Forex wing is simply skipped and everything else keeps running.
+
+**Going live with real money** is not built in on purpose. That's a decision for after a few months of
+practice results, and it would need a separate change you approve.
+
 ## Timer (why the runs happen on time)
 
 GitHub's built-in schedule skipped most runs on this repo (on October 25, 2026 only 5 of about 38 ran).
@@ -128,6 +191,7 @@ In this repo, go to **Settings → Secrets and variables → Actions → New rep
 | `ALPACA_COPYCAT_KEY_ID` | Key ID from the Copycat paper account (optional, see above) |
 | `ALPACA_COPYCAT_SECRET_KEY` | Secret from the Copycat paper account (optional, see above) |
 | `ANTHROPIC_API_KEY` | Your Claude API key |
+| `OANDA_API_TOKEN`, `OANDA_FOREX_ACCOUNT_ID`, `OANDA_FXCOPY_ACCOUNT_ID` | OANDA practice token and account numbers (optional, see the Forex wing) |
 
 ### 4. Turn it on
 1. Merge the pull request. The schedule only starts once the code is on `main`.
@@ -149,7 +213,9 @@ After every run, the bots rebuild a web page called **Bot World HQ**: a 90s pixe
 - **The Trading Wing** holds one office per account, side by side: Aggressive (light-blue denim crew), Medium (dark-blue denim crew) and Copycat (black denim crew). Each office has six walled rooms, one per bot, with big wall screens showing the real numbers from that account's last run (Scout's scanner and radar, Charts' trade plan, News' headlines, Sentiment's mood gauge, Risk's limits, Decision's BUY / WAIT / SKIP board).
 - **The bots walk.** They get up from their desks to check their screens, and walk to the door when the courier arrives. Bots with nothing to do this run doze at their desk. Each desk has a name plate with the bot's level (it grows with every run and every trade it works on) and a timer since the crew's last run.
 - **Shared rooms:** the Captain (a chrome villain titan in black and red) sits in the throne room, and the beam room shows the whole wing's value. Cables run from every bot into its office's Decision room, and a gold cable runs from each Decision room to the beam.
-- **Room to grow:** two more wings sit dark, with boxes and cobwebs, waiting for future businesses.
+- **The Forex Wing** (top left) has two smaller offices with three rooms each (spotter, Risk, Decision): Forex
+  (green denim crew) and Copycat FX (plum denim crew), plus world clocks for Tokyo, London and New York.
+- **Room to grow:** one more wing sits dark, with boxes and cobwebs, waiting for a future business.
 - **Crew list:** the panel on the left lists every bot, whether it's working or idle, what it said on the last run, and the time since that run. Click a bot to fly to it.
 - **Moving around:** drag to move, scroll or pinch to zoom, click a room or a bot to fly to it, and press **Zoom out** to see the whole station. On a phone, the crew list sits under the map.
 
