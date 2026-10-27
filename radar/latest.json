@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27T16:28:39+00:00",
+ "time": "2026-10-27T16:58:39+00:00",
  "coins": {
   "BTC": {
    "recent": 10,
@@ -7,19 +7,19 @@
    "buzz": 1.85,
    "tone": 0,
    "headlines": [
+    "Datavault AI Stock Crashes \u2014 Financials Cannot Be Trusted: What You Need to Know",
     "Bitcoin Profit-Taking Cools but Analysts Remain Cautious Ahead of FOMC",
-    "Robinhood Earnings Prediction Market Preview: What Will Vlad Tenev Say?",
-    "Would a Bitcoin Selloff After the Midterms Present a Buying Opportunity?"
+    "Robinhood Earnings Prediction Market Preview: What Will Vlad Tenev Say?"
    ],
-   "trending": 2,
+   "trending": 4,
    "rule_score": 0.47,
    "score": -0.2,
    "note": "Price fell below $80K before the Fed meeting, with analysts cautious. Buzz is high, so news flow is mostly price talk."
   },
   "ETH": {
-   "recent": 3,
+   "recent": 4,
    "before": 3,
-   "buzz": 5.0,
+   "buzz": 6.67,
    "tone": 0,
    "headlines": [
     "Bitcoin Profit-Taking Cools but Analysts Remain Cautious Ahead of FOMC",
@@ -32,15 +32,16 @@
    "note": "Buzz is 5x normal but from only 3 headlines. Glamsterdam bug fix is minor and mostly technical."
   },
   "SOL": {
-   "recent": 1,
+   "recent": 2,
    "before": 3,
-   "buzz": 1.67,
+   "buzz": 3.33,
    "tone": 0,
    "headlines": [
+    "Galaxy Digital Posts $323M Profit as AI Expansion Gains Steam",
     "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser"
    ],
-   "trending": 10,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.47,
    "score": -0.1,
    "note": "Solana bug reports now cost 1 SOL due to AI spam. Only one recent headline, so little new signal."
   },
@@ -61,8 +62,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 6,
+   "rule_score": 0.15,
    "score": 0.1,
    "note": "No direct Chainlink headlines, but CF Benchmarks onchain data news is a mild indirect positive."
   },
@@ -89,14 +90,15 @@
    "note": "No recent Litecoin headlines. Nothing new."
   },
   "XRP": {
-   "recent": 1,
+   "recent": 2,
    "before": 8,
-   "buzz": 0.62,
-   "tone": 0,
+   "buzz": 1.25,
+   "tone": 1,
    "headlines": [
+    "Ripple Expands BNY Partnership as XRP Jumps 2%",
     "Ripple, Robinhood Partner to Expand RLUSD Use for Institutional Settlement"
    ],
-   "trending": 4,
+   "trending": 7,
    "rule_score": 0.3,
    "score": 0.3,
    "note": "Ripple final approval for national trust bank and RLUSD partnership are real positives, but the market reaction has been weak."
@@ -128,10 +130,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 73,
+ "headlines": 77,
  "sources": {
-  "Alpaca/Benzinga": 24,
-  "crypto news sites": 49,
+  "Alpaca/Benzinga": 26,
+  "crypto news sites": 51,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-27T16:28:39+00:00"
