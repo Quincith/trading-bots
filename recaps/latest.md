@@ -38,8 +38,8 @@ Watchful day. Insiders bought some stocks, but none passed the copy checks yet. 
 - Profit / loss since start: -$0.13 on $100.00 money put in.
 - Spotter read 16 insider filings from the SEC and found 31 insider purchases. Watchlist at day end: 10 stocks.
 - Top pick: THRM (Gentherm Inc). 2 insiders bought $662,600 at about $26.50: Mascarenas Paul Anthony (Director) $532,600; Presley William T. (President & CEO, Director) $130,000.
-- Sent for review: THRM (3x), STC (3x), NBIS (3x).
-- Decisions: 0 buy, 9 wait, 0 skip.
+- Sent for review: THRM (4x), STC (4x), NBIS (4x).
+- Decisions: 0 buy, 12 wait, 0 skip.
 - Passed on THRM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on STC (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
