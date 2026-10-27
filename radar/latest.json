@@ -1,33 +1,33 @@
 {
- "time": "2026-10-27T04:27:43+00:00",
+ "time": "2026-10-27T04:57:45+00:00",
  "coins": {
   "BTC": {
    "recent": 4,
-   "before": 34,
-   "buzz": 0.59,
+   "before": 33,
+   "buzz": 0.61,
    "tone": 0,
    "headlines": [
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
     "Israel Election Puts Netanyahu\u2019s Future At Stake After Trump Endorses \u2018Warrior\u2019 Prime Minister",
     "Cathie Wood Buys Joby, Archer Aviation as Air Taxi Bets Grow, Ark Pounces on Nu Holdings Stock After Lula\u2019s Brazil Win"
    ],
-   "trending": 0,
+   "trending": 1,
    "rule_score": 0.22,
    "score": -0.2,
-   "note": "Price fell below $80K and Strategy paused buying; mostly price-driven news, modest downside."
+   "note": "Price fell below $80,000 and Strategy paused Bitcoin buying. Some bullish analyst takes, but no fresh catalyst."
   },
   "ETH": {
    "recent": 1,
-   "before": 7,
-   "buzz": 0.71,
+   "before": 6,
+   "buzz": 0.83,
    "tone": 0,
    "headlines": [
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
    ],
-   "trending": 6,
-   "rule_score": 0.15,
-   "score": -0.2,
-   "note": "Bitmine still buying ETH but shifting to buybacks; crypto weakness weighs on sentiment."
+   "trending": 2,
+   "rule_score": 0.3,
+   "score": -0.1,
+   "note": "Bitmine shifted toward buybacks over ether purchases, and ETH slipped. Mild negative, low buzz."
   },
   "SOL": {
    "recent": 1,
@@ -39,8 +39,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.0,
-   "note": "Buzz is 5x but headlines are not about Solana; no clear new catalyst found."
+   "score": 0.1,
+   "note": "Buzz is 5x normal but only one headline with no clear news. Watch, don't act yet."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new to act on."
+   "note": "No recent headlines or buzz. Nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -62,7 +62,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new to act on."
+   "note": "No recent headlines or buzz. Nothing new."
   },
   "DOGE": {
    "recent": 1,
@@ -75,7 +75,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": -0.1,
-   "note": "Dogecoin hardware wallet breach triggered phishing alarm; small negative risk."
+   "note": "Hardware wallet data breach and phishing alarm. Buzz is up, but it's mostly a warning story."
   },
   "LTC": {
    "recent": 0,
@@ -86,46 +86,43 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new to act on."
+   "note": "No recent headlines or buzz. Nothing new."
   },
   "XRP": {
-   "recent": 2,
-   "before": 7,
-   "buzz": 1.43,
+   "recent": 3,
+   "before": 6,
+   "buzz": 2.5,
    "tone": 0,
    "headlines": [
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
-    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
+    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'",
+    "Ripple gets a final go-ahead to launch its own U.S. national trust bank"
    ],
-   "trending": 1,
-   "rule_score": 0.39,
-   "score": 0.4,
-   "note": "Ripple won final US trust bank approval and Evernorth is buying XRP; genuine positive news."
+   "trending": 5,
+   "rule_score": 0.45,
+   "score": 0.6,
+   "note": "Ripple's national trust bank got final approval, a real catalyst with buzz at 2.5x normal."
   }
  },
  "themes": [
   {
-   "title": "Ripple/XRP institutional and regulatory progress",
-   "note": "Final US trust bank approval and Evernorth XRP buying are real positives, though XRP price pressure persists.",
+   "title": "Ripple wins final US approval for national trust bank",
+   "note": "Real regulatory milestone for XRP, with buzz at 2.5x normal. Could lift XRP if follow-through holds.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Stablecoin rules expanding in US and Canada",
-   "note": "Regulators opening stablecoin payments to banks may support the broader crypto payments story over time.",
+   "title": "Wallet and hardware security breaches",
+   "note": "Keystone and wallet-flaw breaches and Dogecoin phishing warnings could spook holders and hurt sentiment.",
    "coins": [
-    "XRP",
-    "BTC",
-    "ETH",
-    "SOL",
-    "AVAX",
-    "LINK"
+    "DOGE",
+    "BTC"
    ]
   },
   {
-   "title": "Bitcoin slide below $80K with treasury buying paused",
-   "note": "Strategy pausing BTC purchases and recent drop below $80K signal weak near-term sentiment.",
+   "title": "Bitcoin treasury buying pauses",
+   "note": "Strategy paused Bitcoin buys and Bitmine favors buybacks, which weakens big-buyer demand for BTC and ETH.",
    "coins": [
     "BTC",
     "ETH"
@@ -133,13 +130,13 @@
   }
  ],
  "trending_elsewhere": [
-  "DOT"
+  "PEPE"
  ],
- "headlines": 78,
+ "headlines": 79,
  "sources": {
   "Alpaca/Benzinga": 26,
-  "crypto news sites": 52,
+  "crypto news sites": 53,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T03:57:39+00:00"
+ "ai_time": "2026-10-27T04:57:45+00:00"
 }
