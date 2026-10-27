@@ -1,46 +1,42 @@
 {
- "time": "2026-10-27T05:27:40+00:00",
+ "time": "2026-10-27T05:57:50+00:00",
  "coins": {
   "BTC": {
    "recent": 4,
-   "before": 31,
-   "buzz": 0.65,
+   "before": 32,
+   "buzz": 0.62,
    "tone": 0,
    "headlines": [
+    "Creating 'Net-New' Gold With Alchemy Becoming Real: Coinbase CEO Says You Can't 'Invent Anything' That Raises Bitcoin Supply",
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
-    "Israel Election Puts Netanyahu\u2019s Future At Stake After Trump Endorses \u2018Warrior\u2019 Prime Minister",
-    "Cathie Wood Buys Joby, Archer Aviation as Air Taxi Bets Grow, Ark Pounces on Nu Holdings Stock After Lula\u2019s Brazil Win"
-   ],
-   "trending": 1,
-   "rule_score": 0.23,
-   "score": -0.2,
-   "note": "Price fell below $80,000 and Strategy paused Bitcoin buying. Some bullish analyst takes, but no fresh catalyst."
-  },
-  "ETH": {
-   "recent": 1,
-   "before": 6,
-   "buzz": 0.83,
-   "tone": 0,
-   "headlines": [
-    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
+    "Israel Election Puts Netanyahu\u2019s Future At Stake After Trump Endorses \u2018Warrior\u2019 Prime Minister"
    ],
    "trending": 4,
-   "rule_score": 0.3,
-   "score": -0.1,
-   "note": "Bitmine shifted toward buybacks over ether purchases, and ETH slipped. Mild negative, low buzz."
+   "rule_score": 0.22,
+   "score": -0.3,
+   "note": "Strategy paused Bitcoin buys and price dipped below $80,000. Buzz is below normal, so the new negatives are modest."
+  },
+  "ETH": {
+   "recent": 0,
+   "before": 7,
+   "buzz": 0.0,
+   "tone": 0,
+   "headlines": [],
+   "trending": 11,
+   "rule_score": 0.15,
+   "score": -0.2,
+   "note": "Bitmine is favoring buybacks over ether purchases, and ETH slipped. No fresh ETH-specific headlines in recent hours."
   },
   "SOL": {
-   "recent": 1,
-   "before": 1,
-   "buzz": 5.0,
+   "recent": 0,
+   "before": 2,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
-   ],
+   "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.1,
-   "note": "Buzz is 5x normal but only one headline with no clear news. Watch, don't act yet."
+   "score": 0.0,
+   "note": "No recent Solana headlines. Nothing new to act on."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +47,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz. Nothing new."
+   "note": "No recent Avalanche headlines. Nothing new to act on."
   },
   "LINK": {
    "recent": 0,
@@ -62,20 +58,18 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz. Nothing new."
+   "note": "No recent Chainlink headlines. Nothing new to act on."
   },
   "DOGE": {
-   "recent": 1,
-   "before": 3,
-   "buzz": 1.67,
+   "recent": 0,
+   "before": 4,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
-   ],
+   "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": -0.1,
-   "note": "Hardware wallet data breach and phishing alarm. Buzz is up, but it's mostly a warning story."
+   "score": -0.2,
+   "note": "Dogecoin community warned of phishing after a hardware wallet data breach. Story is older, so impact is limited."
   },
   "LTC": {
    "recent": 0,
@@ -86,55 +80,54 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz. Nothing new."
+   "note": "No recent Litecoin headlines. Nothing new to act on."
   },
   "XRP": {
-   "recent": 3,
-   "before": 6,
-   "buzz": 2.5,
+   "recent": 2,
+   "before": 7,
+   "buzz": 1.43,
    "tone": 0,
    "headlines": [
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
-    "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'",
     "Ripple gets a final go-ahead to launch its own U.S. national trust bank"
    ],
    "trending": null,
-   "rule_score": 0.3,
-   "score": 0.6,
-   "note": "Ripple's national trust bank got final approval, a real catalyst with buzz at 2.5x normal."
+   "rule_score": 0.09,
+   "score": 0.5,
+   "note": "Ripple's national trust bank got final approval with rising buzz at 1.43x. Real positive news, though partly priced in."
   }
  },
  "themes": [
   {
-   "title": "Ripple wins final US approval for national trust bank",
-   "note": "Real regulatory milestone for XRP, with buzz at 2.5x normal. Could lift XRP if follow-through holds.",
+   "title": "US bank and stablecoin rules moving forward",
+   "note": "Ripple got final approval for a national trust bank, and regulators are opening stablecoin rules. This helps XRP most, though the news is already partly priced in.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Wallet and hardware security breaches",
-   "note": "Keystone and wallet-flaw breaches and Dogecoin phishing warnings could spook holders and hurt sentiment.",
-   "coins": [
-    "DOGE",
-    "BTC"
-   ]
-  },
-  {
-   "title": "Bitcoin treasury buying pauses",
-   "note": "Strategy paused Bitcoin buys and Bitmine favors buybacks, which weakens big-buyer demand for BTC and ETH.",
+   "title": "Big crypto treasury buyers slowing down",
+   "note": "Strategy paused Bitcoin buying and Bitmine is shifting toward buybacks. Less steady buying can weigh on BTC and ETH prices.",
    "coins": [
     "BTC",
     "ETH"
+   ]
+  },
+  {
+   "title": "Wallet security breaches",
+   "note": "Keystone and hardware wallet breaches and a Bitcoin wallet flaw raise safety worries. Dogecoin users were warned of phishing, which may hurt sentiment.",
+   "coins": [
+    "DOGE",
+    "BTC"
    ]
   }
  ],
  "trending_elsewhere": [],
  "headlines": 76,
  "sources": {
-  "Alpaca/Benzinga": 25,
-  "crypto news sites": 51,
+  "Alpaca/Benzinga": 26,
+  "crypto news sites": 50,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T04:57:45+00:00"
+ "ai_time": "2026-10-27T05:57:50+00:00"
 }

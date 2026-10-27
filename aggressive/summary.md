@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 05:27 UTC
+# Aggressive strategy — 2026-10-27 05:57 UTC
 
 | | |
 |---|---|
@@ -9,23 +9,22 @@
 
 ## News radar (trends forming)
 
-Read 76 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 51, CoinGecko trending 15).
+Read 76 headlines from the last day (Alpaca/Benzinga 26, crypto news sites 50, CoinGecko trending 15).
 
-- **Ripple wins final US approval for national trust bank**: Real regulatory milestone for XRP, with buzz at 2.5x normal. Could lift XRP if follow-through holds. (XRP)
-- **Wallet and hardware security breaches**: Keystone and wallet-flaw breaches and Dogecoin phishing warnings could spook holders and hurt sentiment. (DOGE, BTC)
-- **Bitcoin treasury buying pauses**: Strategy paused Bitcoin buys and Bitmine favors buybacks, which weakens big-buyer demand for BTC and ETH. (BTC, ETH)
+- **US bank and stablecoin rules moving forward**: Ripple got final approval for a national trust bank, and regulators are opening stablecoin rules. This helps XRP most, though the news is already partly priced in. (XRP)
+- **Big crypto treasury buyers slowing down**: Strategy paused Bitcoin buying and Bitmine is shifting toward buybacks. Less steady buying can weigh on BTC and ETH prices. (BTC, ETH)
+- **Wallet security breaches**: Keystone and hardware wallet breaches and a Bitcoin wallet flaw raise safety worries. Dogecoin users were warned of phishing, which may hurt sentiment. (DOGE, BTC)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.60 | 3 (2.5x usual) | Ripple's national trust bank got final approval, a real catalyst with buzz at 2.5x normal. |
-| SOL | +0.10 | 1 (5.0x usual) | Buzz is 5x normal but only one headline with no clear news. Watch, don't act yet. |
-| ETH | -0.10 | 1 (0.83x usual) | Bitmine shifted toward buybacks over ether purchases, and ETH slipped. Mild negative, low buzz. |
-| DOGE | -0.10 | 1 (1.67x usual) | Hardware wallet data breach and phishing alarm. Buzz is up, but it's mostly a warning story. |
-| BTC | -0.20 | 4 (0.65x usual) | Price fell below $80,000 and Strategy paused Bitcoin buying. Some bullish analyst takes, but no fresh catalyst. |
+| XRP | +0.50 | 2 (1.43x usual) | Ripple's national trust bank got final approval with rising buzz at 1.43x. Real positive news, though partly priced in. |
+| ETH | -0.20 | 0 (0.0x usual) | Bitmine is favoring buybacks over ether purchases, and ETH slipped. No fresh ETH-specific headlines in recent hours. |
+| DOGE | -0.20 | 0 (0.0x usual) | Dogecoin community warned of phishing after a hardware wallet data breach. Story is older, so impact is limited. |
+| BTC | -0.30 | 4 (0.62x usual) | Strategy paused Bitcoin buys and price dipped below $80,000. Buzz is below normal, so the new negatives are modest. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
