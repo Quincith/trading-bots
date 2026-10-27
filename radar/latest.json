@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27T22:58:56+00:00",
+ "time": "2026-10-27T23:29:06+00:00",
  "coins": {
   "BTC": {
    "recent": 5,
@@ -11,10 +11,10 @@
     "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
     "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure"
    ],
-   "trending": 9,
-   "rule_score": 0.3,
-   "score": 0.0,
-   "note": "Mostly price previews ahead of the Fed meeting; nothing new that changes the outlook."
+   "trending": null,
+   "rule_score": 0.15,
+   "score": -0.1,
+   "note": "Mostly price talk and Fed preview pieces; quantum-risk and profit-taking stories add mild caution."
   },
   "ETH": {
    "recent": 1,
@@ -26,8 +26,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.1,
-   "note": "Little fresh ETH news; the OpenAI ETH story is weak and tokenized-stock deals only loosely help."
+   "score": 0.0,
+   "note": "Only one headline with flat buzz; nothing meaningful new."
   },
   "SOL": {
    "recent": 0,
@@ -35,10 +35,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 12,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines or unusual buzz for Solana."
+   "note": "No recent headlines and no buzz, despite high search rank."
   },
   "AVAX": {
    "recent": 0,
@@ -49,7 +49,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or unusual buzz for Avalanche."
+   "note": "No recent headlines; nothing new building."
   },
   "LINK": {
    "recent": 0,
@@ -59,8 +59,8 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.1,
-   "note": "Tokenized-fund and onchain data stories may help Chainlink, but no direct Chainlink news."
+   "score": 0.0,
+   "note": "No recent headlines; tokenization stories mention no LINK-specific news."
   },
   "DOGE": {
    "recent": 0,
@@ -71,7 +71,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines for Dogecoin; only passing mentions in price articles."
+   "note": "No recent headlines; only passing mentions in price recaps."
   },
   "LTC": {
    "recent": 0,
@@ -82,7 +82,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or unusual buzz for Litecoin."
+   "note": "No recent headlines; nothing new."
   },
   "XRP": {
    "recent": 3,
@@ -97,30 +97,32 @@
    "trending": null,
    "rule_score": 0.1,
    "score": 0.4,
-   "note": "Ripple's bank approval and Robinhood RLUSD deals are real positive news, and buzz is up 1.5x."
+   "note": "Robinhood and Ripple partnership news is real, but buzz is modest and some stories are repeats."
   }
  },
  "themes": [
   {
    "title": "Ripple and Robinhood RLUSD partnership expansion",
-   "note": "Several Ripple-Robinhood deals this week tie XRP's stablecoin to big retail platforms; XRP buzz is up 1.5x.",
+   "note": "Multiple outlets report Robinhood adopting Ripple's RLUSD stablecoin for retail and institutional use, a fresh and real adoption story.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Tokenized stocks and onchain Nasdaq funds",
-   "note": "Janus Henderson, CF Benchmarks and OKX-ICE tokenization news, though objections are mounting; mostly tied to general crypto infrastructure.",
+   "title": "Tokenized stocks and onchain Wall Street products",
+   "note": "Nasdaq-100 fund on Stellar, CF Benchmarks onchain data, and OKX-ICE pushback show tokenization momentum, though objections are mounting.",
    "coins": [
+    "BTC",
     "ETH",
     "LINK"
    ]
   },
   {
-   "title": "Fed meeting and Bitcoin price swings",
-   "note": "Bitcoin trades near $80,000 ahead of FOMC; much coverage is price talk, so the signal is weak.",
+   "title": "Bitcoin pre-Fed caution and quantum worries",
+   "note": "Bitcoin is choppy around the FOMC meeting, with quantum fears and profit-taking weighing on sentiment; recycled price talk, not a fresh catalyst.",
    "coins": [
-    "BTC"
+    "BTC",
+    "ETH"
    ]
   }
  ],
@@ -131,5 +133,5 @@
   "crypto news sites": 57,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T22:29:01+00:00"
+ "ai_time": "2026-10-27T23:29:06+00:00"
 }
