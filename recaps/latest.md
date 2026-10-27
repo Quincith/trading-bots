@@ -30,22 +30,22 @@ Watchful day. Scout flagged some moves, but none met the bar for a trade. The ac
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.35 (+0.35%)
+## Copycat: down $0.16 (-0.16%)
 
-Active day. The bots bought 2 times. The account ended up $0.35 (+0.35%) at $100.22. Paper money only.
+Active day. The bots bought 2 times. The account ended down $0.16 (-0.16%) at $99.71. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.87 → $100.22 (+$0.35, +0.35%).
-- Profit / loss since start: +$0.22 on $100.00 money put in.
-- Spotter read 1227 insider filings from the SEC and found 74 insider purchases. Watchlist at day end: 18 stocks.
+- Account value: $99.87 → $99.71 (-$0.16, -0.16%).
+- Profit / loss since start: -$0.29 on $100.00 money put in.
+- Spotter read 1240 insider filings from the SEC and found 86 insider purchases. Watchlist at day end: 19 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 3 insiders bought $1,771,951 at about $15.38: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800.
 - Sent for review: THRM (32x), NBIS (32x), STC (31x).
 - Decisions: 2 buy, 90 wait, 3 skip.
 - Passed on THRM (SKIP, 0% confident): Price already up 18% since the insiders bought (limit 10%). Too late to copy.
 - Bought $19.92 of STC at 43.62. Reason: Copying STEWART INFORMATION SERVICES CORP insiders. 3 insiders bought $283,710 at about $47.28: Apel Thomas G (Director) $95,470; Bradley C Allen Jr (Director) $94,600; Corey William S. Jr. (Director) $93,640.
 - Bought $19.89 of NBIS at 167.66. Reason: Copying Nebius Group N.V. insiders. 1 insider bought $122,438 at about $159.01: Grimme Arne (Director) $122,438.
-- Holding: BBT $19.90 (-$0.04 unrealized); CHCO $19.51 (-$0.48 unrealized); MSM $20.12 (+$0.13 unrealized); NBIS $20.26 (+$0.38 unrealized); STC $20.15 (+$0.24 unrealized).
+- Holding: BBT $19.90 (-$0.04 unrealized); CHCO $19.51 (-$0.48 unrealized); MSM $19.99 ($-0.00 unrealized); NBIS $20.26 (+$0.38 unrealized); STC $19.77 (-$0.14 unrealized).
 
 ## Words to know
 
