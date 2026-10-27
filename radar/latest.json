@@ -1,16 +1,14 @@
 {
- "time": "2026-10-26T23:57:26+00:00",
+ "time": "2026-10-27T00:27:22+00:00",
  "coins": {
   "BTC": {
-   "recent": 1,
-   "before": 35,
-   "buzz": 0.14,
+   "recent": 0,
+   "before": 36,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin Bull Market Means 'Buy the Bigger Dips Harder,' Expert Says"
-   ],
-   "trending": null,
-   "rule_score": 0.0,
+   "headlines": [],
+   "trending": 3,
+   "rule_score": 0.3,
    "score": -0.2,
    "note": "Price dipped below $80K on Iran and Fed worries. Most headlines are price recaps, and buzz is very low."
   },
@@ -42,7 +40,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 13,
+   "trending": 8,
    "rule_score": 0.15,
    "score": 0.0,
    "note": "Searched often but no fresh headlines. Searches alone are not a catalyst."
@@ -64,8 +62,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 7,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": -0.2,
    "note": "Phishing alarm after a hardware wallet data breach. Minor negative, no recent buzz."
   },
@@ -81,13 +79,15 @@
    "note": "No recent headlines and no new catalyst."
   },
   "XRP": {
-   "recent": 0,
+   "recent": 1,
    "before": 7,
-   "buzz": 0.0,
+   "buzz": 0.71,
    "tone": 0,
-   "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "headlines": [
+    "Ripple wins final US approval for national trust bank"
+   ],
+   "trending": 7,
+   "rule_score": 0.15,
    "score": 0.1,
    "note": "Aviva tokenized fund on XRP Ledger is a real adoption item, though the Evernorth piece is recycled price talk."
   }

@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-26 23:57 UTC
+# Aggressive strategy — 2026-10-27 00:27 UTC
 
 | | |
 |---|---|
@@ -17,15 +17,14 @@ Read 78 headlines from the last day (Alpaca/Benzinga 24, crypto news sites 54, C
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.10 | 0 (0.0x usual) | Aviva tokenized fund on XRP Ledger is a real adoption item, though the Evernorth piece is recycled price talk. |
+| XRP | +0.10 | 1 (0.71x usual) | Aviva tokenized fund on XRP Ledger is a real adoption item, though the Evernorth piece is recycled price talk. |
 | AVAX | +0.00 | 0 (0.0x usual) | Searched often but no fresh headlines. Searches alone are not a catalyst. |
-| BTC | -0.20 | 1 (0.14x usual) | Price dipped below $80K on Iran and Fed worries. Most headlines are price recaps, and buzz is very low. |
+| BTC | -0.20 | 0 (0.0x usual) | Price dipped below $80K on Iran and Fed worries. Most headlines are price recaps, and buzz is very low. |
 | DOGE | -0.20 | 0 (0.0x usual) | Phishing alarm after a hardware wallet data breach. Minor negative, no recent buzz. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
-- Charts found no clean setup for: XRP/USD
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_
