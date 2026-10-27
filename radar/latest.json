@@ -1,10 +1,10 @@
 {
- "time": "2026-10-27T04:57:45+00:00",
+ "time": "2026-10-27T05:27:40+00:00",
  "coins": {
   "BTC": {
    "recent": 4,
-   "before": 33,
-   "buzz": 0.61,
+   "before": 31,
+   "buzz": 0.65,
    "tone": 0,
    "headlines": [
     "XRP Gains as Ripple National Trust Bank Gets Final Approval\u2014Brad Garlinghouse Says Crypto and Banks 'Work Better' Together",
@@ -12,7 +12,7 @@
     "Cathie Wood Buys Joby, Archer Aviation as Air Taxi Bets Grow, Ark Pounces on Nu Holdings Stock After Lula\u2019s Brazil Win"
    ],
    "trending": 1,
-   "rule_score": 0.22,
+   "rule_score": 0.23,
    "score": -0.2,
    "note": "Price fell below $80,000 and Strategy paused Bitcoin buying. Some bullish analyst takes, but no fresh catalyst."
   },
@@ -24,7 +24,7 @@
    "headlines": [
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'"
    ],
-   "trending": 2,
+   "trending": 4,
    "rule_score": 0.3,
    "score": -0.1,
    "note": "Bitmine shifted toward buybacks over ether purchases, and ETH slipped. Mild negative, low buzz."
@@ -98,8 +98,8 @@
     "Bitcoin, XRP, Dogecoin Gain, but Ethereum Slips Amid Signs of 'Local Bottom': Top Analyst Identifies 'Next Buying Opportunity'",
     "Ripple gets a final go-ahead to launch its own U.S. national trust bank"
    ],
-   "trending": 5,
-   "rule_score": 0.45,
+   "trending": null,
+   "rule_score": 0.3,
    "score": 0.6,
    "note": "Ripple's national trust bank got final approval, a real catalyst with buzz at 2.5x normal."
   }
@@ -129,13 +129,11 @@
    ]
   }
  ],
- "trending_elsewhere": [
-  "PEPE"
- ],
- "headlines": 79,
+ "trending_elsewhere": [],
+ "headlines": 76,
  "sources": {
-  "Alpaca/Benzinga": 26,
-  "crypto news sites": 53,
+  "Alpaca/Benzinga": 25,
+  "crypto news sites": 51,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-27T04:57:45+00:00"
