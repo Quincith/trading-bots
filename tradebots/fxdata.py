@@ -1,10 +1,11 @@
 """Free data for the Forex wing: past currency prices (for the lab) and the CFTC's weekly report on who
 holds which currency bets (for Copycat FX, live and in the lab). Neither needs a key.
 
-Past prices come from Yahoo Finance's free daily candles, with Dukascopy (a Swiss bank that publishes years
-of bid and ask prices) as the backup. Yahoo has no spread, so the lab charges OANDA's usual gap between the
-buy and sell price instead (see forex.MIN_SPREAD_PIPS); Dukascopy's real spread is smaller than that anyway.
-The live bots use OANDA's own prices.
+Past prices come from OANDA itself once its practice key is set up (the same prices the bots trade on), and
+until then from Dukascopy, a Swiss bank that publishes years of prices for free. Dukascopy only allows a few
+downloads at a time from one place, so each file is saved once in FX_CACHE_DIR and never fetched again. The
+lab charges at least OANDA's usual gap between the buy and sell price (see forex.MIN_SPREAD_PIPS), which is
+bigger than Dukascopy's real one, so downloading only the "bid" side loses nothing.
 
 The CFTC (the US futures regulator) publishes the "Commitments of Traders" report every Friday at 3:30pm
 New York time. It shows, as of the Tuesday before, how many currency futures contracts each type of big
@@ -15,9 +16,11 @@ from __future__ import annotations
 
 import logging
 import lzma
+import os
 import struct
 import time
 from datetime import date, datetime, timedelta, timezone
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -108,80 +111,47 @@ def _decode(raw: bytes, start: datetime, pair: str) -> pd.DataFrame:
 PAUSE = 1.5   # seconds between downloads: Dukascopy limits how fast one visitor may download (HTTP 429)
 
 
+def _cached(url: str) -> Path | None:
+    root = os.environ.get("FX_CACHE_DIR")
+    return Path(root) / url.removeprefix(DUKA + "/") if root else None
+
+
 def _get(http: requests.Session, url: str) -> bytes:
+    path = _cached(url)
+    if path and path.exists():
+        return path.read_bytes()
     why = ""
-    for attempt in range(6):
+    for attempt in range(3):
         time.sleep(PAUSE)
         try:
             r = http.get(url, timeout=60)
         except requests.RequestException as e:
             r, why = None, str(e)
-        if r is not None and r.status_code == 200:
-            return r.content
-        if r is not None and r.status_code == 404:
-            return b""
+        if r is not None and r.status_code in (200, 404):
+            data = r.content if r.status_code == 200 else b""
+            if path:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(data)
+            return data
+        if r is not None and r.status_code == 429 and attempt == 2:
+            raise SlowDown(f"Dukascopy says slow down (HTTP 429) at {url}; files so far are saved, try again later")
         if r is not None:
             why = f"HTTP {r.status_code}"
         wait = r.headers.get("Retry-After") if r is not None else None
-        time.sleep(float(wait) if wait and wait.isdigit() else 5 * 2 ** attempt)   # slow down as asked
+        time.sleep(float(wait) if wait and wait.isdigit() else 10 * 2 ** attempt)   # slow down as asked
     raise RuntimeError(f"couldn't download {url} ({why})")
 
 
-YAHOO = "https://query1.finance.yahoo.com/v8/finance/chart/{sym}=X"
-AGENT = "trading-bots-lab/1.0 (+https://github.com/Quincith/trading-bots)"
-
-
-def yahoo_daily(pair: str, start: date, end: date, session: requests.Session | None = None) -> pd.DataFrame:
-    """Daily candles from Yahoo Finance in one request per pair. Days are dated in UTC."""
-    http = session or requests.Session()
-    http.headers.setdefault("User-Agent", AGENT)
-    t0 = int(datetime(start.year, start.month, start.day, tzinfo=timezone.utc).timestamp())
-    t1 = int(datetime(end.year, end.month, end.day, tzinfo=timezone.utc).timestamp())
-    r = None
-    for attempt in range(4):
-        time.sleep(PAUSE)
-        r = http.get(YAHOO.format(sym=pair.replace("_", "")), timeout=60,
-                     params={"period1": t0, "period2": t1, "interval": "1d"})
-        if r.status_code == 200:
-            break
-        time.sleep(5 * 2 ** attempt)
-    if r is None or r.status_code != 200:
-        raise RuntimeError(f"Yahoo {pair}: HTTP {r.status_code if r is not None else '?'}")
-    res = r.json()["chart"]["result"][0]
-    q = res["indicators"]["quote"][0]
-    df = pd.DataFrame({k: q[k] for k in ("open", "high", "low", "close")},
-                      index=pd.to_datetime(res["timestamp"], unit="s", utc=True).normalize(), dtype=float).dropna()
-    df = df[(df > 0).all(axis=1) & ~df.index.duplicated(keep="last")]
-    # Yahoo's currency candles sometimes have a high or low that doesn't contain the open and close
-    df["high"] = df[["open", "high", "close"]].max(axis=1)
-    df["low"] = df[["open", "low", "close"]].min(axis=1)
-    df["spread"], df["volume"] = 0.0, 0.0
-    return df
-
-
-def daily_prices(pair: str, start: date, end: date) -> pd.DataFrame:
-    """Daily candles for the lab: Yahoo first, Dukascopy if Yahoo won't answer."""
-    try:
-        df = yahoo_daily(pair, start, end)
-        if len(df) > 200:
-            log.info("%s: %d days from Yahoo", pair, len(df))
-            return df
-        why = f"only {len(df)} days"
-    except Exception as e:   # noqa: BLE001
-        why = str(e)
-    log.warning("%s: Yahoo failed (%s), trying Dukascopy", pair, why)
-    return daily_history(pair, start, end)
-
-
-def daily_history(pair: str, start: date, end: date, session: requests.Session | None = None) -> pd.DataFrame:
+def daily_history(pair: str, start: date, end: date, session: requests.Session | None = None,
+                  sides: tuple[str, ...] = ("BID", "ASK")) -> pd.DataFrame:
     """Daily mid-price candles with the bid/ask spread, from Dukascopy. Whole past years come as one
     file each; this year's finished months are built from hourly files. The month in progress is left
     out. Days start at 00:00 UTC."""
     http = session or requests.Session()
     sym = pair.replace("_", "")
-    sides = {}
+    got = {}
     today = datetime.now(timezone.utc).date()
-    for side in ("BID", "ASK"):
+    for side in sides:
         parts = []
         for y in range(start.year, end.year + 1):
             if y < today.year:
@@ -195,8 +165,8 @@ def daily_history(pair: str, start: date, end: date, session: requests.Session |
                         parts.append(h.resample("1D").agg({"open": "first", "high": "max", "low": "min",
                                                            "close": "last", "volume": "sum"}).dropna())
         df = pd.concat([p for p in parts if len(p)]) if any(len(p) for p in parts) else pd.DataFrame()
-        sides[side] = df[~df.index.duplicated()].sort_index() if len(df) else df
-    bid, ask = sides["BID"], sides["ASK"]
+        got[side] = df[~df.index.duplicated()].sort_index() if len(df) else df
+    bid, ask = got["BID"], got.get("ASK", got["BID"])
     if bid.empty or ask.empty:
         raise RuntimeError(f"no Dukascopy prices for {pair}")
     j = bid.join(ask, lsuffix="_b", rsuffix="_a", how="inner")

@@ -586,12 +586,14 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--idea", default="", help="the idea in plain words, for the log")
     ap.add_argument("--days", type=int, default=365)
     ap.add_argument("--cache", help="save/load downloaded history here")
+    ap.add_argument("--end", help="test up to this date (YYYY-MM-DD) instead of now")
     ap.add_argument("--workers", type=int)
     args = ap.parse_args(argv)
 
     cfg = load_config(args.strategy)
     if args.validate:
-        engine = load_engine(args.strategy, args.days, args.cache)
+        end = datetime.fromisoformat(args.end).replace(tzinfo=timezone.utc) if args.end else None
+        engine = load_engine(args.strategy, args.days, args.cache, end)
         cfg = apply_changes(cfg, parse_sets(args.set))
         _, text = validate(args.strategy, engine, Runner(engine, args.workers), cfg)
         summary = os.environ.get("GITHUB_STEP_SUMMARY")
