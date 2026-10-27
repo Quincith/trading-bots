@@ -1,18 +1,18 @@
 {
- "time": "2026-10-27T12:58:26+00:00",
+ "time": "2026-10-27T13:28:25+00:00",
  "coins": {
   "BTC": {
-   "recent": 10,
-   "before": 28,
-   "buzz": 1.79,
+   "recent": 15,
+   "before": 23,
+   "buzz": 3.26,
    "tone": 0,
    "headlines": [
+    "Would a Bitcoin Selloff After the Midterms Present a Buying Opportunity?",
     "Stock Market Today: Dow Jones, S&P 500, Nasdaq 10 Futures Gain as Fed Begins Its Two-Day Meet\u2014 Novartis, HSBC, Welltower in Focus (UPDATED)",
-    "Bitcoin Could Hit $100,000 or $60,000 by Year-End, Analyst Says",
-    "China\u2019s AI Stock Rout Scary, but Crypto Punters Aren\u2019t Calling a US Bubble Burst Yet"
+    "Bitcoin Could Hit $100,000 or $60,000 by Year-End, Analyst Says"
    ],
    "trending": 1,
-   "rule_score": 0.46,
+   "rule_score": 0.75,
    "score": -0.3,
    "note": "Buzz is up 1.8x, but mostly price talk and falling below $80K; weakness is building."
   },
@@ -33,7 +33,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 9,
+   "trending": 7,
    "rule_score": 0.15,
    "score": -0.1,
    "note": "Solana bug-report costs story is minor; no buzz pickup in recent hours."
@@ -91,7 +91,7 @@
     "Bitcoin shows signs of weakness while Ripple's bank win fails to bolster XRP",
     "Ripple Wins Final OCC Approval for Trust Bank Behind $2.6B RLUSD Stablecoin"
    ],
-   "trending": 14,
+   "trending": 12,
    "rule_score": 0.14,
    "score": 0.1,
    "note": "Ripple trust bank approval is real but already priced in; buzz is modest at 1.4x."
@@ -128,8 +128,8 @@
  "trending_elsewhere": [],
  "headlines": 83,
  "sources": {
-  "Alpaca/Benzinga": 27,
-  "crypto news sites": 56,
+  "Alpaca/Benzinga": 28,
+  "crypto news sites": 55,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-27T12:58:26+00:00"
