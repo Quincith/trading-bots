@@ -1,32 +1,33 @@
 {
- "time": "2026-10-27T19:28:54+00:00",
+ "time": "2026-10-27T19:58:56+00:00",
  "coins": {
   "BTC": {
-   "recent": 6,
-   "before": 31,
-   "buzz": 0.97,
+   "recent": 8,
+   "before": 28,
+   "buzz": 1.43,
    "tone": 4,
    "headlines": [
+    "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday",
-    "Bitcoin Fed Meeting Preview: Drop to $76,000 or Reclaim $82,000?",
-    "Nasdaq 100 Climbs on Chip Rally, Boeing Sinks 10%: Stock Market Today"
+    "Bitcoin Fed Meeting Preview: Drop to $76,000 or Reclaim $82,000?"
    ],
-   "trending": 14,
-   "rule_score": 0.54,
+   "trending": 8,
+   "rule_score": 0.64,
    "score": -0.1,
    "note": "Mostly Fed preview and price recaps; slight weakness signs, no clear new catalyst."
   },
   "ETH": {
-   "recent": 2,
+   "recent": 3,
    "before": 5,
-   "buzz": 2.0,
+   "buzz": 3.0,
    "tone": 2,
    "headlines": [
+    "Zcash Jumps 5%, Outpaces Bitcoin, ETH as 10-Year Anniversary Draws Close",
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday",
     "OpenAI Proves ETH Is False, and Crypto Twitter Has Questions"
    ],
    "trending": null,
-   "rule_score": 0.4,
+   "rule_score": 0.6,
    "score": 0.1,
    "note": "Buzz is up but the OpenAI-ETH story is unclear; modest interest only."
   },
@@ -39,7 +40,7 @@
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday",
     "Galaxy Digital Posts $323M Profit as AI Expansion Gains Steam"
    ],
-   "trending": 12,
+   "trending": 6,
    "rule_score": 0.82,
    "score": -0.2,
    "note": "Solana bug reports now cost 1 SOL due to AI spam; a small negative for security perception."
@@ -68,8 +69,8 @@
   },
   "DOGE": {
    "recent": 1,
-   "before": 2,
-   "buzz": 2.5,
+   "before": 1,
+   "buzz": 5.0,
    "tone": 2,
    "headlines": [
     "Bitcoin Reclaims $80,000 as ETH, XRP, DOGE Hold Steady Ahead of FOMC Wednesday"
@@ -100,8 +101,8 @@
     "Ripple Expands BNY Partnership as XRP Jumps 2%",
     "Robinhood taps Ripple\u2019s $2.5 billion RLUSD stablecoin despite backing rival USDG"
    ],
-   "trending": 4,
-   "rule_score": 0.93,
+   "trending": 5,
+   "rule_score": 0.78,
    "score": 0.4,
    "note": "Ripple's OCC trust bank approval and Robinhood RLUSD deal are real news; buzz is 2.1x."
   }
@@ -132,9 +133,9 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 79,
+ "headlines": 78,
  "sources": {
-  "Alpaca/Benzinga": 24,
+  "Alpaca/Benzinga": 23,
   "crypto news sites": 55,
   "CoinGecko trending": 15
  },
