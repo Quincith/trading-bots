@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 21:59 UTC
+# Aggressive strategy — 2026-10-27 22:29 UTC
 
 | | |
 |---|---|
@@ -9,25 +9,23 @@
 
 ## News radar (trends forming)
 
-Read 81 headlines from the last day (Alpaca/Benzinga 23, crypto news sites 58, CoinGecko trending 15).
+Read 80 headlines from the last day (Alpaca/Benzinga 23, crypto news sites 57, CoinGecko trending 15).
 
-- **Ripple/Robinhood RLUSD stablecoin partnerships**: Multiple recent stories about Ripple's RLUSD stablecoin expanding with Robinhood; some are repeats of the same deal, so treat as moderate. (XRP)
-- **Tokenized stocks and Wall Street onchain push**: Janus Henderson Nasdaq-100 fund on Stellar, CF Benchmarks, and OKX-ICE objections show institutions moving onchain; mixed signal for the broader market. (SOL, ETH, XRP)
-- **Fed meeting and macro risk-off**: Bitcoin dropped below $80,000 ahead of the FOMC; traders are cautious, so near-term price pressure is likely across majors. (BTC, ETH, SOL, XRP, DOGE)
+- **Ripple and Robinhood RLUSD partnership expansion**: Several Ripple-Robinhood deals this week tie XRP's stablecoin to big retail platforms; XRP buzz is up 1.5x. (XRP)
+- **Tokenized stocks and onchain Nasdaq funds**: Janus Henderson, CF Benchmarks and OKX-ICE tokenization news, though objections are mounting; mostly tied to general crypto infrastructure. (ETH, LINK)
+- **Fed meeting and Bitcoin price swings**: Bitcoin trades near $80,000 ahead of FOMC; much coverage is price talk, so the signal is weak. (BTC)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.40 | 4 (2.22x usual) | Repeated Ripple and Robinhood RLUSD partnership and bank approval news is real, though partly recycled. |
-| ETH | +0.10 | 2 (1.67x usual) | Mostly neutral; tokenized-fund news helps a little, but one OpenAI-related story is noise. |
-| SOL | +0.10 | 1 (1.25x usual) | Few new headlines; tokenized Nasdaq fund on Stellar gives only faint indirect interest. |
-| DOGE | +0.00 | 1 (5.0x usual) | Buzz is high at 5x, but the single headline is a price-hold recap, not a real catalyst. |
-| BTC | -0.20 | 7 (1.13x usual) | Price is pressured by the Fed meeting and quantum-risk worries, but much of the news is price recap. |
-
-Also trending, but not in our coin list: UNI, PEPE.
+| XRP | +0.40 | 3 (1.5x usual) | Ripple's bank approval and Robinhood RLUSD deals are real positive news, and buzz is up 1.5x. |
+| ETH | +0.10 | 1 (0.71x usual) | Little fresh ETH news; the OpenAI ETH story is weak and tokenized-stock deals only loosely help. |
+| LINK | +0.10 | 0 (0.0x usual) | Tokenized-fund and onchain data stories may help Chainlink, but no direct Chainlink news. |
+| BTC | +0.00 | 5 (0.76x usual) | Mostly price previews ahead of the Fed meeting; nothing new that changes the outlook. |
+| SOL | +0.00 | 0 (0.0x usual) | No recent headlines or unusual buzz for Solana. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
