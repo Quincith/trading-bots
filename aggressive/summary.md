@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 15:58 UTC
+# Aggressive strategy — 2026-10-27 16:28 UTC
 
 | | |
 |---|---|
@@ -9,22 +9,23 @@
 
 ## News radar (trends forming)
 
-Read 77 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 52, CoinGecko trending 15).
+Read 73 headlines from the last day (Alpaca/Benzinga 24, crypto news sites 49, CoinGecko trending 15).
 
-- **Ripple/XRP bank and stablecoin approvals**: Ripple got final OCC trust bank approval and RLUSD partnerships; real institutional progress, but XRP reaction has been muted so far. (XRP)
-- **Tokenized Wall Street funds and pricing onchain**: Nasdaq-100 fund and CF Benchmarks data moving onchain; institutional rails shift, mostly helps ETH and similar chains, though coverage is thin. (ETH, SOL, AVAX, LINK)
-- **Bitcoin miners pivot to AI compute**: Miners raising money and trading compute power; a BTC-adjacent narrative, mixed signal since it can also weigh on BTC sentiment. (BTC)
+- **Ripple national trust bank approval and RLUSD expansion**: Ripple got final US approval for a trust bank and is partnering to expand its RLUSD stablecoin. Real regulatory progress, though XRP reaction has been muted. (XRP)
+- **Tokenized and onchain traditional finance**: Nasdaq-100 fund, CF Benchmarks data and bank stablecoin moves are going onchain. Mostly institutional infrastructure news that could help the broader market over time. (ETH, LINK, XRP)
+- **Bitcoin miners pivoting to AI compute**: Miners like Luxor are raising money to sell AI computing power. This is a trend story tied to BTC mining, not a direct price catalyst yet. (BTC)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.40 | 2 (1.43x usual) | Ripple's final OCC trust bank approval and RLUSD partnership are real, though price reaction has lagged. |
-| ETH | +0.10 | 3 (3.75x usual) | Few headlines; tokenized fund news is mildly positive, but Glamsterdam bug fix is a minor risk being handled. |
-| BTC | -0.10 | 13 (2.6x usual) | Heavy buzz but mostly price recaps, profit-taking and cautious analysts ahead of FOMC; no clear new catalyst. |
-| SOL | -0.10 | 1 (1.67x usual) | Solana bug bounty now costs 1 SOL due to AI spam; small security-process story, slightly negative tone. |
+| XRP | +0.30 | 1 (0.62x usual) | Ripple final approval for national trust bank and RLUSD partnership are real positives, but the market reaction has been weak. |
+| ETH | +0.10 | 3 (5.0x usual) | Buzz is 5x normal but from only 3 headlines. Glamsterdam bug fix is minor and mostly technical. |
+| LINK | +0.10 | 0 (0.0x usual) | No direct Chainlink headlines, but CF Benchmarks onchain data news is a mild indirect positive. |
+| SOL | -0.10 | 1 (1.67x usual) | Solana bug reports now cost 1 SOL due to AI spam. Only one recent headline, so little new signal. |
+| BTC | -0.20 | 10 (1.85x usual) | Price fell below $80K before the Fed meeting, with analysts cautious. Buzz is high, so news flow is mostly price talk. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
