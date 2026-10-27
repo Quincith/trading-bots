@@ -1,20 +1,20 @@
 {
- "time": "2026-10-27T16:58:39+00:00",
+ "time": "2026-10-27T17:28:40+00:00",
  "coins": {
   "BTC": {
-   "recent": 10,
-   "before": 27,
-   "buzz": 1.85,
-   "tone": 0,
+   "recent": 7,
+   "before": 31,
+   "buzz": 1.13,
+   "tone": 1,
    "headlines": [
+    "Nasdaq 100 Climbs on Chip Rally, Boeing Sinks 10%: Stock Market Today",
     "Datavault AI Stock Crashes \u2014 Financials Cannot Be Trusted: What You Need to Know",
-    "Bitcoin Profit-Taking Cools but Analysts Remain Cautious Ahead of FOMC",
-    "Robinhood Earnings Prediction Market Preview: What Will Vlad Tenev Say?"
+    "Bitcoin Profit-Taking Cools but Analysts Remain Cautious Ahead of FOMC"
    ],
-   "trending": 4,
-   "rule_score": 0.47,
-   "score": -0.2,
-   "note": "Price fell below $80K before the Fed meeting, with analysts cautious. Buzz is high, so news flow is mostly price talk."
+   "trending": null,
+   "rule_score": 0.13,
+   "score": 0.0,
+   "note": "Mostly price commentary and recycled analyst calls; buzz is normal and no fresh catalyst."
   },
   "ETH": {
    "recent": 4,
@@ -28,8 +28,8 @@
    ],
    "trending": null,
    "rule_score": 0.5,
-   "score": 0.1,
-   "note": "Buzz is 5x normal but from only 3 headlines. Glamsterdam bug fix is minor and mostly technical."
+   "score": -0.2,
+   "note": "Buzz spike is mostly a confusing 'OpenAI proves ETH is false' headline and a Glamsterdam bug fix; net mildly negative."
   },
   "SOL": {
    "recent": 2,
@@ -40,10 +40,10 @@
     "Galaxy Digital Posts $323M Profit as AI Expansion Gains Steam",
     "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser"
    ],
-   "trending": null,
-   "rule_score": 0.47,
-   "score": -0.1,
-   "note": "Solana bug reports now cost 1 SOL due to AI spam. Only one recent headline, so little new signal."
+   "trending": 14,
+   "rule_score": 0.62,
+   "score": -0.2,
+   "note": "Few headlines; Solana bug-report spam costs are a minor negative, while onchain fund news is only indirectly helpful."
   },
   "AVAX": {
    "recent": 0,
@@ -54,7 +54,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines in the feed. Nothing new to act on."
+   "note": "No headlines in the recent window, so nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -62,10 +62,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 6,
-   "rule_score": 0.15,
-   "score": 0.1,
-   "note": "No direct Chainlink headlines, but CF Benchmarks onchain data news is a mild indirect positive."
+   "trending": 4,
+   "rule_score": 0.3,
+   "score": 0.0,
+   "note": "No LINK headlines; Chainlink data-feed mention in CF Benchmarks is only indirectly relevant."
   },
   "DOGE": {
    "recent": 0,
@@ -76,7 +76,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent Dogecoin headlines beyond a generic market mention. Nothing new."
+   "note": "No recent DOGE-specific headlines; only a passing mention in a recycled price article."
   },
   "LTC": {
    "recent": 0,
@@ -87,54 +87,57 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent Litecoin headlines. Nothing new."
+   "note": "No recent headlines and no new news."
   },
   "XRP": {
    "recent": 2,
-   "before": 8,
-   "buzz": 1.25,
+   "before": 7,
+   "buzz": 1.43,
    "tone": 1,
    "headlines": [
     "Ripple Expands BNY Partnership as XRP Jumps 2%",
     "Ripple, Robinhood Partner to Expand RLUSD Use for Institutional Settlement"
    ],
-   "trending": 7,
-   "rule_score": 0.3,
+   "trending": 13,
+   "rule_score": 0.34,
    "score": 0.3,
-   "note": "Ripple final approval for national trust bank and RLUSD partnership are real positives, but the market reaction has been weak."
+   "note": "Real bank approval and BNY/Robinhood partnerships, but some stories are repeats and XRP only rose about 2%."
   }
  },
  "themes": [
   {
-   "title": "Ripple national trust bank approval and RLUSD expansion",
-   "note": "Ripple got final US approval for a trust bank and is partnering to expand its RLUSD stablecoin. Real regulatory progress, though XRP reaction has been muted.",
+   "title": "Ripple/XRP bank approvals and partnerships",
+   "note": "Ripple's national trust bank got final approval and new BNY and Robinhood partnerships; XRP is up modestly, but several items are repeats of the same approval news.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Tokenized and onchain traditional finance",
-   "note": "Nasdaq-100 fund, CF Benchmarks data and bank stablecoin moves are going onchain. Mostly institutional infrastructure news that could help the broader market over time.",
+   "title": "Tokenized Nasdaq-100 and onchain finance",
+   "note": "Janus Henderson and Centrifuge tokenized fund on Stellar plus CF Benchmarks data onchain; mostly institutional infrastructure, indirect benefit to crypto networks.",
    "coins": [
-    "ETH",
     "LINK",
-    "XRP"
+    "SOL"
    ]
   },
   {
-   "title": "Bitcoin miners pivoting to AI compute",
-   "note": "Miners like Luxor are raising money to sell AI computing power. This is a trend story tied to BTC mining, not a direct price catalyst yet.",
+   "title": "Stablecoin regulation and adoption",
+   "note": "Brazil firms using stablecoins, USDC gaining in euro trading, Canada draft rules, OCC payment stablecoin push; broad sector tailwind, not coin-specific.",
    "coins": [
-    "BTC"
+    "XRP",
+    "SOL",
+    "ETH"
    ]
   }
  ],
- "trending_elsewhere": [],
+ "trending_elsewhere": [
+  "PEPE"
+ ],
  "headlines": 77,
  "sources": {
-  "Alpaca/Benzinga": 26,
-  "crypto news sites": 51,
+  "Alpaca/Benzinga": 25,
+  "crypto news sites": 52,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T16:28:39+00:00"
+ "ai_time": "2026-10-27T17:28:40+00:00"
 }

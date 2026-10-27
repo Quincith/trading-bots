@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 16:58 UTC
+# Aggressive strategy — 2026-10-27 17:28 UTC
 
 | | |
 |---|---|
@@ -9,23 +9,25 @@
 
 ## News radar (trends forming)
 
-Read 77 headlines from the last day (Alpaca/Benzinga 26, crypto news sites 51, CoinGecko trending 15).
+Read 77 headlines from the last day (Alpaca/Benzinga 25, crypto news sites 52, CoinGecko trending 15).
 
-- **Ripple national trust bank approval and RLUSD expansion**: Ripple got final US approval for a trust bank and is partnering to expand its RLUSD stablecoin. Real regulatory progress, though XRP reaction has been muted. (XRP)
-- **Tokenized and onchain traditional finance**: Nasdaq-100 fund, CF Benchmarks data and bank stablecoin moves are going onchain. Mostly institutional infrastructure news that could help the broader market over time. (ETH, LINK, XRP)
-- **Bitcoin miners pivoting to AI compute**: Miners like Luxor are raising money to sell AI computing power. This is a trend story tied to BTC mining, not a direct price catalyst yet. (BTC)
+- **Ripple/XRP bank approvals and partnerships**: Ripple's national trust bank got final approval and new BNY and Robinhood partnerships; XRP is up modestly, but several items are repeats of the same approval news. (XRP)
+- **Tokenized Nasdaq-100 and onchain finance**: Janus Henderson and Centrifuge tokenized fund on Stellar plus CF Benchmarks data onchain; mostly institutional infrastructure, indirect benefit to crypto networks. (LINK, SOL)
+- **Stablecoin regulation and adoption**: Brazil firms using stablecoins, USDC gaining in euro trading, Canada draft rules, OCC payment stablecoin push; broad sector tailwind, not coin-specific. (XRP, SOL, ETH)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.30 | 2 (1.25x usual) | Ripple final approval for national trust bank and RLUSD partnership are real positives, but the market reaction has been weak. |
-| ETH | +0.10 | 4 (6.67x usual) | Buzz is 5x normal but from only 3 headlines. Glamsterdam bug fix is minor and mostly technical. |
-| LINK | +0.10 | 0 (0.0x usual) | No direct Chainlink headlines, but CF Benchmarks onchain data news is a mild indirect positive. |
-| SOL | -0.10 | 2 (3.33x usual) | Solana bug reports now cost 1 SOL due to AI spam. Only one recent headline, so little new signal. |
-| BTC | -0.20 | 10 (1.85x usual) | Price fell below $80K before the Fed meeting, with analysts cautious. Buzz is high, so news flow is mostly price talk. |
+| XRP | +0.30 | 2 (1.43x usual) | Real bank approval and BNY/Robinhood partnerships, but some stories are repeats and XRP only rose about 2%. |
+| BTC | +0.00 | 7 (1.13x usual) | Mostly price commentary and recycled analyst calls; buzz is normal and no fresh catalyst. |
+| LINK | +0.00 | 0 (0.0x usual) | No LINK headlines; Chainlink data-feed mention in CF Benchmarks is only indirectly relevant. |
+| ETH | -0.20 | 4 (6.67x usual) | Buzz spike is mostly a confusing 'OpenAI proves ETH is false' headline and a Glamsterdam bug fix; net mildly negative. |
+| SOL | -0.20 | 2 (3.33x usual) | Few headlines; Solana bug-report spam costs are a minor negative, while onchain fund news is only indirectly helpful. |
+
+Also trending, but not in our coin list: PEPE.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
