@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 18:30 UTC
+# Aggressive strategy — 2026-10-28 19:00 UTC
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## News radar (trends forming)
 
-Read 82 headlines from the last day (Alpaca/Benzinga 19, crypto news sites 63, CoinGecko trending 15).
+Read 81 headlines from the last day (Alpaca/Benzinga 19, crypto news sites 62, CoinGecko trending 15).
 
 - **Fed holds rates, hike risk rising**: Fed held rates but two officials want a hike, which can pressure risk assets like crypto. (BTC, ETH, SOL, DOGE)
 - **Institutional tokenization and stablecoin push**: Banks and firms keep adopting tokenized assets and stablecoins, mostly on Ripple, Solana and Stellar rails. (XRP, SOL)
@@ -29,4 +29,4 @@ Read 82 headlines from the last day (Alpaca/Benzinga 19, crypto news sites 63, C
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_
