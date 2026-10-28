@@ -1,5 +1,5 @@
 {
- "time": "2026-10-28T03:29:18+00:00",
+ "time": "2026-10-28T03:59:24+00:00",
  "coins": {
   "BTC": {
    "recent": 2,
@@ -10,7 +10,7 @@
     "Netanyahu\u2019s Odds Rise Among Crypto Punters Even as Exit Polls Indicate Israel PM Faces Uncertain Path Back to Power",
     "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
    ],
-   "trending": 2,
+   "trending": 4,
    "rule_score": 0.16,
    "score": -0.1,
    "note": "Buzz is low and most headlines are price recaps; Fed uncertainty and profit-taking slightly bearish."
@@ -36,8 +36,8 @@
    "headlines": [
     "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
    ],
-   "trending": 4,
-   "rule_score": 0.3,
+   "trending": 6,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "Only one headline near normal buzz; no clear new catalyst."
   },
@@ -129,7 +129,8 @@
   }
  ],
  "trending_elsewhere": [
-  "PEPE"
+  "PEPE",
+  "SHIB"
  ],
  "headlines": 80,
  "sources": {

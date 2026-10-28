@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 03:29 UTC
+# Aggressive strategy — 2026-10-28 03:59 UTC
 
 | | |
 |---|---|
@@ -23,11 +23,11 @@ Read 80 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 58, C
 | SOL | +0.00 | 1 (1.25x usual) | Only one headline near normal buzz; no clear new catalyst. |
 | BTC | -0.10 | 2 (0.29x usual) | Buzz is low and most headlines are price recaps; Fed uncertainty and profit-taking slightly bearish. |
 
-Also trending, but not in our coin list: PEPE.
+Also trending, but not in our coin list: PEPE, SHIB.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_
