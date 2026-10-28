@@ -1,44 +1,40 @@
 {
- "time": "2026-10-28T05:29:37+00:00",
+ "time": "2026-10-28T05:59:42+00:00",
  "coins": {
   "BTC": {
-   "recent": 5,
+   "recent": 4,
    "before": 33,
-   "buzz": 0.76,
+   "buzz": 0.61,
    "tone": 0,
    "headlines": [
     "Trump's 'Close Friend' Byron Donalds Is Crypto Punters' Favorite to Succeed Ron DeSantis as Florida Governor",
     "Netanyahu\u2019s Odds Rise Among Crypto Punters Even as Exit Polls Indicate Israel PM Faces Uncertain Path Back to Power",
-    "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
+    "Bitcoin treasury Datavault AI plunges 50% after firm says it can\u2019t access its BTC"
    ],
-   "trending": 4,
-   "rule_score": 0.25,
+   "trending": 6,
+   "rule_score": 0.07,
    "score": -0.2,
    "note": "Mostly recap and Fed-preview articles; Datavault BTC custody scare and Bithumb breach add mild caution."
   },
   "ETH": {
-   "recent": 1,
-   "before": 7,
-   "buzz": 0.71,
+   "recent": 0,
+   "before": 8,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
-   ],
+   "headlines": [],
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
    "note": "Little fresh ETH-specific news; only generic recap mentions and low buzz."
   },
   "SOL": {
-   "recent": 1,
-   "before": 4,
-   "buzz": 1.25,
+   "recent": 0,
+   "before": 5,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
-   ],
-   "trending": null,
-   "rule_score": 0.0,
+   "headlines": [],
+   "trending": 7,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "One headline and near-normal buzz; nothing new that matters."
   },
@@ -65,13 +61,11 @@
    "note": "No headlines in the last day; nothing new."
   },
   "DOGE": {
-   "recent": 1,
-   "before": 1,
-   "buzz": 5.0,
+   "recent": 0,
+   "before": 2,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
-   ],
+   "headlines": [],
    "trending": null,
    "rule_score": 0.0,
    "score": 0.1,
@@ -89,13 +83,11 @@
    "note": "No headlines in the last day; nothing new."
   },
   "XRP": {
-   "recent": 1,
-   "before": 9,
-   "buzz": 0.56,
+   "recent": 0,
+   "before": 10,
+   "buzz": 0.0,
    "tone": 0,
-   "headlines": [
-    "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
-   ],
+   "headlines": [],
    "trending": null,
    "rule_score": 0.0,
    "score": 0.1,
@@ -132,11 +124,13 @@
   }
  ],
  "trending_elsewhere": [
-  "PEPE"
+  "PEPE",
+  "CRV",
+  "BCH"
  ],
- "headlines": 81,
+ "headlines": 80,
  "sources": {
-  "Alpaca/Benzinga": 22,
+  "Alpaca/Benzinga": 21,
   "crypto news sites": 59,
   "CoinGecko trending": 15
  },
