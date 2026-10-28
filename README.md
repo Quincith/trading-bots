@@ -43,7 +43,26 @@ why it stays off until it has been tested in the strategy lab on past prices and
 (The news sites and the trending list don't keep history, so the lab can only test it with Alpaca's
 headlines.)
 
-## Two strategies, two accounts
+## Since October 28, 2026: Aggressive and Medium run the leveraged Nasdaq trend rule
+
+The bold strategy hunt (below) found one rule that beat just holding on months it had never seen, so Quincy
+switched both crypto accounts to it. Copycat is unchanged. Each run checks one thing: did the Nasdaq 100 (QQQ)
+close above its average price of the last 200 trading days? If yes, the whole account (98%) sits in a
+leveraged Nasdaq fund. If no, it sits in cash. Coins left over from the AI bots are sold on the first run.
+
+| | Aggressive | Medium |
+|---|---|---|
+| Fund it holds | TQQQ (moves 3x the Nasdaq 100 each day) | QLD (moves 2x) |
+| Past test, $100 from Oct 2016 to Oct 2026 | $2,686 | $1,274 |
+| Worst past drop from a high | 58% | 42% |
+| Daily loss limit (no new buys that day) | 10% | 3% |
+| Total loss limit (halts the account) | 65% (was 40%) | 50% (was 15%) |
+
+Expect few trades (about 2 a year) and long losing stretches: only 1 in 4 past trades won, but the winners
+were big. Stocks only trade on weekdays, 9:30am to 4pm New York time. To bring the AI crypto bots back,
+delete the `trend:` section from the account's config file and set the loss limits back.
+
+## The AI bots' two strategies (switched off on Aggressive and Medium since October 28, 2026)
 
 The code is the same for both. Each strategy has its own settings file and its own Alpaca paper account, so the results stay separate.
 
@@ -329,6 +348,19 @@ Good to know:
 **Result (October 2026): none passed.** Over Oct 2021 to Oct 2026, simply holding Bitcoin made +90%. Trend following did best (Medium +24%, Aggressive +46%), but it lost money on the earlier years and its worst drop (35% to 56%) is far deeper than the loss limits. Breakout and swing roughly broke even before fees and lost after them. Day trading and scalping lost over 90%: a round trip costs about 0.6% in fees and slip, more than a typical 5- or 15-minute move. Arbitrage (buying on one exchange and selling on another) can't be tested or run with one Alpaca paper account.
 
 Alpaca can't bet on a fall in crypto ("shorting"), so every rule only buys. The day-trade and scalp results also suffer from thin trading on Alpaca's own market: many of its 5- and 15-minute candles have no trades at all.
+
+## Hunt test (bold, high-risk rules)
+
+**Actions → Hunt test → Run workflow** replays four bold rules on 10 years of Alpaca daily prices with the
+lab's checks, settings fixed before the first test (`tradebots/hunt.py`): the leveraged Nasdaq trend
+(TQQQ while QQQ is above its 200-day average), leveraged dip-buying (TQQQ after a 2-day RSI under 10),
+a multi-market trend (3x stocks, 2x gold, 3x bonds that rose over 12 months) and a crypto rotation
+(the strongest of BTC, ETH and SOL each week). It also checks the trend rule with 2x funds and on the S&P 500.
+
+**Result (October 2026):** the TQQQ trend turned $100 into $2,686 (unseen months +454% vs +181% for
+holding QQQ) and passed every check except the worst drop (58% vs the old 40% limit). The 2x QLD version made
+$1,274 (worst drop 42%). The other three rules made money but failed the lab. Tech had a great decade, so
+this is no promise: a long crash or a one-day collapse (TQQQ fell 34% on one day in March 2020) can hit hard.
 
 ## Buttons you might need
 

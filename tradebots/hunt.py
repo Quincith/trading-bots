@@ -60,6 +60,7 @@ STOCKS = sorted({"QQQ", "TQQQ", "SPY", "UPRO", "GLD", "UGL", "TLT", "TMF", "QLD"
 def config_for(style: str, strategy: str = "aggressive") -> dict:
     """The account's config (for its loss limits) with the rule in place of the AI bots."""
     cfg = copy.deepcopy(bt.load_config(strategy))
+    cfg.pop("trend", None)   # the live rule's own section; the lab reads "hunt"
     cfg["hunt"] = copy.deepcopy(STYLES[style])
     cfg["title"] = f"{TITLES[style]} ({strategy.title()} loss limits)"
     return cfg
@@ -370,3 +371,103 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+# ---- live trading (the trend rule only) ---------------------------------------------------------------------
+
+def daily_closes(broker, symbol: str, days: int, now: datetime) -> pd.Series:
+    """Finished daily closes (split- and dividend-adjusted, full "SIP" feed), oldest first. Today's bar is left
+    out while the day is still going, so the rule only looks at closes it could have seen, like the replay."""
+    params = {"symbols": symbol, "timeframe": "1Day", "adjustment": "all", "feed": "sip", "limit": 10000,
+              "start": (now - timedelta(days=int(days * 1.6) + 10)).strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "end": (now - timedelta(minutes=20)).strftime("%Y-%m-%dT%H:%M:%SZ")}   # the free plan lags 15 min
+    bars = (broker._data("/v2/stocks/bars", params).get("bars") or {}).get(symbol) or []
+    s = pd.Series({pd.Timestamp(b["t"]).tz_convert("America/New_York").date(): float(b["c"]) for b in bars})
+    today_ny = pd.Timestamp(now).tz_convert("America/New_York").date()
+    return s[[d < today_ny for d in s.index]]
+
+
+def run_live(cfg: dict, broker, store, kill_switch: bool = False, dry_run: bool = False,
+             now: datetime | None = None):
+    """One run of the trend rule (the config's "trend" section) on a real (paper) account: hold the fund with (nearly) the whole account while
+    the index's last close is above its N-day average, else hold cash. Anything else in the account (left over
+    from the bots that ran here before) is sold. Selling is always allowed; buying waits for the risk gate."""
+    from .bots import risk
+    from .pipeline import RunResult, _finish, _iso
+    now = now or datetime.now(timezone.utc)
+    h, st = cfg["trend"], store.state
+    res = RunResult(strategy=cfg["name"], started=now)
+    acct = broker.get_account()
+    res.equity = acct["equity"]
+    if not store.rows("deposits.csv"):
+        store.add_deposit(acct["equity"], "starting balance", now)
+    today = now.date().isoformat()
+    if st["day"] != today:
+        st["day"], st["day_start_equity"] = today, acct["equity"]
+    market_open = broker.is_market_open()
+    positions = broker.get_positions()
+    st["plans"] = {}
+
+    def sell(p, why):
+        if not dry_run:
+            broker.close_position(p["symbol"])
+        store.append("trades.csv", {"time": _iso(now), "symbol": p["symbol"], "side": "sell",
+                                    "usd": f"{p['market_value']:.2f}", "price": p["current_price"], "reason": why})
+        res.exits.append(f"SOLD {p['symbol']}: {why}")
+
+    # 1. anything that isn't the fund goes (coins any time, stocks while the market is open)
+    for p in positions:
+        if p["symbol"] != h["hold"] and (p["asset_class"] == "crypto" or market_open):
+            sell(p, f"not part of the {h['hold']} trend rule")
+    held = next((p for p in positions if p["symbol"] == h["hold"]), None)
+
+    # 2. the rule
+    closes = daily_closes(broker, h["signal"], h["sma_days"] + 5, now)
+    if len(closes) < h["sma_days"]:
+        res.gate = f"Only {len(closes)} days of {h['signal']} prices; the rule needs {h['sma_days']}."
+        return _finish(res, store, acct["equity"], now, None)
+    last, avg = float(closes.iloc[-1]), float(closes.tail(h["sma_days"]).mean())
+    want = last > avg
+    res.scanned = True
+    res.notes.append(f"{h['signal']} closed at ${last:,.2f} on {closes.index[-1]}; its {h['sma_days']}-day average is "
+                     f"${avg:,.2f} ({(last / avg - 1) * 100:+.1f}%). Uptrend, so the rule holds {h['hold']}."
+                     if want else
+                     f"{h['signal']} closed at ${last:,.2f} on {closes.index[-1]}, below its {h['sma_days']}-day average "
+                     f"of ${avg:,.2f} ({(last / avg - 1) * 100:+.1f}%). No uptrend, so the rule holds cash.")
+    st["hunt"] = {"signal": h["signal"], "hold": h["hold"], "close": last, "average": round(avg, 2),
+                  "close_day": str(closes.index[-1]), "in_uptrend": want, "checked": _iso(now)}
+
+    if held and not want:
+        if market_open:
+            sell(held, f"{h['signal']} closed below its {h['sma_days']}-day average")
+        else:
+            res.notes.append(f"Will sell {h['hold']} when the stock market opens.")
+    elif want and not held:
+        gate = risk.account_gate(acct["equity"], st["day_start_equity"], store.net_deposits(), kill_switch,
+                                 st["halted_reason"], cfg["risk"])
+        res.gate = gate.reason
+        if gate.halt_strategy:
+            st["halted_reason"] = gate.reason
+        if not gate.allowed:
+            pass
+        elif not market_open:
+            res.notes.append(f"Will buy {h['hold']} when the stock market opens.")
+        elif st.get("hunt_bought_day") == today:
+            res.notes.append(f"Already sent today's {h['hold']} order; waiting for it to show up.")
+        elif not broker.can_buy_fractional(h["hold"]):
+            res.gate = f"Alpaca can't buy part of a share of {h['hold']} right now."
+        else:
+            cash = acct["buying_power"] if not res.exits else broker.get_account()["buying_power"]
+            usd = round(min(acct["equity"] * h.get("invest_pct", 98) / 100, cash), 2)
+            if usd >= cfg["risk"].get("min_order_usd", 1):
+                if not dry_run:
+                    broker.buy_notional(h["hold"], usd, "stocks", f"hunt-{h['hold']}-{now:%Y%m%d%H%M%S}")
+                st["hunt_bought_day"] = today
+                store.append("trades.csv", {"time": _iso(now), "symbol": h["hold"], "side": "buy", "usd": f"{usd:.2f}",
+                                            "price": broker.latest_price(h["hold"]) or "",
+                                            "reason": f"{h['signal']} above its {h['sma_days']}-day average"})
+                res.buys.append(f"BUY {h['hold']} ${usd:,.2f} (the trend rule: all in while {h['signal']} is in an uptrend)")
+    if not dry_run and (res.exits or res.buys):
+        positions = broker.get_positions()
+    res.positions = [p for p in positions if p["symbol"] == h["hold"]] if dry_run else positions
+    return _finish(res, store, acct["equity"], now, None)

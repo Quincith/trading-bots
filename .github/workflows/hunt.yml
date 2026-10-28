@@ -5,8 +5,6 @@ name: Hunt test
 # It only reports: nothing is saved and no settings change. The report shows on the run page.
 on:
   workflow_dispatch:
-  push:   # TRIAL ONLY: remove before merge
-    branches: [claude/project-thread-y0esfp]
 
 jobs:
   hunt:

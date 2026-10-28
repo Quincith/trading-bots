@@ -161,10 +161,10 @@ def knobs_for(strategy: str, cfg: dict | None = None) -> list[Knob]:
         style = (cfg or load_config(strategy))["forex"]["style"]
         return {"trend": FOREX_KNOBS, "cot": FXCOPY_KNOBS, "momentum": MOMENTUM_KNOBS, "carry": CARRY_KNOBS,
                 "orb": ORB_KNOBS}[style]
-    if cfg and cfg.get("hunt"):
-        return HUNT_KNOBS[cfg["hunt"]["style"]]
     if cfg and cfg.get("playbook"):
         return PLAYBOOK_KNOBS[cfg["playbook"]["style"]]
+    if cfg and cfg.get("hunt"):
+        return HUNT_KNOBS[cfg["hunt"]["style"]]
     return {"copycat": COPYCAT_KNOBS}.get(strategy, CRYPTO_KNOBS)
 
 

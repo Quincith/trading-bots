@@ -55,3 +55,90 @@ def test_trend_is_all_in_above_the_average_and_cash_below():
     w = hunt.targets(close, hunt.STYLES["lev_trend"])
     assert w["TQQQ"].iloc[-1] == 0 and set(w["TQQQ"].dropna().unique()) <= {0.0, 1.0}
     assert w.drop(columns="TQQQ").abs().sum().sum() == 0
+
+
+class TrendBroker:
+    """A paper account for the live trend rule: QQQ's daily closes and whatever the account holds."""
+
+    def __init__(self, closes, positions=(), market_open=True, equity=100.0):
+        self.closes, self.open, self.equity = closes, market_open, equity
+        self.positions = list(positions)
+        self.orders, self.closed = [], []
+
+    def _data(self, path, params):
+        days = pd.bdate_range(end="2026-10-27", periods=len(self.closes))
+        return {"bars": {"QQQ": [{"t": f"{d:%Y-%m-%d}T04:00:00Z", "c": c} for d, c in zip(days, self.closes)]}}
+
+    def get_account(self):
+        return {"equity": self.equity, "buying_power": self.equity}
+
+    def get_positions(self):
+        return [p for p in self.positions if p["symbol"] not in self.closed]
+
+    def is_market_open(self):
+        return self.open
+
+    def can_buy_fractional(self, symbol):
+        return True
+
+    def latest_price(self, symbol):
+        return 50.0
+
+    def buy_notional(self, symbol, usd, asset_class, client_order_id):
+        self.orders.append((symbol, usd))
+
+    def close_position(self, symbol):
+        self.closed.append(symbol)
+
+
+def pos(symbol, asset_class="stocks", value=90.0):
+    return {"symbol": symbol, "asset_class": asset_class, "market_value": value, "current_price": 10.0,
+            "avg_entry_price": 10.0, "qty": value / 10}
+
+
+def live(broker, tmp_path, strategy="aggressive", **kw):
+    from tradebots.store import Store
+    cfg = hunt.bt.load_config(strategy)
+    now = datetime(2026, 10, 28, 15, 0, tzinfo=timezone.utc)
+    return cfg, hunt.run_live(cfg, broker, Store(tmp_path, strategy), now=now, **kw)
+
+
+def test_live_rule_buys_the_fund_in_an_uptrend_and_sells_leftover_coins(tmp_path):
+    b = TrendBroker(list(np.linspace(100, 200, 260)), [pos("BTCUSD", "crypto", 40.0)])
+    cfg, res = live(b, tmp_path)
+    assert b.closed == ["BTCUSD"]
+    assert b.orders == [("TQQQ", 98.0)] and res.buys
+    assert cfg["trend"]["hold"] == "TQQQ" and hunt.bt.load_config("medium")["trend"]["hold"] == "QLD"
+
+
+def test_live_rule_sells_the_fund_below_the_average_and_waits_while_closed(tmp_path):
+    down = list(np.linspace(200, 100, 260))
+    b = TrendBroker(down, [pos("TQQQ")])
+    live(b, tmp_path)
+    assert b.closed == ["TQQQ"] and not b.orders
+    b = TrendBroker(down, [pos("TQQQ")], market_open=False)
+    _, res = live(b, tmp_path)
+    assert not b.closed and any("when the stock market opens" in n for n in res.notes)
+
+
+def test_live_rule_respects_the_kill_switch_and_dry_run(tmp_path):
+    up = list(np.linspace(100, 200, 260))
+    b = TrendBroker(up)
+    live(b, tmp_path, kill_switch=True)
+    assert not b.orders
+    b = TrendBroker(up)
+    _, res = live(b, tmp_path, dry_run=True)
+    assert not b.orders and res.buys
+
+
+def test_a_live_trend_run_shows_in_the_report_and_bot_world(tmp_path):
+    from tradebots import report, runlog, world
+    from tradebots.store import Store
+    b = TrendBroker(list(np.linspace(100, 200, 260)))
+    cfg, res = live(b, tmp_path)
+    store = Store(tmp_path, "aggressive")
+    runlog.save(res, store, False)
+    assert "BUY TQQQ" in report.render(res, store, False)
+    d = world.strategy_data(store, cfg)
+    assert d["title"].startswith("Leveraged Nasdaq trend") and "TQQQ" in d["rules"]
+    assert d["stations"]["scout"]["status"] == "found" and d["stations"]["decision"]["status"] == "buy"

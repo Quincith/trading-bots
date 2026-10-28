@@ -286,6 +286,10 @@ def main(argv: list[str] | None = None) -> int:
     engines: dict[str, object] = {}
     for s in strategies:
         kind = s if s in ("copycat", *lab.FOREX_STRATEGIES) else "crypto"
+        if lab.load_config(s).get("trend"):   # runs a fixed trend rule (hunt.py), not the AI bots' knobs
+            body += [f"## {s.title()}", "", "Runs the leveraged Nasdaq trend rule, which has no weekly knobs to "
+                     "tune. Test it with Actions > Hunt test instead.", ""]
+            continue
         try:
             if kind not in engines:
                 cache = f"{args.cache_dir}/{kind}.pkl" if args.cache_dir else None
