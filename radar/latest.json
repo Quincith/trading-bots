@@ -1,19 +1,16 @@
 {
- "time": "2026-10-28T00:59:18+00:00",
+ "time": "2026-10-28T01:29:17+00:00",
  "coins": {
   "BTC": {
-   "recent": 2,
-   "before": 36,
-   "buzz": 0.28,
-   "tone": 2,
-   "headlines": [
-    "Bitcoin Will \u2018Never Break Its All-Time High Again,\u2019 All-In Podcast Host Jason Calacanis Says",
-    "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure"
-   ],
-   "trending": null,
-   "rule_score": 0.06,
-   "score": 0.0,
-   "note": "Mostly price recaps and forecasts ahead of the Fed; buzz is low, nothing new building."
+   "recent": 0,
+   "before": 38,
+   "buzz": 0.0,
+   "tone": 0,
+   "headlines": [],
+   "trending": 6,
+   "rule_score": 0.15,
+   "score": -0.1,
+   "note": "Price swings ahead of Fed meeting; quantum-risk worries and profit-taking are mild negatives."
   },
   "ETH": {
    "recent": 0,
@@ -24,7 +21,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; the only ETH mention is a skeptical OpenAI item, not a catalyst."
+   "note": "No real new catalyst; OpenAI ETH headline is noise."
   },
   "SOL": {
    "recent": 0,
@@ -35,7 +32,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz; nothing new building."
+   "note": "No fresh Solana-specific news in the last day."
   },
   "AVAX": {
    "recent": 0,
@@ -46,7 +43,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz; nothing new building."
+   "note": "No fresh Avalanche-specific news in the last day."
   },
   "LINK": {
    "recent": 0,
@@ -56,8 +53,8 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.0,
-   "note": "Most-searched but zero recent headlines; search interest alone is not a catalyst."
+   "score": 0.1,
+   "note": "Chainlink data used by CF Benchmarks onchain is a faint positive, not a clear catalyst."
   },
   "DOGE": {
    "recent": 0,
@@ -68,7 +65,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No real news, only a price mention in a recap; nothing new building."
+   "note": "Only mentioned in price recaps; nothing new."
   },
   "LTC": {
    "recent": 0,
@@ -79,7 +76,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz; nothing new building."
+   "note": "No fresh Litecoin-specific news in the last day."
   },
   "XRP": {
    "recent": 0,
@@ -87,48 +84,47 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 14,
+   "rule_score": 0.15,
    "score": 0.2,
-   "note": "Ripple RLUSD and Robinhood deals are real but partly repeated; buzz is low at 0.45x."
+   "note": "Robinhood and BNY partnerships expand RLUSD use; real adoption news, though price reaction was small."
   }
  },
  "themes": [
   {
-   "title": "Robinhood and Ripple RLUSD partnership expansion",
-   "note": "Ripple's stablecoin gaining distribution via Robinhood; repeated announcements, so partly recycled, but adoption news is real.",
+   "title": "Ripple and Robinhood stablecoin partnership",
+   "note": "Robinhood adopting Ripple's RLUSD stablecoin is real institutional demand, though XRP price barely moved on it.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Tokenized stocks and onchain Nasdaq products",
-   "note": "Janus Henderson/Centrifuge fund and CF Benchmarks data move Wall Street products onchain; mostly sector-wide, no clear single-coin catalyst.",
+   "title": "Tokenized stocks and onchain Wall Street products",
+   "note": "Nasdaq-100 fund on Stellar and CF Benchmarks data onchain show institutions moving into blockchains; mostly infrastructure news.",
    "coins": [
-    "BTC",
-    "ETH",
-    "LINK"
+    "LINK",
+    "ETH"
    ]
   },
   {
-   "title": "Fed meeting and Bitcoin price-level chatter",
-   "note": "Macro event dominates; most Bitcoin headlines are price recaps or analyst forecasts, not new catalysts.",
+   "title": "Bitcoin weakness ahead of Fed meeting",
+   "note": "Bitcoin swinging between $76k and $82k with mixed analyst views; macro uncertainty weighs on the whole market.",
    "coins": [
     "BTC",
     "ETH",
-    "XRP",
-    "DOGE"
+    "SOL",
+    "DOGE",
+    "LTC",
+    "AVAX"
    ]
   }
  ],
- "trending_elsewhere": [
-  "PEPE"
- ],
+ "trending_elsewhere": [],
  "headlines": 80,
  "sources": {
   "Alpaca/Benzinga": 23,
   "crypto news sites": 57,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T00:29:15+00:00"
+ "ai_time": "2026-10-28T01:29:17+00:00"
 }

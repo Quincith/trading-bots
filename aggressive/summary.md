@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 00:59 UTC
+# Aggressive strategy — 2026-10-28 01:29 UTC
 
 | | |
 |---|---|
@@ -11,20 +11,19 @@
 
 Read 80 headlines from the last day (Alpaca/Benzinga 23, crypto news sites 57, CoinGecko trending 15).
 
-- **Robinhood and Ripple RLUSD partnership expansion**: Ripple's stablecoin gaining distribution via Robinhood; repeated announcements, so partly recycled, but adoption news is real. (XRP)
-- **Tokenized stocks and onchain Nasdaq products**: Janus Henderson/Centrifuge fund and CF Benchmarks data move Wall Street products onchain; mostly sector-wide, no clear single-coin catalyst. (BTC, ETH, LINK)
-- **Fed meeting and Bitcoin price-level chatter**: Macro event dominates; most Bitcoin headlines are price recaps or analyst forecasts, not new catalysts. (BTC, ETH, XRP, DOGE)
+- **Ripple and Robinhood stablecoin partnership**: Robinhood adopting Ripple's RLUSD stablecoin is real institutional demand, though XRP price barely moved on it. (XRP)
+- **Tokenized stocks and onchain Wall Street products**: Nasdaq-100 fund on Stellar and CF Benchmarks data onchain show institutions moving into blockchains; mostly infrastructure news. (LINK, ETH)
+- **Bitcoin weakness ahead of Fed meeting**: Bitcoin swinging between $76k and $82k with mixed analyst views; macro uncertainty weighs on the whole market. (BTC, ETH, SOL, DOGE, LTC, AVAX)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.20 | 0 (0.0x usual) | Ripple RLUSD and Robinhood deals are real but partly repeated; buzz is low at 0.45x. |
-| BTC | +0.00 | 2 (0.28x usual) | Mostly price recaps and forecasts ahead of the Fed; buzz is low, nothing new building. |
-
-Also trending, but not in our coin list: PEPE.
+| XRP | +0.20 | 0 (0.0x usual) | Robinhood and BNY partnerships expand RLUSD use; real adoption news, though price reaction was small. |
+| LINK | +0.10 | 0 (0.0x usual) | Chainlink data used by CF Benchmarks onchain is a faint positive, not a clear catalyst. |
+| BTC | -0.10 | 0 (0.0x usual) | Price swings ahead of Fed meeting; quantum-risk worries and profit-taking are mild negatives. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
