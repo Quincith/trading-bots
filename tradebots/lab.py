@@ -110,11 +110,23 @@ FXCOPY_KNOBS = [
     Knob("forex.need_growing", 0, 1, 1, "1 = only copy a bet that grew since the week before (0 = off)", 0, switch=True),
     Knob("forex.stop_atr_mult", 1.5, 6.0, 0.5, "Safety stop this many typical daily swings (ATR) from the entry"),
 ]
+MOMENTUM_KNOBS = [
+    Knob("forex.momentum_days", 90, 540, 30, "Buy pairs that rose (sell pairs that fell) over this many calendar days"),
+    Knob("forex.stop_atr_mult", 2.0, 8.0, 0.5, "Safety stop this many typical daily swings (ATR) from the entry"),
+]
+CARRY_KNOBS = [
+    Knob("forex.carry_enter_pct", 0.25, 3.0, 0.25, "Trade when one currency pays at least this many points more interest"),
+    Knob("forex.carry_exit_pct", 0.0, 2.0, 0.25, "Get out when the interest gap shrinks below this many points", 0),
+    Knob("forex.stop_atr_mult", 2.0, 8.0, 0.5, "Safety stop this many typical daily swings (ATR) from the entry"),
+]
 FOREX_STRATEGIES = ("forex", "fxcopy")
 
 
-def knobs_for(strategy: str) -> list[Knob]:
-    return {"copycat": COPYCAT_KNOBS, "forex": FOREX_KNOBS, "fxcopy": FXCOPY_KNOBS}.get(strategy, CRYPTO_KNOBS)
+def knobs_for(strategy: str, cfg: dict | None = None) -> list[Knob]:
+    if strategy in FOREX_STRATEGIES:
+        style = (cfg or load_config(strategy))["forex"]["style"]
+        return {"trend": FOREX_KNOBS, "cot": FXCOPY_KNOBS, "momentum": MOMENTUM_KNOBS, "carry": CARRY_KNOBS}[style]
+    return {"copycat": COPYCAT_KNOBS}.get(strategy, CRYPTO_KNOBS)
 
 
 def get_value(cfg: dict, path: str, knob: Knob | None = None):
@@ -173,9 +185,9 @@ def clean_changes(strategy: str, cfg: dict, changes: dict) -> tuple[dict, list[s
     return out, problems
 
 
-def nudged(strategy: str, changes: dict) -> list[dict]:
+def nudged(strategy: str, changes: dict, cfg: dict | None = None) -> list[dict]:
     """The same change with each new number moved one step down and one step up."""
-    menu = {k.path: k for k in knobs_for(strategy)}
+    menu = {k.path: k for k in knobs_for(strategy, cfg)}
     out = []
     for path, v in changes.items():
         k = menu[path]
@@ -368,10 +380,13 @@ def validate(strategy: str, engine, runner: Runner, cfg: dict) -> tuple[Verdict,
     """Is the strategy itself worth running? Same honesty rules as `judge`, but against doing nothing:
     it must make money after costs on the unseen months, on the study months, with doubled costs, with
     every main setting nudged a step, and without a drop deeper than the total loss limit."""
+    if strategy in FOREX_STRATEGIES:
+        from . import forex
+        engine.min_trades = forex.min_trades(cfg)   # the rule being checked may not be the config file's
     split = make_split(engine.start, engine.end)
     S, U, A = (split.start, split.study_end), (split.study_end, split.end), (split.start, split.end)
-    nudges = [n for k in knobs_for(strategy) if not k.switch and get_value(cfg, k.path, k)
-              for n in nudged(strategy, {k.path: get_value(cfg, k.path, k)})]
+    nudges = [n for k in knobs_for(strategy, cfg) if not k.switch and get_value(cfg, k.path, k)
+              for n in nudged(strategy, {k.path: get_value(cfg, k.path, k)}, cfg)]
     neighbours = [apply_changes(cfg, n) for n in nudges]
     study, unseen, stress, full, *nb = runner.run_many(
         [(cfg, *S, 1.0), (cfg, *U, 1.0), (cfg, *U, COST_STRESS), (cfg, *A, 1.0)] + [(n, *U, 1.0) for n in neighbours])

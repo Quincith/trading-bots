@@ -131,6 +131,95 @@ def trend_signal(pair: str, row: pd.Series, fx: dict) -> Signal:
                   info=info)
 
 
+def _first_of_month(idx: pd.DatetimeIndex) -> pd.Series:
+    """True on the first daily candle of each month: the slow rules below only change trades then."""
+    m = pd.Series(idx.month, index=idx)
+    return m != m.shift(1)
+
+
+def pair_rate_gap(pair: str, rates: pd.DataFrame | None, idx: pd.DatetimeIndex) -> pd.Series:
+    """Each day's interest rate of the pair's first currency minus its second, in percentage points
+    (e.g. AUD/USD with Australia at 4.35% and the US at 5.25% is -0.9)."""
+    if rates is None or base_ccy(pair) not in rates or quote_ccy(pair) not in rates:
+        return pd.Series(float("nan"), index=idx)
+    gap = rates[base_ccy(pair)] - rates[quote_ccy(pair)]
+    return gap.reindex(gap.index.union(idx)).ffill().reindex(idx)
+
+
+def momentum_table(df: pd.DataFrame, fx: dict) -> pd.DataFrame:
+    """The 12-month momentum rule's inputs: how much the price changed over the last `momentum_days` calendar
+    days (known at each day's close), and whether the day starts a new month."""
+    t = pd.DataFrame(index=df.index)
+    t["close"] = df["close"]
+    back = df["close"].reindex(df.index - pd.Timedelta(days=int(fx["momentum_days"])), method="ffill")
+    t["mom"] = df["close"].to_numpy() / back.to_numpy() - 1
+    t.loc[df.index[0] + pd.Timedelta(days=int(fx["momentum_days"])) > df.index, "mom"] = float("nan")
+    t["atr"] = atr(df, int(fx["atr_days"]))
+    t["new_month"] = _first_of_month(df.index)
+    return t
+
+
+def momentum_signal(pair: str, row: pd.Series, fx: dict) -> Signal:
+    c, a, m = float(row["close"]), float(row["atr"]), float(row["mom"])
+    if math.isnan(m) or math.isnan(a):
+        return Signal(pair, 0, c, a, 0, "Not enough price history yet (needs a year).")
+    months = round(int(fx["momentum_days"]) / 30.4)
+    info = {"mom_pct": round(m * 100, 2)}
+    if not bool(row["new_month"]):
+        return Signal(pair, 0, c, a, 0, f"{m * 100:+.1f}% over {months} months. Only acts on the first day of each month.",
+                      info=info)
+    d = 1 if m > 0 else -1 if m < 0 else 0
+    note = f"{m * 100:+.1f}% over the last {months} months: {'buy' if d > 0 else 'sell'} and hold for a month."
+    return Signal(pair, d, c, a, abs(m) / max(a / c, 1e-9), note, exit_long=m <= 0, exit_short=m >= 0, info=info)
+
+
+def carry_table(df: pd.DataFrame, fx: dict, pair: str, rates: pd.DataFrame | None) -> pd.DataFrame:
+    t = pd.DataFrame(index=df.index)
+    t["close"] = df["close"]
+    t["atr"] = atr(df, int(fx["atr_days"]))
+    t["new_month"] = _first_of_month(df.index)
+    return t
+
+
+def carry_signal(pair: str, row: pd.Series, fx: dict) -> Signal:
+    c, a, g = float(row["close"]), float(row["atr"]), float(row["gap"])
+    if math.isnan(g) or math.isnan(a):
+        return Signal(pair, 0, c, a, 0, "No interest rates for this pair yet.")
+    b, q = base_ccy(pair), quote_ccy(pair)
+    enter, leave = float(fx["carry_enter_pct"]), float(fx["carry_exit_pct"])
+    info = {"gap": round(g, 2)}
+    gap_txt = f"{b} pays {g:+.2f} points more interest than {q}"
+    if not bool(row["new_month"]):
+        return Signal(pair, 0, c, a, 0, f"{gap_txt}. Only acts on the first day of each month.", info=info)
+    d = 1 if g >= enter else -1 if g <= -enter else 0
+    note = (f"{gap_txt}: {'buy' if d > 0 else 'sell'} it to earn the gap." if d else
+            f"{gap_txt}: less than the {enter:g} points needed.")
+    return Signal(pair, d, c, a, abs(g), note, exit_long=g < leave, exit_short=g > -leave, info=info)
+
+
+def rule_text(fx: dict) -> str:
+    """The office's rule in one or two plain sentences (Bot World and the daily summary)."""
+    style = fx["style"]
+    if style == "trend":
+        return (f"Buys a pair when it closes above its {fx['entry_days']}-day high and is above its "
+                f"{fx['trend_ema_days']}-day average, sells it when it closes below its {fx['entry_days']}-day low "
+                f"below the average, and gets out at the opposite {fx['exit_days']}-day high or low.")
+    if style == "momentum":
+        return (f"On the first day of each month, buys each pair that rose over the last "
+                f"{round(int(fx['momentum_days']) / 30.4)} months and sells each one that fell, then holds for a month.")
+    if style == "carry":
+        return (f"On the first day of each month, buys currencies that pay at least {fx['carry_enter_pct']:g} "
+                f"points more interest than the other currency in the pair (sells the opposite), to earn the gap.")
+    return (f"Copies hedge funds' currency bets from the CFTC's weekly report when their net bet is "
+            f"{fx['min_net_pct']:g}%+ of all contracts, and gets out when it flips.")
+
+
+def exit_text(fx: dict, direction: int) -> str:
+    return {"trend": f"closed past its {fx.get('exit_days')}-day {'low' if direction > 0 else 'high'}",
+            "momentum": "its 12-month change turned the other way",
+            "carry": "the interest rate gap shrank"}.get(fx["style"], "the hedge funds' bet shrank or flipped")
+
+
 def cot_signal(pair: str, close: float, a: float, cot_now: dict, fx: dict) -> Signal:
     ccy = quote_ccy(pair) if base_ccy(pair) == "USD" else base_ccy(pair)
     rec = cot_now.get(ccy)
@@ -204,16 +293,38 @@ def signals_at(cfg: dict, tables: dict[str, pd.DataFrame], i_by_pair: dict[str, 
         row = tables[pair].iloc[i]
         if fx["style"] == "trend":
             out[pair] = trend_signal(pair, row, fx)
+        elif fx["style"] == "momentum":
+            out[pair] = momentum_signal(pair, row, fx)
+        elif fx["style"] == "carry":
+            out[pair] = carry_signal(pair, row, fx)
         else:
             out[pair] = cot_signal(pair, float(row["close"]), float(row["atr"]), cot_now, fx)
     return out
 
 
-def tables_for(cfg: dict, bars: dict[str, pd.DataFrame]) -> dict[str, pd.DataFrame]:
-    fx = cfg["forex"]
-    if fx["style"] == "trend":
-        return {p: trend_table(df, fx) for p, df in bars.items()}
-    return {p: pd.DataFrame({"close": df["close"], "atr": atr(df, int(fx["atr_days"]))}) for p, df in bars.items()}
+def tables_for(cfg: dict, bars: dict[str, pd.DataFrame], rates: pd.DataFrame | None = None) -> dict[str, pd.DataFrame]:
+    """Each pair's daily inputs for the office's rule, plus the interest rate gap (for financing and carry)."""
+    fx, out = cfg["forex"], {}
+    for p, df in bars.items():
+        if fx["style"] == "trend":
+            t = trend_table(df, fx)
+        elif fx["style"] == "momentum":
+            t = momentum_table(df, fx)
+        elif fx["style"] == "carry":
+            t = carry_table(df, fx, p, rates)
+        else:
+            t = pd.DataFrame({"close": df["close"], "atr": atr(df, int(fx["atr_days"]))})
+        t["gap"] = pair_rate_gap(p, rates, df.index)
+        out[p] = t
+    return out
+
+
+def financing_pct(direction: int, gap: float, cost: float = 1.0) -> float:
+    """Yearly % of a trade's size paid to hold it overnight. With known interest rates: OANDA pays (or charges)
+    the rate gap and keeps about FINANCING_PCT for itself. Without them: a flat FINANCING_PCT."""
+    if math.isnan(gap):
+        return FINANCING_PCT * cost
+    return FINANCING_PCT * cost - direction * gap
 
 
 def bar_close(t: pd.Timestamp) -> datetime:
@@ -224,12 +335,12 @@ def bar_close(t: pd.Timestamp) -> datetime:
 # ---- the lab: replay the rules over past prices ------------------------------------------------------------
 
 def simulate(cfg: dict, bars: dict[str, pd.DataFrame], cot: pd.DataFrame | None, start: datetime, end: datetime,
-             cash: float = 100.0, cost: float = 1.0) -> bt.SimResult:
+             cash: float = 100.0, cost: float = 1.0, rates: pd.DataFrame | None = None) -> bt.SimResult:
     """Day-by-day replay. Decisions at each day's close are filled at the next day's open, with the spread,
     slippage and overnight financing charged. Safety stops are checked against each day's high and low."""
     fx, rk = cfg["forex"], cfg["risk"]
     pairs = [p for p in cfg["markets"]["pairs"] if p in bars]
-    tables = tables_for(cfg, {p: bars[p] for p in pairs})
+    tables = tables_for(cfg, {p: bars[p] for p in pairs}, rates)
     s, e = pd.Timestamp(start), pd.Timestamp(end)
     days = sorted(set().union(*[set(bars[p].index[(bars[p].index >= s) & (bars[p].index < e)]) for p in pairs]))
     pos: dict[str, dict] = {}
@@ -284,7 +395,7 @@ def simulate(cfg: dict, bars: dict[str, pd.DataFrame], cot: pd.DataFrame | None,
                     fees += t["units"] * hc * usd_per_unit_move(p, px)
                     close_trade(p, px - d * hc, day, "stop hit")
                 else:   # overnight financing, paid each day the trade stays open
-                    f = t["notional"] * FINANCING_PCT / 100 / 365 * cost
+                    f = t["notional"] * financing_pct(d, float(tables[p]["gap"].iat[i]), cost) / 100 / 365
                     t["financing"] += f
                     realized -= f
             last_close[p] = float(row["close"])
@@ -316,11 +427,12 @@ class FxEngine:
     benchmark_label = "Do nothing (keep the cash)"
 
     def __init__(self, bars: dict[str, pd.DataFrame], cot: pd.DataFrame | None, start: datetime, end: datetime,
-                 cash: float = 100.0, min_trades: int = 15):
+                 cash: float = 100.0, min_trades: int = 15, rates: pd.DataFrame | None = None):
         self.bars, self.cot, self.start, self.end, self.cash, self.min_trades = bars, cot, start, end, cash, min_trades
+        self.rates = rates
 
     def run(self, cfg: dict, start: datetime, end: datetime, cost: float = 1.0) -> bt.SimResult:
-        return simulate(cfg, self.bars, self.cot, start, end, self.cash, cost)
+        return simulate(cfg, self.bars, self.cot, start, end, self.cash, cost, self.rates)
 
     def benchmark(self, start: datetime, end: datetime) -> bt.SimResult:
         return bt.SimResult("benchmark", [(start, self.cash), (end, self.cash)])
@@ -339,28 +451,42 @@ class FxEngine:
 
 def load_engine(strategy: str, cfg: dict, years: int = 8, cache: str | None = None,
                 end: datetime | None = None) -> FxEngine:
-    """Downloads `years` of daily prices (plus a warm-up year for the averages) and, for Copycat FX, the
-    CFTC reports. The month in progress is left out."""
+    """Downloads `years` of daily prices (plus a warm-up year for the averages), the CFTC reports and each
+    country's central bank interest rate (for overnight financing and the carry rule). The month in progress
+    is left out."""
     import pickle
     from pathlib import Path
     now = datetime.now(timezone.utc)
     end = end or datetime(now.year, now.month, 1, tzinfo=timezone.utc)
     start = end.replace(year=end.year - years)
     if cache and Path(cache).exists():
-        bars, cot = pickle.loads(Path(cache).read_bytes())
+        bars, cot, *more = pickle.loads(Path(cache).read_bytes())
+        rates = more[0] if more else None
     else:
         bars = {p: fxdata.daily_prices(p, (start - timedelta(days=400)).date(), end.date())
                 for p in cfg["markets"]["pairs"]}
         cot = fxdata.fetch_cot((start - timedelta(days=60)).date())
+        try:
+            rates = fxdata.fetch_policy_rates((start - timedelta(days=800)).date())
+        except Exception as e:   # noqa: BLE001
+            if cfg["forex"]["style"] == "carry":
+                raise
+            log.warning("No interest rates (%s): charging a flat %s%% a year to hold trades", e, FINANCING_PCT)
+            rates = None
         if cache:
-            Path(cache).write_bytes(pickle.dumps((bars, cot)))
-    return FxEngine(bars, cot, start, end, min_trades=20 if cfg["forex"]["style"] == "trend" else 12)
+            Path(cache).write_bytes(pickle.dumps((bars, cot, rates)))
+    return FxEngine(bars, cot, start, end, min_trades=min_trades(cfg), rates=rates)
+
+
+def min_trades(cfg: dict) -> int:
+    """Trades needed on the unseen months to judge: the daily breakout trades often, the monthly rules less."""
+    return {"trend": 20, "cot": 12}.get(cfg["forex"]["style"], 10)
 
 
 # ---- the live run -------------------------------------------------------------------------------------------
 
 def run(cfg: dict, broker, store: Store, kill_switch: bool = False, dry_run: bool = False,
-        now: datetime | None = None, cot_source=None) -> RunResult:
+        now: datetime | None = None, cot_source=None, rates_source=None) -> RunResult:
     """One 30-minute check. Most checks only look at the account; the real work happens once a day, on the
     first check after the forex day closes (5pm New York)."""
     now = now or datetime.now(timezone.utc)
@@ -417,7 +543,14 @@ def run(cfg: dict, broker, store: Store, kill_switch: bool = False, dry_run: boo
         except Exception as e:   # the CFTC site can be slow; try again on the next check
             res.notes.append(f"Couldn't read the CFTC report ({e}). Will try again next run.")
             return _done(res, store, broker, equity, now, bars)
-    tables = tables_for(cfg, bars)
+    rates = None
+    if fx["style"] == "carry":
+        try:
+            rates = (rates_source or fxdata.fetch_policy_rates)((now - timedelta(days=800)).date())
+        except Exception as e:   # the BIS site can be slow; try again on the next check
+            res.notes.append(f"Couldn't read the central bank interest rates ({e}). Will try again next run.")
+            return _done(res, store, broker, equity, now, bars)
+    tables = tables_for(cfg, bars, rates)
     sig = signals_at(cfg, tables, {p: len(t) - 1 for p, t in tables.items()}, cot, now)
     fxinfo["report"] = next((s.info.get("report") for s in sig.values() if s.info.get("report")), None)
 
@@ -426,8 +559,7 @@ def run(cfg: dict, broker, store: Store, kill_switch: bool = False, dry_run: boo
         sg = sig.get(p)
         if not sg or not ((plan["direction"] > 0 and sg.exit_long) or (plan["direction"] < 0 and sg.exit_short)):
             continue
-        why = ("closed past its " + str(fx["exit_days"]) + "-day " + ("low" if plan["direction"] > 0 else "high")
-               if fx["style"] == "trend" else "the hedge funds' bet shrank or flipped")
+        why = exit_text(fx, plan["direction"])
         done = {"price": sg.price, "pl": pnl_usd(p, plan["direction"], plan["units"], plan["entry"], sg.price)}
         if not dry_run:
             done = broker.close_trade(plan["trade_id"])

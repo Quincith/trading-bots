@@ -236,7 +236,7 @@ def _forex_day(out: dict, runs: list[dict], store: Store, day: str, b: list[str]
     if reads:
         rep = reads[-1]["forex"].get("report")
         b.append(f"Read the hedge funds' weekly report (as of {rep}) and checked {len(pairs)} currency pairs." if cot else
-                 f"Checked {len(pairs)} currency pairs at the end of the forex day for breakouts.")
+                 f"Checked {len(pairs)} currency pairs at the end of the forex day.")
     else:
         b.append("No new forex day finished yet, so no new trade decisions (forex days end at 5pm New York time).")
     picks = [f"{short(p).replace('_', '/')} ({r['decision'].lower()})" for p, r in pairs.items() if r["decision"] != "WAIT"]

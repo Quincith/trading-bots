@@ -81,6 +81,37 @@ def cot_as_of(cot: pd.DataFrame, when: datetime) -> dict[str, dict]:
     return out
 
 
+# ---- central bank interest rates (BIS) -----------------------------------------------------------------
+
+BIS_URL = "https://stats.bis.org/api/v1/data/WS_CBPOL/D.{areas}/all"
+BIS_AREAS = {"US": "USD", "XM": "EUR", "GB": "GBP", "JP": "JPY", "AU": "AUD", "CA": "CAD", "CH": "CHF", "NZ": "NZD"}
+
+
+def fetch_policy_rates(since: date, session: requests.Session | None = None) -> pd.DataFrame:
+    """Each central bank's main interest rate, in %, one row per day (from the Bank for International
+    Settlements, free). Holding a currency that pays more interest than the one you borrowed earns the gap."""
+    import io
+    http = session or requests.Session()
+    r = http.get(BIS_URL.format(areas="+".join(BIS_AREAS)), timeout=60,
+                 params={"startPeriod": f"{since:%Y-%m-%d}", "format": "csv", "detail": "dataonly"})
+    r.raise_for_status()
+    return policy_frame(pd.read_csv(io.StringIO(r.text)))
+
+
+def policy_frame(raw: pd.DataFrame) -> pd.DataFrame:
+    cols = {c.upper(): c for c in raw.columns}
+    area, when, value = cols["REF_AREA"], cols["TIME_PERIOD"], cols["OBS_VALUE"]
+    df = raw[[area, when, value]].copy()
+    df["ccy"] = df[area].map(BIS_AREAS)
+    df["t"] = pd.to_datetime(df[when], utc=True)
+    out = df.dropna(subset=["ccy"]).pivot_table(index="t", columns="ccy", values=value, aggfunc="last")
+    out = out.sort_index().ffill()
+    missing = set(BIS_AREAS.values()) - set(out.columns)
+    if missing:
+        raise RuntimeError(f"BIS sent no interest rates for {', '.join(sorted(missing))}")
+    return out
+
+
 # ---- past prices (Dukascopy) ---------------------------------------------------------------------------
 
 DUKA = "https://datafeed.dukascopy.com/datafeed"

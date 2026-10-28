@@ -15,7 +15,7 @@ from pathlib import Path
 
 import yaml
 
-from . import recap, runlog
+from . import forex, recap, runlog
 from .store import Store
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -397,12 +397,7 @@ def forex_data(store: Store, cfg: dict, days: list[str], run_count: int, lv: dic
                days_back: int) -> dict:
     fx, rk = cfg["forex"], cfg["risk"]
     rules = (f"Rules for this office: trades 7 currency pairs on an OANDA practice account. "
-             + (f"Buys a pair when it closes above its {fx['entry_days']}-day high and is above its "
-                f"{fx['trend_ema_days']}-day average, sells it when it closes below its {fx['entry_days']}-day low "
-                f"below the average, and gets out at the opposite {fx['exit_days']}-day high or low. "
-                if fx["style"] == "trend" else
-                f"Copies hedge funds' currency bets from the CFTC's weekly report when their net bet is "
-                f"{fx['min_net_pct']:g}%+ of all contracts, and gets out when it flips. ")
+             + forex.rule_text(fx) + " "
              + f"Each trade risks about {rk['risk_per_trade_pct']}% of the account; leverage at most "
                f"{rk['max_total_exposure_pct'] / 100:g}:1. Decides once a day, after 5pm New York time.")
     return {

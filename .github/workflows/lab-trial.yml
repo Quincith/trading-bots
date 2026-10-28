@@ -38,54 +38,64 @@ jobs:
           for p in forex.PAIRS:
               df = fxdata.daily_prices(p, date(2017, 8, 1), date(2026, 10, 1))
               print(p, len(df), "days", df.index[0].date(), "to", df.index[-1].date(), flush=True)
+          r = fxdata.fetch_policy_rates(date(2016, 1, 1))
+          print(r.resample("YE").last().round(2).to_string())
           PY
       - uses: actions/cache/save@v4
         if: always()
         with:
           path: fxcache
           key: fxdata-${{ github.run_id }}-${{ github.run_attempt }}
-      - name: Forex (trend) check
-        run: python -m tradebots.lab --strategy forex --validate --cache fx.pkl --end $END
-      - name: Copycat FX check
-        run: python -m tradebots.lab --strategy fxcopy --validate --cache fx.pkl --end $END
-      - name: "For comparison: Copycat FX copying asset managers instead"
+      - name: "Second try, settings fixed in advance: 12-month momentum and the carry trade"
         run: |
           python - <<'PY'
           from datetime import datetime, timezone
           from tradebots import lab
-          cfg = lab.load_config("fxcopy"); cfg["forex"]["group"] = "asset_managers"
-          eng = lab.load_engine("fxcopy", 365, "fx.pkl", datetime(2026, 10, 1, tzinfo=timezone.utc))
-          print(lab.validate("fxcopy", eng, lab.Runner(eng), cfg)[1])
+          end = datetime(2026, 10, 1, tzinfo=timezone.utc)
+          ideas = {
+              "12-month momentum": {"style": "momentum", "momentum_days": 365, "atr_days": 20, "stop_atr_mult": 5.0},
+              "Carry trade": {"style": "carry", "carry_enter_pct": 1.0, "carry_exit_pct": 0.5, "atr_days": 20,
+                              "stop_atr_mult": 5.0},
+          }
+          for name, fx in ideas.items():
+              cfg = lab.load_config("forex"); cfg["forex"] = fx
+              eng = lab.load_engine("forex", 365, "fx.pkl", end)
+              print(f"\n\n######## {name}\n")
+              print(lab.validate("forex", eng, lab.Runner(eng), cfg)[1])
           PY
-      - name: "For comparison: Forex without the 200-day average filter"
+      - name: "First try again, now with real interest rates for overnight financing"
         run: |
           python - <<'PY'
           from datetime import datetime, timezone
           from tradebots import lab
-          cfg = lab.load_config("forex"); cfg["forex"]["trend_ema_days"] = 0
-          eng = lab.load_engine("forex", 365, "fx.pkl", datetime(2026, 10, 1, tzinfo=timezone.utc))
-          print(lab.validate("forex", eng, lab.Runner(eng), cfg)[1])
+          end = datetime(2026, 10, 1, tzinfo=timezone.utc)
+          for name in ("forex", "fxcopy"):
+              cfg = lab.load_config(name)
+              eng = lab.load_engine(name, 365, "fx.pkl", end)
+              v, text = lab.validate(name, eng, lab.Runner(eng), cfg)
+              print(text.split("## Checks")[0])
           PY
-      - name: "Where the losses come from: zero costs, by pair, by exit"
+      - name: "Where the results come from: zero costs, by pair, by exit"
         run: |
           python - <<'PY'
           from collections import defaultdict
           from datetime import datetime, timezone
           from tradebots import forex, lab
           end = datetime(2026, 10, 1, tzinfo=timezone.utc)
-          for name in ("forex", "fxcopy"):
-              cfg = lab.load_config(name)
-              eng = lab.load_engine(name, 365, "fx.pkl", end)
+          mom = {"style": "momentum", "momentum_days": 365, "atr_days": 20, "stop_atr_mult": 5.0}
+          carry = {"style": "carry", "carry_enter_pct": 1.0, "carry_exit_pct": 0.5, "atr_days": 20, "stop_atr_mult": 5.0}
+          for name, fx in (("momentum", mom), ("carry", carry)):
+              cfg = lab.load_config("forex"); cfg["forex"] = fx
+              eng = lab.load_engine("forex", 365, "fx.pkl", end)
               for cost in (0.0, 1.0):
-                  r = forex.simulate(cfg, eng.bars, eng.cot, eng.start, end, cost=cost)
+                  r = forex.simulate(cfg, eng.bars, eng.cot, eng.start, end, cost=cost, rates=eng.rates)
                   print(f"\n== {name} cost x{cost}: end ${r.equity[-1][1]:.2f}, fees ${r.fees:.2f}, trades {len(r.trades)}")
                   by_pair, by_exit = defaultdict(list), defaultdict(list)
                   for t in r.trades:
                       rr = t["pnl"] / max(t["equity_at_open"], 1e-9) * 100
                       by_pair[t["symbol"]].append(rr); by_exit[t["exit"].split(" ")[0]].append(rr)
                   for k, v in sorted(by_pair.items()):
-                      print(f"  {k:8s} n={len(v):3d} sum={sum(v):+6.1f}% avg={sum(v)/len(v):+.2f}% win={sum(x>0 for x in v)/len(v):.0%} best={max(v):+.1f}% worst={min(v):+.1f}%")
+                      print(f"  {k:8s} n={len(v):3d} sum={sum(v):+6.1f}% win={sum(x>0 for x in v)/len(v):.0%}")
                   for k, v in sorted(by_exit.items()):
                       print(f"  exit {k:10s} n={len(v):3d} sum={sum(v):+6.1f}%")
-              print("  first 5 trades:", [(t["symbol"], t["direction"], t["opened"][:10], t["closed"][:10], round(t["pnl"], 2), t["exit"]) for t in r.trades[:5]])
           PY

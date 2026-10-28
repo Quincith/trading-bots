@@ -189,3 +189,57 @@ def test_switched_off_office_does_not_trade(tmp_path, monkeypatch):
     assert FX["enabled"] is False and COPY["enabled"] is False
     assert cli.main(["run", "--strategy", "forex"]) == 0
     assert not broker.orders and not (tmp_path / "forex" / "summary.md").exists()
+
+
+MOM = {"style": "momentum", "momentum_days": 365, "atr_days": 20, "stop_atr_mult": 5.0}
+CARRY = {"style": "carry", "carry_enter_pct": 1.0, "carry_exit_pct": 0.5, "atr_days": 20, "stop_atr_mult": 5.0}
+
+
+def rates_frame():
+    raw = pd.DataFrame([{"REF_AREA": a, "TIME_PERIOD": d, "OBS_VALUE": v}
+                        for d in ("2020-01-01", "2025-01-01")
+                        for a, v in {"US": 2.0, "XM": 0.0, "GB": 1.0, "JP": -0.1, "AU": 4.0, "CA": 2.0,
+                                     "CH": -0.75, "NZ": 5.0}.items()])
+    return fxdata.policy_frame(raw)
+
+
+def test_momentum_rule_acts_only_on_the_first_day_of_a_month():
+    t = forex.momentum_table(daily(n=700, drift=0.001, seed=2), MOM)
+    first = t[t["new_month"]].iloc[-1]
+    s = forex.momentum_signal("EUR_USD", first, MOM)
+    assert first["mom"] > 0 and s.direction == 1 and not s.exit_long and s.exit_short
+    mid = t[~t["new_month"]].iloc[-1]
+    s2 = forex.momentum_signal("EUR_USD", mid, MOM)
+    assert s2.direction == 0 and not s2.exit_long and not s2.exit_short
+    # the first year has no 12-month change yet
+    assert t["mom"].iloc[:300].isna().all()
+
+
+def test_carry_rule_and_real_financing():
+    rates = rates_frame()
+    assert rates.loc[rates.index[-1], "NZD"] == 5.0
+    df = daily(n=400)
+    t = forex.tables_for({"forex": CARRY}, {"NZD_USD": df, "USD_JPY": df, "EUR_USD": df}, rates)
+    first = lambda p: t[p][t[p]["new_month"]].iloc[-1]
+    assert forex.carry_signal("NZD_USD", first("NZD_USD"), CARRY).direction == 1     # NZ pays 3 points more
+    assert forex.carry_signal("USD_JPY", first("USD_JPY"), CARRY).direction == 1     # US pays 2.1 more than Japan
+    s = forex.carry_signal("EUR_USD", first("EUR_USD"), CARRY)
+    assert s.direction == -1 and s.exit_long
+    # holding NZD/USD long earns 3 points a year, minus OANDA's ~2: we're paid about 1% a year
+    assert abs(forex.financing_pct(1, 3.0) - (-1.0)) < 1e-9 and forex.financing_pct(-1, 3.0) == 5.0
+    assert forex.financing_pct(1, float("nan")) == forex.FINANCING_PCT
+
+
+def test_slow_rules_simulate_and_validate():
+    bars = {p: daily(n=1500, seed=i + 10, start=150 if "JPY" in p else 1.1)
+            for i, p in enumerate(forex.PAIRS)}
+    start, end = datetime(2023, 1, 1, tzinfo=timezone.utc), datetime(2026, 10, 1, tzinfo=timezone.utc)
+    for fx in (MOM, CARRY):
+        cfg = {**FX, "forex": dict(fx)}
+        eng = forex.FxEngine(bars, None, start, end, rates=rates_frame())
+        r = eng.run(cfg, start, end)
+        assert r.fees > 0 and r.trades
+        # decided at the close of the first day of a month, filled at the next open
+        assert all(datetime.fromisoformat(t["opened"]).day == 2 for t in r.trades)
+        v, text = lab.validate("forex", eng, lab.Runner(eng, 1), cfg)
+        assert len(v.checks) == 7 and eng.min_trades == 10
