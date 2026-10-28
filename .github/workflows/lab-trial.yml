@@ -10,7 +10,7 @@ on:
 
 env:
   FX_CACHE_DIR: fxcache
-  END: "2026-01-01"
+  END: "2026-10-01"
   # once the OANDA practice key is saved, the test uses OANDA's own prices instead of Dukascopy's
   OANDA_API_TOKEN: ${{ secrets.OANDA_API_TOKEN }}
 
@@ -36,7 +36,7 @@ jobs:
           from datetime import date
           from tradebots import forex, fxdata
           for p in forex.PAIRS:
-              df = fxdata.daily_prices(p, date(2016, 11, 1), date(2026, 1, 1))
+              df = fxdata.daily_prices(p, date(2017, 8, 1), date(2026, 10, 1))
               print(p, len(df), "days", df.index[0].date(), "to", df.index[-1].date(), flush=True)
           PY
       - uses: actions/cache/save@v4
@@ -54,7 +54,7 @@ jobs:
           from datetime import datetime, timezone
           from tradebots import lab
           cfg = lab.load_config("fxcopy"); cfg["forex"]["group"] = "asset_managers"
-          eng = lab.load_engine("fxcopy", 365, "fx.pkl", datetime(2026, 1, 1, tzinfo=timezone.utc))
+          eng = lab.load_engine("fxcopy", 365, "fx.pkl", datetime(2026, 10, 1, tzinfo=timezone.utc))
           print(lab.validate("fxcopy", eng, lab.Runner(eng), cfg)[1])
           PY
       - name: "For comparison: Forex without the 200-day average filter"
@@ -63,6 +63,6 @@ jobs:
           from datetime import datetime, timezone
           from tradebots import lab
           cfg = lab.load_config("forex"); cfg["forex"]["trend_ema_days"] = 0
-          eng = lab.load_engine("forex", 365, "fx.pkl", datetime(2026, 1, 1, tzinfo=timezone.utc))
+          eng = lab.load_engine("forex", 365, "fx.pkl", datetime(2026, 10, 1, tzinfo=timezone.utc))
           print(lab.validate("forex", eng, lab.Runner(eng), cfg)[1])
           PY
