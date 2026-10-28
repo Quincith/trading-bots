@@ -126,6 +126,16 @@ ORB_KNOBS = [
     Knob("forex.max_cost_pct", 5, 30, 2.5, "Skip days when fees would be more than this % of the risk (0 = off)", 0),
 ]
 FOREX_STRATEGIES = ("forex", "fxcopy")
+# The bold rules (hunt.py) tested with an account's loss limits in place of its AI bots.
+HUNT_KNOBS = {
+    "lev_trend": [Knob("hunt.sma_days", 100, 300, 25, "Hold the 3x fund while the index is above its N-day average")],
+    "lev_dip": [Knob("hunt.rsi_entry", 5, 30, 5, "Buy when the 2-day momentum score (RSI) closes under this"),
+                Knob("hunt.exit_sma_days", 3, 10, 1, "Sell when the index closes above its N-day average"),
+                Knob("hunt.trend_days", 100, 300, 25, "Only buy while the index is above its N-day average")],
+    "multi_trend": [Knob("hunt.lookback_days", 126, 378, 21, "Hold a market's leveraged fund if it rose over this many trading days")],
+    "crypto_rotation": [Knob("hunt.lookback_days", 7, 84, 7, "Pick the coin that rose most over this many days"),
+                        Knob("hunt.btc_sma_days", 70, 280, 35, "Only hold a coin while Bitcoin is above its N-day average")],
+}
 # The playbook rules (playbook.py) that Aggressive and Medium can be tested with in place of Scout & co.
 PLAYBOOK_KNOBS = {
     "trend": [Knob("playbook.fast_days", 20, 100, 10, "Fast average: this many days"),
@@ -153,6 +163,8 @@ def knobs_for(strategy: str, cfg: dict | None = None) -> list[Knob]:
                 "orb": ORB_KNOBS}[style]
     if cfg and cfg.get("playbook"):
         return PLAYBOOK_KNOBS[cfg["playbook"]["style"]]
+    if cfg and cfg.get("hunt"):
+        return HUNT_KNOBS[cfg["hunt"]["style"]]
     return {"copycat": COPYCAT_KNOBS}.get(strategy, CRYPTO_KNOBS)
 
 

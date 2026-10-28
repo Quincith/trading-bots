@@ -246,6 +246,47 @@ def copycat_stations(run: dict | None, cfg: dict) -> dict:
     return s
 
 
+# The leveraged trend accounts use the same six rooms for one plain rule.
+TREND_JOBS = {
+    "scout": "Checks once a day whether the Nasdaq 100 (QQQ) closed above its 200-day average price.",
+    "charts": "Keeps the fund's price and the trend line on screen.",
+    "news": "Not needed: this rule reads only prices, no news.",
+    "sentiment": "Not needed: this rule reads only prices, no mood scores.",
+    "risk": "The safety officer. Plain rules, no AI. Blocks new buys after a big losing day or total loss.",
+    "decision": "Plain rule: uptrend means the whole account in the fund, no uptrend means cash.",
+}
+
+
+def trend_stations(run: dict | None, cfg: dict) -> dict:
+    """What each bot says in an office running the leveraged trend rule."""
+    s = {k: {"status": "idle", "say": "", "detail": []} for k, *_ in CREW}
+    if not run:
+        for k in s:
+            s[k]["say"] = "Waiting for the first run."
+        return s
+    t = cfg["trend"]
+    rule = next((n for n in run["notes"] if n.startswith(t["signal"])), "")
+    held = [p for p in run["positions"] if p["symbol"] == t["hold"]]
+    s["scout"].update(status="found" if "Uptrend" in rule else "working", say=rule or "No prices yet.")
+    s["charts"].update(status="working", say=(f"Holding {t['hold']} worth {price(held[0]['market_value'])}."
+                                              if held else f"Not holding {t['hold']} right now."))
+    for k in ("news", "sentiment"):
+        s[k]["say"] = TREND_JOBS[k]
+    lim = cfg["risk"]
+    rk = s["risk"]
+    if run["gate"] and run["gate"] != "ok":
+        rk["status"], rk["say"] = "blocked", f"New buys paused. {run['gate']}"
+    else:
+        rk["status"] = "working"
+        rk["say"] = (f"Limits clear. New buys stop after a {lim['max_daily_loss_pct']}% losing day; the account halts "
+                     f"at -{lim['max_total_loss_pct']}% of the money put in.")
+    de = s["decision"]
+    de["status"] = "buy" if run["buys"] else "working"
+    de["say"] = (run["buys"] + run["exits"] + [f"Hold {t['hold']}." if held else "Hold cash."])[0]
+    de["detail"] = run["buys"] + run["exits"] + [n for n in run["notes"] if n != rule]
+    return s
+
+
 def forex_stations(run: dict | None, cfg: dict) -> dict:
     """What each bot says in a Forex wing office."""
     s = {k: {"status": "idle", "say": "", "detail": []} for k in FOREX_IDS}
@@ -371,25 +412,31 @@ def strategy_data(store: Store, cfg: dict, days_back: int = 7) -> dict:
         if runs:
             latest = runs[-1]
             break
-    copy = "copycat" in cfg
+    copy, trend = "copycat" in cfg, "trend" in cfg
     if "forex" in cfg:
         return forex_data(store, cfg, days, run_count, lv, latest, days_back)
     return {
         "name": cfg["name"],
-        "crew": [{"id": k, "name": n, "job": COPYCAT_JOBS[k]} for k, n, _ in CREW] if copy else None,
+        **({"title": cfg.get("title", cfg["name"].title())} if trend else {}),
+        "crew": ([{"id": k, "name": n, "job": COPYCAT_JOBS[k]} for k, n, _ in CREW] if copy else
+                 [{"id": k, "name": n, "job": TREND_JOBS[k]} for k, n, _ in CREW] if trend else None),
         "rules": (f"Rules for this account: copies company insiders who bought at least "
                   f"${cfg['copycat']['min_buy_usd']:,} of their own stock in the last "
                   f"{cfg['copycat']['max_signal_age_days']} days, skips it if the price already rose "
                   f"{cfg['copycat']['max_chase_pct']}%+, puts at most {cfg['risk']['max_position_pct']}% of the "
                   f"account in one stock, holds up to {cfg['exits']['max_hold_hours'] // 24} days. "
-                  f"Stocks only trade on weekdays, 9:30am to 4pm New York time.") if copy else None,
+                  f"Stocks only trade on weekdays, 9:30am to 4pm New York time.") if copy else
+                 (f"Rules for this account: the whole account in {cfg['trend']['hold']} while the Nasdaq 100 (QQQ) "
+                  f"closed above its {cfg['trend']['sma_days']}-day average, otherwise cash. Trades only while the "
+                  "stock market is open (weekdays, 9:30am to 4pm New York time).") if trend else None,
         "limits": {k: cfg["risk"][k] for k in ("max_daily_loss_pct", "max_total_loss_pct", "risk_per_trade_pct")},
         "scan_every": cfg["scout"]["scan_every_minutes"],
         "min_confidence": cfg["decision"]["min_confidence"],
         "max_hold_hours": cfg["exits"]["max_hold_hours"],
         "performance": store.performance(),
         "latest": latest,
-        "stations": copycat_stations(latest, cfg) if copy else stations(latest, cfg),
+        "stations": (copycat_stations(latest, cfg) if copy else trend_stations(latest, cfg) if trend
+                     else stations(latest, cfg)),
         "captain": captain(latest, cfg["name"]),
         "runs": run_count,
         "levels": lv,

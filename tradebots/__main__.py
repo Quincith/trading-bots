@@ -18,7 +18,7 @@ from pathlib import Path
 
 import yaml
 
-from . import copycat, forex, lab, pipeline, report, sec, weekly
+from . import copycat, forex, hunt, lab, pipeline, report, sec, weekly
 from .ai import AI
 from .alpaca import AlpacaPaper
 from .oanda import OandaPractice
@@ -126,7 +126,9 @@ def main(argv: list[str] | None = None) -> int:
         runlog.save(res, store, dry)
         write_summary(text)
         return 0
-    if "copycat" in cfg:
+    if "trend" in cfg:
+        res = hunt.run_live(cfg, broker, store, kill_switch=halted, dry_run=dry, now=now)
+    elif "copycat" in cfg:
         res = copycat.run(cfg, broker, store, kill_switch=halted, dry_run=dry, now=now)
     else:
         ai = AI(cfg["ai"]["model"], cfg["ai"].get("effort", "low"))

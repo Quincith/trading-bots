@@ -7,6 +7,18 @@ name: aggressive
 alpaca_key_secret: ALPACA_AGGRESSIVE_KEY_ID
 alpaca_secret_secret: ALPACA_AGGRESSIVE_SECRET_KEY
 
+title: Leveraged Nasdaq trend (TQQQ 3x)
+# Since 2026-10-28 this account runs the trend rule from the bold strategy hunt (tradebots/hunt.py) instead of the
+# six AI bots: hold TQQQ (a fund that moves 3x the Nasdaq 100 each day) with the whole account while QQQ (the
+# Nasdaq 100) closed above its 200-day average, otherwise hold cash. Checked every run, traded while the
+# stock market is open. Delete this "trend" section to bring the AI crypto bots back (their settings are below).
+trend:
+  style: lev_trend
+  signal: QQQ
+  hold: TQQQ
+  sma_days: 200
+  invest_pct: 98   # keep 2% in cash so the buy always fits
+
 markets:
   crypto: [BTC/USD, ETH/USD, SOL/USD, AVAX/USD, LINK/USD, DOGE/USD, LTC/USD, XRP/USD]
   # Add stock tickers here to trade stocks too (only during market hours), e.g. [NVDA, AMD, TSLA]
@@ -57,7 +69,8 @@ risk:
   max_correlated_positions: 2   # reject if 2 held positions already move with it
   # Loss limits confirmed by Quincy on 2026-10-24
   max_daily_loss_pct: 10    # stop opening trades for the day after losing 10% today
-  max_total_loss_pct: 40    # halt the strategy if it is down 40% from money put in
+  max_total_loss_pct: 65    # halt the strategy if it is down 65% from money put in. Raised for the
+                            # TQQQ trend rule (Quincy's choice, 2026-10-28): its worst past drop was 58%
   min_order_usd: 2
 
 decision:

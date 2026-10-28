@@ -67,7 +67,7 @@ def test_account_gate_limits():
     cfg = MED["risk"]
     assert risk.account_gate(100, 100, 100, True, None, cfg).allowed is False
     assert risk.account_gate(96, 100, 100, False, None, cfg).allowed is False          # -4% today
-    g = risk.account_gate(84, 84, 100, False, None, cfg)                                # -16% total
+    g = risk.account_gate(49, 49, 100, False, None, cfg)                                # -51% total (limit 50%)
     assert not g.allowed and g.halt_strategy
     assert risk.account_gate(99, 100, 100, False, None, cfg).allowed
 
