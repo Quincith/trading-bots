@@ -20,7 +20,14 @@ daily loss limit. Costs: at least OANDA's usual gold spread (35 cents an ounce, 
 bigger) plus 10 cents of slip on every fill, and 4% a year of the trade's size to hold it overnight.
 
 The settings in `RULES` were fixed before any test ran, not tuned on these years. `simulate` is the lab
-replay only: there is no live gold trading code yet.
+replay only: there is no live gold trading code.
+
+Result (2026-10-28, OANDA 30-minute prices Oct 2018 to Oct 2026, $100 start): both versions FAILED the lab.
+The plain bounce ended at $74.98 (unseen months -7.5%) and the uptrend version at $79.32 (unseen -1.2%), with
+worst drops of 28% and 26%. Before costs they made +75% and +27%: the spread and slip on ~300 trades a year ate
+it. Holding gold made +249%. Also, OANDA's US practice accounts don't offer gold at all (no metals in the FX
+COPY account's 68 instruments), so this couldn't run there even if it had passed.
+Run it again with `python -m tradebots.gold --cache gold.pkl` (needs OANDA_API_TOKEN).
 """
 from __future__ import annotations
 
