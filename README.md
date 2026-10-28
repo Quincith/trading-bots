@@ -150,6 +150,8 @@ BIS, plus about 2% a year that OANDA keeps). It's compared with **doing nothing*
 | Carry trade (`style: carry`) | $94 | +0.7% | lost on the study years and with double fees; only 5 trades to judge |
 | Opening Range Breakout, London open (`style: orb`, 5-minute prices) | $33 | -35% | **made money before fees ($212)**, but ~8,400 trades paid the spread each time |
 | Opening Range Breakout, New York open | $24 | -53% | same: $157 before fees |
+| ORB London + fee filter (`max_cost_pct: 10`, skip narrow days) | **$109** | **+3.0%** | closest so far: passed 5 of 7 checks, but lost with double fees and one nearby setting |
+| ORB New York + fee filter | $93 | -4.7% | still loses |
 
 The last two were a second try with their textbook settings fixed before the test, so the lab couldn't fish
 for a lucky result.
