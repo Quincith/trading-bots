@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 09:29 UTC
+# Aggressive strategy — 2026-10-28 09:59 UTC
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## News radar (trends forming)
 
-Read 77 headlines from the last day (Alpaca/Benzinga 20, crypto news sites 57, CoinGecko trending 15).
+Read 79 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 57, CoinGecko trending 15).
 
 - **Coinbase and Bithumb data breaches**: Exchange security incidents in the last hours; watch for user outflows, though funds reportedly safe. (BTC, ETH)
 - **Fed decision and BTC price levels**: Traders are positioning around the FOMC rate decision; a surprise could move the whole market. (BTC, ETH, XRP, DOGE)
@@ -17,9 +17,8 @@ Read 77 headlines from the last day (Alpaca/Benzinga 20, crypto news sites 57, C
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| BTC | +0.20 | 5 (0.76x usual) | Bitcoin ETF inflows reported and price reclaimed $80K, but mostly price recap and the Fed event is uncertain. |
+| BTC | +0.20 | 7 (1.09x usual) | Bitcoin ETF inflows reported and price reclaimed $80K, but mostly price recap and the Fed event is uncertain. |
 | XRP | +0.10 | 1 (0.5x usual) | Ripple and Robinhood stablecoin news is real but mostly repeated; small positive tilt. |
-| SOL | +0.00 | 0 (0.0x usual) | No recent Solana headlines; nothing new building. |
 | DOGE | +0.00 | 0 (0.0x usual) | Only generic price mentions; no fresh catalyst despite high search interest. |
 
 Also trending, but not in our coin list: PEPE.
@@ -29,4 +28,4 @@ Also trending, but not in our coin list: PEPE.
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_

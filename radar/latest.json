@@ -1,18 +1,18 @@
 {
- "time": "2026-10-28T09:29:42+00:00",
+ "time": "2026-10-28T09:59:45+00:00",
  "coins": {
   "BTC": {
-   "recent": 5,
-   "before": 33,
-   "buzz": 0.76,
+   "recent": 7,
+   "before": 32,
+   "buzz": 1.09,
    "tone": 1,
    "headlines": [
-    "Scott Bessent Has a New Strategy to Keep the Dollar on Top: \u2018Win in the Digital Asset Stack\u2019",
-    "'The Best Prediction Markets Experience': Vlad Tenev Wants Robinhood Users to Have 'Choices' Too",
-    "Bitcoin has soared 50% on average after midterms. The S&P 500 has gained 15%."
+    "Will Coinbase Break Its Losing Streak in Q3? Crypto Bettors Weigh Odds as COIN Sends Mixed Signals Before Key Earnings",
+    "Stock Market Today: S&P 500, Dow Jones Futures Trade Mixed Ahead of Federal Reserve Interest Rate Decision \u2014 SKHY, STX, V, GOOGL in Focus",
+    "Scott Bessent Has a New Strategy to Keep the Dollar on Top: \u2018Win in the Digital Asset Stack\u2019"
    ],
-   "trending": 5,
-   "rule_score": 0.2,
+   "trending": 1,
+   "rule_score": 0.42,
    "score": 0.2,
    "note": "Bitcoin ETF inflows reported and price reclaimed $80K, but mostly price recap and the Fed event is uncertain."
   },
@@ -33,8 +33,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 14,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "No recent Solana headlines; nothing new building."
   },
@@ -66,7 +66,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 4,
+   "trending": 3,
    "rule_score": 0.3,
    "score": 0.0,
    "note": "Only generic price mentions; no fresh catalyst despite high search interest."
@@ -126,9 +126,9 @@
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 77,
+ "headlines": 79,
  "sources": {
-  "Alpaca/Benzinga": 20,
+  "Alpaca/Benzinga": 22,
   "crypto news sites": 57,
   "CoinGecko trending": 15
  },
