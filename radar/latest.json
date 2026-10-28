@@ -1,42 +1,46 @@
 {
- "time": "2026-10-28T10:59:56+00:00",
+ "time": "2026-10-28T11:30:04+00:00",
  "coins": {
   "BTC": {
-   "recent": 6,
+   "recent": 7,
    "before": 32,
-   "buzz": 0.94,
+   "buzz": 1.09,
    "tone": 1,
    "headlines": [
     "Will Coinbase Break Its Losing Streak in Q3? Crypto Bettors Weigh Odds as COIN Sends Mixed Signals Before Key Earnings",
     "Stock Market Today: S&P 500, Dow Jones Futures Trade Mixed Ahead of Federal Reserve Interest Rate Decision \u2014 SKHY, STX, V, GOOGL in Focus",
     "Scott Bessent Has a New Strategy to Keep the Dollar on Top: \u2018Win in the Digital Asset Stack\u2019"
    ],
-   "trending": 3,
-   "rule_score": 0.39,
-   "score": 0.1,
-   "note": "ETF inflows and institutional tokenization news help, but many headlines are price recaps and Fed risk looms."
+   "trending": 5,
+   "rule_score": 0.27,
+   "score": 0.2,
+   "note": "Buzz is near normal and ETF inflows are returning, but most headlines are price recaps; mild positive."
   },
   "ETH": {
-   "recent": 0,
+   "recent": 1,
    "before": 7,
-   "buzz": 0.0,
+   "buzz": 0.71,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Google to preview crypto custody security system as AI threats grow"
+   ],
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent ETH-specific headlines; mentions are only price recaps."
+   "note": "Only one headline and low buzz; nothing new building."
   },
   "SOL": {
-   "recent": 0,
+   "recent": 1,
    "before": 4,
-   "buzz": 0.0,
+   "buzz": 1.25,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Mirae Asset Securities issues tokenized notes on Solana"
+   ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.0,
-   "note": "No recent Solana headlines; nothing new building."
+   "score": 0.3,
+   "note": "Mirae Asset tokenized notes on Solana is a real institutional adoption item, with buzz above normal."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent Avalanche headlines; nothing new building."
+   "note": "No headlines in the recent window; nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -58,7 +62,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent Chainlink headlines; nothing new building."
+   "note": "No headlines in the recent window; nothing new."
   },
   "DOGE": {
    "recent": 0,
@@ -69,7 +73,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "Only price-recap mentions; no real new catalyst."
+   "note": "No headlines in the recent window; only passing price mentions."
   },
   "LTC": {
    "recent": 0,
@@ -80,7 +84,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent Litecoin headlines; nothing new building."
+   "note": "No headlines in the recent window; nothing new."
   },
   "XRP": {
    "recent": 1,
@@ -92,45 +96,43 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.3,
-   "note": "Robinhood and BNY partnerships around Ripple's RLUSD are real institutional news, though buzz is still low."
+   "score": 0.1,
+   "note": "Ripple and Robinhood RLUSD partnership is real news, but it is older and buzz is low."
   }
  },
  "themes": [
   {
-   "title": "Coinbase customer data breach via vendor",
-   "note": "Negative headlines about exposed customer data at Coinbase; funds reported safe, so impact is mainly sentiment for COIN-linked trading.",
+   "title": "Tokenization and institutional rails",
+   "note": "Banks and firms keep launching tokenized assets on Solana, Stellar and others; supportive for SOL, XLM-type networks, and maybe LINK.",
+   "coins": [
+    "SOL",
+    "LINK"
+   ]
+  },
+  {
+   "title": "Exchange and custody security breaches",
+   "note": "Bithumb hack, Coinbase vendor data leak and Keystone device issues are fresh; they weigh on trust in exchanges and COIN-linked sentiment.",
    "coins": [
     "BTC",
     "ETH"
    ]
   },
   {
-   "title": "Bitcoin rebound and Fed-decision anticipation",
-   "note": "BTC recovering above $80K with ETF inflows ahead of FOMC; many headlines are price recaps, so signal is weak.",
+   "title": "Pre-Fed bitcoin rebound",
+   "note": "BTC reclaiming $80K-$81K into the Fed decision with ETF inflows; mostly a price move, but buzz is elevated.",
    "coins": [
-    "BTC",
-    "ETH",
-    "XRP",
-    "DOGE"
-   ]
-  },
-  {
-   "title": "Ripple RLUSD partnerships expanding",
-   "note": "Ripple stablecoin deals with Robinhood and BNY are real institutional news that could support XRP.",
-   "coins": [
-    "XRP"
+    "BTC"
    ]
   }
  ],
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 80,
+ "headlines": 82,
  "sources": {
   "Alpaca/Benzinga": 21,
-  "crypto news sites": 59,
+  "crypto news sites": 61,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T10:30:03+00:00"
+ "ai_time": "2026-10-28T11:30:04+00:00"
 }
