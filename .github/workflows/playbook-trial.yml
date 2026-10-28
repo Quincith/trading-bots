@@ -1,0 +1,47 @@
+name: Playbook trial (temporary)
+
+# Temporary: runs the five textbook kinds of trading (playbook.py) through the lab on Alpaca's past crypto
+# prices, for Aggressive and Medium. It saves nothing to the repo and opens no pull requests or issues.
+# Removed before merge.
+on:
+  push:
+    branches: [claude/project-thread-cyjxg9]
+    paths: [".github/workflows/playbook-trial.yml", "tradebots/playbook.py"]
+
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      ALPACA_MEDIUM_KEY_ID: ${{ secrets.ALPACA_MEDIUM_KEY_ID }}
+      ALPACA_MEDIUM_SECRET_KEY: ${{ secrets.ALPACA_MEDIUM_SECRET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/cache/restore@v4
+        with:
+          path: pb.pkl
+          key: playbook-2021-10-to-2026-10-v1
+      - name: Download 5 years of prices (once, then cached)
+        run: |
+          python - <<'PY'
+          from datetime import datetime, timezone
+          from tradebots import playbook
+          e = playbook.load_engine(5, "pb.pkl", datetime(2026, 10, 1, tzinfo=timezone.utc))
+          for tf, d in e.bars.items():
+              for s, df in d.items():
+                  print(tf, s, len(df), "candles", df.index[0], "to", df.index[-1])
+          PY
+      - uses: actions/cache/save@v4
+        with:
+          path: pb.pkl
+          key: playbook-2021-10-to-2026-10-v1
+        continue-on-error: true
+      - name: Run all five rules for both accounts
+        run: |
+          python -m tradebots.playbook --cache pb.pkl --end 2026-10-01 --out report.md
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
