@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 16:00 UTC
+# Aggressive strategy — 2026-10-28 16:30 UTC
 
 | | |
 |---|---|
@@ -9,24 +9,23 @@
 
 ## News radar (trends forming)
 
-Read 80 headlines from the last day (Alpaca/Benzinga 21, crypto news sites 59, CoinGecko trending 15).
+Read 83 headlines from the last day (Alpaca/Benzinga 21, crypto news sites 62, CoinGecko trending 15).
 
-- **Ripple/XRP institutional push**: Ripple stablecoin RLUSD gets Moody's rating, Robinhood partnership, and XRP Ledger zero-balance wallet idea; XRP buzz is 2.5x normal. (XRP)
-- **Tokenization of traditional assets**: DTCC launches tokenization services and Securitize adds Stellar; Mirae issues tokenized notes on Solana, a possible tailwind for SOL and chain infrastructure. (SOL, XRP, BTC, ETH)
-- **Bitcoin rebound ahead of Fed decision**: BTC buzz is 1.82x with ETF inflows and rebound above $80K, but much is price recap and the Fed event is a macro risk. (BTC, ETH, SOL, XRP, DOGE)
+- **Institutional tokenization and custody build-out**: Big banks and DTCC are moving toward blockchain settlement, which could help the infrastructure and tokenized-asset coins. (LINK, SOL, ETH)
+- **Ripple stablecoin and bank approvals**: RLUSD gained OCC approval and an A2 rating, which could support XRP sentiment, though XRP buzz is only normal. (XRP)
+- **Fed decision and Bitcoin ETF flows**: BTC buzz is nearly double normal around the Fed decision, with ETF inflows returning; the outcome could move it sharply either way. (BTC, ETH, SOL, DOGE)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.35 | 4 (2.22x usual) | Ripple stablecoin rating and Robinhood deal plus XRP Ledger proposal; buzz 2.5x supports a positive lean. |
-| BTC | +0.20 | 9 (1.96x usual) | Heavy buzz and ETF inflows, but mostly price recaps and Fed-day macro noise; modest positive. |
-| SOL | +0.15 | 2 (2.5x usual) | Mirae tokenized notes on Solana is a real, though small, new adoption signal. |
-| ETH | +0.05 | 2 (2.0x usual) | Little new ETH-specific news; mostly moves with market and tokenization trend. |
-
-Also trending, but not in our coin list: PEPE.
+| BTC | +0.30 | 9 (1.88x usual) | Heavy buzz and ETF inflows returning, but much is Fed-driven and some is price recap. |
+| SOL | +0.30 | 2 (2.5x usual) | Mirae tokenized notes on Solana and rising buzz; a real but modest adoption signal. |
+| XRP | +0.30 | 2 (0.91x usual) | RLUSD gaining bank approvals and rating; buzz is normal, so not yet a loud signal. |
+| ETH | +0.20 | 2 (2.0x usual) | Mild positive from tokenization news and bank adoption, but few direct Ethereum headlines. |
+| LINK | +0.10 | 0 (0.0x usual) | DTCC and custody news may help oracle demand, but no direct Chainlink headlines. |
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
