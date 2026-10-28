@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 13:30 UTC
+# Aggressive strategy — 2026-10-28 14:00 UTC
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## News radar (trends forming)
 
-Read 80 headlines from the last day (Alpaca/Benzinga 21, crypto news sites 59, CoinGecko trending 15).
+Read 79 headlines from the last day (Alpaca/Benzinga 19, crypto news sites 60, CoinGecko trending 15).
 
 - **Tokenization of traditional assets gaining institutional momentum**: DTCC, Securitize, Mirae and banks are moving real assets onto blockchains; a slow but real build. (ETH, SOL, XRP, LINK)
 - **Ripple RLUSD stablecoin expansion and XRP Ledger payment ideas**: Fresh Moody's rating, Robinhood partnership and XRP Ledger wallet proposal add positive XRP news. (XRP)
@@ -19,8 +19,8 @@ Read 80 headlines from the last day (Alpaca/Benzinga 21, crypto news sites 59, C
 |---|---|---|---|
 | XRP | +0.50 | 4 (2.22x usual) | Moody's rating of Ripple's RLUSD and Robinhood partnership are real positive catalysts; buzz 2.2x. |
 | SOL | +0.30 | 2 (3.33x usual) | Mirae tokenized notes on Solana plus buzz at 3.3x; a real institutional use case. |
-| BTC | +0.20 | 7 (1.52x usual) | Bitcoin ETF inflows rising and Morgan Stanley says correction mostly over; still mostly price-driven chatter. |
-| ETH | +0.20 | 2 (1.67x usual) | Tokenization headlines favor Ethereum-style chains; buzz is up but few fresh headlines. |
+| BTC | +0.20 | 7 (1.59x usual) | Bitcoin ETF inflows rising and Morgan Stanley says correction mostly over; still mostly price-driven chatter. |
+| ETH | +0.20 | 2 (2.5x usual) | Tokenization headlines favor Ethereum-style chains; buzz is up but few fresh headlines. |
 
 Also trending, but not in our coin list: PEPE.
 
@@ -29,4 +29,4 @@ Also trending, but not in our coin list: PEPE.
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_

@@ -1,32 +1,32 @@
 {
- "time": "2026-10-28T13:30:13+00:00",
+ "time": "2026-10-28T14:00:18+00:00",
  "coins": {
   "BTC": {
    "recent": 7,
-   "before": 23,
-   "buzz": 1.52,
-   "tone": 0,
+   "before": 22,
+   "buzz": 1.59,
+   "tone": -1,
    "headlines": [
     "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
     "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain Ahead of Federal Reserve Interest Rate Decision\u2014 SKHY, STX, V, GOOGL in Focus (UPDATED)",
     "Bitcoin Undervalued at $80,000? Expert Says It's 'Climbing Wall of Worry'"
    ],
-   "trending": 3,
-   "rule_score": 0.4,
+   "trending": 6,
+   "rule_score": 0.17,
    "score": 0.2,
    "note": "Bitcoin ETF inflows rising and Morgan Stanley says correction mostly over; still mostly price-driven chatter."
   },
   "ETH": {
    "recent": 2,
-   "before": 6,
-   "buzz": 1.67,
+   "before": 4,
+   "buzz": 2.5,
    "tone": 0,
    "headlines": [
     "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
     "Google to preview crypto custody security system as AI threats grow"
    ],
    "trending": null,
-   "rule_score": 0.13,
+   "rule_score": 0.3,
    "score": 0.2,
    "note": "Tokenization headlines favor Ethereum-style chains; buzz is up but few fresh headlines."
   },
@@ -137,10 +137,10 @@
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 80,
+ "headlines": 79,
  "sources": {
-  "Alpaca/Benzinga": 21,
-  "crypto news sites": 59,
+  "Alpaca/Benzinga": 19,
+  "crypto news sites": 60,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-28T13:30:13+00:00"
