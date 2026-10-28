@@ -30,19 +30,19 @@ Watchful day. Scout flagged some moves, but none met the bar for a trade. The ac
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.20 (+0.20%)
+## Copycat: up $0.11 (+0.11%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.20 (+0.20%) at $100.10. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.11 (+0.11%) at $100.01. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.90 → $100.10 (+$0.20, +0.20%).
-- Profit / loss since start: +$0.10 on $100.00 money put in.
+- Account value: $99.90 → $100.01 (+$0.11, +0.11%).
+- Profit / loss since start: +$0.01 on $100.00 money put in.
 - Spotter read 33 insider filings from the SEC and found 1 insider purchases. Watchlist at day end: 21 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 3 insiders bought $1,771,951 at about $15.38: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.90 (-$0.04 unrealized); CHCO $19.51 (-$0.48 unrealized); MSM $20.18 (+$0.19 unrealized); NBIS $20.45 (+$0.57 unrealized); STC $19.77 (-$0.14 unrealized).
+- Holding: BBT $19.90 (-$0.04 unrealized); CHCO $19.51 (-$0.48 unrealized); MSM $20.18 (+$0.19 unrealized); NBIS $20.36 (+$0.48 unrealized); STC $19.77 (-$0.14 unrealized).
 
 ## Words to know
 
