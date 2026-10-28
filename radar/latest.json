@@ -1,48 +1,46 @@
 {
- "time": "2026-10-28T17:00:29+00:00",
+ "time": "2026-10-28T17:30:35+00:00",
  "coins": {
   "BTC": {
    "recent": 10,
    "before": 23,
    "buzz": 2.17,
-   "tone": -1,
+   "tone": 0,
    "headlines": [
+    "Bitwise Predicts Bitcoin Could Hit $1.6 Million by 2036 as Four-Year Cycle Fades",
     "SK Hynix, Vertiv Rescue AI Trade As Oil Tops $102 Before Fed: Stock Market Today",
-    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground",
-    "Microsoft And Google Face Monetization Test Amid Expected Fed Pause\u2014 Seagate And Oil Cloud AI Trade"
+    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground"
    ],
    "trending": 0,
-   "rule_score": 0.43,
-   "score": 0.3,
-   "note": "Heavy buzz and ETF inflows returning, but much is Fed-driven and some is price recap."
+   "rule_score": 0.53,
+   "score": 0.1,
+   "note": "Buzz is 2.2x normal, but much is recap and ETF inflow news; mild positive, Fed outcome unclear."
   },
   "ETH": {
-   "recent": 2,
-   "before": 4,
-   "buzz": 2.5,
+   "recent": 1,
+   "before": 5,
+   "buzz": 1.0,
    "tone": 0,
    "headlines": [
-    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground",
-    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims"
+    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground"
    ],
    "trending": null,
-   "rule_score": 0.3,
-   "score": 0.2,
-   "note": "Mild positive from tokenization news and bank adoption, but few direct Ethereum headlines."
+   "rule_score": 0.0,
+   "score": 0.0,
+   "note": "Only one headline and no buzz spike; nothing new building."
   },
   "SOL": {
-   "recent": 2,
-   "before": 3,
-   "buzz": 3.33,
+   "recent": 1,
+   "before": 4,
+   "buzz": 1.25,
    "tone": 0,
    "headlines": [
-    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground",
-    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims"
+    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground"
    ],
-   "trending": null,
-   "rule_score": 0.47,
-   "score": 0.3,
-   "note": "Mirae tokenized notes on Solana and rising buzz; a real but modest adoption signal."
+   "trending": 4,
+   "rule_score": 0.3,
+   "score": 0.1,
+   "note": "Mirae tokenized notes on Solana is a real but small institutional adoption story."
   },
   "AVAX": {
    "recent": 0,
@@ -53,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No headlines or buzz; nothing new building."
   },
   "LINK": {
    "recent": 0,
@@ -63,8 +61,8 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.1,
-   "note": "DTCC and custody news may help oracle demand, but no direct Chainlink headlines."
+   "score": 0.0,
+   "note": "No headlines or buzz; nothing new building."
   },
   "DOGE": {
    "recent": 0,
@@ -75,7 +73,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "Only price-recap mentions; nothing new."
+   "note": "Only a generic market-rise recap mentions it; no real catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -83,62 +81,62 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 7,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new."
+   "note": "No headlines or buzz despite search interest; nothing new building."
   },
   "XRP": {
-   "recent": 2,
-   "before": 9,
-   "buzz": 1.11,
+   "recent": 1,
+   "before": 10,
+   "buzz": 0.5,
    "tone": 0,
    "headlines": [
-    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground",
-    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims"
+    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground"
    ],
    "trending": null,
-   "rule_score": 0.02,
-   "score": 0.3,
-   "note": "RLUSD gaining bank approvals and rating; buzz is normal, so not yet a loud signal."
+   "rule_score": 0.0,
+   "score": 0.2,
+   "note": "Ripple RLUSD gains, Moody's A2 rating and Coinbase expansion are real positive news."
   }
  },
  "themes": [
   {
-   "title": "Institutional tokenization and custody build-out",
-   "note": "Big banks and DTCC are moving toward blockchain settlement, which could help the infrastructure and tokenized-asset coins.",
-   "coins": [
-    "LINK",
-    "SOL",
-    "ETH"
-   ]
-  },
-  {
-   "title": "Ripple stablecoin and bank approvals",
-   "note": "RLUSD gained OCC approval and an A2 rating, which could support XRP sentiment, though XRP buzz is only normal.",
-   "coins": [
-    "XRP"
-   ]
-  },
-  {
-   "title": "Fed decision and Bitcoin ETF flows",
-   "note": "BTC buzz is nearly double normal around the Fed decision, with ETF inflows returning; the outcome could move it sharply either way.",
+   "title": "Fed decision and macro risk-off/on swings",
+   "note": "Fed decision and oil above $100 drive Bitcoin's near-term moves; expect volatility around the announcement.",
    "coins": [
     "BTC",
     "ETH",
     "SOL",
+    "XRP",
     "DOGE"
+   ]
+  },
+  {
+   "title": "Institutional tokenization and bank adoption",
+   "note": "DTCC, Securitize, Mirae and Brazil's bank add real-world rails; mostly slow, but supportive for chains they use.",
+   "coins": [
+    "SOL",
+    "XRP",
+    "ETH"
+   ]
+  },
+  {
+   "title": "Ripple RLUSD and XRP Ledger payments expansion",
+   "note": "Moody's rating, Coinbase expansion and zero-XRP wallet proposal build on Ripple's stablecoin push.",
+   "coins": [
+    "XRP"
    ]
   }
  ],
  "trending_elsewhere": [
-  "PEPE"
+  "BCH"
  ],
- "headlines": 78,
+ "headlines": 81,
  "sources": {
   "Alpaca/Benzinga": 19,
-  "crypto news sites": 59,
+  "crypto news sites": 62,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T16:30:33+00:00"
+ "ai_time": "2026-10-28T17:30:35+00:00"
 }
