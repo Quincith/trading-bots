@@ -18,14 +18,16 @@ from pathlib import Path
 
 import yaml
 
-from . import copycat, lab, pipeline, report, sec, weekly
+from . import copycat, forex, lab, pipeline, report, sec, weekly
 from .ai import AI
 from .alpaca import AlpacaPaper
+from .oanda import OandaPractice
 from .store import Store
 from . import runlog
 
 ROOT = Path(__file__).resolve().parent.parent
-STRATEGIES = ("aggressive", "medium", "copycat")
+STRATEGIES = ("aggressive", "medium", "copycat", "forex", "fxcopy")
+FOREX = ("forex", "fxcopy")
 
 
 def load_config(strategy: str) -> dict:
@@ -36,7 +38,9 @@ def truthy(v: str | None) -> bool:
     return (v or "").strip().lower() in {"1", "true", "yes", "on"}
 
 
-def broker_for(cfg: dict) -> AlpacaPaper:
+def broker_for(cfg: dict):
+    if cfg.get("broker") == "oanda":
+        return oanda_for(cfg)
     key, secret = os.environ.get(cfg["alpaca_key_secret"], ""), os.environ.get(cfg["alpaca_secret_secret"], "")
     missing = [n for n, v in ((cfg["alpaca_key_secret"], key), (cfg["alpaca_secret_secret"], secret)) if not v]
     if missing:
@@ -45,6 +49,17 @@ def broker_for(cfg: dict) -> AlpacaPaper:
                       "spelled exactly like this.")
         sys.exit(1)
     return AlpacaPaper(key, secret)
+
+
+def oanda_for(cfg: dict) -> OandaPractice:
+    names = (cfg["oanda_token_secret"], cfg["oanda_account_secret"])
+    missing = [n for n in names if not os.environ.get(n)]
+    if missing:
+        write_summary(f"**{cfg['title']}: GitHub can't see the secret(s) {', '.join(missing)}.** Add them under "
+                      "Settings > Secrets and variables > Actions > Secrets tab > New repository secret, "
+                      "spelled exactly like this.")
+        sys.exit(1)
+    return OandaPractice(*(os.environ[n] for n in names))
 
 
 def write_summary(text: str) -> None:
@@ -100,6 +115,17 @@ def main(argv: list[str] | None = None) -> int:
 
     dry = args.dry_run or truthy(os.environ.get("DRY_RUN"))
     halted = truthy(os.environ.get("TRADING_HALTED"))
+    if "forex" in cfg:
+        if not cfg.get("enabled", True) and not dry:
+            write_summary(f"{cfg.get('title', cfg['name'])} is switched off (enabled: false in its config): "
+                          "it failed the strategy lab check, so it doesn't trade. A dry run still works.")
+            return 0
+        res = forex.run(cfg, broker, store, kill_switch=halted, dry_run=dry, now=now)
+        text = forex.render(res, store, cfg, dry)
+        (store.dir / "summary.md").write_text(text)
+        runlog.save(res, store, dry)
+        write_summary(text)
+        return 0
     if "copycat" in cfg:
         res = copycat.run(cfg, broker, store, kill_switch=halted, dry_run=dry, now=now)
     else:
@@ -127,7 +153,8 @@ def weekly_report() -> int:
         logging.warning("no S&P 500 prices: %s", e)
         spy = None
     text = weekly.render({n: weekly.strategy_stats(s, now, btc, spy if n == "copycat" else None)
-                          for n, s in stores.items()}, now, weekly.lab_section(lab.read_log(data), now))
+                          for n, s in stores.items()}, now, weekly.lab_section(lab.read_log(data), now),
+                         titles={n: load_config(n).get("title", n.title()) for n in stores})
     out = data / "weekly"
     out.mkdir(exist_ok=True)
     (out / f"{now:%Y-%m-%d}.md").write_text(text)

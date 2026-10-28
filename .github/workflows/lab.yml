@@ -15,7 +15,7 @@ on:
       strategy:
         description: Which strategy
         type: choice
-        options: [all, aggressive, medium, copycat]
+        options: [all, aggressive, medium, copycat, forex, fxcopy]
         default: all
       change:
         description: "Your own change to test, e.g. filters.btc_ema_bars=200 (leave empty to let Claude suggest one)"
@@ -46,6 +46,7 @@ jobs:
       ALPACA_COPYCAT_KEY_ID: ${{ secrets.ALPACA_COPYCAT_KEY_ID }}
       ALPACA_COPYCAT_SECRET_KEY: ${{ secrets.ALPACA_COPYCAT_SECRET_KEY }}
       SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
+      OANDA_API_TOKEN: ${{ secrets.OANDA_API_TOKEN }}   # the Forex wing's past prices
       # Inputs go through env, never pasted into the script, so odd text can't run as a command.
       LAB_STRATEGY: ${{ inputs.strategy || 'all' }}
       LAB_CHANGE: ${{ inputs.change }}

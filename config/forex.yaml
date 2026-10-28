@@ -1,0 +1,50 @@
+# FOREX office: day trades currency pairs with the "opening range breakout" (ORB) at the London open.
+# Runs on its own OANDA practice (demo) account, so it uses pretend money only.
+# All percents are percent of this office's account value. No AI is used.
+
+name: forex
+title: Forex
+broker: oanda
+# On practice since Quincy said yes on 2026-10-28. In the strategy lab (OANDA prices Oct 2018 to Oct 2026) this
+# rule turned $100 into $109 and made money on the unseen months (+3.0%), but it passed only 5 of 7 checks:
+# with double the fees it lost (-2.5%), and one nearby setting lost too. So this is a practice test, not proof.
+# Earlier rules that failed and stay off: the Turtle trend rule, 12-month momentum and the carry trade.
+enabled: true
+# GitHub secret names that hold the OANDA practice token and this office's practice account id.
+oanda_token_secret: OANDA_API_TOKEN
+oanda_account_secret: OANDA_FOREX_ACCOUNT_ID
+# The office acts as if it had this much, even if the practice account holds more (OANDA often starts
+# demo accounts with $100,000). Its trades are sized from this, and only its own gains and losses count.
+start_balance: 100
+lookback_days: 300          # daily candles loaded each day
+
+markets:
+  # The 7 "major" pairs: the busiest currencies, with the smallest buy/sell gaps. Each one includes the US dollar.
+  pairs: [EUR_USD, GBP_USD, USD_JPY, AUD_USD, USD_CAD, USD_CHF, NZD_USD]
+
+forex:
+  style: orb
+  session: london           # the London open: 8:00 London time (it moves with British summer time)
+  range_minutes: 30         # the "opening range": each pair's high and low from 8:00 to 8:30
+  entry_hours: 3            # buy above the range or sell below it until 11:30; after that, no new trades today
+  exit_hour: 16             # close every trade by 16:00 London time: nothing is held overnight
+  max_cost_pct: 10          # skip a pair for the day if its fees would be over 10% of what the trade risks
+  # The safety stop is the other edge of the range. These settings were picked before testing, not tuned.
+
+risk:
+  risk_per_trade_pct: 1     # hitting the safety stop loses about 1% of the account ($1 on $100)
+  max_position_pct: 100     # one trade controls at most 1x the account
+  max_total_exposure_pct: 300   # all trades together control at most 3x the account (3:1 leverage, US law allows 50:1)
+  max_open_positions: 4
+  max_same_usd_side: 3      # at most 3 trades that all win (or all lose) when the US dollar moves
+  # Loss limits Quincy confirmed on 2026-10-28
+  max_daily_loss_pct: 3     # stop opening trades for the day after losing 3% today
+  max_total_loss_pct: 15    # halt the office if it is down 15% from money put in
+
+# These keep the shared code (Bot World, weekly report) working the same way.
+scout:
+  scan_every_minutes: 30
+decision:
+  min_confidence: 0
+exits:
+  max_hold_hours: 0

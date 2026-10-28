@@ -1,0 +1,45 @@
+# COPYCAT FX office: copies the currency bets of big hedge funds.
+# Every Friday the CFTC (the US futures regulator) publishes how many currency futures each group of big traders
+# holds, as of the Tuesday before. This office copies the "leveraged funds" (hedge funds and the firms trading
+# for them) when their net bet on a currency is large, and gets out when it flips. Free and official, no AI.
+# Runs on its own OANDA practice (demo) account, so it uses pretend money only.
+
+name: fxcopy
+title: Copycat FX
+broker: oanda
+# Switched off: on 8 years of OANDA prices (Oct 2018 to Oct 2026) this rule lost money even before fees,
+# so it doesn't trade. Dry runs still work. Turn it on only after it passes the strategy lab check.
+enabled: false
+oanda_token_secret: OANDA_API_TOKEN
+oanda_account_secret: OANDA_FXCOPY_ACCOUNT_ID
+start_balance: 100
+lookback_days: 60
+
+markets:
+  pairs: [EUR_USD, GBP_USD, USD_JPY, AUD_USD, USD_CAD, USD_CHF, NZD_USD]
+
+forex:
+  style: cot
+  group: leveraged          # who to copy: leveraged (hedge funds) or asset_managers (pension and mutual funds)
+  min_net_pct: 10           # copy when their bets up minus bets down are at least 10% of all open contracts
+  exit_net_pct: 0           # get out when that falls to 0% (their bet flipped to the other side)
+  need_growing: 0           # 1 = only copy a bet that grew since the week before
+  atr_days: 20
+  stop_atr_mult: 3.0        # safety stop 3 typical daily swings away (the weekly report is the main exit)
+
+risk:
+  risk_per_trade_pct: 1
+  max_position_pct: 100
+  max_total_exposure_pct: 300
+  max_open_positions: 4
+  max_same_usd_side: 3
+  # Loss limits Quincy confirmed on 2026-10-28
+  max_daily_loss_pct: 3
+  max_total_loss_pct: 15
+
+scout:
+  scan_every_minutes: 30
+decision:
+  min_confidence: 0
+exits:
+  max_hold_hours: 0

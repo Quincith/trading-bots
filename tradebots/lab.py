@@ -98,8 +98,42 @@ COPYCAT_KNOBS = [
 ]
 
 
-def knobs_for(strategy: str) -> list[Knob]:
-    return COPYCAT_KNOBS if strategy == "copycat" else CRYPTO_KNOBS
+FOREX_KNOBS = [
+    Knob("forex.entry_days", 20, 100, 5, "Trade when the price closes past its highest (or lowest) price of this many days"),
+    Knob("forex.exit_days", 10, 55, 5, "Get out when the price closes past the opposite high (or low) of this many days"),
+    Knob("forex.trend_ema_days", 50, 300, 25, "Only buy above (sell below) the N-day average price (0 = off)", 0),
+    Knob("forex.stop_atr_mult", 1.0, 5.0, 0.5, "Safety stop this many typical daily swings (ATR) from the entry"),
+]
+FXCOPY_KNOBS = [
+    Knob("forex.min_net_pct", 2.5, 40, 2.5, "Copy when the hedge funds' net bet is at least this % of all open contracts"),
+    Knob("forex.exit_net_pct", -10, 20, 2.5, "Get out when their net bet falls to this % (0 = it flipped sides)", 0),
+    Knob("forex.need_growing", 0, 1, 1, "1 = only copy a bet that grew since the week before (0 = off)", 0, switch=True),
+    Knob("forex.stop_atr_mult", 1.5, 6.0, 0.5, "Safety stop this many typical daily swings (ATR) from the entry"),
+]
+MOMENTUM_KNOBS = [
+    Knob("forex.momentum_days", 90, 540, 30, "Buy pairs that rose (sell pairs that fell) over this many calendar days"),
+    Knob("forex.stop_atr_mult", 2.0, 8.0, 0.5, "Safety stop this many typical daily swings (ATR) from the entry"),
+]
+CARRY_KNOBS = [
+    Knob("forex.carry_enter_pct", 0.25, 3.0, 0.25, "Trade when one currency pays at least this many points more interest"),
+    Knob("forex.carry_exit_pct", 0.0, 2.0, 0.25, "Get out when the interest gap shrinks below this many points", 0),
+    Knob("forex.stop_atr_mult", 2.0, 8.0, 0.5, "Safety stop this many typical daily swings (ATR) from the entry"),
+]
+ORB_KNOBS = [
+    Knob("forex.range_minutes", 15, 90, 15, "The opening range is the high and low of this many minutes after the open"),
+    Knob("forex.entry_hours", 1, 6, 1, "Only take a breakout within this many hours after the range is set"),
+    Knob("forex.exit_hour", 11, 17, 1, "Close any open trade at this hour (local time of that market)"),
+    Knob("forex.max_cost_pct", 5, 30, 2.5, "Skip days when fees would be more than this % of the risk (0 = off)", 0),
+]
+FOREX_STRATEGIES = ("forex", "fxcopy")
+
+
+def knobs_for(strategy: str, cfg: dict | None = None) -> list[Knob]:
+    if strategy in FOREX_STRATEGIES:
+        style = (cfg or load_config(strategy))["forex"]["style"]
+        return {"trend": FOREX_KNOBS, "cot": FXCOPY_KNOBS, "momentum": MOMENTUM_KNOBS, "carry": CARRY_KNOBS,
+                "orb": ORB_KNOBS}[style]
+    return {"copycat": COPYCAT_KNOBS}.get(strategy, CRYPTO_KNOBS)
 
 
 def get_value(cfg: dict, path: str, knob: Knob | None = None):
@@ -136,7 +170,7 @@ def _snap(k: Knob, v: float) -> float | int:
 def clean_changes(strategy: str, cfg: dict, changes: dict) -> tuple[dict, list[str]]:
     """Keeps only changes on the menu, rounded to the knob's step and inside its range.
     0 (or null, or "off") switches a filter off. Returns (changes, problems)."""
-    menu = {k.path: k for k in knobs_for(strategy)}
+    menu = {k.path: k for k in knobs_for(strategy, cfg)}
     out, problems = {}, []
     for path, v in changes.items():
         k = menu.get(path)
@@ -158,9 +192,9 @@ def clean_changes(strategy: str, cfg: dict, changes: dict) -> tuple[dict, list[s
     return out, problems
 
 
-def nudged(strategy: str, changes: dict) -> list[dict]:
+def nudged(strategy: str, changes: dict, cfg: dict | None = None) -> list[dict]:
     """The same change with each new number moved one step down and one step up."""
-    menu = {k.path: k for k in knobs_for(strategy)}
+    menu = {k.path: k for k in knobs_for(strategy, cfg)}
     out = []
     for path, v in changes.items():
         k = menu[path]
@@ -174,7 +208,7 @@ def nudged(strategy: str, changes: dict) -> list[dict]:
 
 
 def describe_changes(cfg: dict, changes: dict, strategy: str) -> list[str]:
-    menu = {k.path: k for k in knobs_for(strategy)}
+    menu = {k.path: k for k in knobs_for(strategy, cfg)}
     lines = []
     for path, v in changes.items():
         old = get_value(cfg, path, menu.get(path))
@@ -347,6 +381,71 @@ def judge(engine, runner: Runner, cfg: dict, changes: dict, split: Split, strate
     return Verdict(all(c["passed"] for c in checks), checks, numbers)
 
 
+# ---- checking a whole strategy (not just a change to it) -------------------------------------------------
+
+def validate(strategy: str, engine, runner: Runner, cfg: dict) -> tuple[Verdict, str]:
+    """Is the strategy itself worth running? Same honesty rules as `judge`, but against doing nothing:
+    it must make money after costs on the unseen months, on the study months, with doubled costs, with
+    every main setting nudged a step, and without a drop deeper than the total loss limit."""
+    if strategy in FOREX_STRATEGIES:
+        from . import forex
+        engine.min_trades = forex.min_trades(cfg)   # the rule being checked may not be the config file's
+    split = make_split(engine.start, engine.end)
+    S, U, A = (split.start, split.study_end), (split.study_end, split.end), (split.start, split.end)
+    nudges = [n for k in knobs_for(strategy, cfg) if not k.switch and get_value(cfg, k.path, k)
+              for n in nudged(strategy, {k.path: get_value(cfg, k.path, k)}, cfg)]
+    neighbours = [apply_changes(cfg, n) for n in nudges]
+    study, unseen, stress, full, *nb = runner.run_many(
+        [(cfg, *S, 1.0), (cfg, *U, 1.0), (cfg, *U, COST_STRESS), (cfg, *A, 1.0)] + [(n, *U, 1.0) for n in neighbours])
+    bench = pct(engine.benchmark(*U))
+    sp, up, xp = pct(study), pct(unseen), pct(stress)
+    months = [pct(unseen, a, b) for a, b in split.windows]
+    good_months = sum(m >= -MONTH_TOLERANCE for m in months)
+    nb_pcts = [pct(r) for r in nb]
+    dd = bt.stats(full, engine.cash)["max_drawdown_pct"]
+    limit = cfg["risk"]["max_total_loss_pct"]
+    trades = len(unseen.trades)
+    checks = [
+        {"name": "Makes money on the unseen months", "passed": up > max(bench, 0),
+         "detail": f"{up:+.1f}% vs {bench:+.1f}% for {engine.benchmark_label.lower()}"},
+        {"name": "Also makes money on the study months", "passed": sp > 0, "detail": f"{sp:+.1f}%"},
+        {"name": "Steady from slice to slice", "passed": good_months >= WINDOWS - 2,
+         "detail": f"not losing in {good_months} of {len(months)} slices (needs {WINDOWS - 2}): "
+                   + ", ".join(f"{m:+.1f}%" for m in months)},
+        {"name": "Still makes money with double fees and slip", "passed": xp > 0, "detail": f"{xp:+.1f}%"},
+        {"name": "Not a lucky setting", "passed": bool(nb_pcts) and all(x > 0 for x in nb_pcts),
+         "detail": "each main setting nudged one step: " + ", ".join(f"{x:+.1f}%" for x in nb_pcts)},
+        {"name": "Enough trades to judge", "passed": trades >= engine.min_trades,
+         "detail": f"{trades} trades on the unseen months (needs {engine.min_trades})"},
+        {"name": "Worst drop stays inside the total loss limit", "passed": -dd < limit,
+         "detail": f"worst drop {dd:.1f}% over the whole period (limit -{limit}%)"},
+    ]
+    v = Verdict(all(c["passed"] for c in checks), checks,
+                {"study": sp, "unseen": up, "stress": xp, "months": months, "nudges": nb_pcts, "drawdown": dd})
+    eq = pd.Series([e for _, e in full.equity], index=[t for t, _ in full.equity])
+    yearly = eq.resample("YE").last()
+    prev, rows = engine.cash, []
+    for t, val in yearly.items():
+        rows.append(f"| {t.year} | {(val / prev - 1) * 100:+.1f}% | {bt.money(val)} |")
+        prev = val
+    wins = [t for t in full.trades if t["pnl"] > 0]
+    head = "✅ Passed every check" if v.kept else "❌ Did not pass: " + "; ".join(c["name"].lower() for c in checks if not c["passed"])
+    o = [f"# Strategy check: {cfg.get('title', strategy.title())}", "", f"**{head}**", "",
+         f"Starts with {bt.money(engine.cash)}. Fees, the buy/sell gap (spread), slip and overnight interest included. "
+         f"Study months: {split.start:%b %Y} to {split.study_end:%b %Y}. Unseen months: {split.study_end:%b %Y} to "
+         f"{split.end:%b %Y}. The settings were picked before the test, from the textbook version of the rule, "
+         "not tuned on these years.", "",
+         "| | Result |", "|---|---|",
+         f"| Whole period | {pct(full):+.1f}% ({bt.money(full.equity[-1][1])}) |",
+         f"| Study months | {sp:+.1f}% |", f"| **Unseen months** | **{up:+.1f}%** |",
+         f"| Unseen, costs doubled | {xp:+.1f}% |", f"| Worst drop from a high | {dd:.1f}% |",
+         f"| Trades (whole period) | {len(full.trades)}, {len(wins)} winners ({len(wins) / max(1, len(full.trades)) * 100:.0f}%) |",
+         "", "Year by year:", "", "| Year | Return | Value at year end |", "|---|---|---|", *rows, "", "## Checks", ""]
+    o += [f"- {'✅' if c['passed'] else '❌'} **{c['name']}**: {c['detail']}" for c in checks]
+    o += ["", "_Past results don't guarantee future ones. Even a pass has to prove itself on the practice account._"]
+    return v, "\n".join(o) + "\n"
+
+
 # ---- the experiment log ------------------------------------------------------------------------------
 
 LOG_FIELDS = ["id", "time", "strategy", "source", "idea", "changes", "verdict", "unseen_new_pct", "unseen_old_pct",
@@ -454,6 +553,15 @@ def load_engine(strategy: str, days: int = 365, cache: str | None = None, end: d
     if strategy == "copycat":
         from . import insider_history
         return insider_history.load_engine(load_config("copycat"), days, cache, end)
+    if strategy in FOREX_STRATEGIES:
+        # Daily trend rules trade a few times a month, so one year is far too few trades to judge:
+        # the Forex wing is tested on the last 8 years instead.
+        from . import forex
+        cfg = load_config(strategy)
+        if cfg["forex"]["style"] == "orb":    # the day-trade rule replays 5-minute candles
+            from . import orb
+            return orb.load_engine(cfg, max(8, days // 365), cache, end)
+        return forex.load_engine(strategy, cfg, max(8, days // 365), cache, end)
     import pickle
     end = end or datetime.now(timezone.utc).replace(minute=0, second=0, microsecond=0)
     start = end - timedelta(days=days)
@@ -496,16 +604,30 @@ def run_experiment(strategy: str, engine, runner: Runner, cfg: dict, changes: di
 def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser(prog="tradebots.lab")
-    ap.add_argument("--strategy", required=True, choices=["aggressive", "medium", "copycat"])
+    ap.add_argument("--strategy", required=True, choices=["aggressive", "medium", "copycat", *FOREX_STRATEGIES])
+    ap.add_argument("--validate", action="store_true",
+                    help="test the strategy itself against doing nothing, instead of a change to it")
     ap.add_argument("--set", action="append", default=[], metavar="section.key=value",
                     help="the change to test, e.g. filters.btc_ema_bars=200 (repeat for two numbers)")
     ap.add_argument("--idea", default="", help="the idea in plain words, for the log")
     ap.add_argument("--days", type=int, default=365)
     ap.add_argument("--cache", help="save/load downloaded history here")
+    ap.add_argument("--end", help="test up to this date (YYYY-MM-DD) instead of now")
     ap.add_argument("--workers", type=int)
     args = ap.parse_args(argv)
 
     cfg = load_config(args.strategy)
+    if args.validate:
+        end = datetime.fromisoformat(args.end).replace(tzinfo=timezone.utc) if args.end else None
+        engine = load_engine(args.strategy, args.days, args.cache, end)
+        cfg = apply_changes(cfg, parse_sets(args.set))
+        _, text = validate(args.strategy, engine, Runner(engine, args.workers), cfg)
+        summary = os.environ.get("GITHUB_STEP_SUMMARY")
+        if summary:
+            with open(summary, "a") as f:
+                f.write(text)
+        print(text)
+        return 0
     changes, problems = clean_changes(args.strategy, cfg, parse_sets(args.set))
     if problems:
         print("\n".join(f"- {p}" for p in problems))

@@ -45,6 +45,7 @@ class RunResult:
     filings: dict = field(default_factory=dict)            # Copycat only: what it read from the SEC this run
     radar: dict = field(default_factory=dict)              # what the News radar saw in the news this run
     radar_calls: int = 0
+    forex: dict = field(default_factory=dict)             # Forex wing only: what the rule saw for each pair
 
 
 def _iso(dt: datetime) -> str:
