@@ -1,19 +1,19 @@
 {
- "time": "2026-10-28T02:59:22+00:00",
+ "time": "2026-10-28T03:29:18+00:00",
  "coins": {
   "BTC": {
    "recent": 2,
-   "before": 36,
-   "buzz": 0.28,
+   "before": 35,
+   "buzz": 0.29,
    "tone": 0,
    "headlines": [
     "Netanyahu\u2019s Odds Rise Among Crypto Punters Even as Exit Polls Indicate Israel PM Faces Uncertain Path Back to Power",
     "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
    ],
-   "trending": 5,
-   "rule_score": 0.01,
+   "trending": 2,
+   "rule_score": 0.16,
    "score": -0.1,
-   "note": "Mostly price-move and analyst-forecast headlines ahead of the Fed; low buzz and no clear new catalyst."
+   "note": "Buzz is low and most headlines are price recaps; Fed uncertainty and profit-taking slightly bearish."
   },
   "ETH": {
    "recent": 1,
@@ -25,8 +25,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.1,
-   "note": "Few fresh headlines; tokenized stock and onchain fund news is mildly supportive but not specific to ETH."
+   "score": 0.0,
+   "note": "Little fresh news; only generic price recaps and a weak OpenAI-ETH story."
   },
   "SOL": {
    "recent": 1,
@@ -36,10 +36,10 @@
    "headlines": [
     "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
    ],
-   "trending": 6,
-   "rule_score": 0.15,
-   "score": 0.1,
-   "note": "Only one recent headline with slightly above-normal buzz; no clear Solana-specific catalyst found."
+   "trending": 4,
+   "rule_score": 0.3,
+   "score": 0.0,
+   "note": "Only one headline near normal buzz; no clear new catalyst."
   },
   "AVAX": {
    "recent": 0,
@@ -50,7 +50,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines in the feed."
+   "note": "No recent headlines; nothing new to act on."
   },
   "LINK": {
    "recent": 0,
@@ -61,7 +61,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines in the feed."
+   "note": "No recent headlines; tokenized fund news is indirect for Chainlink."
   },
   "DOGE": {
    "recent": 1,
@@ -73,8 +73,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.05,
-   "note": "Buzz is 5x normal, but the only mention is a generic price-rise recap, so it is not a real catalyst."
+   "score": 0.1,
+   "note": "Buzz is 5x normal but driven by a generic price-recap article; treat with caution."
   },
   "LTC": {
    "recent": 0,
@@ -85,7 +85,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines in the feed."
+   "note": "No recent headlines; nothing new."
   },
   "XRP": {
    "recent": 1,
@@ -97,30 +97,29 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.3,
-   "note": "Robinhood and Ripple RLUSD expansion is a real utility story, though some coverage is repeated and buzz is modest."
+   "score": 0.2,
+   "note": "Ripple-Robinhood RLUSD expansion is real news, though partly recycled across outlets."
   }
  },
  "themes": [
   {
    "title": "Ripple/Robinhood RLUSD partnership expansion",
-   "note": "Several outlets report Robinhood adopting Ripple's RLUSD stablecoin; a real utility story, though some items repeat the same news.",
+   "note": "Repeated Ripple-Robinhood stablecoin and settlement deals may support XRP, though the same news is recycled across many outlets.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Tokenized stocks and onchain Wall Street products",
-   "note": "Nasdaq-100 fund on Stellar, CF Benchmarks onchain pricing, and OKX-ICE objections suggest growing institutional tokenization interest.",
+   "title": "Tokenized stocks and onchain Nasdaq funds",
+   "note": "Janus Henderson and Centrifuge tokenized Nasdaq-100 fund plus OKX-ICE objections show growing tokenization interest; mostly ecosystem-level, weak direct catalyst.",
    "coins": [
-    "XRP",
     "ETH",
-    "SOL"
+    "LINK"
    ]
   },
   {
-   "title": "Fed meeting and macro risk for Bitcoin",
-   "note": "Bitcoin price swings ahead of the FOMC are mostly price recaps; direction depends on the Fed outcome, not yet a clear catalyst.",
+   "title": "Fed decision and BTC price levels",
+   "note": "Traders are focused on the FOMC meeting and BTC's $76k to $82k range; price-recap articles are noise, not catalysts.",
    "coins": [
     "BTC",
     "ETH",
@@ -134,9 +133,9 @@
  ],
  "headlines": 80,
  "sources": {
-  "Alpaca/Benzinga": 23,
-  "crypto news sites": 57,
+  "Alpaca/Benzinga": 22,
+  "crypto news sites": 58,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T02:29:22+00:00"
+ "ai_time": "2026-10-28T03:29:18+00:00"
 }
