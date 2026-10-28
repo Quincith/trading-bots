@@ -178,3 +178,14 @@ def test_world_and_weekly_include_the_forex_wing(tmp_path):
     stats = {n: weekly.strategy_stats(Store(tmp_path, n), now, lambda t: 1.0) for n in ("forex", "fxcopy")}
     text = weekly.render(stats, now, titles={"forex": "Forex", "fxcopy": "Copycat FX"})
     assert "## Copycat FX" in text and "Doing nothing" in text
+
+
+def test_switched_off_office_does_not_trade(tmp_path, monkeypatch):
+    from tradebots import __main__ as cli
+    broker = FakeOanda(breakout_bars())
+    monkeypatch.setenv("DATA_DIR", str(tmp_path))
+    monkeypatch.delenv("DRY_RUN", raising=False)
+    monkeypatch.setattr(cli, "broker_for", lambda cfg: broker)
+    assert FX["enabled"] is False and COPY["enabled"] is False
+    assert cli.main(["run", "--strategy", "forex"]) == 0
+    assert not broker.orders and not (tmp_path / "forex" / "summary.md").exists()

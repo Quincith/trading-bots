@@ -5,6 +5,9 @@
 name: forex
 title: Forex
 broker: oanda
+# Switched off: on 8 years of OANDA prices (Oct 2018 to Oct 2026) this rule lost money even before fees,
+# so it doesn't trade. Dry runs still work. Turn it on only after it passes the strategy lab check.
+enabled: false
 # GitHub secret names that hold the OANDA practice token and this office's practice account id.
 oanda_token_secret: OANDA_API_TOKEN
 oanda_account_secret: OANDA_FOREX_ACCOUNT_ID

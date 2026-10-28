@@ -116,6 +116,10 @@ def main(argv: list[str] | None = None) -> int:
     dry = args.dry_run or truthy(os.environ.get("DRY_RUN"))
     halted = truthy(os.environ.get("TRADING_HALTED"))
     if "forex" in cfg:
+        if not cfg.get("enabled", True) and not dry:
+            write_summary(f"{cfg.get('title', cfg['name'])} is switched off (enabled: false in its config): "
+                          "it failed the strategy lab check, so it doesn't trade. A dry run still works.")
+            return 0
         res = forex.run(cfg, broker, store, kill_switch=halted, dry_run=dry, now=now)
         text = forex.render(res, store, cfg, dry)
         (store.dir / "summary.md").write_text(text)
