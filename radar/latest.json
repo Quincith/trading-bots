@@ -1,20 +1,20 @@
 {
- "time": "2026-10-28T15:00:22+00:00",
+ "time": "2026-10-28T15:30:19+00:00",
  "coins": {
   "BTC": {
    "recent": 8,
-   "before": 21,
-   "buzz": 1.9,
-   "tone": -2,
+   "before": 22,
+   "buzz": 1.82,
+   "tone": -1,
    "headlines": [
     "Scaramucci Calls Elizabeth Warren \u2018the Joke of Jokes,\u2019 Accuses Her of Echoing Bank Lobbyists",
     "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
     "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain Ahead of Federal Reserve Interest Rate Decision\u2014 SKHY, STX, V, GOOGL in Focus (UPDATED)"
    ],
-   "trending": 14,
-   "rule_score": 0.13,
+   "trending": 7,
+   "rule_score": 0.21,
    "score": 0.2,
-   "note": "Mild positive: ETF inflows and Google institutional custody news, but many recycled price-recap headlines."
+   "note": "Heavy buzz and ETF inflows, but mostly price recaps and Fed-day macro noise; modest positive."
   },
   "ETH": {
    "recent": 1,
@@ -26,22 +26,21 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.2,
-   "note": "Tokenization headlines help the ecosystem, but the buzz is thin with only 2 headlines."
+   "score": 0.05,
+   "note": "Little new ETH-specific news; mostly moves with market and tokenization trend."
   },
   "SOL": {
-   "recent": 2,
-   "before": 3,
-   "buzz": 3.33,
+   "recent": 1,
+   "before": 4,
+   "buzz": 1.25,
    "tone": 0,
    "headlines": [
-    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
-    "Mirae Asset Securities issues tokenized notes on Solana"
+    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims"
    ],
    "trending": 4,
-   "rule_score": 0.77,
-   "score": 0.3,
-   "note": "Mirae tokenized notes on Solana are a real institutional catalyst; buzz is elevated but volume is small."
+   "rule_score": 0.3,
+   "score": 0.15,
+   "note": "Mirae tokenized notes on Solana is a real, though small, new adoption signal."
   },
   "AVAX": {
    "recent": 0,
@@ -74,7 +73,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No fresh catalyst; only mentioned in generic price-move headlines."
+   "note": "No specific news; only mentioned in price recap articles."
   },
   "LTC": {
    "recent": 0,
@@ -97,44 +96,50 @@
     "Ripple CEO Opens Conference 'With a Bang:' The 4 Announcements He Made",
     "XRP Ledger developers propose creating wallets with zero XRP for stablecoin payments"
    ],
-   "trending": null,
-   "rule_score": 0.3,
-   "score": 0.4,
-   "note": "RLUSD OCC approval, Moody's rating, and Robinhood deal are real positive catalysts with rising buzz."
+   "trending": 10,
+   "rule_score": 0.45,
+   "score": 0.35,
+   "note": "Ripple stablecoin rating and Robinhood deal plus XRP Ledger proposal; buzz 2.5x supports a positive lean."
   }
  },
  "themes": [
   {
-   "title": "Tokenization of real-world assets going mainstream",
-   "note": "DTCC unit launch, Securitize on Stellar, Mirae Solana notes, and Goldman-alumni onchain loans show institutions building rails; likely helps ETH, SOL, XRP, LINK-type networks.",
+   "title": "Ripple/XRP institutional push",
+   "note": "Ripple stablecoin RLUSD gets Moody's rating, Robinhood partnership, and XRP Ledger zero-balance wallet idea; XRP buzz is 2.5x normal.",
+   "coins": [
+    "XRP"
+   ]
+  },
+  {
+   "title": "Tokenization of traditional assets",
+   "note": "DTCC launches tokenization services and Securitize adds Stellar; Mirae issues tokenized notes on Solana, a possible tailwind for SOL and chain infrastructure.",
    "coins": [
     "SOL",
-    "ETH",
-    "XRP"
-   ]
-  },
-  {
-   "title": "Ripple and RLUSD stablecoin momentum",
-   "note": "OCC approval, Moody's A2 rating, and Robinhood partnership point to growing institutional use of Ripple's stablecoin.",
-   "coins": [
-    "XRP"
-   ]
-  },
-  {
-   "title": "Crypto custody and security concerns",
-   "note": "Google MPC custody preview and Coinbase/Bithumb data breaches; security headlines are mixed, with BTC custody gaining some institutional support.",
-   "coins": [
+    "XRP",
     "BTC",
     "ETH"
    ]
+  },
+  {
+   "title": "Bitcoin rebound ahead of Fed decision",
+   "note": "BTC buzz is 1.82x with ETF inflows and rebound above $80K, but much is price recap and the Fed event is a macro risk.",
+   "coins": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP",
+    "DOGE"
+   ]
   }
  ],
- "trending_elsewhere": [],
- "headlines": 77,
+ "trending_elsewhere": [
+  "PEPE"
+ ],
+ "headlines": 79,
  "sources": {
   "Alpaca/Benzinga": 19,
-  "crypto news sites": 58,
+  "crypto news sites": 60,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T14:30:14+00:00"
+ "ai_time": "2026-10-28T15:30:19+00:00"
 }
