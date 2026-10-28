@@ -1,20 +1,20 @@
 {
- "time": "2026-10-28T21:00:47+00:00",
+ "time": "2026-10-28T21:30:55+00:00",
  "coins": {
   "BTC": {
    "recent": 8,
    "before": 25,
    "buzz": 1.6,
-   "tone": 3,
+   "tone": 2,
    "headlines": [
     "Bitcoin Could Steal AI\u2019s Spotlight as \u2018Fast Money Is Long Gone,\u2019 Lyn Alden Says",
     "Why Can't Bitcoin Break $80,000? Kevin O'Leary Points To Two Reasons",
     "Fed Holds Rate at 3.75%-4%, Two Officials Push for a Hike (UPDATED)"
    ],
    "trending": 1,
-   "rule_score": 0.72,
-   "score": 0.2,
-   "note": "Heavy headline volume and ETF inflows, but price is stalled near $80K and Fed hike risk is rising."
+   "rule_score": 0.62,
+   "score": 0.1,
+   "note": "Heavy buzz, but mostly price recaps and Fed-related talk; new institutional custody and product news is modest."
   },
   "ETH": {
    "recent": 1,
@@ -27,7 +27,7 @@
    "trending": null,
    "rule_score": 0.2,
    "score": 0.0,
-   "note": "Only one recent headline and it is a price recap. Nothing new is building."
+   "note": "Only one headline and no new catalyst; nothing meaningful building."
   },
   "SOL": {
    "recent": 1,
@@ -37,10 +37,10 @@
    "headlines": [
     "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat"
    ],
-   "trending": null,
-   "rule_score": 0.2,
-   "score": 0.1,
-   "note": "Mirae tokenized notes on Solana is a real but small institutional step."
+   "trending": 14,
+   "rule_score": 0.35,
+   "score": 0.2,
+   "note": "Mirae tokenized notes on Solana is a small real adoption signal; buzz is low."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines at all. Nothing new is building."
+   "note": "No headlines in the recent window; nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -59,10 +59,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 12,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, despite being on the most-searched list. Nothing new to act on."
+   "note": "No headlines in the recent window; nothing new."
   },
   "DOGE": {
    "recent": 1,
@@ -75,7 +75,7 @@
    "trending": null,
    "rule_score": 0.2,
    "score": 0.0,
-   "note": "Buzz is 5x but the single headline is a price recap, so the spike is not a real catalyst."
+   "note": "Buzz spike of 5x comes from a single headline and is mentioned only in a flat-price recap; not a real catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -86,7 +86,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines. Nothing new is building."
+   "note": "No headlines in the recent window; nothing new."
   },
   "XRP": {
    "recent": 1,
@@ -98,14 +98,14 @@
    ],
    "trending": null,
    "rule_score": 0.2,
-   "score": 0.1,
-   "note": "Ripple RLUSD expanding to Coinbase and Moody's rating are mildly positive, though buzz is low."
+   "score": 0.2,
+   "note": "Ripple RLUSD expanding to Coinbase and Moody's rating are real positives, though buzz is quiet."
   }
  },
  "themes": [
   {
-   "title": "Fed holds rates, December hike talk",
-   "note": "Fed kept rates steady but two officials want a hike. Tighter money can weigh on risk assets like crypto.",
+   "title": "Fed holds rates with hawkish tilt",
+   "note": "Fed held rates but two officials wanted a hike, so December hike talk weighs on risk assets like crypto.",
    "coins": [
     "BTC",
     "ETH",
@@ -118,8 +118,8 @@
    ]
   },
   {
-   "title": "Institutional tokenization and stablecoins",
-   "note": "DTCC, Securitize, Mirae and Ripple RLUSD moves show real-world finance building on chains. Mostly slow, long-term news.",
+   "title": "Institutional tokenization and stablecoin adoption",
+   "note": "DTCC, Mirae on Solana, and Ripple RLUSD news point to real finance moving onchain, a slow but real tailwind.",
    "coins": [
     "XRP",
     "SOL",
@@ -127,8 +127,8 @@
    ]
   },
   {
-   "title": "Bitcoin ETF flows and bitcoin-specific buzz",
-   "note": "Sovereign funds stepping in and ETF inflows hint at steady demand, but BTC is stuck below $81K.",
+   "title": "Bitcoin-backed lending and treasury demand",
+   "note": "Bitcoin mortgages in Canada and Strategy's dividend approval show Bitcoin-linked products spreading, though mostly recycled news.",
    "coins": [
     "BTC"
    ]
@@ -137,11 +137,11 @@
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 76,
+ "headlines": 75,
  "sources": {
   "Alpaca/Benzinga": 19,
-  "crypto news sites": 57,
+  "crypto news sites": 56,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T20:30:47+00:00"
+ "ai_time": "2026-10-28T21:30:55+00:00"
 }
