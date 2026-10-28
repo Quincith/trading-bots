@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 06:59 UTC
+# Aggressive strategy — 2026-10-28 07:29 UTC
 
 | | |
 |---|---|
@@ -9,16 +9,18 @@
 
 ## News radar (trends forming)
 
-Read 81 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 59, CoinGecko trending 15).
+Read 79 headlines from the last day (Alpaca/Benzinga 21, crypto news sites 58, CoinGecko trending 15).
 
-- **Fed rate decision and macro risk for BTC**: Fed meeting today drives a lot of price talk; BTC is the only coin with real headline activity right now. (BTC)
-- **Robinhood and Ripple RLUSD partnership**: Real institutional deal, but mostly older news recycled across outlets; modest effect on XRP. (XRP)
-- **Bithumb hack and data leak**: Exchange security breach in South Korea adds fear, mainly hurting sentiment around exchanges and tokens listed there. (BTC, XRP)
+- **Robinhood and Ripple stablecoin/tokenization partnerships**: Robinhood adopting Ripple's RLUSD stablecoin for retail and institutional use could support XRP sentiment. Mostly partnership news, unconfirmed impact. (XRP)
+- **Tokenized stocks and onchain Nasdaq-100 funds**: Janus Henderson and Centrifuge launching tokenized Nasdaq-100 fund on Stellar; but OKX-ICE tokenized stock objections add uncertainty. (XRP, BTC)
+- **Fed decision and BTC price levels**: Macro event with BTC around $80k; price-recap headlines dominate, so little fresh catalyst beyond the Fed outcome. (BTC, ETH, XRP, DOGE)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.10 | 0 (0.0x usual) | Ripple's RLUSD deal with Robinhood is real but largely recycled; a slight positive at most. |
-| BTC | -0.10 | 5 (0.74x usual) | Fed decision uncertainty and a Bitcoin treasury firm scare; headline pace is normal, so little new signal. |
+| XRP | +0.20 | 0 (0.0x usual) | Ripple's RLUSD deal with Robinhood and BNY expansion are real partnership news, but mild and partly recycled. |
+| SOL | +0.00 | 0 (0.0x usual) | Searched on CoinGecko but no recent headlines; no new catalyst. |
+| LINK | +0.00 | 0 (0.0x usual) | Searched on CoinGecko but no recent headlines; no new catalyst. |
+| BTC | -0.10 | 5 (0.76x usual) | Price-focused headlines and a Fed meeting ahead; Datavault and Bithumb news are sentiment negatives, buzz is below normal. |
 
 Also trending, but not in our coin list: PEPE.
 
@@ -27,4 +29,4 @@ Also trending, but not in our coin list: PEPE.
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_

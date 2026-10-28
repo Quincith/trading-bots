@@ -1,31 +1,31 @@
 {
- "time": "2026-10-28T06:59:43+00:00",
+ "time": "2026-10-28T07:29:41+00:00",
  "coins": {
   "BTC": {
    "recent": 5,
-   "before": 34,
-   "buzz": 0.74,
+   "before": 33,
+   "buzz": 0.76,
    "tone": 0,
    "headlines": [
     "'The Best Prediction Markets Experience': Vlad Tenev Wants Robinhood Users to Have 'Choices' Too",
     "Trump's 'Close Friend' Byron Donalds Is Crypto Punters' Favorite to Succeed Ron DeSantis as Florida Governor",
     "Bitcoin treasury Datavault AI plunges 50% after firm says it can\u2019t access its BTC"
    ],
-   "trending": 4,
-   "rule_score": 0.25,
+   "trending": null,
+   "rule_score": -0.05,
    "score": -0.1,
-   "note": "Fed decision uncertainty and a Bitcoin treasury firm scare; headline pace is normal, so little new signal."
+   "note": "Price-focused headlines and a Fed meeting ahead; Datavault and Bithumb news are sentiment negatives, buzz is below normal."
   },
   "ETH": {
    "recent": 0,
-   "before": 8,
+   "before": 7,
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines about Ethereum; nothing new building."
+   "note": "No recent headlines or buzz; nothing new building for ETH."
   },
   "SOL": {
    "recent": 0,
@@ -33,10 +33,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 6,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines about Solana; nothing new building."
+   "note": "Searched on CoinGecko but no recent headlines; no new catalyst."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +47,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines about Avalanche; nothing new building."
+   "note": "No recent headlines or buzz; nothing new building."
   },
   "LINK": {
    "recent": 0,
@@ -55,10 +55,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 12,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines about Chainlink; nothing new building."
+   "note": "Searched on CoinGecko but no recent headlines; no new catalyst."
   },
   "DOGE": {
    "recent": 0,
@@ -69,7 +69,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines beyond price recaps; nothing new building."
+   "note": "Only price-recap mentions; no new catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -80,7 +80,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines about Litecoin; nothing new building."
+   "note": "No recent headlines or buzz; nothing new building."
   },
   "XRP": {
    "recent": 0,
@@ -90,42 +90,45 @@
    "headlines": [],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.1,
-   "note": "Ripple's RLUSD deal with Robinhood is real but largely recycled; a slight positive at most."
+   "score": 0.2,
+   "note": "Ripple's RLUSD deal with Robinhood and BNY expansion are real partnership news, but mild and partly recycled."
   }
  },
  "themes": [
   {
-   "title": "Fed rate decision and macro risk for BTC",
-   "note": "Fed meeting today drives a lot of price talk; BTC is the only coin with real headline activity right now.",
+   "title": "Robinhood and Ripple stablecoin/tokenization partnerships",
+   "note": "Robinhood adopting Ripple's RLUSD stablecoin for retail and institutional use could support XRP sentiment. Mostly partnership news, unconfirmed impact.",
    "coins": [
+    "XRP"
+   ]
+  },
+  {
+   "title": "Tokenized stocks and onchain Nasdaq-100 funds",
+   "note": "Janus Henderson and Centrifuge launching tokenized Nasdaq-100 fund on Stellar; but OKX-ICE tokenized stock objections add uncertainty.",
+   "coins": [
+    "XRP",
     "BTC"
    ]
   },
   {
-   "title": "Robinhood and Ripple RLUSD partnership",
-   "note": "Real institutional deal, but mostly older news recycled across outlets; modest effect on XRP.",
-   "coins": [
-    "XRP"
-   ]
-  },
-  {
-   "title": "Bithumb hack and data leak",
-   "note": "Exchange security breach in South Korea adds fear, mainly hurting sentiment around exchanges and tokens listed there.",
+   "title": "Fed decision and BTC price levels",
+   "note": "Macro event with BTC around $80k; price-recap headlines dominate, so little fresh catalyst beyond the Fed outcome.",
    "coins": [
     "BTC",
-    "XRP"
+    "ETH",
+    "XRP",
+    "DOGE"
    ]
   }
  ],
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 81,
+ "headlines": 79,
  "sources": {
-  "Alpaca/Benzinga": 22,
-  "crypto news sites": 59,
+  "Alpaca/Benzinga": 21,
+  "crypto news sites": 58,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T06:29:45+00:00"
+ "ai_time": "2026-10-28T07:29:41+00:00"
 }
