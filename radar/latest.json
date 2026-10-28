@@ -1,18 +1,18 @@
 {
- "time": "2026-10-28T17:30:35+00:00",
+ "time": "2026-10-28T18:00:35+00:00",
  "coins": {
   "BTC": {
-   "recent": 10,
-   "before": 23,
-   "buzz": 2.17,
+   "recent": 8,
+   "before": 24,
+   "buzz": 1.67,
    "tone": 0,
    "headlines": [
     "Bitwise Predicts Bitcoin Could Hit $1.6 Million by 2036 as Four-Year Cycle Fades",
     "SK Hynix, Vertiv Rescue AI Trade As Oil Tops $102 Before Fed: Stock Market Today",
     "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground"
    ],
-   "trending": 0,
-   "rule_score": 0.53,
+   "trending": 2,
+   "rule_score": 0.43,
    "score": 0.1,
    "note": "Buzz is 2.2x normal, but much is recap and ETF inflow news; mild positive, Fed outcome unclear."
   },
@@ -37,7 +37,7 @@
    "headlines": [
     "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground"
    ],
-   "trending": 4,
+   "trending": 0,
    "rule_score": 0.3,
    "score": 0.1,
    "note": "Mirae tokenized notes on Solana is a real but small institutional adoption story."
@@ -81,7 +81,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 7,
+   "trending": 9,
    "rule_score": 0.15,
    "score": 0.0,
    "note": "No headlines or buzz despite search interest; nothing new building."
@@ -132,9 +132,9 @@
  "trending_elsewhere": [
   "BCH"
  ],
- "headlines": 81,
+ "headlines": 80,
  "sources": {
-  "Alpaca/Benzinga": 19,
+  "Alpaca/Benzinga": 18,
   "crypto news sites": 62,
   "CoinGecko trending": 15
  },
