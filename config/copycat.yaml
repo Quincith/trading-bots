@@ -41,7 +41,7 @@ risk:
   correlated_size_factor: 0.5
   max_correlated_positions: 2
   max_daily_loss_pct: 5         # stop opening trades for the day after losing 5% today
-  max_total_loss_pct: 20        # halt the strategy if it is down 20% from money put in
+  max_total_loss_pct: 10        # halt the strategy if it is down 10% from money put in (Quincy, 2026-10-28)
   min_order_usd: 2
 
 decision:
