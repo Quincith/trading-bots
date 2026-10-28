@@ -119,13 +119,19 @@ CARRY_KNOBS = [
     Knob("forex.carry_exit_pct", 0.0, 2.0, 0.25, "Get out when the interest gap shrinks below this many points", 0),
     Knob("forex.stop_atr_mult", 2.0, 8.0, 0.5, "Safety stop this many typical daily swings (ATR) from the entry"),
 ]
+ORB_KNOBS = [
+    Knob("forex.range_minutes", 15, 90, 15, "The opening range is the high and low of this many minutes after the open"),
+    Knob("forex.entry_hours", 1, 6, 1, "Only take a breakout within this many hours after the range is set"),
+    Knob("forex.exit_hour", 11, 17, 1, "Close any open trade at this hour (local time of that market)"),
+]
 FOREX_STRATEGIES = ("forex", "fxcopy")
 
 
 def knobs_for(strategy: str, cfg: dict | None = None) -> list[Knob]:
     if strategy in FOREX_STRATEGIES:
         style = (cfg or load_config(strategy))["forex"]["style"]
-        return {"trend": FOREX_KNOBS, "cot": FXCOPY_KNOBS, "momentum": MOMENTUM_KNOBS, "carry": CARRY_KNOBS}[style]
+        return {"trend": FOREX_KNOBS, "cot": FXCOPY_KNOBS, "momentum": MOMENTUM_KNOBS, "carry": CARRY_KNOBS,
+                "orb": ORB_KNOBS}[style]
     return {"copycat": COPYCAT_KNOBS}.get(strategy, CRYPTO_KNOBS)
 
 

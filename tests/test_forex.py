@@ -243,3 +243,50 @@ def test_slow_rules_simulate_and_validate():
         assert all(datetime.fromisoformat(t["opened"]).day == 2 for t in r.trades)
         v, text = lab.validate("forex", eng, lab.Runner(eng, 1), cfg)
         assert len(v.checks) == 7 and eng.min_trades == 10
+
+
+ORB = {"style": "orb", "session": "london", "range_minutes": 30, "entry_hours": 3, "exit_hour": 16}
+
+
+def five_min(days=60, seed=0, start=1.10, drift=0.0):
+    rng = np.random.default_rng(seed)
+    idx = pd.date_range("2026-06-01", periods=days * 288, freq="5min", tz="UTC")
+    close = start * np.cumprod(1 + rng.normal(drift, 0.0004, len(idx)))
+    opn = np.r_[start, close[:-1]]
+    return pd.DataFrame({"open": opn, "high": np.maximum(opn, close) * 1.0001,
+                         "low": np.minimum(opn, close) * 0.9999, "close": close, "spread": 0.0}, index=idx)
+
+
+def test_orb_day_trade_rules():
+    from tradebots import orb
+    df = five_min(days=5)
+    ss = orb.sessions(df, ORB)
+    day = sorted(ss)[1]
+    times = ss[day][0]
+    # summer: London 08:00 is 07:00 UTC, the session ends at 16:00 London (15:00 UTC)
+    assert times[0].hour == 7 and times[0].minute == 0 and times[-1] < pd.Timestamp(f"{day} 15:00", tz="UTC")
+    # a hand-made day: a quiet range, then a clean break up that runs to the close
+    t = pd.date_range(f"{day} 07:00", periods=96, freq="5min", tz="UTC")
+    o = np.full(96, 1.1000); h = o + 0.0005; l = o - 0.0005; c = o.copy()
+    h[8], c[8] = 1.1010, 1.1008
+    o[9:], h[9:], l[9:], c[9:] = 1.1008, 1.1012, 1.1006, 1.1010
+    tr = orb.day_trade("EUR_USD", (t, o, h, l, c), ORB, 1.0)
+    assert tr["d"] == 1 and abs(tr["stop"] - 1.0995) < 1e-9 and tr["why"] == "end of session" and tr["exit"] > tr["entry"]
+    # a candle that breaks both ways counts as a loss
+    h2, l2 = h.copy(), l.copy(); h2[8], l2[8] = 1.1010, 1.0990
+    tr2 = orb.day_trade("EUR_USD", (t, o, h2, l2, c), ORB, 1.0)
+    assert tr2["why"] == "stop hit" and tr2["exit"] < tr2["entry"]
+
+
+def test_orb_simulate_and_validate():
+    from tradebots import orb
+    intraday = {p: five_min(days=200, seed=i, start=150 if "JPY" in p else 1.1) for i, p in enumerate(forex.PAIRS[:3])}
+    eng = orb.OrbEngine(intraday, datetime(2026, 6, 2, tzinfo=timezone.utc), datetime(2026, 12, 1, tzinfo=timezone.utc))
+    cfg = {**FX, "forex": dict(ORB)}
+    r = eng.run(cfg, eng.start, eng.end)
+    assert len(r.trades) > 50 and r.fees > 0
+    # each trade risks about 1% when the stop is hit
+    losses = [t["pnl"] / t["equity_at_open"] for t in r.trades if t["exit"] == "stop hit"]
+    assert losses and min(losses) > -0.015
+    v, text = lab.validate("forex", eng, lab.Runner(eng, 1), cfg)
+    assert len(v.checks) == 7 and eng.min_trades == 50

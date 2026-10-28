@@ -1,0 +1,70 @@
+name: Forex lab trial (temporary)
+
+# Temporary: tests the Opening Range Breakout (ORB) day trade on 8 years of OANDA 5-minute prices, from this
+# pull request. It saves nothing to the repo and opens no pull requests or issues. Removed before merge.
+on:
+  pull_request:
+    paths: [".github/workflows/lab-trial.yml"]
+
+env:
+  OANDA_API_TOKEN: ${{ secrets.OANDA_API_TOKEN }}
+
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: m5.pkl
+          key: oanda-m5-2018-10-to-2026-10-v1
+      - name: "ORB, settings fixed in advance: London and New York opens"
+        run: |
+          python - <<'PY'
+          from datetime import datetime, timezone
+          from tradebots import lab, orb
+          end = datetime(2026, 10, 1, tzinfo=timezone.utc)
+          ideas = {
+              "ORB at the London open": {"style": "orb", "session": "london", "range_minutes": 30,
+                                         "entry_hours": 3, "exit_hour": 16},
+              "ORB at the New York open": {"style": "orb", "session": "newyork", "range_minutes": 30,
+                                           "entry_hours": 3, "exit_hour": 16},
+          }
+          cfg0 = lab.load_config("forex")
+          eng = orb.load_engine(cfg0, 8, "m5.pkl", end)
+          print({p: (len(df), str(df.index[0]), str(df.index[-1])) for p, df in eng.intraday.items()}, flush=True)
+          for name, fx in ideas.items():
+              cfg = lab.load_config("forex"); cfg["forex"] = fx
+              print(f"\n\n######## {name}\n", flush=True)
+              print(lab.validate("forex", eng, lab.Runner(eng), cfg)[1], flush=True)
+          PY
+      - name: "Where the results come from: zero costs, by pair, by exit"
+        run: |
+          python - <<'PY'
+          from collections import defaultdict
+          from datetime import datetime, timezone
+          from tradebots import lab, orb
+          end = datetime(2026, 10, 1, tzinfo=timezone.utc)
+          cfg0 = lab.load_config("forex")
+          eng = orb.load_engine(cfg0, 8, "m5.pkl", end)
+          for sess in ("london", "newyork"):
+              cfg = lab.load_config("forex")
+              cfg["forex"] = {"style": "orb", "session": sess, "range_minutes": 30, "entry_hours": 3, "exit_hour": 16}
+              for cost in (0.0, 1.0):
+                  r = eng.run(cfg, eng.start, end, cost)
+                  print(f"\n== {sess} cost x{cost}: end ${r.equity[-1][1]:.2f}, trades {len(r.trades)}")
+                  by_pair, by_exit = defaultdict(list), defaultdict(list)
+                  for t in r.trades:
+                      rr = t["pnl"] / max(t["equity_at_open"], 1e-9) * 100
+                      by_pair[t["symbol"]].append(rr); by_exit[t["exit"].split(" ")[0]].append(rr)
+                  for k, v in sorted(by_pair.items()):
+                      print(f"  {k:8s} n={len(v):4d} sum={sum(v):+7.1f}% avg={sum(v)/len(v):+.3f}% win={sum(x>0 for x in v)/len(v):.0%}")
+                  for k, v in sorted(by_exit.items()):
+                      print(f"  exit {k:10s} n={len(v):4d} sum={sum(v):+7.1f}%")
+          PY

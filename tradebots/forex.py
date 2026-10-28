@@ -480,7 +480,7 @@ def load_engine(strategy: str, cfg: dict, years: int = 8, cache: str | None = No
 
 def min_trades(cfg: dict) -> int:
     """Trades needed on the unseen months to judge: the daily breakout trades often, the monthly rules less."""
-    return {"trend": 20, "cot": 12}.get(cfg["forex"]["style"], 10)
+    return {"trend": 20, "cot": 12, "orb": 50}.get(cfg["forex"]["style"], 10)
 
 
 # ---- the live run -------------------------------------------------------------------------------------------

@@ -84,6 +84,28 @@ class OandaPractice:
             return pd.DataFrame(columns=["open", "high", "low", "close", "spread", "volume"])
         return pd.DataFrame(rows).set_index("t")
 
+    def history(self, pair: str, granularity: str, start: datetime, end: datetime) -> pd.DataFrame:
+        """Finished mid-price candles between two times, fetched 5,000 at a time (OANDA's limit per request).
+        Used by the lab; columns: open, high, low, close, spread (0: the lab charges OANDA's usual one)."""
+        rows, t = [], pd.Timestamp(start)
+        end_ts = pd.Timestamp(end)
+        while t < end_ts:
+            js = self._req("GET", f"/v3/instruments/{pair}/candles",
+                           params={"granularity": granularity, "from": t.isoformat(), "count": 5000, "price": "M"})
+            got = [c for c in js.get("candles", []) if c.get("complete")]
+            if not got:
+                break
+            for c in got:
+                m = c["mid"]
+                rows.append((pd.Timestamp(c["time"]), float(m["o"]), float(m["h"]), float(m["l"]), float(m["c"])))
+            nxt = pd.Timestamp(got[-1]["time"]) + pd.Timedelta(seconds=1)
+            if nxt <= t:
+                break
+            t = nxt
+        df = pd.DataFrame(rows, columns=["t", "open", "high", "low", "close"]).drop_duplicates("t").set_index("t")
+        df["spread"] = 0.0
+        return df[df.index < end_ts]
+
     # ---- orders --------------------------------------------------------------------------------
     def market_order(self, pair: str, units: int, stop: float, tag: str) -> dict:
         """Opens a trade (units > 0 buys, < 0 sells) with a safety stop that OANDA holds, so it can fill
