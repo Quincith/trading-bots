@@ -1,44 +1,46 @@
 {
- "time": "2026-10-28T15:30:19+00:00",
+ "time": "2026-10-28T16:00:32+00:00",
  "coins": {
   "BTC": {
-   "recent": 8,
-   "before": 22,
-   "buzz": 1.82,
+   "recent": 9,
+   "before": 23,
+   "buzz": 1.96,
    "tone": -1,
    "headlines": [
-    "Scaramucci Calls Elizabeth Warren \u2018the Joke of Jokes,\u2019 Accuses Her of Echoing Bank Lobbyists",
-    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
-    "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain Ahead of Federal Reserve Interest Rate Decision\u2014 SKHY, STX, V, GOOGL in Focus (UPDATED)"
+    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground",
+    "Microsoft And Google Face Monetization Test Amid Expected Fed Pause\u2014 Seagate And Oil Cloud AI Trade",
+    "Scaramucci Calls Elizabeth Warren \u2018the Joke of Jokes,\u2019 Accuses Her of Echoing Bank Lobbyists"
    ],
-   "trending": 7,
-   "rule_score": 0.21,
+   "trending": 12,
+   "rule_score": 0.24,
    "score": 0.2,
    "note": "Heavy buzz and ETF inflows, but mostly price recaps and Fed-day macro noise; modest positive."
   },
   "ETH": {
-   "recent": 1,
+   "recent": 2,
    "before": 5,
-   "buzz": 1.0,
+   "buzz": 2.0,
    "tone": 0,
    "headlines": [
+    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground",
     "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims"
    ],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 6,
+   "rule_score": 0.35,
    "score": 0.05,
    "note": "Little new ETH-specific news; mostly moves with market and tokenization trend."
   },
   "SOL": {
-   "recent": 1,
+   "recent": 2,
    "before": 4,
-   "buzz": 1.25,
+   "buzz": 2.5,
    "tone": 0,
    "headlines": [
+    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground",
     "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims"
    ],
    "trending": 4,
-   "rule_score": 0.3,
+   "rule_score": 0.6,
    "score": 0.15,
    "note": "Mirae tokenized notes on Solana is a real, though small, new adoption signal."
   },
@@ -88,16 +90,16 @@
   },
   "XRP": {
    "recent": 4,
-   "before": 8,
-   "buzz": 2.5,
+   "before": 9,
+   "buzz": 2.22,
    "tone": 0,
    "headlines": [
+    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground",
     "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
-    "Ripple CEO Opens Conference 'With a Bang:' The 4 Announcements He Made",
-    "XRP Ledger developers propose creating wallets with zero XRP for stablecoin payments"
+    "Ripple CEO Opens Conference 'With a Bang:' The 4 Announcements He Made"
    ],
-   "trending": 10,
-   "rule_score": 0.45,
+   "trending": 13,
+   "rule_score": 0.39,
    "score": 0.35,
    "note": "Ripple stablecoin rating and Robinhood deal plus XRP Ledger proposal; buzz 2.5x supports a positive lean."
   }
@@ -135,10 +137,10 @@
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 79,
+ "headlines": 80,
  "sources": {
-  "Alpaca/Benzinga": 19,
-  "crypto news sites": 60,
+  "Alpaca/Benzinga": 21,
+  "crypto news sites": 59,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-28T15:30:19+00:00"
