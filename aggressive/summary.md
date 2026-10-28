@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 05:59 UTC
+# Aggressive strategy — 2026-10-28 06:29 UTC
 
 | | |
 |---|---|
@@ -9,24 +9,23 @@
 
 ## News radar (trends forming)
 
-Read 80 headlines from the last day (Alpaca/Benzinga 21, crypto news sites 59, CoinGecko trending 15).
+Read 81 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 59, CoinGecko trending 15).
 
-- **Bithumb hack and data leak**: Korean exchange breach may weigh on sentiment and exchange-security trust, mainly hitting local-market coins. (BTC, ETH, XRP)
-- **Ripple and Robinhood RLUSD partnership**: Repeated Ripple stablecoin and bank-partnership news, but the same story has run many times, so the fresh impact is limited. (XRP)
-- **Fed decision and macro risk**: Fed meeting this week drives majors; direction uncertain, so it could move BTC, ETH, SOL, XRP, and DOGE either way. (BTC, ETH, SOL, XRP, DOGE)
+- **Fed rate decision and macro risk for BTC**: Fed meeting today drives a lot of price talk; BTC is the only coin with real headline activity right now. (BTC)
+- **Robinhood and Ripple RLUSD partnership**: Real institutional deal, but mostly older news recycled across outlets; modest effect on XRP. (XRP)
+- **Bithumb hack and data leak**: Exchange security breach in South Korea adds fear, mainly hurting sentiment around exchanges and tokens listed there. (BTC, XRP)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| DOGE | +0.10 | 0 (0.0x usual) | Buzz is 5x normal but only one mention, and it is a price recap; treat with caution. |
-| XRP | +0.10 | 0 (0.0x usual) | Ripple's RLUSD tie-up with Robinhood is real but recycled; buzz is low. |
-| SOL | +0.00 | 0 (0.0x usual) | One headline and near-normal buzz; nothing new that matters. |
-| BTC | -0.20 | 4 (0.61x usual) | Mostly recap and Fed-preview articles; Datavault BTC custody scare and Bithumb breach add mild caution. |
+| XRP | +0.10 | 0 (0.0x usual) | Ripple's RLUSD deal with Robinhood is real but largely recycled; a slight positive at most. |
+| SOL | +0.00 | 0 (0.0x usual) | No recent headlines about Solana; nothing new building. |
+| BTC | -0.10 | 6 (0.91x usual) | Fed decision uncertainty and a Bitcoin treasury firm scare; headline pace is normal, so little new signal. |
 
-Also trending, but not in our coin list: PEPE, CRV, BCH.
+Also trending, but not in our coin list: PEPE.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
