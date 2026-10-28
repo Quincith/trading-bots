@@ -112,7 +112,7 @@ address, so it can't place a real-money trade.
 | Safety stop | 2 typical daily swings away | 3 typical daily swings away |
 | Pairs | EUR/USD, GBP/USD, USD/JPY, AUD/USD, USD/CAD, USD/CHF, NZD/USD | same |
 | Decides | once a day, after the forex day ends at 5pm New York time | same (the report comes out Fridays) |
-| Loss limits (proposed) | 3% daily, 15% total | 3% daily, 15% total |
+| Loss limits | 3% daily, 15% total | 3% daily, 15% total |
 | AI | none | none |
 
 **Sizing with $100.** Forex trades are measured in **units** of currency. A "standard lot" is 100,000 units,

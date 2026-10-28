@@ -31,7 +31,7 @@ risk:
   max_total_exposure_pct: 300   # all trades together control at most 3x the account (3:1 leverage, US law allows 50:1)
   max_open_positions: 4
   max_same_usd_side: 3      # at most 3 trades that all win (or all lose) when the US dollar moves
-  # Loss limits PROPOSED, waiting for Quincy to confirm
+  # Loss limits Quincy confirmed on 2026-10-28
   max_daily_loss_pct: 3     # stop opening trades for the day after losing 3% today
   max_total_loss_pct: 15    # halt the office if it is down 15% from money put in
 
