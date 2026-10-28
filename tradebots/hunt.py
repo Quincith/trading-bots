@@ -51,7 +51,10 @@ TITLES = {"lev_trend": "Leveraged Nasdaq trend (TQQQ above the 200-day average)"
           "crypto_rotation": "Crypto rotation (strongest of BTC, ETH, SOL each week)"}
 MIN_TRADES = {"lev_trend": 5, "lev_dip": 15, "multi_trend": 8, "crypto_rotation": 10}
 CRYPTO_STYLES = ("crypto_rotation",)
-STOCKS = sorted({"QQQ", "TQQQ", "SPY", "UPRO", "GLD", "UGL", "TLT", "TMF"})
+# Added AFTER the first run, to check the winner (leveraged trend) isn't a fluke of one index or of 3x leverage:
+# the same rule, unchanged, on the S&P 500 and with 2x funds. Each is judged against holding its own index.
+CHECKS = {"lev_trend_spy3": ("SPY", "UPRO"), "lev_trend_qqq2": ("QQQ", "QLD"), "lev_trend_spy2": ("SPY", "SSO")}
+STOCKS = sorted({"QQQ", "TQQQ", "SPY", "UPRO", "GLD", "UGL", "TLT", "TMF", "QLD", "SSO"})
 
 
 def config_for(style: str, strategy: str = "aggressive") -> dict:
@@ -272,7 +275,18 @@ def engines(data: dict, start: datetime, end: datetime) -> dict[str, HuntEngine]
             syms = sorted({h["signal"], h["hold"]} if "signal" in h else set(h["pairs"]) | set(h["pairs"].values()))
             bars = frame(data["stocks"], sorted(set(syms) | {"QQQ"}))
             out[style] = HuntEngine(bars, start, end, "QQQ", min_trades=MIN_TRADES[style])
+    for name, (sig, hold) in CHECKS.items():
+        out[name] = HuntEngine(frame(data["stocks"], sorted({sig, hold, "QQQ"})), start, end, sig,
+                               min_trades=MIN_TRADES["lev_trend"])
     return out
+
+
+def check_config(name: str, strategy: str = "aggressive") -> dict:
+    sig, hold = CHECKS[name]
+    cfg = config_for("lev_trend", strategy)
+    cfg["hunt"].update(signal=sig, hold=hold)
+    cfg["title"] = f"Check: the same trend rule, {hold} while {sig} is above its 200-day average"
+    return cfg
 
 
 def load_data(years: int = 10, cache: str | None = None, end: datetime | None = None) -> tuple[dict, datetime, datetime]:
@@ -308,20 +322,20 @@ def compare(data: dict, start: datetime, end: datetime, styles=tuple(STYLES), st
     from . import lab
     rows, details, holds = [], [], []
     for style, eng in engines(data, start, end).items():
-        if style not in styles:
+        if style not in styles and style not in CHECKS:
             continue
         runner = lab.Runner(eng)
-        cfg = config_for(style, strategy)
+        cfg = check_config(style, strategy) if style in CHECKS else config_for(style, strategy)
         v, text = lab.validate(strategy, eng, runner, cfg)
         full = runner.run_many([(cfg, eng.start, eng.end, 1.0)])[0]
         free = eng.run(cfg, eng.start, eng.end, cost=0.0)
         bench = lab.pct(eng.benchmark(eng.start, eng.end))
         passed = sum(c["passed"] for c in v.checks)
-        rows.append(f"| {TITLES[style]} | {eng.start:%b %Y} | {lab.pct(full):+.1f}% ({bt.money(full.equity[-1][1])}) | "
+        rows.append(f"| {cfg['title'] if style in CHECKS else TITLES[style]} | {eng.start:%b %Y} | {lab.pct(full):+.1f}% ({bt.money(full.equity[-1][1])}) | "
                     f"{lab.pct(free):+.1f}% | {v.numbers['unseen']:+.1f}% | {bench:+.1f}% | {v.numbers['drawdown']:.1f}% | "
                     f"{len(full.trades)} | {'✅ pass' if v.kept else f'❌ {passed}/{len(v.checks)}'} |")
         details.append(text + f"\nBefore costs, the whole period would have been {lab.pct(free):+.1f}%.\n")
-        holds += [hold_row(eng, s) for s in ([eng.bench] + ([STYLES[style]["hold"]] if "hold" in STYLES[style] else []))]
+        holds += [hold_row(eng, s) for s in ([eng.bench] + ([cfg["hunt"]["hold"]] if "hold" in cfg["hunt"] else []))]
         log.warning("%s: %+.1f%% (before costs %+.1f%%), unseen %+.1f%%, drop %.1f%%, %s", style, lab.pct(full),
                     lab.pct(free), v.numbers["unseen"], v.numbers["drawdown"], "PASS" if v.kept else f"{passed}/7")
     head = ["# Hunt: four bold rules through the strategy lab", "",

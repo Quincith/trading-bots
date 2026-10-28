@@ -38,7 +38,7 @@ def test_every_rule_runs_through_the_lab_and_costs_cost_money():
     coins = {c: walk(1100, seed=10 + i, freq="D", vol=0.04) for i, c in enumerate(hunt.STYLES["crypto_rotation"]["coins"])}
     start, end = datetime(2022, 1, 1, tzinfo=timezone.utc), datetime(2026, 10, 1, tzinfo=timezone.utc)
     for style, eng in hunt.engines({"stocks": d, "crypto": coins}, start, end).items():
-        cfg = hunt.config_for(style)
+        cfg = hunt.check_config(style) if style in hunt.CHECKS else hunt.config_for(style)
         free, paid = eng.run(cfg, eng.start, eng.end, 0.0), eng.run(cfg, eng.start, eng.end, 1.0)
         assert free.trades, style
         assert paid.equity[-1][1] < free.equity[-1][1], style
