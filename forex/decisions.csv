@@ -1,1 +1,8 @@
 time,symbol,decision,confidence,risk,size_usd,note
+2026-10-28T08:36:01+00:00,EUR_USD,SKIP,,,,"Range 1.11203 to 1.11281 (7.8 pips): too narrow, fees would be over 10% of the risk. Skipped today."
+2026-10-28T08:36:01+00:00,GBP_USD,SKIP,,,,"Range 1.32850 to 1.32956 (10.6 pips): too narrow, fees would be over 10% of the risk. Skipped today."
+2026-10-28T08:36:01+00:00,USD_JPY,SKIP,,,,"Range 157.654 to 157.848 (19.4 pips): too narrow, fees would be over 10% of the risk. Skipped today."
+2026-10-28T08:36:01+00:00,AUD_USD,SKIP,,,,"Range 0.70320 to 0.70384 (6.4 pips): too narrow, fees would be over 10% of the risk. Skipped today."
+2026-10-28T08:36:01+00:00,USD_CAD,SKIP,,,,"Range 1.40577 to 1.40641 (6.4 pips): too narrow, fees would be over 10% of the risk. Skipped today."
+2026-10-28T08:36:01+00:00,USD_CHF,SKIP,,,,"Range 0.82993 to 0.83039 (4.6 pips): too narrow, fees would be over 10% of the risk. Skipped today."
+2026-10-28T08:36:01+00:00,NZD_USD,SKIP,,,,"Range 0.56024 to 0.56126 (10.2 pips): too narrow, fees would be over 10% of the risk. Skipped today."
