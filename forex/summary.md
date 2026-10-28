@@ -1,4 +1,4 @@
-# Forex office — 2026-10-28 04:29 UTC
+# Forex office — 2026-10-28 04:59 UTC
 
 _OANDA practice account. This office counts only its own trades, starting from $100.00._
 
@@ -10,7 +10,6 @@ _OANDA practice account. This office counts only its own trades, starting from $
 | Time-weighted return (ignores when deposits happened) | +0.00% |
 
 ## Notes
-- Started this office with $100.00 of the practice account's money.
 - Waiting for the opening range: 08:00 to 08:30 London time.
 
 _No AI is used in the Forex wing._
