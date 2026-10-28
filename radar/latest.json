@@ -1,18 +1,18 @@
 {
- "time": "2026-10-28T21:30:55+00:00",
+ "time": "2026-10-28T22:01:08+00:00",
  "coins": {
   "BTC": {
    "recent": 8,
-   "before": 25,
-   "buzz": 1.6,
+   "before": 26,
+   "buzz": 1.54,
    "tone": 2,
    "headlines": [
     "Bitcoin Could Steal AI\u2019s Spotlight as \u2018Fast Money Is Long Gone,\u2019 Lyn Alden Says",
     "Why Can't Bitcoin Break $80,000? Kevin O'Leary Points To Two Reasons",
     "Fed Holds Rate at 3.75%-4%, Two Officials Push for a Hike (UPDATED)"
    ],
-   "trending": 1,
-   "rule_score": 0.62,
+   "trending": 2,
+   "rule_score": 0.61,
    "score": 0.1,
    "note": "Heavy buzz, but mostly price recaps and Fed-related talk; new institutional custody and product news is modest."
   },
@@ -24,8 +24,8 @@
    "headlines": [
     "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat"
    ],
-   "trending": null,
-   "rule_score": 0.2,
+   "trending": 6,
+   "rule_score": 0.35,
    "score": 0.0,
    "note": "Only one headline and no new catalyst; nothing meaningful building."
   },
@@ -37,7 +37,7 @@
    "headlines": [
     "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat"
    ],
-   "trending": 14,
+   "trending": 9,
    "rule_score": 0.35,
    "score": 0.2,
    "note": "Mirae tokenized notes on Solana is a small real adoption signal; buzz is low."
@@ -137,10 +137,10 @@
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 75,
+ "headlines": 77,
  "sources": {
   "Alpaca/Benzinga": 19,
-  "crypto news sites": 56,
+  "crypto news sites": 58,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-28T21:30:55+00:00"
