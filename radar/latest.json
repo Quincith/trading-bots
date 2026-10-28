@@ -1,18 +1,18 @@
 {
- "time": "2026-10-28T08:29:43+00:00",
+ "time": "2026-10-28T08:59:49+00:00",
  "coins": {
   "BTC": {
-   "recent": 4,
-   "before": 34,
-   "buzz": 0.59,
+   "recent": 5,
+   "before": 32,
+   "buzz": 0.78,
    "tone": 1,
    "headlines": [
+    "Scott Bessent Has a New Strategy to Keep the Dollar on Top: \u2018Win in the Digital Asset Stack\u2019",
     "'The Best Prediction Markets Experience': Vlad Tenev Wants Robinhood Users to Have 'Choices' Too",
-    "Bitcoin treasury Datavault AI plunges 50% after firm says it can\u2019t access its BTC",
-    "Bitcoin ETF inflows climb to $176M as BTC rebounds above $80K"
+    "Bitcoin treasury Datavault AI plunges 50% after firm says it can\u2019t access its BTC"
    ],
-   "trending": null,
-   "rule_score": 0.02,
+   "trending": 12,
+   "rule_score": 0.21,
    "score": 0.1,
    "note": "Modest ETF inflows and a rebound above $80K, but mostly price recaps and Fed-meeting anticipation."
   },
@@ -33,8 +33,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 13,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines and no new news."
   },
@@ -55,8 +55,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 11,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "Searched often but no new headlines; nothing building."
   },
@@ -66,8 +66,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 7,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "Only mentioned in price-recap articles; no real catalyst."
   },
@@ -83,12 +83,14 @@
    "note": "No recent headlines and no new news."
   },
   "XRP": {
-   "recent": 0,
+   "recent": 1,
    "before": 10,
-   "buzz": 0.0,
+   "buzz": 0.5,
    "tone": 0,
-   "headlines": [],
-   "trending": 6,
+   "headlines": [
+    "Scott Bessent Has a New Strategy to Keep the Dollar on Top: \u2018Win in the Digital Asset Stack\u2019"
+   ],
+   "trending": 8,
    "rule_score": 0.15,
    "score": 0.2,
    "note": "Robinhood and Ripple RLUSD expansion is a real partnership, but the coverage is repetitive and buzz is flat."
@@ -124,11 +126,12 @@
   }
  ],
  "trending_elsewhere": [
-  "PEPE"
+  "PEPE",
+  "DOT"
  ],
- "headlines": 77,
+ "headlines": 76,
  "sources": {
-  "Alpaca/Benzinga": 21,
+  "Alpaca/Benzinga": 20,
   "crypto news sites": 56,
   "CoinGecko trending": 15
  },
