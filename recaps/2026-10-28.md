@@ -10,7 +10,7 @@ Watchful day. Scout flagged some moves, but none met the bar for a trade. The ac
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 41 times. Most active: DOGE at 218.7x normal volume, price -0.6%.
+- Scout scanned 8 coins, 42 times. Most active: DOGE at 218.7x normal volume, price -0.6%.
 - Sent for review: LTC (2x), LINK (1x).
 - Decisions: 0 buy, 3 wait, 0 skip.
 - Passed on LTC (WAIT, 55% confident): Strong 3.4x volume and uptrend, but RSI 74 is overbought with no news or sentiment support; wait for a pullback or confirmation.
@@ -34,19 +34,19 @@ Watchful day. Scout flagged some moves, but none met the bar for a trade. The ac
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $1.31 (+1.31%)
+## Copycat: up $1.14 (+1.14%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $1.31 (+1.31%) at $101.21. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $1.14 (+1.14%) at $101.04. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.90 → $101.21 (+$1.31, +1.31%).
-- Profit / loss since start: +$1.21 on $100.00 money put in.
-- Spotter read 874 insider filings from the SEC and found 17 insider purchases. Watchlist at day end: 27 stocks.
+- Account value: $99.90 → $101.04 (+$1.14, +1.14%).
+- Profit / loss since start: +$1.04 on $100.00 money put in.
+- Spotter read 977 insider filings from the SEC and found 20 insider purchases. Watchlist at day end: 28 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 3 insiders bought $1,771,951 at about $15.38: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.69 (-$0.25 unrealized); CHCO $19.60 (-$0.39 unrealized); MSM $20.70 (+$0.71 unrealized); NBIS $20.81 (+$0.93 unrealized); STC $20.15 (+$0.24 unrealized).
+- Holding: BBT $19.69 (-$0.25 unrealized); CHCO $19.60 (-$0.39 unrealized); MSM $20.70 (+$0.71 unrealized); NBIS $20.64 (+$0.76 unrealized); STC $20.15 (+$0.24 unrealized).
 
 ## Forex: flat
 
