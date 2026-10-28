@@ -1,36 +1,42 @@
 {
- "time": "2026-10-28T01:29:17+00:00",
+ "time": "2026-10-28T01:59:21+00:00",
  "coins": {
   "BTC": {
-   "recent": 0,
-   "before": 38,
-   "buzz": 0.0,
+   "recent": 1,
+   "before": 37,
+   "buzz": 0.14,
    "tone": 0,
-   "headlines": [],
-   "trending": 6,
-   "rule_score": 0.15,
+   "headlines": [
+    "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
+   ],
+   "trending": 1,
+   "rule_score": 0.3,
    "score": -0.1,
    "note": "Price swings ahead of Fed meeting; quantum-risk worries and profit-taking are mild negatives."
   },
   "ETH": {
-   "recent": 0,
-   "before": 8,
-   "buzz": 0.0,
+   "recent": 1,
+   "before": 7,
+   "buzz": 0.71,
    "tone": 0,
-   "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "headlines": [
+    "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
+   ],
+   "trending": 11,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No real new catalyst; OpenAI ETH headline is noise."
   },
   "SOL": {
-   "recent": 0,
-   "before": 5,
-   "buzz": 0.0,
+   "recent": 1,
+   "before": 4,
+   "buzz": 1.25,
    "tone": 0,
-   "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "headlines": [
+    "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
+   ],
+   "trending": 5,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No fresh Solana-specific news in the last day."
   },
@@ -57,11 +63,13 @@
    "note": "Chainlink data used by CF Benchmarks onchain is a faint positive, not a clear catalyst."
   },
   "DOGE": {
-   "recent": 0,
-   "before": 2,
-   "buzz": 0.0,
+   "recent": 1,
+   "before": 1,
+   "buzz": 5.0,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
+   ],
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
@@ -79,11 +87,13 @@
    "note": "No fresh Litecoin-specific news in the last day."
   },
   "XRP": {
-   "recent": 0,
-   "before": 12,
-   "buzz": 0.0,
+   "recent": 1,
+   "before": 11,
+   "buzz": 0.45,
    "tone": 0,
-   "headlines": [],
+   "headlines": [
+    "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
+   ],
    "trending": 14,
    "rule_score": 0.15,
    "score": 0.2,
@@ -119,11 +129,13 @@
    ]
   }
  ],
- "trending_elsewhere": [],
- "headlines": 80,
+ "trending_elsewhere": [
+  "PEPE"
+ ],
+ "headlines": 79,
  "sources": {
   "Alpaca/Benzinga": 23,
-  "crypto news sites": 57,
+  "crypto news sites": 56,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-28T01:29:17+00:00"
