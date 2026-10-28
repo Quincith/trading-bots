@@ -126,6 +126,24 @@ ORB_KNOBS = [
     Knob("forex.max_cost_pct", 5, 30, 2.5, "Skip days when fees would be more than this % of the risk (0 = off)", 0),
 ]
 FOREX_STRATEGIES = ("forex", "fxcopy")
+# The playbook rules (playbook.py) that Aggressive and Medium can be tested with in place of Scout & co.
+PLAYBOOK_KNOBS = {
+    "trend": [Knob("playbook.fast_days", 20, 100, 10, "Fast average: this many days"),
+              Knob("playbook.slow_days", 100, 300, 25, "Slow average: this many days"),
+              Knob("playbook.stop_atr_mult", 1.5, 6.0, 0.5, "Safety stop this many typical daily swings (ATR) below the entry")],
+    "breakout": [Knob("playbook.entry_days", 10, 60, 5, "Buy a close above the highest price of this many days"),
+                 Knob("playbook.exit_days", 5, 30, 5, "Sell a close below the lowest price of this many days"),
+                 Knob("playbook.min_volume_ratio", 1.0, 3.0, 0.25, "Volume must be this many times normal"),
+                 Knob("playbook.stop_atr_mult", 1.0, 5.0, 0.5, "Safety stop this many typical daily swings (ATR) below the entry")],
+    "swing": [Knob("playbook.oversold", 20, 40, 5, "The first low's momentum score (RSI) must be under this"),
+              Knob("playbook.exit_rsi", 55, 80, 5, "Sell when the momentum score (RSI) gets above this"),
+              Knob("playbook.max_hold_bars", 30, 180, 12, "Sell after this many 4-hour candles regardless")],
+    "daytrade": [Knob("playbook.range_minutes", 15, 120, 15, "The opening range is the first this many minutes of the day"),
+                 Knob("playbook.entry_hours", 1, 8, 1, "Only buy a break within this many hours after the range")],
+    "scalp": [Knob("playbook.stop_atr_mult", 0.5, 3.0, 0.25, "Stop this many typical candle swings (ATR) below the entry"),
+              Knob("playbook.target_atr_mult", 0.5, 4.0, 0.25, "Profit goal this many typical candle swings above the entry"),
+              Knob("playbook.max_hold_bars", 6, 48, 6, "Sell after this many 5-minute candles regardless")],
+}
 
 
 def knobs_for(strategy: str, cfg: dict | None = None) -> list[Knob]:
@@ -133,6 +151,8 @@ def knobs_for(strategy: str, cfg: dict | None = None) -> list[Knob]:
         style = (cfg or load_config(strategy))["forex"]["style"]
         return {"trend": FOREX_KNOBS, "cot": FXCOPY_KNOBS, "momentum": MOMENTUM_KNOBS, "carry": CARRY_KNOBS,
                 "orb": ORB_KNOBS}[style]
+    if cfg and cfg.get("playbook"):
+        return PLAYBOOK_KNOBS[cfg["playbook"]["style"]]
     return {"copycat": COPYCAT_KNOBS}.get(strategy, CRYPTO_KNOBS)
 
 
