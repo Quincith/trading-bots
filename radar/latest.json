@@ -1,18 +1,17 @@
 {
- "time": "2026-10-28T00:29:15+00:00",
+ "time": "2026-10-28T00:59:18+00:00",
  "coins": {
   "BTC": {
-   "recent": 3,
-   "before": 35,
-   "buzz": 0.43,
+   "recent": 2,
+   "before": 36,
+   "buzz": 0.28,
    "tone": 2,
    "headlines": [
     "Bitcoin Will \u2018Never Break Its All-Time High Again,\u2019 All-In Podcast Host Jason Calacanis Says",
-    "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure",
-    "Quantum fears already limiting Bitcoin\u2019s growth, Stacks founder says"
+    "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure"
    ],
    "trending": null,
-   "rule_score": 0.09,
+   "rule_score": 0.06,
    "score": 0.0,
    "note": "Mostly price recaps and forecasts ahead of the Fed; buzz is low, nothing new building."
   },
@@ -55,8 +54,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 13,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "Most-searched but zero recent headlines; search interest alone is not a catalyst."
   },
@@ -83,15 +82,13 @@
    "note": "No recent headlines or buzz; nothing new building."
   },
   "XRP": {
-   "recent": 1,
-   "before": 11,
-   "buzz": 0.45,
-   "tone": -1,
-   "headlines": [
-    "Treasury's Bessent sees crypto as America's next tool for keeping the U.S. dollar on top"
-   ],
+   "recent": 0,
+   "before": 12,
+   "buzz": 0.0,
+   "tone": 0,
+   "headlines": [],
    "trending": null,
-   "rule_score": -0.1,
+   "rule_score": 0.0,
    "score": 0.2,
    "note": "Ripple RLUSD and Robinhood deals are real but partly repeated; buzz is low at 0.45x."
   }
@@ -125,13 +122,12 @@
   }
  ],
  "trending_elsewhere": [
-  "UNI",
   "PEPE"
  ],
- "headlines": 79,
+ "headlines": 80,
  "sources": {
   "Alpaca/Benzinga": 23,
-  "crypto news sites": 56,
+  "crypto news sites": 57,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-28T00:29:15+00:00"
