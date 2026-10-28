@@ -314,6 +314,22 @@ Good to know:
 - Trying many ideas on the same months makes a lucky pass more likely, even with these checks. The report says how many ideas were already tested on the same months, and a kept change still has to prove itself on paper before any real money.
 - Cost: one Claude Opus call per strategy per week, a few cents.
 
+## Playbook test (the five textbook kinds of trading)
+
+**Actions → Playbook test → Run workflow** tests the five classic kinds of trading on the past 5 years of crypto prices, for both Aggressive and Medium, with Alpaca's fees, and puts each through the strategy lab's checks against just holding Bitcoin. It only reports; it changes nothing. The rules live in `tradebots/playbook.py`, with the textbook settings fixed before the first test:
+
+| Rule | In plain words |
+|---|---|
+| Trend following | Buy when the 50-day average price crosses above the 200-day average; sell when it crosses back below. |
+| Breakout | Buy when a coin closes above its 20-day high on 1.5x normal volume; sell below its 10-day low. |
+| Swing | On 4-hour candles, buy when the price makes a lower low but the momentum score (RSI) makes a higher low from oversold (a "bullish divergence"); sell when RSI tops 70 or after 14 days. |
+| Day trading | Buy a break above the first 30 minutes' high after midnight UTC; stop at that range's low; sell everything by the end of the day. |
+| Scalping | On 5-minute candles, buy when the 9-candle average crosses above the 21-candle one in an uptrend; small profit goal, smaller stop, out within an hour. |
+
+**Result (October 2026): none passed.** Over Oct 2021 to Oct 2026, simply holding Bitcoin made +90%. Trend following did best (Medium +24%, Aggressive +46%), but it lost money on the earlier years and its worst drop (35% to 56%) is far deeper than the loss limits. Breakout and swing roughly broke even before fees and lost after them. Day trading and scalping lost over 90%: a round trip costs about 0.6% in fees and slip, more than a typical 5- or 15-minute move. Arbitrage (buying on one exchange and selling on another) can't be tested or run with one Alpaca paper account.
+
+Alpaca can't bet on a fall in crypto ("shorting"), so every rule only buys. The day-trade and scalp results also suffer from thin trading on Alpaca's own market: many of its 5- and 15-minute candles have no trades at all.
+
 ## Buttons you might need
 
 All of these are under **Actions → Control panel → Run workflow**:
@@ -351,4 +367,4 @@ python -m pytest -q
 ALPACA_MEDIUM_KEY_ID=... ALPACA_MEDIUM_SECRET_KEY=... python -m tradebots run --strategy medium --dry-run
 ```
 
-Code map: `tradebots/bots/` (one file per bot), `tradebots/pipeline.py` (runs the team), `tradebots/copycat.py` and `tradebots/sec.py` (Copycat and the SEC insider feed; `python -m tradebots copycat-preview` shows the latest insider buys with no keys), `tradebots/alpaca.py` (paper broker and market data), `tradebots/ai.py` (Claude), `tradebots/store.py` (memory and deposit-adjusted returns), `tradebots/backtest.py` (replay over past prices), `tradebots/lab.py` (strategy lab checks; `python -m tradebots.lab --strategy medium --set filters.btc_ema_bars=200` tests one change), `tradebots/improve.py` (weekly loop with Claude), `tradebots/insider_history.py` (past SEC insider buys for Copycat), `tradebots/bots/filters.py` (optional entry filters).
+Code map: `tradebots/bots/` (one file per bot), `tradebots/pipeline.py` (runs the team), `tradebots/copycat.py` and `tradebots/sec.py` (Copycat and the SEC insider feed; `python -m tradebots copycat-preview` shows the latest insider buys with no keys), `tradebots/alpaca.py` (paper broker and market data), `tradebots/ai.py` (Claude), `tradebots/store.py` (memory and deposit-adjusted returns), `tradebots/backtest.py` (replay over past prices), `tradebots/lab.py` (strategy lab checks; `python -m tradebots.lab --strategy medium --set filters.btc_ema_bars=200` tests one change), `tradebots/improve.py` (weekly loop with Claude), `tradebots/insider_history.py` (past SEC insider buys for Copycat), `tradebots/bots/filters.py` (optional entry filters), `tradebots/playbook.py` (the five textbook kinds of trading, lab replay only; `python -m tradebots.playbook --style trend` tests one).
