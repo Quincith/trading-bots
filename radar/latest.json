@@ -1,16 +1,17 @@
 {
- "time": "2026-10-28T02:29:22+00:00",
+ "time": "2026-10-28T02:59:22+00:00",
  "coins": {
   "BTC": {
-   "recent": 1,
+   "recent": 2,
    "before": 36,
-   "buzz": 0.14,
+   "buzz": 0.28,
    "tone": 0,
    "headlines": [
+    "Netanyahu\u2019s Odds Rise Among Crypto Punters Even as Exit Polls Indicate Israel PM Faces Uncertain Path Back to Power",
     "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
    ],
-   "trending": 4,
-   "rule_score": 0.3,
+   "trending": 5,
+   "rule_score": 0.01,
    "score": -0.1,
    "note": "Mostly price-move and analyst-forecast headlines ahead of the Fed; low buzz and no clear new catalyst."
   },
@@ -35,7 +36,7 @@
    "headlines": [
     "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
    ],
-   "trending": 5,
+   "trending": 6,
    "rule_score": 0.15,
    "score": 0.1,
    "note": "Only one recent headline with slightly above-normal buzz; no clear Solana-specific catalyst found."
@@ -94,8 +95,8 @@
    "headlines": [
     "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
    ],
-   "trending": 12,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.3,
    "note": "Robinhood and Ripple RLUSD expansion is a real utility story, though some coverage is repeated and buzz is modest."
   }
@@ -131,9 +132,9 @@
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 79,
+ "headlines": 80,
  "sources": {
-  "Alpaca/Benzinga": 22,
+  "Alpaca/Benzinga": 23,
   "crypto news sites": 57,
   "CoinGecko trending": 15
  },

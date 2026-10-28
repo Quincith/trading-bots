@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 02:29 UTC
+# Aggressive strategy — 2026-10-28 02:59 UTC
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## News radar (trends forming)
 
-Read 79 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 57, CoinGecko trending 15).
+Read 80 headlines from the last day (Alpaca/Benzinga 23, crypto news sites 57, CoinGecko trending 15).
 
 - **Ripple/Robinhood RLUSD partnership expansion**: Several outlets report Robinhood adopting Ripple's RLUSD stablecoin; a real utility story, though some items repeat the same news. (XRP)
 - **Tokenized stocks and onchain Wall Street products**: Nasdaq-100 fund on Stellar, CF Benchmarks onchain pricing, and OKX-ICE objections suggest growing institutional tokenization interest. (XRP, ETH, SOL)
@@ -21,7 +21,7 @@ Read 79 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 57, C
 | ETH | +0.10 | 1 (0.71x usual) | Few fresh headlines; tokenized stock and onchain fund news is mildly supportive but not specific to ETH. |
 | SOL | +0.10 | 1 (1.25x usual) | Only one recent headline with slightly above-normal buzz; no clear Solana-specific catalyst found. |
 | DOGE | +0.05 | 1 (5.0x usual) | Buzz is 5x normal, but the only mention is a generic price-rise recap, so it is not a real catalyst. |
-| BTC | -0.10 | 1 (0.14x usual) | Mostly price-move and analyst-forecast headlines ahead of the Fed; low buzz and no clear new catalyst. |
+| BTC | -0.10 | 2 (0.28x usual) | Mostly price-move and analyst-forecast headlines ahead of the Fed; low buzz and no clear new catalyst. |
 
 Also trending, but not in our coin list: PEPE.
 
@@ -30,4 +30,4 @@ Also trending, but not in our coin list: PEPE.
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_
