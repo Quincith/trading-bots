@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 23 times. Most active: DOGE at 136.5x normal volume, price -0.5%.
+- Scout scanned 8 coins, 24 times. Most active: DOGE at 136.5x normal volume, price -0.5%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,26 +23,26 @@ Watchful day. Scout flagged some moves, but none met the bar for a trade. The ac
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 5 times. Most active: BTC at 11.4x normal volume, price +0.3%.
+- Scout scanned 8 coins, 6 times. Most active: BTC at 11.4x normal volume, price +0.3%.
 - Sent for review: LINK (1x).
 - Decisions: 0 buy, 1 wait, 0 skip.
 - Passed on LINK (WAIT, 60% confident): Uptrend with strong volume, but no news catalyst, neutral sentiment, and RSI near 68. Medium style needs alignment, so recheck next run.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.46 (+0.46%)
+## Copycat: up $0.51 (+0.51%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.46 (+0.46%) at $100.36. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.51 (+0.51%) at $100.41. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.90 → $100.36 (+$0.46, +0.46%).
-- Profit / loss since start: +$0.36 on $100.00 money put in.
+- Account value: $99.90 → $100.41 (+$0.51, +0.51%).
+- Profit / loss since start: +$0.41 on $100.00 money put in.
 - Spotter read 52 insider filings from the SEC and found 4 insider purchases. Watchlist at day end: 22 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 3 insiders bought $1,771,951 at about $15.38: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.79 (-$0.15 unrealized); CHCO $19.51 (-$0.48 unrealized); MSM $20.21 (+$0.22 unrealized); NBIS $20.78 (+$0.90 unrealized); STC $19.81 (-$0.10 unrealized).
+- Holding: BBT $19.79 (-$0.15 unrealized); CHCO $19.51 (-$0.48 unrealized); MSM $20.21 (+$0.22 unrealized); NBIS $20.83 (+$0.95 unrealized); STC $19.81 (-$0.10 unrealized).
 
 ## Forex: flat
 
