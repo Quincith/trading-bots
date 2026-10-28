@@ -136,7 +136,21 @@ the trend themselves.
 
 **Testing.** The strategy lab replays both offices over the last **8 years** of daily prices (from OANDA once
 its key is saved, otherwise free from Dukascopy), charging the spread (the buy/sell gap, at least OANDA's typical one), half a pip of
-slippage per trade, and 2% a year of overnight interest. It's compared with **doing nothing** (keeping the cash).
+slippage per trade, and overnight interest (the real gap between the two countries' central bank rates, from the
+BIS, plus about 2% a year that OANDA keeps). It's compared with **doing nothing** (keeping the cash).
+
+**Results so far (Oct 2018 to Oct 2026, $100 start): every rule failed, so both offices are switched off**
+(`enabled: false` in their configs; dry runs still work):
+
+| Rule | $100 became | Unseen months | Why it failed |
+|---|---|---|---|
+| Trend breakout (Forex office) | $39 | -35% | loses even with zero fees; most breakouts reversed |
+| Copy hedge funds (Copycat FX office) | $90 | -7% | about break-even before fees |
+| 12-month momentum (`style: momentum`) | $80 | -11% | loses before fees too |
+| Carry trade (`style: carry`) | $94 | +0.7% | lost on the study years and with double fees; only 5 trades to judge |
+
+The last two were a second try with their textbook settings fixed before the test, so the lab couldn't fish
+for a lucky result.
 To run the check yourself: **Actions → Strategy lab → Run workflow**, pick forex or fxcopy (leave "change" empty
 and Claude suggests an improvement, like for the other strategies), or locally
 `python -m tradebots.lab --strategy forex --validate`.
