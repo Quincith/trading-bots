@@ -1,14 +1,14 @@
 """The Forex wing: two offices that trade currency pairs on OANDA practice (demo) accounts.
 
-  Forex office ("trend"): a classic trend-following rule, the one the famous 1980s "Turtle traders" used.
-      Buy a currency pair when it closes above its highest price of the last 55 days and is above its
-      200-day average; sell it (bet it falls) when it closes below its 55-day low and is below its average.
-      Get out when it closes past the opposite 20-day high/low, or when the safety stop is hit.
+  Forex office ("orb", see orb.py): a day trade at the London open. It marks each pair's high and low from
+      8:00 to 8:30 London time, buys a break above that range or sells a break below it, and closes
+      everything by 16:00. It started with "trend" (the 1980s "Turtle traders" breakout), which failed the lab.
+      "momentum" and "carry" are two more daily rules the lab tested; they failed too.
   Copycat FX office ("cot"): copies the big hedge funds. Every Friday the CFTC publishes how many currency
       futures the "leveraged funds" hold. When their net bet on a currency is large (10%+ of all open
       contracts), copy it; get out when their net bet flips to the other side, or the safety stop is hit.
 
-Both act once a day, after the forex day ends (5pm New York). Each trade risks about 1% of the account:
+The daily rules act once a day, after the forex day ends (5pm New York). Each trade risks about 1% of the account:
 the size is set so that hitting the safety stop loses about $1 on $100. OANDA holds the stop, so it fills
 even between the bot's 30-minute checks. No AI is used.
 
@@ -210,6 +210,11 @@ def rule_text(fx: dict) -> str:
     if style == "carry":
         return (f"On the first day of each month, buys currencies that pay at least {fx['carry_enter_pct']:g} "
                 f"points more interest than the other currency in the pair (sells the opposite), to earn the gap.")
+    if style == "orb":
+        city = {"london": "London", "newyork": "New York"}[fx["session"]]
+        return (f"Each weekday, marks each pair's high and low in the first {fx['range_minutes']} minutes after "
+                f"{city} opens (8am there), buys if the price breaks above that range or sells if it breaks below "
+                f"within {fx['entry_hours']} hours, and closes everything by {fx['exit_hour']}:00 {city} time.")
     return (f"Copies hedge funds' currency bets from the CFTC's weekly report when their net bet is "
             f"{fx['min_net_pct']:g}%+ of all contracts, and gets out when it flips.")
 
@@ -217,7 +222,8 @@ def rule_text(fx: dict) -> str:
 def exit_text(fx: dict, direction: int) -> str:
     return {"trend": f"closed past its {fx.get('exit_days')}-day {'low' if direction > 0 else 'high'}",
             "momentum": "its 12-month change turned the other way",
-            "carry": "the interest rate gap shrank"}.get(fx["style"], "the hedge funds' bet shrank or flipped")
+            "carry": "the interest rate gap shrank",
+            "orb": "end of the trading session"}.get(fx["style"], "the hedge funds' bet shrank or flipped")
 
 
 def cot_signal(pair: str, close: float, a: float, cot_now: dict, fx: dict) -> Signal:
@@ -504,25 +510,18 @@ def run(cfg: dict, broker, store: Store, kill_switch: bool = False, dry_run: boo
     if st["day"] != today:
         st["day"], st["day_start_equity"] = today, equity
 
-    # Trades OANDA closed on its own (a safety stop was hit)
-    open_now = {t["id"]: t for t in broker.open_trades()}
-    for p, plan in list(st["plans"].items()):
-        if plan["trade_id"] in open_now:
-            continue
-        done = broker.closed_trade(plan["trade_id"]) or {"price": plan["stop"], "pl": 0.0}
-        store.append("trades.csv", {"time": _iso(now), "symbol": p, "side": "sell",
-                                    "usd": f"{plan['notional'] + done['pl']:.2f}", "price": done["price"],
-                                    "reason": f"stop hit ({done['price']:.{decimals(p)}f}), {money(done['pl'])}"})
-        res.exits.append(f"SOLD {label(p)}: stop hit at {done['price']:.{decimals(p)}f}, {money(done['pl'])}")
-        st["plans"].pop(p)
-
-    bars = {p: broker.daily_bars(p, int(cfg["lookback_days"])) for p in cfg["markets"]["pairs"]}
-    bars = {p: df for p, df in bars.items() if len(df)}
-    newest = max((df.index[-1] for df in bars.values()), default=None)
     gate = risk.account_gate(equity, st["day_start_equity"], store.net_deposits(), kill_switch, st["halted_reason"], rk)
     res.gate = gate.reason
     if gate.halt_strategy:
         st["halted_reason"] = gate.reason
+    if fx["style"] == "orb":     # the day-trade rule has its own timetable
+        from . import orb
+        return orb.run_live(cfg, broker, store, res, equity, gate, now, dry_run)
+    stops_hit(res, store, broker, now)
+
+    bars = {p: broker.daily_bars(p, int(cfg["lookback_days"])) for p in cfg["markets"]["pairs"]}
+    bars = {p: df for p, df in bars.items() if len(df)}
+    newest = max((df.index[-1] for df in bars.values()), default=None)
 
     fxinfo = {"style": fx["style"], "pairs": {}, "bar": newest.isoformat() if newest is not None else None}
     res.forex = fxinfo
@@ -612,6 +611,21 @@ def run(cfg: dict, broker, store: Store, kill_switch: bool = False, dry_run: boo
     if not dry_run:
         st["last_bar"], st["last_signals"] = newest.isoformat(), fxinfo["pairs"]
     return _done(res, store, broker, equity, now, bars)
+
+
+def stops_hit(res: RunResult, store: Store, broker, now: datetime) -> None:
+    """Trades OANDA closed on its own (a safety stop was hit) since the last check: log them."""
+    st = store.state
+    open_now = {t["id"] for t in broker.open_trades()}
+    for p, plan in list(st["plans"].items()):
+        if plan["trade_id"] in open_now:
+            continue
+        done = broker.closed_trade(plan["trade_id"]) or {"price": plan["stop"], "pl": 0.0}
+        store.append("trades.csv", {"time": _iso(now), "symbol": p, "side": "sell",
+                                    "usd": f"{plan['notional'] + done['pl']:.2f}", "price": done["price"],
+                                    "reason": f"stop hit ({done['price']:.{decimals(p)}f}), {money(done['pl'])}"})
+        res.exits.append(f"SOLD {label(p)}: stop hit at {done['price']:.{decimals(p)}f}, {money(done['pl'])}")
+        st["plans"].pop(p)
 
 
 def _done(res: RunResult, store: Store, broker, equity: float, now: datetime, bars: dict) -> RunResult:

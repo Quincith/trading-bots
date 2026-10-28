@@ -45,9 +45,10 @@ COPYCAT_JOBS = {
 # The Forex wing's two offices have three rooms each: a spotter, Risk and Decision.
 FOREX_JOBS = {
     "forex": {
-        "scout": "Checks 7 currency pairs once a day for breakouts: a close past the highest or lowest price of 55 days.",
-        "risk": "The safety officer. Sizes each trade to risk about 1% of the account and caps leverage at 3:1.",
-        "decision": "Plain rule: buy an upward breakout, sell a downward one, both only with the long-term trend.",
+        "scout": "Marks each of 7 currency pairs' opening range at the London open: the high and low from 8:00 to 8:30.",
+        "risk": "The safety officer. Sizes each trade to risk about 1% of the account, caps leverage at 3:1, and "
+                "skips days when fees would eat too much.",
+        "decision": "Plain rule: buy a break above the range, sell a break below it, close everything by 16:00 London.",
     },
     "fxcopy": {
         "scout": "Reads the CFTC's weekly report to see which currencies the big hedge funds are betting on.",
@@ -253,7 +254,7 @@ def forex_stations(run: dict | None, cfg: dict) -> dict:
             s[k]["say"] = "Waiting for the first run."
         return s
     fx = run.get("forex") or {}
-    pairs, cot = fx.get("pairs") or {}, fx.get("style") == "cot"
+    pairs, cot, orb = fx.get("pairs") or {}, fx.get("style") == "cot", fx.get("style") == "orb"
     pair = lambda p: p.replace("_", "/")
     sc, rk, de = s["scout"], s["risk"], s["decision"]
     hot = [(p, r) for p, r in pairs.items() if r["direction"]]
@@ -262,11 +263,17 @@ def forex_stations(run: dict | None, cfg: dict) -> dict:
                       key=lambda x: -abs(x[1]))
         sc["say"] = (f"Hedge funds' biggest bets (report of {fx.get('report')}): "
                      + ", ".join(f"{c} {n:+.0f}%" for c, n in bets[:3]) + "." if bets else "No hedge fund report read yet.")
+    elif orb:
+        waiting = [p for p, r in pairs.items() if r["decision"] == "ORDERS"]
+        sc["say"] = (f"Broke out of the opening range: {', '.join(pair(p) for p, _ in hot)}." if hot else
+                     f"Marked today's opening range. Waiting orders on {', '.join(pair(p) for p in waiting)}." if waiting else
+                     f"Marked today's opening range on {len(pairs)} pairs. No trade yet." if pairs else
+                     "Waiting for the London open (8:00 to 8:30 London time).")
     else:
         sc["say"] = (f"Breakout in {', '.join(pair(p) for p, _ in hot)}." if hot else
                      f"Checked {len(pairs)} pairs. No breakouts today." if pairs else "Waiting for the forex day to end.")
     sc["status"] = "found" if hot else "working" if pairs else "resting"
-    if not run["scanned"] and pairs:
+    if not run["scanned"] and pairs and not orb:
         sc["say"] += " Next check when the forex day ends (5pm New York)."
     sc["detail"] = [f"{pair(p)} {r['price']:.5g}: {r['note']}" for p, r in pairs.items()]
     lim = cfg["risk"]
@@ -399,7 +406,9 @@ def forex_data(store: Store, cfg: dict, days: list[str], run_count: int, lv: dic
     rules = (f"Rules for this office: trades 7 currency pairs on an OANDA practice account. "
              + forex.rule_text(fx) + " "
              + f"Each trade risks about {rk['risk_per_trade_pct']}% of the account; leverage at most "
-               f"{rk['max_total_exposure_pct'] / 100:g}:1. Decides once a day, after 5pm New York time.")
+               f"{rk['max_total_exposure_pct'] / 100:g}:1. "
+             + ("Day trades only: nothing is held overnight." if fx["style"] == "orb"
+                else "Decides once a day, after 5pm New York time."))
     return {
         "name": cfg["name"], "title": cfg.get("title", cfg["name"].title()), "wing": "forex",
         "crew": [{"id": k, "name": n, "job": FOREX_JOBS[cfg["name"]][k]} for k, n, _ in CREW if k in FOREX_IDS],

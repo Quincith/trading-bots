@@ -8,7 +8,10 @@ from tradebots import forex, fxdata, lab, runlog, weekly, world
 from tradebots.__main__ import ROOT
 from tradebots.store import Store
 
-FX = yaml.safe_load((ROOT / "config/forex.yaml").read_text())
+FX_FILE = yaml.safe_load((ROOT / "config/forex.yaml").read_text())
+# the Turtle trend rule the Forex office started with: most tests below use it
+TREND = {"style": "trend", "entry_days": 55, "exit_days": 20, "trend_ema_days": 200, "atr_days": 20, "stop_atr_mult": 2.0}
+FX = {**FX_FILE, "forex": TREND}
 COPY = yaml.safe_load((ROOT / "config/fxcopy.yaml").read_text())
 
 
@@ -186,9 +189,9 @@ def test_switched_off_office_does_not_trade(tmp_path, monkeypatch):
     monkeypatch.setenv("DATA_DIR", str(tmp_path))
     monkeypatch.delenv("DRY_RUN", raising=False)
     monkeypatch.setattr(cli, "broker_for", lambda cfg: broker)
-    assert FX["enabled"] is False and COPY["enabled"] is False
-    assert cli.main(["run", "--strategy", "forex"]) == 0
-    assert not broker.orders and not (tmp_path / "forex" / "summary.md").exists()
+    assert COPY["enabled"] is False and FX_FILE["enabled"] is True
+    assert cli.main(["run", "--strategy", "fxcopy"]) == 0
+    assert not broker.orders and not (tmp_path / "fxcopy" / "summary.md").exists()
 
 
 MOM = {"style": "momentum", "momentum_days": 365, "atr_days": 20, "stop_atr_mult": 5.0}
@@ -293,3 +296,132 @@ def test_orb_simulate_and_validate():
     assert losses and min(losses) > -0.015
     v, text = lab.validate("forex", eng, lab.Runner(eng, 1), cfg)
     assert len(v.checks) == 7 and eng.min_trades == 50
+
+
+class FakeOrbOanda(FakeOanda):
+    """OANDA with 5-minute candles and waiting (stop) orders."""
+
+    def __init__(self, m5, nav=100000.0):
+        super().__init__({}, nav)
+        self.m5, self.pending, self.cancelled, self.fills = m5, {}, [], {}
+
+    def history(self, pair, granularity, start, end):
+        df = self.m5.get(pair, pd.DataFrame(columns=["open", "high", "low", "close", "spread"],
+                                            index=pd.DatetimeIndex([], tz="UTC")))
+        done = df.index + pd.Timedelta(minutes=5) < pd.Timestamp(end)    # only finished candles (OANDA lags a little)
+        return df[(df.index >= pd.Timestamp(start)) & done]
+
+    def stop_order(self, pair, units, price, stop, expires, tag):
+        oid = f"o{len(self.orders) + 1}"
+        self.orders.append((pair, units, stop))
+        self.pending[oid] = {"id": oid, "pair": pair, "units": units, "price": price, "stop": stop, "expires": expires}
+        return {"order_id": oid, "filled": False, "price": None, "trade_id": None, "reason": ""}
+
+    def pending_orders(self):
+        return list(self.pending.values())
+
+    def cancel_order(self, oid):
+        self.cancelled.append(oid)
+        self.pending.pop(oid, None)
+
+    def fill(self, oid, opened="2026-10-29T09:00:00Z"):
+        o = self.pending.pop(oid)
+        tid = f"t{oid}"
+        self.trades.append({"id": tid, "pair": o["pair"], "units": o["units"], "price": o["price"], "unrealized": 0.0,
+                            "opened": opened, "stop": o["stop"]})
+        self.fills[oid] = tid
+        return tid
+
+    def get_order(self, oid):
+        return {"state": "FILLED" if oid in self.fills else "CANCELLED", "trade_id": self.fills.get(oid), "reason": ""}
+
+    def trade(self, tid):
+        t = next(t for t in self.trades if t["id"] == tid)
+        return {"state": "CLOSED" if tid in self.closed else "OPEN", "price": t["price"], "opened": t["opened"],
+                "units": t["units"], "pl": 0.0}
+
+
+def london_day(day="2026-10-29", hi=1.1020, lo=1.0980, after=None, start=1.1000):
+    """One day of EUR/USD 5-minute candles in UTC (London is on UTC in winter): a range from 08:00 to 08:30,
+    then quiet candles inside it unless `after` gives (time, high, low) candles."""
+    idx = pd.date_range(f"{day} 07:00", f"{day} 17:00", freq="5min", tz="UTC", inclusive="left")
+    df = pd.DataFrame({"open": start, "high": start + 0.0005, "low": start - 0.0005, "close": start, "spread": 0.0}, index=idx)
+    df.loc[pd.Timestamp(f"{day} 08:10", tz="UTC"), "high"] = hi
+    df.loc[pd.Timestamp(f"{day} 08:20", tz="UTC"), "low"] = lo
+    for t, h, l in after or []:
+        df.loc[pd.Timestamp(f"{day} {t}", tz="UTC"), ["high", "low"]] = [h, l]
+    return df
+
+
+def test_live_orb_places_waiting_orders_and_closes_by_four(tmp_path):
+    from tradebots import orb
+    cfg = FX_FILE
+    assert cfg["forex"]["style"] == "orb" and cfg["forex"]["max_cost_pct"] == 10
+    narrow = london_day(hi=150.03, lo=149.98, start=150.0)          # a 5-pip yen range: fees too big a share
+    narrow[["open", "close"]], narrow["high"], narrow["low"] = 150.0, narrow["high"].clip(upper=150.03), narrow["low"].clip(lower=149.98)
+    broker = FakeOrbOanda({"EUR_USD": london_day(), "USD_JPY": narrow})
+    store = Store(tmp_path, "forex")
+    t = lambda hm: datetime.fromisoformat(f"2026-10-29T{hm}:00+00:00")
+    res = forex.run(cfg, broker, store, now=t("07:45"))
+    assert not broker.orders and "Waiting for the opening range" in res.notes[-1]
+    # 08:35: a 40-pip range on EUR/USD gets a buy order above it and a sell order below it
+    res = forex.run(cfg, broker, store, now=t("08:35"))
+    assert res.scanned and sorted(u > 0 for _, u, _ in broker.orders) == [False, True]
+    (p1, u1, s1), (p2, u2, s2) = broker.orders
+    assert p1 == p2 == "EUR_USD" and abs(s1 - 1.0980) < 1e-9 and abs(s2 - 1.1020) < 1e-9
+    # $1 of risk over a 40-pip stop would be 250 units ($275), but one trade controls at most the $100 account
+    assert abs(u1) == 90 and str(broker.pending["o1"]["expires"]).startswith("2026-10-29 11:30")
+    rows = res.forex["pairs"]
+    assert rows["EUR_USD"]["decision"] == "ORDERS" and rows["USD_JPY"]["decision"] == "SKIP"
+    assert "too narrow" in rows["USD_JPY"]["note"] and "Skipped" in rows["GBP_USD"]["note"]
+    runlog.save(res, store, False)
+    # the next check doesn't place them again
+    forex.run(cfg, broker, store, now=t("09:05"))
+    assert len(broker.orders) == 2
+    # the buy fills: the next check records the trade and cancels the sell order
+    broker.fill("o1")
+    res = forex.run(cfg, broker, store, now=t("09:35"))
+    assert "EUR_USD" in store.state["plans"] and broker.cancelled == ["o2"] and res.buys[0].startswith("BUY EUR/USD")
+    assert store.rows("trades.csv")[-1]["side"] == "buy" and res.positions
+    # 16:05: everything is closed, nothing is held overnight
+    res = forex.run(cfg, broker, store, now=t("16:05"))
+    assert not store.state["plans"] and res.exits[0].startswith("SOLD EUR/USD: end of the trading session")
+    assert store.rows("trades.csv")[-1]["side"] == "sell"
+    # the next day starts fresh
+    res = forex.run(cfg, broker, store, now=datetime(2026, 10, 30, 7, 45, tzinfo=timezone.utc))
+    assert store.state["orb"]["day"] == "2026-10-30" and not store.state["orb"]["placed"]
+    assert "Today's read on each pair" in forex.render(res, store, cfg, False) or res.notes
+
+
+def test_live_orb_after_a_break_and_both_sides(tmp_path):
+    # the check came late and the price had already broken above: only the buy side is placed
+    broker = FakeOrbOanda({"EUR_USD": london_day(after=[("08:40", 1.1025, 1.1010)])})
+    store = Store(tmp_path, "forex")
+    forex.run(FX_FILE, broker, store, now=datetime(2026, 10, 29, 9, 0, tzinfo=timezone.utc))
+    assert [u > 0 for _, u, _ in broker.orders] == [True]
+    # it broke out and came all the way back: skipped
+    broker2 = FakeOrbOanda({"EUR_USD": london_day(after=[("08:40", 1.1025, 1.1010), ("08:45", 1.1005, 1.0975)])})
+    res = forex.run(FX_FILE, broker2, Store(tmp_path, "forex2"), now=datetime(2026, 10, 29, 9, 0, tzinfo=timezone.utc))
+    assert not broker2.orders and "came back" in res.forex["pairs"]["EUR_USD"]["note"]
+    # both sides filled between checks: the first one is the trade, the second is closed straight away
+    broker3 = FakeOrbOanda({"EUR_USD": london_day()})
+    store3 = Store(tmp_path, "forex3")
+    forex.run(FX_FILE, broker3, store3, now=datetime(2026, 10, 29, 8, 35, tzinfo=timezone.utc))
+    broker3.fill("o1", "2026-10-29T09:00:00Z")
+    broker3.closed.append("to1")                      # its stop was hit...
+    broker3.fill("o2", "2026-10-29T09:10:00Z")         # ...and the sell side opened at the same price
+    res = forex.run(FX_FILE, broker3, store3, now=datetime(2026, 10, 29, 9, 35, tzinfo=timezone.utc))
+    assert "to2" in broker3.closed and any("other side filled" in x for x in res.exits)
+    assert any(x.startswith("SOLD EUR/USD: stop hit") for x in res.exits) and not store3.state["plans"]
+    # a check right at 08:30, before OANDA finished the 08:25 candle: try again next time
+    broker5 = FakeOrbOanda({"EUR_USD": london_day()})
+    store5 = Store(tmp_path, "forex5")
+    res = forex.run(FX_FILE, broker5, store5, now=datetime(2026, 10, 29, 8, 30, tzinfo=timezone.utc))
+    assert not broker5.orders and not store5.state["orb"]["placed"] and "Trying again" in res.notes[-1]
+    forex.run(FX_FILE, broker5, store5, now=datetime(2026, 10, 29, 9, 0, tzinfo=timezone.utc))
+    assert len(broker5.orders) == 2
+    # a dry run sends nothing
+    broker4 = FakeOrbOanda({"EUR_USD": london_day()})
+    forex.run(FX_FILE, broker4, Store(tmp_path, "forex4"), dry_run=True,
+              now=datetime(2026, 10, 29, 8, 35, tzinfo=timezone.utc))
+    assert not broker4.orders

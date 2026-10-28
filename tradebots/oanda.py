@@ -122,6 +122,63 @@ class OandaPractice:
         cancel = js.get("orderCancelTransaction") or {}
         return {"filled": False, "price": None, "trade_id": None, "reason": cancel.get("reason", "not filled")}
 
+    def stop_order(self, pair: str, units: int, price: float, stop: float, expires: datetime, tag: str) -> dict:
+        """A "buy if the price rises to `price`" order (units > 0), or "sell if it falls to `price`" (units < 0),
+        that OANDA holds until `expires`. When it fills, OANDA adds the safety stop. If the price is already
+        past `price`, OANDA fills it straight away at the current price.
+        OPEN_ONLY: it may only open a trade, never close the opposite one (the stop handles that).
+        Returns {"order_id", "filled", "price", "trade_id", "reason"}."""
+        dp = decimals(pair)
+        body = {"order": {"type": "STOP", "instrument": pair, "units": str(int(units)), "price": f"{price:.{dp}f}",
+                          "timeInForce": "GTD",
+                          "gtdTime": pd.Timestamp(expires).tz_convert("UTC").strftime("%Y-%m-%dT%H:%M:%S.000000000Z"),
+                          "positionFill": "OPEN_ONLY",
+                          "stopLossOnFill": {"price": f"{stop:.{dp}f}", "timeInForce": "GTC"},
+                          "clientExtensions": {"tag": tag[:100]}, "tradeClientExtensions": {"tag": tag[:100]}}}
+        try:
+            js = self._req("POST", f"/v3/accounts/{self.account}/orders", json=body)
+        except RuntimeError as e:
+            if "POSITION_FILL" not in str(e):
+                return {"order_id": None, "filled": False, "price": None, "trade_id": None, "reason": str(e)[:200]}
+            body["order"]["positionFill"] = "DEFAULT"     # an account that doesn't offer OPEN_ONLY
+            js = self._req("POST", f"/v3/accounts/{self.account}/orders", json=body)
+        made = js.get("orderCreateTransaction") or {}
+        fill = js.get("orderFillTransaction")
+        cancel = js.get("orderCancelTransaction") or js.get("orderRejectTransaction")
+        if fill and fill.get("tradeOpened"):
+            return {"order_id": made.get("id"), "filled": True, "price": float(fill["price"]),
+                    "trade_id": fill["tradeOpened"]["tradeID"], "reason": ""}
+        if cancel or not made:
+            return {"order_id": None, "filled": False, "price": None, "trade_id": None,
+                    "reason": (cancel or {}).get("reason", "not accepted")}
+        return {"order_id": made["id"], "filled": False, "price": None, "trade_id": None, "reason": ""}
+
+    def pending_orders(self) -> list[dict]:
+        """Orders waiting to fill (not the safety stops attached to open trades)."""
+        js = self._req("GET", f"/v3/accounts/{self.account}/pendingOrders")
+        return [{"id": o["id"], "pair": o.get("instrument"), "units": float(o.get("units", 0)),
+                 "price": float(o.get("price", 0))}
+                for o in js.get("orders", []) if o.get("type") in ("STOP", "LIMIT", "MARKET_IF_TOUCHED")]
+
+    def get_order(self, order_id: str) -> dict:
+        """An order's state (PENDING, FILLED, CANCELLED, TRIGGERED) and the trade it opened, if any."""
+        o = self._req("GET", f"/v3/accounts/{self.account}/orders/{order_id}").get("order", {})
+        return {"state": o.get("state"), "trade_id": o.get("tradeOpenedID"), "reason": o.get("cancellingTransactionID")}
+
+    def cancel_order(self, order_id: str) -> None:
+        try:
+            self._req("PUT", f"/v3/accounts/{self.account}/orders/{order_id}/cancel")
+        except RuntimeError as e:     # already filled or expired: nothing to cancel
+            if "404" not in str(e) and "ORDER_DOESNT_EXIST" not in str(e):
+                raise
+
+    def trade(self, trade_id: str) -> dict:
+        """One trade: OPEN or CLOSED, its entry price, its profit or loss so far, and when it opened."""
+        t = self._req("GET", f"/v3/accounts/{self.account}/trades/{trade_id}").get("trade", {})
+        return {"state": t.get("state"), "price": float(t.get("price") or 0), "opened": t.get("openTime"),
+                "units": float(t.get("initialUnits") or 0),
+                "pl": float(t.get("realizedPL") or 0) + float(t.get("unrealizedPL") or 0)}
+
     def close_trade(self, trade_id: str) -> dict:
         js = self._req("PUT", f"/v3/accounts/{self.account}/trades/{trade_id}/close", json={"units": "ALL"})
         fill = js.get("orderFillTransaction") or {}

@@ -170,7 +170,7 @@ def _snap(k: Knob, v: float) -> float | int:
 def clean_changes(strategy: str, cfg: dict, changes: dict) -> tuple[dict, list[str]]:
     """Keeps only changes on the menu, rounded to the knob's step and inside its range.
     0 (or null, or "off") switches a filter off. Returns (changes, problems)."""
-    menu = {k.path: k for k in knobs_for(strategy)}
+    menu = {k.path: k for k in knobs_for(strategy, cfg)}
     out, problems = {}, []
     for path, v in changes.items():
         k = menu.get(path)
@@ -208,7 +208,7 @@ def nudged(strategy: str, changes: dict, cfg: dict | None = None) -> list[dict]:
 
 
 def describe_changes(cfg: dict, changes: dict, strategy: str) -> list[str]:
-    menu = {k.path: k for k in knobs_for(strategy)}
+    menu = {k.path: k for k in knobs_for(strategy, cfg)}
     lines = []
     for path, v in changes.items():
         old = get_value(cfg, path, menu.get(path))
@@ -557,7 +557,11 @@ def load_engine(strategy: str, days: int = 365, cache: str | None = None, end: d
         # Daily trend rules trade a few times a month, so one year is far too few trades to judge:
         # the Forex wing is tested on the last 8 years instead.
         from . import forex
-        return forex.load_engine(strategy, load_config(strategy), max(8, days // 365), cache, end)
+        cfg = load_config(strategy)
+        if cfg["forex"]["style"] == "orb":    # the day-trade rule replays 5-minute candles
+            from . import orb
+            return orb.load_engine(cfg, max(8, days // 365), cache, end)
+        return forex.load_engine(strategy, cfg, max(8, days // 365), cache, end)
     import pickle
     end = end or datetime.now(timezone.utc).replace(minute=0, second=0, microsecond=0)
     start = end - timedelta(days=days)

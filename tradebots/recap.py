@@ -46,6 +46,8 @@ GLOSSARY = {
     "pip": "The tiny step forex prices move in: 0.0001 for most pairs (0.01 for yen pairs).",
     "spread": "The gap between the buying and selling price. It's the main cost of each forex trade.",
     "leverage": "Controlling more money than you have. 3:1 means $100 controls up to $300. It makes wins and losses bigger.",
+    "opening range": "A pair's highest and lowest price in the first 30 minutes after a big market opens. "
+                     "The Forex office buys if the price breaks above it and sells if it breaks below.",
     "breakout": "When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.",
     "COT report": "The CFTC's free weekly report (Commitments of Traders) of who holds which futures bets, including currencies.",
     "hedge fund": "A big investment firm that makes large, often leveraged bets. Copycat FX copies their currency bets.",
@@ -233,16 +235,21 @@ def _forex_day(out: dict, runs: list[dict], store: Store, day: str, b: list[str]
     cot = last["forex"].get("style") == "cot"
     reads = [r for r in runs if r["scanned"]]
     pairs = (reads[-1] if reads else last)["forex"].get("pairs") or {}
+    orb = last["forex"].get("style") == "orb"
     if reads:
         rep = reads[-1]["forex"].get("report")
         b.append(f"Read the hedge funds' weekly report (as of {rep}) and checked {len(pairs)} currency pairs." if cot else
+                 f"Marked the opening range on {len(pairs)} currency pairs at the London open." if orb else
                  f"Checked {len(pairs)} currency pairs at the end of the forex day.")
+    elif orb:
+        b.append("No opening range marked today (a weekend, a holiday, or the check came too late).")
     else:
         b.append("No new forex day finished yet, so no new trade decisions (forex days end at 5pm New York time).")
     picks = [f"{short(p).replace('_', '/')} ({r['decision'].lower()})" for p, r in pairs.items() if r["decision"] != "WAIT"]
     if picks:
         b.append("Signals: " + ", ".join(picks) + ".")
-    terms |= {"forex", "currency pair"} | ({"COT report", "hedge fund"} if cot else {"breakout"})
+    terms |= {"forex", "currency pair"} | ({"COT report", "hedge fund"} if cot else
+                                           {"opening range", "breakout"} if orb else {"breakout"})
     opened = [t for t in _day_rows(store.rows("trades.csv"), day) if t["side"] == "buy"]
     sells = [t for t in closed_trades(store) if t["time"][:10] == day]
     for t in opened:

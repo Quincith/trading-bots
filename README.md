@@ -106,18 +106,25 @@ address, so it can't place a real-money trade.
 
 | | Forex office ([config/forex.yaml](config/forex.yaml)) | Copycat FX office ([config/fxcopy.yaml](config/fxcopy.yaml)) |
 |---|---|---|
-| Idea | Follow the trend (the 1980s "Turtle traders" rule) | Copy the big hedge funds' currency bets |
-| Gets in when | a pair closes above its 55-day high and above its 200-day average (buy), or below its 55-day low and below the average (sell) | hedge funds' net bet on a currency is 10%+ of all open contracts in the CFTC's weekly report |
-| Gets out when | it closes past the opposite 20-day high or low, or the safety stop is hit | their net bet flips to the other side, or the safety stop is hit |
-| Safety stop | 2 typical daily swings away | 3 typical daily swings away |
+| Status | **trading on practice money** | switched off (failed the lab check) |
+| Idea | **Opening Range Breakout (ORB)** at the London open: a day trade | Copy the big hedge funds' currency bets |
+| Gets in when | each weekday, it marks each pair's high and low from 8:00 to 8:30 London time (the **opening range**), then buys if the price breaks above it or sells if it breaks below it before 11:30. OANDA holds both "waiting" orders, so they fill between checks | hedge funds' net bet on a currency is 10%+ of all open contracts in the CFTC's weekly report |
+| Skips a day when | the range is so narrow that the spread and slippage would be over 10% of what the trade risks (the **fee filter**) | |
+| Gets out when | the safety stop is hit, or at 16:00 London time: **nothing is held overnight** | their net bet flips to the other side, or the safety stop is hit |
+| Safety stop | the other edge of the range | 3 typical daily swings away |
 | Pairs | EUR/USD, GBP/USD, USD/JPY, AUD/USD, USD/CAD, USD/CHF, NZD/USD | same |
-| Decides | once a day, after the forex day ends at 5pm New York time | same (the report comes out Fridays) |
+| Decides | 8:30 London time (checks every 30 minutes for fills, and closes after 16:00) | once a day, after the forex day ends at 5pm New York time |
 | Loss limits | 3% daily, 15% total | 3% daily, 15% total |
 | AI | none | none |
 
+How live can differ a little from the lab: the bot checks every 30 minutes, so the orders can go in after a
+break has started (then only that side is placed, and it fills at the current price), and trades close between
+16:00 and 16:30. If a range is wide, the "one trade controls at most the account" limit makes the trade risk
+less than 1%. If both sides fill between two checks, only the first counts and the other is closed.
+
 **Sizing with $100.** Forex trades are measured in **units** of currency. A "standard lot" is 100,000 units,
 a "micro lot" is 1,000. OANDA lets us trade any number of units, even 1, so $100 works. Each trade is sized
-so that hitting the safety stop loses about **1% of the account** ($1 on $100). Example: EUR/USD at 1.10
+so that hitting the safety stop loses about **1% of the account** ($1 on $100). Example for a daily rule: EUR/USD at 1.10
 usually swings about 0.006 a day, so the stop goes 0.012 away, and $1 / 0.012 = about **83 units**
 (controlling about $91). Hard limits on top: one trade controls at most 1x the account, and all trades together
 at most **3x** (3:1 **leverage**; US rules allow up to 50:1, which is how beginners blow up accounts). At most 4
@@ -139,8 +146,9 @@ its key is saved, otherwise free from Dukascopy), charging the spread (the buy/s
 slippage per trade, and overnight interest (the real gap between the two countries' central bank rates, from the
 BIS, plus about 2% a year that OANDA keeps). It's compared with **doing nothing** (keeping the cash).
 
-**Results so far (Oct 2018 to Oct 2026, $100 start): every rule failed, so both offices are switched off**
-(`enabled: false` in their configs; dry runs still work):
+**Results so far (Oct 2018 to Oct 2026, $100 start).** Only ORB at the London open with the fee filter made
+money, so the Forex office now runs it on practice money; Copycat FX stays switched off (`enabled: false`;
+dry runs still work):
 
 | Rule | $100 became | Unseen months | Why it failed |
 |---|---|---|---|
@@ -153,8 +161,10 @@ BIS, plus about 2% a year that OANDA keeps). It's compared with **doing nothing*
 | ORB London + fee filter (`max_cost_pct: 10`, skip narrow days) | **$109** | **+3.0%** | closest so far: passed 5 of 7 checks, but lost with double fees and one nearby setting |
 | ORB New York + fee filter | $93 | -4.7% | still loses |
 
-The last two were a second try with their textbook settings fixed before the test, so the lab couldn't fish
-for a lucky result.
+The fee filter was a second try with its setting fixed before the test, so the lab couldn't fish for a lucky
+result. Even so, $109 passed only 5 of the lab's 7 checks: it lost with double fees (-2.5%) and when one setting
+was nudged. That's why it runs on **practice money** first: a few months of live practice trades will show if
+the edge is real before any real money is considered.
 To run the check yourself: **Actions → Strategy lab → Run workflow**, pick forex or fxcopy (leave "change" empty
 and Claude suggests an improvement, like for the other strategies), or locally
 `python -m tradebots.lab --strategy forex --validate`.

@@ -1,14 +1,15 @@
-# FOREX office: trades currency pairs with a classic trend-following rule (the "Turtle traders" breakout).
+# FOREX office: day trades currency pairs with the "opening range breakout" (ORB) at the London open.
 # Runs on its own OANDA practice (demo) account, so it uses pretend money only.
 # All percents are percent of this office's account value. No AI is used.
 
 name: forex
 title: Forex
 broker: oanda
-# Switched off: on 8 years of OANDA prices (Oct 2018 to Oct 2026) this rule lost money even before fees.
-# 12-month momentum (style: momentum) and the carry trade (style: carry) failed too. Dry runs still work.
-# Turn it on only after a rule passes the strategy lab check.
-enabled: false
+# On practice since Quincy said yes on 2026-10-28. In the strategy lab (OANDA prices Oct 2018 to Oct 2026) this
+# rule turned $100 into $109 and made money on the unseen months (+3.0%), but it passed only 5 of 7 checks:
+# with double the fees it lost (-2.5%), and one nearby setting lost too. So this is a practice test, not proof.
+# Earlier rules that failed and stay off: the Turtle trend rule, 12-month momentum and the carry trade.
+enabled: true
 # GitHub secret names that hold the OANDA practice token and this office's practice account id.
 oanda_token_secret: OANDA_API_TOKEN
 oanda_account_secret: OANDA_FOREX_ACCOUNT_ID
@@ -22,12 +23,13 @@ markets:
   pairs: [EUR_USD, GBP_USD, USD_JPY, AUD_USD, USD_CAD, USD_CHF, NZD_USD]
 
 forex:
-  style: trend
-  entry_days: 55            # buy when the price closes above its highest price of the last 55 days (sell: below the lowest)
-  exit_days: 20             # get out when it closes past the opposite 20-day high or low
-  trend_ema_days: 200       # only buy above the 200-day average, only sell below it (0 = off)
-  atr_days: 20              # how many days are used to measure a "typical daily swing" (ATR)
-  stop_atr_mult: 2.0        # safety stop 2 typical daily swings away from the entry
+  style: orb
+  session: london           # the London open: 8:00 London time (it moves with British summer time)
+  range_minutes: 30         # the "opening range": each pair's high and low from 8:00 to 8:30
+  entry_hours: 3            # buy above the range or sell below it until 11:30; after that, no new trades today
+  exit_hour: 16             # close every trade by 16:00 London time: nothing is held overnight
+  max_cost_pct: 10          # skip a pair for the day if its fees would be over 10% of what the trade risks
+  # The safety stop is the other edge of the range. These settings were picked before testing, not tuned.
 
 risk:
   risk_per_trade_pct: 1     # hitting the safety stop loses about 1% of the account ($1 on $100)
