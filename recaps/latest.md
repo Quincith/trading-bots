@@ -10,7 +10,7 @@ Watchful day. Scout flagged some moves, but none met the bar for a trade. The ac
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 39 times. Most active: DOGE at 218.7x normal volume, price -0.6%.
+- Scout scanned 8 coins, 40 times. Most active: DOGE at 218.7x normal volume, price -0.6%.
 - Sent for review: LTC (2x), LINK (1x).
 - Decisions: 0 buy, 3 wait, 0 skip.
 - Passed on LTC (WAIT, 55% confident): Strong 3.4x volume and uptrend, but RSI 74 is overbought with no news or sentiment support; wait for a pullback or confirmation.
@@ -26,7 +26,7 @@ Watchful day. Scout flagged some moves, but none met the bar for a trade. The ac
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 9 times. Most active: BTC at 11.4x normal volume, price +0.3%.
+- Scout scanned 8 coins, 10 times. Most active: BTC at 11.4x normal volume, price +0.3%.
 - Sent for review: LINK (1x), LTC (1x).
 - Decisions: 0 buy, 2 wait, 0 skip.
 - Passed on LINK (WAIT, 60% confident): Uptrend with strong volume, but no news catalyst, neutral sentiment, and RSI near 68. Medium style needs alignment, so recheck next run.
@@ -34,19 +34,19 @@ Watchful day. Scout flagged some moves, but none met the bar for a trade. The ac
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $1.42 (+1.42%)
+## Copycat: up $2.19 (+2.19%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $1.42 (+1.42%) at $101.32. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $2.19 (+2.19%) at $102.09. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.90 → $101.32 (+$1.42, +1.42%).
-- Profit / loss since start: +$1.32 on $100.00 money put in.
-- Spotter read 646 insider filings from the SEC and found 10 insider purchases. Watchlist at day end: 24 stocks.
+- Account value: $99.90 → $102.09 (+$2.19, +2.19%).
+- Profit / loss since start: +$2.09 on $100.00 money put in.
+- Spotter read 693 insider filings from the SEC and found 12 insider purchases. Watchlist at day end: 25 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 3 insiders bought $1,771,951 at about $15.38: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.60 (-$0.34 unrealized); CHCO $19.55 (-$0.44 unrealized); MSM $20.59 (+$0.60 unrealized); NBIS $21.25 (+$1.37 unrealized); STC $20.06 (+$0.15 unrealized).
+- Holding: BBT $19.69 (-$0.25 unrealized); CHCO $19.60 (-$0.39 unrealized); MSM $20.70 (+$0.71 unrealized); NBIS $21.68 (+$1.80 unrealized); STC $20.15 (+$0.24 unrealized).
 
 ## Forex: flat
 

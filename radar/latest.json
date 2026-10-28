@@ -1,46 +1,44 @@
 {
- "time": "2026-10-28T19:30:50+00:00",
+ "time": "2026-10-28T20:00:40+00:00",
  "coins": {
   "BTC": {
-   "recent": 9,
-   "before": 25,
-   "buzz": 1.8,
+   "recent": 10,
+   "before": 24,
+   "buzz": 2.08,
    "tone": 3,
    "headlines": [
+    "Why Can't Bitcoin Break $80,000? Kevin O'Leary Points To Two Reasons",
     "Fed Holds Rate at 3.75%-4%, Two Officials Push for a Hike (UPDATED)",
-    "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat",
-    "Bitwise Predicts Bitcoin Could Hit $1.6 Million by 2036 as Four-Year Cycle Fades"
+    "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat"
    ],
    "trending": 0,
-   "rule_score": 0.76,
+   "rule_score": 0.82,
    "score": -0.1,
    "note": "Buzz is high but Fed hike talk and rejected bounce at 50-day line are mildly negative."
   },
   "ETH": {
-   "recent": 2,
+   "recent": 1,
    "before": 4,
-   "buzz": 2.5,
+   "buzz": 1.25,
    "tone": 2,
    "headlines": [
-    "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat",
-    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground"
+    "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat"
    ],
-   "trending": null,
-   "rule_score": 0.5,
+   "trending": 8,
+   "rule_score": 0.35,
    "score": 0.1,
    "note": "Few headlines; tokenization news is mildly supportive, nothing decisive yet."
   },
   "SOL": {
-   "recent": 2,
-   "before": 3,
-   "buzz": 3.33,
+   "recent": 1,
+   "before": 4,
+   "buzz": 1.25,
    "tone": 2,
    "headlines": [
-    "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat",
-    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground"
+    "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat"
    ],
-   "trending": 10,
-   "rule_score": 0.82,
+   "trending": 4,
+   "rule_score": 0.5,
    "score": 0.3,
    "note": "Buzz 3.3x with Mirae tokenized notes on Solana and Kospi AI rally; modest good news building."
   },
@@ -91,16 +89,15 @@
    "note": "No recent headlines at all."
   },
   "XRP": {
-   "recent": 2,
+   "recent": 1,
    "before": 9,
-   "buzz": 1.11,
+   "buzz": 0.56,
    "tone": 2,
    "headlines": [
-    "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat",
-    "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground"
+    "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat"
    ],
    "trending": null,
-   "rule_score": 0.22,
+   "rule_score": 0.2,
    "score": 0.2,
    "note": "Ripple RLUSD rating and Coinbase expansion are real positives, though buzz is only 1.1x."
   }
@@ -138,11 +135,14 @@
    ]
   }
  ],
- "trending_elsewhere": [],
- "headlines": 81,
+ "trending_elsewhere": [
+  "UNI",
+  "PEPE"
+ ],
+ "headlines": 80,
  "sources": {
   "Alpaca/Benzinga": 19,
-  "crypto news sites": 62,
+  "crypto news sites": 61,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-28T19:30:50+00:00"
