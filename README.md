@@ -97,7 +97,7 @@ form called a **Form 4**. Copycat reads those filings (free, official, no extra 
 | Safety exit / profit goal | 10% below / 20% above our buy price |
 | Hold time | up to 30 days |
 | Daily loss limit | 5% |
-| Total loss limit | 20% |
+| Total loss limit | 10% |
 | AI | none, so it costs nothing to run |
 
 Stocks only trade on weekdays, 9:30am to 4pm New York time. Insiders often file in the evening, so Copycat
