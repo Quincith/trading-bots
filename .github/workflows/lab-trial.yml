@@ -66,3 +66,26 @@ jobs:
           eng = lab.load_engine("forex", 365, "fx.pkl", datetime(2026, 10, 1, tzinfo=timezone.utc))
           print(lab.validate("forex", eng, lab.Runner(eng), cfg)[1])
           PY
+      - name: "Where the losses come from: zero costs, by pair, by exit"
+        run: |
+          python - <<'PY'
+          from collections import defaultdict
+          from datetime import datetime, timezone
+          from tradebots import forex, lab
+          end = datetime(2026, 10, 1, tzinfo=timezone.utc)
+          for name in ("forex", "fxcopy"):
+              cfg = lab.load_config(name)
+              eng = lab.load_engine(name, 365, "fx.pkl", end)
+              for cost in (0.0, 1.0):
+                  r = forex.simulate(cfg, eng.bars, eng.cot, eng.start, end, cost=cost)
+                  print(f"\n== {name} cost x{cost}: end ${r.equity[-1][1]:.2f}, fees ${r.fees:.2f}, trades {len(r.trades)}")
+                  by_pair, by_exit = defaultdict(list), defaultdict(list)
+                  for t in r.trades:
+                      rr = t["pnl"] / max(t["equity_at_open"], 1e-9) * 100
+                      by_pair[t["symbol"]].append(rr); by_exit[t["exit"].split(" ")[0]].append(rr)
+                  for k, v in sorted(by_pair.items()):
+                      print(f"  {k:8s} n={len(v):3d} sum={sum(v):+6.1f}% avg={sum(v)/len(v):+.2f}% win={sum(x>0 for x in v)/len(v):.0%} best={max(v):+.1f}% worst={min(v):+.1f}%")
+                  for k, v in sorted(by_exit.items()):
+                      print(f"  exit {k:10s} n={len(v):3d} sum={sum(v):+6.1f}%")
+              print("  first 5 trades:", [(t["symbol"], t["direction"], t["opened"][:10], t["closed"][:10], round(t["pnl"], 2), t["exit"]) for t in r.trades[:5]])
+          PY
