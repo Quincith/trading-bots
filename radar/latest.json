@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27T23:59:13+00:00",
+ "time": "2026-10-28T00:29:15+00:00",
  "coins": {
   "BTC": {
    "recent": 3,
@@ -13,8 +13,8 @@
    ],
    "trending": null,
    "rule_score": 0.09,
-   "score": -0.1,
-   "note": "Mostly price talk and Fed preview pieces; quantum-risk and profit-taking stories add mild caution."
+   "score": 0.0,
+   "note": "Mostly price recaps and forecasts ahead of the Fed; buzz is low, nothing new building."
   },
   "ETH": {
    "recent": 0,
@@ -25,7 +25,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "Only one headline with flat buzz; nothing meaningful new."
+   "note": "No recent headlines; the only ETH mention is a skeptical OpenAI item, not a catalyst."
   },
   "SOL": {
    "recent": 0,
@@ -33,10 +33,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 10,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines and no buzz, despite high search rank."
+   "note": "No recent headlines or buzz; nothing new building."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +47,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new building."
+   "note": "No recent headlines or buzz; nothing new building."
   },
   "LINK": {
    "recent": 0,
@@ -55,10 +55,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 6,
+   "trending": 13,
    "rule_score": 0.15,
    "score": 0.0,
-   "note": "No recent headlines; tokenization stories mention no LINK-specific news."
+   "note": "Most-searched but zero recent headlines; search interest alone is not a catalyst."
   },
   "DOGE": {
    "recent": 0,
@@ -69,7 +69,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; only passing mentions in price recaps."
+   "note": "No real news, only a price mention in a recap; nothing new building."
   },
   "LTC": {
    "recent": 0,
@@ -80,34 +80,33 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new."
+   "note": "No recent headlines or buzz; nothing new building."
   },
   "XRP": {
-   "recent": 2,
+   "recent": 1,
    "before": 11,
-   "buzz": 0.91,
+   "buzz": 0.45,
    "tone": -1,
    "headlines": [
-    "Treasury's Bessent sees crypto as America's next tool for keeping the U.S. dollar on top",
-    "Robinhood Taps Ripple's Stablecoin, Treasury Software and Trading Loans"
+    "Treasury's Bessent sees crypto as America's next tool for keeping the U.S. dollar on top"
    ],
    "trending": null,
-   "rule_score": -0.12,
-   "score": 0.4,
-   "note": "Robinhood and Ripple partnership news is real, but buzz is modest and some stories are repeats."
+   "rule_score": -0.1,
+   "score": 0.2,
+   "note": "Ripple RLUSD and Robinhood deals are real but partly repeated; buzz is low at 0.45x."
   }
  },
  "themes": [
   {
-   "title": "Ripple and Robinhood RLUSD partnership expansion",
-   "note": "Multiple outlets report Robinhood adopting Ripple's RLUSD stablecoin for retail and institutional use, a fresh and real adoption story.",
+   "title": "Robinhood and Ripple RLUSD partnership expansion",
+   "note": "Ripple's stablecoin gaining distribution via Robinhood; repeated announcements, so partly recycled, but adoption news is real.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Tokenized stocks and onchain Wall Street products",
-   "note": "Nasdaq-100 fund on Stellar, CF Benchmarks onchain data, and OKX-ICE pushback show tokenization momentum, though objections are mounting.",
+   "title": "Tokenized stocks and onchain Nasdaq products",
+   "note": "Janus Henderson/Centrifuge fund and CF Benchmarks data move Wall Street products onchain; mostly sector-wide, no clear single-coin catalyst.",
    "coins": [
     "BTC",
     "ETH",
@@ -115,20 +114,25 @@
    ]
   },
   {
-   "title": "Bitcoin pre-Fed caution and quantum worries",
-   "note": "Bitcoin is choppy around the FOMC meeting, with quantum fears and profit-taking weighing on sentiment; recycled price talk, not a fresh catalyst.",
+   "title": "Fed meeting and Bitcoin price-level chatter",
+   "note": "Macro event dominates; most Bitcoin headlines are price recaps or analyst forecasts, not new catalysts.",
    "coins": [
     "BTC",
-    "ETH"
+    "ETH",
+    "XRP",
+    "DOGE"
    ]
   }
  ],
- "trending_elsewhere": [],
- "headlines": 80,
+ "trending_elsewhere": [
+  "UNI",
+  "PEPE"
+ ],
+ "headlines": 79,
  "sources": {
   "Alpaca/Benzinga": 23,
-  "crypto news sites": 57,
+  "crypto news sites": 56,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-27T23:29:06+00:00"
+ "ai_time": "2026-10-28T00:29:15+00:00"
 }

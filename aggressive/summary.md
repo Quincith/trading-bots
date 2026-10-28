@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-27 23:59 UTC
+# Aggressive strategy — 2026-10-28 00:29 UTC
 
 | | |
 |---|---|
@@ -9,22 +9,23 @@
 
 ## News radar (trends forming)
 
-Read 80 headlines from the last day (Alpaca/Benzinga 23, crypto news sites 57, CoinGecko trending 15).
+Read 79 headlines from the last day (Alpaca/Benzinga 23, crypto news sites 56, CoinGecko trending 15).
 
-- **Ripple and Robinhood RLUSD partnership expansion**: Multiple outlets report Robinhood adopting Ripple's RLUSD stablecoin for retail and institutional use, a fresh and real adoption story. (XRP)
-- **Tokenized stocks and onchain Wall Street products**: Nasdaq-100 fund on Stellar, CF Benchmarks onchain data, and OKX-ICE pushback show tokenization momentum, though objections are mounting. (BTC, ETH, LINK)
-- **Bitcoin pre-Fed caution and quantum worries**: Bitcoin is choppy around the FOMC meeting, with quantum fears and profit-taking weighing on sentiment; recycled price talk, not a fresh catalyst. (BTC, ETH)
+- **Robinhood and Ripple RLUSD partnership expansion**: Ripple's stablecoin gaining distribution via Robinhood; repeated announcements, so partly recycled, but adoption news is real. (XRP)
+- **Tokenized stocks and onchain Nasdaq products**: Janus Henderson/Centrifuge fund and CF Benchmarks data move Wall Street products onchain; mostly sector-wide, no clear single-coin catalyst. (BTC, ETH, LINK)
+- **Fed meeting and Bitcoin price-level chatter**: Macro event dominates; most Bitcoin headlines are price recaps or analyst forecasts, not new catalysts. (BTC, ETH, XRP, DOGE)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.40 | 2 (0.91x usual) | Robinhood and Ripple partnership news is real, but buzz is modest and some stories are repeats. |
-| SOL | +0.00 | 0 (0.0x usual) | No recent headlines and no buzz, despite high search rank. |
-| LINK | +0.00 | 0 (0.0x usual) | No recent headlines; tokenization stories mention no LINK-specific news. |
-| BTC | -0.10 | 3 (0.43x usual) | Mostly price talk and Fed preview pieces; quantum-risk and profit-taking stories add mild caution. |
+| XRP | +0.20 | 1 (0.45x usual) | Ripple RLUSD and Robinhood deals are real but partly repeated; buzz is low at 0.45x. |
+| BTC | +0.00 | 3 (0.43x usual) | Mostly price recaps and forecasts ahead of the Fed; buzz is low, nothing new building. |
+| LINK | +0.00 | 0 (0.0x usual) | Most-searched but zero recent headlines; search interest alone is not a catalyst. |
+
+Also trending, but not in our coin list: UNI, PEPE.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_

@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-10-27 23:59 UTC
+# Copycat strategy — 2026-10-28 00:29 UTC
 
 | | |
 |---|---|
-| Account value | $99.89 |
+| Account value | $99.90 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$0.11 (-0.11%) |
-| Time-weighted return (ignores when deposits happened) | -0.11% |
+| Strategy profit / loss | -$0.10 (-0.10%) |
+| Time-weighted return (ignores when deposits happened) | -0.10% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 6 new SEC filings this run. 21 stocks on the watchlist.
+Read 5 new SEC filings this run. 21 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 6 new SEC filings this run. 21 stocks on the watchlist.
 | AIOK (AI OKTO Corp.) | 2.53 | 1 insider bought $1,059,604 at about $8.15: Panagiotidis Petros Panagiotis (Chief Executive Officer, Director) $1,059,604. |
 
 ## Notes
-- Spotter read 6 new insider filings and found 12 purchases (9 by officers or directors). Watchlist: 21 stocks, 6 big enough to copy.
+- Spotter read 5 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 21 stocks, 6 big enough to copy.
 
 _Copycat uses no AI._
