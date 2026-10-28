@@ -41,6 +41,38 @@ jobs:
           path: pb.pkl
           key: playbook-2021-10-to-2026-10-v1
         continue-on-error: true
+      - name: "Sanity check: where do the short-term rules lose, before fees?"
+        run: |
+          python - <<'PY'
+          from collections import defaultdict
+          from datetime import datetime, timezone
+          import numpy as np
+          from tradebots import playbook as pbk
+          base = pbk.load_engine(5, "pb.pkl", datetime(2026, 10, 1, tzinfo=timezone.utc))
+          for style in ("daytrade", "scalp", "swing", "breakout", "trend"):
+              eng = pbk.engine_for(base, style)
+              cfg = pbk.config_for("medium", style)
+              for cost in (0.0, 1.0):
+                  r = eng.run(cfg, eng.start, eng.end, cost)
+                  pc = [t["pnl"] / t["cost"] * 100 for t in r.trades]
+                  print(f"\n== {style} medium cost x{cost}: {len(pc)} trades, avg {np.mean(pc):+.3f}% per trade, "
+                        f"win {np.mean([x > 0 for x in pc]):.0%}, end ${r.equity[-1][1]:.2f}")
+                  by = defaultdict(list)
+                  for t, x in zip(r.trades, pc):
+                      by["exit " + t["exit"]].append(x); by[t["symbol"]].append(x)
+                      by["year " + t["opened"][:4]].append(x)
+                  for k in sorted(by):
+                      v = by[k]; print(f"   {k:16s} n={len(v):4d} avg={np.mean(v):+.3f}% win={np.mean([x > 0 for x in v]):.0%}")
+          # what one 15-minute BTC candle and one day look like, to spot bad data
+          b = base.bars["15Min"]["BTC/USD"]
+          rng = (b["high"] - b["low"]) / b["close"] * 100
+          print("\nBTC 15-min candle size %: median", round(rng.median(), 3), "99th pct", round(rng.quantile(.99), 3),
+                "zero-volume share", round((b["volume"] == 0).mean(), 3))
+          for y in range(2021, 2027):
+              s = b[b.index.year == y]
+              print(y, "median 15-min range %", round(((s["high"] - s["low"]) / s["close"] * 100).median(), 3),
+                    "zero-volume", round((s["volume"] == 0).mean(), 3))
+          PY
       - name: Run all five rules for both accounts
         run: |
           python -m tradebots.playbook --cache pb.pkl --end 2026-10-01 --out report.md
