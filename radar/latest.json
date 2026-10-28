@@ -1,18 +1,18 @@
 {
- "time": "2026-10-28T12:30:07+00:00",
+ "time": "2026-10-28T13:00:11+00:00",
  "coins": {
   "BTC": {
-   "recent": 8,
-   "before": 27,
-   "buzz": 1.48,
+   "recent": 7,
+   "before": 26,
+   "buzz": 1.35,
    "tone": 0,
    "headlines": [
+    "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain Ahead of Federal Reserve Interest Rate Decision\u2014 SKHY, STX, V, GOOGL in Focus (UPDATED)",
     "Bitcoin Undervalued at $80,000? Expert Says It's 'Climbing Wall of Worry'",
-    "Will Coinbase Break Its Losing Streak in Q3? Crypto Bettors Weigh Odds as COIN Sends Mixed Signals Before Key Earnings",
-    "Stock Market Today: S&P 500, Dow Jones Futures Trade Mixed Ahead of Federal Reserve Interest Rate Decision \u2014 SKHY, STX, V, GOOGL in Focus"
+    "Will Coinbase Break Its Losing Streak in Q3? Crypto Bettors Weigh Odds as COIN Sends Mixed Signals Before Key Earnings"
    ],
-   "trending": 11,
-   "rule_score": 0.25,
+   "trending": 3,
+   "rule_score": 0.37,
    "score": 0.2,
    "note": "Price rebound above $80K with modest ETF inflows; mostly price recap, Fed decision is the real risk."
   },
@@ -59,8 +59,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 11,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No recent headlines; nothing new."
   },
@@ -87,17 +87,17 @@
    "note": "No recent headlines; nothing new."
   },
   "XRP": {
-   "recent": 4,
-   "before": 8,
-   "buzz": 2.5,
+   "recent": 3,
+   "before": 9,
+   "buzz": 1.67,
    "tone": 0,
    "headlines": [
     "Ripple CEO Opens Conference 'With a Bang:' The 4 Announcements He Made",
-    "Scott Bessent Has a New Strategy to Keep the Dollar on Top: \u2018Win in the Digital Asset Stack\u2019",
-    "XRP Ledger developers propose creating wallets with zero XRP for stablecoin payments"
+    "XRP Ledger developers propose creating wallets with zero XRP for stablecoin payments",
+    "Moody's Rates Ripple's $2.6B RLUSD Stablecoin A2, a Day After OCC Bank Approval"
    ],
    "trending": null,
-   "rule_score": 0.3,
+   "rule_score": 0.13,
    "score": 0.5,
    "note": "OCC bank approval, Moody's rating and Robinhood deal for Ripple's stablecoin; buzz 2.5x normal."
   }
@@ -130,9 +130,9 @@
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 83,
+ "headlines": 81,
  "sources": {
-  "Alpaca/Benzinga": 22,
+  "Alpaca/Benzinga": 20,
   "crypto news sites": 61,
   "CoinGecko trending": 15
  },
