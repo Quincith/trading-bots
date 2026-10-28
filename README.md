@@ -142,14 +142,19 @@ and Claude suggests an improvement, like for the other strategies), or locally
 `python -m tradebots.lab --strategy forex --validate`.
 
 **Setup (about 15 minutes):**
-1. Go to [oanda.com](https://www.oanda.com), pick your country, and open a free **demo (practice)** account.
-   No money or ID is needed for demo.
-2. In the OANDA hub, switch to **Demo**. Create a second demo sub-account, so you have two: name one
+1. Go to [oanda.com](https://www.oanda.com), pick your country, and choose the free **demo (practice)**
+   account, not "Open a live account". No money or ID is needed for demo. If you applied for a live account by
+   mistake, that's fine: don't deposit anything, and use the demo side of the same login. The bots can't use a
+   live account anyway.
+2. In the OANDA hub ([hub.oanda.com](https://hub.oanda.com)), the badge next to your initials in the top
+   right says **LIVE** or **DEMO**. Click it and switch to **DEMO**; everything below happens there. Create a
+   second demo sub-account, so you have two: name one
    "Forex" and one "Copycat FX". If it lets you choose or reset the balance, pick the smallest it allows.
    (Either way, each office acts as if it had $100 and counts only its own gains and losses.)
 3. Write down each sub-account's **account number** (it looks like `101-001-1234567-001`).
 4. Go to **Manage API Access** (in the hub's tools or profile menu) and click **Generate** to make an API
-   token. One token works for both practice sub-accounts. OANDA shows it once.
+   token, while the badge still says **DEMO**. A token made on the live side won't work. One token works
+   for both practice sub-accounts. OANDA shows it once.
 5. In GitHub, add 3 **secrets** (Settings → Secrets and variables → Actions → New repository secret; the name
    and the value are two separate boxes): `OANDA_API_TOKEN` (the token), `OANDA_FOREX_ACCOUNT_ID` and
    `OANDA_FXCOPY_ACCOUNT_ID` (the account numbers). Never paste the token into chat.
