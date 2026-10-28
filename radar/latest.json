@@ -1,20 +1,20 @@
 {
- "time": "2026-10-28T14:00:18+00:00",
+ "time": "2026-10-28T14:30:14+00:00",
  "coins": {
   "BTC": {
-   "recent": 7,
+   "recent": 8,
    "before": 22,
-   "buzz": 1.59,
-   "tone": -1,
+   "buzz": 1.82,
+   "tone": -2,
    "headlines": [
+    "Scaramucci Calls Elizabeth Warren \u2018the Joke of Jokes,\u2019 Accuses Her of Echoing Bank Lobbyists",
     "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
-    "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain Ahead of Federal Reserve Interest Rate Decision\u2014 SKHY, STX, V, GOOGL in Focus (UPDATED)",
-    "Bitcoin Undervalued at $80,000? Expert Says It's 'Climbing Wall of Worry'"
+    "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain Ahead of Federal Reserve Interest Rate Decision\u2014 SKHY, STX, V, GOOGL in Focus (UPDATED)"
    ],
-   "trending": 6,
-   "rule_score": 0.17,
+   "trending": 8,
+   "rule_score": 0.11,
    "score": 0.2,
-   "note": "Bitcoin ETF inflows rising and Morgan Stanley says correction mostly over; still mostly price-driven chatter."
+   "note": "Mild positive: ETF inflows and Google institutional custody news, but many recycled price-recap headlines."
   },
   "ETH": {
    "recent": 2,
@@ -28,7 +28,7 @@
    "trending": null,
    "rule_score": 0.3,
    "score": 0.2,
-   "note": "Tokenization headlines favor Ethereum-style chains; buzz is up but few fresh headlines."
+   "note": "Tokenization headlines help the ecosystem, but the buzz is thin with only 2 headlines."
   },
   "SOL": {
    "recent": 2,
@@ -42,7 +42,7 @@
    "trending": null,
    "rule_score": 0.47,
    "score": 0.3,
-   "note": "Mirae tokenized notes on Solana plus buzz at 3.3x; a real institutional use case."
+   "note": "Mirae tokenized notes on Solana are a real institutional catalyst; buzz is elevated but volume is small."
   },
   "AVAX": {
    "recent": 0,
@@ -53,7 +53,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, nothing new."
+   "note": "No recent headlines; nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -64,7 +64,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; tokenization trend could help but no direct news."
+   "note": "No recent headlines; nothing new."
   },
   "DOGE": {
    "recent": 0,
@@ -75,7 +75,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; only generic price-recap mentions."
+   "note": "No fresh catalyst; only mentioned in generic price-move headlines."
   },
   "LTC": {
    "recent": 0,
@@ -86,7 +86,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, nothing new."
+   "note": "No recent headlines; nothing new."
   },
   "XRP": {
    "recent": 4,
@@ -100,48 +100,42 @@
    ],
    "trending": null,
    "rule_score": 0.24,
-   "score": 0.5,
-   "note": "Moody's rating of Ripple's RLUSD and Robinhood partnership are real positive catalysts; buzz 2.2x."
+   "score": 0.4,
+   "note": "RLUSD OCC approval, Moody's rating, and Robinhood deal are real positive catalysts with rising buzz."
   }
  },
  "themes": [
   {
-   "title": "Tokenization of traditional assets gaining institutional momentum",
-   "note": "DTCC, Securitize, Mirae and banks are moving real assets onto blockchains; a slow but real build.",
+   "title": "Tokenization of real-world assets going mainstream",
+   "note": "DTCC unit launch, Securitize on Stellar, Mirae Solana notes, and Goldman-alumni onchain loans show institutions building rails; likely helps ETH, SOL, XRP, LINK-type networks.",
    "coins": [
-    "ETH",
     "SOL",
-    "XRP",
-    "LINK"
+    "ETH",
+    "XRP"
    ]
   },
   {
-   "title": "Ripple RLUSD stablecoin expansion and XRP Ledger payment ideas",
-   "note": "Fresh Moody's rating, Robinhood partnership and XRP Ledger wallet proposal add positive XRP news.",
+   "title": "Ripple and RLUSD stablecoin momentum",
+   "note": "OCC approval, Moody's A2 rating, and Robinhood partnership point to growing institutional use of Ripple's stablecoin.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Fed decision and macro risk ahead of Wednesday",
-   "note": "Bitcoin and crypto are trading on Fed rate-decision expectations, so an unexpected outcome could swing prices.",
+   "title": "Crypto custody and security concerns",
+   "note": "Google MPC custody preview and Coinbase/Bithumb data breaches; security headlines are mixed, with BTC custody gaining some institutional support.",
    "coins": [
     "BTC",
-    "ETH",
-    "SOL",
-    "XRP",
-    "DOGE"
+    "ETH"
    ]
   }
  ],
- "trending_elsewhere": [
-  "PEPE"
- ],
+ "trending_elsewhere": [],
  "headlines": 79,
  "sources": {
-  "Alpaca/Benzinga": 19,
-  "crypto news sites": 60,
+  "Alpaca/Benzinga": 20,
+  "crypto news sites": 59,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T13:30:13+00:00"
+ "ai_time": "2026-10-28T14:30:14+00:00"
 }
