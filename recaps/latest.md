@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 8 times. Most active: LINK at 82.2x normal volume, price -0.0%.
+- Scout scanned 8 coins, 9 times. Most active: DOGE at 136.5x normal volume, price -0.5%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -30,27 +30,45 @@ Watchful day. Scout flagged some moves, but none met the bar for a trade. The ac
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.30 (+0.30%)
+## Copycat: up $0.23 (+0.23%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.30 (+0.30%) at $100.20. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.23 (+0.23%) at $100.13. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.90 → $100.20 (+$0.30, +0.30%).
-- Profit / loss since start: +$0.20 on $100.00 money put in.
+- Account value: $99.90 → $100.13 (+$0.23, +0.23%).
+- Profit / loss since start: +$0.13 on $100.00 money put in.
 - Spotter read 33 insider filings from the SEC and found 1 insider purchases. Watchlist at day end: 21 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 3 insiders bought $1,771,951 at about $15.38: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.90 (-$0.04 unrealized); CHCO $19.51 (-$0.48 unrealized); MSM $20.12 (+$0.13 unrealized); NBIS $20.62 (+$0.74 unrealized); STC $19.77 (-$0.14 unrealized).
+- Holding: BBT $19.90 (-$0.04 unrealized); CHCO $19.51 (-$0.48 unrealized); MSM $20.12 (+$0.13 unrealized); NBIS $20.54 (+$0.66 unrealized); STC $19.77 (-$0.14 unrealized).
+
+## Forex: flat
+
+Quiet day. No new currency trade. The office ended flat at $100.00. Practice money only.
+
+**Key takeaways**
+
+- Account value: $100.00 → $100.00 (no change).
+- Profit / loss since start: +$0.00 on $100.00 money put in.
+- No opening range marked today (a weekend, a holiday, or the check came too late).
+- No trades.
+- Open trades: none, all cash.
+
+## Fxcopy: no runs logged on 2026-10-28.
 
 ## Words to know
 
 - **account value**: What everything in the account is worth right now: cash plus coins, at today's prices.
+- **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
 - **confidence**: How sure the Decision bot is, from 0% to 100%. Each strategy only buys above its own minimum.
+- **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
+- **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
 - **insider**: A company's own bosses (CEO, CFO and so on) and board members. They know the company best.
 - **money put in**: The money you added (deposits) minus any you took out. Profit is measured against this.
+- **opening range**: A pair's highest and lowest price in the first 30 minutes after a big market opens. The Forex office buys if the price breaks above it and sells if it breaks below.
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.

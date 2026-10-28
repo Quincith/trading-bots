@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 03:59 UTC
+# Aggressive strategy — 2026-10-28 04:29 UTC
 
 | | |
 |---|---|
@@ -11,23 +11,23 @@
 
 Read 80 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 58, CoinGecko trending 15).
 
-- **Ripple/Robinhood RLUSD partnership expansion**: Repeated Ripple-Robinhood stablecoin and settlement deals may support XRP, though the same news is recycled across many outlets. (XRP)
-- **Tokenized stocks and onchain Nasdaq funds**: Janus Henderson and Centrifuge tokenized Nasdaq-100 fund plus OKX-ICE objections show growing tokenization interest; mostly ecosystem-level, weak direct catalyst. (ETH, LINK)
-- **Fed decision and BTC price levels**: Traders are focused on the FOMC meeting and BTC's $76k to $82k range; price-recap articles are noise, not catalysts. (BTC, ETH, XRP, DOGE)
+- **Robinhood and Ripple stablecoin/RLUSD partnership**: Repeated partnership headlines expanding RLUSD use. Mostly recycled coverage of one deal; modest XRP relevance. (XRP)
+- **Tokenized stocks and onchain Nasdaq funds**: Fund launches and OKX-ICE objections are real news, but tied to a few platforms rather than major coins. (ETH, SOL)
+- **Fed decision and BTC price levels**: Price-level and preview articles dominate. Mostly price talk, not a fresh catalyst for BTC. (BTC, ETH, XRP, DOGE)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.20 | 1 (0.45x usual) | Ripple-Robinhood RLUSD expansion is real news, though partly recycled across outlets. |
-| DOGE | +0.10 | 1 (5.0x usual) | Buzz is 5x normal but driven by a generic price-recap article; treat with caution. |
-| ETH | +0.00 | 1 (0.71x usual) | Little fresh news; only generic price recaps and a weak OpenAI-ETH story. |
-| SOL | +0.00 | 1 (1.25x usual) | Only one headline near normal buzz; no clear new catalyst. |
-| BTC | -0.10 | 2 (0.29x usual) | Buzz is low and most headlines are price recaps; Fed uncertainty and profit-taking slightly bearish. |
+| ETH | +0.10 | 1 (0.71x usual) | Few headlines and mostly tokenization news. Slight positive from onchain fund launches. |
+| XRP | +0.10 | 1 (0.56x usual) | Ripple and Robinhood RLUSD partnership expansion is mildly positive, but largely recycled coverage. |
+| BTC | +0.00 | 4 (0.59x usual) | Heavy price-recap and Fed preview coverage, buzz below normal. Nothing new that changes fundamentals. |
+| SOL | +0.00 | 1 (1.25x usual) | Only one headline with normal buzz. No clear new catalyst. |
+| DOGE | +0.00 | 1 (5.0x usual) | Buzz spike is from a price-rise recap mention. Not a real catalyst, so treat as noise. |
 
-Also trending, but not in our coin list: PEPE, SHIB.
+Also trending, but not in our coin list: PEPE.
 
 ## Notes
 - Claude key works (claude-opus-5-5).
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_
