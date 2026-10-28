@@ -125,6 +125,14 @@ ORB_KNOBS = [
     Knob("forex.exit_hour", 11, 17, 1, "Close any open trade at this hour (local time of that market)"),
     Knob("forex.max_cost_pct", 5, 30, 2.5, "Skip days when fees would be more than this % of the risk (0 = off)", 0),
 ]
+# The gold bounce (gold.py), on 30-minute XAU/USD candles
+BOUNCE_KNOBS = [
+    Knob("forex.selloff_atr", 2.0, 6.0, 0.5, "The selloff must be at least this many typical candle swings (ATR) deep"),
+    Knob("forex.target_r", 1.0, 4.0, 0.5, "Profit goal: this many times what the trade risks"),
+    Knob("forex.breakeven_r", 0.5, 2.0, 0.25, "Once up this many times the risk, move the stop to the entry price"),
+    Knob("forex.max_hold_bars", 16, 96, 8, "Sell after this many 30-minute candles regardless"),
+    Knob("forex.trend_days", 20, 200, 10, "Only buy when yesterday closed above the N-day average (0 = off)", 0),
+]
 FOREX_STRATEGIES = ("forex", "fxcopy")
 # The bold rules (hunt.py) tested with an account's loss limits in place of its AI bots.
 HUNT_KNOBS = {
@@ -160,7 +168,7 @@ def knobs_for(strategy: str, cfg: dict | None = None) -> list[Knob]:
     if strategy in FOREX_STRATEGIES:
         style = (cfg or load_config(strategy))["forex"]["style"]
         return {"trend": FOREX_KNOBS, "cot": FXCOPY_KNOBS, "momentum": MOMENTUM_KNOBS, "carry": CARRY_KNOBS,
-                "orb": ORB_KNOBS}[style]
+                "orb": ORB_KNOBS, "bounce": BOUNCE_KNOBS}[style]
     if cfg and cfg.get("playbook"):
         return PLAYBOOK_KNOBS[cfg["playbook"]["style"]]
     if cfg and cfg.get("hunt"):
