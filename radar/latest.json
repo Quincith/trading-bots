@@ -1,18 +1,18 @@
 {
- "time": "2026-10-28T22:30:58+00:00",
+ "time": "2026-10-28T23:01:01+00:00",
  "coins": {
   "BTC": {
-   "recent": 6,
-   "before": 28,
-   "buzz": 1.07,
+   "recent": 5,
+   "before": 29,
+   "buzz": 0.86,
    "tone": 0,
    "headlines": [
     "Bitcoin Could Steal AI\u2019s Spotlight as \u2018Fast Money Is Long Gone,\u2019 Lyn Alden Says",
     "Why Can't Bitcoin Break $80,000? Kevin O'Leary Points To Two Reasons",
-    "Fed Holds Rate at 3.75%-4%, Two Officials Push for a Hike (UPDATED)"
+    "Bitcoin-backed mortgages are coming to Canada, but borrowers are still unaware of the cost"
    ],
-   "trending": 5,
-   "rule_score": 0.16,
+   "trending": 9,
+   "rule_score": 0.12,
    "score": -0.2,
    "note": "Mild bad news: Fed hike talk and a treasury access scare, but price holding near $80K."
   },
@@ -22,8 +22,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 12,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "No new headlines in the recent hours; nothing new to act on."
   },
@@ -33,7 +33,7 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 8,
+   "trending": 10,
    "rule_score": 0.15,
    "score": 0.0,
    "note": "No new headlines; the Mirae tokenized notes story is minor and not fresh."
@@ -66,8 +66,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 8,
+   "rule_score": 0.15,
    "score": 0.0,
    "note": "No new headlines in the recent hours."
   },

@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 22:30 UTC
+# Aggressive strategy — 2026-10-28 23:01 UTC
 
 | | |
 |---|---|
@@ -18,9 +18,9 @@ Read 77 headlines from the last day (Alpaca/Benzinga 19, crypto news sites 58, C
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
 | XRP | +0.10 | 0 (0.0x usual) | Small positive: RLUSD expansion and Moody's rating, but mostly older news. |
-| ETH | +0.00 | 0 (0.0x usual) | No new headlines in the recent hours; nothing new to act on. |
 | SOL | +0.00 | 0 (0.0x usual) | No new headlines; the Mirae tokenized notes story is minor and not fresh. |
-| BTC | -0.20 | 6 (1.07x usual) | Mild bad news: Fed hike talk and a treasury access scare, but price holding near $80K. |
+| DOGE | +0.00 | 0 (0.0x usual) | No new headlines in the recent hours. |
+| BTC | -0.20 | 5 (0.86x usual) | Mild bad news: Fed hike talk and a treasury access scare, but price holding near $80K. |
 
 Also trending, but not in our coin list: PEPE.
 
@@ -29,4 +29,4 @@ Also trending, but not in our coin list: PEPE.
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_
