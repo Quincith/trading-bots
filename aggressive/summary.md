@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 23:01 UTC
+# Aggressive strategy — 2026-10-28 23:30 UTC
 
 | | |
 |---|---|
@@ -11,16 +11,16 @@
 
 Read 77 headlines from the last day (Alpaca/Benzinga 19, crypto news sites 58, CoinGecko trending 15).
 
-- **Fed holds rates, hike risk rising**: Fed kept rates steady but two officials want a hike, which pressures risk assets like crypto. (BTC, ETH, SOL, AVAX, LINK, DOGE, LTC, XRP)
-- **Bitcoin treasury and ETF flow stress**: Datavault BTC access issue and fast money leaving BTC ETFs add some downside worry. (BTC)
-- **Ripple and RLUSD institutional expansion**: Moody's rating and Coinbase expansion for RLUSD are real, but mostly recycled from earlier news. (XRP)
+- **Fed holds rates, hike risk for December**: Fed kept rates steady but two officials want a hike, a headwind for risk assets like crypto. (BTC, ETH, SOL, AVAX, LINK, DOGE, LTC, XRP)
+- **Institutional tokenization and custody push**: DTCC, Google custody, and bank tokenized notes build infrastructure, though mostly older-style news. (BTC, ETH, SOL, LINK)
+- **Ripple/XRP stablecoin expansion**: RLUSD gains Coinbase listing and Moody's rating, but XRP price has been flat and buzz is zero. (XRP)
 
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
-| XRP | +0.10 | 0 (0.0x usual) | Small positive: RLUSD expansion and Moody's rating, but mostly older news. |
-| SOL | +0.00 | 0 (0.0x usual) | No new headlines; the Mirae tokenized notes story is minor and not fresh. |
-| DOGE | +0.00 | 0 (0.0x usual) | No new headlines in the recent hours. |
-| BTC | -0.20 | 5 (0.86x usual) | Mild bad news: Fed hike talk and a treasury access scare, but price holding near $80K. |
+| SOL | +0.10 | 0 (0.0x usual) | Mirae tokenized notes on Solana is a small positive, but no real buzz. |
+| XRP | +0.10 | 0 (0.0x usual) | RLUSD expansion is real but old-ish and buzz is zero; watch for follow-through. |
+| ETH | +0.00 | 0 (0.0x usual) | No recent headlines of its own; nothing new building. |
+| BTC | -0.20 | 4 (0.67x usual) | Stuck near $80K; Fed hike talk and Datavault BTC access story weigh slightly. |
 
 Also trending, but not in our coin list: PEPE.
 
@@ -29,4 +29,4 @@ Also trending, but not in our coin list: PEPE.
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 0_
+_Claude calls this run: 1_

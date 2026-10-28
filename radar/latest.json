@@ -1,20 +1,20 @@
 {
- "time": "2026-10-28T23:01:01+00:00",
+ "time": "2026-10-28T23:30:58+00:00",
  "coins": {
   "BTC": {
-   "recent": 5,
-   "before": 29,
-   "buzz": 0.86,
+   "recent": 4,
+   "before": 30,
+   "buzz": 0.67,
    "tone": 0,
    "headlines": [
     "Bitcoin Could Steal AI\u2019s Spotlight as \u2018Fast Money Is Long Gone,\u2019 Lyn Alden Says",
-    "Why Can't Bitcoin Break $80,000? Kevin O'Leary Points To Two Reasons",
-    "Bitcoin-backed mortgages are coming to Canada, but borrowers are still unaware of the cost"
+    "Bitcoin-backed mortgages are coming to Canada, but borrowers are still unaware of the cost",
+    "Here\u2019s what happened in crypto today"
    ],
-   "trending": 9,
-   "rule_score": 0.12,
+   "trending": 8,
+   "rule_score": 0.08,
    "score": -0.2,
-   "note": "Mild bad news: Fed hike talk and a treasury access scare, but price holding near $80K."
+   "note": "Stuck near $80K; Fed hike talk and Datavault BTC access story weigh slightly."
   },
   "ETH": {
    "recent": 0,
@@ -22,10 +22,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 12,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "No new headlines in the recent hours; nothing new to act on."
+   "note": "No recent headlines of its own; nothing new building."
   },
   "SOL": {
    "recent": 0,
@@ -33,10 +33,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 10,
-   "rule_score": 0.15,
-   "score": 0.0,
-   "note": "No new headlines; the Mirae tokenized notes story is minor and not fresh."
+   "trending": 2,
+   "rule_score": 0.3,
+   "score": 0.1,
+   "note": "Mirae tokenized notes on Solana is a small positive, but no real buzz."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +47,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in the recent hours."
+   "note": "No recent headlines; nothing new building."
   },
   "LINK": {
    "recent": 0,
@@ -58,7 +58,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in the recent hours."
+   "note": "No recent headlines; nothing new building."
   },
   "DOGE": {
    "recent": 0,
@@ -66,10 +66,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 8,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in the recent hours."
+   "note": "No recent headlines; only flat-price recaps, which don't count."
   },
   "LTC": {
    "recent": 0,
@@ -80,7 +80,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No new headlines in the recent hours."
+   "note": "No recent headlines; nothing new building."
   },
   "XRP": {
    "recent": 0,
@@ -88,16 +88,16 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 3,
+   "rule_score": 0.3,
    "score": 0.1,
-   "note": "Small positive: RLUSD expansion and Moody's rating, but mostly older news."
+   "note": "RLUSD expansion is real but old-ish and buzz is zero; watch for follow-through."
   }
  },
  "themes": [
   {
-   "title": "Fed holds rates, hike risk rising",
-   "note": "Fed kept rates steady but two officials want a hike, which pressures risk assets like crypto.",
+   "title": "Fed holds rates, hike risk for December",
+   "note": "Fed kept rates steady but two officials want a hike, a headwind for risk assets like crypto.",
    "coins": [
     "BTC",
     "ETH",
@@ -110,15 +110,18 @@
    ]
   },
   {
-   "title": "Bitcoin treasury and ETF flow stress",
-   "note": "Datavault BTC access issue and fast money leaving BTC ETFs add some downside worry.",
+   "title": "Institutional tokenization and custody push",
+   "note": "DTCC, Google custody, and bank tokenized notes build infrastructure, though mostly older-style news.",
    "coins": [
-    "BTC"
+    "BTC",
+    "ETH",
+    "SOL",
+    "LINK"
    ]
   },
   {
-   "title": "Ripple and RLUSD institutional expansion",
-   "note": "Moody's rating and Coinbase expansion for RLUSD are real, but mostly recycled from earlier news.",
+   "title": "Ripple/XRP stablecoin expansion",
+   "note": "RLUSD gains Coinbase listing and Moody's rating, but XRP price has been flat and buzz is zero.",
    "coins": [
     "XRP"
    ]
@@ -133,5 +136,5 @@
   "crypto news sites": 58,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T22:30:58+00:00"
+ "ai_time": "2026-10-28T23:30:58+00:00"
 }
