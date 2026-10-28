@@ -1,18 +1,18 @@
 {
- "time": "2026-10-28T06:29:45+00:00",
+ "time": "2026-10-28T06:59:43+00:00",
  "coins": {
   "BTC": {
-   "recent": 6,
-   "before": 33,
-   "buzz": 0.91,
+   "recent": 5,
+   "before": 34,
+   "buzz": 0.74,
    "tone": 0,
    "headlines": [
     "'The Best Prediction Markets Experience': Vlad Tenev Wants Robinhood Users to Have 'Choices' Too",
     "Trump's 'Close Friend' Byron Donalds Is Crypto Punters' Favorite to Succeed Ron DeSantis as Florida Governor",
-    "Netanyahu\u2019s Odds Rise Among Crypto Punters Even as Exit Polls Indicate Israel PM Faces Uncertain Path Back to Power"
+    "Bitcoin treasury Datavault AI plunges 50% after firm says it can\u2019t access its BTC"
    ],
-   "trending": 2,
-   "rule_score": 0.28,
+   "trending": 4,
+   "rule_score": 0.25,
    "score": -0.1,
    "note": "Fed decision uncertainty and a Bitcoin treasury firm scare; headline pace is normal, so little new signal."
   },
@@ -33,8 +33,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 5,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "No recent headlines about Solana; nothing new building."
   },
@@ -88,8 +88,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 10,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.1,
    "note": "Ripple's RLUSD deal with Robinhood is real but largely recycled; a slight positive at most."
   }

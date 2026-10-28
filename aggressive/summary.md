@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 06:29 UTC
+# Aggressive strategy — 2026-10-28 06:59 UTC
 
 | | |
 |---|---|
@@ -18,8 +18,7 @@ Read 81 headlines from the last day (Alpaca/Benzinga 22, crypto news sites 59, C
 | Coin | Radar score | Headlines lately | Note |
 |---|---|---|---|
 | XRP | +0.10 | 0 (0.0x usual) | Ripple's RLUSD deal with Robinhood is real but largely recycled; a slight positive at most. |
-| SOL | +0.00 | 0 (0.0x usual) | No recent headlines about Solana; nothing new building. |
-| BTC | -0.10 | 6 (0.91x usual) | Fed decision uncertainty and a Bitcoin treasury firm scare; headline pace is normal, so little new signal. |
+| BTC | -0.10 | 5 (0.74x usual) | Fed decision uncertainty and a Bitcoin treasury firm scare; headline pace is normal, so little new signal. |
 
 Also trending, but not in our coin list: PEPE.
 
@@ -28,4 +27,4 @@ Also trending, but not in our coin list: PEPE.
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_
