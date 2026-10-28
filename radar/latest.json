@@ -1,20 +1,20 @@
 {
- "time": "2026-10-28T07:59:39+00:00",
+ "time": "2026-10-28T08:29:43+00:00",
  "coins": {
   "BTC": {
-   "recent": 5,
-   "before": 32,
-   "buzz": 0.78,
-   "tone": 0,
+   "recent": 4,
+   "before": 34,
+   "buzz": 0.59,
+   "tone": 1,
    "headlines": [
     "'The Best Prediction Markets Experience': Vlad Tenev Wants Robinhood Users to Have 'Choices' Too",
-    "Trump's 'Close Friend' Byron Donalds Is Crypto Punters' Favorite to Succeed Ron DeSantis as Florida Governor",
-    "Bitcoin treasury Datavault AI plunges 50% after firm says it can\u2019t access its BTC"
+    "Bitcoin treasury Datavault AI plunges 50% after firm says it can\u2019t access its BTC",
+    "Bitcoin ETF inflows climb to $176M as BTC rebounds above $80K"
    ],
-   "trending": 11,
-   "rule_score": 0.11,
-   "score": -0.1,
-   "note": "Price-focused headlines and a Fed meeting ahead; Datavault and Bithumb news are sentiment negatives, buzz is below normal."
+   "trending": null,
+   "rule_score": 0.02,
+   "score": 0.1,
+   "note": "Modest ETF inflows and a rebound above $80K, but mostly price recaps and Fed-meeting anticipation."
   },
   "ETH": {
    "recent": 0,
@@ -25,7 +25,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz; nothing new building for ETH."
+   "note": "No recent headlines of its own; only mentioned in price recaps."
   },
   "SOL": {
    "recent": 0,
@@ -33,10 +33,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 4,
-   "rule_score": 0.3,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "Searched on CoinGecko but no recent headlines; no new catalyst."
+   "note": "No recent headlines and no new news."
   },
   "AVAX": {
    "recent": 0,
@@ -47,7 +47,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz; nothing new building."
+   "note": "No recent headlines and no new news."
   },
   "LINK": {
    "recent": 0,
@@ -55,10 +55,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 11,
+   "rule_score": 0.15,
    "score": 0.0,
-   "note": "Searched on CoinGecko but no recent headlines; no new catalyst."
+   "note": "Searched often but no new headlines; nothing building."
   },
   "DOGE": {
    "recent": 0,
@@ -69,7 +69,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "Only price-recap mentions; no new catalyst."
+   "note": "Only mentioned in price-recap articles; no real catalyst."
   },
   "LTC": {
    "recent": 0,
@@ -80,7 +80,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines or buzz; nothing new building."
+   "note": "No recent headlines and no new news."
   },
   "XRP": {
    "recent": 0,
@@ -88,34 +88,36 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 12,
+   "trending": 6,
    "rule_score": 0.15,
    "score": 0.2,
-   "note": "Ripple's RLUSD deal with Robinhood and BNY expansion are real partnership news, but mild and partly recycled."
+   "note": "Robinhood and Ripple RLUSD expansion is a real partnership, but the coverage is repetitive and buzz is flat."
   }
  },
  "themes": [
   {
    "title": "Robinhood and Ripple stablecoin/tokenization partnerships",
-   "note": "Robinhood adopting Ripple's RLUSD stablecoin for retail and institutional use could support XRP sentiment. Mostly partnership news, unconfirmed impact.",
+   "note": "Robinhood adopting Ripple's RLUSD stablecoin is repeated across many outlets; could support XRP, but mostly recycled coverage.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Tokenized stocks and onchain Nasdaq-100 funds",
-   "note": "Janus Henderson and Centrifuge launching tokenized Nasdaq-100 fund on Stellar; but OKX-ICE tokenized stock objections add uncertainty.",
-   "coins": [
-    "XRP",
-    "BTC"
-   ]
-  },
-  {
-   "title": "Fed decision and BTC price levels",
-   "note": "Macro event with BTC around $80k; price-recap headlines dominate, so little fresh catalyst beyond the Fed outcome.",
+   "title": "Exchange hacks and data leaks (Coinbase, Bithumb)",
+   "note": "Security incidents at major exchanges could hurt trust across crypto, with Bithumb and Coinbase breach stories still developing.",
    "coins": [
     "BTC",
     "ETH",
+    "XRP"
+   ]
+  },
+  {
+   "title": "Bitcoin ETF inflows and Fed decision",
+   "note": "Bitcoin ETF inflows and pre-Fed price action dominate headlines; a macro event that could move all majors in either direction.",
+   "coins": [
+    "BTC",
+    "ETH",
+    "SOL",
     "XRP",
     "DOGE"
    ]
@@ -124,11 +126,11 @@
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 78,
+ "headlines": 77,
  "sources": {
   "Alpaca/Benzinga": 21,
-  "crypto news sites": 57,
+  "crypto news sites": 56,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T07:29:41+00:00"
+ "ai_time": "2026-10-28T08:29:43+00:00"
 }
