@@ -9,7 +9,7 @@
   "day": "2026-10-28",
   "day_start_equity": 99.9,
   "halted_reason": null,
-  "last_scan": "2026-10-28T10:30:14+00:00",
+  "last_scan": "2026-10-28T11:00:01+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -2495,9 +2495,46 @@
     "0001193125-26-434821",
     "0001918704-26-032865",
     "0001104659-26-119276",
-    "0001918704-26-032864"
+    "0001918704-26-032864",
+    "0001104659-26-119350",
+    "0001487630-26-000022",
+    "0001369240-26-000014"
   ],
   "watchlist": {
+    "ACN": {
+      "buys": [
+        {
+          "accession": "0001487630-26-000022",
+          "date": "2026-10-26",
+          "filed": "2026-10-28T06:45:40-04:00",
+          "price": 245.1063,
+          "role": "Chair and CEO, Director",
+          "usd": 514723.23,
+          "who": "Sweet Julie Spellman"
+        },
+        {
+          "accession": "0001487630-26-000022",
+          "date": "2026-10-26",
+          "filed": "2026-10-28T06:45:40-04:00",
+          "price": 246.1701,
+          "role": "Chair and CEO, Director",
+          "usd": 2486318.01,
+          "who": "Sweet Julie Spellman"
+        },
+        {
+          "accession": "0001369240-26-000014",
+          "date": "2026-10-26",
+          "filed": "2026-10-28T06:45:35-04:00",
+          "price": 249.8097,
+          "role": "Director",
+          "usd": 199847.76,
+          "who": "Price Paula A"
+        }
+      ],
+      "company": "Accenture plc",
+      "score": 3.76,
+      "ticker": "ACN"
+    },
     "AIOK": {
       "buys": [
         {
