@@ -123,6 +123,7 @@ ORB_KNOBS = [
     Knob("forex.range_minutes", 15, 90, 15, "The opening range is the high and low of this many minutes after the open"),
     Knob("forex.entry_hours", 1, 6, 1, "Only take a breakout within this many hours after the range is set"),
     Knob("forex.exit_hour", 11, 17, 1, "Close any open trade at this hour (local time of that market)"),
+    Knob("forex.max_cost_pct", 5, 30, 2.5, "Skip days when fees would be more than this % of the risk (0 = off)", 0),
 ]
 FOREX_STRATEGIES = ("forex", "fxcopy")
 

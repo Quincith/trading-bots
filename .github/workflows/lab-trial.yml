@@ -24,6 +24,22 @@ jobs:
         with:
           path: m5.pkl
           key: oanda-m5-2018-10-to-2026-10-v1
+      - name: "ORB with the fee filter (skip days when fees are over 10% of the risk)"
+        run: |
+          python - <<'PY'
+          from datetime import datetime, timezone
+          from tradebots import lab, orb
+          end = datetime(2026, 10, 1, tzinfo=timezone.utc)
+          eng = orb.load_engine(lab.load_config("forex"), 8, "m5.pkl", end)
+          for sess in ("london", "newyork"):
+              cfg = lab.load_config("forex")
+              cfg["forex"] = {"style": "orb", "session": sess, "range_minutes": 30, "entry_hours": 3, "exit_hour": 16,
+                              "max_cost_pct": 10}
+              print(f"\n\n######## ORB at the {sess} open, fee filter 10%\n", flush=True)
+              print(lab.validate("forex", eng, lab.Runner(eng), cfg)[1], flush=True)
+              r0 = eng.run(cfg, eng.start, end, 0.0)
+              print(f"(before fees: ${r0.equity[-1][1]:.2f}, {len(r0.trades)} trades)")
+          PY
       - name: "ORB, settings fixed in advance: London and New York opens"
         run: |
           python - <<'PY'

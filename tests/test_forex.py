@@ -276,6 +276,9 @@ def test_orb_day_trade_rules():
     h2, l2 = h.copy(), l.copy(); h2[8], l2[8] = 1.1010, 1.0990
     tr2 = orb.day_trade("EUR_USD", (t, o, h2, l2, c), ORB, 1.0)
     assert tr2["why"] == "stop hit" and tr2["exit"] < tr2["entry"]
+    # the fee filter: a 10-pip range with ~2.4 pips of costs is skipped at 10%, kept at 30%
+    assert orb.day_trade("EUR_USD", (t, o, h, l, c), {**ORB, "max_cost_pct": 10}, 1.0) is None
+    assert orb.day_trade("EUR_USD", (t, o, h, l, c), {**ORB, "max_cost_pct": 30}, 1.0)["d"] == 1
 
 
 def test_orb_simulate_and_validate():

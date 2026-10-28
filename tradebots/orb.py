@@ -6,6 +6,8 @@ Each trading day, once a big market opens (London or New York):
    OANDA can hold these as "buy if it gets here" orders, so the bot doesn't have to watch every minute.
 3. The safety stop sits on the other side of the range. Sizing risks about 1% of the account, so a wide
    range means a small trade.
+   With `max_cost_pct` set, a day is skipped when the round trip's spread and slip would be more than that
+   % of the range (the risk), so fees don't eat a narrow day's small move.
 4. Every trade still open at `exit_hour` (local time) is closed: nothing is held overnight, so there is
    no overnight interest.
 
@@ -58,6 +60,10 @@ def day_trade(pair: str, sess: tuple, fx: dict, cost: float) -> dict | None:
     if hi <= lo:
         return None
     hc = half_cost(pair, 0.0, cost)
+    # the fee filter: skip days whose range is so narrow that the spread and slip are a big share of the risk
+    max_cost = float(fx.get("max_cost_pct") or 0)
+    if max_cost and 2 * half_cost(pair, 0.0) > (hi - lo) * max_cost / 100:
+        return None
     last_entry = times[0] + pd.Timedelta(minutes=int(fx["range_minutes"])) + pd.Timedelta(hours=float(fx["entry_hours"]))
     for i in range(n_rng, len(times)):
         if times[i] >= last_entry:
