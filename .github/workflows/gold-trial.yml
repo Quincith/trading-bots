@@ -1,0 +1,54 @@
+name: Gold trial (temporary)
+
+# Temporary: checks that the OANDA practice account "FX COPY" can trade gold (XAU/USD) and runs the gold
+# bounce rule (gold.py) through the lab on OANDA's past 30-minute gold prices. It saves nothing to the repo
+# and opens no pull requests or issues. Removed before merge.
+on:
+  push:
+    branches: [claude/project-thread-9m12cs]
+    paths: [".github/workflows/gold-trial.yml", "tradebots/gold.py"]
+
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      OANDA_API_TOKEN: ${{ secrets.OANDA_API_TOKEN }}
+      OANDA_FXCOPY_ACCOUNT_ID: ${{ secrets.OANDA_FXCOPY_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Can the FX COPY practice account trade gold?
+        run: |
+          python - <<'PY'
+          import os
+          from tradebots.oanda import OandaPractice
+          api = OandaPractice(os.environ["OANDA_API_TOKEN"], os.environ["OANDA_FXCOPY_ACCOUNT_ID"])
+          a = api._req("GET", f"/v3/accounts/{api.account}/summary")["account"]
+          print("account currency", a.get("currency"), "| open trades", a.get("openTradeCount"),
+                "| margin rate", a.get("marginRate"))
+          js = api._req("GET", f"/v3/accounts/{api.account}/instruments")["instruments"]
+          names = sorted(i["name"] for i in js)
+          print(len(names), "instruments; metals:", [n for n in names if n[:3] in ("XAU", "XAG", "XPT", "XPD")])
+          for i in js:
+              if i["name"] == "XAU_USD":
+                  print({k: i.get(k) for k in ("name", "type", "displayName", "pipLocation", "displayPrecision",
+                         "tradeUnitsPrecision", "minimumTradeSize", "maximumOrderUnits", "marginRate")})
+          PY
+      - uses: actions/cache/restore@v4
+        with:
+          path: gold.pkl
+          key: oanda-xau-m30-2018-10-to-2026-10-v1
+      - name: Gold bounce lab check (8 years of 30-minute candles)
+        run: |
+          python -m tradebots.gold --cache gold.pkl --end 2026-10-01 --out report.md
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: gold.pkl
+          key: oanda-xau-m30-2018-10-to-2026-10-v1
