@@ -1,46 +1,48 @@
 {
- "time": "2026-10-28T13:00:11+00:00",
+ "time": "2026-10-28T13:30:13+00:00",
  "coins": {
   "BTC": {
    "recent": 7,
-   "before": 26,
-   "buzz": 1.35,
+   "before": 23,
+   "buzz": 1.52,
    "tone": 0,
    "headlines": [
+    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
     "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain Ahead of Federal Reserve Interest Rate Decision\u2014 SKHY, STX, V, GOOGL in Focus (UPDATED)",
-    "Bitcoin Undervalued at $80,000? Expert Says It's 'Climbing Wall of Worry'",
-    "Will Coinbase Break Its Losing Streak in Q3? Crypto Bettors Weigh Odds as COIN Sends Mixed Signals Before Key Earnings"
+    "Bitcoin Undervalued at $80,000? Expert Says It's 'Climbing Wall of Worry'"
    ],
    "trending": 3,
-   "rule_score": 0.37,
+   "rule_score": 0.4,
    "score": 0.2,
-   "note": "Price rebound above $80K with modest ETF inflows; mostly price recap, Fed decision is the real risk."
+   "note": "Bitcoin ETF inflows rising and Morgan Stanley says correction mostly over; still mostly price-driven chatter."
   },
   "ETH": {
-   "recent": 1,
-   "before": 7,
-   "buzz": 0.71,
+   "recent": 2,
+   "before": 6,
+   "buzz": 1.67,
    "tone": 0,
    "headlines": [
+    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
     "Google to preview crypto custody security system as AI threats grow"
    ],
    "trending": null,
-   "rule_score": 0.0,
-   "score": 0.0,
-   "note": "Only one recent headline and quiet buzz; nothing new building."
+   "rule_score": 0.13,
+   "score": 0.2,
+   "note": "Tokenization headlines favor Ethereum-style chains; buzz is up but few fresh headlines."
   },
   "SOL": {
-   "recent": 1,
-   "before": 4,
-   "buzz": 1.25,
+   "recent": 2,
+   "before": 3,
+   "buzz": 3.33,
    "tone": 0,
    "headlines": [
+    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
     "Mirae Asset Securities issues tokenized notes on Solana"
    ],
    "trending": null,
-   "rule_score": 0.0,
-   "score": 0.2,
-   "note": "Mirae tokenized notes on Solana is a real institutional signal, though small."
+   "rule_score": 0.47,
+   "score": 0.3,
+   "note": "Mirae tokenized notes on Solana plus buzz at 3.3x; a real institutional use case."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +53,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new."
+   "note": "No recent headlines, nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -59,10 +61,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 11,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new."
+   "note": "No recent headlines; tokenization trend could help but no direct news."
   },
   "DOGE": {
    "recent": 0,
@@ -73,7 +75,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; only mentioned in price recaps."
+   "note": "No recent headlines; only generic price-recap mentions."
   },
   "LTC": {
    "recent": 0,
@@ -84,57 +86,62 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines; nothing new."
+   "note": "No recent headlines, nothing new."
   },
   "XRP": {
-   "recent": 3,
+   "recent": 4,
    "before": 9,
-   "buzz": 1.67,
+   "buzz": 2.22,
    "tone": 0,
    "headlines": [
+    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
     "Ripple CEO Opens Conference 'With a Bang:' The 4 Announcements He Made",
-    "XRP Ledger developers propose creating wallets with zero XRP for stablecoin payments",
-    "Moody's Rates Ripple's $2.6B RLUSD Stablecoin A2, a Day After OCC Bank Approval"
+    "XRP Ledger developers propose creating wallets with zero XRP for stablecoin payments"
    ],
    "trending": null,
-   "rule_score": 0.13,
+   "rule_score": 0.24,
    "score": 0.5,
-   "note": "OCC bank approval, Moody's rating and Robinhood deal for Ripple's stablecoin; buzz 2.5x normal."
+   "note": "Moody's rating of Ripple's RLUSD and Robinhood partnership are real positive catalysts; buzz 2.2x."
   }
  },
  "themes": [
   {
-   "title": "Ripple and XRP institutional adoption wave",
-   "note": "Ripple's stablecoin gets bank approval, Moody's rating, and Robinhood partnership; XRP buzz is 2.5x normal.",
+   "title": "Tokenization of traditional assets gaining institutional momentum",
+   "note": "DTCC, Securitize, Mirae and banks are moving real assets onto blockchains; a slow but real build.",
    "coins": [
-    "XRP"
-   ]
-  },
-  {
-   "title": "Tokenization and institutional rails spreading",
-   "note": "Securitize adds Stellar, Mirae issues tokenized notes on Solana, DBS survey; mostly sector news, slow-moving.",
-   "coins": [
+    "ETH",
     "SOL",
+    "XRP",
+    "LINK"
+   ]
+  },
+  {
+   "title": "Ripple RLUSD stablecoin expansion and XRP Ledger payment ideas",
+   "note": "Fresh Moody's rating, Robinhood partnership and XRP Ledger wallet proposal add positive XRP news.",
+   "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Exchange security scares",
-   "note": "Bithumb hack and Coinbase vendor data leak; funds reportedly safe, but trust concerns could weigh on exchange-linked sentiment.",
+   "title": "Fed decision and macro risk ahead of Wednesday",
+   "note": "Bitcoin and crypto are trading on Fed rate-decision expectations, so an unexpected outcome could swing prices.",
    "coins": [
     "BTC",
-    "ETH"
+    "ETH",
+    "SOL",
+    "XRP",
+    "DOGE"
    ]
   }
  ],
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 81,
+ "headlines": 80,
  "sources": {
-  "Alpaca/Benzinga": 20,
-  "crypto news sites": 61,
+  "Alpaca/Benzinga": 21,
+  "crypto news sites": 59,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T12:30:07+00:00"
+ "ai_time": "2026-10-28T13:30:13+00:00"
 }
