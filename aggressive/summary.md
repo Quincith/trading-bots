@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-10-28 07:29 UTC
+# Aggressive strategy — 2026-10-28 07:59 UTC
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## News radar (trends forming)
 
-Read 79 headlines from the last day (Alpaca/Benzinga 21, crypto news sites 58, CoinGecko trending 15).
+Read 78 headlines from the last day (Alpaca/Benzinga 21, crypto news sites 57, CoinGecko trending 15).
 
 - **Robinhood and Ripple stablecoin/tokenization partnerships**: Robinhood adopting Ripple's RLUSD stablecoin for retail and institutional use could support XRP sentiment. Mostly partnership news, unconfirmed impact. (XRP)
 - **Tokenized stocks and onchain Nasdaq-100 funds**: Janus Henderson and Centrifuge launching tokenized Nasdaq-100 fund on Stellar; but OKX-ICE tokenized stock objections add uncertainty. (XRP, BTC)
@@ -19,8 +19,7 @@ Read 79 headlines from the last day (Alpaca/Benzinga 21, crypto news sites 58, C
 |---|---|---|---|
 | XRP | +0.20 | 0 (0.0x usual) | Ripple's RLUSD deal with Robinhood and BNY expansion are real partnership news, but mild and partly recycled. |
 | SOL | +0.00 | 0 (0.0x usual) | Searched on CoinGecko but no recent headlines; no new catalyst. |
-| LINK | +0.00 | 0 (0.0x usual) | Searched on CoinGecko but no recent headlines; no new catalyst. |
-| BTC | -0.10 | 5 (0.76x usual) | Price-focused headlines and a Fed meeting ahead; Datavault and Bithumb news are sentiment negatives, buzz is below normal. |
+| BTC | -0.10 | 5 (0.78x usual) | Price-focused headlines and a Fed meeting ahead; Datavault and Bithumb news are sentiment negatives, buzz is below normal. |
 
 Also trending, but not in our coin list: PEPE.
 
@@ -29,4 +28,4 @@ Also trending, but not in our coin list: PEPE.
 - Scout scanned 8 markets.
 - Scout found nothing worth a closer look this run.
 
-_Claude calls this run: 1_
+_Claude calls this run: 0_

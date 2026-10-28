@@ -1,18 +1,18 @@
 {
- "time": "2026-10-28T07:29:41+00:00",
+ "time": "2026-10-28T07:59:39+00:00",
  "coins": {
   "BTC": {
    "recent": 5,
-   "before": 33,
-   "buzz": 0.76,
+   "before": 32,
+   "buzz": 0.78,
    "tone": 0,
    "headlines": [
     "'The Best Prediction Markets Experience': Vlad Tenev Wants Robinhood Users to Have 'Choices' Too",
     "Trump's 'Close Friend' Byron Donalds Is Crypto Punters' Favorite to Succeed Ron DeSantis as Florida Governor",
     "Bitcoin treasury Datavault AI plunges 50% after firm says it can\u2019t access its BTC"
    ],
-   "trending": null,
-   "rule_score": -0.05,
+   "trending": 11,
+   "rule_score": 0.11,
    "score": -0.1,
    "note": "Price-focused headlines and a Fed meeting ahead; Datavault and Bithumb news are sentiment negatives, buzz is below normal."
   },
@@ -29,12 +29,12 @@
   },
   "SOL": {
    "recent": 0,
-   "before": 5,
+   "before": 4,
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 6,
-   "rule_score": 0.15,
+   "trending": 4,
+   "rule_score": 0.3,
    "score": 0.0,
    "note": "Searched on CoinGecko but no recent headlines; no new catalyst."
   },
@@ -55,8 +55,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 12,
-   "rule_score": 0.15,
+   "trending": null,
+   "rule_score": 0.0,
    "score": 0.0,
    "note": "Searched on CoinGecko but no recent headlines; no new catalyst."
   },
@@ -88,8 +88,8 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": null,
-   "rule_score": 0.0,
+   "trending": 12,
+   "rule_score": 0.15,
    "score": 0.2,
    "note": "Ripple's RLUSD deal with Robinhood and BNY expansion are real partnership news, but mild and partly recycled."
   }
@@ -124,10 +124,10 @@
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 79,
+ "headlines": 78,
  "sources": {
   "Alpaca/Benzinga": 21,
-  "crypto news sites": 58,
+  "crypto news sites": 57,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-28T07:29:41+00:00"
