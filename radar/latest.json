@@ -1,20 +1,20 @@
 {
- "time": "2026-10-28T19:00:40+00:00",
+ "time": "2026-10-28T19:30:50+00:00",
  "coins": {
   "BTC": {
-   "recent": 11,
-   "before": 23,
-   "buzz": 2.39,
+   "recent": 9,
+   "before": 25,
+   "buzz": 1.8,
    "tone": 3,
    "headlines": [
     "Fed Holds Rate at 3.75%-4%, Two Officials Push for a Hike (UPDATED)",
     "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat",
     "Bitwise Predicts Bitcoin Could Hit $1.6 Million by 2036 as Four-Year Cycle Fades"
    ],
-   "trending": 2,
-   "rule_score": 0.88,
-   "score": -0.2,
-   "note": "Fed hike talk and a rejected rebound weigh, though ETF inflows are small positives."
+   "trending": 0,
+   "rule_score": 0.76,
+   "score": -0.1,
+   "note": "Buzz is high but Fed hike talk and rejected bounce at 50-day line are mildly negative."
   },
   "ETH": {
    "recent": 2,
@@ -27,8 +27,8 @@
    ],
    "trending": null,
    "rule_score": 0.5,
-   "score": 0.0,
-   "note": "Mostly flat coverage with no clear new catalyst; only generic market news."
+   "score": 0.1,
+   "note": "Few headlines; tokenization news is mildly supportive, nothing decisive yet."
   },
   "SOL": {
    "recent": 2,
@@ -39,10 +39,10 @@
     "Bitcoin Holds $80,000 While Ethereum, XRP, Dogecoin Trade Flat",
     "Ripple Expands From Robinhood to Coinbase as RLUSD Gains Ground"
    ],
-   "trending": 9,
+   "trending": 10,
    "rule_score": 0.82,
-   "score": 0.2,
-   "note": "Mirae tokenized notes on Solana is a real institutional use case, but headline volume is thin."
+   "score": 0.3,
+   "note": "Buzz 3.3x with Mirae tokenized notes on Solana and Kospi AI rally; modest good news building."
   },
   "AVAX": {
    "recent": 0,
@@ -53,7 +53,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new is building."
+   "note": "No recent headlines at all."
   },
   "LINK": {
    "recent": 0,
@@ -61,10 +61,10 @@
    "buzz": 0.0,
    "tone": 0,
    "headlines": [],
-   "trending": 10,
-   "rule_score": 0.15,
-   "score": 0.0,
-   "note": "No recent headlines, so nothing new is building."
+   "trending": null,
+   "rule_score": 0.0,
+   "score": 0.1,
+   "note": "No direct Chainlink news; DTCC tokenization is only a faint indirect tailwind."
   },
   "DOGE": {
    "recent": 1,
@@ -76,8 +76,8 @@
    ],
    "trending": null,
    "rule_score": 0.2,
-   "score": -0.1,
-   "note": "Buzz is high but only one flat-price mention; not a real catalyst yet."
+   "score": 0.0,
+   "note": "Buzz 5x but from one headline and a flat price mention; too thin to act on."
   },
   "LTC": {
    "recent": 0,
@@ -88,7 +88,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines, so nothing new is building."
+   "note": "No recent headlines at all."
   },
   "XRP": {
    "recent": 2,
@@ -101,35 +101,40 @@
    ],
    "trending": null,
    "rule_score": 0.22,
-   "score": 0.3,
-   "note": "Ripple RLUSD gains OCC approval, Moody's A2 rating and Coinbase expansion; real positive news."
+   "score": 0.2,
+   "note": "Ripple RLUSD rating and Coinbase expansion are real positives, though buzz is only 1.1x."
   }
  },
  "themes": [
   {
-   "title": "Fed holds rates, hike risk rising",
-   "note": "Fed held rates but two officials want a hike, which can pressure risk assets like crypto.",
+   "title": "Fed holds rates, possible December hike talk",
+   "note": "Fed kept rates steady but two officials want a hike; tighter money can pressure all crypto, mainly BTC.",
    "coins": [
     "BTC",
     "ETH",
     "SOL",
-    "DOGE"
+    "AVAX",
+    "LINK",
+    "DOGE",
+    "LTC",
+    "XRP"
    ]
   },
   {
-   "title": "Institutional tokenization and stablecoin push",
-   "note": "Banks and firms keep adopting tokenized assets and stablecoins, mostly on Ripple, Solana and Stellar rails.",
+   "title": "Tokenization and institutional rails expanding",
+   "note": "DTCC, Securitize on Stellar, Mirae on Solana, Google custody: real institutional buildout, slow-moving but positive.",
    "coins": [
-    "XRP",
-    "SOL"
+    "SOL",
+    "LINK",
+    "ETH",
+    "XRP"
    ]
   },
   {
-   "title": "Security breaches hitting exchanges and vendors",
-   "note": "Bithumb hack and Coinbase vendor data exposure raise trust concerns across exchanges.",
+   "title": "Ripple RLUSD and XRP ledger stablecoin push",
+   "note": "Moody's A2 rating and Coinbase expansion for RLUSD are real news, though XRP price is flat so far.",
    "coins": [
-    "BTC",
-    "ETH"
+    "XRP"
    ]
   }
  ],
@@ -140,5 +145,5 @@
   "crypto news sites": 62,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T18:30:40+00:00"
+ "ai_time": "2026-10-28T19:30:50+00:00"
 }
