@@ -1,20 +1,20 @@
 {
- "time": "2026-10-28T04:59:37+00:00",
+ "time": "2026-10-28T05:29:37+00:00",
  "coins": {
   "BTC": {
-   "recent": 4,
-   "before": 34,
-   "buzz": 0.59,
+   "recent": 5,
+   "before": 33,
+   "buzz": 0.76,
    "tone": 0,
    "headlines": [
     "Trump's 'Close Friend' Byron Donalds Is Crypto Punters' Favorite to Succeed Ron DeSantis as Florida Governor",
     "Netanyahu\u2019s Odds Rise Among Crypto Punters Even as Exit Polls Indicate Israel PM Faces Uncertain Path Back to Power",
     "Bitcoin, Ethereum, XRP, Dogecoin Rise Ahead of Fed Rate Decision: Analyst Says BTC Headed for 'New Highs' If It Flips This Level"
    ],
-   "trending": 1,
-   "rule_score": 0.22,
-   "score": 0.0,
-   "note": "Heavy price-recap and Fed preview coverage, buzz below normal. Nothing new that changes fundamentals."
+   "trending": 4,
+   "rule_score": 0.25,
+   "score": -0.2,
+   "note": "Mostly recap and Fed-preview articles; Datavault BTC custody scare and Bithumb breach add mild caution."
   },
   "ETH": {
    "recent": 1,
@@ -26,8 +26,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.1,
-   "note": "Few headlines and mostly tokenization news. Slight positive from onchain fund launches."
+   "score": 0.0,
+   "note": "Little fresh ETH-specific news; only generic recap mentions and low buzz."
   },
   "SOL": {
    "recent": 1,
@@ -40,7 +40,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "Only one headline with normal buzz. No clear new catalyst."
+   "note": "One headline and near-normal buzz; nothing new that matters."
   },
   "AVAX": {
    "recent": 0,
@@ -51,7 +51,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines. Nothing new building."
+   "note": "No headlines in the last day; nothing new."
   },
   "LINK": {
    "recent": 0,
@@ -62,7 +62,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines. Nothing new building."
+   "note": "No headlines in the last day; nothing new."
   },
   "DOGE": {
    "recent": 1,
@@ -74,8 +74,8 @@
    ],
    "trending": null,
    "rule_score": 0.0,
-   "score": 0.0,
-   "note": "Buzz spike is from a price-rise recap mention. Not a real catalyst, so treat as noise."
+   "score": 0.1,
+   "note": "Buzz is 5x normal but only one mention, and it is a price recap; treat with caution."
   },
   "LTC": {
    "recent": 0,
@@ -86,7 +86,7 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.0,
-   "note": "No recent headlines. Nothing new building."
+   "note": "No headlines in the last day; nothing new."
   },
   "XRP": {
    "recent": 1,
@@ -99,31 +99,33 @@
    "trending": null,
    "rule_score": 0.0,
    "score": 0.1,
-   "note": "Ripple and Robinhood RLUSD partnership expansion is mildly positive, but largely recycled coverage."
+   "note": "Ripple's RLUSD tie-up with Robinhood is real but recycled; buzz is low."
   }
  },
  "themes": [
   {
-   "title": "Robinhood and Ripple stablecoin/RLUSD partnership",
-   "note": "Repeated partnership headlines expanding RLUSD use. Mostly recycled coverage of one deal; modest XRP relevance.",
+   "title": "Bithumb hack and data leak",
+   "note": "Korean exchange breach may weigh on sentiment and exchange-security trust, mainly hitting local-market coins.",
+   "coins": [
+    "BTC",
+    "ETH",
+    "XRP"
+   ]
+  },
+  {
+   "title": "Ripple and Robinhood RLUSD partnership",
+   "note": "Repeated Ripple stablecoin and bank-partnership news, but the same story has run many times, so the fresh impact is limited.",
    "coins": [
     "XRP"
    ]
   },
   {
-   "title": "Tokenized stocks and onchain Nasdaq funds",
-   "note": "Fund launches and OKX-ICE objections are real news, but tied to a few platforms rather than major coins.",
-   "coins": [
-    "ETH",
-    "SOL"
-   ]
-  },
-  {
-   "title": "Fed decision and BTC price levels",
-   "note": "Price-level and preview articles dominate. Mostly price talk, not a fresh catalyst for BTC.",
+   "title": "Fed decision and macro risk",
+   "note": "Fed meeting this week drives majors; direction uncertain, so it could move BTC, ETH, SOL, XRP, and DOGE either way.",
    "coins": [
     "BTC",
     "ETH",
+    "SOL",
     "XRP",
     "DOGE"
    ]
@@ -132,11 +134,11 @@
  "trending_elsewhere": [
   "PEPE"
  ],
- "headlines": 80,
+ "headlines": 81,
  "sources": {
   "Alpaca/Benzinga": 22,
-  "crypto news sites": 58,
+  "crypto news sites": 59,
   "CoinGecko trending": 15
  },
- "ai_time": "2026-10-28T04:29:26+00:00"
+ "ai_time": "2026-10-28T05:29:37+00:00"
 }
