@@ -1,32 +1,31 @@
 {
- "time": "2026-10-28T14:30:14+00:00",
+ "time": "2026-10-28T15:00:22+00:00",
  "coins": {
   "BTC": {
    "recent": 8,
-   "before": 22,
-   "buzz": 1.82,
+   "before": 21,
+   "buzz": 1.9,
    "tone": -2,
    "headlines": [
     "Scaramucci Calls Elizabeth Warren \u2018the Joke of Jokes,\u2019 Accuses Her of Echoing Bank Lobbyists",
     "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
     "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain Ahead of Federal Reserve Interest Rate Decision\u2014 SKHY, STX, V, GOOGL in Focus (UPDATED)"
    ],
-   "trending": 8,
-   "rule_score": 0.11,
+   "trending": 14,
+   "rule_score": 0.13,
    "score": 0.2,
    "note": "Mild positive: ETF inflows and Google institutional custody news, but many recycled price-recap headlines."
   },
   "ETH": {
-   "recent": 2,
-   "before": 4,
-   "buzz": 2.5,
+   "recent": 1,
+   "before": 5,
+   "buzz": 1.0,
    "tone": 0,
    "headlines": [
-    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
-    "Google to preview crypto custody security system as AI threats grow"
+    "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims"
    ],
    "trending": null,
-   "rule_score": 0.3,
+   "rule_score": 0.0,
    "score": 0.2,
    "note": "Tokenization headlines help the ecosystem, but the buzz is thin with only 2 headlines."
   },
@@ -39,8 +38,8 @@
     "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
     "Mirae Asset Securities issues tokenized notes on Solana"
    ],
-   "trending": null,
-   "rule_score": 0.47,
+   "trending": 4,
+   "rule_score": 0.77,
    "score": 0.3,
    "note": "Mirae tokenized notes on Solana are a real institutional catalyst; buzz is elevated but volume is small."
   },
@@ -90,8 +89,8 @@
   },
   "XRP": {
    "recent": 4,
-   "before": 9,
-   "buzz": 2.22,
+   "before": 8,
+   "buzz": 2.5,
    "tone": 0,
    "headlines": [
     "Gensler Targeted Crypto to Win Warren\u2019s Backing for Treasury Secretary, 'Crypto Dad' Chris Giancarlo Claims",
@@ -99,7 +98,7 @@
     "XRP Ledger developers propose creating wallets with zero XRP for stablecoin payments"
    ],
    "trending": null,
-   "rule_score": 0.24,
+   "rule_score": 0.3,
    "score": 0.4,
    "note": "RLUSD OCC approval, Moody's rating, and Robinhood deal are real positive catalysts with rising buzz."
   }
@@ -131,10 +130,10 @@
   }
  ],
  "trending_elsewhere": [],
- "headlines": 79,
+ "headlines": 77,
  "sources": {
-  "Alpaca/Benzinga": 20,
-  "crypto news sites": 59,
+  "Alpaca/Benzinga": 19,
+  "crypto news sites": 58,
   "CoinGecko trending": 15
  },
  "ai_time": "2026-10-28T14:30:14+00:00"

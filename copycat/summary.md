@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-10-28 14:30 UTC
+# Copycat strategy — 2026-10-28 15:00 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 32 new SEC filings this run. 23 stocks on the watchlist.
+Read 31 new SEC filings this run. 23 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 32 new SEC filings this run. 23 stocks on the watchlist.
 | THRM (Gentherm Inc) | 3.07 | 2 insiders bought $662,600 at about $26.50: Mascarenas Paul Anthony (Director) $532,600; Presley William T. (President & CEO, Director) $130,000. |
 
 ## Notes
-- Spotter read 32 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 23 stocks, 7 big enough to copy.
+- Spotter read 31 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 23 stocks, 7 big enough to copy.
 
 _Copycat uses no AI._

@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 8 coins, 29 times. Most active: DOGE at 218.7x normal volume, price -0.6%.
+- Scout scanned 8 coins, 30 times. Most active: DOGE at 218.7x normal volume, price -0.6%.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -38,11 +38,11 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $99.90 → $100.06 (+$0.16, +0.16%).
 - Profit / loss since start: +$0.06 on $100.00 money put in.
-- Spotter read 199 insider filings from the SEC and found 6 insider purchases. Watchlist at day end: 23 stocks.
+- Spotter read 230 insider filings from the SEC and found 6 insider purchases. Watchlist at day end: 23 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 3 insiders bought $1,771,951 at about $15.38: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.75 (-$0.19 unrealized); CHCO $19.39 (-$0.60 unrealized); MSM $20.65 (+$0.66 unrealized); NBIS $20.38 (+$0.50 unrealized); STC $19.62 (-$0.29 unrealized).
+- Holding: BBT $19.73 (-$0.21 unrealized); CHCO $19.52 (-$0.47 unrealized); MSM $20.57 (+$0.58 unrealized); NBIS $20.43 (+$0.55 unrealized); STC $19.54 (-$0.37 unrealized).
 
 ## Forex: flat
 
