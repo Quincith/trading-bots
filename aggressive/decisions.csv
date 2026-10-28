@@ -1,2 +1,3 @@
 time,symbol,decision,confidence,risk,size_usd,note
 2026-10-28T15:30:19+00:00,LTC/USD,WAIT,0.45,REDUCE,40.00,"Strong 6.4x volume and uptrend, but RSI 71.7 overextended, no news or sentiment confirmation. Wait for pullback or catalyst."
+2026-10-28T17:00:29+00:00,LTC/USD,WAIT,0.55,REDUCE,40.00,"Strong 3.4x volume and uptrend, but RSI 74 is overbought with no news or sentiment support; wait for a pullback or confirmation."
