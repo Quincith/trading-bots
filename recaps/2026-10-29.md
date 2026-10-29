@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 0 coins, 19 times.
+- Scout scanned 0 coins, 20 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- Scout scanned 0 coins, 19 times.
+- Scout scanned 0 coins, 20 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.39 (-0.39%)
+## Copycat: down $0.36 (-0.36%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.39 (-0.39%) at $100.49. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.36 (-0.36%) at $100.52. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.88 → $100.49 (-$0.39, -0.39%).
-- Profit / loss since start: +$0.49 on $100.00 money put in.
+- Account value: $100.88 → $100.52 (-$0.36, -0.36%).
+- Profit / loss since start: +$0.52 on $100.00 money put in.
 - Spotter read 45 insider filings from the SEC and found 4 insider purchases. Watchlist at day end: 30 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 3 insiders bought $1,771,951 at about $15.38: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.69 (-$0.25 unrealized); CHCO $19.58 (-$0.41 unrealized); MSM $20.70 (+$0.71 unrealized); NBIS $20.11 (+$0.23 unrealized); STC $20.15 (+$0.24 unrealized).
+- Holding: BBT $19.69 (-$0.25 unrealized); CHCO $19.58 (-$0.41 unrealized); MSM $20.68 (+$0.69 unrealized); NBIS $20.16 (+$0.28 unrealized); STC $20.15 (+$0.24 unrealized).
 
 ## Forex: flat
 
@@ -50,7 +50,8 @@ Quiet day. No new currency trade. The office ended flat at $100.00. Practice mon
 
 - Account value: $100.00 → $100.00 (no change).
 - Profit / loss since start: +$0.00 on $100.00 money put in.
-- No opening range marked today (a weekend, a holiday, or the check came too late).
+- Marked the opening range on 7 currency pairs at the London open.
+- Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (skip), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
 - No trades.
 - Open trades: none, all cash.
 
