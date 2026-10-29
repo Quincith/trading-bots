@@ -1,7 +1,16 @@
 {
-  "day": "2026-10-28",
+  "day": "2026-10-29",
   "day_start_equity": 100.0,
   "halted_reason": null,
+  "hunt": {
+    "average": 677.05,
+    "checked": "2026-10-29T00:00:59+00:00",
+    "close": 721.25,
+    "close_day": "2026-10-27",
+    "hold": "TQQQ",
+    "in_uptrend": true,
+    "signal": "QQQ"
+  },
   "last_scan": "2026-10-28T23:30:58+00:00",
   "plans": {}
 }

@@ -1,4 +1,4 @@
-# Medium strategy — 2026-10-28 23:31 UTC
+# Medium strategy — 2026-10-29 00:01 UTC
 
 | | |
 |---|---|
@@ -8,7 +8,7 @@
 | Time-weighted return (ignores when deposits happened) | +0.00% |
 
 ## Notes
-- Claude key works (claude-opus-5-5).
-- Next scan for new trades is due 120 min after the last one.
+- QQQ closed at $721.25 on 2026-10-27; its 200-day average is $677.05 (+6.5%). Uptrend, so the rule holds QLD.
+- Will buy QLD when the stock market opens.
 
 _Claude calls this run: 0_
