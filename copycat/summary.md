@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-10-29 21:02 UTC
+# Copycat strategy — 2026-10-29 21:32 UTC
 
 | | |
 |---|---|
-| Account value | $100.66 |
+| Account value | $100.68 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | $0.66 (+0.66%) |
-| Time-weighted return (ignores when deposits happened) | +0.66% |
+| Strategy profit / loss | $0.68 (+0.68%) |
+| Time-weighted return (ignores when deposits happened) | +0.68% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 178 new SEC filings this run. 40 stocks on the watchlist.
+Read 106 new SEC filings this run. 42 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 178 new SEC filings this run. 40 stocks on the watchlist.
 | SRRK (Scholar Rock Holding Corp) | 3.08 | 1 insider bought $11,999,922 at about $41.45: Akkaraju Srinivas (Director) $11,999,922. |
 
 ## Notes
-- Spotter read 178 new insider filings and found 9 purchases (4 by officers or directors). Watchlist: 40 stocks, 17 big enough to copy.
+- Spotter read 106 new insider filings and found 5 purchases (2 by officers or directors). Watchlist: 42 stocks, 19 big enough to copy.
 
 _Copycat uses no AI._
