@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-10-29 00:01 UTC
+# Copycat strategy — 2026-10-29 00:24 UTC
 
 | | |
 |---|---|
-| Account value | $100.88 |
+| Account value | $101.15 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | $0.88 (+0.88%) |
-| Time-weighted return (ignores when deposits happened) | +0.88% |
+| Strategy profit / loss | $1.15 (+1.15%) |
+| Time-weighted return (ignores when deposits happened) | +1.15% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 2 new SEC filings this run. 29 stocks on the watchlist.
+Read 10 new SEC filings this run. 29 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 2 new SEC filings this run. 29 stocks on the watchlist.
 | THRM (Gentherm Inc) | 3.07 | 2 insiders bought $662,600 at about $26.50: Mascarenas Paul Anthony (Director) $532,600; Presley William T. (President & CEO, Director) $130,000. |
 
 ## Notes
-- Spotter read 2 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 29 stocks, 11 big enough to copy.
+- Spotter read 10 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 29 stocks, 11 big enough to copy.
 
 _Copycat uses no AI._
