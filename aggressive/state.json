@@ -4,13 +4,14 @@
   "halted_reason": null,
   "hunt": {
     "average": 677.55,
-    "checked": "2026-10-29T13:01:53+00:00",
+    "checked": "2026-10-29T13:31:58+00:00",
     "close": 725.61,
     "close_day": "2026-10-28",
     "hold": "TQQQ",
     "in_uptrend": true,
     "signal": "QQQ"
   },
+  "hunt_bought_day": "2026-10-29",
   "last_scan": "2026-10-28T23:30:58+00:00",
   "plans": {}
 }
