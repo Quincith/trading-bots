@@ -2,45 +2,45 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: up $0.14 (+0.14%)
+## Aggressive: up $0.79 (+0.79%)
 
-Active day. The bots bought 1 time. The account ended up $0.14 (+0.14%) at $100.14. Paper money only.
+Active day. The bots bought 1 time. The account ended up $0.79 (+0.79%) at $100.79. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.00 → $100.14 (+$0.14, +0.14%).
-- Profit / loss since start: +$0.14 on $100.00 money put in.
-- Scout scanned 0 coins, 34 times.
+- Account value: $100.00 → $100.79 (+$0.79, +0.79%).
+- Profit / loss since start: +$0.79 on $100.00 money put in.
+- Scout scanned 0 coins, 35 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - Bought $98.00 of TQQQ at 69.21. Reason: QQQ above its 200-day average
-- Holding: TQQQ $98.13 (+$0.14 unrealized).
+- Holding: TQQQ $98.78 (+$0.79 unrealized).
 
-## Medium: up $0.10 (+0.10%)
+## Medium: up $0.50 (+0.50%)
 
-Active day. The bots bought 1 time. The account ended up $0.10 (+0.10%) at $100.10. Paper money only.
+Active day. The bots bought 1 time. The account ended up $0.50 (+0.50%) at $100.50. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.00 → $100.10 (+$0.10, +0.10%).
-- Profit / loss since start: +$0.10 on $100.00 money put in.
-- Scout scanned 0 coins, 34 times.
+- Account value: $100.00 → $100.50 (+$0.50, +0.50%).
+- Profit / loss since start: +$0.50 on $100.00 money put in.
+- Scout scanned 0 coins, 35 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - Bought $98.00 of QLD at 89.1. Reason: QQQ above its 200-day average
-- Holding: QLD $98.09 (+$0.10 unrealized).
+- Holding: QLD $98.49 (+$0.50 unrealized).
 
-## Copycat: up $1.56 (+1.55%)
+## Copycat: up $1.75 (+1.73%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $1.56 (+1.55%) at $102.44. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $1.75 (+1.73%) at $102.63. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.88 → $102.44 (+$1.56, +1.55%).
-- Profit / loss since start: +$2.44 on $100.00 money put in.
-- Spotter read 291 insider filings from the SEC and found 13 insider purchases. Watchlist at day end: 33 stocks.
+- Account value: $100.88 → $102.63 (+$1.75, +1.73%).
+- Profit / loss since start: +$2.63 on $100.00 money put in.
+- Spotter read 366 insider filings from the SEC and found 14 insider purchases. Watchlist at day end: 34 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 3 insiders bought $1,771,951 at about $15.38: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $20.12 (+$0.18 unrealized); CHCO $19.72 (-$0.27 unrealized); MSM $20.91 (+$0.92 unrealized); NBIS $20.74 (+$0.86 unrealized); STC $20.69 (+$0.78 unrealized).
+- Holding: BBT $20.04 (+$0.10 unrealized); CHCO $19.72 (-$0.27 unrealized); MSM $20.78 (+$0.79 unrealized); NBIS $21.06 (+$1.18 unrealized); STC $20.77 (+$0.86 unrealized).
 
 ## Forex: flat
 
