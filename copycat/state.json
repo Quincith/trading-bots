@@ -9,7 +9,7 @@
   "day": "2026-10-30",
   "day_start_equity": 100.56,
   "halted_reason": null,
-  "last_scan": "2026-10-30T00:32:48+00:00",
+  "last_scan": "2026-10-30T01:03:01+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -58,7 +58,6 @@
     }
   },
   "seen_filings": [
-    "0001493152-26-048577",
     "0001193125-26-432149",
     "0001193125-26-432148",
     "0001652739-26-000014",
@@ -4057,7 +4056,8 @@
     "0001437749-26-034036",
     "0001437749-26-034035",
     "0001437749-26-034034",
-    "0001437749-26-034032"
+    "0001437749-26-034032",
+    "0001213900-26-113987"
   ],
   "watchlist": {
     "ACN": {
@@ -4527,10 +4527,19 @@
           "role": "Director, See Footnote (3)",
           "usd": 7126744.64,
           "who": "Haggart Dylan G. & Fivespan Partners, LP"
+        },
+        {
+          "accession": "0001213900-26-113987",
+          "date": "2026-10-27",
+          "filed": "2026-10-29T20:51:29-04:00",
+          "price": 78.52,
+          "role": "Director, See Footnote (3)",
+          "usd": 62187.84,
+          "who": "Haggart Dylan G. & Fivespan Partners, LP & Fivespan Partners GP, LLC"
         }
       ],
       "company": "Stride, Inc.",
-      "score": 3.09,
+      "score": 3.84,
       "ticker": "LRN"
     },
     "LXU": {
