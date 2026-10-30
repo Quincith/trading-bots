@@ -1,4 +1,4 @@
-# Forex office — 2026-10-30 16:04 UTC
+# Forex office — 2026-10-30 16:34 UTC
 
 _OANDA practice account. This office counts only its own trades, starting from $100.00._
 
@@ -8,9 +8,6 @@ _OANDA practice account. This office counts only its own trades, starting from $
 | Money put in (deposits minus withdrawals) | $100.00 |
 | Strategy profit / loss | -$0.17 (-0.17%) |
 | Time-weighted return (ignores when deposits happened) | -0.17% |
-
-## Trades closed
-- SOLD USD/JPY: end of the trading session at 157.444, -$0.17
 
 ## Today's read on each pair
 
