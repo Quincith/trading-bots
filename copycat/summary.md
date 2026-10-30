@@ -1,17 +1,18 @@
-# Copycat strategy — 2026-10-30 18:04 UTC
+# Copycat strategy — 2026-10-30 18:34 UTC
 
 | | |
 |---|---|
-| Account value | $98.63 |
+| Account value | $98.30 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$1.37 (-1.37%) |
-| Time-weighted return (ignores when deposits happened) | -1.37% |
+| Strategy profit / loss | -$1.70 (-1.70%) |
+| Time-weighted return (ignores when deposits happened) | -1.70% |
 
-**Risk:** Max open positions reached; only managing exits.
+## Open trades managed
+- SOLD NBIS: stop hit (150.14 <= 150.894)
 
 ## Insider buys on the watchlist
 
-Read 60 new SEC filings this run. 46 stocks on the watchlist.
+Read 60 new SEC filings this run. 47 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -21,7 +22,18 @@ Read 60 new SEC filings this run. 46 stocks on the watchlist.
 | TTMI (TTM TECHNOLOGIES INC) | 3.38 | 2 insiders bought $1,342,810 at about $89.52: Ali Wajid (Director) $902,460; Roks Edwin (President and CEO, Director) $440,350. |
 | SRRK (Scholar Rock Holding Corp) | 3.08 | 1 insider bought $11,999,922 at about $41.45: Akkaraju Srinivas (Director) $11,999,922. |
 
+## Copy decisions
+
+| Stock | Price check | Risk | Decision |
+|---|---|---|---|
+| NPB | Now $15.90, +3.3% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| LRN | Now $78.53, -0.6% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| ACN | Now $258.10, +4.8% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| TTMI | Now $79.88, -10.8% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| SRRK | Now $43.12, +4.0% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| THRM | Now $30.56, +15.3% vs. what the insiders paid. | -  | **SKIP** — Price already up 15% since the insiders bought (limit 10%). Too late to copy. |
+
 ## Notes
-- Spotter read 60 new insider filings and found 2 purchases (2 by officers or directors). Watchlist: 46 stocks, 20 big enough to copy.
+- Spotter read 60 new insider filings and found 2 purchases (2 by officers or directors). Watchlist: 47 stocks, 21 big enough to copy.
 
 _Copycat uses no AI._

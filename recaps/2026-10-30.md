@@ -2,45 +2,48 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $7.28 (-7.62%)
+## Aggressive: down $8.48 (-8.88%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $7.28 (-7.62%) at $88.20. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $8.48 (-8.88%) at $87.00. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.48 → $88.20 (-$7.28, -7.62%).
-- Profit / loss since start: -$11.80 on $100.00 money put in.
-- Scout scanned 0 coins, 40 times.
+- Account value: $95.48 → $87.00 (-$8.48, -8.88%).
+- Profit / loss since start: -$13.00 on $100.00 money put in.
+- Scout scanned 0 coins, 41 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $86.20 (-$11.79 unrealized).
+- Holding: TQQQ $85.00 (-$12.99 unrealized).
 
-## Medium: down $4.85 (-5.00%)
+## Medium: down $5.66 (-5.84%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $4.85 (-5.00%) at $92.14. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $5.66 (-5.84%) at $91.33. Paper money only.
 
 **Key takeaways**
 
-- Account value: $96.99 → $92.14 (-$4.85, -5.00%).
-- Profit / loss since start: -$7.86 on $100.00 money put in.
-- Scout scanned 0 coins, 40 times.
+- Account value: $96.99 → $91.33 (-$5.66, -5.84%).
+- Profit / loss since start: -$8.67 on $100.00 money put in.
+- Scout scanned 0 coins, 41 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $90.14 (-$7.85 unrealized).
+- Holding: QLD $89.33 (-$8.66 unrealized).
 
-## Copycat: down $1.93 (-1.92%)
+## Copycat: down $2.26 (-2.25%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $1.93 (-1.92%) at $98.63. Paper money only.
+Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended down $2.26 (-2.25%) at $98.30. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.56 → $98.63 (-$1.93, -1.92%).
-- Profit / loss since start: -$1.37 on $100.00 money put in.
-- Spotter read 828 insider filings from the SEC and found 10 insider purchases. Watchlist at day end: 46 stocks.
+- Account value: $100.56 → $98.30 (-$2.26, -2.25%).
+- Profit / loss since start: -$1.70 on $100.00 money put in.
+- Spotter read 888 insider filings from the SEC and found 12 insider purchases. Watchlist at day end: 47 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 4 insiders bought $1,819,349 at about $15.39: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800 and 1 more.
-- Nothing was ready to copy, so no trade was considered.
-- No trades.
-- Holding: BBT $19.73 (-$0.21 unrealized); CHCO $19.59 (-$0.40 unrealized); MSM $20.56 (+$0.57 unrealized); NBIS $17.96 (-$1.92 unrealized); STC $20.52 (+$0.61 unrealized).
+- Sent for review: NPB (1x), LRN (1x), ACN (1x), TTMI (1x), SRRK (1x), THRM (1x).
+- Decisions: 0 buy, 0 wait, 6 skip.
+- Passed on NPB (SKIP, 0% confident): Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash)
+- Passed on LRN (SKIP, 0% confident): Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
+- Sold NBIS for $17.79: the price fell to the safety exit, so the bots sold to keep the loss small. Loss: -$2.10.
+- Holding: BBT $19.75 (-$0.19 unrealized); CHCO $19.62 (-$0.37 unrealized); MSM $20.45 (+$0.46 unrealized); STC $20.42 (+$0.51 unrealized).
 
 ## Forex: down $0.17 (-0.17%)
 
@@ -62,6 +65,7 @@ Active day. Opened 1 trade and closed 1. The office ended down $0.17 (-0.17%) at
 
 - **account value**: What everything in the account is worth right now: cash plus coins, at today's prices.
 - **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
+- **confidence**: How sure the Decision bot is, from 0% to 100%. Each strategy only buys above its own minimum.
 - **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
 - **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
