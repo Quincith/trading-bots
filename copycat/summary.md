@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-10-30 21:34 UTC
+# Copycat strategy — 2026-10-30 22:04 UTC
 
 | | |
 |---|---|
@@ -28,7 +28,7 @@ Read 8 new SEC filings this run. 51 stocks on the watchlist.
 | ACN | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
 
 ## Notes
-- Spotter read 8 new insider filings and found 2 purchases (2 by officers or directors). Watchlist: 51 stocks, 23 big enough to copy.
+- Spotter read 8 new insider filings and found 2 purchases (0 by officers or directors). Watchlist: 51 stocks, 23 big enough to copy.
 - Stock market closed; picks wait for the next open.
 
 _Copycat uses no AI._
