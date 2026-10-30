@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-10-29 23:35 UTC
+# Copycat strategy — 2026-10-30 00:02 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 0 new SEC filings this run. 43 stocks on the watchlist.
+Read 6 new SEC filings this run. 43 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 0 new SEC filings this run. 43 stocks on the watchlist.
 | SRRK (Scholar Rock Holding Corp) | 3.08 | 1 insider bought $11,999,922 at about $41.45: Akkaraju Srinivas (Director) $11,999,922. |
 
 ## Notes
-- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 43 stocks, 19 big enough to copy.
+- Spotter read 6 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 43 stocks, 19 big enough to copy.
 
 _Copycat uses no AI._
