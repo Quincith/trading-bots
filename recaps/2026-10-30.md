@@ -2,58 +2,58 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $2.98 (-3.12%)
+## Aggressive: down $3.81 (-3.99%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $2.98 (-3.12%) at $92.50. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $3.81 (-3.99%) at $91.67. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.48 → $92.50 (-$2.98, -3.12%).
-- Profit / loss since start: -$7.50 on $100.00 money put in.
-- Scout scanned 0 coins, 29 times.
+- Account value: $95.48 → $91.67 (-$3.81, -3.99%).
+- Profit / loss since start: -$8.33 on $100.00 money put in.
+- Scout scanned 0 coins, 30 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $90.50 (-$7.49 unrealized).
+- Holding: TQQQ $89.67 (-$8.32 unrealized).
 
-## Medium: down $1.98 (-2.04%)
+## Medium: down $2.55 (-2.63%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.98 (-2.04%) at $95.01. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $2.55 (-2.63%) at $94.44. Paper money only.
 
 **Key takeaways**
 
-- Account value: $96.99 → $95.01 (-$1.98, -2.04%).
-- Profit / loss since start: -$4.99 on $100.00 money put in.
-- Scout scanned 0 coins, 29 times.
+- Account value: $96.99 → $94.44 (-$2.55, -2.63%).
+- Profit / loss since start: -$5.56 on $100.00 money put in.
+- Scout scanned 0 coins, 30 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $93.01 (-$4.98 unrealized).
+- Holding: QLD $92.44 (-$5.55 unrealized).
 
-## Copycat: down $0.46 (-0.46%)
+## Copycat: down $0.47 (-0.47%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.46 (-0.46%) at $100.10. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.47 (-0.47%) at $100.09. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.56 → $100.10 (-$0.46, -0.46%).
-- Profit / loss since start: +$0.10 on $100.00 money put in.
-- Spotter read 150 insider filings from the SEC and found 4 insider purchases. Watchlist at day end: 43 stocks.
+- Account value: $100.56 → $100.09 (-$0.47, -0.47%).
+- Profit / loss since start: +$0.09 on $100.00 money put in.
+- Spotter read 174 insider filings from the SEC and found 4 insider purchases. Watchlist at day end: 43 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 4 insiders bought $1,819,349 at about $15.39: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800 and 1 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.90 (-$0.04 unrealized); CHCO $19.78 (-$0.21 unrealized); MSM $20.75 (+$0.76 unrealized); NBIS $18.71 (-$1.17 unrealized); STC $20.68 (+$0.77 unrealized).
+- Holding: BBT $20.04 (+$0.10 unrealized); CHCO $19.87 (-$0.12 unrealized); MSM $20.78 (+$0.79 unrealized); NBIS $18.65 (-$1.23 unrealized); STC $20.48 (+$0.57 unrealized).
 
-## Forex: down $0.07 (-0.07%)
+## Forex: down $0.03 (-0.03%)
 
-Active day. Opened 1 trade. The office ended down $0.07 (-0.07%) at $99.93. Practice money only.
+Active day. Opened 1 trade. The office ended down $0.03 (-0.03%) at $99.97. Practice money only.
 
 **Key takeaways**
 
-- Account value: $100.00 → $99.93 (-$0.07, -0.07%).
-- Profit / loss since start: -$0.07 on $100.00 money put in.
+- Account value: $100.00 → $99.97 (-$0.03, -0.03%).
+- Profit / loss since start: -$0.03 on $100.00 money put in.
 - Marked the opening range on 7 currency pairs at the London open.
 - Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (orders), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
 - Opened USD/JPY at 157.172, controlling $100.00. SELL 100 units: broke below the opening range
-- Open trades: USD/JPY sold 100 units (-$0.06 so far).
+- Open trades: USD/JPY sold 100 units (-$0.03 so far).
 
 ## Fxcopy: no runs logged on 2026-10-30.
 
