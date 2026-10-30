@@ -70,17 +70,5 @@
       }
     }
   },
-  "plans": {
-    "USD_JPY": {
-      "day": "2026-10-30",
-      "direction": -1,
-      "entry": 157.172,
-      "notional": 100.0,
-      "opened_at": "2026-10-30T09:03:34+00:00",
-      "pair": "USD_JPY",
-      "stop": 157.584,
-      "trade_id": "8",
-      "units": 100
-    }
-  }
+  "plans": {}
 }
