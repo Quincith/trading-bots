@@ -1,18 +1,15 @@
-# Copycat strategy — 2026-10-30 18:34 UTC
+# Copycat strategy — 2026-10-30 19:04 UTC
 
 | | |
 |---|---|
-| Account value | $98.30 |
+| Account value | $98.40 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$1.70 (-1.70%) |
-| Time-weighted return (ignores when deposits happened) | -1.70% |
-
-## Open trades managed
-- SOLD NBIS: stop hit (150.14 <= 150.894)
+| Strategy profit / loss | -$1.60 (-1.60%) |
+| Time-weighted return (ignores when deposits happened) | -1.60% |
 
 ## Insider buys on the watchlist
 
-Read 60 new SEC filings this run. 47 stocks on the watchlist.
+Read 79 new SEC filings this run. 50 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -26,14 +23,14 @@ Read 60 new SEC filings this run. 47 stocks on the watchlist.
 
 | Stock | Price check | Risk | Decision |
 |---|---|---|---|
-| NPB | Now $15.90, +3.3% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| LRN | Now $78.53, -0.6% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| ACN | Now $258.10, +4.8% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| TTMI | Now $79.88, -10.8% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| SRRK | Now $43.12, +4.0% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| THRM | Now $30.56, +15.3% vs. what the insiders paid. | -  | **SKIP** — Price already up 15% since the insiders bought (limit 10%). Too late to copy. |
+| NPB | Now $15.85, +3.0% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| LRN | Now $78.12, -1.1% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| ACN | Now $258.44, +5.0% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| TTMI | Now $79.95, -10.7% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| SRRK | Now $43.10, +4.0% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| THRM | Now $30.82, +16.3% vs. what the insiders paid. | -  | **SKIP** — Price already up 16% since the insiders bought (limit 10%). Too late to copy. |
 
 ## Notes
-- Spotter read 60 new insider filings and found 2 purchases (2 by officers or directors). Watchlist: 47 stocks, 21 big enough to copy.
+- Spotter read 79 new insider filings and found 4 purchases (4 by officers or directors). Watchlist: 50 stocks, 23 big enough to copy.
 
 _Copycat uses no AI._
