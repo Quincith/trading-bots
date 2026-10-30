@@ -2,48 +2,48 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $7.25 (-7.59%)
+## Aggressive: down $5.54 (-5.80%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $7.25 (-7.59%) at $88.23. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $5.54 (-5.80%) at $89.94. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.48 → $88.23 (-$7.25, -7.59%).
-- Profit / loss since start: -$11.77 on $100.00 money put in.
-- Scout scanned 0 coins, 43 times.
+- Account value: $95.48 → $89.94 (-$5.54, -5.80%).
+- Profit / loss since start: -$10.06 on $100.00 money put in.
+- Scout scanned 0 coins, 44 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $86.23 (-$11.76 unrealized).
+- Holding: TQQQ $87.94 (-$10.05 unrealized).
 
-## Medium: down $4.85 (-5.00%)
+## Medium: down $3.72 (-3.84%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $4.85 (-5.00%) at $92.14. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $3.72 (-3.84%) at $93.27. Paper money only.
 
 **Key takeaways**
 
-- Account value: $96.99 → $92.14 (-$4.85, -5.00%).
-- Profit / loss since start: -$7.86 on $100.00 money put in.
-- Scout scanned 0 coins, 43 times.
+- Account value: $96.99 → $93.27 (-$3.72, -3.84%).
+- Profit / loss since start: -$6.73 on $100.00 money put in.
+- Scout scanned 0 coins, 44 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $90.14 (-$7.85 unrealized).
+- Holding: QLD $91.27 (-$6.72 unrealized).
 
-## Copycat: down $2.25 (-2.24%)
+## Copycat: down $2.41 (-2.40%)
 
-Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended down $2.25 (-2.24%) at $98.31. Paper money only.
+Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended down $2.41 (-2.40%) at $98.15. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.56 → $98.31 (-$2.25, -2.24%).
-- Profit / loss since start: -$1.69 on $100.00 money put in.
-- Spotter read 1011 insider filings from the SEC and found 17 insider purchases. Watchlist at day end: 50 stocks.
+- Account value: $100.56 → $98.15 (-$2.41, -2.40%).
+- Profit / loss since start: -$1.85 on $100.00 money put in.
+- Spotter read 1083 insider filings from the SEC and found 17 insider purchases. Watchlist at day end: 50 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 4 insiders bought $1,819,349 at about $15.39: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800 and 1 more.
-- Sent for review: NPB (3x), LRN (3x), ACN (3x), TTMI (3x), SRRK (3x), THRM (3x).
-- Decisions: 0 buy, 0 wait, 18 skip.
-- Passed on NPB (SKIP, 0% confident): Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
-- Passed on LRN (SKIP, 0% confident): Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
+- Sent for review: NPB (4x), LRN (4x), ACN (4x), TTMI (3x), SRRK (3x), THRM (3x).
+- Decisions: 0 buy, 3 wait, 18 skip.
+- Passed on NPB (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
+- Passed on LRN (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Sold NBIS for $17.79: the price fell to the safety exit, so the bots sold to keep the loss small. Loss: -$2.10.
-- Holding: BBT $19.81 (-$0.13 unrealized); CHCO $19.65 (-$0.34 unrealized); MSM $20.40 (+$0.41 unrealized); STC $20.40 (+$0.49 unrealized).
+- Holding: BBT $19.84 (-$0.10 unrealized); CHCO $19.65 (-$0.34 unrealized); MSM $20.43 (+$0.44 unrealized); STC $20.17 (+$0.26 unrealized).
 
 ## Forex: down $0.17 (-0.17%)
 
