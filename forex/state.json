@@ -8,13 +8,13 @@
     "day": "2026-10-30",
     "orders": {
       "USD_JPY": {
-        "buy": "6",
+        "buy": null,
         "buy_units": 100,
         "hi": 157.584,
         "lo": 157.172,
-        "sell": "7",
+        "sell": null,
         "sell_units": 100,
-        "taken": false
+        "taken": true
       }
     },
     "placed": true,
@@ -62,13 +62,25 @@
         "risk": ""
       },
       "USD_JPY": {
-        "decision": "ORDERS",
-        "direction": 0,
+        "decision": "SELL",
+        "direction": -1,
         "note": "Range 157.172 to 157.584 (41.2 pips). Waiting orders: buy 100 above 157.584, sell 100 below 157.172.",
         "price": 157.186,
         "risk": "100 units (controls $100.00), risking $0.26 (0.3% of the account) if the stop is hit; capped at 100% of the account"
       }
     }
   },
-  "plans": {}
+  "plans": {
+    "USD_JPY": {
+      "day": "2026-10-30",
+      "direction": -1,
+      "entry": 157.172,
+      "notional": 100.0,
+      "opened_at": "2026-10-30T09:03:34+00:00",
+      "pair": "USD_JPY",
+      "stop": 157.584,
+      "trade_id": "8",
+      "units": 100
+    }
+  }
 }

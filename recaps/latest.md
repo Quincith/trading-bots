@@ -2,58 +2,58 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $1.91 (-2.00%)
+## Aggressive: down $1.13 (-1.18%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.91 (-2.00%) at $93.57. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.13 (-1.18%) at $94.35. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.48 → $93.57 (-$1.91, -2.00%).
-- Profit / loss since start: -$6.43 on $100.00 money put in.
-- Scout scanned 0 coins, 19 times.
+- Account value: $95.48 → $94.35 (-$1.13, -1.18%).
+- Profit / loss since start: -$5.65 on $100.00 money put in.
+- Scout scanned 0 coins, 20 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $91.57 (-$6.42 unrealized).
+- Holding: TQQQ $92.35 (-$5.64 unrealized).
 
-## Medium: down $1.45 (-1.49%)
+## Medium: down $0.67 (-0.69%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.45 (-1.49%) at $95.54. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.67 (-0.69%) at $96.32. Paper money only.
 
 **Key takeaways**
 
-- Account value: $96.99 → $95.54 (-$1.45, -1.49%).
-- Profit / loss since start: -$4.46 on $100.00 money put in.
-- Scout scanned 0 coins, 19 times.
+- Account value: $96.99 → $96.32 (-$0.67, -0.69%).
+- Profit / loss since start: -$3.68 on $100.00 money put in.
+- Scout scanned 0 coins, 20 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $93.54 (-$4.45 unrealized).
+- Holding: QLD $94.32 (-$3.67 unrealized).
 
-## Copycat: down $0.12 (-0.12%)
+## Copycat: up $0.11 (+0.11%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.12 (-0.12%) at $100.44. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.11 (+0.11%) at $100.67. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.56 → $100.44 (-$0.12, -0.12%).
-- Profit / loss since start: +$0.44 on $100.00 money put in.
+- Account value: $100.56 → $100.67 (+$0.11, +0.11%).
+- Profit / loss since start: +$0.67 on $100.00 money put in.
 - Spotter read 25 insider filings from the SEC and found 1 insider purchases. Watchlist at day end: 43 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 4 insiders bought $1,819,349 at about $15.39: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800 and 1 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.87 (-$0.07 unrealized); CHCO $19.78 (-$0.21 unrealized); MSM $20.75 (+$0.76 unrealized); NBIS $19.08 (-$0.80 unrealized); STC $20.68 (+$0.77 unrealized).
+- Holding: BBT $19.90 (-$0.04 unrealized); CHCO $19.78 (-$0.21 unrealized); MSM $20.75 (+$0.76 unrealized); NBIS $19.27 (-$0.61 unrealized); STC $20.68 (+$0.77 unrealized).
 
-## Forex: flat
+## Forex: down $0.12 (-0.12%)
 
-Quiet day. No new currency trade. The office ended flat at $100.00. Practice money only.
+Active day. Opened 1 trade. The office ended down $0.12 (-0.12%) at $99.88. Practice money only.
 
 **Key takeaways**
 
-- Account value: $100.00 → $100.00 (no change).
-- Profit / loss since start: +$0.00 on $100.00 money put in.
+- Account value: $100.00 → $99.88 (-$0.12, -0.12%).
+- Profit / loss since start: -$0.12 on $100.00 money put in.
 - Marked the opening range on 7 currency pairs at the London open.
 - Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (orders), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
-- No trades.
-- Open trades: none, all cash.
+- Opened USD/JPY at 157.172, controlling $100.00. SELL 100 units: broke below the opening range
+- Open trades: USD/JPY sold 100 units (-$0.12 so far).
 
 ## Fxcopy: no runs logged on 2026-10-30.
 
@@ -65,10 +65,14 @@ Quiet day. No new currency trade. The office ended flat at $100.00. Practice mon
 - **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
 - **insider**: A company's own bosses (CEO, CFO and so on) and board members. They know the company best.
+- **leverage**: Controlling more money than you have. 3:1 means $100 controls up to $300. It makes wins and losses bigger.
 - **money put in**: The money you added (deposits) minus any you took out. Profit is measured against this.
 - **opening range**: A pair's highest and lowest price in the first 30 minutes after a big market opens. The Forex office buys if the price breaks above it and sells if it breaks below.
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.
+- **selling short**: Betting a price will fall. In forex you can sell a pair first and buy it back later, cheaper if you're right.
+- **stop-loss**: A safety exit. If the price falls to this level, the bots sell to keep the loss small.
+- **units**: How much currency a forex trade controls. 1,000 units (a 'micro lot') of EUR/USD is 1,000 euros, about $1,100.
 - **unrealized**: A gain or loss on a coin we still own. It only becomes real when we sell.
 - **volume**: How much of a coin is being bought and sold. A jump in volume means lots of people suddenly care.
