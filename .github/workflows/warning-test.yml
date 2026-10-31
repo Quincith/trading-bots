@@ -1,0 +1,29 @@
+name: Early warning test
+
+# Replays 10 years of history to check whether the early-warning radar (tradebots/warning.py) lit up before past
+# Nasdaq selloffs, and whether letting it sell early would have helped the trend accounts. It only reports:
+# nothing is saved and no settings change. The report shows on the run page.
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/project-thread-ocsy84]
+    paths: [tradebots/warning.py, .github/workflows/warning-test.yml]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ALPACA_MEDIUM_KEY_ID: ${{ secrets.ALPACA_MEDIUM_KEY_ID }}
+      ALPACA_MEDIUM_SECRET_KEY: ${{ secrets.ALPACA_MEDIUM_SECRET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Download 10 years of prices and test the radar
+        run: |
+          python -m tradebots.warning test --out report.md
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
