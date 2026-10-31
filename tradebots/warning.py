@@ -51,6 +51,7 @@ FUNDS = ["TQQQ", "QLD"]
 SET = {"fear_vix": 25.0, "credit_days": 20, "credit_drop": 0.02, "oil_days": 20, "oil_rise": 0.20,
        "rates_days": 63, "rates_rise": 0.5, "breadth_days": 20, "breadth_drop": 0.02, "crack_days": 50}
 CAUTION, DANGER = 2, 4
+ALERT_QUIET_DAYS = 10   # at most one DANGER email per 10 days, so a level flickering on and off doesn't spam
 
 LIGHTS = {
     "fear": ("Fear index high", "The VIX fear index is above 25 (calm is 12-18)."),
@@ -388,8 +389,9 @@ def test(stocks: dict, macro_raw: pd.DataFrame, start: datetime, end: datetime) 
 # ---- the live check -----------------------------------------------------------------------------------------
 
 def run_live(data_dir: Path, now: datetime | None = None, broker=None, session=None, every_hours: float = 3.0) -> dict | None:
-    """Read today's lights and save them to data/warning/. Writes data/warning/alert.md when the level rises
-    (CALM to CAUTION, or anything to DANGER) so the workflow can open a GitHub issue (GitHub emails Quincy).
+    """Read today's lights and save them to data/warning/. Writes data/warning/alert.md when the level turns
+    DANGER (at most once per ALERT_QUIET_DAYS) so the workflow can open a GitHub issue (GitHub emails Quincy).
+    CAUTION is too common (about 1 day in 5) to email; it shows on the Bot World page.
     Skips if it already looked in the last `every_hours` hours. Never trades."""
     import os
     from .alpaca import AlpacaPaper
@@ -420,9 +422,13 @@ def run_live(data_dir: Path, now: datetime | None = None, broker=None, session=N
     lines = hist.read_text().splitlines(keepends=True) if hist.exists() else ["day,score,level,lights(" + "/".join(LIGHTS) + ")\n"]
     lines = [ln for ln in lines if not ln.startswith(out["close_day"] + ",")] + [row]
     hist.write_text("".join(lines))
-    order = {"CALM": 0, "CAUTION": 1, "DANGER": 2}
-    if order[out["level"]] > order.get(prev.get("level", "CALM"), 0):
+    last_alert = prev.get("last_alert")
+    out["last_alert"] = last_alert
+    quiet = not last_alert or now - datetime.fromisoformat(last_alert) > timedelta(days=ALERT_QUIET_DAYS)
+    if out["level"] == "DANGER" and prev.get("level") != "DANGER" and quiet:
         alert_p.write_text(alert_text(out, prev.get("level", "CALM")))
+        out["last_alert"] = now.isoformat(timespec="seconds")
+    latest_p.write_text(json.dumps(out, indent=2))
     return out
 
 
@@ -432,9 +438,10 @@ def alert_text(out: dict, was: str) -> str:
          f"{out['score']} of {len(LIGHTS)} warning lights are on.", "", "Lights on:", ""]
     o += [f"- 🔴 **{v['title']}**: {v['why']} Now: {v['reading']}." for v in on]
     o += ["", "Lights off: " + ", ".join(v["title"] for v in out["lights"].values() if not v["on"]) + ".", "",
-          "What this means: in past years, a month with the radar at this level was more likely than usual to include "
-          "a 5%+ drop in the Nasdaq, but most warnings passed without one. **Nothing is sold automatically**; the trend "
-          "accounts still follow their 200-day rule. See the warning test report in the repo for the numbers.", "",
+          "What this means: in the 10-year test (Oct 2016 to Oct 2026), after a DANGER day the Nasdaq 100 fell 5% or more "
+          "within the next month 43% of the time, against 24% on an ordinary day. So the odds of a drop are clearly "
+          "higher, but more than half of these warnings pass without one. **Nothing is sold automatically**: letting "
+          "the radar sell early failed the strategy lab, so the trend accounts still follow their 200-day rule.", "",
           "_This is information, not advice._"]
     return "\n".join(o) + "\n"
 

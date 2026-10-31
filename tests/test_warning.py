@@ -88,4 +88,27 @@ def test_live_check_saves_lights_and_alerts_only_when_the_level_rises(tmp_path, 
     later = datetime(2026, 10, 31, 3, tzinfo=timezone.utc)
     assert w.run_live(tmp_path, later, broker=object())["level"] == "DANGER"
     assert not (tmp_path / "warning" / "alert.md").exists()            # still DANGER: no second alert
-    assert len((tmp_path / "warning" / "history.csv").read_text().splitlines()) == 2
+    monkeypatch.setattr(w, "lights", lambda c, m: pd.DataFrame({**{k: [False] * len(c) for k in w.LIGHTS}, "score": 0}, index=c.index))
+    assert w.run_live(tmp_path, datetime(2026, 11, 2, tzinfo=timezone.utc), broker=object())["level"] == "CALM"
+    monkeypatch.setattr(w, "lights", lambda c, m: pd.DataFrame({**{k: [True] * len(c) for k in w.LIGHTS}, "score": 7}, index=c.index))
+    w.run_live(tmp_path, datetime(2026, 11, 3, tzinfo=timezone.utc), broker=object())
+    assert not (tmp_path / "warning" / "alert.md").exists()            # DANGER again within 10 days: quiet
+    w.run_live(tmp_path, datetime(2026, 11, 4, tzinfo=timezone.utc), broker=object())
+    monkeypatch.setattr(w, "lights", lambda c, m: pd.DataFrame({**{k: [False] * len(c) for k in w.LIGHTS}, "score": 0}, index=c.index))
+    w.run_live(tmp_path, datetime(2026, 11, 20, tzinfo=timezone.utc), broker=object())
+    monkeypatch.setattr(w, "lights", lambda c, m: pd.DataFrame({**{k: [True] * len(c) for k in w.LIGHTS}, "score": 7}, index=c.index))
+    w.run_live(tmp_path, datetime(2026, 11, 21, tzinfo=timezone.utc), broker=object())
+    assert (tmp_path / "warning" / "alert.md").exists()                # a new DANGER after the quiet spell
+    assert len((tmp_path / "warning" / "history.csv").read_text().splitlines()) == 2  # one row per close day
+
+
+def test_news_desk_in_trend_offices_reads_the_radar(tmp_path):
+    from tradebots import world
+    (tmp_path / "warning").mkdir()
+    (tmp_path / "warning" / "latest.json").write_text(json.dumps({"level": "DANGER", "score": 4, "lights": {
+        k: {"title": t, "on": i < 4, "reading": "x"} for i, (k, (t, _)) in enumerate(w.LIGHTS.items())}}))
+    trend = {"crew": [{"job": world.TREND_JOBS[k]} for k, *_ in world.CREW], "stations": {"news": {}}}
+    other = {"crew": None, "stations": {"news": {"say": "crypto"}}}
+    world.radar_on_news_desk({"a": trend, "c": other}, tmp_path)
+    assert trend["stations"]["news"]["status"] == "blocked" and "DANGER" in trend["stations"]["news"]["say"]
+    assert other["stations"]["news"]["say"] == "crypto"

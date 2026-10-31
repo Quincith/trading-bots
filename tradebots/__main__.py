@@ -6,6 +6,7 @@
   python -m tradebots resume --strategy medium
   python -m tradebots weekly
   python -m tradebots copycat-preview      # newest insider buys from the SEC (no keys needed)
+  python -m tradebots warning              # the early-warning radar's lights (never trades)
 """
 from __future__ import annotations
 
@@ -70,10 +71,25 @@ def write_summary(text: str) -> None:
     print(text)
 
 
+def warning_check() -> int:
+    """The early-warning radar: read the lights, save them, and leave data/warning/alert.md if the level rose."""
+    from . import warning
+    out = warning.run_live(Path(os.environ.get("DATA_DIR", ROOT / "data")))
+    if out is None:
+        print("Early warning: checked less than 3 hours ago.")
+        return 0
+    on = [v["title"] for v in out["lights"].values() if v["on"]]
+    text = (f"**Early warning radar: {out['level']}** ({out['score']} of {len(out['lights'])} lights on at the "
+            f"{out['close_day']} close{': ' + ', '.join(on) if on else ''}).")
+    print(text)
+    write_summary(text)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser(prog="tradebots")
-    ap.add_argument("command", choices=["run", "deposit", "close-all", "resume", "weekly", "copycat-preview"])
+    ap.add_argument("command", choices=["run", "deposit", "close-all", "resume", "weekly", "copycat-preview", "warning"])
     ap.add_argument("--strategy", choices=STRATEGIES)
     ap.add_argument("--amount", type=float, help="deposit amount; negative for a withdrawal")
     ap.add_argument("--note", default="")
@@ -84,6 +100,8 @@ def main(argv: list[str] | None = None) -> int:
         return weekly_report()
     if args.command == "copycat-preview":
         return copycat_preview()
+    if args.command == "warning":
+        return warning_check()
     if not args.strategy:
         ap.error("--strategy is required")
 

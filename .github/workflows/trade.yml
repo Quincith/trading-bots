@@ -20,6 +20,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: bot-data
@@ -79,6 +80,18 @@ jobs:
         id: fxcopy
         if: ${{ env.OANDA_FXCOPY_ACCOUNT_ID != '' && env.OANDA_API_TOKEN != '' && (github.event_name == 'schedule' || !inputs.strategy || inputs.strategy == 'all' || inputs.strategy == 'fxcopy') }}
         run: python -m tradebots run --strategy fxcopy
+        continue-on-error: true
+      # The early-warning radar (tradebots/warning.py): reads 7 warning lights every 3 hours and opens an issue
+      # (GitHub emails you) when it turns DANGER (4+ lights; at most once per 10 days). It never trades.
+      - name: Early warning radar
+        if: always()
+        run: python -m tradebots warning
+        continue-on-error: true
+      - name: Email an early warning
+        if: ${{ always() && hashFiles('data/warning/alert.md') != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue create --title "Early warning: $(jq -r .level data/warning/latest.json) ($(jq -r .close_day data/warning/latest.json))" --body-file data/warning/alert.md --assignee "${{ github.repository_owner }}"
         continue-on-error: true
       - name: Build the bot world page and daily recap
         if: always()
