@@ -75,6 +75,26 @@ OVERLAYS = {
     "flip_cash": {"title": "Sell to cash while near-term fear is above 3-month fear", "kind": "flip", "ratio": 1.0,
                   "nudges": [{"ratio": 0.95}, {"ratio": 1.05}]},
 }
+# Round 2 (added 2026-10-31 after all four above failed; also fixed before testing). These don't use the lights:
+#   vol_target  Shrink the bet when the market gets jumpy: hold (the index's usual swing over the last year) /
+#               (its swing over the last 20 days) of the position, at most all of it, in steps of a quarter.
+#               A common way leveraged funds are tamed, because 3x funds lose most in wild, choppy markets.
+#   trail_stop  A safety exit: sell if the fund closes 20% below its best close since the rule bought it. Buy back
+#               when the index closes at a new 20-day high (and the 200-day rule still says yes).
+#   news_stress Sell to cash when scary market headlines (crash, plunge, selloff, recession...) over the last 5 days
+#               run at 2x their usual pace. Headlines: Alpaca/Benzinga news tagged SPY or QQQ.
+ROUND2 = {
+    "vol_target": {"title": "Smaller bet when the market gets jumpy (volatility target)", "kind": "vol", "days": 20,
+                   "nudges": [{"days": 10}, {"days": 40}]},
+    "trail_stop": {"title": "Safety exit 20% below the best close", "kind": "trail", "drop": 0.20,
+                   "nudges": [{"drop": 0.15}, {"drop": 0.25}]},
+    "news_stress": {"title": "Cash when scary headlines run at 2x normal", "kind": "news", "ratio": 2.0,
+                    "nudges": [{"ratio": 1.5}, {"ratio": 3.0}]},
+}
+OVERLAYS.update(ROUND2)
+SCARY = ("crash", "plunge", "plunges", "plummet", "selloff", "sell-off", "rout", "tumble", "tumbles", "panic",
+         "recession", "turmoil", "meltdown", "bear market", "correction", "slump", "sinks", "fear", "margin call",
+         "rate hike", "tariff", "crisis", "liquidat")
 ACCOUNTS = {"aggressive": ("QQQ", "TQQQ"), "medium": ("QQQ", "QLD")}
 
 
@@ -124,6 +144,17 @@ def lights(close: pd.DataFrame, macro: pd.DataFrame, s: dict = SET) -> pd.DataFr
     return out
 
 
+def radar_blocks(scores: pd.Series | None, day, level_: float) -> bool:
+    """True if the radar's score at the last US close before `day` was `level_` or more (0 = never blocks).
+    Used by the Copycat and Forex replays to test skipping new trades on warning days."""
+    if scores is None or not level_:
+        return False
+    t = pd.Timestamp(day)
+    t = t.tz_localize("UTC") if t.tzinfo is None else t.tz_convert("UTC")
+    i = scores.index.searchsorted(t.normalize()) - 1
+    return i >= 0 and scores.iloc[i] >= level_
+
+
 def level(score: int) -> str:
     return "DANGER" if score >= DANGER else "CAUTION" if score >= CAUTION else "CALM"
 
@@ -151,9 +182,64 @@ def readings(close: pd.DataFrame, macro: pd.DataFrame, s: dict = SET) -> dict:
 
 # ---- stepping in on the trend accounts (test only) ----------------------------------------------------------
 
-def scale(lit: pd.DataFrame, macro: pd.DataFrame, ov: dict) -> pd.Series:
-    """How much of the trend rule's position to keep (0, 0.5 or 1) after each close."""
+def scary_counts(news: list[dict], index: pd.DatetimeIndex) -> pd.Series:
+    """How many scary headlines came out each market day (weekend news counts toward Monday)."""
+    days = []
+    for n in news:
+        h = (n.get("headline") or "").lower()
+        if any(w in h for w in SCARY):
+            days.append(pd.Timestamp(n["created_at"]).tz_convert("UTC").normalize())
+    c = pd.Series(1, index=pd.DatetimeIndex(days, tz="UTC")).groupby(level=0).sum() if days else pd.Series(dtype=float)
+    pos = index.searchsorted(c.index)       # each day's count lands on the next market day at or after it
+    out = pd.Series(0.0, index=index)
+    for p_, v in zip(pos, c.to_numpy()):
+        if p_ < len(index):
+            out.iloc[p_] += v
+    return out
+
+
+def news_stress(counts: pd.Series, ratio: float) -> pd.Series:
+    """True when the last 5 market days had `ratio` times the usual number of scary headlines (and at least 5)."""
+    five = counts.rolling(5).sum()
+    usual = five.shift(5).rolling(120, min_periods=60).mean()
+    return (five >= ratio * usual) & (five >= 5)
+
+
+def trail_scale(base: pd.Series, fund: pd.Series, index_close: pd.Series, drop: float) -> pd.Series:
+    """1 while the trend rule holds and the fund is within `drop` of its best close since buying; after a stop, 0
+    until the index closes at a new 20-day high."""
+    hi20 = index_close.rolling(20, min_periods=1).max()
+    out, best, stopped, held = [], 0.0, False, False
+    for b, f, q, h in zip(base.to_numpy(), fund.to_numpy(), index_close.to_numpy(), hi20.to_numpy()):
+        if b <= 0 or f != f:
+            out.append(1.0)
+            best, stopped, held = 0.0, False, False
+            continue
+        if stopped and q >= h:
+            stopped, best = False, f
+        if not stopped:
+            best = max(best, f) if held else f
+            held = True
+            if f <= best * (1 - drop):
+                stopped = True
+        out.append(0.0 if stopped else 1.0)
+    return pd.Series(out, index=base.index)
+
+
+def scale(lit: pd.DataFrame, macro: pd.DataFrame, ov: dict, close: pd.DataFrame | None = None,
+          base: pd.Series | None = None, hold: str | None = None, news: pd.Series | None = None) -> pd.Series:
+    """How much of the trend rule's position to keep (0 to 1) after each close."""
     one = pd.Series(1.0, index=lit.index)
+    if ov["kind"] == "vol":
+        r = close["QQQ"].pct_change()
+        w = (r.rolling(252).std() / r.rolling(ov["days"]).std()).clip(upper=1.0)
+        return (np.floor(w * 4) / 4).fillna(1.0).reindex(lit.index).fillna(1.0)
+    if ov["kind"] == "trail":
+        return trail_scale(base, close[hold], close["QQQ"], ov["drop"]).reindex(lit.index).fillna(1.0)
+    if ov["kind"] == "news":
+        on = news_stress(news.reindex(lit.index).fillna(0.0), ov["ratio"])
+        one[on.to_numpy()] = 0.0
+        return one
     if ov["kind"] == "score":
         sc = lit["score"]
         if ov.get("caution") is not None:
@@ -171,16 +257,18 @@ def scale(lit: pd.DataFrame, macro: pd.DataFrame, ov: dict) -> pd.Series:
 class WarnEngine(hunt.HuntEngine):
     """The trend rule's replay, with the radar allowed to shrink the position (cfg["hunt"]["overlay"])."""
 
-    def __init__(self, bars, lit, macro, start, end, bench="QQQ"):
+    def __init__(self, bars, lit, macro, start, end, bench="QQQ", news=None):
         super().__init__(bars, start, end, bench, min_trades=hunt.MIN_TRADES["lev_trend"])
-        self.lit, self.macro = lit, macro
+        self.lit, self.macro, self.news = lit, macro, news
 
     def run(self, cfg, start, end, cost=1.0):
         h = cfg["hunt"]
         close = pd.DataFrame({s: self.bars[s]["close"] for s in self.bars})
         want = hunt.targets(close, h)
         if h.get("overlay"):
-            want[h["hold"]] = want[h["hold"]] * scale(self.lit, self.macro, h["overlay"]).reindex(close.index).fillna(1.0)
+            k = scale(self.lit.reindex(close.index), self.macro.reindex(close.index), h["overlay"], close,
+                      want[h["hold"]], h["hold"], self.news)
+            want[h["hold"]] = want[h["hold"]] * k.fillna(1.0)
         return hunt.simulate(cfg, self.bars, start, end, self.cash, cost, want=want)
 
 
@@ -201,10 +289,13 @@ def with_overlay(cfg: dict, name: str, nudge: dict | None = None) -> dict:
 
 def judge(eng: WarnEngine, base: dict, name: str) -> tuple[bool, list[dict], dict]:
     """The strategy lab's rules for a change (lab.judge), with the radar as the change."""
+    return judge_cfgs(eng, base, with_overlay(base, name), [with_overlay(base, name, n) for n in OVERLAYS[name]["nudges"]])
+
+
+def judge_cfgs(eng, base: dict, new: dict, nbs: list[dict]) -> tuple[bool, list[dict], dict]:
+    """The strategy lab's rules for a change: `new` against `base`, with `nbs` as its stricter/looser versions."""
     from . import lab
     runner = lab.Runner(eng)
-    new = with_overlay(base, name)
-    nbs = [with_overlay(base, name, n) for n in OVERLAYS[name]["nudges"]]
     sp = lab.make_split(eng.start, eng.end)
     S, U, A = (sp.start, sp.study_end), (sp.study_end, sp.end), (sp.start, sp.end)
     old_s, new_s, old_u, new_u, old_x, new_x, old_a, new_a, *nb = runner.run_many(
@@ -329,14 +420,21 @@ def recent_table(lit: pd.DataFrame, n: int = 15) -> str:
 
 # ---- the full test ------------------------------------------------------------------------------------------
 
-def load(years: int, end: datetime) -> tuple[dict, pd.DataFrame, datetime]:
+def load(years: int, end: datetime) -> tuple[dict, pd.DataFrame, datetime, list[dict]]:
     import os
     start = end.replace(year=end.year - years)
     key = os.environ.get("ALPACA_MEDIUM_KEY_ID") or os.environ.get("ALPACA_AGGRESSIVE_KEY_ID", "")
     sec = os.environ.get("ALPACA_MEDIUM_SECRET_KEY") or os.environ.get("ALPACA_AGGRESSIVE_SECRET_KEY", "")
     stocks = hunt.fetch(start, end, key, sec, symbols=MARKET + FUNDS, coins=False)["stocks"]
     macro = fetch_fred(start - timedelta(days=430))
-    return stocks, macro, start
+    from .alpaca import AlpacaPaper
+    news: list[dict] = []
+    try:
+        news = AlpacaPaper(key, sec).get_news_range(["SPY", "QQQ"], start - timedelta(days=250), end)
+        log.warning("  news: %d headlines tagged SPY/QQQ from %s", len(news), news[0]["created_at"][:10] if news else "-")
+    except Exception as e:   # the news test is skipped, the rest still runs
+        log.warning("  news: could not download (%s)", e)
+    return stocks, macro, start, news
 
 
 def frame(stocks: dict, syms: list[str]) -> dict[str, pd.DataFrame]:
@@ -346,20 +444,34 @@ def frame(stocks: dict, syms: list[str]) -> dict[str, pd.DataFrame]:
     return {s: stocks[s].reindex(idx) for s in syms}
 
 
-def test(stocks: dict, macro_raw: pd.DataFrame, start: datetime, end: datetime) -> str:
+def test(stocks: dict, macro_raw: pd.DataFrame, start: datetime, end: datetime, news: list[dict] | None = None) -> str:
     allb = frame(stocks, MARKET + FUNDS)
     close = pd.DataFrame({s: allb[s]["close"] for s in allb})
     macro = align(macro_raw, close.index)
     lit = lights(close, macro)
     stats, ev_text = event_study(close["QQQ"], lit, start)
+    counts = scary_counts(news, close.index) if news else None
+    if counts is not None:
+        stress = news_stress(counts, ROUND2["news_stress"]["ratio"])
+        q = close["QQQ"]
+        fd = forward_drop(q)
+        ok = fd.notna() & (q.index >= pd.Timestamp(start)) & (np.arange(len(q)) < len(q) - 20)
+        first = counts[counts > 0].index.min()
+        ok &= q.index >= first + pd.Timedelta(days=200)
+        on = stress & ok
+        ev_text += (f"\n**Scary-headline light** (news tagged SPY/QQQ, {len(news):,} headlines; counted from "
+                    f"{(first + pd.Timedelta(days=200)):%b %Y}): on {on.sum() / max(1, ok.sum()) * 100:.0f}% of days; "
+                    f"a 5%+ drop followed {(fd[on] <= -0.05).mean() * 100 if on.any() else float('nan'):.0f}% of the "
+                    f"time, vs {(fd[ok] <= -0.05).mean() * 100:.0f}% on all those days.\n")
 
     o = ["# Early warning radar: would it have seen the selloffs coming?", "",
          f"Prices: Alpaca daily (adjusted), {start:%b %Y} to {end:%b %d %Y}. Fear index, oil and 2-year yield: FRED "
          "(free). Seven warning lights, settings fixed before testing (see tradebots/warning.py). Score = lights on: "
          "0-1 CALM, 2-3 CAUTION, 4+ DANGER.", "", "## The last 15 trading days", "", recent_table(lit), "", ev_text]
     o += ["## Would stepping in have helped the trend accounts?", "",
-          "Each idea below changes only one thing: on top of the 200-day trend rule the accounts run now, the radar may "
-          "sell (or halve) the fund early. Judged by the strategy lab's rules for a change: better on the unseen months "
+          "Each idea below changes only one thing: on top of the 200-day trend rule the accounts run now, it may "
+          "sell (or shrink) the fund early. Round 1 uses the radar's lights; round 2 (added after round 1 failed) "
+          "tries a volatility target, a safety-exit stop and a scary-headline count. Judged by the strategy lab's rules for a change: better on the unseen months "
           "by 1+ point, steady in 4 of 5 slices, still better with costs doubled, a stricter and a looser setting also "
           "better, not worse on the study months, and no deeper worst drop. $100 start, 0.1% cost each way.", "",
           "| Account | Idea | Whole period | Without radar | Worst drop | Without radar | Unseen months | Without | Trades | Lab check |",
@@ -367,9 +479,11 @@ def test(stocks: dict, macro_raw: pd.DataFrame, start: datetime, end: datetime) 
     details = []
     for acct, (sig, hold) in ACCOUNTS.items():
         bars = frame(stocks, sorted({sig, hold}))
-        eng = WarnEngine(bars, lit, macro, start, end)
+        eng = WarnEngine(bars, lit, macro, start, end, news=counts)
         base = base_config(acct)
         for name, ov in OVERLAYS.items():
+            if ov["kind"] == "news" and counts is None:
+                continue
             kept, checks, n = judge(eng, base, name)
             passed = sum(c["passed"] for c in checks)
             o.append(f"| {acct.title()} ({hold}) | {ov['title']} | {n['whole_new']:+.0f}% ({bt.money(n['end_new'])}) | "
@@ -384,6 +498,50 @@ def test(stocks: dict, macro_raw: pd.DataFrame, start: datetime, end: datetime) 
           "_Past results don't guarantee future ones. The radar is a test of history, and no set of signals predicts "
           "selloffs reliably._"]
     return "\n".join(o) + "\n"
+
+
+# ---- the other accounts: skip new trades on warning days ------------------------------------------------------
+
+GATES = {"danger": ("Skip new trades the day after a DANGER close (4+ lights)", 4, [3, 5]),
+         "caution": ("Skip new trades the day after a CAUTION close (2+ lights)", 2, [1, 3])}
+
+
+def gate_cfg(cfg: dict, lvl: int) -> dict:
+    c = copy.deepcopy(cfg)
+    c["risk"]["radar_block_level"] = lvl
+    return c
+
+
+def test_others(scores: pd.Series, strategies=("copycat", "forex")) -> str:
+    """Copycat and the Forex wing don't hold one fund all the time, so the radar's job there is simpler: don't
+    open new trades the day after a warning close. Judged by the lab's rules for a change."""
+    from . import lab
+    o = ["## Copycat and Forex: skip new trades on warning days?", "",
+         "Copycat (company insiders' buys) and the London opening-range forex rule, each replayed with the lab's own "
+         "data (Copycat: the last year it has SEC files for; Forex: 8 years of 5-minute prices). Same rules as above.", "",
+         "| Account | Idea | Whole period | Without radar | Worst drop | Without radar | Unseen months | Without | Trades | Lab check |",
+         "|---|---|---|---|---|---|---|---|---|---|"]
+    details = []
+    for strat in strategies:
+        try:
+            eng = lab.load_engine(strat)
+        except Exception as e:   # missing keys or a download problem: say so and go on
+            o.append(f"| {strat.title()} | could not load its data: {e} | | | | | | | | |")
+            continue
+        eng.radar_scores = scores
+        base = gate_cfg(lab.load_config(strat), 0)
+        for name, (title, lvl, nb) in GATES.items():
+            kept, checks, n = judge_cfgs(eng, base, gate_cfg(base, lvl), [gate_cfg(base, x) for x in nb])
+            passed = sum(c["passed"] for c in checks)
+            o.append(f"| {strat.title()} | {title} | {n['whole_new']:+.1f}% ({bt.money(n['end_new'])}) | "
+                     f"{n['whole_old']:+.1f}% ({bt.money(n['end_old'])}) | {n['dd_new']:.0f}% | {n['dd_old']:.0f}% | "
+                     f"{n['unseen_new']:+.1f}% | {n['unseen_old']:+.1f}% | {n['trades_new']} vs {n['trades_old']} | "
+                     f"{'✅ pass' if kept else f'❌ {passed}/{len(checks)}'} |")
+            details.append(f"**{strat.title()}: {title}**\n\n" +
+                           "\n".join(f"- {'✅' if c['passed'] else '❌'} {c['name']}: {c['detail']}" for c in checks))
+            log.warning("%s %s: whole %+.1f%% vs %+.1f%%, %s", strat, name, n["whole_new"], n["whole_old"],
+                        "PASS" if kept else f"{passed}/6")
+    return "\n".join(o) + "\n\n" + "\n\n".join(details) + "\n"
 
 
 # ---- the live check -----------------------------------------------------------------------------------------
@@ -416,7 +574,11 @@ def run_live(data_dir: Path, now: datetime | None = None, broker=None, session=N
            "level": level(score), "lights": {k: {"title": LIGHTS[k][0], "on": bool(last[k]), "why": LIGHTS[k][1],
                                                  "reading": read[k]} for k in LIGHTS},
            "fear_index": float(macro["vix"].dropna().iloc[-1]) if macro["vix"].notna().any() else None}
-    latest_p.write_text(json.dumps(out, indent=2))
+    try:
+        out["headlines"] = headline_watch(broker, d, close.index, now)
+    except Exception as e:   # news is extra: the lights still count without it
+        log.warning("headline watch failed: %s", e)
+        out["headlines"] = None
     hist = d / "history.csv"
     row = f"{out['close_day']},{score},{out['level']}," + "".join("1" if last[k] else "0" for k in LIGHTS) + "\n"
     lines = hist.read_text().splitlines(keepends=True) if hist.exists() else ["day,score,level,lights(" + "/".join(LIGHTS) + ")\n"]
@@ -432,11 +594,47 @@ def run_live(data_dir: Path, now: datetime | None = None, broker=None, session=N
     return out
 
 
+def headline_watch(broker, d: Path, days: pd.DatetimeIndex, now: datetime) -> dict:
+    """The scary-headline count (not part of the score): in the 10-year test, a 5-day count at 2x its usual pace
+    was followed by a 5%+ Nasdaq drop within a month 43% of the time (24% on an ordinary day), as often as DANGER,
+    but selling on it failed the lab. Daily counts are kept in headlines.csv so each check only downloads news
+    since the last day it saw."""
+    p = d / "headlines.csv"
+    have = {}
+    if p.exists():
+        for ln in p.read_text().splitlines()[1:]:
+            day, n = ln.split(",")
+            have[day] = int(n)
+    since = (datetime.fromisoformat(max(have)).replace(tzinfo=timezone.utc) if have
+             else now - timedelta(days=200))
+    news = broker.get_news_range(["SPY", "QQQ"], since, now)
+    fresh: dict[str, int] = {}
+    for n in news:
+        day = pd.Timestamp(n["created_at"]).tz_convert("UTC").strftime("%Y-%m-%d")
+        fresh.setdefault(day, 0)
+        if any(w in (n.get("headline") or "").lower() for w in SCARY):
+            fresh[day] += 1
+    have.update(fresh)
+    keep = sorted(have)[-260:]
+    p.write_text("day,scary_headlines\n" + "".join(f"{k},{have[k]}\n" for k in keep))
+    items = [{"headline": "crash", "created_at": f"{k}T12:00:00Z"} for k in keep for _ in range(have[k])]
+    counts = scary_counts(items, days)
+    five = counts.rolling(5).sum()
+    usual = five.shift(5).rolling(120, min_periods=60).mean()
+    on = bool(news_stress(counts, ROUND2["news_stress"]["ratio"]).iloc[-1])
+    return {"on": on, "last_5_days": int(five.iloc[-1]) if five.notna().iloc[-1] else None,
+            "usual_5_days": round(float(usual.iloc[-1]), 1) if usual.notna().iloc[-1] else None}
+
+
 def alert_text(out: dict, was: str) -> str:
     on = [v for v in out["lights"].values() if v["on"]]
     o = [f"The early-warning radar went from **{was}** to **{out['level']}** at the {out['close_day']} close: "
          f"{out['score']} of {len(LIGHTS)} warning lights are on.", "", "Lights on:", ""]
     o += [f"- 🔴 **{v['title']}**: {v['why']} Now: {v['reading']}." for v in on]
+    h = out.get("headlines")
+    if h and h.get("last_5_days") is not None:
+        o += ["", f"Scary market headlines (crash, plunge, selloff...): {h['last_5_days']} in the last 5 days vs about "
+                  f"{h['usual_5_days']} usually{' (2x or more: another warning sign)' if h['on'] else ''}."]
     o += ["", "Lights off: " + ", ".join(v["title"] for v in out["lights"].values() if not v["on"]) + ".", "",
           "What this means: in the 10-year test (Oct 2016 to Oct 2026), after a DANGER day the Nasdaq 100 fell 5% or more "
           "within the next month 43% of the time, against 24% on an ordinary day. So the odds of a drop are clearly "
@@ -452,11 +650,16 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("command", choices=["test"])
     p.add_argument("--years", type=int, default=10)
     p.add_argument("--out", default=None)
+    p.add_argument("--others", action="store_true", help="also test Copycat and Forex (needs their keys)")
     a = p.parse_args(argv)
     now = datetime.now(timezone.utc)
     end = datetime(now.year, now.month, now.day, tzinfo=timezone.utc)
-    stocks, macro, start = load(a.years, end)
-    text = test(stocks, macro, start, end)
+    stocks, macro, start, news = load(a.years, end)
+    text = test(stocks, macro, start, end, news)
+    if a.others:
+        allb = frame(stocks, MARKET)
+        close = pd.DataFrame({s: allb[s]["close"] for s in allb})
+        text += "\n" + test_others(lights(close, align(macro, close.index))["score"])
     print(text)
     if a.out:
         Path(a.out).write_text(text)

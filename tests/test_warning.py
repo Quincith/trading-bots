@@ -57,8 +57,10 @@ def test_overlay_only_shrinks_the_trend_position_and_runs_through_the_checks():
     eng = w.WarnEngine(w.frame(d, ["QQQ", "TQQQ"]), lit, macro, start, end)
     base = w.base_config("aggressive")
     for name in w.OVERLAYS:
-        s = w.scale(lit, macro, w.with_overlay(base, name)["hunt"]["overlay"])
-        assert set(s.unique()) <= {0.0, 0.5, 1.0}
+        if w.OVERLAYS[name]["kind"] == "news":
+            continue
+        s = w.scale(lit, macro, w.with_overlay(base, name)["hunt"]["overlay"], close, pd.Series(1.0, index=close.index), "TQQQ")
+        assert set(s.unique()) <= {0.0, 0.25, 0.5, 0.75, 1.0}
         kept, checks, n = w.judge(eng, base, name)
         assert len(checks) == 6 and n["trades_new"] >= 0
     text = w.test(d, macro_for(close.index), start, end)
@@ -112,3 +114,59 @@ def test_news_desk_in_trend_offices_reads_the_radar(tmp_path):
     world.radar_on_news_desk({"a": trend, "c": other}, tmp_path)
     assert trend["stations"]["news"]["status"] == "blocked" and "DANGER" in trend["stations"]["news"]["say"]
     assert other["stations"]["news"]["say"] == "crypto"
+
+
+def test_round_two_overlays():
+    idx = pd.date_range(end="2026-10-01", periods=10, freq="B", tz="UTC")
+    base = pd.Series(1.0, index=idx)
+    fund = pd.Series([100, 110, 120, 95, 90, 100, 110, 125, 130, 120], index=idx, dtype=float)
+    q = pd.Series([1, 2, 3, 2, 2, 2, 2, 1, 5, 4], index=idx, dtype=float)
+    s = w.trail_scale(base, fund, q, 0.20)
+    assert list(s) == [1, 1, 1, 0, 0, 0, 0, 0, 1, 1]     # stopped at 95 (-21% from 120), back on a new 20-day high
+    news = [{"headline": "Stocks plunge as panic spreads", "created_at": "2026-09-26T14:00:00Z"},   # a Saturday
+            {"headline": "Nasdaq hits record", "created_at": "2026-09-28T14:00:00Z"}]
+    c = w.scary_counts(news, idx)
+    assert c.sum() == 1 and c[pd.Timestamp("2026-09-28", tz="UTC")] == 1
+    many = pd.Series([1.0] * 200 + [10.0] * 5, index=pd.date_range(end="2026-10-01", periods=205, freq="B", tz="UTC"))
+    st = w.news_stress(many, 2.0)
+    assert st.iloc[-1] and not st.iloc[-10]
+
+
+def test_round_two_overlays_run_through_the_checks():
+    d = market()
+    close = pd.DataFrame({s: d[s]["close"] for s in d})
+    macro = macro_for(close.index)
+    news = [{"headline": "Market crash fears" if i % 7 else "calm", "created_at": f"{t:%Y-%m-%dT15:00:00Z}"}
+            for i, t in enumerate(close.index[::3])]
+    start, end = datetime(2022, 1, 1, tzinfo=timezone.utc), datetime(2026, 9, 1, tzinfo=timezone.utc)
+    text = w.test(d, macro, start, end, news)
+    for name in w.ROUND2:
+        assert w.OVERLAYS[name]["title"] in text
+    assert "Scary-headline light" in text
+
+
+def test_radar_blocks_uses_the_close_before_the_day():
+    idx = pd.date_range("2026-10-26", periods=5, freq="B", tz="UTC")
+    sc = pd.Series([0, 5, 0, 0, 2], index=idx)
+    assert not w.radar_blocks(sc, idx[1], 4)                       # Tuesday's own score isn't known at its open
+    assert w.radar_blocks(sc, idx[2], 4)                           # Wednesday after a DANGER Tuesday close
+    assert w.radar_blocks(sc, pd.Timestamp("2026-10-28"), 4)       # naive dates (Copycat's days) work too
+    assert not w.radar_blocks(sc, idx[2], 0) and not w.radar_blocks(None, idx[2], 4)
+
+
+def test_headline_watch_counts_only_new_news(tmp_path):
+    idx = pd.date_range(end="2026-10-30", periods=200, freq="B", tz="UTC")
+
+    class News:
+        calls = []
+
+        def get_news_range(self, syms, start, end):
+            self.calls.append(start)
+            return [{"headline": "Stocks plunge" if i % 2 else "Stocks rise", "created_at": f"{t:%Y-%m-%d}T15:00:00Z"}
+                    for t in idx[-130:] for i in range(2)] + \
+                   [{"headline": "Panic selloff", "created_at": f"{t:%Y-%m-%d}T16:00:00Z"} for t in idx[-5:] for _ in range(3)]
+    b = News()
+    h = w.headline_watch(b, tmp_path, idx, datetime(2026, 10, 31, tzinfo=timezone.utc))
+    assert h["on"] and h["last_5_days"] == 20 and h["usual_5_days"] == 5.0
+    w.headline_watch(b, tmp_path, idx, datetime(2026, 10, 31, 3, tzinfo=timezone.utc))
+    assert b.calls[-1] == datetime(2026, 10, 30, tzinfo=timezone.utc)      # only re-reads from the last day it has

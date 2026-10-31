@@ -485,6 +485,10 @@ def radar_on_news_desk(strategies: dict, data_dir: Path) -> None:
             nw["say"] = (f"Early-warning radar: {w['level']}, {w['score']} of {len(w['lights'])} lights on"
                          + (f" ({', '.join(v['title'] for v in on)})." if on else "."))
             nw["detail"] = [f"{'🔴' if v['on'] else '⚪'} {v['title']}: {v['reading']}" for v in w["lights"].values()]
+            h = w.get("headlines")
+            if h and h.get("last_5_days") is not None:
+                nw["detail"].append(f"{'🔴' if h['on'] else '⚪'} Scary headlines: {h['last_5_days']} in 5 days "
+                                    f"(usually about {h['usual_5_days']})")
 
 
 def build(data_dir: Path, out_dir: Path, now: datetime | None = None) -> Path:
