@@ -250,7 +250,8 @@ def copycat_stations(run: dict | None, cfg: dict) -> dict:
 TREND_JOBS = {
     "scout": "Checks once a day whether the Nasdaq 100 (QQQ) closed above its 200-day average price.",
     "charts": "Keeps the fund's price and the trend line on screen.",
-    "news": "Not needed: this rule reads only prices, no news.",
+    "news": "Watches the early-warning radar: 7 warning lights for a selloff (fear index, junk bonds, oil, rate-hike "
+            "bets and more). It only warns; the rule decides.",
     "sentiment": "Not needed: this rule reads only prices, no mood scores.",
     "risk": "The safety officer. Plain rules, no AI. Blocks new buys after a big losing day or total loss.",
     "decision": "Plain rule: uptrend means the whole account in the fund, no uptrend means cash.",
@@ -470,6 +471,22 @@ def forex_data(store: Store, cfg: dict, days: list[str], run_count: int, lv: dic
     }
 
 
+def radar_on_news_desk(strategies: dict, data_dir: Path) -> None:
+    """In the trend offices, News reads out the early-warning radar (data/warning/latest.json)."""
+    p = data_dir / "warning" / "latest.json"
+    if not p.exists():
+        return
+    w = json.loads(p.read_text())
+    on = [v for v in w["lights"].values() if v["on"]]
+    for st in strategies.values():
+        if st.get("crew") and st["crew"][2]["job"] == TREND_JOBS["news"]:
+            nw = st["stations"]["news"]
+            nw["status"] = {"CALM": "working", "CAUTION": "found", "DANGER": "blocked"}[w["level"]]
+            nw["say"] = (f"Early-warning radar: {w['level']}, {w['score']} of {len(w['lights'])} lights on"
+                         + (f" ({', '.join(v['title'] for v in on)})." if on else "."))
+            nw["detail"] = [f"{'🔴' if v['on'] else '⚪'} {v['title']}: {v['reading']}" for v in w["lights"].values()]
+
+
 def build(data_dir: Path, out_dir: Path, now: datetime | None = None) -> Path:
     now = now or datetime.now(timezone.utc)
     stores = {n: Store(data_dir, n) for n in STRATEGIES}
@@ -492,6 +509,7 @@ def build(data_dir: Path, out_dir: Path, now: datetime | None = None) -> Path:
         "glossary": recap.GLOSSARY,
         "strategies": {n: strategy_data(stores[n], cfgs[n]) for n in STRATEGIES},
     }
+    radar_on_news_desk(payload["strategies"], data_dir)
     blob = json.dumps(payload, separators=(",", ":")).replace("</", "<\\/")
     html = TEMPLATE.read_text().replace("/*__DATA__*/null", blob)
     # the pixel-art world is inlined so the page is one file

@@ -62,6 +62,20 @@ Expect few trades (about 2 a year) and long losing stretches: only 1 in 4 past t
 were big. Stocks only trade on weekdays, 9:30am to 4pm New York time. To bring the AI crypto bots back,
 delete the `trend:` section from the account's config file and set the loss limits back.
 
+## Early warning radar (since October 31, 2026)
+
+Seven warning lights, read every 3 hours from free data (`tradebots/warning.py`): the fear index (VIX) above 25,
+near-term fear above 3-month fear, junk bonds falling against safe bonds, an oil spike, rate-hike bets (the
+2-year Treasury yield jumping), fewer stocks holding the market up, and the Nasdaq 100 closing below its 50-day
+average. 0-1 lights = CALM, 2-3 = CAUTION, 4+ = DANGER. News in the trend offices of Bot World reads it out, and
+when it turns DANGER the bots open a GitHub issue (GitHub emails you), at most once per 10 days.
+
+**It only warns. It never trades.** The 10-year test (**Actions → Early warning test → Run workflow**) found that
+after a DANGER day the Nasdaq fell 5%+ within a month 43% of the time, against 24% on an ordinary day. That's a
+real tilt in the odds, but most warnings pass without a drop, and it missed sudden shocks (it read CALM the night
+before October 30, 2026). Letting it sell TQQQ or QLD early failed every strategy lab check: it cut too many good
+months. The history and today's lights are on the bot-data branch in `warning/`.
+
 ## The AI bots' two strategies (switched off on Aggressive and Medium since October 28, 2026)
 
 The code is the same for both. Each strategy has its own settings file and its own Alpaca paper account, so the results stay separate.

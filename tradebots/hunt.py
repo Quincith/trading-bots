@@ -123,18 +123,19 @@ def targets(close: pd.DataFrame, h: dict) -> pd.DataFrame:
 # ---- the replay ---------------------------------------------------------------------------------------------
 
 def simulate(cfg: dict, bars: dict[str, pd.DataFrame], start: datetime, end: datetime, cash: float = 100.0,
-             cost: float = 1.0) -> bt.SimResult:
+             cost: float = 1.0, want: pd.DataFrame | None = None) -> bt.SimResult:
     """Day-by-day replay. The holdings decided at a close are bought or sold at the next day's open, paying
     the cost rate on every dollar traded (times `cost`). Holdings only change when the rule's choice changes.
     The daily loss limit blocks new buys decided at a close that ended a day down more than the limit. The
     total loss limit is left off so the replay shows what the rule itself does (the lab checks the worst drop
-    against it separately)."""
+    against it separately). `want` replaces the rule's own holdings (the early-warning test uses it to shrink
+    them on danger days)."""
     h, rk = cfg["hunt"], cfg["risk"]
     rate = (CRYPTO_COST if h["style"] in CRYPTO_STYLES else STOCK_COST) * cost
     syms = list(bars)
     opens = pd.DataFrame({s: bars[s]["open"] for s in syms})
     close = pd.DataFrame({s: bars[s]["close"] for s in syms})
-    want = targets(close, h)
+    want = targets(close, h) if want is None else want
     s0, e0 = pd.Timestamp(start), pd.Timestamp(end)
     days = close.index[(close.index >= s0) & (close.index < e0)]
     daily_limit = rk["max_daily_loss_pct"] / 100
@@ -227,7 +228,8 @@ class HuntEngine:
                  "result_pct": round(t["pnl"] / t["cost"] * 100, 2) if t["cost"] else 0.0} for t in res.trades]
 
 
-def fetch(start: datetime, end: datetime, key: str, secret: str) -> dict[str, dict[str, pd.DataFrame]]:
+def fetch(start: datetime, end: datetime, key: str, secret: str, symbols=STOCKS,
+          coins: bool = True) -> dict[str, dict[str, pd.DataFrame]]:
     """Daily prices from Alpaca: the funds (adjusted for splits and dividends, from the full "SIP" feed) and
     the coins, each with about 14 months before `start` to warm up the averages."""
     from .alpaca import AlpacaPaper
@@ -237,7 +239,7 @@ def fetch(start: datetime, end: datetime, key: str, secret: str) -> dict[str, di
     params_base = {"timeframe": "1Day", "adjustment": "all", "feed": "sip", "limit": 10000,
                    "start": a.strftime("%Y-%m-%dT%H:%M:%SZ"), "end": end.strftime("%Y-%m-%dT%H:%M:%SZ")}
     raw: dict[str, list] = {}
-    params = {**params_base, "symbols": ",".join(STOCKS)}
+    params = {**params_base, "symbols": ",".join(symbols)}
     while True:
         page = broker._data("/v2/stocks/bars", params)
         for sym, b in (page.get("bars") or {}).items():
@@ -250,6 +252,8 @@ def fetch(start: datetime, end: datetime, key: str, secret: str) -> dict[str, di
         df["t"] = pd.to_datetime(df["t"]).dt.tz_convert("UTC").dt.normalize()
         stocks[sym] = df.set_index("t")[["open", "high", "low", "close", "volume"]]
         log.warning("  %s: %d days from %s", sym, len(df), stocks[sym].index[0].date())
+    if not coins:
+        return {"stocks": stocks, "crypto": {}}
     coins = broker.get_bars_range(STYLES["crypto_rotation"]["coins"], "1Day", a, end, "crypto")
     for s, df in coins.items():
         coins[s] = df[~df.index.duplicated()]
