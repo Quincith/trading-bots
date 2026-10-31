@@ -1,65 +1,63 @@
-# Daily recap: Friday, October 30, 2026
+# Daily recap: Saturday, October 31, 2026
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $5.06 (-5.30%)
+## Aggressive: flat
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $5.06 (-5.30%) at $90.42. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $90.69. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.48 → $90.42 (-$5.06, -5.30%).
-- Profit / loss since start: -$9.58 on $100.00 money put in.
-- Scout scanned 0 coins, 52 times.
+- Account value: $90.69 → $90.69 (no change).
+- Profit / loss since start: -$9.31 on $100.00 money put in.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $88.42 (-$9.57 unrealized).
+- Holding: TQQQ $88.69 (-$9.30 unrealized).
 
-## Medium: down $3.21 (-3.31%)
+## Medium: flat
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $3.21 (-3.31%) at $93.78. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $93.15. Paper money only.
 
 **Key takeaways**
 
-- Account value: $96.99 → $93.78 (-$3.21, -3.31%).
-- Profit / loss since start: -$6.22 on $100.00 money put in.
-- Scout scanned 0 coins, 52 times.
+- Account value: $93.15 → $93.15 (no change).
+- Profit / loss since start: -$6.85 on $100.00 money put in.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $91.78 (-$6.21 unrealized).
+- Holding: QLD $91.15 (-$6.84 unrealized).
 
-## Copycat: down $2.34 (-2.33%)
+## Copycat: flat
 
-Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended down $2.34 (-2.33%) at $98.22. Paper money only.
+Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended flat at $98.22. Paper money only.
 
 **Key takeaways**
 
-- Account value: $100.56 → $98.22 (-$2.34, -2.33%).
+- Account value: $98.22 → $98.22 (no change).
 - Profit / loss since start: -$1.78 on $100.00 money put in.
-- Spotter read 1519 insider filings from the SEC and found 32 insider purchases. Watchlist at day end: 52 stocks.
+- Spotter read 3 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 52 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 4 insiders bought $1,819,349 at about $15.39: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800 and 1 more.
-- Sent for review: NPB (12x), LRN (12x), ACN (12x), TTMI (3x), SRRK (3x), THRM (3x).
-- Decisions: 0 buy, 27 wait, 18 skip.
+- Sent for review: NPB (1x), LRN (1x), ACN (1x).
+- Decisions: 0 buy, 3 wait, 0 skip.
 - Passed on NPB (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on LRN (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
-- Sold NBIS for $17.79: the price fell to the safety exit, so the bots sold to keep the loss small. Loss: -$2.10.
+- No trades.
 - Holding: BBT $19.84 (-$0.10 unrealized); CHCO $19.65 (-$0.34 unrealized); MSM $20.43 (+$0.44 unrealized); STC $20.24 (+$0.33 unrealized).
 
-## Forex: down $0.17 (-0.17%)
+## Forex: flat
 
-Active day. Opened 1 trade and closed 1. The office ended down $0.17 (-0.17%) at $99.83. Practice money only.
+Quiet day. No new currency trade. The office ended flat at $99.83. Practice money only.
 
 **Key takeaways**
 
-- Account value: $100.00 → $99.83 (-$0.17, -0.17%).
+- Account value: $99.83 → $99.83 (no change).
 - Profit / loss since start: -$0.17 on $100.00 money put in.
-- Marked the opening range on 7 currency pairs at the London open.
-- Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (orders), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
-- Opened USD/JPY at 157.172, controlling $100.00. SELL 100 units: broke below the opening range
-- Closed USD/JPY: end of the trading session, -$0.17. Loss: -$0.17.
+- No opening range marked today (a weekend, a holiday, or the check came too late).
+- No trades.
 - Open trades: none, all cash.
 
-## Fxcopy: no runs logged on 2026-10-30.
+## Fxcopy: no runs logged on 2026-10-31.
 
 ## Words to know
 
@@ -70,14 +68,10 @@ Active day. Opened 1 trade and closed 1. The office ended down $0.17 (-0.17%) at
 - **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
 - **insider**: A company's own bosses (CEO, CFO and so on) and board members. They know the company best.
-- **leverage**: Controlling more money than you have. 3:1 means $100 controls up to $300. It makes wins and losses bigger.
 - **money put in**: The money you added (deposits) minus any you took out. Profit is measured against this.
 - **opening range**: A pair's highest and lowest price in the first 30 minutes after a big market opens. The Forex office buys if the price breaks above it and sells if it breaks below.
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.
-- **selling short**: Betting a price will fall. In forex you can sell a pair first and buy it back later, cheaper if you're right.
-- **stop-loss**: A safety exit. If the price falls to this level, the bots sell to keep the loss small.
-- **units**: How much currency a forex trade controls. 1,000 units (a 'micro lot') of EUR/USD is 1,000 euros, about $1,100.
 - **unrealized**: A gain or loss on a coin we still own. It only becomes real when we sell.
 - **volume**: How much of a coin is being bought and sold. A jump in volume means lots of people suddenly care.
