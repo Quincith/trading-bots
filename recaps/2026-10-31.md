@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $90.69 → $90.69 (no change).
 - Profit / loss since start: -$9.31 on $100.00 money put in.
-- Scout scanned 0 coins, 3 times.
+- Scout scanned 0 coins, 4 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: TQQQ $88.69 (-$9.30 unrealized).
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $93.15 → $93.15 (no change).
 - Profit / loss since start: -$6.85 on $100.00 money put in.
-- Scout scanned 0 coins, 3 times.
+- Scout scanned 0 coins, 4 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: QLD $91.15 (-$6.84 unrealized).
@@ -38,8 +38,8 @@ Watchful day. Insiders bought some stocks, but none passed the copy checks yet. 
 - Profit / loss since start: -$1.78 on $100.00 money put in.
 - Spotter read 27 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 52 stocks.
 - Top pick: NPB (NORTHPOINTE BANCSHARES INC). 4 insiders bought $1,819,349 at about $15.39: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800 and 1 more.
-- Sent for review: NPB (3x), LRN (3x), ACN (3x).
-- Decisions: 0 buy, 9 wait, 0 skip.
+- Sent for review: NPB (4x), LRN (4x), ACN (4x).
+- Decisions: 0 buy, 12 wait, 0 skip.
 - Passed on NPB (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on LRN (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
