@@ -574,7 +574,11 @@ def run_live(data_dir: Path, now: datetime | None = None, broker=None, session=N
            "level": level(score), "lights": {k: {"title": LIGHTS[k][0], "on": bool(last[k]), "why": LIGHTS[k][1],
                                                  "reading": read[k]} for k in LIGHTS},
            "fear_index": float(macro["vix"].dropna().iloc[-1]) if macro["vix"].notna().any() else None}
-    latest_p.write_text(json.dumps(out, indent=2))
+    try:
+        out["headlines"] = headline_watch(broker, d, close.index, now)
+    except Exception as e:   # news is extra: the lights still count without it
+        log.warning("headline watch failed: %s", e)
+        out["headlines"] = None
     hist = d / "history.csv"
     row = f"{out['close_day']},{score},{out['level']}," + "".join("1" if last[k] else "0" for k in LIGHTS) + "\n"
     lines = hist.read_text().splitlines(keepends=True) if hist.exists() else ["day,score,level,lights(" + "/".join(LIGHTS) + ")\n"]
@@ -590,11 +594,47 @@ def run_live(data_dir: Path, now: datetime | None = None, broker=None, session=N
     return out
 
 
+def headline_watch(broker, d: Path, days: pd.DatetimeIndex, now: datetime) -> dict:
+    """The scary-headline count (not part of the score): in the 10-year test, a 5-day count at 2x its usual pace
+    was followed by a 5%+ Nasdaq drop within a month 43% of the time (24% on an ordinary day), as often as DANGER,
+    but selling on it failed the lab. Daily counts are kept in headlines.csv so each check only downloads news
+    since the last day it saw."""
+    p = d / "headlines.csv"
+    have = {}
+    if p.exists():
+        for ln in p.read_text().splitlines()[1:]:
+            day, n = ln.split(",")
+            have[day] = int(n)
+    since = (datetime.fromisoformat(max(have)).replace(tzinfo=timezone.utc) if have
+             else now - timedelta(days=200))
+    news = broker.get_news_range(["SPY", "QQQ"], since, now)
+    fresh: dict[str, int] = {}
+    for n in news:
+        day = pd.Timestamp(n["created_at"]).tz_convert("UTC").strftime("%Y-%m-%d")
+        fresh.setdefault(day, 0)
+        if any(w in (n.get("headline") or "").lower() for w in SCARY):
+            fresh[day] += 1
+    have.update(fresh)
+    keep = sorted(have)[-260:]
+    p.write_text("day,scary_headlines\n" + "".join(f"{k},{have[k]}\n" for k in keep))
+    items = [{"headline": "crash", "created_at": f"{k}T12:00:00Z"} for k in keep for _ in range(have[k])]
+    counts = scary_counts(items, days)
+    five = counts.rolling(5).sum()
+    usual = five.shift(5).rolling(120, min_periods=60).mean()
+    on = bool(news_stress(counts, ROUND2["news_stress"]["ratio"]).iloc[-1])
+    return {"on": on, "last_5_days": int(five.iloc[-1]) if five.notna().iloc[-1] else None,
+            "usual_5_days": round(float(usual.iloc[-1]), 1) if usual.notna().iloc[-1] else None}
+
+
 def alert_text(out: dict, was: str) -> str:
     on = [v for v in out["lights"].values() if v["on"]]
     o = [f"The early-warning radar went from **{was}** to **{out['level']}** at the {out['close_day']} close: "
          f"{out['score']} of {len(LIGHTS)} warning lights are on.", "", "Lights on:", ""]
     o += [f"- 🔴 **{v['title']}**: {v['why']} Now: {v['reading']}." for v in on]
+    h = out.get("headlines")
+    if h and h.get("last_5_days") is not None:
+        o += ["", f"Scary market headlines (crash, plunge, selloff...): {h['last_5_days']} in the last 5 days vs about "
+                  f"{h['usual_5_days']} usually{' (2x or more: another warning sign)' if h['on'] else ''}."]
     o += ["", "Lights off: " + ", ".join(v["title"] for v in out["lights"].values() if not v["on"]) + ".", "",
           "What this means: in the 10-year test (Oct 2016 to Oct 2026), after a DANGER day the Nasdaq 100 fell 5% or more "
           "within the next month 43% of the time, against 24% on an ordinary day. So the odds of a drop are clearly "

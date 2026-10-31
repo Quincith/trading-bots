@@ -5,9 +5,6 @@ name: Early warning test
 # nothing is saved and no settings change. The report shows on the run page.
 on:
   workflow_dispatch:
-  push:
-    branches: [claude/project-thread-ocsy84]
-    paths: [tradebots/warning.py, .github/workflows/warning-test.yml]
 
 jobs:
   test:

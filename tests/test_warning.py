@@ -152,3 +152,21 @@ def test_radar_blocks_uses_the_close_before_the_day():
     assert w.radar_blocks(sc, idx[2], 4)                           # Wednesday after a DANGER Tuesday close
     assert w.radar_blocks(sc, pd.Timestamp("2026-10-28"), 4)       # naive dates (Copycat's days) work too
     assert not w.radar_blocks(sc, idx[2], 0) and not w.radar_blocks(None, idx[2], 4)
+
+
+def test_headline_watch_counts_only_new_news(tmp_path):
+    idx = pd.date_range(end="2026-10-30", periods=200, freq="B", tz="UTC")
+
+    class News:
+        calls = []
+
+        def get_news_range(self, syms, start, end):
+            self.calls.append(start)
+            return [{"headline": "Stocks plunge" if i % 2 else "Stocks rise", "created_at": f"{t:%Y-%m-%d}T15:00:00Z"}
+                    for t in idx[-130:] for i in range(2)] + \
+                   [{"headline": "Panic selloff", "created_at": f"{t:%Y-%m-%d}T16:00:00Z"} for t in idx[-5:] for _ in range(3)]
+    b = News()
+    h = w.headline_watch(b, tmp_path, idx, datetime(2026, 10, 31, tzinfo=timezone.utc))
+    assert h["on"] and h["last_5_days"] == 20 and h["usual_5_days"] == 5.0
+    w.headline_watch(b, tmp_path, idx, datetime(2026, 10, 31, 3, tzinfo=timezone.utc))
+    assert b.calls[-1] == datetime(2026, 10, 30, tzinfo=timezone.utc)      # only re-reads from the last day it has
