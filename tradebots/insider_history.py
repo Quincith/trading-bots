@@ -282,7 +282,9 @@ class CopycatEngine:
             # 3. Entries at the open, same gate, ranking, chase limit and Risk sizing as the live bot.
             equity = value(day, "open")
             gate = risk.account_gate(equity, prev_close_equity, self.cash, False, None, rk)
-            if gate.allowed and len(pos) < rk["max_open_positions"]:
+            from .warning import radar_blocks
+            calm = not radar_blocks(getattr(self, "radar_scores", None), day, rk.get("radar_block_level", 0))
+            if gate.allowed and calm and len(pos) < rk["max_open_positions"]:
                 planned, virtual, held_bars = 0.0, [], {}
                 for t, p in pos.items():
                     virtual.append({"symbol": t, "market_value": p["qty"] * p["last"], "asset_class": "stocks"})
