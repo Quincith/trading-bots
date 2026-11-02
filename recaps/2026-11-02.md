@@ -2,48 +2,48 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $3.24 (-3.59%)
+## Aggressive: down $4.47 (-4.95%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $3.24 (-3.59%) at $87.05. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $4.47 (-4.95%) at $85.82. Paper money only.
 
 **Key takeaways**
 
-- Account value: $90.29 → $87.05 (-$3.24, -3.59%).
-- Profit / loss since start: -$12.95 on $100.00 money put in.
-- Scout scanned 0 coins, 9 times.
+- Account value: $90.29 → $85.82 (-$4.47, -4.95%).
+- Profit / loss since start: -$14.18 on $100.00 money put in.
+- Scout scanned 0 coins, 10 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $85.05 (-$12.94 unrealized).
+- Holding: TQQQ $83.82 (-$14.17 unrealized).
 
-## Medium: down $2.32 (-2.48%)
+## Medium: down $3.06 (-3.27%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $2.32 (-2.48%) at $91.25. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $3.06 (-3.27%) at $90.51. Paper money only.
 
 **Key takeaways**
 
-- Account value: $93.57 → $91.25 (-$2.32, -2.48%).
-- Profit / loss since start: -$8.75 on $100.00 money put in.
-- Scout scanned 0 coins, 9 times.
+- Account value: $93.57 → $90.51 (-$3.06, -3.27%).
+- Profit / loss since start: -$9.49 on $100.00 money put in.
+- Scout scanned 0 coins, 10 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $89.25 (-$8.74 unrealized).
+- Holding: QLD $88.51 (-$9.48 unrealized).
 
-## Copycat: down $0.66 (-0.66%)
+## Copycat: down $0.61 (-0.61%)
 
-Active day. The bots bought 1 time. The account ended down $0.66 (-0.66%) at $98.70. Paper money only.
+Active day. The bots bought 1 time. The account ended down $0.61 (-0.61%) at $98.75. Paper money only.
 
 **Key takeaways**
 
-- Account value: $99.36 → $98.70 (-$0.66, -0.66%).
-- Profit / loss since start: -$1.30 on $100.00 money put in.
-- Spotter read 1131 insider filings from the SEC and found 21 insider purchases. Watchlist at day end: 38 stocks.
+- Account value: $99.36 → $98.75 (-$0.61, -0.61%).
+- Profit / loss since start: -$1.25 on $100.00 money put in.
+- Spotter read 1231 insider filings from the SEC and found 35 insider purchases. Watchlist at day end: 39 stocks.
 - Top pick: RAPP (Rapport Therapeutics, Inc.). 1 insider bought $20,359,080 at about $21.00: Healy James (Director) $20,359,080.
 - Sent for review: TTMI (1x), RAPP (1x), OCFC (1x), TFC (1x), DINO (1x), SCQCU (1x).
 - Decisions: 1 buy, 0 wait, 5 skip.
 - Passed on RAPP (SKIP, 0% confident): Price already up 17% since the insiders bought (limit 10%). Too late to copy.
 - Passed on OCFC (SKIP, 0% confident): Risk said no: Already at 5 open positions.
 - Bought $18.04 of TTMI at 80.435. Reason: Copying TTM TECHNOLOGIES INC insiders. 2 insiders bought $1,342,810 at about $89.52: Ali Wajid (Director) $902,460; Roks Edwin (President and CEO, Director) $440,350.
-- Holding: BBT $20.46 (+$0.52 unrealized); CHCO $20.03 (+$0.04 unrealized); MSM $20.20 (+$0.21 unrealized); STC $20.80 (+$0.89 unrealized); TTMI $17.21 (-$0.82 unrealized).
+- Holding: BBT $20.46 (+$0.52 unrealized); CHCO $20.03 (+$0.04 unrealized); MSM $20.20 (+$0.21 unrealized); STC $20.80 (+$0.89 unrealized); TTMI $17.26 (-$0.77 unrealized).
 
 ## Forex: flat
 
