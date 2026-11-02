@@ -5,9 +5,6 @@ name: Basket test
 # "buy the 20% dip" history check. It only reports: nothing is saved and no settings change.
 on:
   workflow_dispatch:
-  push:
-    branches: [claude/project-thread-rqnfg9]
-    paths: [tradebots/basket.py, .github/workflows/basket.yml]
 
 jobs:
   basket:
