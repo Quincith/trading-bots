@@ -15,7 +15,8 @@ The rules, fixed before any test ran:
 Yardsticks: just holding the S&P 500 (SPY, the 500 biggest US companies). Also shown: the Nasdaq 100 (QQQ)
 and a robotics fund (BOTZ, Global X Robotics & AI), to see whether the "robot theme" itself beat the market.
 
-USA Rare Earth only started trading in March 2025, so the 10-year lab test uses the other three. The four-stock
+USA Rare Earth only started trading in March 2025 (before that, the ticker's prices are an empty "SPAC" shell
+company that sat near $10 until the merger, so they're dropped), so the 10-year lab test uses the other three. The four-stock
 basket is shown separately for the short time all four existed; that's too short for the lab to judge.
 
 The "buy the dip" check: every time one of the stocks closed 20%+ below its highest close of the past year
@@ -50,6 +51,7 @@ STYLES = {
 }
 TITLES = {"basket": "Reel basket: Moog + Timken + Novanta, equal shares, held (rebalanced yearly)",
           "basket_trend": "Reel basket, only while the S&P 500 is above its 200-day average"}
+USAR_LISTED = pd.Timestamp("2025-03-14", tz="UTC")   # first day as USA Rare Earth (the SPAC merger closed Mar 13)
 DIP = 0.20            # 20% below the past year's high counts as "the dip"
 DIP_GAP_DAYS = 63     # at least 3 months between two counted dips of the same stock
 FORWARD_DAYS = 252    # then look 12 months ahead
@@ -195,7 +197,9 @@ def fetch(start: datetime, end: datetime, key: str, secret: str, symbols: list[s
                 df["t"] = pd.to_datetime(df["t"]).dt.tz_convert("UTC").dt.normalize()
                 out[sym] = df.set_index("t")[["open", "high", "low", "close", "volume"]]
                 out[sym] = out[sym][~out[sym].index.duplicated()]
-                log.warning("  %s (as %s): %d days from %s", sym, name, len(df), out[sym].index[0].date())
+                if sym == "USAR":
+                    out[sym] = out[sym][out[sym].index >= USAR_LISTED]
+                log.warning("  %s (as %s): %d days from %s", sym, name, len(out[sym]), out[sym].index[0].date())
                 break
         else:
             log.warning("  %s: no prices", sym)
