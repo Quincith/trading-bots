@@ -1,4 +1,4 @@
-# Forex office — 2026-10-31 01:34 UTC
+# Forex office — 2026-11-02 18:08 UTC
 
 _OANDA practice account. This office counts only its own trades, starting from $100.00._
 
@@ -10,6 +10,6 @@ _OANDA practice account. This office counts only its own trades, starting from $
 | Time-weighted return (ignores when deposits happened) | -0.17% |
 
 ## Notes
-- Weekend: the forex market is closed or quiet. The next session is Monday.
+- After 16:00 London time: nothing is held overnight. Next session tomorrow.
 
 _No AI is used in the Forex wing._

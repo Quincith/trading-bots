@@ -1,49 +1,49 @@
-# Daily recap: Saturday, October 31, 2026
+# Daily recap: Monday, November 2, 2026
 
 _Times are UTC. Paper money only._
 
 ## Aggressive: flat
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $90.69. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $90.29. Paper money only.
 
 **Key takeaways**
 
-- Account value: $90.69 → $90.69 (no change).
-- Profit / loss since start: -$9.31 on $100.00 money put in.
-- Scout scanned 0 coins, 5 times.
+- Account value: $90.29 → $90.29 (no change).
+- Profit / loss since start: -$9.71 on $100.00 money put in.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $88.69 (-$9.30 unrealized).
+- Holding: TQQQ $88.28 (-$9.71 unrealized).
 
 ## Medium: flat
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $93.15. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $93.57. Paper money only.
 
 **Key takeaways**
 
-- Account value: $93.15 → $93.15 (no change).
-- Profit / loss since start: -$6.85 on $100.00 money put in.
-- Scout scanned 0 coins, 5 times.
+- Account value: $93.57 → $93.57 (no change).
+- Profit / loss since start: -$6.43 on $100.00 money put in.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $91.15 (-$6.84 unrealized).
+- Holding: QLD $91.57 (-$6.42 unrealized).
 
 ## Copycat: flat
 
-Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended flat at $98.22. Paper money only.
+Active day. The bots bought 1 time. The account ended flat at $99.36. Paper money only.
 
 **Key takeaways**
 
-- Account value: $98.22 → $98.22 (no change).
-- Profit / loss since start: -$1.78 on $100.00 money put in.
-- Spotter read 28 insider filings from the SEC and found 2 insider purchases. Watchlist at day end: 52 stocks.
-- Top pick: NPB (NORTHPOINTE BANCSHARES INC). 4 insiders bought $1,819,349 at about $15.39: Williams Charles Alan & Charles A Williams Tr Charles A Williams Trust (CHAIRMAN & CEO, Director, 10% owner) $1,537,390; Boer Carrie L (Director) $184,762; Long Joseph B (Chief Operating Officer) $49,800 and 1 more.
-- Sent for review: NPB (5x), LRN (5x), ACN (5x).
-- Decisions: 0 buy, 15 wait, 0 skip.
-- Passed on NPB (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
-- Passed on LRN (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
-- No trades.
-- Holding: BBT $19.84 (-$0.10 unrealized); CHCO $19.65 (-$0.34 unrealized); MSM $20.43 (+$0.44 unrealized); STC $20.24 (+$0.33 unrealized).
+- Account value: $99.36 → $99.36 (no change).
+- Profit / loss since start: -$0.64 on $100.00 money put in.
+- Spotter read 300 insider filings from the SEC and found 4 insider purchases. Watchlist at day end: 37 stocks.
+- Top pick: TTMI (TTM TECHNOLOGIES INC). 2 insiders bought $1,342,810 at about $89.52: Ali Wajid (Director) $902,460; Roks Edwin (President and CEO, Director) $440,350.
+- Sent for review: TTMI (1x), RAPP (1x), OCFC (1x), TFC (1x), DINO (1x), SCQCU (1x).
+- Decisions: 1 buy, 0 wait, 5 skip.
+- Passed on RAPP (SKIP, 0% confident): Price already up 17% since the insiders bought (limit 10%). Too late to copy.
+- Passed on OCFC (SKIP, 0% confident): Risk said no: Already at 5 open positions.
+- Bought $18.04 of TTMI at 80.435. Reason: Copying TTM TECHNOLOGIES INC insiders. 2 insiders bought $1,342,810 at about $89.52: Ali Wajid (Director) $902,460; Roks Edwin (President and CEO, Director) $440,350.
+- Holding: BBT $20.49 (+$0.55 unrealized); CHCO $20.10 (+$0.11 unrealized); MSM $20.35 (+$0.36 unrealized); STC $20.39 (+$0.48 unrealized).
 
 ## Forex: flat
 
@@ -57,7 +57,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - No trades.
 - Open trades: none, all cash.
 
-## Fxcopy: no runs logged on 2026-10-31.
+## Fxcopy: no runs logged on 2026-11-02.
 
 ## Words to know
 
@@ -65,6 +65,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
 - **confidence**: How sure the Decision bot is, from 0% to 100%. Each strategy only buys above its own minimum.
 - **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
+- **entry**: The price we buy at.
 - **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
 - **insider**: A company's own bosses (CEO, CFO and so on) and board members. They know the company best.
@@ -73,5 +74,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.
+- **stop-loss**: A safety exit. If the price falls to this level, the bots sell to keep the loss small.
+- **target**: The profit goal. If the price rises to this level, the bots sell and keep the gain.
 - **unrealized**: A gain or loss on a coin we still own. It only becomes real when we sell.
 - **volume**: How much of a coin is being bought and sold. A jump in volume means lots of people suddenly care.

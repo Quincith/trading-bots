@@ -25,3 +25,9 @@ time,symbol,decision,confidence,risk,size_usd,note
 2026-10-30T19:34:14+00:00,TTMI,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
 2026-10-30T19:34:14+00:00,SRRK,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash)
 2026-10-30T19:34:14+00:00,THRM,SKIP,0.00,,0.00,Price already up 16% since the insiders bought (limit 10%). Too late to copy.
+2026-11-02T18:07:33+00:00,TTMI,BUY,1.00,REDUCE,18.04,"Copying TTM TECHNOLOGIES INC insiders. 2 insiders bought $1,342,810 at about $89.52: Ali Wajid (Director) $902,460; Roks Edwin (President and CEO, Director) $440,350."
+2026-11-02T18:07:33+00:00,RAPP,SKIP,0.00,,0.00,Price already up 17% since the insiders bought (limit 10%). Too late to copy.
+2026-11-02T18:07:33+00:00,OCFC,SKIP,0.00,REJECT,0.00,Risk said no: Already at 5 open positions.
+2026-11-02T18:07:33+00:00,TFC,SKIP,0.00,REJECT,0.00,Risk said no: Already at 5 open positions.
+2026-11-02T18:07:33+00:00,DINO,SKIP,0.00,REJECT,0.00,Risk said no: Already at 5 open positions.
+2026-11-02T18:07:33+00:00,SCQCU,SKIP,0.00,,0.00,Alpaca can't buy part of a share of this stock.
