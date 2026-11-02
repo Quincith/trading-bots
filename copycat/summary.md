@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-02 20:07 UTC
+# Copycat strategy — 2026-11-02 20:37 UTC
 
 | | |
 |---|---|
-| Account value | $98.62 |
+| Account value | $98.58 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$1.38 (-1.38%) |
-| Time-weighted return (ignores when deposits happened) | -1.38% |
+| Strategy profit / loss | -$1.42 (-1.42%) |
+| Time-weighted return (ignores when deposits happened) | -1.42% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 58 new SEC filings this run. 34 stocks on the watchlist.
+Read 52 new SEC filings this run. 33 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 58 new SEC filings this run. 34 stocks on the watchlist.
 | PNFP (Pinnacle Financial Partners, Inc.) | 2.0 | 1 insider bought $991,600 at about $99.16: Ingram David B (Director) $991,600. |
 
 ## Notes
-- Spotter read 58 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 34 stocks, 17 big enough to copy.
+- Spotter read 52 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 33 stocks, 16 big enough to copy.
 
 _Copycat uses no AI._
