@@ -74,7 +74,7 @@ when it turns DANGER the bots open a GitHub issue (GitHub emails you), at most o
 after a DANGER day the Nasdaq fell 5%+ within a month 43% of the time, against 24% on an ordinary day. That's a
 real tilt in the odds, but most warnings pass without a drop, and it missed sudden shocks (it read CALM the night
 before October 30, 2026). Letting it sell TQQQ or QLD early failed every strategy lab check: it cut too many good
-months. The history and today's lights are on the bot-data branch in `warning/`.
+months. A second round (a smaller bet when markets get jumpy, a 20% safety stop, selling on a burst of scary headlines) and skipping Copycat's and Forex's new trades on warning days all failed too. The scary-headline count is shown next to the lights (not in the score): it warned as well as DANGER did, but trading on it lost. The history and today's lights are on the bot-data branch in `warning/`.
 
 ## The AI bots' two strategies (switched off on Aggressive and Medium since October 28, 2026)
 

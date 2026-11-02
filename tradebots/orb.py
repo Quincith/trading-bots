@@ -96,13 +96,19 @@ def day_trade(pair: str, sess: tuple, fx: dict, cost: float) -> dict | None:
 
 
 def simulate(cfg: dict, sess_by_pair: dict[str, dict], start: datetime, end: datetime, cash: float = 100.0,
-             cost: float = 1.0) -> bt.SimResult:
+             cost: float = 1.0, radar: pd.Series | None = None) -> bt.SimResult:
+    """`radar` (the early-warning score per US market day) skips days after a close at
+    risk.radar_block_level or above (0 = off)."""
+    from .warning import radar_blocks
     fx, rk = cfg["forex"], cfg["risk"]
     s, e = start.date(), end.date()
     days = sorted({d for ss in sess_by_pair.values() for d in ss if s <= d < e})
     equity, fees = cash, 0.0
     res = bt.SimResult(cfg["name"], [(start, cash)])
     for day in days:
+        if radar_blocks(radar, pd.Timestamp(day), rk.get("radar_block_level", 0)):
+            res.equity.append((datetime(day.year, day.month, day.day, 23, tzinfo=timezone.utc), equity))
+            continue
         cands = [t for p, ss in sess_by_pair.items() if day in ss
                  for t in [day_trade(p, ss[day], fx, cost)] if t]
         held, day_pl, day_start = [], 0.0, equity
@@ -145,7 +151,8 @@ class OrbEngine(FxEngine):
         return self._sess[key]
 
     def run(self, cfg: dict, start: datetime, end: datetime, cost: float = 1.0) -> bt.SimResult:
-        return simulate(cfg, self.sessions_for(cfg["forex"]), start, end, self.cash, cost)
+        return simulate(cfg, self.sessions_for(cfg["forex"]), start, end, self.cash, cost,
+                        getattr(self, "radar_scores", None))
 
     def trade_rows(self, res: bt.SimResult, cfg: dict) -> list[dict]:
         return [{"opened": t["opened"][:16], "pair": label(t["symbol"]), "side": "buy" if t["direction"] > 0 else "sell",

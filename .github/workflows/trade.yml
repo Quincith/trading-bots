@@ -91,7 +91,9 @@ jobs:
         if: ${{ always() && hashFiles('data/warning/alert.md') != '' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh issue create --title "Early warning: $(jq -r .level data/warning/latest.json) ($(jq -r .close_day data/warning/latest.json))" --body-file data/warning/alert.md --assignee "${{ github.repository_owner }}"
+        run: |
+          title="Early warning: $(jq -r .level data/warning/latest.json) ($(jq -r .close_day data/warning/latest.json))"
+          gh issue create --title "$title" --body-file data/warning/alert.md --assignee "${{ github.repository_owner }}"
         continue-on-error: true
       - name: Build the bot world page and daily recap
         if: always()
