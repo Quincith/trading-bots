@@ -143,6 +143,10 @@ HUNT_KNOBS = {
     "multi_trend": [Knob("hunt.lookback_days", 126, 378, 21, "Hold a market's leveraged fund if it rose over this many trading days")],
     "crypto_rotation": [Knob("hunt.lookback_days", 7, 84, 7, "Pick the coin that rose most over this many days"),
                         Knob("hunt.btc_sma_days", 70, 280, 35, "Only hold a coin while Bitcoin is above its N-day average")],
+    # basket.py: a list of stocks held in equal shares
+    "basket": [Knob("hunt.rebalance_days", 63, 504, 63, "Move the stocks back to equal shares every N trading days")],
+    "basket_trend": [Knob("hunt.rebalance_days", 63, 504, 63, "Move the stocks back to equal shares every N trading days"),
+                     Knob("hunt.sma_days", 100, 300, 25, "Hold the stocks while the S&P 500 is above its N-day average")],
 }
 # The playbook rules (playbook.py) that Aggressive and Medium can be tested with in place of Scout & co.
 PLAYBOOK_KNOBS = {

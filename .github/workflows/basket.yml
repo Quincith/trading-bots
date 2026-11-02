@@ -1,0 +1,29 @@
+name: Basket test
+
+# Tests the reel's "robot actuator" stock picks (Moog, Timken, Novanta, USA Rare Earth) as a buy-and-hold
+# basket on 10 years of Alpaca daily prices through the strategy lab's checks, against the S&P 500, plus a
+# "buy the 20% dip" history check. It only reports: nothing is saved and no settings change.
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/project-thread-rqnfg9]
+    paths: [tradebots/basket.py, .github/workflows/basket.yml]
+
+jobs:
+  basket:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ALPACA_MEDIUM_KEY_ID: ${{ secrets.ALPACA_MEDIUM_KEY_ID }}
+      ALPACA_MEDIUM_SECRET_KEY: ${{ secrets.ALPACA_MEDIUM_SECRET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Download 10 years of prices and test the basket
+        run: |
+          python -m tradebots.basket --out report.md
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
