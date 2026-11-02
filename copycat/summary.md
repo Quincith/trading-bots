@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-02 18:37 UTC
+# Copycat strategy — 2026-11-02 19:07 UTC
 
 | | |
 |---|---|
-| Account value | $98.83 |
+| Account value | $98.53 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$1.17 (-1.17%) |
-| Time-weighted return (ignores when deposits happened) | -1.17% |
+| Strategy profit / loss | -$1.47 (-1.47%) |
+| Time-weighted return (ignores when deposits happened) | -1.47% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 43 new SEC filings this run. 35 stocks on the watchlist.
+Read 75 new SEC filings this run. 35 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 43 new SEC filings this run. 35 stocks on the watchlist.
 | HBAN (HUNTINGTON BANCSHARES INC /MD/) | 2.41 | 2 insiders bought $453,554 at about $16.99: Rollins James D Iii (Director) $253,720; Torgow Gary (Director) $199,834. |
 
 ## Notes
-- Spotter read 43 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 35 stocks, 18 big enough to copy.
+- Spotter read 75 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 35 stocks, 18 big enough to copy.
 
 _Copycat uses no AI._
