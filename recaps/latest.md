@@ -2,45 +2,45 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: up $1.62 (+1.87%)
+## Aggressive: up $1.15 (+1.33%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $1.62 (+1.87%) at $88.37. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $1.15 (+1.33%) at $87.90. Paper money only.
 
 **Key takeaways**
 
-- Account value: $86.75 → $88.37 (+$1.62, +1.87%).
-- Profit / loss since start: -$11.63 on $100.00 money put in.
-- Scout scanned 0 coins, 41 times.
+- Account value: $86.75 → $87.90 (+$1.15, +1.33%).
+- Profit / loss since start: -$12.10 on $100.00 money put in.
+- Scout scanned 0 coins, 42 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $86.38 (-$11.61 unrealized).
+- Holding: TQQQ $85.90 (-$12.09 unrealized).
 
-## Medium: up $1.16 (+1.27%)
+## Medium: up $0.83 (+0.91%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $1.16 (+1.27%) at $92.26. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $0.83 (+0.91%) at $91.93. Paper money only.
 
 **Key takeaways**
 
-- Account value: $91.10 → $92.26 (+$1.16, +1.27%).
-- Profit / loss since start: -$7.74 on $100.00 money put in.
-- Scout scanned 0 coins, 41 times.
+- Account value: $91.10 → $91.93 (+$0.83, +0.91%).
+- Profit / loss since start: -$8.07 on $100.00 money put in.
+- Scout scanned 0 coins, 42 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $90.26 (-$7.73 unrealized).
+- Holding: QLD $89.93 (-$8.06 unrealized).
 
-## Copycat: up $0.89 (+0.90%)
+## Copycat: up $0.64 (+0.65%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.89 (+0.90%) at $99.72. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.64 (+0.65%) at $99.47. Paper money only.
 
 **Key takeaways**
 
-- Account value: $98.83 → $99.72 (+$0.89, +0.90%).
-- Profit / loss since start: -$0.28 on $100.00 money put in.
-- Spotter read 764 insider filings from the SEC and found 19 insider purchases. Watchlist at day end: 44 stocks.
+- Account value: $98.83 → $99.47 (+$0.64, +0.65%).
+- Profit / loss since start: -$0.53 on $100.00 money put in.
+- Spotter read 850 insider filings from the SEC and found 19 insider purchases. Watchlist at day end: 44 stocks.
 - Top pick: RAPP (Rapport Therapeutics, Inc.). 1 insider bought $20,359,080 at about $21.00: Healy James (Director) $20,359,080.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $20.27 (+$0.33 unrealized); CHCO $19.81 (-$0.18 unrealized); MSM $20.43 (+$0.44 unrealized); STC $20.65 (+$0.74 unrealized); TTMI $18.56 (+$0.53 unrealized).
+- Holding: BBT $20.23 (+$0.29 unrealized); CHCO $19.80 (-$0.19 unrealized); MSM $20.43 (+$0.44 unrealized); STC $20.56 (+$0.65 unrealized); TTMI $18.46 (+$0.43 unrealized).
 
 ## Forex: flat
 
