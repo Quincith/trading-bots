@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-02 23:37 UTC
+# Copycat strategy — 2026-11-03 00:08 UTC
 
 | | |
 |---|---|
-| Account value | $98.60 |
+| Account value | $98.83 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$1.40 (-1.40%) |
-| Time-weighted return (ignores when deposits happened) | -1.40% |
+| Strategy profit / loss | -$1.17 (-1.17%) |
+| Time-weighted return (ignores when deposits happened) | -1.17% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 9 new SEC filings this run. 42 stocks on the watchlist.
+Read 11 new SEC filings this run. 42 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 9 new SEC filings this run. 42 stocks on the watchlist.
 | DINO (HF Sinclair Corp) | 2.54 | 1 insider bought $1,108,000 at about $110.80: Myers Franklin (CEO, Director) $1,108,000. |
 
 ## Notes
-- Spotter read 9 new insider filings and found 2 purchases (2 by officers or directors). Watchlist: 42 stocks, 22 big enough to copy.
+- Spotter read 11 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 42 stocks, 22 big enough to copy.
 
 _Copycat uses no AI._
