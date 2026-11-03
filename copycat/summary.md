@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-03 03:08 UTC
+# Copycat strategy — 2026-11-03 03:38 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 2 new SEC filings this run. 42 stocks on the watchlist.
+Read 0 new SEC filings this run. 42 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 2 new SEC filings this run. 42 stocks on the watchlist.
 | DINO (HF Sinclair Corp) | 2.54 | 1 insider bought $1,108,000 at about $110.80: Myers Franklin (CEO, Director) $1,108,000. |
 
 ## Notes
-- Spotter read 2 new insider filings and found 4 purchases (0 by officers or directors). Watchlist: 42 stocks, 22 big enough to copy.
+- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 42 stocks, 22 big enough to copy.
 
 _Copycat uses no AI._
