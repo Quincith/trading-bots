@@ -1,6 +1,6 @@
 {
-  "checked": "2026-11-03T04:08:15+00:00",
-  "close_day": "2026-10-30",
+  "checked": "2026-11-03T07:08:38+00:00",
+  "close_day": "2026-11-02",
   "score": 2,
   "level": "CAUTION",
   "lights": {
@@ -20,38 +20,38 @@
       "title": "Lenders nervous",
       "on": true,
       "why": "Junk bonds fell 2%+ against safe bonds in 20 trading days.",
-      "reading": "junk vs safe bonds -2.3% in 20 days"
+      "reading": "junk vs safe bonds -2.8% in 20 days"
     },
     "oil": {
       "title": "Oil shock",
       "on": false,
       "why": "Oil rose 20%+ in 20 trading days.",
-      "reading": "oil $103, +5.6% in 20 days"
+      "reading": "oil $103, +7.5% in 20 days"
     },
     "rates": {
       "title": "Rate-hike bets",
       "on": false,
       "why": "The 2-year Treasury yield rose 0.5+ points in 3 months.",
-      "reading": "2-year yield 4.56%, +0.31 pts in 3 months"
+      "reading": "2-year yield 4.56%, +0.36 pts in 3 months"
     },
     "breadth": {
       "title": "Few stocks holding up",
       "on": false,
       "why": "The average stock fell 2%+ against the big-company index in 20 trading days.",
-      "reading": "average stock vs big caps +6.0% in 20 days"
+      "reading": "average stock vs big caps +7.3% in 20 days"
     },
     "crack": {
       "title": "Nasdaq trend cracking",
       "on": true,
       "why": "The Nasdaq 100 (QQQ) closed below its 50-day average.",
-      "reading": "QQQ -4.7% vs its 50-day average"
+      "reading": "QQQ -5.9% vs its 50-day average"
     }
   },
   "fear_index": 19.42,
   "headlines": {
     "on": false,
-    "last_5_days": 15,
-    "usual_5_days": 13.6
+    "last_5_days": 11,
+    "usual_5_days": 13.7
   },
   "last_alert": null
 }
