@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-03 21:40 UTC
+# Copycat strategy — 2026-11-03 22:00 UTC
 
 | | |
 |---|---|
-| Account value | $98.78 |
+| Account value | $99.11 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$1.22 (-1.22%) |
-| Time-weighted return (ignores when deposits happened) | -1.22% |
+| Strategy profit / loss | -$0.89 (-0.89%) |
+| Time-weighted return (ignores when deposits happened) | -0.89% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 300 new SEC filings this run. 42 stocks on the watchlist.
+Read 208 new SEC filings this run. 44 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 300 new SEC filings this run. 42 stocks on the watchlist.
 | TRTX (TPG RE Finance Trust, Inc.) | 2.98 | 3 insiders bought $298,699 at about $6.51: Silverstein Wendy (Director) $253,239; Smith Michael Bradley (Director) $32,600; Gillmore Michael (Director) $12,860. |
 
 ## Notes
-- Spotter read 300 new insider filings and found 16 purchases (8 by officers or directors). Watchlist: 42 stocks, 24 big enough to copy.
+- Spotter read 208 new insider filings and found 2 purchases (2 by officers or directors). Watchlist: 44 stocks, 26 big enough to copy.
 
 _Copycat uses no AI._
