@@ -10,7 +10,7 @@
   "day": "2026-11-03",
   "day_start_equity": 98.83,
   "halted_reason": null,
-  "last_scan": "2026-11-03T12:38:54+00:00",
+  "last_scan": "2026-11-03T13:08:59+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -59,7 +59,6 @@
     }
   },
   "seen_filings": [
-    "0000894189-26-029926",
     "0001918704-26-033156",
     "0001193125-26-437360",
     "0001683168-26-008149",
@@ -4058,7 +4057,8 @@
     "0000950103-26-016663",
     "0001213900-26-115092",
     "0000950103-26-016662",
-    "0001213900-26-115086"
+    "0001213900-26-115086",
+    "0001046179-26-000732"
   ],
   "watchlist": {
     "AEYE": {
@@ -4153,15 +4153,6 @@
     "BBT": {
       "buys": [
         {
-          "accession": "0001628280-26-068056",
-          "date": "2026-10-28",
-          "filed": "2026-10-29T09:08:38-04:00",
-          "price": 30.21,
-          "role": "Director",
-          "usd": 96672.0,
-          "who": "Callahan Mary Anne"
-        },
-        {
           "accession": "0001628280-26-068526",
           "date": "2026-10-30",
           "filed": "2026-10-30T14:02:19-04:00",
@@ -4181,7 +4172,7 @@
         }
       ],
       "company": "Beacon Financial Corp",
-      "score": 2.56,
+      "score": 0.98,
       "ticker": "BBT"
     },
     "BBTX": {
@@ -4429,24 +4420,6 @@
     "NBIS": {
       "buys": [
         {
-          "accession": "0001513845-26-000143",
-          "date": "2026-10-27",
-          "filed": "2026-10-29T09:06:59-04:00",
-          "price": 159.04,
-          "role": "Director",
-          "usd": 32603.2,
-          "who": "Grimme Arne"
-        },
-        {
-          "accession": "0001513845-26-000143",
-          "date": "2026-10-28",
-          "filed": "2026-10-29T09:06:59-04:00",
-          "price": 169.84,
-          "role": "Director",
-          "usd": 25136.32,
-          "who": "Grimme Arne"
-        },
-        {
           "accession": "0001513845-26-000145",
           "date": "2026-10-29",
           "filed": "2026-10-30T18:06:10-04:00",
@@ -4457,7 +4430,7 @@
         }
       ],
       "company": "Nebius Group N.V.",
-      "score": 0.92,
+      "score": 0.4,
       "ticker": "NBIS"
     },
     "NONE": {
@@ -4760,6 +4733,22 @@
       "company": "TRUIST FINANCIAL CORP",
       "score": 2.58,
       "ticker": "TFC"
+    },
+    "TSM": {
+      "buys": [
+        {
+          "accession": "0001046179-26-000732",
+          "date": "2026-11-01",
+          "filed": "2026-11-03T08:07:46-05:00",
+          "price": 71.49,
+          "role": "VP",
+          "usd": 71490.0,
+          "who": "Yuan Lipen"
+        }
+      ],
+      "company": "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD",
+      "score": 0.85,
+      "ticker": "TSM"
     },
     "UPBD": {
       "buys": [
