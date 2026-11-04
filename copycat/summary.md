@@ -1,15 +1,15 @@
-# Copycat strategy — 2026-11-04 20:41 UTC
+# Copycat strategy — 2026-11-04 21:11 UTC
 
 | | |
 |---|---|
-| Account value | $97.57 |
+| Account value | $97.41 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$2.43 (-2.43%) |
-| Time-weighted return (ignores when deposits happened) | -2.43% |
+| Strategy profit / loss | -$2.59 (-2.59%) |
+| Time-weighted return (ignores when deposits happened) | -2.59% |
 
 ## Insider buys on the watchlist
 
-Read 69 new SEC filings this run. 45 stocks on the watchlist.
+Read 86 new SEC filings this run. 47 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -23,14 +23,12 @@ Read 69 new SEC filings this run. 45 stocks on the watchlist.
 
 | Stock | Price check | Risk | Decision |
 |---|---|---|---|
-| MGM | Now $32.74, +10.5% vs. what the insiders paid. | -  | **SKIP** — Price already up 10% since the insiders bought (limit 10%). Too late to copy. |
-| INTC | Now $57.73, -10.8% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| RAPP | Now $25.99, +23.8% vs. what the insiders paid. | -  | **SKIP** — Price already up 24% since the insiders bought (limit 10%). Too late to copy. |
-| STRZ | Now $25.87, +16.5% vs. what the insiders paid. | -  | **SKIP** — Price already up 17% since the insiders bought (limit 10%). Too late to copy. |
-| LRN | Now $79.44, +3.1% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| TRTX | Now $7.26, +11.6% vs. what the insiders paid. | -  | **SKIP** — Price already up 12% since the insiders bought (limit 10%). Too late to copy. |
+| MGM | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
+| INTC | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
+| RAPP | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
 
 ## Notes
-- Spotter read 69 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 45 stocks, 28 big enough to copy.
+- Spotter read 86 new insider filings and found 3 purchases (3 by officers or directors). Watchlist: 47 stocks, 30 big enough to copy.
+- Stock market closed; picks wait for the next open.
 
 _Copycat uses no AI._

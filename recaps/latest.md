@@ -2,48 +2,48 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: up $2.14 (+2.43%)
+## Aggressive: up $2.28 (+2.59%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $2.14 (+2.43%) at $90.12. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $2.28 (+2.59%) at $90.26. Paper money only.
 
 **Key takeaways**
 
-- Account value: $87.98 → $90.12 (+$2.14, +2.43%).
-- Profit / loss since start: -$9.88 on $100.00 money put in.
-- Scout scanned 0 coins, 44 times.
+- Account value: $87.98 → $90.26 (+$2.28, +2.59%).
+- Profit / loss since start: -$9.74 on $100.00 money put in.
+- Scout scanned 0 coins, 45 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $88.13 (-$9.86 unrealized).
+- Holding: TQQQ $88.26 (-$9.73 unrealized).
 
-## Medium: up $1.52 (+1.65%)
+## Medium: up $1.61 (+1.75%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $1.52 (+1.65%) at $93.48. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $1.61 (+1.75%) at $93.57. Paper money only.
 
 **Key takeaways**
 
-- Account value: $91.96 → $93.48 (+$1.52, +1.65%).
-- Profit / loss since start: -$6.52 on $100.00 money put in.
-- Scout scanned 0 coins, 44 times.
+- Account value: $91.96 → $93.57 (+$1.61, +1.75%).
+- Profit / loss since start: -$6.43 on $100.00 money put in.
+- Scout scanned 0 coins, 45 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $91.48 (-$6.51 unrealized).
+- Holding: QLD $91.57 (-$6.42 unrealized).
 
-## Copycat: down $1.21 (-1.22%)
+## Copycat: down $1.37 (-1.39%)
 
-Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended down $1.21 (-1.22%) at $97.57. Paper money only.
+Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended down $1.37 (-1.39%) at $97.41. Paper money only.
 
 **Key takeaways**
 
-- Account value: $98.78 → $97.57 (-$1.21, -1.22%).
-- Profit / loss since start: -$2.43 on $100.00 money put in.
-- Spotter read 634 insider filings from the SEC and found 34 insider purchases. Watchlist at day end: 45 stocks.
+- Account value: $98.78 → $97.41 (-$1.37, -1.39%).
+- Profit / loss since start: -$2.59 on $100.00 money put in.
+- Spotter read 720 insider filings from the SEC and found 37 insider purchases. Watchlist at day end: 47 stocks.
 - Top pick: MGM (MGM Resorts International). 1 insider bought $51,740,827 at about $29.64: Meister Keith A. (Director) $51,740,827.
-- Sent for review: MGM (11x), RAPP (11x), STRZ (11x), LRN (11x), INTC (8x), TRTX (7x), OCFC (6x), BBTX (1x).
-- Decisions: 0 buy, 0 wait, 66 skip.
+- Sent for review: MGM (12x), RAPP (12x), STRZ (11x), LRN (11x), INTC (9x), TRTX (7x), OCFC (6x), BBTX (1x).
+- Decisions: 0 buy, 3 wait, 66 skip.
 - Passed on BBTX (SKIP, 0% confident): Alpaca can't buy part of a share of this stock.
-- Passed on MGM (SKIP, 0% confident): Price already up 10% since the insiders bought (limit 10%). Too late to copy.
+- Passed on MGM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Sold TTMI for $16.17: the price fell to the safety exit, so the bots sold to keep the loss small. Loss: -$1.87.
-- Holding: BBT $20.39 (+$0.45 unrealized); CHCO $19.98 (-$0.01 unrealized); MSM $19.59 (-$0.40 unrealized); STC $21.48 (+$1.57 unrealized).
+- Holding: BBT $20.34 (+$0.40 unrealized); CHCO $19.90 (-$0.09 unrealized); MSM $19.61 (-$0.38 unrealized); STC $21.42 (+$1.51 unrealized).
 
 ## Forex: flat
 
