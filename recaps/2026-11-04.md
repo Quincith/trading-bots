@@ -2,31 +2,31 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $0.05 (-0.06%)
+## Aggressive: up $0.32 (+0.36%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.05 (-0.06%) at $87.93. Paper money only.
-
-**Key takeaways**
-
-- Account value: $87.98 → $87.93 (-$0.05, -0.06%).
-- Profit / loss since start: -$12.07 on $100.00 money put in.
-- Scout scanned 0 coins, 18 times.
-- Nothing passed Scout's filter, so no trade was considered.
-- No trades.
-- Holding: TQQQ $85.93 (-$12.06 unrealized).
-
-## Medium: down $0.04 (-0.04%)
-
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.04 (-0.04%) at $91.92. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $0.32 (+0.36%) at $88.30. Paper money only.
 
 **Key takeaways**
 
-- Account value: $91.96 → $91.92 (-$0.04, -0.04%).
-- Profit / loss since start: -$8.08 on $100.00 money put in.
-- Scout scanned 0 coins, 18 times.
+- Account value: $87.98 → $88.30 (+$0.32, +0.36%).
+- Profit / loss since start: -$11.70 on $100.00 money put in.
+- Scout scanned 0 coins, 19 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $89.92 (-$8.07 unrealized).
+- Holding: TQQQ $86.30 (-$11.69 unrealized).
+
+## Medium: up $0.22 (+0.24%)
+
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $0.22 (+0.24%) at $92.18. Paper money only.
+
+**Key takeaways**
+
+- Account value: $91.96 → $92.18 (+$0.22, +0.24%).
+- Profit / loss since start: -$7.82 on $100.00 money put in.
+- Scout scanned 0 coins, 19 times.
+- Nothing passed Scout's filter, so no trade was considered.
+- No trades.
+- Holding: QLD $90.18 (-$7.81 unrealized).
 
 ## Copycat: up $0.09 (+0.09%)
 
@@ -50,7 +50,8 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 
 - Account value: $99.83 → $99.83 (no change).
 - Profit / loss since start: -$0.17 on $100.00 money put in.
-- No opening range marked today (a weekend, a holiday, or the check came too late).
+- Marked the opening range on 7 currency pairs at the London open.
+- Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (skip), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
 - No trades.
 - Open trades: none, all cash.
 
