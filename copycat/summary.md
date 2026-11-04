@@ -1,15 +1,15 @@
-# Copycat strategy — 2026-11-04 19:41 UTC
+# Copycat strategy — 2026-11-04 20:11 UTC
 
 | | |
 |---|---|
-| Account value | $96.99 |
+| Account value | $97.17 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$3.01 (-3.01%) |
-| Time-weighted return (ignores when deposits happened) | -3.01% |
+| Strategy profit / loss | -$2.83 (-2.83%) |
+| Time-weighted return (ignores when deposits happened) | -2.83% |
 
 ## Insider buys on the watchlist
 
-Read 30 new SEC filings this run. 45 stocks on the watchlist.
+Read 46 new SEC filings this run. 45 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -23,14 +23,14 @@ Read 30 new SEC filings this run. 45 stocks on the watchlist.
 
 | Stock | Price check | Risk | Decision |
 |---|---|---|---|
-| MGM | Now $32.66, +10.2% vs. what the insiders paid. | -  | **SKIP** — Price already up 10% since the insiders bought (limit 10%). Too late to copy. |
-| INTC | Now $58.06, -10.3% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| RAPP | Now $25.88, +23.2% vs. what the insiders paid. | -  | **SKIP** — Price already up 23% since the insiders bought (limit 10%). Too late to copy. |
-| STRZ | Now $26.02, +17.2% vs. what the insiders paid. | -  | **SKIP** — Price already up 17% since the insiders bought (limit 10%). Too late to copy. |
-| LRN | Now $79.53, +3.2% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| TRTX | Now $7.20, +10.6% vs. what the insiders paid. | -  | **SKIP** — Price already up 11% since the insiders bought (limit 10%). Too late to copy. |
+| MGM | Now $32.73, +10.4% vs. what the insiders paid. | -  | **SKIP** — Price already up 10% since the insiders bought (limit 10%). Too late to copy. |
+| INTC | Now $57.83, -10.7% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| RAPP | Now $25.98, +23.7% vs. what the insiders paid. | -  | **SKIP** — Price already up 24% since the insiders bought (limit 10%). Too late to copy. |
+| STRZ | Now $25.90, +16.7% vs. what the insiders paid. | -  | **SKIP** — Price already up 17% since the insiders bought (limit 10%). Too late to copy. |
+| LRN | Now $79.42, +3.1% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| TRTX | Now $7.24, +11.2% vs. what the insiders paid. | -  | **SKIP** — Price already up 11% since the insiders bought (limit 10%). Too late to copy. |
 
 ## Notes
-- Spotter read 30 new insider filings and found 6 purchases (5 by officers or directors). Watchlist: 45 stocks, 28 big enough to copy.
+- Spotter read 46 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 45 stocks, 28 big enough to copy.
 
 _Copycat uses no AI._

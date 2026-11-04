@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-04T17:11:29+00:00",
+  "checked": "2026-11-04T20:11:51+00:00",
   "close_day": "2026-11-03",
   "score": 2,
   "level": "CAUTION",
@@ -26,7 +26,7 @@
       "title": "Oil shock",
       "on": false,
       "why": "Oil rose 20%+ in 20 trading days.",
-      "reading": "oil $103, +7.4% in 20 days"
+      "reading": "oil $100, +3.5% in 20 days"
     },
     "rates": {
       "title": "Rate-hike bets",
