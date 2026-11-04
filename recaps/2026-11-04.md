@@ -2,45 +2,45 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $5.46 (-6.21%)
+## Aggressive: down $2.64 (-3.00%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $5.46 (-6.21%) at $82.52. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $2.64 (-3.00%) at $85.34. Paper money only.
 
 **Key takeaways**
 
-- Account value: $87.98 → $82.52 (-$5.46, -6.21%).
-- Profit / loss since start: -$17.48 on $100.00 money put in.
-- Scout scanned 0 coins, 11 times.
+- Account value: $87.98 → $85.34 (-$2.64, -3.00%).
+- Profit / loss since start: -$14.66 on $100.00 money put in.
+- Scout scanned 0 coins, 12 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $80.52 (-$17.47 unrealized).
+- Holding: TQQQ $83.34 (-$14.65 unrealized).
 
-## Medium: down $3.89 (-4.23%)
+## Medium: down $1.83 (-1.99%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $3.89 (-4.23%) at $88.07. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.83 (-1.99%) at $90.13. Paper money only.
 
 **Key takeaways**
 
-- Account value: $91.96 → $88.07 (-$3.89, -4.23%).
-- Profit / loss since start: -$11.93 on $100.00 money put in.
-- Scout scanned 0 coins, 11 times.
+- Account value: $91.96 → $90.13 (-$1.83, -1.99%).
+- Profit / loss since start: -$9.87 on $100.00 money put in.
+- Scout scanned 0 coins, 12 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $86.07 (-$11.92 unrealized).
+- Holding: QLD $88.13 (-$9.86 unrealized).
 
-## Copycat: down $0.79 (-0.80%)
+## Copycat: down $0.68 (-0.69%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.79 (-0.80%) at $97.99. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.68 (-0.69%) at $98.10. Paper money only.
 
 **Key takeaways**
 
-- Account value: $98.78 → $97.99 (-$0.79, -0.80%).
-- Profit / loss since start: -$2.01 on $100.00 money put in.
+- Account value: $98.78 → $98.10 (-$0.68, -0.69%).
+- Profit / loss since start: -$1.90 on $100.00 money put in.
 - Spotter read 99 insider filings from the SEC and found 17 insider purchases. Watchlist at day end: 48 stocks.
 - Top pick: BBTX (Bambusa Therapeutics, Inc.). 2 insiders bought $52,639,957 at about $15.81: Ra Capital Management, L.P. & Ra Capital Healthcare Fund Lp & Ra Capital Nexus Fund Iii, L.P. & Kolchinsky Peter & Shah Rajeev M. (Director, 10% owner) $46,639,957; Jeggle Helmut Wolfgang (Director, 10% owner) $6,000,000.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.99 (+$0.05 unrealized); CHCO $19.68 (-$0.31 unrealized); MSM $20.31 (+$0.32 unrealized); STC $20.36 (+$0.45 unrealized); TTMI $17.65 (-$0.38 unrealized).
+- Holding: BBT $19.99 (+$0.05 unrealized); CHCO $19.68 (-$0.31 unrealized); MSM $20.31 (+$0.32 unrealized); STC $20.36 (+$0.45 unrealized); TTMI $17.76 (-$0.27 unrealized).
 
 ## Forex: flat
 
