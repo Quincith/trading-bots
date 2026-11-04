@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-04 22:41 UTC
+# Copycat strategy — 2026-11-04 23:11 UTC
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## Insider buys on the watchlist
 
-Read 75 new SEC filings this run. 54 stocks on the watchlist.
+Read 55 new SEC filings this run. 55 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -28,7 +28,7 @@ Read 75 new SEC filings this run. 54 stocks on the watchlist.
 | MGM | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
 
 ## Notes
-- Spotter read 75 new insider filings and found 10 purchases (6 by officers or directors). Watchlist: 54 stocks, 35 big enough to copy.
+- Spotter read 55 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 55 stocks, 36 big enough to copy.
 - Stock market closed; picks wait for the next open.
 
 _Copycat uses no AI._
