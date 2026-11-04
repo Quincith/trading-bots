@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-04 01:40 UTC
+# Copycat strategy — 2026-11-04 02:10 UTC
 
 | | |
 |---|---|
-| Account value | $98.59 |
+| Account value | $98.11 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$1.41 (-1.41%) |
-| Time-weighted return (ignores when deposits happened) | -1.41% |
+| Strategy profit / loss | -$1.89 (-1.89%) |
+| Time-weighted return (ignores when deposits happened) | -1.89% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 12 new SEC filings this run. 48 stocks on the watchlist.
+Read 7 new SEC filings this run. 48 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 12 new SEC filings this run. 48 stocks on the watchlist.
 | STRZ (STARZ ENTERTAINMENT CORP /CN/) | 3.25 | 3 insiders bought $176,706 at about $22.20: Hirsch Jeffrey (President and CEO, Director) $110,650; Macdonald Scott D (CFO and Treasurer) $55,550; Kapenstein James M. (SEE REMARKS) $10,506. |
 
 ## Notes
-- Spotter read 12 new insider filings and found 7 purchases (7 by officers or directors). Watchlist: 48 stocks, 29 big enough to copy.
+- Spotter read 7 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 48 stocks, 29 big enough to copy.
 
 _Copycat uses no AI._
