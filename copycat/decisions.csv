@@ -61,3 +61,9 @@ time,symbol,decision,confidence,risk,size_usd,note
 2026-11-04T17:59:18+00:00,RAPP,SKIP,0.00,,0.00,Price already up 23% since the insiders bought (limit 10%). Too late to copy.
 2026-11-04T17:59:18+00:00,STRZ,SKIP,0.00,,0.00,Price already up 18% since the insiders bought (limit 10%). Too late to copy.
 2026-11-04T17:59:18+00:00,LRN,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
+2026-11-04T18:11:29+00:00,MGM,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash)
+2026-11-04T18:11:29+00:00,INTC,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
+2026-11-04T18:11:29+00:00,OCFC,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
+2026-11-04T18:11:29+00:00,RAPP,SKIP,0.00,,0.00,Price already up 24% since the insiders bought (limit 10%). Too late to copy.
+2026-11-04T18:11:29+00:00,STRZ,SKIP,0.00,,0.00,Price already up 19% since the insiders bought (limit 10%). Too late to copy.
+2026-11-04T18:11:29+00:00,LRN,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)

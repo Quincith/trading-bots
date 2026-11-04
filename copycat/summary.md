@@ -1,15 +1,15 @@
-# Copycat strategy — 2026-11-04 17:59 UTC
+# Copycat strategy — 2026-11-04 18:11 UTC
 
 | | |
 |---|---|
-| Account value | $97.44 |
+| Account value | $97.29 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$2.56 (-2.56%) |
-| Time-weighted return (ignores when deposits happened) | -2.56% |
+| Strategy profit / loss | -$2.71 (-2.71%) |
+| Time-weighted return (ignores when deposits happened) | -2.71% |
 
 ## Insider buys on the watchlist
 
-Read 19 new SEC filings this run. 47 stocks on the watchlist.
+Read 16 new SEC filings this run. 47 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -23,14 +23,14 @@ Read 19 new SEC filings this run. 47 stocks on the watchlist.
 
 | Stock | Price check | Risk | Decision |
 |---|---|---|---|
-| MGM | Now $32.33, +9.1% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| INTC | Now $59.10, -8.7% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| OCFC | Now $18.84, +5.4% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| RAPP | Now $25.90, +23.3% vs. what the insiders paid. | -  | **SKIP** — Price already up 23% since the insiders bought (limit 10%). Too late to copy. |
-| STRZ | Now $26.23, +18.1% vs. what the insiders paid. | -  | **SKIP** — Price already up 18% since the insiders bought (limit 10%). Too late to copy. |
-| LRN | Now $79.09, +2.6% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| MGM | Now $32.30, +9.0% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| INTC | Now $58.39, -9.8% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| OCFC | Now $18.85, +5.5% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| RAPP | Now $26.07, +24.1% vs. what the insiders paid. | -  | **SKIP** — Price already up 24% since the insiders bought (limit 10%). Too late to copy. |
+| STRZ | Now $26.43, +19.1% vs. what the insiders paid. | -  | **SKIP** — Price already up 19% since the insiders bought (limit 10%). Too late to copy. |
+| LRN | Now $79.21, +2.8% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
 
 ## Notes
-- Spotter read 19 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 47 stocks, 29 big enough to copy.
+- Spotter read 16 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 47 stocks, 29 big enough to copy.
 
 _Copycat uses no AI._
