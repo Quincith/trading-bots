@@ -1,15 +1,15 @@
-# Copycat strategy — 2026-11-04 16:41 UTC
+# Copycat strategy — 2026-11-04 17:11 UTC
 
 | | |
 |---|---|
-| Account value | $97.38 |
+| Account value | $97.37 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$2.62 (-2.62%) |
-| Time-weighted return (ignores when deposits happened) | -2.62% |
+| Strategy profit / loss | -$2.63 (-2.63%) |
+| Time-weighted return (ignores when deposits happened) | -2.63% |
 
 ## Insider buys on the watchlist
 
-Read 55 new SEC filings this run. 48 stocks on the watchlist.
+Read 25 new SEC filings this run. 47 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -23,14 +23,14 @@ Read 55 new SEC filings this run. 48 stocks on the watchlist.
 
 | Stock | Price check | Risk | Decision |
 |---|---|---|---|
-| MGM | Now $32.59, +9.9% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| OCFC | Now $18.90, +5.7% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| RAPP | Now $26.04, +24.0% vs. what the insiders paid. | -  | **SKIP** — Price already up 24% since the insiders bought (limit 10%). Too late to copy. |
-| STRZ | Now $26.29, +18.4% vs. what the insiders paid. | -  | **SKIP** — Price already up 18% since the insiders bought (limit 10%). Too late to copy. |
-| LRN | Now $79.04, +2.6% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| MGM | Now $32.58, +9.9% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| OCFC | Now $18.84, +5.4% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| RAPP | Now $25.86, +23.1% vs. what the insiders paid. | -  | **SKIP** — Price already up 23% since the insiders bought (limit 10%). Too late to copy. |
+| STRZ | Now $26.48, +19.3% vs. what the insiders paid. | -  | **SKIP** — Price already up 19% since the insiders bought (limit 10%). Too late to copy. |
+| LRN | Now $78.72, +2.2% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
 | TRTX | Now $7.20, +10.6% vs. what the insiders paid. | -  | **SKIP** — Price already up 11% since the insiders bought (limit 10%). Too late to copy. |
 
 ## Notes
-- Spotter read 55 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 48 stocks, 29 big enough to copy.
+- Spotter read 25 new insider filings and found 4 purchases (1 by officers or directors). Watchlist: 47 stocks, 28 big enough to copy.
 
 _Copycat uses no AI._
