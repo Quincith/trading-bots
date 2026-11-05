@@ -1,15 +1,15 @@
-# Copycat strategy — 2026-11-05 12:42 UTC
+# Copycat strategy — 2026-11-05 13:12 UTC
 
 | | |
 |---|---|
-| Account value | $97.34 |
+| Account value | $97.51 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$2.66 (-2.66%) |
-| Time-weighted return (ignores when deposits happened) | -2.66% |
+| Strategy profit / loss | -$2.49 (-2.49%) |
+| Time-weighted return (ignores when deposits happened) | -2.49% |
 
 ## Insider buys on the watchlist
 
-Read 4 new SEC filings this run. 56 stocks on the watchlist.
+Read 5 new SEC filings this run. 56 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -28,7 +28,7 @@ Read 4 new SEC filings this run. 56 stocks on the watchlist.
 | LRN | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
 
 ## Notes
-- Spotter read 4 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 56 stocks, 37 big enough to copy.
+- Spotter read 5 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 56 stocks, 37 big enough to copy.
 - Stock market closed; picks wait for the next open.
 
 _Copycat uses no AI._
