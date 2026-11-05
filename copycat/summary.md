@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-05 19:43 UTC
+# Copycat strategy — 2026-11-05 20:13 UTC
 
 | | |
 |---|---|
-| Account value | $95.47 |
+| Account value | $95.06 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$4.53 (-4.53%) |
-| Time-weighted return (ignores when deposits happened) | -4.53% |
+| Strategy profit / loss | -$4.94 (-4.94%) |
+| Time-weighted return (ignores when deposits happened) | -4.94% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 24 new SEC filings this run. 58 stocks on the watchlist.
+Read 33 new SEC filings this run. 58 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 24 new SEC filings this run. 58 stocks on the watchlist.
 | INTC (INTEL CORP) | 3.49 | 1 insider bought $9,709,680 at about $64.73: Tan Lip Bu (CEO, Director) $9,709,680. |
 
 ## Notes
-- Spotter read 24 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 58 stocks, 36 big enough to copy.
+- Spotter read 33 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 58 stocks, 36 big enough to copy.
 
 _Copycat uses no AI._
