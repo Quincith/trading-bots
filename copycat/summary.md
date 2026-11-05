@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-05 16:43 UTC
+# Copycat strategy — 2026-11-05 17:13 UTC
 
 | | |
 |---|---|
-| Account value | $96.79 |
+| Account value | $96.50 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$3.21 (-3.21%) |
-| Time-weighted return (ignores when deposits happened) | -3.21% |
+| Strategy profit / loss | -$3.50 (-3.50%) |
+| Time-weighted return (ignores when deposits happened) | -3.50% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 24 new SEC filings this run. 56 stocks on the watchlist.
+Read 44 new SEC filings this run. 56 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 24 new SEC filings this run. 56 stocks on the watchlist.
 | AN (AUTONATION, INC.) | 3.3 | 2 insiders bought $1,131,874 at about $184.04: Manley Michael Mark (CEO and Director, Director) $1,031,024; Edmunds C Coleman (EVP, Gen Counsel & Corp Sec) $100,850. |
 
 ## Notes
-- Spotter read 24 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 56 stocks, 36 big enough to copy.
+- Spotter read 44 new insider filings and found 1 purchases (0 by officers or directors). Watchlist: 56 stocks, 36 big enough to copy.
 
 _Copycat uses no AI._
