@@ -2,48 +2,48 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $2.79 (-3.11%)
+## Aggressive: down $7.12 (-7.93%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $2.79 (-3.11%) at $87.02. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $7.12 (-7.93%) at $82.69. Paper money only.
 
 **Key takeaways**
 
-- Account value: $89.81 → $87.02 (-$2.79, -3.11%).
-- Profit / loss since start: -$12.98 on $100.00 money put in.
-- Scout scanned 0 coins, 31 times.
+- Account value: $89.81 → $82.69 (-$7.12, -7.93%).
+- Profit / loss since start: -$17.31 on $100.00 money put in.
+- Scout scanned 0 coins, 32 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $85.02 (-$12.97 unrealized).
+- Holding: TQQQ $80.69 (-$17.30 unrealized).
 
-## Medium: down $1.89 (-2.03%)
+## Medium: down $4.92 (-5.28%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.89 (-2.03%) at $91.35. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $4.92 (-5.28%) at $88.32. Paper money only.
 
 **Key takeaways**
 
-- Account value: $93.24 → $91.35 (-$1.89, -2.03%).
-- Profit / loss since start: -$8.65 on $100.00 money put in.
-- Scout scanned 0 coins, 31 times.
+- Account value: $93.24 → $88.32 (-$4.92, -5.28%).
+- Profit / loss since start: -$11.68 on $100.00 money put in.
+- Scout scanned 0 coins, 32 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $89.35 (-$8.64 unrealized).
+- Holding: QLD $86.32 (-$11.67 unrealized).
 
-## Copycat: up $0.14 (+0.14%)
+## Copycat: up $0.52 (+0.53%)
 
-Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended up $0.14 (+0.14%) at $97.51. Paper money only.
+Active day. The bots bought 1 time. The account ended up $0.52 (+0.53%) at $97.89. Paper money only.
 
 **Key takeaways**
 
-- Account value: $97.37 → $97.51 (+$0.14, +0.14%).
-- Profit / loss since start: -$2.49 on $100.00 money put in.
-- Spotter read 145 insider filings from the SEC and found 10 insider purchases. Watchlist at day end: 57 stocks.
+- Account value: $97.37 → $97.89 (+$0.52, +0.53%).
+- Profit / loss since start: -$2.11 on $100.00 money put in.
+- Spotter read 175 insider filings from the SEC and found 12 insider purchases. Watchlist at day end: 58 stocks.
 - Top pick: UPBD (UPBOUND GROUP, INC.). 6 insiders bought $1,243,656 at about $22.71: Brown Jeffrey J (Director) $400,012; Marino Glenn P (Director) $393,414; Khouri Halim (EVP, Chief Financial Officer) $250,580 and 3 more.
-- Sent for review: UPBD (31x), ASPE (31x), LRN (31x).
-- Decisions: 0 buy, 93 wait, 0 skip.
-- Passed on UPBD (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
-- Passed on ASPE (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
-- No trades.
-- Holding: BBT $20.31 (+$0.37 unrealized); CHCO $19.90 (-$0.09 unrealized); MSM $19.75 (-$0.24 unrealized); STC $21.42 (+$1.51 unrealized).
+- Sent for review: UPBD (32x), ASPE (32x), LRN (32x), LBTY (1x), MGM (1x), KNOP (1x).
+- Decisions: 1 buy, 93 wait, 5 skip.
+- Passed on UPBD (SKIP, 0% confident): Price already up 10% since the insiders bought (limit 10%). Too late to copy.
+- Passed on ASPE (SKIP, 0% confident): Alpaca can't buy part of a share of this stock.
+- Bought $16.12 of LRN at 78.4. Reason: Copying Stride, Inc. insiders. 2 insiders bought $19,242,858 at about $76.95: Haggart Dylan G. & Fivespan Partners, Lp & Fivespan Partners Gp, Llc (Director, See Footnote (3)) $17,573,121; Shepherd Brian A. (Director) $1,669,737.
+- Holding: BBT $20.54 (+$0.60 unrealized); CHCO $20.17 (+$0.18 unrealized); MSM $19.61 (-$0.38 unrealized); STC $21.44 (+$1.53 unrealized).
 
 ## Forex: flat
 
@@ -66,6 +66,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
 - **confidence**: How sure the Decision bot is, from 0% to 100%. Each strategy only buys above its own minimum.
 - **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
+- **entry**: The price we buy at.
 - **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
 - **insider**: A company's own bosses (CEO, CFO and so on) and board members. They know the company best.
@@ -74,5 +75,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.
+- **stop-loss**: A safety exit. If the price falls to this level, the bots sell to keep the loss small.
+- **target**: The profit goal. If the price rises to this level, the bots sell and keep the gain.
 - **unrealized**: A gain or loss on a coin we still own. It only becomes real when we sell.
 - **volume**: How much of a coin is being bought and sold. A jump in volume means lots of people suddenly care.

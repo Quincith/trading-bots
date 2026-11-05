@@ -7,3 +7,4 @@ time,symbol,side,usd,price,reason
 2026-10-30T18:34:20+00:00,NBIS,sell,17.79,150.14,stop hit (150.14 <= 150.894)
 2026-11-02T18:07:33+00:00,TTMI,buy,18.04,80.435,"Copying TTM TECHNOLOGIES INC insiders. 2 insiders bought $1,342,810 at about $89.52: Ali Wajid (Director) $902,460; Roks Edwin (President and CEO, Director) $440,350."
 2026-11-04T16:11:12+00:00,TTMI,sell,16.17,72.37,stop hit (72.37 <= 72.3915)
+2026-11-05T14:43:00+00:00,LRN,buy,16.12,78.4,"Copying Stride, Inc. insiders. 2 insiders bought $19,242,858 at about $76.95: Haggart Dylan G. & Fivespan Partners, Lp & Fivespan Partners Gp, Llc (Director, See Footnote (3)) $17,573,121; Shepherd Brian A. (Director) $1,669,737."

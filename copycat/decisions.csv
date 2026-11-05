@@ -97,3 +97,9 @@ time,symbol,decision,confidence,risk,size_usd,note
 2026-11-04T20:41:41+00:00,STRZ,SKIP,0.00,,0.00,Price already up 17% since the insiders bought (limit 10%). Too late to copy.
 2026-11-04T20:41:41+00:00,LRN,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash)
 2026-11-04T20:41:41+00:00,TRTX,SKIP,0.00,,0.00,Price already up 12% since the insiders bought (limit 10%). Too late to copy.
+2026-11-05T14:43:00+00:00,UPBD,SKIP,0.00,,0.00,Price already up 10% since the insiders bought (limit 10%). Too late to copy.
+2026-11-05T14:43:00+00:00,ASPE,SKIP,0.00,,0.00,Alpaca can't buy part of a share of this stock.
+2026-11-05T14:43:00+00:00,LRN,BUY,1.00,REDUCE,16.12,"Copying Stride, Inc. insiders. 2 insiders bought $19,242,858 at about $76.95: Haggart Dylan G. & Fivespan Partners, Lp & Fivespan Partners Gp, Llc (Director, See Footnote (3)) $17,573,121; Shepherd Brian A. (Director) $1,669,737."
+2026-11-05T14:43:00+00:00,LBTY,SKIP,0.00,,0.00,Alpaca can't buy part of a share of this stock.
+2026-11-05T14:43:00+00:00,MGM,SKIP,0.00,,0.00,Price already up 10% since the insiders bought (limit 10%). Too late to copy.
+2026-11-05T14:43:00+00:00,KNOP,SKIP,0.00,REJECT,0.00,Risk said no: Already at 5 open positions.
