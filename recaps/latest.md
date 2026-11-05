@@ -2,48 +2,48 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $15.59 (-17.36%)
+## Aggressive: down $16.68 (-18.57%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $15.59 (-17.36%) at $74.22. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $16.68 (-18.57%) at $73.13. Paper money only.
 
 **Key takeaways**
 
-- Account value: $89.81 → $74.22 (-$15.59, -17.36%).
-- Profit / loss since start: -$25.78 on $100.00 money put in.
-- Scout scanned 0 coins, 45 times.
+- Account value: $89.81 → $73.13 (-$16.68, -18.57%).
+- Profit / loss since start: -$26.87 on $100.00 money put in.
+- Scout scanned 0 coins, 46 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $72.22 (-$25.77 unrealized).
+- Holding: TQQQ $71.13 (-$26.86 unrealized).
 
-## Medium: down $10.79 (-11.57%)
+## Medium: down $11.68 (-12.53%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $10.79 (-11.57%) at $82.45. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $11.68 (-12.53%) at $81.56. Paper money only.
 
 **Key takeaways**
 
-- Account value: $93.24 → $82.45 (-$10.79, -11.57%).
-- Profit / loss since start: -$17.55 on $100.00 money put in.
-- Scout scanned 0 coins, 45 times.
+- Account value: $93.24 → $81.56 (-$11.68, -12.53%).
+- Profit / loss since start: -$18.44 on $100.00 money put in.
+- Scout scanned 0 coins, 46 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $80.45 (-$17.54 unrealized).
+- Holding: QLD $79.56 (-$18.43 unrealized).
 
-## Copycat: down $2.10 (-2.16%)
+## Copycat: down $1.57 (-1.61%)
 
-Active day. The bots bought 1 time. The account ended down $2.10 (-2.16%) at $95.27. Paper money only.
+Active day. The bots bought 1 time. The account ended down $1.57 (-1.61%) at $95.80. Paper money only.
 
 **Key takeaways**
 
-- Account value: $97.37 → $95.27 (-$2.10, -2.16%).
-- Profit / loss since start: -$4.73 on $100.00 money put in.
-- Spotter read 560 insider filings from the SEC and found 21 insider purchases. Watchlist at day end: 58 stocks.
+- Account value: $97.37 → $95.80 (-$1.57, -1.61%).
+- Profit / loss since start: -$4.20 on $100.00 money put in.
+- Spotter read 655 insider filings from the SEC and found 26 insider purchases. Watchlist at day end: 60 stocks.
 - Top pick: UPBD (UPBOUND GROUP, INC.). 6 insiders bought $1,243,656 at about $22.71: Brown Jeffrey J (Director) $400,012; Marino Glenn P (Director) $393,414; Khouri Halim (EVP, Chief Financial Officer) $250,580 and 3 more.
 - Sent for review: UPBD (32x), ASPE (32x), LRN (32x), LBTY (1x), MGM (1x), KNOP (1x).
 - Decisions: 1 buy, 93 wait, 5 skip.
 - Passed on UPBD (SKIP, 0% confident): Price already up 10% since the insiders bought (limit 10%). Too late to copy.
 - Passed on ASPE (SKIP, 0% confident): Alpaca can't buy part of a share of this stock.
 - Bought $16.12 of LRN at 78.4. Reason: Copying Stride, Inc. insiders. 2 insiders bought $19,242,858 at about $76.95: Haggart Dylan G. & Fivespan Partners, Lp & Fivespan Partners Gp, Llc (Director, See Footnote (3)) $17,573,121; Shepherd Brian A. (Director) $1,669,737.
-- Holding: BBT $19.79 (-$0.15 unrealized); CHCO $19.53 (-$0.46 unrealized); LRN $15.33 (-$0.78 unrealized); MSM $18.65 (-$1.34 unrealized); STC $21.97 (+$2.06 unrealized).
+- Holding: BBT $19.83 (-$0.11 unrealized); CHCO $19.56 (-$0.43 unrealized); LRN $15.39 (-$0.72 unrealized); MSM $18.73 (-$1.26 unrealized); STC $22.28 (+$2.37 unrealized).
 
 ## Forex: flat
 
