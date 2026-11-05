@@ -1,10 +1,10 @@
 {
-  "day": "2026-11-04",
-  "day_start_equity": 91.96,
+  "day": "2026-11-05",
+  "day_start_equity": 93.24,
   "halted_reason": null,
   "hunt": {
     "average": 679.01,
-    "checked": "2026-11-04T23:41:51+00:00",
+    "checked": "2026-11-05T00:12:02+00:00",
     "close": 685.28,
     "close_day": "2026-11-03",
     "hold": "QLD",
