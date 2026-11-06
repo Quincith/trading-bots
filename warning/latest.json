@@ -1,20 +1,20 @@
 {
-  "checked": "2026-11-06T11:44:41+00:00",
+  "checked": "2026-11-06T14:45:18+00:00",
   "close_day": "2026-11-05",
-  "score": 2,
-  "level": "CAUTION",
+  "score": 4,
+  "level": "DANGER",
   "lights": {
     "fear": {
       "title": "Fear index high",
-      "on": false,
+      "on": true,
       "why": "The VIX fear index is above 25 (calm is 12-18).",
-      "reading": "VIX 16.6"
+      "reading": "VIX 28.2"
     },
     "fear_flip": {
       "title": "Fear is about now",
-      "on": false,
+      "on": true,
       "why": "Traders fear the next month more than the next three (VIX above VIX3M).",
-      "reading": "VIX 16.6 vs VIX3M 18.8"
+      "reading": "VIX 28.2 vs VIX3M 25.6"
     },
     "credit": {
       "title": "Lenders nervous",
@@ -47,11 +47,11 @@
       "reading": "QQQ -10.4% vs its 50-day average"
     }
   },
-  "fear_index": 16.61,
+  "fear_index": 28.18,
   "headlines": {
     "on": false,
     "last_5_days": 14,
     "usual_5_days": 13.9
   },
-  "last_alert": null
+  "last_alert": "2026-11-06T14:45:18+00:00"
 }
