@@ -2,31 +2,31 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: up $2.62 (+3.57%)
+## Aggressive: up $3.33 (+4.53%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $2.62 (+3.57%) at $76.10. Paper money only.
-
-**Key takeaways**
-
-- Account value: $73.48 → $76.10 (+$2.62, +3.57%).
-- Profit / loss since start: -$23.90 on $100.00 money put in.
-- Scout scanned 0 coins, 25 times.
-- Nothing passed Scout's filter, so no trade was considered.
-- No trades.
-- Holding: TQQQ $74.10 (-$23.89 unrealized).
-
-## Medium: up $1.79 (+2.18%)
-
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $1.79 (+2.18%) at $83.97. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $3.33 (+4.53%) at $76.81. Paper money only.
 
 **Key takeaways**
 
-- Account value: $82.18 → $83.97 (+$1.79, +2.18%).
-- Profit / loss since start: -$16.03 on $100.00 money put in.
-- Scout scanned 0 coins, 25 times.
+- Account value: $73.48 → $76.81 (+$3.33, +4.53%).
+- Profit / loss since start: -$23.19 on $100.00 money put in.
+- Scout scanned 0 coins, 26 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $81.97 (-$16.02 unrealized).
+- Holding: TQQQ $74.81 (-$23.18 unrealized).
+
+## Medium: up $2.28 (+2.77%)
+
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $2.28 (+2.77%) at $84.46. Paper money only.
+
+**Key takeaways**
+
+- Account value: $82.18 → $84.46 (+$2.28, +2.77%).
+- Profit / loss since start: -$15.54 on $100.00 money put in.
+- Scout scanned 0 coins, 26 times.
+- Nothing passed Scout's filter, so no trade was considered.
+- No trades.
+- Holding: QLD $82.46 (-$15.53 unrealized).
 
 ## Copycat: down $0.16 (-0.17%)
 
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $95.80 → $95.64 (-$0.16, -0.17%).
 - Profit / loss since start: -$4.36 on $100.00 money put in.
-- Spotter read 73 insider filings from the SEC and found 9 insider purchases. Watchlist at day end: 75 stocks.
+- Spotter read 82 insider filings from the SEC and found 16 insider purchases. Watchlist at day end: 76 stocks.
 - Top pick: UPBD (UPBOUND GROUP, INC.). 7 insiders bought $1,343,739 at about $22.71: Brown Jeffrey J (Director) $400,012; Marino Glenn P (Director) $393,414; Khouri Halim (EVP, Chief Financial Officer) $250,580 and 4 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
