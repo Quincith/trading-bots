@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-06 22:45 UTC
+# Copycat strategy — 2026-11-06 23:15 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 63 new SEC filings this run. 89 stocks on the watchlist.
+Read 16 new SEC filings this run. 90 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 63 new SEC filings this run. 89 stocks on the watchlist.
 | PAM (Pampa Energy Inc.) | 3.7 | 2 insiders bought $2,823,419 at about $67.57: Mindlin Damian Miguel (Vicepresident) $2,616,098; Zuberbuhler Adolfo Fernando (Chief Financial Officer) $207,321. |
 
 ## Notes
-- Spotter read 63 new insider filings and found 6 purchases (5 by officers or directors). Watchlist: 89 stocks, 59 big enough to copy.
+- Spotter read 16 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 90 stocks, 60 big enough to copy.
 
 _Copycat uses no AI._
