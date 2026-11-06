@@ -1,48 +1,45 @@
-# Daily recap: Thursday, November 5, 2026
+# Daily recap: Friday, November 6, 2026
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $18.00 (-20.04%)
+## Aggressive: flat
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $18.00 (-20.04%) at $71.81. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $73.48. Paper money only.
 
 **Key takeaways**
 
-- Account value: $89.81 → $71.81 (-$18.00, -20.04%).
-- Profit / loss since start: -$28.19 on $100.00 money put in.
-- Scout scanned 0 coins, 51 times.
+- Account value: $73.48 → $73.48 (no change).
+- Profit / loss since start: -$26.52 on $100.00 money put in.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $69.81 (-$28.18 unrealized).
+- Holding: TQQQ $71.47 (-$26.52 unrealized).
 
-## Medium: down $12.54 (-13.45%)
+## Medium: flat
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $12.54 (-13.45%) at $80.70. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $82.18. Paper money only.
 
 **Key takeaways**
 
-- Account value: $93.24 → $80.70 (-$12.54, -13.45%).
-- Profit / loss since start: -$19.30 on $100.00 money put in.
-- Scout scanned 0 coins, 51 times.
+- Account value: $82.18 → $82.18 (no change).
+- Profit / loss since start: -$17.82 on $100.00 money put in.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $78.70 (-$19.29 unrealized).
+- Holding: QLD $80.18 (-$17.81 unrealized).
 
-## Copycat: down $1.57 (-1.61%)
+## Copycat: flat
 
-Active day. The bots bought 1 time. The account ended down $1.57 (-1.61%) at $95.80. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended flat at $95.80. Paper money only.
 
 **Key takeaways**
 
-- Account value: $97.37 → $95.80 (-$1.57, -1.61%).
+- Account value: $95.80 → $95.80 (no change).
 - Profit / loss since start: -$4.20 on $100.00 money put in.
-- Spotter read 1025 insider filings from the SEC and found 89 insider purchases. Watchlist at day end: 71 stocks.
+- Spotter read 12 insider filings from the SEC and found 2 insider purchases. Watchlist at day end: 72 stocks.
 - Top pick: UPBD (UPBOUND GROUP, INC.). 7 insiders bought $1,343,739 at about $22.71: Brown Jeffrey J (Director) $400,012; Marino Glenn P (Director) $393,414; Khouri Halim (EVP, Chief Financial Officer) $250,580 and 4 more.
-- Sent for review: UPBD (32x), ASPE (32x), LRN (32x), LBTY (1x), MGM (1x), KNOP (1x).
-- Decisions: 1 buy, 93 wait, 5 skip.
-- Passed on UPBD (SKIP, 0% confident): Price already up 10% since the insiders bought (limit 10%). Too late to copy.
-- Passed on ASPE (SKIP, 0% confident): Alpaca can't buy part of a share of this stock.
-- Bought $16.12 of LRN at 78.4. Reason: Copying Stride, Inc. insiders. 2 insiders bought $19,242,858 at about $76.95: Haggart Dylan G. & Fivespan Partners, Lp & Fivespan Partners Gp, Llc (Director, See Footnote (3)) $17,573,121; Shepherd Brian A. (Director) $1,669,737.
+- Nothing was ready to copy, so no trade was considered.
+- No trades.
 - Holding: BBT $19.83 (-$0.11 unrealized); CHCO $19.56 (-$0.43 unrealized); LRN $15.39 (-$0.72 unrealized); MSM $18.73 (-$1.26 unrealized); STC $22.28 (+$2.37 unrealized).
 
 ## Forex: flat
@@ -53,20 +50,17 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 
 - Account value: $99.83 → $99.83 (no change).
 - Profit / loss since start: -$0.17 on $100.00 money put in.
-- Marked the opening range on 7 currency pairs at the London open.
-- Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (skip), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
+- No opening range marked today (a weekend, a holiday, or the check came too late).
 - No trades.
 - Open trades: none, all cash.
 
-## Fxcopy: no runs logged on 2026-11-05.
+## Fxcopy: no runs logged on 2026-11-06.
 
 ## Words to know
 
 - **account value**: What everything in the account is worth right now: cash plus coins, at today's prices.
 - **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
-- **confidence**: How sure the Decision bot is, from 0% to 100%. Each strategy only buys above its own minimum.
 - **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
-- **entry**: The price we buy at.
 - **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
 - **insider**: A company's own bosses (CEO, CFO and so on) and board members. They know the company best.
@@ -75,7 +69,5 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.
-- **stop-loss**: A safety exit. If the price falls to this level, the bots sell to keep the loss small.
-- **target**: The profit goal. If the price rises to this level, the bots sell and keep the gain.
 - **unrealized**: A gain or loss on a coin we still own. It only becomes real when we sell.
 - **volume**: How much of a coin is being bought and sold. A jump in volume means lots of people suddenly care.
