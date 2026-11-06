@@ -3,12 +3,62 @@
   "day": "2026-11-06",
   "day_start_equity": 99.82550000000629,
   "halted_reason": null,
-  "last_scan": "2026-11-05T08:42:32+00:00",
+  "last_scan": "2026-11-06T08:44:21+00:00",
   "orb": {
     "day": "2026-11-06",
     "orders": {},
-    "placed": false,
-    "rows": {}
+    "placed": true,
+    "rows": {
+      "AUD_USD": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 0.68702 to 0.68802 (10.0 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 0.68752,
+        "risk": ""
+      },
+      "EUR_USD": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 1.11767 to 1.11892 (12.5 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 1.11874,
+        "risk": ""
+      },
+      "GBP_USD": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 1.33980 to 1.34104 (12.4 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 1.33987,
+        "risk": ""
+      },
+      "NZD_USD": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 0.55474 to 0.55595 (12.1 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 0.55488,
+        "risk": ""
+      },
+      "USD_CAD": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 1.40562 to 1.40724 (16.2 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 1.40667,
+        "risk": ""
+      },
+      "USD_CHF": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 0.81717 to 0.81784 (6.7 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 0.8171,
+        "risk": ""
+      },
+      "USD_JPY": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 157.814 to 157.980 (16.6 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 157.866,
+        "risk": ""
+      }
+    }
   },
   "plans": {}
 }
