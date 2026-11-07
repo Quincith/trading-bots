@@ -11,7 +11,7 @@
   "day": "2026-11-07",
   "day_start_equity": 95.21,
   "halted_reason": null,
-  "last_scan": "2026-11-07T22:17:17+00:00",
+  "last_scan": "2026-11-07T22:47:17+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4759,22 +4759,6 @@
       "score": 3.26,
       "ticker": "FBRT"
     },
-    "FCPT": {
-      "buys": [
-        {
-          "accession": "0001193125-26-443902",
-          "date": "2026-11-02",
-          "filed": "2026-11-02T17:20:06-05:00",
-          "price": 22.6072,
-          "role": "President and CEO, Director",
-          "usd": 226072.0,
-          "who": "Lenehan William H"
-        }
-      ],
-      "company": "Four Corners Property Trust, Inc.",
-      "score": 1.85,
-      "ticker": "FCPT"
-    },
     "FFAI": {
       "buys": [
         {
@@ -5465,22 +5449,6 @@
       "company": "Metallus Inc.",
       "score": 1.22,
       "ticker": "MTUS"
-    },
-    "NARA": {
-      "buys": [
-        {
-          "accession": "0001437749-26-034481",
-          "date": "2026-11-02",
-          "filed": "2026-11-02T17:41:43-05:00",
-          "price": 10.66,
-          "role": "Director",
-          "usd": 1066.0,
-          "who": "LeComte Brian"
-        }
-      ],
-      "company": "Narragansett Bancorp, Inc.",
-      "score": 0.0,
-      "ticker": "NARA"
     },
     "NONE": {
       "buys": [
