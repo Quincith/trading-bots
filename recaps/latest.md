@@ -1,46 +1,46 @@
-# Daily recap: Friday, November 6, 2026
+# Daily recap: Saturday, November 7, 2026
 
 _Times are UTC. Paper money only._
 
-## Aggressive: up $4.05 (+5.51%)
+## Aggressive: flat
 
-Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended up $4.05 (+5.51%) at $77.53. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $77.53. Paper money only.
 
 **Key takeaways**
 
-- Account value: $73.48 → $77.53 (+$4.05, +5.51%).
+- Account value: $77.53 → $77.53 (no change).
 - Profit / loss since start: -$22.47 on $100.00 money put in.
-- Scout scanned 0 coins, 51 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
-- Sold TQQQ for $75.45: QQQ closed below its 200-day average. Loss: -$22.55.
+- No trades.
 - Holding: nothing, all cash.
 
-## Medium: up $2.84 (+3.46%)
+## Medium: flat
 
-Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended up $2.84 (+3.46%) at $85.02. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $85.02. Paper money only.
 
 **Key takeaways**
 
-- Account value: $82.18 → $85.02 (+$2.84, +3.46%).
+- Account value: $85.02 → $85.02 (no change).
 - Profit / loss since start: -$14.98 on $100.00 money put in.
-- Scout scanned 0 coins, 51 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
-- Sold QLD for $82.93: QQQ closed below its 200-day average. Loss: -$15.07.
+- No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.52 (-0.54%)
+## Copycat: flat
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.52 (-0.54%) at $95.28. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended flat at $95.21. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.80 → $95.28 (-$0.52, -0.54%).
-- Profit / loss since start: -$4.72 on $100.00 money put in.
-- Spotter read 1182 insider filings from the SEC and found 55 insider purchases. Watchlist at day end: 90 stocks.
+- Account value: $95.21 → $95.21 (no change).
+- Profit / loss since start: -$4.79 on $100.00 money put in.
+- Spotter read 30 insider filings from the SEC and found 8 insider purchases. Watchlist at day end: 91 stocks.
 - Top pick: UPBD (UPBOUND GROUP, INC.). 7 insiders bought $1,343,739 at about $22.71: Brown Jeffrey J (Director) $400,012; Marino Glenn P (Director) $393,414; Khouri Halim (EVP, Chief Financial Officer) $250,580 and 4 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.83 (-$0.11 unrealized); CHCO $19.48 (-$0.51 unrealized); LRN $15.47 (-$0.64 unrealized); MSM $19.12 (-$0.87 unrealized); STC $21.38 (+$1.47 unrealized).
+- Holding: BBT $19.83 (-$0.11 unrealized); CHCO $19.46 (-$0.53 unrealized); LRN $15.42 (-$0.69 unrealized); MSM $19.12 (-$0.87 unrealized); STC $21.38 (+$1.47 unrealized).
 
 ## Forex: flat
 
@@ -50,12 +50,11 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 
 - Account value: $99.83 → $99.83 (no change).
 - Profit / loss since start: -$0.17 on $100.00 money put in.
-- Marked the opening range on 7 currency pairs at the London open.
-- Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (skip), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
+- No opening range marked today (a weekend, a holiday, or the check came too late).
 - No trades.
 - Open trades: none, all cash.
 
-## Fxcopy: no runs logged on 2026-11-06.
+## Fxcopy: no runs logged on 2026-11-07.
 
 ## Words to know
 
