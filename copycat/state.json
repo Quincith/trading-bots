@@ -11,7 +11,7 @@
   "day": "2026-11-07",
   "day_start_equity": 95.21,
   "halted_reason": null,
-  "last_scan": "2026-11-07T15:16:40+00:00",
+  "last_scan": "2026-11-07T15:46:47+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4341,22 +4341,6 @@
       "company": "Baker Hughes Co",
       "score": 1.73,
       "ticker": "BKR"
-    },
-    "BLX": {
-      "buys": [
-        {
-          "accession": "0000890541-26-000014",
-          "date": "2026-10-30",
-          "filed": "2026-11-02T10:24:14-05:00",
-          "price": 52.39,
-          "role": "Chief Audit Officer",
-          "usd": 93882.88,
-          "who": "Diaz Adriana Lizzeth"
-        }
-      ],
-      "company": "BLADEX, INC.",
-      "score": 1.47,
-      "ticker": "BLX"
     },
     "BXMT": {
       "buys": [
