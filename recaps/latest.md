@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $77.53 → $77.53 (no change).
 - Profit / loss since start: -$22.47 on $100.00 money put in.
-- Scout scanned 0 coins, 3 times.
+- Scout scanned 0 coins, 4 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $85.02 → $85.02 (no change).
 - Profit / loss since start: -$14.98 on $100.00 money put in.
-- Scout scanned 0 coins, 3 times.
+- Scout scanned 0 coins, 4 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $95.21 → $95.21 (no change).
 - Profit / loss since start: -$4.79 on $100.00 money put in.
-- Spotter read 61 insider filings from the SEC and found 8 insider purchases. Watchlist at day end: 91 stocks.
+- Spotter read 62 insider filings from the SEC and found 8 insider purchases. Watchlist at day end: 91 stocks.
 - Top pick: UPBD (UPBOUND GROUP, INC.). 7 insiders bought $1,343,739 at about $22.71: Brown Jeffrey J (Director) $400,012; Marino Glenn P (Director) $393,414; Khouri Halim (EVP, Chief Financial Officer) $250,580 and 4 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
