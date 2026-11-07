@@ -11,7 +11,7 @@
   "day": "2026-11-07",
   "day_start_equity": 95.21,
   "halted_reason": null,
-  "last_scan": "2026-11-07T21:17:13+00:00",
+  "last_scan": "2026-11-07T21:47:11+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4065,15 +4065,6 @@
     "AEYE": {
       "buys": [
         {
-          "accession": "0000898243-26-000027",
-          "date": "2026-10-30",
-          "filed": "2026-11-02T16:37:30-05:00",
-          "price": 13.15,
-          "role": "Director",
-          "usd": 52600.0,
-          "who": "HAWKINS JAMES B"
-        },
-        {
           "accession": "0000898243-26-000029",
           "date": "2026-11-04",
           "filed": "2026-11-04T16:26:06-05:00",
@@ -4084,7 +4075,7 @@
         }
       ],
       "company": "AUDIOEYE INC",
-      "score": 0.96,
+      "score": 0.58,
       "ticker": "AEYE"
     },
     "AGMB": {
@@ -4220,22 +4211,6 @@
       "company": "BOEING CO",
       "score": 2.93,
       "ticker": "BA"
-    },
-    "BANC": {
-      "buys": [
-        {
-          "accession": "0001200277-26-000006",
-          "date": "2026-10-30",
-          "filed": "2026-11-02T16:22:24-05:00",
-          "price": 18.18,
-          "role": "CHAIRMAN AND CEO, Director",
-          "usd": 99753.66,
-          "who": "WOLFF JARED M"
-        }
-      ],
-      "company": "BANC OF CALIFORNIA, INC.",
-      "score": 1.5,
-      "ticker": "BANC"
     },
     "BB": {
       "buys": [
@@ -5519,15 +5494,6 @@
     "NONE": {
       "buys": [
         {
-          "accession": "0001770754-26-000004",
-          "date": "2026-11-02",
-          "filed": "2026-11-02T16:30:29-05:00",
-          "price": 14.6488,
-          "role": "CFO and Treasurer",
-          "usd": 35000.0,
-          "who": "Kolodziej Paul"
-        },
-        {
           "accession": "0001193125-26-445452",
           "date": "2026-11-02",
           "filed": "2026-11-03T16:29:25-05:00",
@@ -5547,7 +5513,7 @@
         }
       ],
       "company": "Blackstone Real Estate Income Trust, Inc.",
-      "score": 3.79,
+      "score": 3.01,
       "ticker": "NONE"
     },
     "NPKI": {
@@ -5656,22 +5622,6 @@
       "company": "Proto Labs Inc",
       "score": 2.26,
       "ticker": "PRLB"
-    },
-    "PUMP": {
-      "buys": [
-        {
-          "accession": "0002078488-26-000005",
-          "date": "2026-10-30",
-          "filed": "2026-11-02T16:31:59-05:00",
-          "price": 7.78,
-          "role": "Chief Financial Officer",
-          "usd": 15560.0,
-          "who": "Weatherl Caleb Lyle"
-        }
-      ],
-      "company": "ProPetro Holding Corp.",
-      "score": 0.69,
-      "ticker": "PUMP"
     },
     "RGCO": {
       "buys": [
@@ -5795,22 +5745,6 @@
       "company": "Rush Street Interactive, Inc.",
       "score": 1.07,
       "ticker": "RSI"
-    },
-    "RVSB": {
-      "buys": [
-        {
-          "accession": "0002128637-26-000009",
-          "date": "2026-10-30",
-          "filed": "2026-11-02T16:39:25-05:00",
-          "price": 6.0399,
-          "role": "Director",
-          "usd": 12079.8,
-          "who": "Girod Jon Louis"
-        }
-      ],
-      "company": "RIVERVIEW BANCORP INC",
-      "score": 0.08,
-      "ticker": "RVSB"
     },
     "SHEN": {
       "buys": [
