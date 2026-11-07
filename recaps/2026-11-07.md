@@ -2,28 +2,28 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: flat
+## Aggressive: down $0.02 (-0.03%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $77.53. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.02 (-0.03%) at $77.51. Paper money only.
 
 **Key takeaways**
 
-- Account value: $77.53 → $77.53 (no change).
-- Profit / loss since start: -$22.47 on $100.00 money put in.
-- Scout scanned 0 coins, 19 times.
+- Account value: $77.53 → $77.51 (-$0.02, -0.03%).
+- Profit / loss since start: -$22.49 on $100.00 money put in.
+- Scout scanned 0 coins, 20 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Medium: flat
+## Medium: down $0.02 (-0.02%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $85.02. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.02 (-0.02%) at $85.00. Paper money only.
 
 **Key takeaways**
 
-- Account value: $85.02 → $85.02 (no change).
-- Profit / loss since start: -$14.98 on $100.00 money put in.
-- Scout scanned 0 coins, 19 times.
+- Account value: $85.02 → $85.00 (-$0.02, -0.02%).
+- Profit / loss since start: -$15.00 on $100.00 money put in.
+- Scout scanned 0 coins, 20 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.

@@ -1,11 +1,11 @@
-# Medium strategy — 2026-11-07 08:16 UTC
+# Medium strategy — 2026-11-07 08:46 UTC
 
 | | |
 |---|---|
-| Account value | $85.02 |
+| Account value | $85.00 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$14.98 (-14.98%) |
-| Time-weighted return (ignores when deposits happened) | -14.98% |
+| Strategy profit / loss | -$15.00 (-15.00%) |
+| Time-weighted return (ignores when deposits happened) | -15.00% |
 
 ## Notes
 - QQQ closed at $656.10 on 2026-11-06, below its 200-day average of $679.79 (-3.5%). No uptrend, so the rule holds cash.
