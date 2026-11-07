@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-07 02:45 UTC
+# Copycat strategy — 2026-11-07 03:15 UTC
 
 | | |
 |---|---|
-| Account value | $95.21 |
+| Account value | $95.23 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$4.79 (-4.79%) |
-| Time-weighted return (ignores when deposits happened) | -4.79% |
+| Strategy profit / loss | -$4.77 (-4.77%) |
+| Time-weighted return (ignores when deposits happened) | -4.77% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 8 new SEC filings this run. 92 stocks on the watchlist.
+Read 2 new SEC filings this run. 92 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 8 new SEC filings this run. 92 stocks on the watchlist.
 | PAM (Pampa Energy Inc.) | 3.7 | 2 insiders bought $2,823,419 at about $67.57: Mindlin Damian Miguel (Vicepresident) $2,616,098; Zuberbuhler Adolfo Fernando (Chief Financial Officer) $207,321. |
 
 ## Notes
-- Spotter read 8 new insider filings and found 1 purchases (0 by officers or directors). Watchlist: 92 stocks, 61 big enough to copy.
+- Spotter read 2 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 92 stocks, 61 big enough to copy.
 
 _Copycat uses no AI._
