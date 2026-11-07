@@ -11,7 +11,7 @@
   "day": "2026-11-07",
   "day_start_equity": 95.21,
   "halted_reason": null,
-  "last_scan": "2026-11-07T18:47:02+00:00",
+  "last_scan": "2026-11-07T19:17:01+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4268,22 +4268,6 @@
       "company": "BLACKBERRY Ltd",
       "score": 0.61,
       "ticker": "BB"
-    },
-    "BBT": {
-      "buys": [
-        {
-          "accession": "0001628280-26-068788",
-          "date": "2026-10-29",
-          "filed": "2026-11-02T14:13:31-05:00",
-          "price": 30.73,
-          "role": "Director",
-          "usd": 6146.0,
-          "who": "Hughes William H III"
-        }
-      ],
-      "company": "Beacon Financial Corp",
-      "score": 0.0,
-      "ticker": "BBT"
     },
     "BCBP": {
       "buys": [
