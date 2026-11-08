@@ -11,7 +11,7 @@
   "day": "2026-11-08",
   "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-08T22:19:00+00:00",
+  "last_scan": "2026-11-08T22:48:53+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4992,31 +4992,6 @@
       "company": "Kodiak Sciences Inc.",
       "score": 3.39,
       "ticker": "KOD"
-    },
-    "KWY": {
-      "buys": [
-        {
-          "accession": "0001072627-26-000060",
-          "date": "2026-10-30",
-          "filed": "2026-11-03T17:22:07-05:00",
-          "price": 9.61,
-          "role": "CFO & EVP",
-          "usd": 1566.43,
-          "who": "Hansen Kent A"
-        },
-        {
-          "accession": "0001072627-26-000059",
-          "date": "2026-10-30",
-          "filed": "2026-11-03T17:20:40-05:00",
-          "price": 9.61,
-          "role": "President and CEO, Director",
-          "usd": 2498.6,
-          "who": "Fitzgerald John Taylor Maloney"
-        }
-      ],
-      "company": "KINGSWAY Corp",
-      "score": 1.25,
-      "ticker": "KWY"
     },
     "KYN": {
       "buys": [
