@@ -8,20 +8,20 @@
 | Forex 🏆 | +0.0% | -0.2% | -$0.17 |
 
 ## Leveraged Nasdaq trend (TQQQ 3x)
-- **This week:** -14.5% (-$13.18). Holding Bitcoin did -1.8%, so it **trailed Bitcoin by 12.7 points**.
+- **This week:** -14.5% (-$13.18). Holding Bitcoin did -1.9%, so it **trailed Bitcoin by 12.7 points**.
 - **Trades:** 0 buys, 1 sells.
-- **Since the start (Oct 25):** account is worth $77.51 from $100.00 put in, -$22.49 profit (-22.5%). The same money in Bitcoin would be worth $93.90.
+- **Since the start (Oct 25):** account is worth $77.51 from $100.00 put in, -$22.49 profit (-22.5%). The same money in Bitcoin would be worth $93.86.
 
 ## Leveraged Nasdaq trend (QLD 2x)
-- **This week:** -8.7% (-$8.15). Holding Bitcoin did -1.8%, so it **trailed Bitcoin by 6.9 points**.
+- **This week:** -8.7% (-$8.15). Holding Bitcoin did -1.9%, so it **trailed Bitcoin by 6.9 points**.
 - **Trades:** 0 buys, 1 sells.
-- **Since the start (Oct 25):** account is worth $85.00 from $100.00 put in, -$15.00 profit (-15.0%). The same money in Bitcoin would be worth $93.90.
+- **Since the start (Oct 25):** account is worth $85.00 from $100.00 put in, -$15.00 profit (-15.0%). The same money in Bitcoin would be worth $93.86.
 
 ## Copycat
-- **This week:** -3.0% (-$2.99). Holding Bitcoin did -1.8%, so it **trailed Bitcoin by 1.2 points**.
+- **This week:** -3.0% (-$2.99). Holding Bitcoin did -1.9%, so it **trailed Bitcoin by 1.2 points**.
 - **Vs. the stock market:** the S&P 500 did -2.7%, so it **trailed the S&P 500 by 0.4 points**. The same money in the S&P 500 would be worth $96.78.
 - **Trades:** 2 buys, 1 sells.
-- **Since the start (Oct 25):** account is worth $95.23 from $100.00 put in, -$4.77 profit (-4.8%). The same money in Bitcoin would be worth $94.61.
+- **Since the start (Oct 25):** account is worth $95.23 from $100.00 put in, -$4.77 profit (-4.8%). The same money in Bitcoin would be worth $94.56.
 
 ## Forex
 - **This week:** +0.0% ($0.00). Doing nothing would have made 0%, so it did about the same as doing nothing.
