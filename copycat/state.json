@@ -11,7 +11,7 @@
   "day": "2026-11-08",
   "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-08T15:48:25+00:00",
+  "last_scan": "2026-11-08T16:18:39+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4416,22 +4416,6 @@
       "company": "CLOROX CO /DE/",
       "score": 1.6,
       "ticker": "CLX"
-    },
-    "CMTV": {
-      "buys": [
-        {
-          "accession": "0001654954-26-009444",
-          "date": "2026-11-03",
-          "filed": "2026-11-03T11:02:55-05:00",
-          "price": 42.984,
-          "role": "Pres/CEO/Dir of Company & Bank, Director",
-          "usd": 21492.0,
-          "who": "Caldwell Christopher L."
-        }
-      ],
-      "company": "COMMUNITY BANCORP /VT",
-      "score": 0.83,
-      "ticker": "CMTV"
     },
     "CRH": {
       "buys": [
