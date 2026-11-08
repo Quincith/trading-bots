@@ -11,7 +11,7 @@
   "day": "2026-11-08",
   "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-08T16:20:39+00:00",
+  "last_scan": "2026-11-08T16:48:36+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4309,22 +4309,6 @@
       "company": "CREDIT ACCEPTANCE CORP",
       "score": 2.16,
       "ticker": "CACC"
-    },
-    "CAT": {
-      "buys": [
-        {
-          "accession": "0001104659-26-121809",
-          "date": "2026-11-02",
-          "filed": "2026-11-03T11:43:02-05:00",
-          "price": 620.39,
-          "role": "Director",
-          "usd": 620390.0,
-          "who": "Fish James C Jr"
-        }
-      ],
-      "company": "CATERPILLAR INC",
-      "score": 1.79,
-      "ticker": "CAT"
     },
     "CBAN": {
       "buys": [
