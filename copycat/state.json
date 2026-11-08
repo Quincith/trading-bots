@@ -11,7 +11,7 @@
   "day": "2026-11-08",
   "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-08T12:48:22+00:00",
+  "last_scan": "2026-11-08T13:18:19+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -5913,22 +5913,6 @@
       "company": "TPG RE Finance Trust, Inc.",
       "score": 2.98,
       "ticker": "TRTX"
-    },
-    "TSM": {
-      "buys": [
-        {
-          "accession": "0001046179-26-000732",
-          "date": "2026-11-01",
-          "filed": "2026-11-03T08:07:46-05:00",
-          "price": 71.49,
-          "role": "VP",
-          "usd": 71490.0,
-          "who": "Yuan Lipen"
-        }
-      ],
-      "company": "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD",
-      "score": 0.85,
-      "ticker": "TSM"
     },
     "TTMI": {
       "buys": [
