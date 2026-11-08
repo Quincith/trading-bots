@@ -11,7 +11,7 @@
   "day": "2026-11-08",
   "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-08T20:48:51+00:00",
+  "last_scan": "2026-11-08T21:18:51+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4768,22 +4768,6 @@
       "score": 1.23,
       "ticker": "FINW"
     },
-    "FISI": {
-      "buys": [
-        {
-          "accession": "0001193125-26-445315",
-          "date": "2026-11-02",
-          "filed": "2026-11-03T16:05:05-05:00",
-          "price": 40.11,
-          "role": "Director",
-          "usd": 63173.25,
-          "who": "DORN ANDREW W JR"
-        }
-      ],
-      "company": "FINANCIAL INSTITUTIONS INC",
-      "score": 0.8,
-      "ticker": "FISI"
-    },
     "FLOC": {
       "buys": [
         {
@@ -4899,22 +4883,6 @@
       "company": "Hilton Grand Vacations Inc.",
       "score": 2.53,
       "ticker": "HGV"
-    },
-    "IBKR": {
-      "buys": [
-        {
-          "accession": "0001381197-26-000158",
-          "date": "2026-11-02",
-          "filed": "2026-11-03T16:01:03-05:00",
-          "price": 78.44,
-          "role": "Director",
-          "usd": 1961.0,
-          "who": "Conkling Lori A"
-        }
-      ],
-      "company": "Interactive Brokers Group, Inc.",
-      "score": 0.0,
-      "ticker": "IBKR"
     },
     "INTC": {
       "buys": [
