@@ -11,7 +11,7 @@
   "day": "2026-11-08",
   "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-08T13:48:13+00:00",
+  "last_scan": "2026-11-08T14:18:19+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -5861,40 +5861,6 @@
       "company": "TRANSCAT INC",
       "score": 1.86,
       "ticker": "TRNS"
-    },
-    "TRTX": {
-      "buys": [
-        {
-          "accession": "0001193125-26-444483",
-          "date": "2026-10-30",
-          "filed": "2026-11-03T09:00:07-05:00",
-          "price": 6.51,
-          "role": "Director",
-          "usd": 253239.0,
-          "who": "SILVERSTEIN WENDY"
-        },
-        {
-          "accession": "0001193125-26-444482",
-          "date": "2026-10-30",
-          "filed": "2026-11-03T09:00:05-05:00",
-          "price": 6.52,
-          "role": "Director",
-          "usd": 32600.0,
-          "who": "Smith Michael Bradley"
-        },
-        {
-          "accession": "0001193125-26-444481",
-          "date": "2026-10-30",
-          "filed": "2026-11-03T09:00:03-05:00",
-          "price": 6.43,
-          "role": "Director",
-          "usd": 12860.0,
-          "who": "Gillmore Michael"
-        }
-      ],
-      "company": "TPG RE Finance Trust, Inc.",
-      "score": 2.98,
-      "ticker": "TRTX"
     },
     "TTMI": {
       "buys": [
