@@ -11,7 +11,7 @@
   "day": "2026-11-08",
   "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-08T14:18:19+00:00",
+  "last_scan": "2026-11-08T14:48:21+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4449,22 +4449,6 @@
       "score": 1.28,
       "ticker": "CRH"
     },
-    "CSTM": {
-      "buys": [
-        {
-          "accession": "0001563411-26-000202",
-          "date": "2026-11-02",
-          "filed": "2026-11-03T09:34:19-05:00",
-          "price": 23.41,
-          "role": "Director",
-          "usd": 42138.0,
-          "who": "Deslarzes Jean-Christophe"
-        }
-      ],
-      "company": "CONSTELLIUM SE",
-      "score": 0.62,
-      "ticker": "CSTM"
-    },
     "CVS": {
       "buys": [
         {
@@ -4774,31 +4758,6 @@
       "company": "FARADAY FUTURE INTELLIGENT ELECTRIC INC.",
       "score": 0.5,
       "ticker": "FFAI"
-    },
-    "FFIN": {
-      "buys": [
-        {
-          "accession": "0001193125-26-444528",
-          "date": "2026-10-30",
-          "filed": "2026-11-03T09:41:44-05:00",
-          "price": 30.56,
-          "role": "Director",
-          "usd": 9168.0,
-          "who": "Edwards Murray Hamilton"
-        },
-        {
-          "accession": "0001193125-26-444528",
-          "date": "2026-10-30",
-          "filed": "2026-11-03T09:41:44-05:00",
-          "price": 30.51,
-          "role": "Director",
-          "usd": 15255.0,
-          "who": "Edwards Murray Hamilton"
-        }
-      ],
-      "company": "FIRST FINANCIAL BANKSHARES INC",
-      "score": 0.39,
-      "ticker": "FFIN"
     },
     "FICO": {
       "buys": [
