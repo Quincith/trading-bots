@@ -11,7 +11,7 @@
   "day": "2026-11-08",
   "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-08T13:18:19+00:00",
+  "last_scan": "2026-11-08T13:48:13+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -5758,24 +5758,6 @@
     "STRZ": {
       "buys": [
         {
-          "accession": "0002140162-26-000008",
-          "date": "2026-11-02",
-          "filed": "2026-11-03T08:40:23-05:00",
-          "price": 22.84,
-          "role": "SEE REMARKS",
-          "usd": 10506.4,
-          "who": "Kapenstein James M."
-        },
-        {
-          "accession": "0001647660-26-000019",
-          "date": "2026-11-02",
-          "filed": "2026-11-03T08:40:17-05:00",
-          "price": 22.13,
-          "role": "President and CEO, Director",
-          "usd": 110650.0,
-          "who": "Hirsch Jeffrey"
-        },
-        {
           "accession": "0001268071-26-000011",
           "date": "2026-11-02",
           "filed": "2026-11-03T16:33:59-05:00",
@@ -5786,7 +5768,7 @@
         }
       ],
       "company": "STARZ ENTERTAINMENT CORP /CN/",
-      "score": 3.25,
+      "score": 1.24,
       "ticker": "STRZ"
     },
     "SYY": {
