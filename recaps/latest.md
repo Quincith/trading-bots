@@ -1,42 +1,42 @@
-# Daily recap: Saturday, November 7, 2026
+# Daily recap: Sunday, November 8, 2026
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $0.02 (-0.03%)
+## Aggressive: flat
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.02 (-0.03%) at $77.51. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $77.51. Paper money only.
 
 **Key takeaways**
 
-- Account value: $77.53 → $77.51 (-$0.02, -0.03%).
+- Account value: $77.51 → $77.51 (no change).
 - Profit / loss since start: -$22.49 on $100.00 money put in.
-- Scout scanned 0 coins, 53 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Medium: down $0.02 (-0.02%)
+## Medium: flat
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.02 (-0.02%) at $85.00. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $85.00. Paper money only.
 
 **Key takeaways**
 
-- Account value: $85.02 → $85.00 (-$0.02, -0.02%).
+- Account value: $85.00 → $85.00 (no change).
 - Profit / loss since start: -$15.00 on $100.00 money put in.
-- Scout scanned 0 coins, 53 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.02 (+0.02%)
+## Copycat: flat
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.02 (+0.02%) at $95.23. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended flat at $95.23. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.21 → $95.23 (+$0.02, +0.02%).
+- Account value: $95.23 → $95.23 (no change).
 - Profit / loss since start: -$4.77 on $100.00 money put in.
-- Spotter read 81 insider filings from the SEC and found 11 insider purchases. Watchlist at day end: 80 stocks.
+- Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 80 stocks.
 - Top pick: UPBD (UPBOUND GROUP, INC.). 7 insiders bought $1,343,739 at about $22.71: Brown Jeffrey J (Director) $400,012; Marino Glenn P (Director) $393,414; Khouri Halim (EVP, Chief Financial Officer) $250,580 and 4 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
@@ -54,7 +54,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - No trades.
 - Open trades: none, all cash.
 
-## Fxcopy: no runs logged on 2026-11-07.
+## Fxcopy: no runs logged on 2026-11-08.
 
 ## Words to know
 

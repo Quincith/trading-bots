@@ -8,10 +8,10 @@
     "STC": "2026-10-27T13:58:38+00:00",
     "TTMI": "2026-11-02T18:07:33+00:00"
   },
-  "day": "2026-11-07",
-  "day_start_equity": 95.21,
+  "day": "2026-11-08",
+  "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-07T23:47:23+00:00",
+  "last_scan": "2026-11-08T00:17:29+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
