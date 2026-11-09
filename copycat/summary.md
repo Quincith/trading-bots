@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-09 16:20 UTC
+# Copycat strategy — 2026-11-09 16:50 UTC
 
 | | |
 |---|---|
-| Account value | $96.20 |
+| Account value | $96.23 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$3.80 (-3.80%) |
-| Time-weighted return (ignores when deposits happened) | -3.80% |
+| Strategy profit / loss | -$3.77 (-3.77%) |
+| Time-weighted return (ignores when deposits happened) | -3.77% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 60 new SEC filings this run. 62 stocks on the watchlist.
+Read 48 new SEC filings this run. 63 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 60 new SEC filings this run. 62 stocks on the watchlist.
 | KNOP (KNOT Offshore Partners LP) | 3.64 | 1 insider bought $43,499,993 at about $20.88: Seglem Trygve (Director) $43,499,993. |
 
 ## Notes
-- Spotter read 60 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 62 stocks, 41 big enough to copy.
+- Spotter read 48 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 63 stocks, 42 big enough to copy.
 
 _Copycat uses no AI._
