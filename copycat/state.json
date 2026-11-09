@@ -11,7 +11,7 @@
   "day": "2026-11-09",
   "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-09T00:18:57+00:00",
+  "last_scan": "2026-11-09T00:49:08+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4186,31 +4186,6 @@
       "company": "APOGEE ENTERPRISES, INC.",
       "score": 0.0,
       "ticker": "APOG"
-    },
-    "BA": {
-      "buys": [
-        {
-          "accession": "0001225208-26-008642",
-          "date": "2026-10-30",
-          "filed": "2026-11-03T19:37:23-05:00",
-          "price": 171.55,
-          "role": "Director",
-          "usd": 998421.0,
-          "who": "Buckley Mortimer J"
-        },
-        {
-          "accession": "0001225208-26-008641",
-          "date": "2026-10-30",
-          "filed": "2026-11-03T19:37:22-05:00",
-          "price": 173.026,
-          "role": "Director",
-          "usd": 510426.7,
-          "who": "MOLLENKOPF STEVEN M"
-        }
-      ],
-      "company": "BOEING CO",
-      "score": 2.93,
-      "ticker": "BA"
     },
     "BB": {
       "buys": [
