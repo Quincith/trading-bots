@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-09 12:50 UTC
+# Copycat strategy — 2026-11-09 13:19 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 5 new SEC filings this run. 60 stocks on the watchlist.
+Read 21 new SEC filings this run. 61 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 5 new SEC filings this run. 60 stocks on the watchlist.
 | KNOP (KNOT Offshore Partners LP) | 3.64 | 1 insider bought $43,499,993 at about $20.88: Seglem Trygve (Director) $43,499,993. |
 
 ## Notes
-- Spotter read 5 new insider filings and found 2 purchases (2 by officers or directors). Watchlist: 60 stocks, 40 big enough to copy.
+- Spotter read 21 new insider filings and found 9 purchases (2 by officers or directors). Watchlist: 61 stocks, 41 big enough to copy.
 
 _Copycat uses no AI._
