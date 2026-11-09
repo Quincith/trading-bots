@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $77.51 → $77.51 (no change).
 - Profit / loss since start: -$22.49 on $100.00 money put in.
-- Scout scanned 0 coins, 43 times.
+- Scout scanned 0 coins, 44 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $85.00 → $85.00 (no change).
 - Profit / loss since start: -$15.00 on $100.00 money put in.
-- Scout scanned 0 coins, 43 times.
+- Scout scanned 0 coins, 44 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $1.69 (+1.77%)
+## Copycat: up $1.23 (+1.29%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $1.69 (+1.77%) at $96.92. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $1.23 (+1.29%) at $96.46. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.23 → $96.92 (+$1.69, +1.77%).
-- Profit / loss since start: -$3.08 on $100.00 money put in.
-- Spotter read 539 insider filings from the SEC and found 37 insider purchases. Watchlist at day end: 63 stocks.
+- Account value: $95.23 → $96.46 (+$1.23, +1.29%).
+- Profit / loss since start: -$3.54 on $100.00 money put in.
+- Spotter read 563 insider filings from the SEC and found 40 insider purchases. Watchlist at day end: 63 stocks.
 - Top pick: UPBD (UPBOUND GROUP, INC.). 7 insiders bought $1,343,739 at about $22.71: Brown Jeffrey J (Director) $400,012; Marino Glenn P (Director) $393,414; Khouri Halim (EVP, Chief Financial Officer) $250,580 and 4 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.98 (+$0.04 unrealized); CHCO $19.75 (-$0.24 unrealized); LRN $15.66 (-$0.45 unrealized); MSM $20.30 (+$0.31 unrealized); STC $21.23 (+$1.32 unrealized).
+- Holding: BBT $19.96 (+$0.02 unrealized); CHCO $19.71 (-$0.28 unrealized); LRN $15.61 (-$0.50 unrealized); MSM $20.15 (+$0.16 unrealized); STC $21.04 (+$1.13 unrealized).
 
 ## Forex: flat
 
