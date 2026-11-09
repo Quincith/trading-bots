@@ -8,10 +8,10 @@
     "STC": "2026-10-27T13:58:38+00:00",
     "TTMI": "2026-11-02T18:07:33+00:00"
   },
-  "day": "2026-11-08",
+  "day": "2026-11-09",
   "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-08T23:48:57+00:00",
+  "last_scan": "2026-11-09T00:18:57+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4752,22 +4752,6 @@
       "score": 1.47,
       "ticker": "FLOC"
     },
-    "FUNC": {
-      "buys": [
-        {
-          "accession": "0001014100-26-000032",
-          "date": "2026-11-02",
-          "filed": "2026-11-03T18:50:05-05:00",
-          "price": 46.308,
-          "role": "Chairman, President & CEO, Director",
-          "usd": 3161.22,
-          "who": "Rush Jason Barry"
-        }
-      ],
-      "company": "FIRST UNITED CORP/MD/",
-      "score": 0.5,
-      "ticker": "FUNC"
-    },
     "GFS": {
       "buys": [
         {
@@ -5408,31 +5392,6 @@
       "company": "SHENANDOAH TELECOMMUNICATIONS CO/VA/",
       "score": 1.42,
       "ticker": "SHEN"
-    },
-    "SITE": {
-      "buys": [
-        {
-          "accession": "0001104659-26-122247",
-          "date": "2026-10-30",
-          "filed": "2026-11-03T18:49:28-05:00",
-          "price": 109.91,
-          "role": "CEO, Director",
-          "usd": 500090.5,
-          "who": "BLACK DOUG"
-        },
-        {
-          "accession": "0001104659-26-122247",
-          "date": "2026-10-30",
-          "filed": "2026-11-03T18:49:28-05:00",
-          "price": 110.68,
-          "role": "CEO, Director",
-          "usd": 503594.0,
-          "who": "BLACK DOUG"
-        }
-      ],
-      "company": "SiteOne Landscape Supply, Inc.",
-      "score": 2.5,
-      "ticker": "SITE"
     },
     "SPTX": {
       "buys": [

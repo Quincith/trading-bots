@@ -1,4 +1,4 @@
-# Daily recap: Sunday, November 8, 2026
+# Daily recap: Monday, November 9, 2026
 
 _Times are UTC. Paper money only._
 
@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $77.51 → $77.51 (no change).
 - Profit / loss since start: -$22.49 on $100.00 money put in.
-- Scout scanned 0 coins, 52 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $85.00 → $85.00 (no change).
 - Profit / loss since start: -$15.00 on $100.00 money put in.
-- Scout scanned 0 coins, 52 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $95.23 → $95.23 (no change).
 - Profit / loss since start: -$4.77 on $100.00 money put in.
-- Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 64 stocks.
+- Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 62 stocks.
 - Top pick: UPBD (UPBOUND GROUP, INC.). 7 insiders bought $1,343,739 at about $22.71: Brown Jeffrey J (Director) $400,012; Marino Glenn P (Director) $393,414; Khouri Halim (EVP, Chief Financial Officer) $250,580 and 4 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
@@ -54,7 +54,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - No trades.
 - Open trades: none, all cash.
 
-## Fxcopy: no runs logged on 2026-11-08.
+## Fxcopy: no runs logged on 2026-11-09.
 
 ## Words to know
 
