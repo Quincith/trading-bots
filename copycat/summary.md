@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-09 23:21 UTC
+# Copycat strategy — 2026-11-09 23:51 UTC
 
 | | |
 |---|---|
-| Account value | $96.23 |
+| Account value | $96.17 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$3.77 (-3.77%) |
-| Time-weighted return (ignores when deposits happened) | -3.77% |
+| Strategy profit / loss | -$3.83 (-3.83%) |
+| Time-weighted return (ignores when deposits happened) | -3.83% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 19 new SEC filings this run. 74 stocks on the watchlist.
+Read 27 new SEC filings this run. 74 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 19 new SEC filings this run. 74 stocks on the watchlist.
 | ETRA (Electra Therapeutics, Inc.) | 3.61 | 2 insiders bought $7,210,233 at about $7.63: Orbimed Advisors Llc & Orbimed Capital Gp Vii Llc & Orbimed Genesis Gp Llc (Director, 10% owner) $3,605,116; Gordon Carl L (Director, 10% owner) $3,605,116. |
 
 ## Notes
-- Spotter read 19 new insider filings and found 2 purchases (2 by officers or directors). Watchlist: 74 stocks, 50 big enough to copy.
+- Spotter read 27 new insider filings and found 5 purchases (0 by officers or directors). Watchlist: 74 stocks, 50 big enough to copy.
 
 _Copycat uses no AI._

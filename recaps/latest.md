@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $77.51 → $77.51 (no change).
 - Profit / loss since start: -$22.49 on $100.00 money put in.
-- Scout scanned 0 coins, 49 times.
+- Scout scanned 0 coins, 50 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $85.00 → $85.00 (no change).
 - Profit / loss since start: -$15.00 on $100.00 money put in.
-- Scout scanned 0 coins, 49 times.
+- Scout scanned 0 coins, 50 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $1.00 (+1.05%)
+## Copycat: up $0.94 (+0.99%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $1.00 (+1.05%) at $96.23. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.94 (+0.99%) at $96.17. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.23 → $96.23 (+$1.00, +1.05%).
-- Profit / loss since start: -$3.77 on $100.00 money put in.
-- Spotter read 1008 insider filings from the SEC and found 136 insider purchases. Watchlist at day end: 74 stocks.
+- Account value: $95.23 → $96.17 (+$0.94, +0.99%).
+- Profit / loss since start: -$3.83 on $100.00 money put in.
+- Spotter read 1035 insider filings from the SEC and found 141 insider purchases. Watchlist at day end: 74 stocks.
 - Top pick: MTDR (Matador Resources Co). 8 insiders bought $625,186 at about $51.39: Foran Joseph Wm (Chairman and CEO, Director) $256,800; Calvert Christopher P (EVP and CFO) $105,140; Appel Shelley F (Director) $67,521 and 5 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.88 (-$0.06 unrealized); CHCO $19.70 (-$0.29 unrealized); LRN $15.62 (-$0.49 unrealized); MSM $20.13 (+$0.14 unrealized); STC $20.89 (+$0.98 unrealized).
+- Holding: BBT $19.88 (-$0.06 unrealized); CHCO $19.70 (-$0.29 unrealized); LRN $15.57 (-$0.54 unrealized); MSM $20.13 (+$0.14 unrealized); STC $20.89 (+$0.98 unrealized).
 
 ## Forex: flat
 
