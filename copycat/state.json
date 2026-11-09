@@ -11,7 +11,7 @@
   "day": "2026-11-09",
   "day_start_equity": 95.23,
   "halted_reason": null,
-  "last_scan": "2026-11-09T00:53:13+00:00",
+  "last_scan": "2026-11-09T01:19:09+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -5176,22 +5176,6 @@
       "company": "Blackstone Real Estate Income Trust, Inc.",
       "score": 2.08,
       "ticker": "NONE"
-    },
-    "NPKI": {
-      "buys": [
-        {
-          "accession": "0001724571-26-000004",
-          "date": "2026-11-02",
-          "filed": "2026-11-03T19:55:18-05:00",
-          "price": 9.24,
-          "role": "Director",
-          "usd": 138600.0,
-          "who": "MINGE JOHN C"
-        }
-      ],
-      "company": "NPK International Inc.",
-      "score": 1.14,
-      "ticker": "NPKI"
     },
     "PAM": {
       "buys": [
