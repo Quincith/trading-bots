@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $77.51 → $77.51 (no change).
 - Profit / loss since start: -$22.49 on $100.00 money put in.
-- Scout scanned 0 coins, 24 times.
+- Scout scanned 0 coins, 25 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $85.00 → $85.00 (no change).
 - Profit / loss since start: -$15.00 on $100.00 money put in.
-- Scout scanned 0 coins, 24 times.
+- Scout scanned 0 coins, 25 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $96.17 → $96.02 (-$0.15, -0.16%).
 - Profit / loss since start: -$3.98 on $100.00 money put in.
-- Spotter read 52 insider filings from the SEC and found 11 insider purchases. Watchlist at day end: 77 stocks.
+- Spotter read 75 insider filings from the SEC and found 22 insider purchases. Watchlist at day end: 77 stocks.
 - Top pick: MTDR (Matador Resources Co). 8 insiders bought $625,186 at about $51.39: Foran Joseph Wm (Chairman and CEO, Director) $256,800; Calvert Christopher P (EVP and CFO) $105,140; Appel Shelley F (Director) $67,521 and 5 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
