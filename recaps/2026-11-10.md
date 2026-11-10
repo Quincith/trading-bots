@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $77.51 → $77.51 (no change).
 - Profit / loss since start: -$22.49 on $100.00 money put in.
-- Scout scanned 0 coins, 34 times.
+- Scout scanned 0 coins, 35 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $85.00 → $85.00 (no change).
 - Profit / loss since start: -$15.00 on $100.00 money put in.
-- Scout scanned 0 coins, 34 times.
+- Scout scanned 0 coins, 35 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.80 (-0.83%)
+## Copycat: down $0.73 (-0.76%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.80 (-0.83%) at $95.37. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.73 (-0.76%) at $95.44. Paper money only.
 
 **Key takeaways**
 
-- Account value: $96.17 → $95.37 (-$0.80, -0.83%).
-- Profit / loss since start: -$4.63 on $100.00 money put in.
-- Spotter read 229 insider filings from the SEC and found 54 insider purchases. Watchlist at day end: 75 stocks.
+- Account value: $96.17 → $95.44 (-$0.73, -0.76%).
+- Profit / loss since start: -$4.56 on $100.00 money put in.
+- Spotter read 268 insider filings from the SEC and found 56 insider purchases. Watchlist at day end: 75 stocks.
 - Top pick: TSM (TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD). 31 insiders bought $416,558 at about $166.96: Splinter Michael R (Director) $299,880; Wei Che-Chia (Chairman and CEO, Director) $10,928; Chin Yung-Pei (EVP and Co-COO) $5,146 and 28 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.71 (-$0.23 unrealized); CHCO $19.50 (-$0.49 unrealized); LRN $15.65 (-$0.46 unrealized); MSM $20.14 (+$0.15 unrealized); STC $20.36 (+$0.45 unrealized).
+- Holding: BBT $19.73 (-$0.21 unrealized); CHCO $19.54 (-$0.45 unrealized); LRN $15.69 (-$0.42 unrealized); MSM $20.17 (+$0.18 unrealized); STC $20.32 (+$0.41 unrealized).
 
 ## Forex: flat
 
