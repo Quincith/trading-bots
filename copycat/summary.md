@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-10 21:23 UTC
+# Copycat strategy — 2026-11-10 21:53 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 163 new SEC filings this run. 76 stocks on the watchlist.
+Read 202 new SEC filings this run. 77 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 163 new SEC filings this run. 76 stocks on the watchlist.
 | KMI (KINDER MORGAN, INC.) | 3.68 | 1 insider bought $14,994,200 at about $29.99: Kinder Richard D (Executive Chairman, Director, 10% owner) $14,994,200. |
 
 ## Notes
-- Spotter read 163 new insider filings and found 9 purchases (4 by officers or directors). Watchlist: 76 stocks, 53 big enough to copy.
+- Spotter read 202 new insider filings and found 15 purchases (8 by officers or directors). Watchlist: 77 stocks, 54 big enough to copy.
 
 _Copycat uses no AI._
