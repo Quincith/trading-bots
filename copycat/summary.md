@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-10 13:22 UTC
+# Copycat strategy — 2026-11-10 13:52 UTC
 
 | | |
 |---|---|
-| Account value | $96.78 |
+| Account value | $96.30 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$3.22 (-3.22%) |
-| Time-weighted return (ignores when deposits happened) | -3.22% |
+| Strategy profit / loss | -$3.70 (-3.70%) |
+| Time-weighted return (ignores when deposits happened) | -3.70% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 5 new SEC filings this run. 77 stocks on the watchlist.
+Read 7 new SEC filings this run. 76 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 5 new SEC filings this run. 77 stocks on the watchlist.
 | KMI (KINDER MORGAN, INC.) | 3.68 | 1 insider bought $14,994,200 at about $29.99: Kinder Richard D (Executive Chairman, Director, 10% owner) $14,994,200. |
 
 ## Notes
-- Spotter read 5 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 77 stocks, 51 big enough to copy.
+- Spotter read 7 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 76 stocks, 50 big enough to copy.
 
 _Copycat uses no AI._
