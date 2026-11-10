@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-10 02:21 UTC
+# Copycat strategy — 2026-11-10 02:51 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 3 new SEC filings this run. 76 stocks on the watchlist.
+Read 4 new SEC filings this run. 77 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 3 new SEC filings this run. 76 stocks on the watchlist.
 | ETRA (Electra Therapeutics, Inc.) | 3.61 | 2 insiders bought $7,210,233 at about $7.63: Orbimed Advisors Llc & Orbimed Capital Gp Vii Llc & Orbimed Genesis Gp Llc (Director, 10% owner) $3,605,116; Gordon Carl L (Director, 10% owner) $3,605,116. |
 
 ## Notes
-- Spotter read 3 new insider filings and found 5 purchases (5 by officers or directors). Watchlist: 76 stocks, 51 big enough to copy.
+- Spotter read 4 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 77 stocks, 51 big enough to copy.
 
 _Copycat uses no AI._
