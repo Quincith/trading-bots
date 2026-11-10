@@ -1,4 +1,4 @@
-# Daily recap: Monday, November 9, 2026
+# Daily recap: Tuesday, November 10, 2026
 
 _Times are UTC. Paper money only._
 
@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $77.51 → $77.51 (no change).
 - Profit / loss since start: -$22.49 on $100.00 money put in.
-- Scout scanned 0 coins, 50 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,20 +23,20 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $85.00 → $85.00 (no change).
 - Profit / loss since start: -$15.00 on $100.00 money put in.
-- Scout scanned 0 coins, 50 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.94 (+0.99%)
+## Copycat: flat
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.94 (+0.99%) at $96.17. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended flat at $96.17. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.23 → $96.17 (+$0.94, +0.99%).
+- Account value: $96.17 → $96.17 (no change).
 - Profit / loss since start: -$3.83 on $100.00 money put in.
-- Spotter read 1035 insider filings from the SEC and found 141 insider purchases. Watchlist at day end: 74 stocks.
+- Spotter read 11 insider filings from the SEC and found 3 insider purchases. Watchlist at day end: 74 stocks.
 - Top pick: MTDR (Matador Resources Co). 8 insiders bought $625,186 at about $51.39: Foran Joseph Wm (Chairman and CEO, Director) $256,800; Calvert Christopher P (EVP and CFO) $105,140; Appel Shelley F (Director) $67,521 and 5 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
@@ -50,12 +50,11 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 
 - Account value: $99.83 → $99.83 (no change).
 - Profit / loss since start: -$0.17 on $100.00 money put in.
-- Marked the opening range on 7 currency pairs at the London open.
-- Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (skip), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
+- No opening range marked today (a weekend, a holiday, or the check came too late).
 - No trades.
 - Open trades: none, all cash.
 
-## Fxcopy: no runs logged on 2026-11-09.
+## Fxcopy: no runs logged on 2026-11-10.
 
 ## Words to know
 
