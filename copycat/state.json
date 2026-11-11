@@ -11,7 +11,7 @@
   "day": "2026-11-11",
   "day_start_equity": 96.04,
   "halted_reason": null,
-  "last_scan": "2026-11-11T21:54:56+00:00",
+  "last_scan": "2026-11-11T22:25:07+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4587,22 +4587,6 @@
       "score": 2.92,
       "ticker": "ETRA"
     },
-    "FFAI": {
-      "buys": [
-        {
-          "accession": "0001213900-26-116957",
-          "date": "2026-11-04",
-          "filed": "2026-11-06T16:56:48-05:00",
-          "price": 100.0,
-          "role": "Executive Chairman, Director",
-          "usd": 100.0,
-          "who": "Wang Jiawei"
-        }
-      ],
-      "company": "FARADAY FUTURE INTELLIGENT ELECTRIC INC.",
-      "score": 0.5,
-      "ticker": "FFAI"
-    },
     "FGBI": {
       "buys": [
         {
@@ -4868,49 +4852,6 @@
       "company": "KENNAMETAL INC",
       "score": 1.17,
       "ticker": "KMT"
-    },
-    "KOD": {
-      "buys": [
-        {
-          "accession": "0001193125-26-451994",
-          "date": "2026-11-04",
-          "filed": "2026-11-06T16:55:41-05:00",
-          "price": 98.51,
-          "role": "Director, 10% owner",
-          "usd": 861174.42,
-          "who": "BAKER BROS. ADVISORS LP & 667, L.P. & Baker Bros. Advisors (GP) LLC & Baker Brothers Life Sciences LP & BAKER FELIX & BAKER JULIAN"
-        },
-        {
-          "accession": "0001193125-26-451994",
-          "date": "2026-11-04",
-          "filed": "2026-11-06T16:55:41-05:00",
-          "price": 98.51,
-          "role": "Director, 10% owner",
-          "usd": 14965245.16,
-          "who": "BAKER BROS. ADVISORS LP & 667, L.P. & Baker Bros. Advisors (GP) LLC & Baker Brothers Life Sciences LP & BAKER FELIX & BAKER JULIAN"
-        },
-        {
-          "accession": "0001193125-26-451994",
-          "date": "2026-11-05",
-          "filed": "2026-11-06T16:55:41-05:00",
-          "price": 98.51,
-          "role": "Director, 10% owner",
-          "usd": 463292.53,
-          "who": "BAKER BROS. ADVISORS LP & 667, L.P. & Baker Bros. Advisors (GP) LLC & Baker Brothers Life Sciences LP & BAKER FELIX & BAKER JULIAN"
-        },
-        {
-          "accession": "0001193125-26-451994",
-          "date": "2026-11-05",
-          "filed": "2026-11-06T16:55:41-05:00",
-          "price": 98.51,
-          "role": "Director, 10% owner",
-          "usd": 8051123.79,
-          "who": "BAKER BROS. ADVISORS LP & 667, L.P. & Baker Bros. Advisors (GP) LLC & Baker Brothers Life Sciences LP & BAKER FELIX & BAKER JULIAN"
-        }
-      ],
-      "company": "Kodiak Sciences Inc.",
-      "score": 3.39,
-      "ticker": "KOD"
     },
     "KRT": {
       "buys": [
