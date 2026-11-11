@@ -1,11 +1,11 @@
-# Copycat strategy — 2026-11-11 15:24 UTC
+# Copycat strategy — 2026-11-11 15:54 UTC
 
 | | |
 |---|---|
-| Account value | $95.65 |
+| Account value | $95.28 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$4.35 (-4.35%) |
-| Time-weighted return (ignores when deposits happened) | -4.35% |
+| Strategy profit / loss | -$4.72 (-4.72%) |
+| Time-weighted return (ignores when deposits happened) | -4.72% |
 
 **Risk:** Max open positions reached; only managing exits.
 

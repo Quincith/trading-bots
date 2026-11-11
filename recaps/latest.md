@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $77.51 → $77.51 (no change).
 - Profit / loss since start: -$22.49 on $100.00 money put in.
-- Scout scanned 0 coins, 33 times.
+- Scout scanned 0 coins, 34 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $85.00 → $85.00 (no change).
 - Profit / loss since start: -$15.00 on $100.00 money put in.
-- Scout scanned 0 coins, 33 times.
+- Scout scanned 0 coins, 34 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.39 (-0.41%)
+## Copycat: down $0.76 (-0.79%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.39 (-0.41%) at $95.65. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.76 (-0.79%) at $95.28. Paper money only.
 
 **Key takeaways**
 
-- Account value: $96.04 → $95.65 (-$0.39, -0.41%).
-- Profit / loss since start: -$4.35 on $100.00 money put in.
+- Account value: $96.04 → $95.28 (-$0.76, -0.79%).
+- Profit / loss since start: -$4.72 on $100.00 money put in.
 - Spotter read 109 insider filings from the SEC and found 19 insider purchases. Watchlist at day end: 78 stocks.
 - Top pick: TSM (TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD). 31 insiders bought $416,558 at about $166.96: Splinter Michael R (Director) $299,880; Wei Che-Chia (Chairman and CEO, Director) $10,928; Chin Yung-Pei (EVP and Co-COO) $5,146 and 28 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.91 (-$0.03 unrealized); CHCO $19.56 (-$0.43 unrealized); LRN $15.87 (-$0.24 unrealized); MSM $20.31 (+$0.32 unrealized); STC $20.00 (+$0.09 unrealized).
+- Holding: BBT $19.85 (-$0.09 unrealized); CHCO $19.51 (-$0.48 unrealized); LRN $15.84 (-$0.27 unrealized); MSM $20.40 (+$0.41 unrealized); STC $19.68 (-$0.23 unrealized).
 
 ## Forex: flat
 
