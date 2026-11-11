@@ -11,7 +11,7 @@
   "day": "2026-11-11",
   "day_start_equity": 96.04,
   "halted_reason": null,
-  "last_scan": "2026-11-11T20:58:01+00:00",
+  "last_scan": "2026-11-11T21:24:58+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -5412,22 +5412,6 @@
       "score": 2.61,
       "ticker": "PAM"
     },
-    "ROAD": {
-      "buys": [
-        {
-          "accession": "0001628280-26-071701",
-          "date": "2026-11-06",
-          "filed": "2026-11-06T16:17:41-05:00",
-          "price": 79.7,
-          "role": "Director",
-          "usd": 7970.0,
-          "who": "Skelly Noreen E"
-        }
-      ],
-      "company": "Construction Partners, Inc.",
-      "score": 0.0,
-      "ticker": "ROAD"
-    },
     "ROK": {
       "buys": [
         {
@@ -5641,22 +5625,6 @@
       "company": "SunocoCorp LLC",
       "score": 0.97,
       "ticker": "SUNC"
-    },
-    "TBBK": {
-      "buys": [
-        {
-          "accession": "0002039852-26-000136",
-          "date": "2026-11-04",
-          "filed": "2026-11-06T16:06:13-05:00",
-          "price": 47.495,
-          "role": "Director",
-          "usd": 47495.0,
-          "who": "Mudick Stephanie B"
-        }
-      ],
-      "company": "Bancorp, Inc.",
-      "score": 0.68,
-      "ticker": "TBBK"
     },
     "TRNS": {
       "buys": [
