@@ -11,7 +11,7 @@
   "day": "2026-11-11",
   "day_start_equity": 96.04,
   "halted_reason": null,
-  "last_scan": "2026-11-11T17:54:38+00:00",
+  "last_scan": "2026-11-11T18:24:45+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4888,15 +4888,6 @@
     "KMT": {
       "buys": [
         {
-          "accession": "0001782435-26-000005",
-          "date": "2026-11-05",
-          "filed": "2026-11-06T12:57:53-05:00",
-          "price": 23.624,
-          "role": "President and CEO, Director",
-          "usd": 165368.0,
-          "who": "Chowbey Sanjay"
-        },
-        {
           "accession": "0001700266-26-000004",
           "date": "2026-11-06",
           "filed": "2026-11-09T13:22:02-05:00",
@@ -4907,7 +4898,7 @@
         }
       ],
       "company": "KENNAMETAL INC",
-      "score": 2.58,
+      "score": 1.17,
       "ticker": "KMT"
     },
     "KOD": {
@@ -4968,31 +4959,6 @@
       "company": "Karat Packaging Inc.",
       "score": 0.5,
       "ticker": "KRT"
-    },
-    "KYN": {
-      "buys": [
-        {
-          "accession": "0002025837-26-000003",
-          "date": "2026-11-05",
-          "filed": "2026-11-06T13:11:41-05:00",
-          "price": 13.215,
-          "role": "Executive Vice President",
-          "usd": 51538.5,
-          "who": "Little Harrison James"
-        },
-        {
-          "accession": "0001331674-26-000005",
-          "date": "2026-11-05",
-          "filed": "2026-11-06T13:01:41-05:00",
-          "price": 13.2434,
-          "role": "President, Director",
-          "usd": 331085.0,
-          "who": "Baker James C"
-        }
-      ],
-      "company": "Kayne Anderson Energy Infrastructure Fund, Inc.",
-      "score": 2.83,
-      "ticker": "KYN"
     },
     "LAW": {
       "buys": [
