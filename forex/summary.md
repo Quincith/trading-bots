@@ -1,4 +1,4 @@
-# Forex office — 2026-11-11 15:54 UTC
+# Forex office — 2026-11-11 16:24 UTC
 
 _OANDA practice account. This office counts only its own trades, starting from $100.00._
 
@@ -20,5 +20,8 @@ _OANDA practice account. This office counts only its own trades, starting from $
 | USD/CAD | 1.42136 | Range 1.42082 to 1.42194 (11.2 pips): too narrow, fees would be over 10% of the risk. Skipped today. |  | **SKIP** |
 | USD/CHF | 0.82806 | Range 0.82718 to 0.82868 (15.0 pips): too narrow, fees would be over 10% of the risk. Skipped today. |  | **SKIP** |
 | USD/JPY | 158.886 | Range 158.835 to 158.938 (10.3 pips): too narrow, fees would be over 10% of the risk. Skipped today. |  | **SKIP** |
+
+## Notes
+- After 16:00 London time: nothing is held overnight. Next session tomorrow.
 
 _No AI is used in the Forex wing._
