@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-12 10:56 UTC
+# Copycat strategy — 2026-11-12 11:25 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 0 new SEC filings this run. 65 stocks on the watchlist.
+Read 138 new SEC filings this run. 69 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -19,9 +19,9 @@ Read 0 new SEC filings this run. 65 stocks on the watchlist.
 | FUN (Six Flags Entertainment Corporation/NEW) | 5.18 | 3 insiders bought $15,066,320 at about $10.29: Jaffer Rehan (Director) $14,929,000; Haddrill Richard M (Executive Chair, Director) $90,720; Bennett Christopher Lawrence (Chief Legal Officer) $46,600. |
 | MTDR (Matador Resources Co) | 5.12 | 5 insiders bought $418,465 at about $51.10: Foran Joseph Wm (Chairman and CEO, Director) $256,800; Appel Shelley F (Director) $67,521; Stetson Glenn W (EVP and COO) $50,800 and 2 more. |
 | OBIO (Orchestra BioMed Holdings, Inc.) | 4.11 | 4 insiders bought $230,000 at about $5.00: Fain Eric S (Director) $100,000; Pacitti David (Director) $100,000; Hochman David P (See Remarks, Director) $25,000 and 1 more. |
-| FLOC (Flowco Holdings Inc.) | 3.33 | 2 insiders bought $1,201,151 at about $19.47: Edwards Joseph R (President and CEO, Director) $1,187,945; Chmelev Alexander (Director) $13,206. |
+| COHR (COHERENT CORP.) | 3.34 | 2 insiders bought $1,220,285 at about $203.38: Anderson James Robert (CEO, Director) $997,400; Digirolomo Enrico (Director) $222,885. |
 
 ## Notes
-- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 65 stocks, 46 big enough to copy.
+- Spotter read 138 new insider filings and found 20 purchases (6 by officers or directors). Watchlist: 69 stocks, 49 big enough to copy.
 
 _Copycat uses no AI._
