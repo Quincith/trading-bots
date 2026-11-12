@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-12 01:25 UTC
+# Copycat strategy — 2026-11-12 01:32 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 0 new SEC filings this run. 66 stocks on the watchlist.
+Read 0 new SEC filings this run. 65 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 0 new SEC filings this run. 66 stocks on the watchlist.
 | FLOC (Flowco Holdings Inc.) | 3.33 | 2 insiders bought $1,201,151 at about $19.47: Edwards Joseph R (President and CEO, Director) $1,187,945; Chmelev Alexander (Director) $13,206. |
 
 ## Notes
-- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 66 stocks, 46 big enough to copy.
+- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 65 stocks, 46 big enough to copy.
 
 _Copycat uses no AI._
