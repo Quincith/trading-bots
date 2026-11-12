@@ -1,6 +1,6 @@
 {
-  "checked": "2026-11-12T04:55:35+00:00",
-  "close_day": "2026-11-10",
+  "checked": "2026-11-12T07:55:39+00:00",
+  "close_day": "2026-11-11",
   "score": 1,
   "level": "CALM",
   "lights": {
@@ -20,7 +20,7 @@
       "title": "Lenders nervous",
       "on": false,
       "why": "Junk bonds fell 2%+ against safe bonds in 20 trading days.",
-      "reading": "junk vs safe bonds -1.3% in 20 days"
+      "reading": "junk vs safe bonds -0.5% in 20 days"
     },
     "oil": {
       "title": "Oil shock",
@@ -32,25 +32,25 @@
       "title": "Rate-hike bets",
       "on": false,
       "why": "The 2-year Treasury yield rose 0.5+ points in 3 months.",
-      "reading": "2-year yield 4.56%, +0.36 pts in 3 months"
+      "reading": "2-year yield 4.56%, +0.41 pts in 3 months"
     },
     "breadth": {
       "title": "Few stocks holding up",
       "on": false,
       "why": "The average stock fell 2%+ against the big-company index in 20 trading days.",
-      "reading": "average stock vs big caps +7.4% in 20 days"
+      "reading": "average stock vs big caps +6.3% in 20 days"
     },
     "crack": {
       "title": "Nasdaq trend cracking",
       "on": true,
       "why": "The Nasdaq 100 (QQQ) closed below its 50-day average.",
-      "reading": "QQQ -6.2% vs its 50-day average"
+      "reading": "QQQ -4.0% vs its 50-day average"
     }
   },
   "fear_index": 19.46,
   "headlines": {
     "on": false,
-    "last_5_days": 27,
+    "last_5_days": 25,
     "usual_5_days": 13.9
   },
   "last_alert": "2026-11-06T14:45:18+00:00"
