@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-12 13:56 UTC
+# Copycat strategy — 2026-11-12 14:26 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 43 new SEC filings this run. 72 stocks on the watchlist.
+Read 60 new SEC filings this run. 73 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 43 new SEC filings this run. 72 stocks on the watchlist.
 | OBIO (Orchestra BioMed Holdings, Inc.) | 4.11 | 4 insiders bought $230,000 at about $5.00: Fain Eric S (Director) $100,000; Pacitti David (Director) $100,000; Hochman David P (See Remarks, Director) $25,000 and 1 more. |
 
 ## Notes
-- Spotter read 43 new insider filings and found 7 purchases (1 by officers or directors). Watchlist: 72 stocks, 52 big enough to copy.
+- Spotter read 60 new insider filings and found 5 purchases (2 by officers or directors). Watchlist: 73 stocks, 53 big enough to copy.
 
 _Copycat uses no AI._
