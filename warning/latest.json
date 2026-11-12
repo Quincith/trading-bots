@@ -1,8 +1,8 @@
 {
-  "checked": "2026-11-12T19:56:50+00:00",
+  "checked": "2026-11-12T22:57:00+00:00",
   "close_day": "2026-11-11",
-  "score": 1,
-  "level": "CALM",
+  "score": 2,
+  "level": "CAUTION",
   "lights": {
     "fear": {
       "title": "Fear index high",
@@ -30,9 +30,9 @@
     },
     "rates": {
       "title": "Rate-hike bets",
-      "on": false,
+      "on": true,
       "why": "The 2-year Treasury yield rose 0.5+ points in 3 months.",
-      "reading": "2-year yield 4.56%, +0.41 pts in 3 months"
+      "reading": "2-year yield 4.73%, +0.58 pts in 3 months"
     },
     "breadth": {
       "title": "Few stocks holding up",
