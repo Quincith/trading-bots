@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-12 20:56 UTC
+# Copycat strategy — 2026-11-12 21:26 UTC
 
 | | |
 |---|---|
-| Account value | $94.10 |
+| Account value | $94.00 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$5.90 (-5.90%) |
-| Time-weighted return (ignores when deposits happened) | -5.90% |
+| Strategy profit / loss | -$6.00 (-6.00%) |
+| Time-weighted return (ignores when deposits happened) | -6.00% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 25 new SEC filings this run. 77 stocks on the watchlist.
+Read 237 new SEC filings this run. 83 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 25 new SEC filings this run. 77 stocks on the watchlist.
 | OBIO (Orchestra BioMed Holdings, Inc.) | 4.11 | 4 insiders bought $230,000 at about $5.00: Fain Eric S (Director) $100,000; Pacitti David (Director) $100,000; Hochman David P (See Remarks, Director) $25,000 and 1 more. |
 
 ## Notes
-- Spotter read 25 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 77 stocks, 57 big enough to copy.
+- Spotter read 237 new insider filings and found 26 purchases (13 by officers or directors). Watchlist: 83 stocks, 61 big enough to copy.
 
 _Copycat uses no AI._
