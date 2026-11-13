@@ -2,45 +2,45 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $4.06 (-5.13%)
+## Aggressive: down $5.29 (-6.68%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $4.06 (-5.13%) at $75.10. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $5.29 (-6.68%) at $73.87. Paper money only.
 
 **Key takeaways**
 
-- Account value: $79.16 → $75.10 (-$4.06, -5.13%).
-- Profit / loss since start: -$24.90 on $100.00 money put in.
-- Scout scanned 0 coins, 45 times.
+- Account value: $79.16 → $73.87 (-$5.29, -6.68%).
+- Profit / loss since start: -$26.13 on $100.00 money put in.
+- Scout scanned 0 coins, 46 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $73.55 (-$2.40 unrealized).
+- Holding: TQQQ $72.32 (-$3.63 unrealized).
 
-## Medium: down $3.01 (-3.49%)
+## Medium: down $3.93 (-4.56%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $3.01 (-3.49%) at $83.25. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $3.93 (-4.56%) at $82.33. Paper money only.
 
 **Key takeaways**
 
-- Account value: $86.26 → $83.25 (-$3.01, -3.49%).
-- Profit / loss since start: -$16.75 on $100.00 money put in.
-- Scout scanned 0 coins, 45 times.
+- Account value: $86.26 → $82.33 (-$3.93, -4.56%).
+- Profit / loss since start: -$17.67 on $100.00 money put in.
+- Scout scanned 0 coins, 46 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $81.55 (-$1.74 unrealized).
+- Holding: QLD $80.63 (-$2.66 unrealized).
 
-## Copycat: up $0.56 (+0.60%)
+## Copycat: up $0.61 (+0.65%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.56 (+0.60%) at $94.56. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.61 (+0.65%) at $94.61. Paper money only.
 
 **Key takeaways**
 
-- Account value: $94.00 → $94.56 (+$0.56, +0.60%).
-- Profit / loss since start: -$5.44 on $100.00 money put in.
-- Spotter read 729 insider filings from the SEC and found 63 insider purchases. Watchlist at day end: 111 stocks.
+- Account value: $94.00 → $94.61 (+$0.61, +0.65%).
+- Profit / loss since start: -$5.39 on $100.00 money put in.
+- Spotter read 919 insider filings from the SEC and found 99 insider purchases. Watchlist at day end: 115 stocks.
 - Top pick: TSM (TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD). 31 insiders bought $416,558 at about $166.96: Splinter Michael R (Director) $299,880; Wei Che-Chia (Chairman and CEO, Director) $10,928; Chin Yung-Pei (EVP and Co-COO) $5,146 and 28 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.95 (+$0.01 unrealized); CHCO $19.62 (-$0.37 unrealized); LRN $15.55 (-$0.56 unrealized); MSM $20.02 (+$0.03 unrealized); STC $19.43 (-$0.48 unrealized).
+- Holding: BBT $19.93 (-$0.01 unrealized); CHCO $19.61 (-$0.38 unrealized); LRN $15.59 (-$0.52 unrealized); MSM $20.00 (+$0.01 unrealized); STC $19.47 (-$0.44 unrealized).
 
 ## Forex: flat
 
