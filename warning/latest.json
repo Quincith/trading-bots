@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-13T19:58:57+00:00",
+  "checked": "2026-11-13T22:58:59+00:00",
   "close_day": "2026-11-12",
   "score": 2,
   "level": "CAUTION",
@@ -32,7 +32,7 @@
       "title": "Rate-hike bets",
       "on": true,
       "why": "The 2-year Treasury yield rose 0.5+ points in 3 months.",
-      "reading": "2-year yield 4.73%, +0.56 pts in 3 months"
+      "reading": "2-year yield 4.86%, +0.69 pts in 3 months"
     },
     "breadth": {
       "title": "Few stocks holding up",
