@@ -1,11 +1,11 @@
-# Aggressive strategy — 2026-11-13 14:27 UTC
+# Aggressive strategy — 2026-11-13 14:58 UTC
 
 | | |
 |---|---|
-| Account value | $78.41 |
+| Account value | $75.74 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$21.59 (-21.59%) |
-| Time-weighted return (ignores when deposits happened) | -21.59% |
+| Strategy profit / loss | -$24.26 (-24.26%) |
+| Time-weighted return (ignores when deposits happened) | -24.26% |
 
 ## Notes
 - QQQ closed at $688.17 on 2026-11-12; its 200-day average is $680.94 (+1.1%). Uptrend, so the rule holds TQQQ.
