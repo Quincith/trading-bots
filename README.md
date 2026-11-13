@@ -376,6 +376,18 @@ holding QQQ) and passed every check except the worst drop (58% vs the old 40% li
 $1,274 (worst drop 42%). The other three rules made money but failed the lab. Tech had a great decade, so
 this is no promise: a long crash or a one-day collapse (TQQQ fell 34% on one day in March 2020) can hit hard.
 
+## Basket test (a reel's "robot actuator" stocks)
+
+**Actions → Basket test → Run workflow** (`tradebots/basket.py`) holds Moog (MOG.A), Timken (TKR) and Novanta
+(NOVT) in equal shares, rebalanced yearly, on 10 years of Alpaca daily prices through the lab's checks against
+just holding the S&P 500 (SPY). It also shows a version that only holds them while SPY is above its 200-day
+average, the four-stock basket with USA Rare Earth (USAR) since it listed in March 2025, the robotics fund
+BOTZ, and whether buying a 20% dip in these stocks paid off in the past. It only reports; nothing goes live.
+
+**Result (November 2026):** neither version passed. The held basket made $100 into $739 over 10 years (SPY $418),
+but on the unseen last 4 years it only tied the S&P 500 (+112% vs +114%) with deeper drops (-48% vs -34%), and
+the stocks were picked in 2026 after they had already risen, so the 10-year number flatters them.
+
 ## Buttons you might need
 
 All of these are under **Actions → Control panel → Run workflow**:
