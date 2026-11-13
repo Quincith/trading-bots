@@ -11,7 +11,7 @@
   "day": "2026-11-13",
   "day_start_equity": 94.0,
   "halted_reason": null,
-  "last_scan": "2026-11-13T01:27:06+00:00",
+  "last_scan": "2026-11-13T01:57:09+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -60,9 +60,6 @@
     }
   },
   "seen_filings": [
-    "0001213900-26-117228",
-    "0001213900-26-117227",
-    "0001213900-26-117225",
     "0001104659-26-124179",
     "0001213900-26-117221",
     "0001213900-26-117219",
@@ -4059,7 +4056,10 @@
     "0001193125-26-458961",
     "0001193125-26-458960",
     "0001371285-26-000247",
-    "0001371285-26-000246"
+    "0001371285-26-000246",
+    "0001229310-26-000014",
+    "0001191420-26-000014",
+    "0002141966-26-000004"
   ],
   "watchlist": {
     "ADM": {
@@ -5390,6 +5390,166 @@
       "company": "HORNBECK OFFSHORE SERVICES, INC.",
       "score": 2.68,
       "ticker": "HOS"
+    },
+    "HPP": {
+      "buys": [
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-09",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 8.95,
+          "role": "Director",
+          "usd": 44750.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-09",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 9.3,
+          "role": "Director",
+          "usd": 46500.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-09",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 9.25,
+          "role": "Director",
+          "usd": 46250.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-09",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 9.2,
+          "role": "Director",
+          "usd": 46000.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-09",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 9.5,
+          "role": "Director",
+          "usd": 47500.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-10",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 8.92,
+          "role": "Director",
+          "usd": 8028.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-10",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 8.98,
+          "role": "Director",
+          "usd": 36818.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-10",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 9.05,
+          "role": "Director",
+          "usd": 45250.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-10",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 9.2,
+          "role": "Director",
+          "usd": 46000.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-10",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 9.15,
+          "role": "Director",
+          "usd": 45750.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-10",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 9.1,
+          "role": "Director",
+          "usd": 45500.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-10",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 8.95,
+          "role": "Director",
+          "usd": 89500.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-10",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 8.92,
+          "role": "Director",
+          "usd": 27562.8,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-10",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 8.85,
+          "role": "Director",
+          "usd": 16903.5,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-11",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 8.8,
+          "role": "Director",
+          "usd": 44000.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001229310-26-000014",
+          "date": "2026-11-11",
+          "filed": "2026-11-12T20:43:50-05:00",
+          "price": 8.76,
+          "role": "Director",
+          "usd": 43800.0,
+          "who": "BORTZ JON E"
+        },
+        {
+          "accession": "0001191420-26-000014",
+          "date": "2026-11-10",
+          "filed": "2026-11-12T20:43:41-05:00",
+          "price": 9.1,
+          "role": "Chief Executive Officer, Director",
+          "usd": 182000.0,
+          "who": "COLEMAN VICTOR J"
+        }
+      ],
+      "company": "Hudson Pacific Properties, Inc.",
+      "score": 3.19,
+      "ticker": "HPP"
     },
     "HXL": {
       "buys": [
