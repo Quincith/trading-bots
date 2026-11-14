@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $73.75 → $73.45 (-$0.30, -0.41%).
 - Profit / loss since start: -$26.55 on $100.00 money put in.
-- Scout scanned 0 coins, 4 times.
+- Scout scanned 0 coins, 5 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: TQQQ $71.90 (-$4.05 unrealized).
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $82.30 → $83.32 (+$1.02, +1.24%).
 - Profit / loss since start: -$16.68 on $100.00 money put in.
-- Scout scanned 0 coins, 4 times.
+- Scout scanned 0 coins, 5 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: QLD $81.62 (-$1.67 unrealized).
@@ -36,22 +36,36 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $94.61 → $94.61 (no change).
 - Profit / loss since start: -$5.39 on $100.00 money put in.
-- Spotter read 75 insider filings from the SEC and found 4 insider purchases. Watchlist at day end: 127 stocks.
+- Spotter read 78 insider filings from the SEC and found 5 insider purchases. Watchlist at day end: 127 stocks.
 - Top pick: TSM (TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD). 31 insiders bought $416,558 at about $166.96: Splinter Michael R (Director) $299,880; Wei Che-Chia (Chairman and CEO, Director) $10,928; Chin Yung-Pei (EVP and Co-COO) $5,146 and 28 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
 - Holding: BBT $19.93 (-$0.01 unrealized); CHCO $19.61 (-$0.38 unrealized); LRN $15.59 (-$0.52 unrealized); MSM $20.00 (+$0.01 unrealized); STC $19.47 (-$0.44 unrealized).
 
-## Forex: no runs logged on 2026-11-14.
+## Forex: flat
+
+Quiet day. No new currency trade. The office ended flat at $99.83. Practice money only.
+
+**Key takeaways**
+
+- Account value: $99.83 → $99.83 (no change).
+- Profit / loss since start: -$0.17 on $100.00 money put in.
+- No opening range marked today (a weekend, a holiday, or the check came too late).
+- No trades.
+- Open trades: none, all cash.
 
 ## Fxcopy: no runs logged on 2026-11-14.
 
 ## Words to know
 
 - **account value**: What everything in the account is worth right now: cash plus coins, at today's prices.
+- **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
+- **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
+- **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
 - **insider**: A company's own bosses (CEO, CFO and so on) and board members. They know the company best.
 - **money put in**: The money you added (deposits) minus any you took out. Profit is measured against this.
+- **opening range**: A pair's highest and lowest price in the first 30 minutes after a big market opens. The Forex office buys if the price breaks above it and sells if it breaks below.
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.
