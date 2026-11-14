@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $73.75 → $75.23 (+$1.48, +2.01%).
 - Profit / loss since start: -$24.77 on $100.00 money put in.
-- Scout scanned 0 coins, 10 times.
+- Scout scanned 0 coins, 11 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: TQQQ $73.68 (-$2.27 unrealized).
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $82.30 → $83.32 (+$1.02, +1.24%).
 - Profit / loss since start: -$16.68 on $100.00 money put in.
-- Scout scanned 0 coins, 10 times.
+- Scout scanned 0 coins, 11 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: QLD $81.62 (-$1.67 unrealized).
