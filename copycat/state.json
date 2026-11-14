@@ -11,7 +11,7 @@
   "day": "2026-11-14",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-14T15:29:55+00:00",
+  "last_scan": "2026-11-14T15:59:50+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -7571,22 +7571,6 @@
       "company": "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD",
       "score": 23.32,
       "ticker": "TSM"
-    },
-    "TTMI": {
-      "buys": [
-        {
-          "accession": "0001193125-26-452897",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T10:52:23-05:00",
-          "price": 61.92,
-          "role": "Director",
-          "usd": 309600.0,
-          "who": "FRANKLIN PHILIP G"
-        }
-      ],
-      "company": "TTM TECHNOLOGIES INC",
-      "score": 1.49,
-      "ticker": "TTMI"
     },
     "TXO": {
       "buys": [
