@@ -11,7 +11,7 @@
   "day": "2026-11-14",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-14T17:59:55+00:00",
+  "last_scan": "2026-11-14T18:29:58+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -6002,22 +6002,6 @@
       "company": "Kodiak Gas Services, Inc.",
       "score": 3.24,
       "ticker": "KGS"
-    },
-    "KMT": {
-      "buys": [
-        {
-          "accession": "0001700266-26-000004",
-          "date": "2026-11-06",
-          "filed": "2026-11-09T13:22:02-05:00",
-          "price": 23.5,
-          "role": "Vice President and CFO",
-          "usd": 47000.0,
-          "who": "Watson Patrick S"
-        }
-      ],
-      "company": "KENNAMETAL INC",
-      "score": 1.17,
-      "ticker": "KMT"
     },
     "KRT": {
       "buys": [
