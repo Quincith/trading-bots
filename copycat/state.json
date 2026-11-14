@@ -11,7 +11,7 @@
   "day": "2026-11-14",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-14T14:59:41+00:00",
+  "last_scan": "2026-11-14T15:29:55+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4925,31 +4925,6 @@
       "company": "Centuri Holdings, Inc.",
       "score": 2.29,
       "ticker": "CTRI"
-    },
-    "CZNC": {
-      "buys": [
-        {
-          "accession": "0001667211-26-000030",
-          "date": "2026-11-06",
-          "filed": "2026-11-09T10:10:12-05:00",
-          "price": 28.22,
-          "role": "Director",
-          "usd": 7167.88,
-          "who": "Pellegrino Frank G"
-        },
-        {
-          "accession": "0001870473-26-000032",
-          "date": "2026-11-06",
-          "filed": "2026-11-09T10:07:32-05:00",
-          "price": 28.22,
-          "role": "Director",
-          "usd": 197.54,
-          "who": "Shattuck Katherine W"
-        }
-      ],
-      "company": "CITIZENS & NORTHERN CORP",
-      "score": 0.75,
-      "ticker": "CZNC"
     },
     "DAR": {
       "buys": [
