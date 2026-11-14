@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-14 20:00 UTC
+# Copycat strategy — 2026-11-14 20:30 UTC
 
 | | |
 |---|---|
