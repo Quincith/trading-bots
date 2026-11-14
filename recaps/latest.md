@@ -2,18 +2,18 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $0.30 (-0.41%)
+## Aggressive: up $1.48 (+2.01%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.30 (-0.41%) at $73.45. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $1.48 (+2.01%) at $75.23. Paper money only.
 
 **Key takeaways**
 
-- Account value: $73.75 → $73.45 (-$0.30, -0.41%).
-- Profit / loss since start: -$26.55 on $100.00 money put in.
-- Scout scanned 0 coins, 7 times.
+- Account value: $73.75 → $75.23 (+$1.48, +2.01%).
+- Profit / loss since start: -$24.77 on $100.00 money put in.
+- Scout scanned 0 coins, 8 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $71.90 (-$4.05 unrealized).
+- Holding: TQQQ $73.68 (-$2.27 unrealized).
 
 ## Medium: up $1.02 (+1.24%)
 
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $82.30 → $83.32 (+$1.02, +1.24%).
 - Profit / loss since start: -$16.68 on $100.00 money put in.
-- Scout scanned 0 coins, 7 times.
+- Scout scanned 0 coins, 8 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: QLD $81.62 (-$1.67 unrealized).
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $94.61 → $94.61 (no change).
 - Profit / loss since start: -$5.39 on $100.00 money put in.
-- Spotter read 112 insider filings from the SEC and found 14 insider purchases. Watchlist at day end: 129 stocks.
+- Spotter read 113 insider filings from the SEC and found 15 insider purchases. Watchlist at day end: 129 stocks.
 - Top pick: TSM (TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD). 31 insiders bought $416,558 at about $166.96: Splinter Michael R (Director) $299,880; Wei Che-Chia (Chairman and CEO, Director) $10,928; Chin Yung-Pei (EVP and Co-COO) $5,146 and 28 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
