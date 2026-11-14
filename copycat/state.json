@@ -11,7 +11,7 @@
   "day": "2026-11-14",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-14T22:00:23+00:00",
+  "last_scan": "2026-11-14T22:30:25+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4078,22 +4078,6 @@
       "score": 1.49,
       "ticker": "ABCL"
     },
-    "ADM": {
-      "buys": [
-        {
-          "accession": "0001225208-26-008783",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T17:05:32-05:00",
-          "price": 70.27,
-          "role": "Director",
-          "usd": 196756.0,
-          "who": "McAtee David R II"
-        }
-      ],
-      "company": "Archer-Daniels-Midland Co",
-      "score": 1.29,
-      "ticker": "ADM"
-    },
     "AEBI": {
       "buys": [
         {
@@ -5400,22 +5384,6 @@
       "score": 1.04,
       "ticker": "GAM"
     },
-    "GFS": {
-      "buys": [
-        {
-          "accession": "0001709048-26-000266",
-          "date": "2026-11-06",
-          "filed": "2026-11-09T17:21:14-05:00",
-          "price": 38.0,
-          "role": "Director",
-          "usd": 380000.0,
-          "who": "LAZAR JACK R"
-        }
-      ],
-      "company": "GLOBALFOUNDRIES Inc.",
-      "score": 1.58,
-      "ticker": "GFS"
-    },
     "GLXY": {
       "buys": [
         {
@@ -6033,60 +6001,8 @@
       "score": 0.21,
       "ticker": "MRBK"
     },
-    "MTCH": {
-      "buys": [
-        {
-          "accession": "0000891103-26-000164",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T17:01:15-05:00",
-          "price": 38.8338,
-          "role": "Director",
-          "usd": 97084.5,
-          "who": "Schiffman Glenn"
-        }
-      ],
-      "company": "Match Group, Inc.",
-      "score": 0.99,
-      "ticker": "MTCH"
-    },
     "MTDR": {
       "buys": [
-        {
-          "accession": "0002020289-26-000008",
-          "date": "2026-11-06",
-          "filed": "2026-11-09T17:15:58-05:00",
-          "price": 50.8,
-          "role": "EVP and COO",
-          "usd": 50800.0,
-          "who": "Stetson Glenn W"
-        },
-        {
-          "accession": "0001981193-26-000006",
-          "date": "2026-11-06",
-          "filed": "2026-11-09T17:14:53-05:00",
-          "price": 50.25,
-          "role": "Director",
-          "usd": 13818.75,
-          "who": "Appel Shelley F"
-        },
-        {
-          "accession": "0001981193-26-000006",
-          "date": "2026-11-09",
-          "filed": "2026-11-09T17:14:53-05:00",
-          "price": 49.9,
-          "role": "Director",
-          "usd": 23702.5,
-          "who": "Appel Shelley F"
-        },
-        {
-          "accession": "0001981193-26-000006",
-          "date": "2026-11-09",
-          "filed": "2026-11-09T17:14:53-05:00",
-          "price": 50.0,
-          "role": "Director",
-          "usd": 30000.0,
-          "who": "Appel Shelley F"
-        },
         {
           "accession": "0001786877-26-000007",
           "date": "2026-11-09",
@@ -6107,7 +6023,7 @@
         }
       ],
       "company": "Matador Resources Co",
-      "score": 4.16,
+      "score": 2.4,
       "ticker": "MTDR"
     },
     "NGS": {
@@ -7283,31 +7199,6 @@
       "company": "Upstart Holdings, Inc.",
       "score": 2.51,
       "ticker": "UPST"
-    },
-    "WCC": {
-      "buys": [
-        {
-          "accession": "0001193125-26-453825",
-          "date": "2026-11-06",
-          "filed": "2026-11-09T17:07:39-05:00",
-          "price": 292.97,
-          "role": "EVP & CHRO",
-          "usd": 99902.77,
-          "who": "Marino Anthony S"
-        },
-        {
-          "accession": "0001193125-26-453812",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T17:02:47-05:00",
-          "price": 291.9,
-          "role": "EVP & CFO",
-          "usd": 503527.5,
-          "who": "Dev Indraneel"
-        }
-      ],
-      "company": "WESCO INTERNATIONAL INC",
-      "score": 3.03,
-      "ticker": "WCC"
     },
     "WD": {
       "buys": [
