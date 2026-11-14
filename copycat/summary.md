@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-14 21:00 UTC
+# Copycat strategy — 2026-11-14 21:30 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 0 new SEC filings this run. 121 stocks on the watchlist.
+Read 0 new SEC filings this run. 116 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 0 new SEC filings this run. 121 stocks on the watchlist.
 | MTDR (Matador Resources Co) | 4.16 | 4 insiders bought $258,530 at about $49.82: Foran Joseph Wm (Chairman and CEO, Director) $123,225; Appel Shelley F (Director) $67,521; Stetson Glenn W (EVP and COO) $50,800 and 1 more. |
 
 ## Notes
-- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 121 stocks, 91 big enough to copy.
+- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 116 stocks, 87 big enough to copy.
 
 _Copycat uses no AI._
