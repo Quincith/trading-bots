@@ -11,7 +11,7 @@
   "day": "2026-11-14",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-14T20:30:16+00:00",
+  "last_scan": "2026-11-14T21:00:18+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4657,58 +4657,6 @@
       "company": "Comstock Holding Companies, Inc.",
       "score": 0.38,
       "ticker": "CHCI"
-    },
-    "CMCO": {
-      "buys": [
-        {
-          "accession": "0001628280-26-072106",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T15:54:01-05:00",
-          "price": 17.12,
-          "role": "President & CEO, Director",
-          "usd": 92739.04,
-          "who": "Wilson David J."
-        },
-        {
-          "accession": "0001628280-26-072106",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T15:54:01-05:00",
-          "price": 17.52,
-          "role": "President & CEO, Director",
-          "usd": 5080.8,
-          "who": "Wilson David J."
-        },
-        {
-          "accession": "0001628280-26-072106",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T15:54:01-05:00",
-          "price": 16.65,
-          "role": "President & CEO, Director",
-          "usd": 68331.6,
-          "who": "Wilson David J."
-        },
-        {
-          "accession": "0001628280-26-072106",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T15:54:01-05:00",
-          "price": 17.1,
-          "role": "President & CEO, Director",
-          "usd": 103848.3,
-          "who": "Wilson David J."
-        },
-        {
-          "accession": "0001628280-26-072106",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T15:54:01-05:00",
-          "price": 16.8,
-          "role": "President & CEO, Director",
-          "usd": 281349.6,
-          "who": "Wilson David J."
-        }
-      ],
-      "company": "COLUMBUS MCKINNON CORP",
-      "score": 2.24,
-      "ticker": "CMCO"
     },
     "CMRE": {
       "buys": [
