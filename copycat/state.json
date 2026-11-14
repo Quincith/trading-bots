@@ -11,7 +11,7 @@
   "day": "2026-11-14",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-14T16:30:01+00:00",
+  "last_scan": "2026-11-14T17:00:05+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -6109,22 +6109,6 @@
       "company": "Liberty Latin America Ltd.",
       "score": 2.7,
       "ticker": "LILA"
-    },
-    "LKFN": {
-      "buys": [
-        {
-          "accession": "0001210212-26-000004",
-          "date": "2026-11-06",
-          "filed": "2026-11-09T11:36:48-05:00",
-          "price": 61.0931,
-          "role": "Director",
-          "usd": 117176.57,
-          "who": "BARTELS ROBERT E JR"
-        }
-      ],
-      "company": "LAKELAND FINANCIAL CORP",
-      "score": 1.07,
-      "ticker": "LKFN"
     },
     "LRN": {
       "buys": [
