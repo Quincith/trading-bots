@@ -1,4 +1,4 @@
-# Medium strategy — 2026-11-14 04:59 UTC
+# Medium strategy — 2026-11-14 05:29 UTC
 
 | | |
 |---|---|
@@ -8,6 +8,7 @@
 | Time-weighted return (ignores when deposits happened) | -16.68% |
 
 ## Notes
-- QQQ closed at $688.17 on 2026-11-12; its 200-day average is $680.94 (+1.1%). Uptrend, so the rule holds QLD.
+- QQQ closed at $679.89 on 2026-11-13, below its 200-day average of $681.20 (-0.2%). No uptrend, so the rule holds cash.
+- Will sell QLD when the stock market opens.
 
 _Claude calls this run: 0_
