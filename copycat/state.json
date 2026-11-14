@@ -11,7 +11,7 @@
   "day": "2026-11-14",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-14T12:29:38+00:00",
+  "last_scan": "2026-11-14T12:59:36+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4329,24 +4329,6 @@
     "AUDC": {
       "buys": [
         {
-          "accession": "0001976408-26-000933",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T07:55:51-05:00",
-          "price": 7.9389,
-          "role": "President and CEO",
-          "usd": 79389.0,
-          "who": "ADLERSBERG SHABTAI"
-        },
-        {
-          "accession": "0001976408-26-000933",
-          "date": "2026-11-06",
-          "filed": "2026-11-09T07:55:51-05:00",
-          "price": 7.8718,
-          "role": "President and CEO",
-          "usd": 46750.62,
-          "who": "ADLERSBERG SHABTAI"
-        },
-        {
           "accession": "0001976408-26-000938",
           "date": "2026-11-09",
           "filed": "2026-11-12T07:47:05-05:00",
@@ -4375,7 +4357,7 @@
         }
       ],
       "company": "AUDIOCODES LTD",
-      "score": 1.93,
+      "score": 1.66,
       "ticker": "AUDC"
     },
     "BFH": {
@@ -6365,24 +6347,6 @@
     "MTDR": {
       "buys": [
         {
-          "accession": "0002054635-26-000006",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T07:43:00-05:00",
-          "price": 52.72,
-          "role": "Director",
-          "usd": 26360.0,
-          "who": "Harvey Paul W"
-        },
-        {
-          "accession": "0001540655-26-000027",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T07:41:53-05:00",
-          "price": 51.36,
-          "role": "Chairman and CEO, Director",
-          "usd": 256800.0,
-          "who": "Foran Joseph Wm"
-        },
-        {
           "accession": "0002020289-26-000008",
           "date": "2026-11-06",
           "filed": "2026-11-09T17:15:58-05:00",
@@ -6438,7 +6402,7 @@
         }
       ],
       "company": "Matador Resources Co",
-      "score": 5.23,
+      "score": 4.16,
       "ticker": "MTDR"
     },
     "NGS": {
