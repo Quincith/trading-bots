@@ -11,7 +11,7 @@
   "day": "2026-11-14",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-14T10:59:35+00:00",
+  "last_scan": "2026-11-14T11:29:40+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -7375,15 +7375,6 @@
     "TSM": {
       "buys": [
         {
-          "accession": "0001046179-26-000734",
-          "date": "2026-11-05",
-          "filed": "2026-11-09T06:15:09-05:00",
-          "price": 357.0,
-          "role": "Director",
-          "usd": 299880.0,
-          "who": "SPLINTER MICHAEL R"
-        },
-        {
           "accession": "0001046179-26-000746",
           "date": "2026-11-06",
           "filed": "2026-11-10T06:15:31-05:00",
@@ -7664,7 +7655,7 @@
         }
       ],
       "company": "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD",
-      "score": 24.62,
+      "score": 23.32,
       "ticker": "TSM"
     },
     "TTMI": {
