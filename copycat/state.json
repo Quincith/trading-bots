@@ -11,7 +11,7 @@
   "day": "2026-11-15",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-15T21:02:04+00:00",
+  "last_scan": "2026-11-15T21:32:08+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4583,22 +4583,6 @@
       "score": 0.49,
       "ticker": "CMRE"
     },
-    "CNXN": {
-      "buys": [
-        {
-          "accession": "0002160413-26-000005",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T16:10:28-05:00",
-          "price": 80.2,
-          "role": "President & COO",
-          "usd": 199698.0,
-          "who": "Zafirovski Matthew David"
-        }
-      ],
-      "company": "PC CONNECTION INC",
-      "score": 1.8,
-      "ticker": "CNXN"
-    },
     "COHR": {
       "buys": [
         {
@@ -4867,22 +4851,6 @@
       "score": 2.55,
       "ticker": "EGBN"
     },
-    "EMN": {
-      "buys": [
-        {
-          "accession": "0000915389-26-000174",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T16:03:09-05:00",
-          "price": 65.275,
-          "role": "SVP, Regions & Chf SupChn Ofcr",
-          "usd": 159989.03,
-          "who": "McAlindon Julie A."
-        }
-      ],
-      "company": "EASTMAN CHEMICAL CO",
-      "score": 1.2,
-      "ticker": "EMN"
-    },
     "ENOV": {
       "buys": [
         {
@@ -5099,22 +5067,6 @@
       "company": "Four Corners Property Trust, Inc.",
       "score": 1.68,
       "ticker": "FCPT"
-    },
-    "FIS": {
-      "buys": [
-        {
-          "accession": "0001628280-26-072763",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T16:21:28-05:00",
-          "price": 29.0,
-          "role": "Director",
-          "usd": 52200.0,
-          "who": "Gibson Kourtney"
-        }
-      ],
-      "company": "Fidelity National Information Services, Inc.",
-      "score": 0.72,
-      "ticker": "FIS"
     },
     "FMC": {
       "buys": [
@@ -5719,22 +5671,6 @@
       "score": 2.7,
       "ticker": "LILA"
     },
-    "MCY": {
-      "buys": [
-        {
-          "accession": "0001193125-26-455578",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T16:30:12-05:00",
-          "price": 84.3,
-          "role": "Director",
-          "usd": 49989.9,
-          "who": "Braunegg George Gwyer"
-        }
-      ],
-      "company": "MERCURY GENERAL CORP",
-      "score": 0.7,
-      "ticker": "MCY"
-    },
     "MNR": {
       "buys": [
         {
@@ -6201,33 +6137,8 @@
       "score": 0.7,
       "ticker": "SMCI"
     },
-    "SPXC": {
-      "buys": [
-        {
-          "accession": "0001490816-26-000004",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T16:15:09-05:00",
-          "price": 140.75,
-          "role": "Director",
-          "usd": 140750.0,
-          "who": "Deck Brian A"
-        }
-      ],
-      "company": "SPX Technologies, Inc.",
-      "score": 1.15,
-      "ticker": "SPXC"
-    },
     "STVN": {
       "buys": [
-        {
-          "accession": "0001193125-26-455579",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T16:30:11-05:00",
-          "price": 13.07,
-          "role": "Director",
-          "usd": 326750.0,
-          "who": "MOREL DONALD E JR"
-        },
         {
           "accession": "0001193125-26-458540",
           "date": "2026-11-09",
@@ -6239,7 +6150,7 @@
         }
       ],
       "company": "Stevanato Group S.p.A.",
-      "score": 2.53,
+      "score": 1.44,
       "ticker": "STVN"
     },
     "STWD": {
@@ -6284,38 +6195,6 @@
       "company": "STARWOOD PROPERTY TRUST, INC.",
       "score": 4.47,
       "ticker": "STWD"
-    },
-    "SUN": {
-      "buys": [
-        {
-          "accession": "0001193125-26-455575",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T16:30:05-05:00",
-          "price": 61.5264,
-          "role": "Director",
-          "usd": 92289.6,
-          "who": "Skidmore David K"
-        }
-      ],
-      "company": "Sunoco LP",
-      "score": 0.97,
-      "ticker": "SUN"
-    },
-    "SUNC": {
-      "buys": [
-        {
-          "accession": "0001193125-26-455576",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T16:30:07-05:00",
-          "price": 62.7548,
-          "role": "Director",
-          "usd": 94132.2,
-          "who": "Skidmore David K"
-        }
-      ],
-      "company": "SunocoCorp LLC",
-      "score": 0.97,
-      "ticker": "SUNC"
     },
     "TEAM": {
       "buys": [
@@ -6539,22 +6418,6 @@
       "score": 2.6,
       "ticker": "TXO"
     },
-    "UPBD": {
-      "buys": [
-        {
-          "accession": "0001193125-26-455581",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T16:30:17-05:00",
-          "price": 24.95,
-          "role": "EVP, Chief Operating Officer",
-          "usd": 150074.25,
-          "who": "Young Scott A."
-        }
-      ],
-      "company": "UPBOUND GROUP, INC.",
-      "score": 1.68,
-      "ticker": "UPBD"
-    },
     "UPST": {
       "buys": [
         {
@@ -6570,22 +6433,6 @@
       "company": "Upstart Holdings, Inc.",
       "score": 2.51,
       "ticker": "UPST"
-    },
-    "WD": {
-      "buys": [
-        {
-          "accession": "0001104659-26-125243",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T16:30:17-05:00",
-          "price": 41.3455,
-          "role": "Director",
-          "usd": 200525.68,
-          "who": "Pinkus Gary S"
-        }
-      ],
-      "company": "Walker & Dunlop, Inc.",
-      "score": 1.3,
-      "ticker": "WD"
     },
     "WW": {
       "buys": [
