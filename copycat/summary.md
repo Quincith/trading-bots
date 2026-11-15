@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-15 14:01 UTC
+# Copycat strategy — 2026-11-15 14:31 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 0 new SEC filings this run. 101 stocks on the watchlist.
+Read 0 new SEC filings this run. 100 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,7 @@ Read 0 new SEC filings this run. 101 stocks on the watchlist.
 | DOX (AMDOCS LTD) | 3.72 | 4 insiders bought $297,695 at about $41.93: Genish Amos (Director) $149,730; Kanouff Yvette (Director) $100,800; Macdonald John Anthony (Director) $41,630 and 1 more. |
 
 ## Notes
-- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 101 stocks, 76 big enough to copy.
+- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 100 stocks, 75 big enough to copy.
+- Couldn't read the SEC feed: HTTPSConnectionPool(host='www.sec.gov', port=443): Read timed out. (read timeout=30)
 
 _Copycat uses no AI._
