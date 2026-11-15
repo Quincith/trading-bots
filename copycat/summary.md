@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-15 22:47 UTC
+# Copycat strategy — 2026-11-15 23:02 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 0 new SEC filings this run. 82 stocks on the watchlist.
+Read 0 new SEC filings this run. 81 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 0 new SEC filings this run. 82 stocks on the watchlist.
 | CSQR (Csquare, Inc.) | 3.66 | 3 insiders bought $454,429 at about $17.75: Mullee Spencer Edward (Chief Executive Officer, Director) $247,029; Kelley Philip M (Director) $172,400; Cook Steven R. E. (Chief Financial Officer) $35,000. |
 
 ## Notes
-- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 82 stocks, 60 big enough to copy.
+- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 81 stocks, 59 big enough to copy.
 
 _Copycat uses no AI._
