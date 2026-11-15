@@ -11,7 +11,7 @@
   "day": "2026-11-15",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-15T22:02:04+00:00",
+  "last_scan": "2026-11-15T22:32:11+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4417,22 +4417,6 @@
       "score": 1.1,
       "ticker": "BRT"
     },
-    "BSM": {
-      "buys": [
-        {
-          "accession": "0001319960-26-000014",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T17:16:58-05:00",
-          "price": 13.7258,
-          "role": "Executive Chairman, Director",
-          "usd": 686290.0,
-          "who": "Carter Thomas L Jr"
-        }
-      ],
-      "company": "Black Stone Minerals, L.P.",
-      "score": 2.34,
-      "ticker": "BSM"
-    },
     "BW": {
       "buys": [
         {
@@ -4829,15 +4813,6 @@
     "EGBN": {
       "buys": [
         {
-          "accession": "0001523145-26-000009",
-          "date": "2026-11-10",
-          "filed": "2026-11-10T17:09:26-05:00",
-          "price": 33.91,
-          "role": "Senior EVP, CFO",
-          "usd": 49847.7,
-          "who": "Newell Eric R"
-        },
-        {
           "accession": "0001441890-26-000007",
           "date": "2026-11-10",
           "filed": "2026-11-12T14:29:32-05:00",
@@ -4848,7 +4823,7 @@
         }
       ],
       "company": "EAGLE BANCORP INC",
-      "score": 2.55,
+      "score": 1.67,
       "ticker": "EGBN"
     },
     "ENOV": {
@@ -5237,22 +5212,6 @@
       "company": "GENERAL AMERICAN INVESTORS CO INC",
       "score": 1.04,
       "ticker": "GAM"
-    },
-    "GLXY": {
-      "buys": [
-        {
-          "accession": "0001079500-26-000011",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T17:17:54-05:00",
-          "price": 13.98,
-          "role": "Director",
-          "usd": 69900.0,
-          "who": "DEASON DOUGLAS R"
-        }
-      ],
-      "company": "Galaxy Digital Inc.",
-      "score": 0.84,
-      "ticker": "GLXY"
     },
     "GOOD": {
       "buys": [
@@ -5878,22 +5837,6 @@
       "score": 1.68,
       "ticker": "NTHI"
     },
-    "NVT": {
-      "buys": [
-        {
-          "accession": "0000897069-26-001913",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T17:16:36-05:00",
-          "price": 113.145,
-          "role": "Director",
-          "usd": 339435.0,
-          "who": "Parker Herbert K"
-        }
-      ],
-      "company": "nVent Electric plc",
-      "score": 1.53,
-      "ticker": "NVT"
-    },
     "NXGL": {
       "buys": [
         {
@@ -5938,15 +5881,6 @@
     "OESX": {
       "buys": [
         {
-          "accession": "0000897069-26-001915",
-          "date": "2026-11-10",
-          "filed": "2026-11-10T17:19:54-05:00",
-          "price": 12.76,
-          "role": "EVP, CFO, CAO & Treasurer",
-          "usd": 25520.0,
-          "who": "BRODIN J PER"
-        },
-        {
           "accession": "0000897069-26-001917",
           "date": "2026-11-11",
           "filed": "2026-11-12T07:41:34-05:00",
@@ -5957,7 +5891,7 @@
         }
       ],
       "company": "ORION ENERGY SYSTEMS, INC.",
-      "score": 1.8,
+      "score": 0.5,
       "ticker": "OESX"
     },
     "OVBC": {

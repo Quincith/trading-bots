@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $75.23 → $75.23 (no change).
 - Profit / loss since start: -$24.77 on $100.00 money put in.
-- Scout scanned 0 coins, 48 times.
+- Scout scanned 0 coins, 49 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: TQQQ $73.68 (-$2.27 unrealized).
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $83.32 → $83.32 (no change).
 - Profit / loss since start: -$16.68 on $100.00 money put in.
-- Scout scanned 0 coins, 48 times.
+- Scout scanned 0 coins, 49 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: QLD $81.62 (-$1.67 unrealized).
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $94.61 → $94.61 (no change).
 - Profit / loss since start: -$5.39 on $100.00 money put in.
-- Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 85 stocks.
+- Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 82 stocks.
 - Top pick: MP (MP Materials Corp. / DE). 3 insiders bought $3,353,606 at about $36.26: Weisenburger Randall J (Director) $1,980,000; Rosenthal Michael Stuart (Chief Operating Officer) $1,175,090; Corbett Ryan (Chief Financial Officer) $198,516.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
