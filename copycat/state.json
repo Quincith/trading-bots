@@ -11,7 +11,7 @@
   "day": "2026-11-15",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-15T12:31:27+00:00",
+  "last_scan": "2026-11-15T13:01:27+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4649,22 +4649,6 @@
       "score": 3.34,
       "ticker": "COHR"
     },
-    "CRH": {
-      "buys": [
-        {
-          "accession": "0000849395-26-000017",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T07:42:57-05:00",
-          "price": 94.95,
-          "role": "Director",
-          "usd": 569700.0,
-          "who": "FEARON RICHARD H"
-        }
-      ],
-      "company": "CRH PUBLIC LTD CO",
-      "score": 1.76,
-      "ticker": "CRH"
-    },
     "CRVS": {
       "buys": [
         {
@@ -5922,15 +5906,6 @@
     "MTDR": {
       "buys": [
         {
-          "accession": "0001786877-26-000007",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T07:52:16-05:00",
-          "price": 50.1,
-          "role": "Director",
-          "usd": 16983.9,
-          "who": "Ehrman Monika U"
-        },
-        {
           "accession": "0001540655-26-000029",
           "date": "2026-11-10",
           "filed": "2026-11-12T18:07:45-05:00",
@@ -5941,7 +5916,7 @@
         }
       ],
       "company": "Matador Resources Co",
-      "score": 2.4,
+      "score": 1.59,
       "ticker": "MTDR"
     },
     "NGS": {
