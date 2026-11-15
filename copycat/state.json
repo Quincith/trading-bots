@@ -11,7 +11,7 @@
   "day": "2026-11-15",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-15T17:01:39+00:00",
+  "last_scan": "2026-11-15T17:31:44+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4186,22 +4186,6 @@
       "company": "American Homes 4 Rent",
       "score": 1.01,
       "ticker": "AMH"
-    },
-    "ARLO": {
-      "buys": [
-        {
-          "accession": "0001189819-26-000002",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T12:09:09-05:00",
-          "price": 12.1699,
-          "role": "Director",
-          "usd": 100401.68,
-          "who": "Faison Ralph E"
-        }
-      ],
-      "company": "Arlo Technologies, Inc.",
-      "score": 1.0,
-      "ticker": "ARLO"
     },
     "ARR": {
       "buys": [
