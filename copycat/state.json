@@ -11,7 +11,7 @@
   "day": "2026-11-15",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-15T22:32:11+00:00",
+  "last_scan": "2026-11-15T22:47:57+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -5121,33 +5121,6 @@
     "FUN": {
       "buys": [
         {
-          "accession": "0001999001-26-000113",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T17:43:47-05:00",
-          "price": 10.0,
-          "role": "Director",
-          "usd": 7000000.0,
-          "who": "JAFFER REHAN"
-        },
-        {
-          "accession": "0001999001-26-000113",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T17:43:47-05:00",
-          "price": 10.86,
-          "role": "Director",
-          "usd": 3801000.0,
-          "who": "JAFFER REHAN"
-        },
-        {
-          "accession": "0001999001-26-000113",
-          "date": "2026-11-10",
-          "filed": "2026-11-10T17:43:47-05:00",
-          "price": 10.32,
-          "role": "Director",
-          "usd": 4128000.0,
-          "who": "JAFFER REHAN"
-        },
-        {
           "accession": "0001999001-26-000119",
           "date": "2026-11-11",
           "filed": "2026-11-13T16:43:30-05:00",
@@ -5176,7 +5149,7 @@
         }
       ],
       "company": "Six Flags Entertainment Corporation/NEW",
-      "score": 3.38,
+      "score": 2.97,
       "ticker": "FUN"
     },
     "GAM": {
