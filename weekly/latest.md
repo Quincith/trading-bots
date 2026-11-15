@@ -1,27 +1,27 @@
-# Weekly bot report: week ending November 8, 2026
+# Weekly bot report: week ending November 15, 2026
 
 | Strategy | This week | Since the start | Profit / loss |
 |---|---|---|---|
-| Leveraged Nasdaq trend (TQQQ 3x) | -14.5% | -22.5% | -$22.49 |
-| Leveraged Nasdaq trend (QLD 2x) | -8.7% | -15.0% | -$15.00 |
-| Copycat | -3.0% | -4.8% | -$4.77 |
+| Leveraged Nasdaq trend (TQQQ 3x) | -2.9% | -24.8% | -$24.77 |
+| Leveraged Nasdaq trend (QLD 2x) | -2.0% | -16.7% | -$16.68 |
+| Copycat | -0.7% | -5.4% | -$5.39 |
 | Forex 🏆 | +0.0% | -0.2% | -$0.17 |
 
 ## Leveraged Nasdaq trend (TQQQ 3x)
-- **This week:** -14.5% (-$13.18). Holding Bitcoin did -1.9%, so it **trailed Bitcoin by 12.7 points**.
-- **Trades:** 0 buys, 1 sells.
-- **Since the start (Oct 25):** account is worth $77.51 from $100.00 put in, -$22.49 profit (-22.5%). The same money in Bitcoin would be worth $93.86.
+- **This week:** -2.9% (-$2.28). Holding Bitcoin did -13.7%, so it **beat Bitcoin by 10.8 points**.
+- **Trades:** 1 buys, 0 sells.
+- **Since the start (Oct 25):** account is worth $75.23 from $100.00 put in, -$24.77 profit (-24.8%). The same money in Bitcoin would be worth $80.98.
 
 ## Leveraged Nasdaq trend (QLD 2x)
-- **This week:** -8.7% (-$8.15). Holding Bitcoin did -1.9%, so it **trailed Bitcoin by 6.9 points**.
-- **Trades:** 0 buys, 1 sells.
-- **Since the start (Oct 25):** account is worth $85.00 from $100.00 put in, -$15.00 profit (-15.0%). The same money in Bitcoin would be worth $93.86.
+- **This week:** -2.0% (-$1.68). Holding Bitcoin did -13.7%, so it **beat Bitcoin by 11.8 points**.
+- **Trades:** 1 buys, 0 sells.
+- **Since the start (Oct 25):** account is worth $83.32 from $100.00 put in, -$16.68 profit (-16.7%). The same money in Bitcoin would be worth $80.98.
 
 ## Copycat
-- **This week:** -3.0% (-$2.99). Holding Bitcoin did -1.9%, so it **trailed Bitcoin by 1.2 points**.
-- **Vs. the stock market:** the S&P 500 did -2.7%, so it **trailed the S&P 500 by 0.4 points**. The same money in the S&P 500 would be worth $96.78.
-- **Trades:** 2 buys, 1 sells.
-- **Since the start (Oct 25):** account is worth $95.23 from $100.00 put in, -$4.77 profit (-4.8%). The same money in Bitcoin would be worth $94.56.
+- **This week:** -0.7% (-$0.62). Holding Bitcoin did -13.7%, so it **beat Bitcoin by 13.1 points**.
+- **Vs. the stock market:** the S&P 500 did +2.6%, so it **trailed the S&P 500 by 3.2 points**. The same money in the S&P 500 would be worth $99.27.
+- **Trades:** 0 buys, 0 sells.
+- **Since the start (Oct 25):** account is worth $94.61 from $100.00 put in, -$5.39 profit (-5.4%). The same money in Bitcoin would be worth $81.59.
 
 ## Forex
 - **This week:** +0.0% ($0.00). Doing nothing would have made 0%, so it did about the same as doing nothing.
@@ -35,8 +35,8 @@ No runs recorded yet.
 
 Ideas tested on past prices this week (only kept ones become a pull request for you to approve):
 
-- **Copycat**, ❌ rejected: Sell every trade after 20 days instead of 30, because the big wins all came early and the late days mostly brought slow slides into the safety exit. (unseen months -4.9% vs +4.8% now)
-- **Forex**, ❌ rejected: Build the opening range from the first 60 minutes instead of the first 30, so a breakout has to clear a bigger, more meaningful high or low. (unseen months +3.1% vs +2.8% now)
-- **Fxcopy**, ❌ rejected: Only copy the hedge funds when their bet got bigger since the week before, not when it is shrinking. (unseen months -6.8% vs -7.9% now)
+- **Copycat**, ❌ rejected: Give each trade more room by moving the safety exit from 10% to 15% below our entry price. (unseen months +7.0% vs +4.8% now)
+- **Forex**, ❌ rejected: Close open trades at 17:00 instead of 16:00, so the trades that are already working get one more hour to grow. (unseen months +2.2% vs +2.8% now)
+- **Fxcopy**, ❌ rejected: Give each trade more room by moving the safety stop from 3 to 4.5 typical daily swings away from the entry price. (unseen months -3.7% vs -7.9% now)
 
 _Paper money only. Percentages leave out deposits, so adding money never looks like a gain. Claude's running cost is not included. Copycat and the Forex wing use no AI, so they cost nothing to run._
