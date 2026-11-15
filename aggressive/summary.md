@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-11-15 01:00 UTC
+# Aggressive strategy — 2026-11-15 01:30 UTC
 
 | | |
 |---|---|

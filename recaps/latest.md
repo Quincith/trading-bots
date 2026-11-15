@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $75.23 → $75.23 (no change).
 - Profit / loss since start: -$24.77 on $100.00 money put in.
-- Scout scanned 0 coins, 3 times.
+- Scout scanned 0 coins, 4 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: TQQQ $73.68 (-$2.27 unrealized).
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $83.32 → $83.32 (no change).
 - Profit / loss since start: -$16.68 on $100.00 money put in.
-- Scout scanned 0 coins, 3 times.
+- Scout scanned 0 coins, 4 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: QLD $81.62 (-$1.67 unrealized).
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $94.61 → $94.61 (no change).
 - Profit / loss since start: -$5.39 on $100.00 money put in.
-- Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 105 stocks.
+- Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 104 stocks.
 - Top pick: TSM (TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD). 30 insiders bought $116,678 at about $70.50: Wei Che-Chia (Chairman and CEO, Director) $10,928; Chin Yung-Pei (EVP and Co-COO) $5,146; Mii Yuh-Jier (EVP and Co-COO) $5,146 and 27 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
