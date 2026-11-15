@@ -1,4 +1,4 @@
-# Forex office — 2026-11-15 03:00 UTC
+# Forex office — 2026-11-15 03:30 UTC
 
 _OANDA practice account. This office counts only its own trades, starting from $100.00._
 
