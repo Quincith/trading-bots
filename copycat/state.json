@@ -11,7 +11,7 @@
   "day": "2026-11-15",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-15T16:31:38+00:00",
+  "last_scan": "2026-11-15T17:01:39+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4404,15 +4404,6 @@
     "BOTJ": {
       "buys": [
         {
-          "accession": "0001437749-26-036049",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T11:43:11-05:00",
-          "price": 24.92,
-          "role": "Director",
-          "usd": 1943.76,
-          "who": "ADDISON LEWIS C"
-        },
-        {
           "accession": "0001437749-26-036710",
           "date": "2026-11-05",
           "filed": "2026-11-13T11:18:17-05:00",
@@ -4423,7 +4414,7 @@
         }
       ],
       "company": "BANK OF THE JAMES FINANCIAL GROUP INC",
-      "score": 1.25,
+      "score": 0.5,
       "ticker": "BOTJ"
     },
     "BRT": {
@@ -5140,22 +5131,6 @@
       "company": "Fidelity National Information Services, Inc.",
       "score": 0.72,
       "ticker": "FIS"
-    },
-    "FMBM": {
-      "buys": [
-        {
-          "accession": "0002150557-26-000003",
-          "date": "2026-11-10",
-          "filed": "2026-11-10T11:49:41-05:00",
-          "price": 45.5,
-          "role": "Director",
-          "usd": 7280.0,
-          "who": "Truban Erica N."
-        }
-      ],
-      "company": "F&M BANK CORP",
-      "score": 0.0,
-      "ticker": "FMBM"
     },
     "FMC": {
       "buys": [
