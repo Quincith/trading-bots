@@ -11,7 +11,7 @@
   "day": "2026-11-15",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-15T19:01:51+00:00",
+  "last_scan": "2026-11-15T19:31:56+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -6007,22 +6007,6 @@
       "company": "NexPoint Residential Trust, Inc.",
       "score": 1.0,
       "ticker": "NXRT"
-    },
-    "OBK": {
-      "buys": [
-        {
-          "accession": "0001839920-26-000008",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T14:18:17-05:00",
-          "price": 53.58,
-          "role": "Chief Risk Officer",
-          "usd": 107160.0,
-          "who": "Crotwell Jim"
-        }
-      ],
-      "company": "Origin Bancorp, Inc.",
-      "score": 1.53,
-      "ticker": "OBK"
     },
     "OESX": {
       "buys": [
