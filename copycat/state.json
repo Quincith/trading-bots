@@ -11,7 +11,7 @@
   "day": "2026-11-16",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-16T00:32:21+00:00",
+  "last_scan": "2026-11-16T01:02:24+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4228,22 +4228,6 @@
       "score": 1.7,
       "ticker": "ASR"
     },
-    "ATEC": {
-      "buys": [
-        {
-          "accession": "0001289408-26-000006",
-          "date": "2026-11-10",
-          "filed": "2026-11-10T19:56:16-05:00",
-          "price": 6.93,
-          "role": "Director",
-          "usd": 242550.0,
-          "who": "Valentine Keith"
-        }
-      ],
-      "company": "Alphatec Holdings, Inc.",
-      "score": 1.38,
-      "ticker": "ATEC"
-    },
     "AUDC": {
       "buys": [
         {
@@ -4829,24 +4813,6 @@
     "ENOV": {
       "buys": [
         {
-          "accession": "0001193125-26-455945",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T20:00:03-05:00",
-          "price": 27.55,
-          "role": "Director",
-          "usd": 24987.85,
-          "who": "Wienbar Sharon L"
-        },
-        {
-          "accession": "0001193125-26-455945",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T20:00:03-05:00",
-          "price": 26.98,
-          "role": "Director",
-          "usd": 24929.52,
-          "who": "Wienbar Sharon L"
-        },
-        {
           "accession": "0001193125-26-458961",
           "date": "2026-11-10",
           "filed": "2026-11-12T20:00:06-05:00",
@@ -4884,7 +4850,7 @@
         }
       ],
       "company": "Enovis CORP",
-      "score": 1.93,
+      "score": 1.75,
       "ticker": "ENOV"
     },
     "EQPT": {
