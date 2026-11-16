@@ -2,31 +2,31 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $2.02 (-2.69%)
+## Aggressive: down $1.83 (-2.43%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $2.02 (-2.69%) at $73.21. Paper money only.
-
-**Key takeaways**
-
-- Account value: $75.23 → $73.21 (-$2.02, -2.69%).
-- Profit / loss since start: -$26.79 on $100.00 money put in.
-- Scout scanned 0 coins, 17 times.
-- Nothing passed Scout's filter, so no trade was considered.
-- No trades.
-- Holding: TQQQ $71.66 (-$4.29 unrealized).
-
-## Medium: down $1.53 (-1.84%)
-
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.53 (-1.84%) at $81.79. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.83 (-2.43%) at $73.40. Paper money only.
 
 **Key takeaways**
 
-- Account value: $83.32 → $81.79 (-$1.53, -1.84%).
-- Profit / loss since start: -$18.21 on $100.00 money put in.
-- Scout scanned 0 coins, 17 times.
+- Account value: $75.23 → $73.40 (-$1.83, -2.43%).
+- Profit / loss since start: -$26.60 on $100.00 money put in.
+- Scout scanned 0 coins, 18 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $80.09 (-$3.20 unrealized).
+- Holding: TQQQ $71.85 (-$4.10 unrealized).
+
+## Medium: down $1.24 (-1.49%)
+
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.24 (-1.49%) at $82.08. Paper money only.
+
+**Key takeaways**
+
+- Account value: $83.32 → $82.08 (-$1.24, -1.49%).
+- Profit / loss since start: -$17.92 on $100.00 money put in.
+- Scout scanned 0 coins, 18 times.
+- Nothing passed Scout's filter, so no trade was considered.
+- No trades.
+- Holding: QLD $80.38 (-$2.91 unrealized).
 
 ## Copycat: flat
 
