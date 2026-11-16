@@ -2,45 +2,45 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $1.93 (-2.57%)
+## Aggressive: down $2.56 (-3.40%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.93 (-2.57%) at $73.30. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $2.56 (-3.40%) at $72.67. Paper money only.
 
 **Key takeaways**
 
-- Account value: $75.23 → $73.30 (-$1.93, -2.57%).
-- Profit / loss since start: -$26.70 on $100.00 money put in.
-- Scout scanned 0 coins, 19 times.
+- Account value: $75.23 → $72.67 (-$2.56, -3.40%).
+- Profit / loss since start: -$27.33 on $100.00 money put in.
+- Scout scanned 0 coins, 20 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $71.75 (-$4.20 unrealized).
+- Holding: TQQQ $71.12 (-$4.83 unrealized).
 
-## Medium: down $1.33 (-1.60%)
+## Medium: down $1.17 (-1.40%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.33 (-1.60%) at $81.99. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.17 (-1.40%) at $82.15. Paper money only.
 
 **Key takeaways**
 
-- Account value: $83.32 → $81.99 (-$1.33, -1.60%).
-- Profit / loss since start: -$18.01 on $100.00 money put in.
-- Scout scanned 0 coins, 19 times.
+- Account value: $83.32 → $82.15 (-$1.17, -1.40%).
+- Profit / loss since start: -$17.85 on $100.00 money put in.
+- Scout scanned 0 coins, 20 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $80.29 (-$3.00 unrealized).
+- Holding: QLD $80.45 (-$2.84 unrealized).
 
-## Copycat: flat
+## Copycat: down $0.06 (-0.06%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended flat at $94.61. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.06 (-0.06%) at $94.55. Paper money only.
 
 **Key takeaways**
 
-- Account value: $94.61 → $94.61 (no change).
-- Profit / loss since start: -$5.39 on $100.00 money put in.
+- Account value: $94.61 → $94.55 (-$0.06, -0.06%).
+- Profit / loss since start: -$5.45 on $100.00 money put in.
 - Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 79 stocks.
 - Top pick: MP (MP Materials Corp. / DE). 3 insiders bought $3,353,606 at about $36.26: Weisenburger Randall J (Director) $1,980,000; Rosenthal Michael Stuart (Chief Operating Officer) $1,175,090; Corbett Ryan (Chief Financial Officer) $198,516.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.93 (-$0.01 unrealized); CHCO $19.61 (-$0.38 unrealized); LRN $15.59 (-$0.52 unrealized); MSM $20.00 (+$0.01 unrealized); STC $19.47 (-$0.44 unrealized).
+- Holding: BBT $19.93 (-$0.01 unrealized); CHCO $19.61 (-$0.38 unrealized); LRN $15.53 (-$0.58 unrealized); MSM $20.00 (+$0.01 unrealized); STC $19.47 (-$0.44 unrealized).
 
 ## Forex: flat
 
