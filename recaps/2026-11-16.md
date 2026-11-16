@@ -2,45 +2,45 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $2.58 (-3.43%)
+## Aggressive: down $3.64 (-4.84%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $2.58 (-3.43%) at $72.65. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $3.64 (-4.84%) at $71.59. Paper money only.
 
 **Key takeaways**
 
-- Account value: $75.23 → $72.65 (-$2.58, -3.43%).
-- Profit / loss since start: -$27.35 on $100.00 money put in.
-- Scout scanned 0 coins, 27 times.
+- Account value: $75.23 → $71.59 (-$3.64, -4.84%).
+- Profit / loss since start: -$28.41 on $100.00 money put in.
+- Scout scanned 0 coins, 28 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: TQQQ $71.10 (-$4.85 unrealized).
+- Holding: TQQQ $70.04 (-$5.91 unrealized).
 
-## Medium: down $1.89 (-2.27%)
+## Medium: down $2.63 (-3.16%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.89 (-2.27%) at $81.43. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $2.63 (-3.16%) at $80.69. Paper money only.
 
 **Key takeaways**
 
-- Account value: $83.32 → $81.43 (-$1.89, -2.27%).
-- Profit / loss since start: -$18.57 on $100.00 money put in.
-- Scout scanned 0 coins, 27 times.
+- Account value: $83.32 → $80.69 (-$2.63, -3.16%).
+- Profit / loss since start: -$19.31 on $100.00 money put in.
+- Scout scanned 0 coins, 28 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $79.73 (-$3.56 unrealized).
+- Holding: QLD $78.99 (-$4.30 unrealized).
 
-## Copycat: up $0.02 (+0.02%)
+## Copycat: up $0.06 (+0.06%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.02 (+0.02%) at $94.63. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.06 (+0.06%) at $94.67. Paper money only.
 
 **Key takeaways**
 
-- Account value: $94.61 → $94.63 (+$0.02, +0.02%).
-- Profit / loss since start: -$5.37 on $100.00 money put in.
-- Spotter read 30 insider filings from the SEC and found 16 insider purchases. Watchlist at day end: 82 stocks.
-- Top pick: DOX (AMDOCS LTD). 5 insiders bought $401,996 at about $41.88: Genish Amos (Director) $149,730; Gelman Eliahu Meir (Director) $104,300; Kanouff Yvette (Director) $100,800 and 2 more.
+- Account value: $94.61 → $94.67 (+$0.06, +0.06%).
+- Profit / loss since start: -$5.33 on $100.00 money put in.
+- Spotter read 33 insider filings from the SEC and found 18 insider purchases. Watchlist at day end: 82 stocks.
+- Top pick: DOX (AMDOCS LTD). 6 insiders bought $504,224 at about $42.39: Genish Amos (Director) $149,730; Gelman Eliahu Meir (Director) $104,300; De La Vega Rafael (Director) $102,228 and 3 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.93 (-$0.01 unrealized); CHCO $19.61 (-$0.38 unrealized); LRN $15.61 (-$0.50 unrealized); MSM $20.00 (+$0.01 unrealized); STC $19.47 (-$0.44 unrealized).
+- Holding: BBT $19.93 (-$0.01 unrealized); CHCO $19.61 (-$0.38 unrealized); LRN $15.61 (-$0.50 unrealized); MSM $20.00 (+$0.01 unrealized); STC $19.52 (-$0.39 unrealized).
 
 ## Forex: flat
 
