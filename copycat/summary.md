@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-16 11:33 UTC
+# Copycat strategy — 2026-11-16 12:03 UTC
 
 | | |
 |---|---|
-| Account value | $94.45 |
+| Account value | $94.63 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$5.55 (-5.55%) |
-| Time-weighted return (ignores when deposits happened) | -5.55% |
+| Strategy profit / loss | -$5.37 (-5.37%) |
+| Time-weighted return (ignores when deposits happened) | -5.37% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 22 new SEC filings this run. 81 stocks on the watchlist.
+Read 8 new SEC filings this run. 82 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 22 new SEC filings this run. 81 stocks on the watchlist.
 | CSQR (Csquare, Inc.) | 3.66 | 3 insiders bought $454,429 at about $17.75: Mullee Spencer Edward (Chief Executive Officer, Director) $247,029; Kelley Philip M (Director) $172,400; Cook Steven R. E. (Chief Financial Officer) $35,000. |
 
 ## Notes
-- Spotter read 22 new insider filings and found 8 purchases (3 by officers or directors). Watchlist: 81 stocks, 59 big enough to copy.
+- Spotter read 8 new insider filings and found 8 purchases (7 by officers or directors). Watchlist: 82 stocks, 60 big enough to copy.
 
 _Copycat uses no AI._
