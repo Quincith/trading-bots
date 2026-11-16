@@ -2,31 +2,31 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: up $0.32 (+0.43%)
+## Aggressive: down $1.19 (-1.58%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $0.32 (+0.43%) at $75.55. Paper money only.
-
-**Key takeaways**
-
-- Account value: $75.23 → $75.55 (+$0.32, +0.43%).
-- Profit / loss since start: -$24.45 on $100.00 money put in.
-- Scout scanned 0 coins, 3 times.
-- Nothing passed Scout's filter, so no trade was considered.
-- No trades.
-- Holding: TQQQ $74.00 (-$1.95 unrealized).
-
-## Medium: up $0.23 (+0.28%)
-
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended up $0.23 (+0.28%) at $83.55. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $1.19 (-1.58%) at $74.04. Paper money only.
 
 **Key takeaways**
 
-- Account value: $83.32 → $83.55 (+$0.23, +0.28%).
-- Profit / loss since start: -$16.45 on $100.00 money put in.
-- Scout scanned 0 coins, 3 times.
+- Account value: $75.23 → $74.04 (-$1.19, -1.58%).
+- Profit / loss since start: -$25.96 on $100.00 money put in.
+- Scout scanned 0 coins, 4 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
-- Holding: QLD $81.85 (-$1.44 unrealized).
+- Holding: TQQQ $72.49 (-$3.46 unrealized).
+
+## Medium: down $0.79 (-0.95%)
+
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.79 (-0.95%) at $82.53. Paper money only.
+
+**Key takeaways**
+
+- Account value: $83.32 → $82.53 (-$0.79, -0.95%).
+- Profit / loss since start: -$17.47 on $100.00 money put in.
+- Scout scanned 0 coins, 4 times.
+- Nothing passed Scout's filter, so no trade was considered.
+- No trades.
+- Holding: QLD $80.83 (-$2.46 unrealized).
 
 ## Copycat: flat
 
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $94.61 → $94.61 (no change).
 - Profit / loss since start: -$5.39 on $100.00 money put in.
-- Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 80 stocks.
+- Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 79 stocks.
 - Top pick: MP (MP Materials Corp. / DE). 3 insiders bought $3,353,606 at about $36.26: Weisenburger Randall J (Director) $1,980,000; Rosenthal Michael Stuart (Chief Operating Officer) $1,175,090; Corbett Ryan (Chief Financial Officer) $198,516.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.

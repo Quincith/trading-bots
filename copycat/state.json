@@ -11,7 +11,7 @@
   "day": "2026-11-16",
   "day_start_equity": 94.61,
   "halted_reason": null,
-  "last_scan": "2026-11-16T01:02:24+00:00",
+  "last_scan": "2026-11-16T01:32:27+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4877,121 +4877,6 @@
       "company": "EquipmentShare.com Inc",
       "score": 3.16,
       "ticker": "EQPT"
-    },
-    "ETRA": {
-      "buys": [
-        {
-          "accession": "0000947871-26-001011",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T20:14:08-05:00",
-          "price": 7.85,
-          "role": "Director, 10% owner",
-          "usd": 77055.6,
-          "who": "GORDON CARL L"
-        },
-        {
-          "accession": "0000947871-26-001011",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T20:14:08-05:00",
-          "price": 7.85,
-          "role": "Director, 10% owner",
-          "usd": 310860.0,
-          "who": "GORDON CARL L"
-        },
-        {
-          "accession": "0000947871-26-001011",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T20:14:08-05:00",
-          "price": 8.24,
-          "role": "Director, 10% owner",
-          "usd": 32960.0,
-          "who": "GORDON CARL L"
-        },
-        {
-          "accession": "0000947871-26-001011",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T20:14:08-05:00",
-          "price": 8.24,
-          "role": "Director, 10% owner",
-          "usd": 131840.0,
-          "who": "GORDON CARL L"
-        },
-        {
-          "accession": "0000947871-26-001011",
-          "date": "2026-11-10",
-          "filed": "2026-11-10T20:14:08-05:00",
-          "price": 8.45,
-          "role": "Director, 10% owner",
-          "usd": 174915.0,
-          "who": "GORDON CARL L"
-        },
-        {
-          "accession": "0000947871-26-001011",
-          "date": "2026-11-10",
-          "filed": "2026-11-10T20:14:08-05:00",
-          "price": 8.45,
-          "role": "Director, 10% owner",
-          "usd": 16900.0,
-          "who": "GORDON CARL L"
-        },
-        {
-          "accession": "0000947871-26-001010",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T20:09:58-05:00",
-          "price": 7.85,
-          "role": "Director, 10% owner",
-          "usd": 77055.6,
-          "who": "ORBIMED ADVISORS LLC & OrbiMed Capital GP VII LLC & OrbiMed Genesis GP LLC"
-        },
-        {
-          "accession": "0000947871-26-001010",
-          "date": "2026-11-06",
-          "filed": "2026-11-10T20:09:58-05:00",
-          "price": 7.85,
-          "role": "Director, 10% owner",
-          "usd": 310860.0,
-          "who": "ORBIMED ADVISORS LLC & OrbiMed Capital GP VII LLC & OrbiMed Genesis GP LLC"
-        },
-        {
-          "accession": "0000947871-26-001010",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T20:09:58-05:00",
-          "price": 8.24,
-          "role": "Director, 10% owner",
-          "usd": 32960.0,
-          "who": "ORBIMED ADVISORS LLC & OrbiMed Capital GP VII LLC & OrbiMed Genesis GP LLC"
-        },
-        {
-          "accession": "0000947871-26-001010",
-          "date": "2026-11-09",
-          "filed": "2026-11-10T20:09:58-05:00",
-          "price": 8.24,
-          "role": "Director, 10% owner",
-          "usd": 131840.0,
-          "who": "ORBIMED ADVISORS LLC & OrbiMed Capital GP VII LLC & OrbiMed Genesis GP LLC"
-        },
-        {
-          "accession": "0000947871-26-001010",
-          "date": "2026-11-10",
-          "filed": "2026-11-10T20:09:58-05:00",
-          "price": 8.45,
-          "role": "Director, 10% owner",
-          "usd": 174915.0,
-          "who": "ORBIMED ADVISORS LLC & OrbiMed Capital GP VII LLC & OrbiMed Genesis GP LLC"
-        },
-        {
-          "accession": "0000947871-26-001010",
-          "date": "2026-11-10",
-          "filed": "2026-11-10T20:09:58-05:00",
-          "price": 8.45,
-          "role": "Director, 10% owner",
-          "usd": 16900.0,
-          "who": "ORBIMED ADVISORS LLC & OrbiMed Capital GP VII LLC & OrbiMed Genesis GP LLC"
-        }
-      ],
-      "company": "Electra Therapeutics, Inc.",
-      "score": 2.92,
-      "ticker": "ETRA"
     },
     "FCPT": {
       "buys": [
