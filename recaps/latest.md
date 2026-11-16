@@ -1,4 +1,4 @@
-# Daily recap: Sunday, November 15, 2026
+# Daily recap: Monday, November 16, 2026
 
 _Times are UTC. Paper money only._
 
@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $75.23 → $75.23 (no change).
 - Profit / loss since start: -$24.77 on $100.00 money put in.
-- Scout scanned 0 coins, 52 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: TQQQ $73.68 (-$2.27 unrealized).
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $83.32 → $83.32 (no change).
 - Profit / loss since start: -$16.68 on $100.00 money put in.
-- Scout scanned 0 coins, 52 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: QLD $81.62 (-$1.67 unrealized).
@@ -54,7 +54,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - No trades.
 - Open trades: none, all cash.
 
-## Fxcopy: no runs logged on 2026-11-15.
+## Fxcopy: no runs logged on 2026-11-16.
 
 ## Words to know
 
