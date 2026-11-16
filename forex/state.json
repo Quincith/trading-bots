@@ -3,12 +3,62 @@
   "day": "2026-11-16",
   "day_start_equity": 99.82550000000629,
   "halted_reason": null,
-  "last_scan": "2026-11-13T08:57:41+00:00",
+  "last_scan": "2026-11-16T08:32:56+00:00",
   "orb": {
     "day": "2026-11-16",
     "orders": {},
-    "placed": false,
-    "rows": {}
+    "placed": true,
+    "rows": {
+      "AUD_USD": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 0.67535 to 0.67584 (4.9 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 0.67539,
+        "risk": ""
+      },
+      "EUR_USD": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 1.10113 to 1.10173 (6.0 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 1.10142,
+        "risk": ""
+      },
+      "GBP_USD": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 1.32010 to 1.32074 (6.4 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 1.32055,
+        "risk": ""
+      },
+      "NZD_USD": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 0.55139 to 0.55188 (4.9 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 0.55157,
+        "risk": ""
+      },
+      "USD_CAD": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 1.42788 to 1.42806 (1.8 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 1.42799,
+        "risk": ""
+      },
+      "USD_CHF": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 0.83904 to 0.83990 (8.6 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 0.83982,
+        "risk": ""
+      },
+      "USD_JPY": {
+        "decision": "SKIP",
+        "direction": 0,
+        "note": "Range 159.486 to 159.583 (9.7 pips): too narrow, fees would be over 10% of the risk. Skipped today.",
+        "price": 159.549,
+        "risk": ""
+      }
+    }
   },
   "plans": {}
 }
