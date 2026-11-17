@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-17 15:05 UTC
+# Copycat strategy — 2026-11-17 15:35 UTC
 
 | | |
 |---|---|
-| Account value | $95.72 |
+| Account value | $95.49 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$4.28 (-4.28%) |
-| Time-weighted return (ignores when deposits happened) | -4.28% |
+| Strategy profit / loss | -$4.51 (-4.51%) |
+| Time-weighted return (ignores when deposits happened) | -4.51% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 34 new SEC filings this run. 101 stocks on the watchlist.
+Read 39 new SEC filings this run. 100 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 34 new SEC filings this run. 101 stocks on the watchlist.
 | HPP (Hudson Pacific Properties, Inc.) | 3.96 | 3 insiders bought $905,762 at about $9.06: Bortz Jon E (Director) $680,112; Coleman Victor J (Chief Executive Officer, Director) $182,000; Lammas Mark T (President) $43,650. |
 
 ## Notes
-- Spotter read 34 new insider filings and found 2 purchases (0 by officers or directors). Watchlist: 101 stocks, 76 big enough to copy.
+- Spotter read 39 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 100 stocks, 76 big enough to copy.
 
 _Copycat uses no AI._
