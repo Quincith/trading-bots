@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.37 → $71.35 (-$0.02, -0.03%).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 46 times.
+- Scout scanned 0 coins, 47 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.50 → $80.48 (-$0.02, -0.02%).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 46 times.
+- Scout scanned 0 coins, 47 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $95.37 → $94.18 (-$1.19, -1.25%).
 - Profit / loss since start: -$5.82 on $100.00 money put in.
-- Spotter read 1284 insider filings from the SEC and found 101 insider purchases. Watchlist at day end: 101 stocks.
+- Spotter read 1480 insider filings from the SEC and found 109 insider purchases. Watchlist at day end: 98 stocks.
 - Top pick: ADIG (ADI GLOBAL DISTRIBUTION INC.). 5 insiders bought $325,603 at about $9.83: Aarnes Robert B (President and CEO, Director) $100,025; Carlet Michael (Executive VP, CFO) $99,896; Copeland Alicia Crispin (Executive VP and COO) $50,550 and 2 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
