@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-17 22:06 UTC
+# Copycat strategy — 2026-11-17 22:21 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 196 new SEC filings this run. 98 stocks on the watchlist.
+Read 81 new SEC filings this run. 99 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 196 new SEC filings this run. 98 stocks on the watchlist.
 | HPP (Hudson Pacific Properties, Inc.) | 3.96 | 3 insiders bought $905,762 at about $9.06: Bortz Jon E (Director) $680,112; Coleman Victor J (Chief Executive Officer, Director) $182,000; Lammas Mark T (President) $43,650. |
 
 ## Notes
-- Spotter read 196 new insider filings and found 8 purchases (6 by officers or directors). Watchlist: 98 stocks, 73 big enough to copy.
+- Spotter read 81 new insider filings and found 10 purchases (4 by officers or directors). Watchlist: 99 stocks, 75 big enough to copy.
 
 _Copycat uses no AI._
