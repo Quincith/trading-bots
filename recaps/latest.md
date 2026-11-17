@@ -2,28 +2,28 @@
 
 _Times are UTC. Paper money only._
 
-## Aggressive: flat
+## Aggressive: down $0.02 (-0.03%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $71.37. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.02 (-0.03%) at $71.35. Paper money only.
 
 **Key takeaways**
 
-- Account value: $71.37 → $71.37 (no change).
-- Profit / loss since start: -$28.63 on $100.00 money put in.
-- Scout scanned 0 coins, 18 times.
+- Account value: $71.37 → $71.35 (-$0.02, -0.03%).
+- Profit / loss since start: -$28.65 on $100.00 money put in.
+- Scout scanned 0 coins, 19 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Medium: flat
+## Medium: down $0.02 (-0.02%)
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $80.50. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.02 (-0.02%) at $80.48. Paper money only.
 
 **Key takeaways**
 
-- Account value: $80.50 → $80.50 (no change).
-- Profit / loss since start: -$19.50 on $100.00 money put in.
-- Scout scanned 0 coins, 18 times.
+- Account value: $80.50 → $80.48 (-$0.02, -0.02%).
+- Profit / loss since start: -$19.52 on $100.00 money put in.
+- Scout scanned 0 coins, 19 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -50,7 +50,8 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 
 - Account value: $99.83 → $99.83 (no change).
 - Profit / loss since start: -$0.17 on $100.00 money put in.
-- No opening range marked today (a weekend, a holiday, or the check came too late).
+- Marked the opening range on 7 currency pairs at the London open.
+- Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (skip), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
 - No trades.
 - Open trades: none, all cash.
 
