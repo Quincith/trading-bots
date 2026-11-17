@@ -1,72 +1,57 @@
-# Daily recap: Monday, November 16, 2026
+# Daily recap: Tuesday, November 17, 2026
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $3.86 (-5.13%)
+## Aggressive: flat
 
-Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended down $3.86 (-5.13%) at $71.37. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $71.37. Paper money only.
 
 **Key takeaways**
 
-- Account value: $75.23 → $71.37 (-$3.86, -5.13%).
+- Account value: $71.37 → $71.37 (no change).
 - Profit / loss since start: -$28.63 on $100.00 money put in.
-- Scout scanned 0 coins, 51 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
-- Sold TQQQ for $69.95: QQQ closed below its 200-day average. Loss: -$6.01.
+- No trades.
 - Holding: nothing, all cash.
 
-## Medium: down $2.82 (-3.38%)
+## Medium: flat
 
-Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended down $2.82 (-3.38%) at $80.50. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $80.50. Paper money only.
 
 **Key takeaways**
 
-- Account value: $83.32 → $80.50 (-$2.82, -3.38%).
+- Account value: $80.50 → $80.50 (no change).
 - Profit / loss since start: -$19.50 on $100.00 money put in.
-- Scout scanned 0 coins, 51 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
-- Sold QLD for $78.90: QQQ closed below its 200-day average. Loss: -$4.40.
+- No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.76 (+0.80%)
+## Copycat: flat
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.76 (+0.80%) at $95.37. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended flat at $95.37. Paper money only.
 
 **Key takeaways**
 
-- Account value: $94.61 → $95.37 (+$0.76, +0.80%).
+- Account value: $95.37 → $95.37 (no change).
 - Profit / loss since start: -$4.63 on $100.00 money put in.
-- Spotter read 813 insider filings from the SEC and found 111 insider purchases. Watchlist at day end: 104 stocks.
+- Spotter read 40 insider filings from the SEC and found 6 insider purchases. Watchlist at day end: 105 stocks.
 - Top pick: DOX (AMDOCS LTD). 6 insiders bought $504,224 at about $42.39: Genish Amos (Director) $149,730; Gelman Eliahu Meir (Director) $104,300; De La Vega Rafael (Director) $102,228 and 3 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
 - Holding: BBT $19.97 (+$0.03 unrealized); CHCO $19.48 (-$0.51 unrealized); LRN $15.74 (-$0.37 unrealized); MSM $19.88 (-$0.11 unrealized); STC $20.31 (+$0.40 unrealized).
 
-## Forex: flat
+## Forex: no runs logged on 2026-11-17.
 
-Quiet day. No new currency trade. The office ended flat at $99.83. Practice money only.
-
-**Key takeaways**
-
-- Account value: $99.83 → $99.83 (no change).
-- Profit / loss since start: -$0.17 on $100.00 money put in.
-- Marked the opening range on 7 currency pairs at the London open.
-- Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (skip), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
-- No trades.
-- Open trades: none, all cash.
-
-## Fxcopy: no runs logged on 2026-11-16.
+## Fxcopy: no runs logged on 2026-11-17.
 
 ## Words to know
 
 - **account value**: What everything in the account is worth right now: cash plus coins, at today's prices.
-- **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
-- **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
-- **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
 - **insider**: A company's own bosses (CEO, CFO and so on) and board members. They know the company best.
 - **money put in**: The money you added (deposits) minus any you took out. Profit is measured against this.
-- **opening range**: A pair's highest and lowest price in the first 30 minutes after a big market opens. The Forex office buys if the price breaks above it and sells if it breaks below.
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.
