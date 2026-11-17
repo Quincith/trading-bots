@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.37 → $71.35 (-$0.02, -0.03%).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 29 times.
+- Scout scanned 0 coins, 30 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.50 → $80.48 (-$0.02, -0.02%).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 29 times.
+- Scout scanned 0 coins, 30 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.16 (-0.17%)
+## Copycat: down $0.22 (-0.23%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.16 (-0.17%) at $95.21. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.22 (-0.23%) at $95.15. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.37 → $95.21 (-$0.16, -0.17%).
-- Profit / loss since start: -$4.79 on $100.00 money put in.
-- Spotter read 165 insider filings from the SEC and found 43 insider purchases. Watchlist at day end: 103 stocks.
+- Account value: $95.37 → $95.15 (-$0.22, -0.23%).
+- Profit / loss since start: -$4.85 on $100.00 money put in.
+- Spotter read 177 insider filings from the SEC and found 45 insider purchases. Watchlist at day end: 103 stocks.
 - Top pick: DOX (AMDOCS LTD). 6 insiders bought $504,224 at about $42.39: Genish Amos (Director) $149,730; Gelman Eliahu Meir (Director) $104,300; De La Vega Rafael (Director) $102,228 and 3 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.85 (-$0.09 unrealized); CHCO $19.48 (-$0.51 unrealized); LRN $15.74 (-$0.37 unrealized); MSM $19.84 (-$0.15 unrealized); STC $20.31 (+$0.40 unrealized).
+- Holding: BBT $19.80 (-$0.14 unrealized); CHCO $19.48 (-$0.51 unrealized); LRN $15.74 (-$0.37 unrealized); MSM $19.84 (-$0.15 unrealized); STC $20.31 (+$0.40 unrealized).
 
 ## Forex: flat
 
