@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-17 01:04 UTC
+# Copycat strategy — 2026-11-17 01:34 UTC
 
 | | |
 |---|---|
@@ -11,17 +11,17 @@
 
 ## Insider buys on the watchlist
 
-Read 12 new SEC filings this run. 106 stocks on the watchlist.
+Read 22 new SEC filings this run. 107 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
 | DOX (AMDOCS LTD) | 5.45 | 6 insiders bought $504,224 at about $42.39: Genish Amos (Director) $149,730; Gelman Eliahu Meir (Director) $104,300; De La Vega Rafael (Director) $102,228 and 3 more. |
 | ADIG (ADI GLOBAL DISTRIBUTION INC.) | 5.01 | 5 insiders bought $325,603 at about $9.83: Aarnes Robert B (President and CEO, Director) $100,025; Carlet Michael (Executive VP, CFO) $99,896; Copeland Alicia Crispin (Executive VP and COO) $50,550 and 2 more. |
 | FPS (Forgent Power Solutions, Inc.) | 4.78 | 4 insiders bought $1,078,335 at about $20.82: Niederpruem Gary John (Chief Executive Officer, Director) $334,261; Ard Amy E (Chief Financial Officer) $299,996; Hottinger Tyson (Chief Legal Officer) $244,956 and 1 more. |
-| MP (MP Materials Corp. / DE) | 4.53 | 3 insiders bought $3,353,606 at about $36.26: Weisenburger Randall J (Director) $1,980,000; Rosenthal Michael Stuart (Chief Operating Officer) $1,175,090; Corbett Ryan (Chief Financial Officer) $198,516. |
+| MP (MP Materials Corp. / DE) | 4.54 | 3 insiders bought $3,482,231 at about $36.28: Weisenburger Randall J (Director) $1,980,000; Rosenthal Michael Stuart (Chief Operating Officer) $1,175,090; Corbett Ryan (Chief Financial Officer) $327,141. |
 | STWD (STARWOOD PROPERTY TRUST, INC.) | 4.47 | 2 insiders bought $16,711,132 at about $11.81: Sternlicht Barry S (CEO, Chairman of the Board, Director) $14,697,682; Pollack Jonathan Lee (Director) $2,013,450. |
 
 ## Notes
-- Spotter read 12 new insider filings and found 6 purchases (2 by officers or directors). Watchlist: 106 stocks, 78 big enough to copy.
+- Spotter read 22 new insider filings and found 9 purchases (4 by officers or directors). Watchlist: 107 stocks, 80 big enough to copy.
 
 _Copycat uses no AI._
