@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-18 19:07 UTC
+# Copycat strategy — 2026-11-18 19:37 UTC
 
 | | |
 |---|---|
-| Account value | $93.65 |
+| Account value | $93.54 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$6.35 (-6.35%) |
-| Time-weighted return (ignores when deposits happened) | -6.35% |
+| Strategy profit / loss | -$6.46 (-6.46%) |
+| Time-weighted return (ignores when deposits happened) | -6.46% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 17 new SEC filings this run. 102 stocks on the watchlist.
+Read 70 new SEC filings this run. 101 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 17 new SEC filings this run. 102 stocks on the watchlist.
 | STWD (STARWOOD PROPERTY TRUST, INC.) | 4.47 | 2 insiders bought $16,711,132 at about $11.81: Sternlicht Barry S (CEO, Chairman of the Board, Director) $14,697,682; Pollack Jonathan Lee (Director) $2,013,450. |
 
 ## Notes
-- Spotter read 17 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 102 stocks, 78 big enough to copy.
+- Spotter read 70 new insider filings and found 2 purchases (2 by officers or directors). Watchlist: 101 stocks, 78 big enough to copy.
 
 _Copycat uses no AI._
