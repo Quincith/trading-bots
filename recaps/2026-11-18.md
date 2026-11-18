@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 44 times.
+- Scout scanned 0 coins, 45 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 44 times.
+- Scout scanned 0 coins, 45 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.83 (-0.88%)
+## Copycat: down $1.09 (-1.16%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.83 (-0.88%) at $93.35. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $1.09 (-1.16%) at $93.09. Paper money only.
 
 **Key takeaways**
 
-- Account value: $94.18 → $93.35 (-$0.83, -0.88%).
-- Profit / loss since start: -$6.65 on $100.00 money put in.
-- Spotter read 762 insider filings from the SEC and found 82 insider purchases. Watchlist at day end: 102 stocks.
-- Top pick: ADIG (ADI GLOBAL DISTRIBUTION INC.). 5 insiders bought $325,603 at about $9.83: Aarnes Robert B (President and CEO, Director) $100,025; Carlet Michael (Executive VP, CFO) $99,896; Copeland Alicia Crispin (Executive VP and COO) $50,550 and 2 more.
+- Account value: $94.18 → $93.09 (-$1.09, -1.16%).
+- Profit / loss since start: -$6.91 on $100.00 money put in.
+- Spotter read 896 insider filings from the SEC and found 95 insider purchases. Watchlist at day end: 103 stocks.
+- Top pick: STWD (STARWOOD PROPERTY TRUST, INC.). 3 insiders bought $18,734,234 at about $11.80: Sternlicht Barry S (CEO, Chairman of the Board, Director) $14,697,682; Zelnick Strauss (Director) $2,023,102; Pollack Jonathan Lee (Director) $2,013,450.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.61 (-$0.33 unrealized); CHCO $19.19 (-$0.80 unrealized); LRN $15.97 (-$0.14 unrealized); MSM $18.93 (-$1.06 unrealized); STC $19.65 (-$0.26 unrealized).
+- Holding: BBT $19.57 (-$0.37 unrealized); CHCO $19.12 (-$0.87 unrealized); LRN $15.99 (-$0.12 unrealized); MSM $18.78 (-$1.21 unrealized); STC $19.62 (-$0.29 unrealized).
 
 ## Forex: flat
 
