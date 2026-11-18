@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 33 times.
+- Scout scanned 0 coins, 34 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 33 times.
+- Scout scanned 0 coins, 34 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.30 (-0.32%)
+## Copycat: down $0.17 (-0.18%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.30 (-0.32%) at $93.88. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.17 (-0.18%) at $94.01. Paper money only.
 
 **Key takeaways**
 
-- Account value: $94.18 → $93.88 (-$0.30, -0.32%).
-- Profit / loss since start: -$6.12 on $100.00 money put in.
-- Spotter read 347 insider filings from the SEC and found 49 insider purchases. Watchlist at day end: 100 stocks.
+- Account value: $94.18 → $94.01 (-$0.17, -0.18%).
+- Profit / loss since start: -$5.99 on $100.00 money put in.
+- Spotter read 383 insider filings from the SEC and found 51 insider purchases. Watchlist at day end: 101 stocks.
 - Top pick: ADIG (ADI GLOBAL DISTRIBUTION INC.). 5 insiders bought $325,603 at about $9.83: Aarnes Robert B (President and CEO, Director) $100,025; Carlet Michael (Executive VP, CFO) $99,896; Copeland Alicia Crispin (Executive VP and COO) $50,550 and 2 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.73 (-$0.21 unrealized); CHCO $19.12 (-$0.87 unrealized); LRN $15.81 (-$0.30 unrealized); MSM $19.55 (-$0.44 unrealized); STC $19.66 (-$0.25 unrealized).
+- Holding: BBT $19.73 (-$0.21 unrealized); CHCO $19.06 (-$0.93 unrealized); LRN $16.21 (+$0.10 unrealized); MSM $19.41 (-$0.58 unrealized); STC $19.61 (-$0.30 unrealized).
 
 ## Forex: flat
 
