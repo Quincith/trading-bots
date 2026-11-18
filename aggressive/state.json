@@ -3,10 +3,10 @@
   "day_start_equity": 71.35,
   "halted_reason": null,
   "hunt": {
-    "average": 681.41,
-    "checked": "2026-11-18T04:36:30+00:00",
-    "close": 661.75,
-    "close_day": "2026-11-16",
+    "average": 681.57,
+    "checked": "2026-11-18T05:06:35+00:00",
+    "close": 656.95,
+    "close_day": "2026-11-17",
     "hold": "TQQQ",
     "in_uptrend": false,
     "signal": "QQQ"
