@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-18 17:37 UTC
+# Copycat strategy — 2026-11-18 18:07 UTC
 
 | | |
 |---|---|
-| Account value | $94.12 |
+| Account value | $93.99 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$5.88 (-5.88%) |
-| Time-weighted return (ignores when deposits happened) | -5.88% |
+| Strategy profit / loss | -$6.01 (-6.01%) |
+| Time-weighted return (ignores when deposits happened) | -6.01% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 22 new SEC filings this run. 102 stocks on the watchlist.
+Read 51 new SEC filings this run. 100 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 22 new SEC filings this run. 102 stocks on the watchlist.
 | HAWK (HawkEye 360, Inc.) | 3.52 | 4 insiders bought $59,525 at about $18.14: Serafini John Sheldon (President and CEO, Director) $24,620; Probert Todd (Chief Operating Officer) $14,963; Searle Craig Chih-Meng (Chief Financial Officer) $10,001 and 1 more. |
 
 ## Notes
-- Spotter read 22 new insider filings and found 2 purchases (2 by officers or directors). Watchlist: 102 stocks, 77 big enough to copy.
+- Spotter read 51 new insider filings and found 2 purchases (0 by officers or directors). Watchlist: 100 stocks, 76 big enough to copy.
 
 _Copycat uses no AI._
