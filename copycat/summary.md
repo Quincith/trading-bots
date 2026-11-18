@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-18 11:37 UTC
+# Copycat strategy — 2026-11-18 12:07 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 6 new SEC filings this run. 98 stocks on the watchlist.
+Read 4 new SEC filings this run. 98 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 6 new SEC filings this run. 98 stocks on the watchlist.
 | HAWK (HawkEye 360, Inc.) | 3.52 | 4 insiders bought $59,525 at about $18.14: Serafini John Sheldon (President and CEO, Director) $24,620; Probert Todd (Chief Operating Officer) $14,963; Searle Craig Chih-Meng (Chief Financial Officer) $10,001 and 1 more. |
 
 ## Notes
-- Spotter read 6 new insider filings and found 2 purchases (0 by officers or directors). Watchlist: 98 stocks, 74 big enough to copy.
+- Spotter read 4 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 98 stocks, 74 big enough to copy.
 
 _Copycat uses no AI._
