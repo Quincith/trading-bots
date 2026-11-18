@@ -1,42 +1,42 @@
-# Daily recap: Tuesday, November 17, 2026
+# Daily recap: Wednesday, November 18, 2026
 
 _Times are UTC. Paper money only._
 
-## Aggressive: down $0.02 (-0.03%)
+## Aggressive: flat
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.02 (-0.03%) at $71.35. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $71.35. Paper money only.
 
 **Key takeaways**
 
-- Account value: $71.37 → $71.35 (-$0.02, -0.03%).
+- Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 51 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Medium: down $0.02 (-0.02%)
+## Medium: flat
 
-Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended down $0.02 (-0.02%) at $80.48. Paper money only.
+Quiet day. The market showed no setup strong enough to look at, so the bots stayed in cash. The account ended flat at $80.48. Paper money only.
 
 **Key takeaways**
 
-- Account value: $80.50 → $80.48 (-$0.02, -0.02%).
+- Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 51 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $1.19 (-1.25%)
+## Copycat: flat
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $1.19 (-1.25%) at $94.18. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended flat at $94.18. Paper money only.
 
 **Key takeaways**
 
-- Account value: $95.37 → $94.18 (-$1.19, -1.25%).
+- Account value: $94.18 → $94.18 (no change).
 - Profit / loss since start: -$5.82 on $100.00 money put in.
-- Spotter read 1691 insider filings from the SEC and found 141 insider purchases. Watchlist at day end: 98 stocks.
+- Spotter read 37 insider filings from the SEC and found 7 insider purchases. Watchlist at day end: 99 stocks.
 - Top pick: ADIG (ADI GLOBAL DISTRIBUTION INC.). 5 insiders bought $325,603 at about $9.83: Aarnes Robert B (President and CEO, Director) $100,025; Carlet Michael (Executive VP, CFO) $99,896; Copeland Alicia Crispin (Executive VP and COO) $50,550 and 2 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
@@ -50,12 +50,11 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 
 - Account value: $99.83 → $99.83 (no change).
 - Profit / loss since start: -$0.17 on $100.00 money put in.
-- Marked the opening range on 7 currency pairs at the London open.
-- Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (skip), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
+- No opening range marked today (a weekend, a holiday, or the check came too late).
 - No trades.
 - Open trades: none, all cash.
 
-## Fxcopy: no runs logged on 2026-11-17.
+## Fxcopy: no runs logged on 2026-11-18.
 
 ## Words to know
 
