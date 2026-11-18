@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-18 22:08 UTC
+# Copycat strategy — 2026-11-18 22:38 UTC
 
 | | |
 |---|---|
@@ -11,17 +11,17 @@
 
 ## Insider buys on the watchlist
 
-Read 133 new SEC filings this run. 99 stocks on the watchlist.
+Read 107 new SEC filings this run. 103 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
 | HAWK (HawkEye 360, Inc.) | 6.09 | 7 insiders bought $124,211 at about $18.37: Shames Jonathan (Director) $49,886; Serafini John Sheldon (President and CEO, Director) $24,620; Probert Todd (Chief Operating Officer) $14,963 and 4 more. |
+| FPS (Forgent Power Solutions, Inc.) | 5.56 | 5 insiders bought $1,143,315 at about $20.87: Niederpruem Gary John (Chief Executive Officer, Director) $334,261; Ard Amy E (Chief Financial Officer) $299,996; Hottinger Tyson (Chief Legal Officer) $244,956 and 2 more. |
 | STWD (STARWOOD PROPERTY TRUST, INC.) | 5.27 | 3 insiders bought $18,734,234 at about $11.80: Sternlicht Barry S (CEO, Chairman of the Board, Director) $14,697,682; Zelnick Strauss (Director) $2,023,102; Pollack Jonathan Lee (Director) $2,013,450. |
+| WWB (WINDWARD BIO GROUP AG) | 5.24 | 3 insiders bought $54,875,014 at about $17.00: Bonita David P (Director, 10% owner) $20,000,007; Orbimed Advisors Llc & Orbimed Capital Gp Ix Llc (Director, 10% owner) $20,000,007; Stampacchia Otello (Director) $14,875,000. |
 | ADIG (ADI GLOBAL DISTRIBUTION INC.) | 5.01 | 5 insiders bought $325,603 at about $9.83: Aarnes Robert B (President and CEO, Director) $100,025; Carlet Michael (Executive VP, CFO) $99,896; Copeland Alicia Crispin (Executive VP and COO) $50,550 and 2 more. |
-| PAM (Pampa Energy Inc.) | 4.88 | 3 insiders bought $7,626,935 at about $63.19: Mindlin Marcos Marcelo (Director, 10% owner) $4,553,191; Mariani Gustavo (Vicepresident) $1,617,513; Mindlin Damian Miguel (Vicepresident) $1,456,232. |
-| FPS (Forgent Power Solutions, Inc.) | 4.78 | 4 insiders bought $1,078,335 at about $20.82: Niederpruem Gary John (Chief Executive Officer, Director) $334,261; Ard Amy E (Chief Financial Officer) $299,996; Hottinger Tyson (Chief Legal Officer) $244,956 and 1 more. |
 
 ## Notes
-- Spotter read 133 new insider filings and found 24 purchases (10 by officers or directors). Watchlist: 99 stocks, 76 big enough to copy.
+- Spotter read 107 new insider filings and found 21 purchases (15 by officers or directors). Watchlist: 103 stocks, 79 big enough to copy.
 
 _Copycat uses no AI._
