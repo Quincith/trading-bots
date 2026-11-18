@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-18 21:26 UTC
+# Copycat strategy — 2026-11-18 21:38 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 147 new SEC filings this run. 102 stocks on the watchlist.
+Read 126 new SEC filings this run. 100 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 147 new SEC filings this run. 102 stocks on the watchlist.
 | FPS (Forgent Power Solutions, Inc.) | 4.78 | 4 insiders bought $1,078,335 at about $20.82: Niederpruem Gary John (Chief Executive Officer, Director) $334,261; Ard Amy E (Chief Financial Officer) $299,996; Hottinger Tyson (Chief Legal Officer) $244,956 and 1 more. |
 
 ## Notes
-- Spotter read 147 new insider filings and found 16 purchases (11 by officers or directors). Watchlist: 102 stocks, 77 big enough to copy.
+- Spotter read 126 new insider filings and found 11 purchases (6 by officers or directors). Watchlist: 100 stocks, 76 big enough to copy.
 
 _Copycat uses no AI._
