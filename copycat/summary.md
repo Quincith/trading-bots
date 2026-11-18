@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-18 01:36 UTC
+# Copycat strategy — 2026-11-18 02:06 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 24 new SEC filings this run. 98 stocks on the watchlist.
+Read 10 new SEC filings this run. 98 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -19,9 +19,9 @@ Read 24 new SEC filings this run. 98 stocks on the watchlist.
 | FPS (Forgent Power Solutions, Inc.) | 4.78 | 4 insiders bought $1,078,335 at about $20.82: Niederpruem Gary John (Chief Executive Officer, Director) $334,261; Ard Amy E (Chief Financial Officer) $299,996; Hottinger Tyson (Chief Legal Officer) $244,956 and 1 more. |
 | ITG (ITG, Inc./DE/) | 4.58 | 4 insiders bought $673,160 at about $5.62: Brooks Michael George (Director) $505,800; Parrott Andrew (Chief Executive Officer, Director) $98,350; Laperch William G (Director) $50,040 and 1 more. |
 | STWD (STARWOOD PROPERTY TRUST, INC.) | 4.47 | 2 insiders bought $16,711,132 at about $11.81: Sternlicht Barry S (CEO, Chairman of the Board, Director) $14,697,682; Pollack Jonathan Lee (Director) $2,013,450. |
-| HPP (Hudson Pacific Properties, Inc.) | 3.96 | 3 insiders bought $905,762 at about $9.06: Bortz Jon E (Director) $680,112; Coleman Victor J (Chief Executive Officer, Director) $182,000; Lammas Mark T (President) $43,650. |
+| HAWK (HawkEye 360, Inc.) | 3.52 | 4 insiders bought $59,525 at about $18.14: Serafini John Sheldon (President and CEO, Director) $24,620; Probert Todd (Chief Operating Officer) $14,963; Searle Craig Chih-Meng (Chief Financial Officer) $10,001 and 1 more. |
 
 ## Notes
-- Spotter read 24 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 98 stocks, 75 big enough to copy.
+- Spotter read 10 new insider filings and found 7 purchases (0 by officers or directors). Watchlist: 98 stocks, 74 big enough to copy.
 
 _Copycat uses no AI._
