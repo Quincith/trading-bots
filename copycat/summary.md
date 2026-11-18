@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-18 20:07 UTC
+# Copycat strategy — 2026-11-18 20:38 UTC
 
 | | |
 |---|---|
-| Account value | $93.63 |
+| Account value | $93.35 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$6.37 (-6.37%) |
-| Time-weighted return (ignores when deposits happened) | -6.37% |
+| Strategy profit / loss | -$6.65 (-6.65%) |
+| Time-weighted return (ignores when deposits happened) | -6.65% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 56 new SEC filings this run. 102 stocks on the watchlist.
+Read 37 new SEC filings this run. 102 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 56 new SEC filings this run. 102 stocks on the watchlist.
 | ITG (ITG, Inc./DE/) | 4.58 | 4 insiders bought $673,160 at about $5.62: Brooks Michael George (Director) $505,800; Parrott Andrew (Chief Executive Officer, Director) $98,350; Laperch William G (Director) $50,040 and 1 more. |
 
 ## Notes
-- Spotter read 56 new insider filings and found 10 purchases (5 by officers or directors). Watchlist: 102 stocks, 78 big enough to copy.
+- Spotter read 37 new insider filings and found 3 purchases (1 by officers or directors). Watchlist: 102 stocks, 78 big enough to copy.
 
 _Copycat uses no AI._
