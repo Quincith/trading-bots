@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 41 times.
+- Scout scanned 0 coins, 42 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 41 times.
+- Scout scanned 0 coins, 42 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.90 (-0.97%)
+## Copycat: down $0.82 (-0.88%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.90 (-0.97%) at $92.19. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.82 (-0.88%) at $92.27. Paper money only.
 
 **Key takeaways**
 
-- Account value: $93.09 → $92.19 (-$0.90, -0.97%).
-- Profit / loss since start: -$7.81 on $100.00 money put in.
-- Spotter read 367 insider filings from the SEC and found 55 insider purchases. Watchlist at day end: 103 stocks.
+- Account value: $93.09 → $92.27 (-$0.82, -0.88%).
+- Profit / loss since start: -$7.73 on $100.00 money put in.
+- Spotter read 628 insider filings from the SEC and found 161 insider purchases. Watchlist at day end: 110 stocks.
 - Top pick: HAWK (HawkEye 360, Inc.). 8 insiders bought $173,405 at about $18.33: Shames Jonathan (Director) $49,886; Finelli Francis Alphonse (Director) $49,194; Serafini John Sheldon (President and CEO, Director) $24,620 and 5 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.53 (-$0.41 unrealized); CHCO $19.00 (-$0.99 unrealized); LRN $15.71 (-$0.40 unrealized); MSM $18.18 (-$1.81 unrealized); STC $19.77 (-$0.14 unrealized).
+- Holding: BBT $19.55 (-$0.39 unrealized); CHCO $19.03 (-$0.96 unrealized); LRN $15.75 (-$0.36 unrealized); MSM $18.25 (-$1.74 unrealized); STC $19.70 (-$0.21 unrealized).
 
 ## Forex: flat
 
