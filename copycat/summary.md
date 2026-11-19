@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-19 23:10 UTC
+# Copycat strategy — 2026-11-19 23:40 UTC
 
 | | |
 |---|---|
-| Account value | $91.85 |
+| Account value | $91.87 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$8.15 (-8.15%) |
-| Time-weighted return (ignores when deposits happened) | -8.15% |
+| Strategy profit / loss | -$8.13 (-8.13%) |
+| Time-weighted return (ignores when deposits happened) | -8.13% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 33 new SEC filings this run. 124 stocks on the watchlist.
+Read 31 new SEC filings this run. 124 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 33 new SEC filings this run. 124 stocks on the watchlist.
 | ADIG (ADI GLOBAL DISTRIBUTION INC.) | 5.01 | 5 insiders bought $325,603 at about $9.83: Aarnes Robert B (President and CEO, Director) $100,025; Carlet Michael (Executive VP, CFO) $99,896; Copeland Alicia Crispin (Executive VP and COO) $50,550 and 2 more. |
 
 ## Notes
-- Spotter read 33 new insider filings and found 17 purchases (1 by officers or directors). Watchlist: 124 stocks, 94 big enough to copy.
+- Spotter read 31 new insider filings and found 6 purchases (3 by officers or directors). Watchlist: 124 stocks, 94 big enough to copy.
 
 _Copycat uses no AI._
