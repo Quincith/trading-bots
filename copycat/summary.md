@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-19 01:38 UTC
+# Copycat strategy — 2026-11-19 02:08 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 24 new SEC filings this run. 101 stocks on the watchlist.
+Read 14 new SEC filings this run. 101 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 24 new SEC filings this run. 101 stocks on the watchlist.
 | WWB (WINDWARD BIO GROUP AG) | 5.24 | 3 insiders bought $54,875,014 at about $17.00: Bonita David P (Director, 10% owner) $20,000,007; Orbimed Advisors Llc & Orbimed Capital Gp Ix Llc (Director, 10% owner) $20,000,007; Stampacchia Otello (Director) $14,875,000. |
 
 ## Notes
-- Spotter read 24 new insider filings and found 11 purchases (8 by officers or directors). Watchlist: 101 stocks, 79 big enough to copy.
+- Spotter read 14 new insider filings and found 2 purchases (0 by officers or directors). Watchlist: 101 stocks, 79 big enough to copy.
 
 _Copycat uses no AI._
