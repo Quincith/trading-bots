@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-19 11:36 UTC
+# Copycat strategy — 2026-11-19 11:39 UTC
 
 | | |
 |---|---|
@@ -23,5 +23,6 @@ Read 0 new SEC filings this run. 100 stocks on the watchlist.
 
 ## Notes
 - Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 100 stocks, 78 big enough to copy.
+- Couldn't read the SEC feed: HTTPSConnectionPool(host='www.sec.gov', port=443): Read timed out. (read timeout=30)
 
 _Copycat uses no AI._
