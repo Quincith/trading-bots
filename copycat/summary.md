@@ -1,11 +1,11 @@
-# Copycat strategy — 2026-11-19 17:09 UTC
+# Copycat strategy — 2026-11-19 17:39 UTC
 
 | | |
 |---|---|
-| Account value | $91.87 |
+| Account value | $92.40 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$8.13 (-8.13%) |
-| Time-weighted return (ignores when deposits happened) | -8.13% |
+| Strategy profit / loss | -$7.60 (-7.60%) |
+| Time-weighted return (ignores when deposits happened) | -7.60% |
 
 **Risk:** Max open positions reached; only managing exits.
 
@@ -23,6 +23,5 @@ Read 0 new SEC filings this run. 103 stocks on the watchlist.
 
 ## Notes
 - Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 103 stocks, 80 big enough to copy.
-- Couldn't read the SEC feed: HTTPSConnectionPool(host='www.sec.gov', port=443): Read timed out. (read timeout=30)
 
 _Copycat uses no AI._
