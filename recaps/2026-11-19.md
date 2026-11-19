@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 38 times.
+- Scout scanned 0 coins, 39 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 38 times.
+- Scout scanned 0 coins, 39 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.69 (-0.74%)
+## Copycat: down $0.83 (-0.89%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.69 (-0.74%) at $92.40. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.83 (-0.89%) at $92.26. Paper money only.
 
 **Key takeaways**
 
-- Account value: $93.09 → $92.40 (-$0.69, -0.74%).
-- Profit / loss since start: -$7.60 on $100.00 money put in.
+- Account value: $93.09 → $92.26 (-$0.83, -0.89%).
+- Profit / loss since start: -$7.74 on $100.00 money put in.
 - Spotter read 367 insider filings from the SEC and found 55 insider purchases. Watchlist at day end: 103 stocks.
 - Top pick: HAWK (HawkEye 360, Inc.). 8 insiders bought $173,405 at about $18.33: Shames Jonathan (Director) $49,886; Finelli Francis Alphonse (Director) $49,194; Serafini John Sheldon (President and CEO, Director) $24,620 and 5 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.49 (-$0.45 unrealized); CHCO $18.96 (-$1.03 unrealized); LRN $15.75 (-$0.36 unrealized); MSM $18.24 (-$1.75 unrealized); STC $19.96 (+$0.05 unrealized).
+- Holding: BBT $19.50 (-$0.44 unrealized); CHCO $18.92 (-$1.07 unrealized); LRN $15.71 (-$0.40 unrealized); MSM $18.24 (-$1.75 unrealized); STC $19.89 (-$0.02 unrealized).
 
 ## Forex: flat
 
