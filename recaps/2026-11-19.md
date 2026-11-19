@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 3 times.
+- Scout scanned 0 coins, 4 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 3 times.
+- Scout scanned 0 coins, 4 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $93.09 → $93.09 (no change).
 - Profit / loss since start: -$6.91 on $100.00 money put in.
-- Spotter read 72 insider filings from the SEC and found 18 insider purchases. Watchlist at day end: 100 stocks.
+- Spotter read 96 insider filings from the SEC and found 29 insider purchases. Watchlist at day end: 101 stocks.
 - Top pick: HAWK (HawkEye 360, Inc.). 8 insiders bought $173,405 at about $18.33: Shames Jonathan (Director) $49,886; Finelli Francis Alphonse (Director) $49,194; Serafini John Sheldon (President and CEO, Director) $24,620 and 5 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
