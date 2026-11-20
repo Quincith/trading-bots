@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 29 times.
+- Scout scanned 0 coins, 30 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 29 times.
+- Scout scanned 0 coins, 30 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $91.87 → $92.21 (+$0.34, +0.37%).
 - Profit / loss since start: -$7.79 on $100.00 money put in.
-- Spotter read 131 insider filings from the SEC and found 30 insider purchases. Watchlist at day end: 127 stocks.
+- Spotter read 153 insider filings from the SEC and found 39 insider purchases. Watchlist at day end: 128 stocks.
 - Top pick: RMIX (Suncrete, Inc.). 7 insiders bought $1,269,991 at about $6.29: Rees-Jones David (Director) $731,172; Fleming Ned N Iii (Director, 10% owner) $238,000; Heyer Andrew R (Director) $182,800 and 4 more.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
