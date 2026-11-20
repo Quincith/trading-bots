@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-20 22:42 UTC
+# Copycat strategy — 2026-11-20 23:12 UTC
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## Insider buys on the watchlist
 
-Read 86 new SEC filings this run. 150 stocks on the watchlist.
+Read 39 new SEC filings this run. 151 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -28,7 +28,7 @@ Read 86 new SEC filings this run. 150 stocks on the watchlist.
 | FPS | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
 
 ## Notes
-- Spotter read 86 new insider filings and found 13 purchases (1 by officers or directors). Watchlist: 150 stocks, 107 big enough to copy.
+- Spotter read 39 new insider filings and found 7 purchases (1 by officers or directors). Watchlist: 151 stocks, 107 big enough to copy.
 - Stock market closed; picks wait for the next open.
 
 _Copycat uses no AI._
