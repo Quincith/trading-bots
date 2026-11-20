@@ -1,15 +1,15 @@
-# Copycat strategy — 2026-11-20 20:42 UTC
+# Copycat strategy — 2026-11-20 21:12 UTC
 
 | | |
 |---|---|
-| Account value | $91.53 |
+| Account value | $91.28 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$8.47 (-8.47%) |
-| Time-weighted return (ignores when deposits happened) | -8.47% |
+| Strategy profit / loss | -$8.72 (-8.72%) |
+| Time-weighted return (ignores when deposits happened) | -8.72% |
 
 ## Insider buys on the watchlist
 
-Read 53 new SEC filings this run. 139 stocks on the watchlist.
+Read 113 new SEC filings this run. 143 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -23,14 +23,12 @@ Read 53 new SEC filings this run. 139 stocks on the watchlist.
 
 | Stock | Price check | Risk | Decision |
 |---|---|---|---|
-| RMIX | Now $5.89, -6.3% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| HAWK | Now $16.11, -12.1% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| FPS | Now $18.00, -13.8% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| ADIG | Now $9.06, -7.9% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| PAM | Now $61.33, -2.9% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| SEI | Now $54.20, +0.8% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| RMIX | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
+| HAWK | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
+| FPS | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
 
 ## Notes
-- Spotter read 53 new insider filings and found 6 purchases (6 by officers or directors). Watchlist: 139 stocks, 98 big enough to copy.
+- Spotter read 113 new insider filings and found 29 purchases (18 by officers or directors). Watchlist: 143 stocks, 102 big enough to copy.
+- Stock market closed; picks wait for the next open.
 
 _Copycat uses no AI._
