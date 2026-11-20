@@ -1,17 +1,18 @@
-# Copycat strategy — 2026-11-20 14:11 UTC
+# Copycat strategy — 2026-11-20 14:41 UTC
 
 | | |
 |---|---|
-| Account value | $92.21 |
+| Account value | $92.82 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$7.79 (-7.79%) |
-| Time-weighted return (ignores when deposits happened) | -7.79% |
+| Strategy profit / loss | -$7.18 (-7.18%) |
+| Time-weighted return (ignores when deposits happened) | -7.18% |
 
-**Risk:** Max open positions reached; only managing exits.
+## Open trades managed
+- SOLD MSM: stop hit (105.83 <= 106.132)
 
 ## Insider buys on the watchlist
 
-Read 13 new SEC filings this run. 130 stocks on the watchlist.
+Read 32 new SEC filings this run. 131 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -21,7 +22,18 @@ Read 13 new SEC filings this run. 130 stocks on the watchlist.
 | WWB (WINDWARD BIO GROUP AG) | 5.24 | 3 insiders bought $54,875,014 at about $17.00: Bonita David P (Director, 10% owner) $20,000,007; Orbimed Advisors Llc & Orbimed Capital Gp Ix Llc (Director, 10% owner) $20,000,007; Stampacchia Otello (Director) $14,875,000. |
 | ADIG (ADI GLOBAL DISTRIBUTION INC.) | 5.01 | 5 insiders bought $325,603 at about $9.83: Aarnes Robert B (President and CEO, Director) $100,025; Carlet Michael (Executive VP, CFO) $99,896; Copeland Alicia Crispin (Executive VP and COO) $50,550 and 2 more. |
 
+## Copy decisions
+
+| Stock | Price check | Risk | Decision |
+|---|---|---|---|
+| RMIX | Now $6.15, -2.2% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| HAWK | Now $17.45, -4.8% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| FPS | Now $19.54, -6.4% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| WWB | - | -  | **SKIP** — Alpaca can't buy part of a share of this stock. |
+| ADIG | Now $8.72, -11.3% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| PAM | Now $62.03, -1.8% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+
 ## Notes
-- Spotter read 13 new insider filings and found 7 purchases (3 by officers or directors). Watchlist: 130 stocks, 97 big enough to copy.
+- Spotter read 32 new insider filings and found 11 purchases (3 by officers or directors). Watchlist: 131 stocks, 97 big enough to copy.
 
 _Copycat uses no AI._

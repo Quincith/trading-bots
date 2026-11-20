@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 31 times.
+- Scout scanned 0 coins, 32 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,27 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 31 times.
+- Scout scanned 0 coins, 32 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.34 (+0.37%)
+## Copycat: up $0.95 (+1.03%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $0.34 (+0.37%) at $92.21. Paper money only.
+Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended up $0.95 (+1.03%) at $92.82. Paper money only.
 
 **Key takeaways**
 
-- Account value: $91.87 → $92.21 (+$0.34, +0.37%).
-- Profit / loss since start: -$7.79 on $100.00 money put in.
-- Spotter read 166 insider filings from the SEC and found 46 insider purchases. Watchlist at day end: 130 stocks.
+- Account value: $91.87 → $92.82 (+$0.95, +1.03%).
+- Profit / loss since start: -$7.18 on $100.00 money put in.
+- Spotter read 198 insider filings from the SEC and found 57 insider purchases. Watchlist at day end: 131 stocks.
 - Top pick: RMIX (Suncrete, Inc.). 7 insiders bought $1,269,991 at about $6.29: Rees-Jones David (Director) $731,172; Fleming Ned N Iii (Director, 10% owner) $238,000; Heyer Andrew R (Director) $182,800 and 4 more.
-- Nothing was ready to copy, so no trade was considered.
-- No trades.
-- Holding: BBT $19.80 (-$0.14 unrealized); CHCO $19.04 (-$0.95 unrealized); LRN $15.66 (-$0.45 unrealized); MSM $18.11 (-$1.88 unrealized); STC $19.60 (-$0.31 unrealized).
+- Sent for review: RMIX (1x), HAWK (1x), FPS (1x), WWB (1x), ADIG (1x), PAM (1x).
+- Decisions: 0 buy, 0 wait, 6 skip.
+- Passed on RMIX (SKIP, 0% confident): Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash)
+- Passed on HAWK (SKIP, 0% confident): Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash)
+- Sold MSM for $17.87: the price fell to the safety exit, so the bots sold to keep the loss small. Loss: -$2.13.
+- Holding: BBT $19.66 (-$0.28 unrealized); CHCO $19.20 (-$0.79 unrealized); LRN $15.89 (-$0.22 unrealized); STC $20.23 (+$0.32 unrealized).
 
 ## Forex: flat
 
@@ -61,6 +64,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 
 - **account value**: What everything in the account is worth right now: cash plus coins, at today's prices.
 - **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
+- **confidence**: How sure the Decision bot is, from 0% to 100%. Each strategy only buys above its own minimum.
 - **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
 - **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
@@ -70,5 +74,6 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.
+- **stop-loss**: A safety exit. If the price falls to this level, the bots sell to keep the loss small.
 - **unrealized**: A gain or loss on a coin we still own. It only becomes real when we sell.
 - **volume**: How much of a coin is being bought and sold. A jump in volume means lots of people suddenly care.
