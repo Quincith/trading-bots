@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 34 times.
+- Scout scanned 0 coins, 35 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,27 +23,27 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 34 times.
+- Scout scanned 0 coins, 35 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $1.03 (+1.12%)
+## Copycat: up $0.71 (+0.77%)
 
-Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended up $1.03 (+1.12%) at $92.90. Paper money only.
+Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended up $0.71 (+0.77%) at $92.58. Paper money only.
 
 **Key takeaways**
 
-- Account value: $91.87 → $92.90 (+$1.03, +1.12%).
-- Profit / loss since start: -$7.10 on $100.00 money put in.
-- Spotter read 320 insider filings from the SEC and found 63 insider purchases. Watchlist at day end: 130 stocks.
+- Account value: $91.87 → $92.58 (+$0.71, +0.77%).
+- Profit / loss since start: -$7.42 on $100.00 money put in.
+- Spotter read 344 insider filings from the SEC and found 70 insider purchases. Watchlist at day end: 131 stocks.
 - Top pick: RMIX (Suncrete, Inc.). 7 insiders bought $1,269,991 at about $6.29: Rees-Jones David (Director) $731,172; Fleming Ned N Iii (Director, 10% owner) $238,000; Heyer Andrew R (Director) $182,800 and 4 more.
-- Sent for review: RMIX (3x), HAWK (3x), FPS (3x), ADIG (3x), PAM (3x), WWB (1x), NONE (1x), ITG (1x).
-- Decisions: 0 buy, 0 wait, 18 skip.
-- Passed on RMIX (SKIP, 0% confident): Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash)
+- Sent for review: RMIX (4x), HAWK (4x), FPS (4x), ADIG (4x), PAM (4x), WWB (1x), NONE (1x), ITG (1x), OFRM (1x).
+- Decisions: 0 buy, 0 wait, 24 skip.
+- Passed on RMIX (SKIP, 0% confident): Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
 - Passed on HAWK (SKIP, 0% confident): Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
 - Sold MSM for $17.87: the price fell to the safety exit, so the bots sold to keep the loss small. Loss: -$2.13.
-- Holding: BBT $19.48 (-$0.46 unrealized); CHCO $19.17 (-$0.82 unrealized); LRN $15.67 (-$0.44 unrealized); STC $20.74 (+$0.83 unrealized).
+- Holding: BBT $19.34 (-$0.60 unrealized); CHCO $19.07 (-$0.92 unrealized); LRN $15.62 (-$0.49 unrealized); STC $20.71 (+$0.80 unrealized).
 
 ## Forex: flat
 
