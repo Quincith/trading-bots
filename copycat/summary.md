@@ -1,15 +1,15 @@
-# Copycat strategy — 2026-11-20 15:11 UTC
+# Copycat strategy — 2026-11-20 15:41 UTC
 
 | | |
 |---|---|
-| Account value | $93.01 |
+| Account value | $92.90 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$6.99 (-6.99%) |
-| Time-weighted return (ignores when deposits happened) | -6.99% |
+| Strategy profit / loss | -$7.10 (-7.10%) |
+| Time-weighted return (ignores when deposits happened) | -7.10% |
 
 ## Insider buys on the watchlist
 
-Read 69 new SEC filings this run. 131 stocks on the watchlist.
+Read 53 new SEC filings this run. 130 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -23,14 +23,14 @@ Read 69 new SEC filings this run. 131 stocks on the watchlist.
 
 | Stock | Price check | Risk | Decision |
 |---|---|---|---|
-| RMIX | Now $6.09, -3.0% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| HAWK | Now $16.98, -7.3% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| FPS | Now $19.78, -5.2% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| ADIG | Now $8.80, -10.5% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| PAM | Now $62.03, -1.8% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| NONE | - | -  | **SKIP** — Alpaca can't buy part of a share of this stock. |
+| RMIX | Now $6.09, -3.1% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| HAWK | Now $16.80, -8.3% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| FPS | Now $18.91, -9.4% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| ADIG | Now $8.69, -11.7% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| PAM | Now $63.11, -0.1% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| ITG | - | -  | **SKIP** — Alpaca can't buy part of a share of this stock. |
 
 ## Notes
-- Spotter read 69 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 131 stocks, 96 big enough to copy.
+- Spotter read 53 new insider filings and found 5 purchases (1 by officers or directors). Watchlist: 130 stocks, 95 big enough to copy.
 
 _Copycat uses no AI._
