@@ -11,7 +11,7 @@
   "day": "2026-11-21",
   "day_start_equity": 91.28,
   "halted_reason": null,
-  "last_scan": "2026-11-21T15:43:21+00:00",
+  "last_scan": "2026-11-21T16:13:26+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -6313,22 +6313,6 @@
       "company": "Galaxy Digital Inc.",
       "score": 3.95,
       "ticker": "GLXY"
-    },
-    "GOOD": {
-      "buys": [
-        {
-          "accession": "0001873961-26-000004",
-          "date": "2026-11-13",
-          "filed": "2026-11-16T11:12:17-05:00",
-          "price": 9.93,
-          "role": "CEO & President",
-          "usd": 100000.0,
-          "who": "Cooper Arthur S."
-        }
-      ],
-      "company": "GLADSTONE COMMERCIAL CORP",
-      "score": 1.5,
-      "ticker": "GOOD"
     },
     "GPRK": {
       "buys": [
