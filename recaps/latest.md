@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 24 times.
+- Scout scanned 0 coins, 25 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 24 times.
+- Scout scanned 0 coins, 25 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -38,8 +38,8 @@ Watchful day. Insiders bought some stocks, but none passed the copy checks yet. 
 - Profit / loss since start: -$8.74 on $100.00 money put in.
 - Spotter read 54 insider filings from the SEC and found 6 insider purchases. Watchlist at day end: 150 stocks.
 - Top pick: RMIX (Suncrete, Inc.). 7 insiders bought $1,269,991 at about $6.29: Rees-Jones David (Director) $731,172; Fleming Ned N Iii (Director, 10% owner) $238,000; Heyer Andrew R (Director) $182,800 and 4 more.
-- Sent for review: RMIX (24x), HAWK (24x), FPS (24x).
-- Decisions: 0 buy, 72 wait, 0 skip.
+- Sent for review: RMIX (25x), HAWK (25x), FPS (25x).
+- Decisions: 0 buy, 75 wait, 0 skip.
 - Passed on RMIX (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on HAWK (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
