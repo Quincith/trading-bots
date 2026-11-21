@@ -11,7 +11,7 @@
   "day": "2026-11-21",
   "day_start_equity": 91.28,
   "halted_reason": null,
-  "last_scan": "2026-11-21T22:43:58+00:00",
+  "last_scan": "2026-11-21T23:13:59+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4090,19 +4090,10 @@
           "role": "President and CEO, Director",
           "usd": 100024.89,
           "who": "Aarnes Robert B"
-        },
-        {
-          "accession": "0002144083-26-000003",
-          "date": "2026-11-13",
-          "filed": "2026-11-16T18:09:24-05:00",
-          "price": 10.11,
-          "role": "Executive VP and COO",
-          "usd": 50550.0,
-          "who": "Copeland Alicia Crispin"
         }
       ],
       "company": "ADI GLOBAL DISTRIBUTION INC.",
-      "score": 5.01,
+      "score": 4.19,
       "ticker": "ADIG"
     },
     "AGMB": {
@@ -4515,31 +4506,6 @@
       "score": 0.7,
       "ticker": "BOTJ"
     },
-    "BRK.B": {
-      "buys": [
-        {
-          "accession": "0001193125-26-463989",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T18:01:19-05:00",
-          "price": 593.75,
-          "role": "See Remarks",
-          "usd": 32062.5,
-          "who": "O'Sullivan Michael J."
-        },
-        {
-          "accession": "0001193125-26-463989",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T18:01:19-05:00",
-          "price": 594.4,
-          "role": "See Remarks",
-          "usd": 218144.8,
-          "who": "O'Sullivan Michael J."
-        }
-      ],
-      "company": "BERKSHIRE HATHAWAY INC",
-      "score": 1.4,
-      "ticker": "BRK.B"
-    },
     "BSM": {
       "buys": [
         {
@@ -4671,22 +4637,6 @@
       "company": "COLGATE PALMOLIVE CO",
       "score": 0.0,
       "ticker": "CL"
-    },
-    "CNH": {
-      "buys": [
-        {
-          "accession": "0001193125-26-463967",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T17:48:53-05:00",
-          "price": 12.4251,
-          "role": "Director",
-          "usd": 566584.56,
-          "who": "Simonelli Lorenzo"
-        }
-      ],
-      "company": "CNH Industrial N.V.",
-      "score": 1.75,
-      "ticker": "CNH"
     },
     "CRC": {
       "buys": [
@@ -5986,15 +5936,6 @@
     "FPS": {
       "buys": [
         {
-          "accession": "0000950142-26-003077",
-          "date": "2026-11-16",
-          "filed": "2026-11-16T18:03:39-05:00",
-          "price": 20.759,
-          "role": "Chief Legal Officer",
-          "usd": 244956.2,
-          "who": "Hottinger Tyson"
-        },
-        {
           "accession": "0000950142-26-003126",
           "date": "2026-11-17",
           "filed": "2026-11-18T17:27:26-05:00",
@@ -6005,7 +5946,7 @@
         }
       ],
       "company": "Forgent Power Solutions, Inc.",
-      "score": 2.74,
+      "score": 1.31,
       "ticker": "FPS"
     },
     "FRPH": {
@@ -6345,22 +6286,6 @@
       "company": "HOME BANCORP, INC.",
       "score": 2.0,
       "ticker": "HBCP"
-    },
-    "HL": {
-      "buys": [
-        {
-          "accession": "0001866675-26-000007",
-          "date": "2026-11-16",
-          "filed": "2026-11-16T18:10:01-05:00",
-          "price": 12.5,
-          "role": "Director",
-          "usd": 125000.0,
-          "who": "Andres Dale"
-        }
-      ],
-      "company": "HECLA MINING CO/DE/",
-      "score": 1.1,
-      "ticker": "HL"
     },
     "HMH": {
       "buys": [
@@ -7281,15 +7206,6 @@
     "PED": {
       "buys": [
         {
-          "accession": "0001654954-26-009873",
-          "date": "2026-11-16",
-          "filed": "2026-11-16T18:02:28-05:00",
-          "price": 10.6,
-          "role": "Director",
-          "usd": 53000.0,
-          "who": "Howie John K"
-        },
-        {
           "accession": "0001654954-26-010008",
           "date": "2026-11-19",
           "filed": "2026-11-19T16:34:07-05:00",
@@ -7300,7 +7216,7 @@
         }
       ],
       "company": "PEDEVCO CORP",
-      "score": 1.01,
+      "score": 0.69,
       "ticker": "PED"
     },
     "PLD": {
