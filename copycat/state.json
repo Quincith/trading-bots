@@ -11,7 +11,7 @@
   "day": "2026-11-21",
   "day_start_equity": 91.28,
   "halted_reason": null,
-  "last_scan": "2026-11-21T12:13:06+00:00",
+  "last_scan": "2026-11-21T12:43:18+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4973,22 +4973,6 @@
       "company": "DraftKings Inc.",
       "score": 2.0,
       "ticker": "DKNG"
-    },
-    "DOX": {
-      "buys": [
-        {
-          "accession": "0001193125-26-462052",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T07:16:58-05:00",
-          "price": 44.505,
-          "role": "Director",
-          "usd": 102227.99,
-          "who": "DE LA VEGA RAFAEL"
-        }
-      ],
-      "company": "AMDOCS LTD",
-      "score": 1.01,
-      "ticker": "DOX"
     },
     "DX": {
       "buys": [
