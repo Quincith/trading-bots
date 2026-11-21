@@ -11,7 +11,7 @@
   "day": "2026-11-21",
   "day_start_equity": 91.28,
   "halted_reason": null,
-  "last_scan": "2026-11-21T16:13:26+00:00",
+  "last_scan": "2026-11-21T16:43:30+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -7567,40 +7567,6 @@
       "company": "PRA GROUP INC",
       "score": 1.97,
       "ticker": "PRAA"
-    },
-    "QNTO": {
-      "buys": [
-        {
-          "accession": "0001437749-26-037055",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T11:38:56-05:00",
-          "price": 15.3,
-          "role": "Director",
-          "usd": 4590.0,
-          "who": "CLARKE JAMES J"
-        },
-        {
-          "accession": "0001437749-26-037055",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T11:38:56-05:00",
-          "price": 15.45,
-          "role": "Director",
-          "usd": 4635.0,
-          "who": "CLARKE JAMES J"
-        },
-        {
-          "accession": "0001437749-26-037055",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T11:38:56-05:00",
-          "price": 15.5,
-          "role": "Director",
-          "usd": 1550.0,
-          "who": "CLARKE JAMES J"
-        }
-      ],
-      "company": "QUAINT OAK BANCORP, INC.",
-      "score": 0.03,
-      "ticker": "QNTO"
     },
     "RDW": {
       "buys": [
