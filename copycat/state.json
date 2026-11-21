@@ -11,7 +11,7 @@
   "day": "2026-11-21",
   "day_start_equity": 91.28,
   "halted_reason": null,
-  "last_scan": "2026-11-21T13:43:21+00:00",
+  "last_scan": "2026-11-21T14:13:22+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -7135,22 +7135,6 @@
       "score": 1.46,
       "ticker": "NHI"
     },
-    "NLCP": {
-      "buys": [
-        {
-          "accession": "0001543841-26-000015",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T08:59:10-05:00",
-          "price": 13.9,
-          "role": "President and CEO, Director",
-          "usd": 5560.0,
-          "who": "Coniglio Anthony"
-        }
-      ],
-      "company": "NewLake Capital Partners, Inc.",
-      "score": 0.5,
-      "ticker": "NLCP"
-    },
     "NPCE": {
       "buys": [
         {
@@ -7971,31 +7955,6 @@
       "company": "SLR Investment Corp.",
       "score": 1.35,
       "ticker": "SLRC"
-    },
-    "SONO": {
-      "buys": [
-        {
-          "accession": "0001314727-26-000106",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T09:09:47-05:00",
-          "price": 18.77,
-          "role": "Director",
-          "usd": 1685733.7,
-          "who": "Kennedy Joseph Jude"
-        },
-        {
-          "accession": "0001314727-26-000106",
-          "date": "2026-11-13",
-          "filed": "2026-11-16T09:09:47-05:00",
-          "price": 18.23,
-          "role": "Director",
-          "usd": 185763.7,
-          "who": "Kennedy Joseph Jude"
-        }
-      ],
-      "company": "Sonos Inc",
-      "score": 2.27,
-      "ticker": "SONO"
     },
     "SPCB": {
       "buys": [
