@@ -11,7 +11,7 @@
   "day": "2026-11-21",
   "day_start_equity": 91.28,
   "halted_reason": null,
-  "last_scan": "2026-11-21T12:43:18+00:00",
+  "last_scan": "2026-11-21T13:13:16+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4788,22 +4788,6 @@
       "score": 1.0,
       "ticker": "CRESY"
     },
-    "CSQR": {
-      "buys": [
-        {
-          "accession": "0000950142-26-003051",
-          "date": "2026-11-13",
-          "filed": "2026-11-16T08:08:07-05:00",
-          "price": 16.96,
-          "role": "Director",
-          "usd": 33920.0,
-          "who": "PIZZUTO TERRI"
-        }
-      ],
-      "company": "Csquare, Inc.",
-      "score": 0.53,
-      "ticker": "CSQR"
-    },
     "CSWC": {
       "buys": [
         {
@@ -6615,22 +6599,6 @@
       "company": "HALLADOR ENERGY CO",
       "score": 2.03,
       "ticker": "HRNG"
-    },
-    "HUBS": {
-      "buys": [
-        {
-          "accession": "0001193125-26-462154",
-          "date": "2026-11-13",
-          "filed": "2026-11-16T08:00:06-05:00",
-          "price": 217.44,
-          "role": "Chief Executive Officer, Director",
-          "usd": 4997858.4,
-          "who": "Halligan Brian"
-        }
-      ],
-      "company": "HUBSPOT INC",
-      "score": 3.2,
-      "ticker": "HUBS"
     },
     "IMMX": {
       "buys": [
