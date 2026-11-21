@@ -11,7 +11,7 @@
   "day": "2026-11-21",
   "day_start_equity": 91.28,
   "halted_reason": null,
-  "last_scan": "2026-11-21T13:13:16+00:00",
+  "last_scan": "2026-11-21T13:43:21+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4961,24 +4961,6 @@
     "DX": {
       "buys": [
         {
-          "accession": "0000826675-26-000132",
-          "date": "2026-11-13",
-          "filed": "2026-11-16T08:17:07-05:00",
-          "price": 10.07,
-          "role": "Co-CEO & Chairman of the Board, Director",
-          "usd": 49997.55,
-          "who": "BOSTON BYRON L"
-        },
-        {
-          "accession": "0000826675-26-000131",
-          "date": "2026-11-13",
-          "filed": "2026-11-16T08:16:20-05:00",
-          "price": 9.9,
-          "role": "Co-CEO and President, Director",
-          "usd": 25740.0,
-          "who": "Popenoe Smriti Laxman"
-        },
-        {
           "accession": "0001283563-26-000006",
           "date": "2026-11-18",
           "filed": "2026-11-19T08:34:47-05:00",
@@ -4989,7 +4971,7 @@
         }
       ],
       "company": "DYNEX CAPITAL INC",
-      "score": 2.35,
+      "score": 1.2,
       "ticker": "DX"
     },
     "DXR": {
