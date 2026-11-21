@@ -11,7 +11,7 @@
   "day": "2026-11-21",
   "day_start_equity": 91.28,
   "halted_reason": null,
-  "last_scan": "2026-11-21T15:13:28+00:00",
+  "last_scan": "2026-11-21T15:21:16+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4120,22 +4120,6 @@
       "company": "AgomAb Therapeutics NV",
       "score": 0.44,
       "ticker": "AGMB"
-    },
-    "AGRO": {
-      "buys": [
-        {
-          "accession": "0001499505-26-000092",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T10:13:31-05:00",
-          "price": 7.9543,
-          "role": "Director",
-          "usd": 23862.9,
-          "who": "Deprati Christian Ferdinando Emilio"
-        }
-      ],
-      "company": "Adecoagro S.A.",
-      "score": 0.38,
-      "ticker": "AGRO"
     },
     "AMG": {
       "buys": [
