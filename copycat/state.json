@@ -11,7 +11,7 @@
   "day": "2026-11-21",
   "day_start_equity": 91.28,
   "halted_reason": null,
-  "last_scan": "2026-11-21T18:13:41+00:00",
+  "last_scan": "2026-11-21T18:43:42+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -7893,24 +7893,6 @@
     "SPCB": {
       "buys": [
         {
-          "accession": "0001178913-26-005240",
-          "date": "2026-11-13",
-          "filed": "2026-11-16T13:43:24-05:00",
-          "price": 7.11,
-          "role": "Director",
-          "usd": 1422.0,
-          "who": "Trabelsi Arie"
-        },
-        {
-          "accession": "0001178913-26-005240",
-          "date": "2026-11-13",
-          "filed": "2026-11-16T13:43:24-05:00",
-          "price": 6.47,
-          "role": "Director",
-          "usd": 125518.0,
-          "who": "Trabelsi Arie"
-        },
-        {
           "accession": "0001178913-26-005285",
           "date": "2026-11-17",
           "filed": "2026-11-19T07:23:49-05:00",
@@ -7930,7 +7912,7 @@
         }
       ],
       "company": "SuperCom Ltd",
-      "score": 1.17,
+      "score": 0.35,
       "ticker": "SPCB"
     },
     "STEW": {
