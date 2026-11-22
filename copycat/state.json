@@ -11,7 +11,7 @@
   "day": "2026-11-22",
   "day_start_equity": 91.26,
   "halted_reason": null,
-  "last_scan": "2026-11-22T01:44:19+00:00",
+  "last_scan": "2026-11-22T02:14:18+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -5665,51 +5665,8 @@
       "score": 0.5,
       "ticker": "EMYB"
     },
-    "ENOV": {
-      "buys": [
-        {
-          "accession": "0001193125-26-464221",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T21:00:04-05:00",
-          "price": 27.71,
-          "role": "Director",
-          "usd": 10363.54,
-          "who": "Lalor Angela S"
-        },
-        {
-          "accession": "0001193125-26-464221",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T21:00:04-05:00",
-          "price": 28.29,
-          "role": "Director",
-          "usd": 14145.0,
-          "who": "Lalor Angela S"
-        },
-        {
-          "accession": "0001193125-26-464221",
-          "date": "2026-11-13",
-          "filed": "2026-11-16T21:00:04-05:00",
-          "price": 28.27,
-          "role": "Director",
-          "usd": 24877.6,
-          "who": "Lalor Angela S"
-        }
-      ],
-      "company": "Enovis CORP",
-      "score": 0.69,
-      "ticker": "ENOV"
-    },
     "EQPT": {
       "buys": [
-        {
-          "accession": "0000950103-26-017583",
-          "date": "2026-11-12",
-          "filed": "2026-11-16T21:11:21-05:00",
-          "price": 15.38,
-          "role": "Founder & CEO, Director, Member of 10% owner group",
-          "usd": 62565.84,
-          "who": "Schlacks Jabbok"
-        },
         {
           "accession": "0000950103-26-017804",
           "date": "2026-11-17",
@@ -5739,7 +5696,7 @@
         }
       ],
       "company": "EquipmentShare.com Inc",
-      "score": 3.06,
+      "score": 3.01,
       "ticker": "EQPT"
     },
     "ESEA": {
@@ -7372,24 +7329,6 @@
     "SKYD": {
       "buys": [
         {
-          "accession": "0000895345-26-000491",
-          "date": "2026-11-11",
-          "filed": "2026-11-16T21:04:59-05:00",
-          "price": 7.9061,
-          "role": "Director",
-          "usd": 500060.83,
-          "who": "Cardinale Gerald J."
-        },
-        {
-          "accession": "0000895345-26-000491",
-          "date": "2026-11-13",
-          "filed": "2026-11-16T21:04:59-05:00",
-          "price": 7.5388,
-          "role": "Director",
-          "usd": 500576.32,
-          "who": "Cardinale Gerald J."
-        },
-        {
           "accession": "0000895345-26-000494",
           "date": "2026-11-17",
           "filed": "2026-11-19T16:09:29-05:00",
@@ -7400,7 +7339,7 @@
         }
       ],
       "company": "Skydance Corp",
-      "score": 2.17,
+      "score": 1.69,
       "ticker": "SKYD"
     },
     "SKYH": {
