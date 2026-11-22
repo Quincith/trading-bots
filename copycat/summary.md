@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-22 22:45 UTC
+# Copycat strategy — 2026-11-22 23:15 UTC
 
 | | |
 |---|---|
@@ -28,7 +28,7 @@ Read 0 new SEC filings this run. 113 stocks on the watchlist.
 | PAM | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
 
 ## Notes
-- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 113 stocks, 75 big enough to copy.
+- Spotter read 0 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 113 stocks, 74 big enough to copy.
 - Stock market closed; picks wait for the next open.
 
 _Copycat uses no AI._
