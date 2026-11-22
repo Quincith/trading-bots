@@ -11,7 +11,7 @@
   "day": "2026-11-22",
   "day_start_equity": 91.26,
   "halted_reason": null,
-  "last_scan": "2026-11-22T15:45:09+00:00",
+  "last_scan": "2026-11-22T16:15:25+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -6624,22 +6624,6 @@
       "company": "Nuveen Churchill Direct Lending Corp.",
       "score": 0.23,
       "ticker": "NCDL"
-    },
-    "NGS": {
-      "buys": [
-        {
-          "accession": "0001464667-26-000005",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T11:02:01-05:00",
-          "price": 28.602,
-          "role": "Chief Executive Officer",
-          "usd": 85806.0,
-          "who": "Jacobs Justin"
-        }
-      ],
-      "company": "NATURAL GAS SERVICES GROUP INC",
-      "score": 1.43,
-      "ticker": "NGS"
     },
     "NHI": {
       "buys": [
