@@ -8,10 +8,10 @@
     "STC": "2026-10-27T13:58:38+00:00",
     "TTMI": "2026-11-02T18:07:33+00:00"
   },
-  "day": "2026-11-21",
-  "day_start_equity": 91.28,
+  "day": "2026-11-22",
+  "day_start_equity": 91.26,
   "halted_reason": null,
-  "last_scan": "2026-11-21T23:44:03+00:00",
+  "last_scan": "2026-11-22T00:14:10+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -6152,24 +6152,6 @@
     "HAWK": {
       "buys": [
         {
-          "accession": "0002127284-26-000008",
-          "date": "2026-11-16",
-          "filed": "2026-11-16T18:59:46-05:00",
-          "price": 18.25,
-          "role": "Chief Financial Officer",
-          "usd": 10001.0,
-          "who": "Searle Craig Chih-Meng"
-        },
-        {
-          "accession": "0002127288-26-000010",
-          "date": "2026-11-16",
-          "filed": "2026-11-16T18:56:28-05:00",
-          "price": 17.8017,
-          "role": "President and CEO, Director",
-          "usd": 24619.75,
-          "who": "Serafini John Sheldon"
-        },
-        {
           "accession": "0001322083-26-000009",
           "date": "2026-11-16",
           "filed": "2026-11-16T20:10:51-05:00",
@@ -6225,7 +6207,7 @@
         }
       ],
       "company": "HawkEye 360, Inc.",
-      "score": 6.99,
+      "score": 5.39,
       "ticker": "HAWK"
     },
     "HBCP": {
