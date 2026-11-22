@@ -11,7 +11,7 @@
   "day": "2026-11-22",
   "day_start_equity": 91.26,
   "halted_reason": null,
-  "last_scan": "2026-11-22T22:28:28+00:00",
+  "last_scan": "2026-11-22T22:45:45+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4242,22 +4242,6 @@
       "score": 0.38,
       "ticker": "ASR"
     },
-    "ATEC": {
-      "buys": [
-        {
-          "accession": "0001830843-26-000009",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T17:33:34-05:00",
-          "price": 6.79,
-          "role": "CHIEF FINANCIAL OFFICER",
-          "usd": 99146.02,
-          "who": "Koning John Todd"
-        }
-      ],
-      "company": "Alphatec Holdings, Inc.",
-      "score": 1.5,
-      "ticker": "ATEC"
-    },
     "AUBN": {
       "buys": [
         {
@@ -7175,51 +7159,6 @@
     "TEAM": {
       "buys": [
         {
-          "accession": "0001666120-26-000036",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T17:28:49-05:00",
-          "price": 144.95,
-          "role": "CEO, Co-Founder, Director, 10% owner",
-          "usd": 14495.0,
-          "who": "Cannon-Brookes Michael"
-        },
-        {
-          "accession": "0001666120-26-000036",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T17:28:49-05:00",
-          "price": 148.8005,
-          "role": "CEO, Co-Founder, Director, 10% owner",
-          "usd": 938782.35,
-          "who": "Cannon-Brookes Michael"
-        },
-        {
-          "accession": "0001666120-26-000036",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T17:28:49-05:00",
-          "price": 149.7203,
-          "role": "CEO, Co-Founder, Director, 10% owner",
-          "usd": 926918.38,
-          "who": "Cannon-Brookes Michael"
-        },
-        {
-          "accession": "0001666120-26-000036",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T17:28:49-05:00",
-          "price": 150.4,
-          "role": "CEO, Co-Founder, Director, 10% owner",
-          "usd": 30080.0,
-          "who": "Cannon-Brookes Michael"
-        },
-        {
-          "accession": "0001666120-26-000036",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T17:28:49-05:00",
-          "price": 147.485,
-          "role": "CEO, Co-Founder, Director, 10% owner",
-          "usd": 88491.0,
-          "who": "Cannon-Brookes Michael"
-        },
-        {
           "accession": "0001666120-26-000037",
           "date": "2026-11-17",
           "filed": "2026-11-18T17:05:04-05:00",
@@ -7410,7 +7349,7 @@
         }
       ],
       "company": "Atlassian Corp",
-      "score": 3.39,
+      "score": 3.25,
       "ticker": "TEAM"
     },
     "TISI": {
