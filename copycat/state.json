@@ -11,7 +11,7 @@
   "day": "2026-11-22",
   "day_start_equity": 91.26,
   "halted_reason": null,
-  "last_scan": "2026-11-22T20:45:34+00:00",
+  "last_scan": "2026-11-22T21:15:35+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -5718,19 +5718,10 @@
           "role": "Director",
           "usd": 101645.7,
           "who": "Johnson Gerald"
-        },
-        {
-          "accession": "0001104659-26-129065",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T16:15:17-05:00",
-          "price": 346.24,
-          "role": "See Remarks below.",
-          "usd": 69248.0,
-          "who": "Foster David B"
         }
       ],
       "company": "Eaton Corp plc",
-      "score": 1.98,
+      "score": 1.01,
       "ticker": "ETN"
     },
     "FBRT": {
@@ -5990,15 +5981,6 @@
     },
     "GLXY": {
       "buys": [
-        {
-          "accession": "0001079500-26-000013",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T16:11:07-05:00",
-          "price": 13.39,
-          "role": "Director",
-          "usd": 66950.0,
-          "who": "DEASON DOUGLAS R"
-        },
         {
           "accession": "0001079500-26-000015",
           "date": "2026-11-18",
@@ -6410,47 +6392,6 @@
       "company": "LKQ CORP",
       "score": 1.7,
       "ticker": "LKQ"
-    },
-    "LPG": {
-      "buys": [
-        {
-          "accession": "0000919574-26-008172",
-          "date": "2026-11-13",
-          "filed": "2026-11-17T16:15:16-05:00",
-          "price": 48.073,
-          "role": "President and CEO, Director, 10% owner",
-          "usd": 961460.0,
-          "who": "HADJIPATERAS JOHN C"
-        }
-      ],
-      "company": "DORIAN LPG LTD.",
-      "score": 2.48,
-      "ticker": "LPG"
-    },
-    "LPTH": {
-      "buys": [
-        {
-          "accession": "0001437749-26-037387",
-          "date": "2026-11-17",
-          "filed": "2026-11-17T16:05:06-05:00",
-          "price": 6.36,
-          "role": "Director",
-          "usd": 636.0,
-          "who": "Crider Kimberly Anne"
-        },
-        {
-          "accession": "0001437749-26-037384",
-          "date": "2026-11-17",
-          "filed": "2026-11-17T16:03:22-05:00",
-          "price": 6.31,
-          "role": "Director",
-          "usd": 25000.0,
-          "who": "Caylor Mark A"
-        }
-      ],
-      "company": "LIGHTPATH TECHNOLOGIES INC",
-      "score": 1.16,
-      "ticker": "LPTH"
     },
     "LXU": {
       "buys": [
@@ -7115,40 +7056,6 @@
       "score": 0.5,
       "ticker": "RWAY"
     },
-    "SANM": {
-      "buys": [
-        {
-          "accession": "0001104659-26-129042",
-          "date": "2026-11-13",
-          "filed": "2026-11-17T16:01:09-05:00",
-          "price": 157.62,
-          "role": "Director",
-          "usd": 15762.0,
-          "who": "Trivedi Shanker"
-        },
-        {
-          "accession": "0001104659-26-129042",
-          "date": "2026-11-13",
-          "filed": "2026-11-17T16:01:09-05:00",
-          "price": 157.64,
-          "role": "Director",
-          "usd": 14187.6,
-          "who": "Trivedi Shanker"
-        },
-        {
-          "accession": "0001104659-26-129042",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T16:01:09-05:00",
-          "price": 154.4,
-          "role": "Director",
-          "usd": 23160.0,
-          "who": "Trivedi Shanker"
-        }
-      ],
-      "company": "SANMINA CORP",
-      "score": 0.73,
-      "ticker": "SANM"
-    },
     "SCM": {
       "buys": [
         {
@@ -7773,15 +7680,6 @@
     "UMH": {
       "buys": [
         {
-          "accession": "0000752642-26-000138",
-          "date": "2026-11-17",
-          "filed": "2026-11-17T15:59:29-05:00",
-          "price": 13.97,
-          "role": "Director",
-          "usd": 41910.0,
-          "who": "HIRSCH MATTHEW I"
-        },
-        {
           "accession": "0000752642-26-000139",
           "date": "2026-11-18",
           "filed": "2026-11-18T11:59:15-05:00",
@@ -7792,7 +7690,7 @@
         }
       ],
       "company": "UMH PROPERTIES, INC.",
-      "score": 1.5,
+      "score": 0.14,
       "ticker": "UMH"
     },
     "UPBD": {
