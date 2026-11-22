@@ -11,7 +11,7 @@
   "day": "2026-11-22",
   "day_start_equity": 91.26,
   "halted_reason": null,
-  "last_scan": "2026-11-22T18:45:28+00:00",
+  "last_scan": "2026-11-22T19:15:27+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -6223,22 +6223,6 @@
       "company": "Hudson Pacific Properties, Inc.",
       "score": 1.69,
       "ticker": "HPP"
-    },
-    "HRNG": {
-      "buys": [
-        {
-          "accession": "0001628280-26-074438",
-          "date": "2026-11-13",
-          "filed": "2026-11-17T13:55:33-05:00",
-          "price": 10.6971,
-          "role": "Director",
-          "usd": 1069710.0,
-          "who": "Wesley Charles Ray IV"
-        }
-      ],
-      "company": "HALLADOR ENERGY CO",
-      "score": 2.03,
-      "ticker": "HRNG"
     },
     "IMMX": {
       "buys": [
