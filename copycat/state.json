@@ -11,7 +11,7 @@
   "day": "2026-11-22",
   "day_start_equity": 91.26,
   "halted_reason": null,
-  "last_scan": "2026-11-22T21:45:47+00:00",
+  "last_scan": "2026-11-22T22:15:43+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -6462,24 +6462,6 @@
     "NPCE": {
       "buys": [
         {
-          "accession": "0001562229-26-000007",
-          "date": "2026-11-17",
-          "filed": "2026-11-17T17:10:42-05:00",
-          "price": 8.3381,
-          "role": "Chief Financial Officer",
-          "usd": 99148.35,
-          "who": "Williams Patrick F."
-        },
-        {
-          "accession": "0001533175-26-000018",
-          "date": "2026-11-17",
-          "filed": "2026-11-17T17:08:22-05:00",
-          "price": 8.3503,
-          "role": "CHIEF EXECUTIVE OFFICER, Director",
-          "usd": 99293.42,
-          "who": "Becker Joel"
-        },
-        {
           "accession": "0001628280-26-074869",
           "date": "2026-11-18",
           "filed": "2026-11-18T17:09:39-05:00",
@@ -6490,7 +6472,7 @@
         }
       ],
       "company": "NeuroPace Inc",
-      "score": 3.48,
+      "score": 1.02,
       "ticker": "NPCE"
     },
     "NTB": {
@@ -7614,15 +7596,6 @@
     "UPST": {
       "buys": [
         {
-          "accession": "0001832812-26-000014",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T17:00:37-05:00",
-          "price": 19.0,
-          "role": "Chief Executive Officer, Director",
-          "usd": 950000.0,
-          "who": "Gu Paul"
-        },
-        {
           "accession": "0001832812-26-000016",
           "date": "2026-11-19",
           "filed": "2026-11-20T20:22:19-05:00",
@@ -7642,7 +7615,7 @@
         }
       ],
       "company": "Upstart Holdings, Inc.",
-      "score": 3.69,
+      "score": 3.51,
       "ticker": "UPST"
     },
     "USAR": {
