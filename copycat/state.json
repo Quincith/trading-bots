@@ -11,7 +11,7 @@
   "day": "2026-11-22",
   "day_start_equity": 91.26,
   "halted_reason": null,
-  "last_scan": "2026-11-22T20:15:25+00:00",
+  "last_scan": "2026-11-22T20:45:34+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -4431,22 +4431,6 @@
       "score": 1.03,
       "ticker": "BHRB"
     },
-    "BLX": {
-      "buys": [
-        {
-          "accession": "0000890541-26-000016",
-          "date": "2026-11-17",
-          "filed": "2026-11-17T15:39:19-05:00",
-          "price": 49.5,
-          "role": "Chief Legal Officer",
-          "usd": 124987.5,
-          "who": "Real Jorge Luis"
-        }
-      ],
-      "company": "BLADEX, INC.",
-      "score": 1.6,
-      "ticker": "BLX"
-    },
     "BOTJ": {
       "buys": [
         {
@@ -6889,24 +6873,6 @@
     "PAM": {
       "buys": [
         {
-          "accession": "0002028917-26-000004",
-          "date": "2026-11-13",
-          "filed": "2026-11-17T15:41:46-05:00",
-          "price": 63.917,
-          "role": "Vicepresident",
-          "usd": 169316.13,
-          "who": "Mariani Gustavo"
-        },
-        {
-          "accession": "0002022936-26-000018",
-          "date": "2026-11-12",
-          "filed": "2026-11-17T15:35:53-05:00",
-          "price": 63.92,
-          "role": "Director, 10% owner",
-          "usd": 541018.88,
-          "who": "Mindlin Marcos Marcelo"
-        },
-        {
           "accession": "0002022936-26-000019",
           "date": "2026-11-16",
           "filed": "2026-11-18T14:28:52-05:00",
@@ -6962,7 +6928,7 @@
         }
       ],
       "company": "Pampa Energy Inc.",
-      "score": 4.88,
+      "score": 4.84,
       "ticker": "PAM"
     },
     "PEBK": {
