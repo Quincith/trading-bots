@@ -11,7 +11,7 @@
   "day": "2026-11-22",
   "day_start_equity": 91.26,
   "halted_reason": null,
-  "last_scan": "2026-11-22T22:15:43+00:00",
+  "last_scan": "2026-11-22T22:28:28+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -6819,38 +6819,6 @@
       "company": "Prologis, Inc.",
       "score": 1.77,
       "ticker": "PLD"
-    },
-    "PRAA": {
-      "buys": [
-        {
-          "accession": "0001185352-26-000002",
-          "date": "2026-11-13",
-          "filed": "2026-11-17T17:20:11-05:00",
-          "price": 11.8,
-          "role": "Director, Chairman",
-          "usd": 295000.0,
-          "who": "FREDRICKSON STEVEN D"
-        }
-      ],
-      "company": "PRA GROUP INC",
-      "score": 1.97,
-      "ticker": "PRAA"
-    },
-    "RDW": {
-      "buys": [
-        {
-          "accession": "0001819810-26-000144",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T17:16:24-05:00",
-          "price": 7.0699,
-          "role": "Chairman and CEO, Director",
-          "usd": 99996.67,
-          "who": "Cannito Peter Anthony Jr"
-        }
-      ],
-      "company": "Redwire Corp",
-      "score": 1.5,
-      "ticker": "RDW"
     },
     "RMIX": {
       "buys": [
