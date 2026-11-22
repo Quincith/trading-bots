@@ -11,7 +11,7 @@
   "day": "2026-11-22",
   "day_start_equity": 91.26,
   "halted_reason": null,
-  "last_scan": "2026-11-22T19:15:27+00:00",
+  "last_scan": "2026-11-22T19:45:27+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -7741,15 +7741,6 @@
     "TRST": {
       "buys": [
         {
-          "accession": "0000357301-26-000012",
-          "date": "2026-11-16",
-          "filed": "2026-11-17T14:18:24-05:00",
-          "price": 57.31,
-          "role": "Director",
-          "usd": 4928.66,
-          "who": "Kieper-Fusco Patricia Ann"
-        },
-        {
           "accession": "0000357301-26-000014",
           "date": "2026-08-24",
           "filed": "2026-11-17T14:54:37-05:00",
@@ -7769,7 +7760,7 @@
         }
       ],
       "company": "TRUSTCO BANK CORP N Y",
-      "score": 0.75,
+      "score": 0.0,
       "ticker": "TRST"
     },
     "TRTX": {
