@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-23 22:17 UTC
+# Copycat strategy — 2026-11-23 22:47 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 130 new SEC filings this run. 111 stocks on the watchlist.
+Read 54 new SEC filings this run. 105 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 130 new SEC filings this run. 111 stocks on the watchlist.
 | CTGO (Contango Silver & Gold Inc.) | 3.67 | 3 insiders bought $472,627 at about $10.56: Juneau John B (Director) $296,079; Van Nieuwenhuyse Rick (CEO, Director) $101,097; Nauman Clynton R. (Director) $75,450. |
 
 ## Notes
-- Spotter read 130 new insider filings and found 14 purchases (3 by officers or directors). Watchlist: 111 stocks, 74 big enough to copy.
+- Spotter read 54 new insider filings and found 16 purchases (11 by officers or directors). Watchlist: 105 stocks, 69 big enough to copy.
 
 _Copycat uses no AI._
