@@ -1,4 +1,4 @@
-# Daily recap: Sunday, November 22, 2026
+# Daily recap: Monday, November 23, 2026
 
 _Times are UTC. Paper money only._
 
@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 52 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 52 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -37,11 +37,11 @@ Watchful day. Insiders bought some stocks, but none passed the copy checks yet. 
 - Account value: $91.26 → $91.26 (no change).
 - Profit / loss since start: -$8.74 on $100.00 money put in.
 - Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 112 stocks.
-- Top pick: RMIX (Suncrete, Inc.). 6 insiders bought $1,268,996 at about $6.29: Rees-Jones David (Director) $731,172; Fleming Ned N Iii (Director, 10% owner) $238,000; Heyer Andrew R (Director) $182,800 and 3 more.
-- Sent for review: RMIX (52x), OFRM (52x), PAM (50x), HAWK (2x).
-- Decisions: 0 buy, 156 wait, 0 skip.
+- Top pick: RMIX (Suncrete, Inc.). 5 insiders bought $1,030,996 at about $6.37: Rees-Jones David (Director) $731,172; Heyer Andrew R (Director) $182,800; Matteson Mark R (Director) $55,100 and 2 more.
+- Sent for review: RMIX (1x), OFRM (1x), PAM (1x).
+- Decisions: 0 buy, 3 wait, 0 skip.
 - Passed on RMIX (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
-- Passed on HAWK (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
+- Passed on OFRM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
 - Holding: BBT $19.03 (-$0.91 unrealized); CHCO $18.85 (-$1.14 unrealized); LRN $15.33 (-$0.78 unrealized); STC $20.23 (+$0.32 unrealized).
 
@@ -57,7 +57,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - No trades.
 - Open trades: none, all cash.
 
-## Fxcopy: no runs logged on 2026-11-22.
+## Fxcopy: no runs logged on 2026-11-23.
 
 ## Words to know
 
