@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 31 times.
+- Scout scanned 0 coins, 32 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,27 +23,27 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 31 times.
+- Scout scanned 0 coins, 32 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.56 (+0.61%)
+## Copycat: up $0.58 (+0.64%)
 
-Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended up $0.56 (+0.61%) at $91.82. Paper money only.
+Active day. The bots bought 1 time. The account ended up $0.58 (+0.64%) at $91.84. Paper money only.
 
 **Key takeaways**
 
-- Account value: $91.26 → $91.82 (+$0.56, +0.61%).
-- Profit / loss since start: -$8.18 on $100.00 money put in.
-- Spotter read 101 insider filings from the SEC and found 41 insider purchases. Watchlist at day end: 112 stocks.
+- Account value: $91.26 → $91.84 (+$0.58, +0.64%).
+- Profit / loss since start: -$8.16 on $100.00 money put in.
+- Spotter read 121 insider filings from the SEC and found 41 insider purchases. Watchlist at day end: 112 stocks.
 - Top pick: GNL (Global Net Lease, Inc.). 7 insiders bought $636,281 at about $6.04: Weil Edward M Jr. (CEO, President, Director) $200,221; Richardson Leon (Director) $150,238; Galloway Jesse Charles (See Remarks) $96,158 and 4 more.
-- Sent for review: RMIX (31x), OFRM (31x), PAM (24x), GNL (7x).
-- Decisions: 0 buy, 93 wait, 0 skip.
-- Passed on RMIX (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
-- Passed on OFRM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
-- No trades.
-- Holding: BBT $19.25 (-$0.69 unrealized); CHCO $19.04 (-$0.95 unrealized); LRN $15.33 (-$0.78 unrealized); STC $20.38 (+$0.47 unrealized).
+- Sent for review: RMIX (32x), OFRM (32x), PAM (25x), GNL (8x), SEI (1x), GLXY (1x).
+- Decisions: 1 buy, 93 wait, 5 skip.
+- Passed on RMIX (SKIP, 0% confident): Risk said no: Already at 5 open positions.
+- Passed on OFRM (SKIP, 0% confident): Risk said no: Already at 5 open positions.
+- Bought $17.82 of GNL at 6.105. Reason: Copying Global Net Lease, Inc. insiders. 7 insiders bought $636,281 at about $6.04: Weil Edward M Jr. (CEO, President, Director) $200,221; Richardson Leon (Director) $150,238; Galloway Jesse Charles (See Remarks) $96,158 and 4 more.
+- Holding: BBT $19.35 (-$0.59 unrealized); CHCO $19.05 (-$0.94 unrealized); LRN $15.64 (-$0.47 unrealized); STC $19.99 (+$0.08 unrealized).
 
 ## Forex: flat
 
@@ -66,6 +66,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
 - **confidence**: How sure the Decision bot is, from 0% to 100%. Each strategy only buys above its own minimum.
 - **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
+- **entry**: The price we buy at.
 - **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
 - **insider**: A company's own bosses (CEO, CFO and so on) and board members. They know the company best.
@@ -74,5 +75,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.
+- **stop-loss**: A safety exit. If the price falls to this level, the bots sell to keep the loss small.
+- **target**: The profit goal. If the price rises to this level, the bots sell and keep the gain.
 - **unrealized**: A gain or loss on a coin we still own. It only becomes real when we sell.
 - **volume**: How much of a coin is being bought and sold. A jump in volume means lots of people suddenly care.

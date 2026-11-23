@@ -9,3 +9,4 @@ time,symbol,side,usd,price,reason
 2026-11-04T16:11:12+00:00,TTMI,sell,16.17,72.37,stop hit (72.37 <= 72.3915)
 2026-11-05T14:43:00+00:00,LRN,buy,16.12,78.4,"Copying Stride, Inc. insiders. 2 insiders bought $19,242,858 at about $76.95: Haggart Dylan G. & Fivespan Partners, Lp & Fivespan Partners Gp, Llc (Director, See Footnote (3)) $17,573,121; Shepherd Brian A. (Director) $1,669,737."
 2026-11-20T14:41:28+00:00,MSM,sell,17.87,105.83,stop hit (105.83 <= 106.132)
+2026-11-23T14:47:06+00:00,GNL,buy,17.82,6.105,"Copying Global Net Lease, Inc. insiders. 7 insiders bought $636,281 at about $6.04: Weil Edward M Jr. (CEO, President, Director) $200,221; Richardson Leon (Director) $150,238; Galloway Jesse Charles (See Remarks) $96,158 and 4 more."

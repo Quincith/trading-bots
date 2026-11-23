@@ -1,15 +1,18 @@
-# Copycat strategy — 2026-11-23 14:17 UTC
+# Copycat strategy — 2026-11-23 14:47 UTC
 
 | | |
 |---|---|
-| Account value | $91.82 |
+| Account value | $91.84 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$8.18 (-8.18%) |
-| Time-weighted return (ignores when deposits happened) | -8.18% |
+| Strategy profit / loss | -$8.16 (-8.16%) |
+| Time-weighted return (ignores when deposits happened) | -8.16% |
+
+## New buys
+- BUY GNL $17.82 entry 6.105 stop 5.4945 target 7.326
 
 ## Insider buys on the watchlist
 
-Read 22 new SEC filings this run. 112 stocks on the watchlist.
+Read 20 new SEC filings this run. 112 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -23,12 +26,14 @@ Read 22 new SEC filings this run. 112 stocks on the watchlist.
 
 | Stock | Price check | Risk | Decision |
 |---|---|---|---|
-| GNL | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
-| RMIX | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
-| OFRM | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
+| GNL | Now $6.11, +1.1% vs. what the insiders paid. | REDUCE $17.82 position, risking $1.78 (1.9% of account); limited by 100% total exposure | **BUY** — Copying Global Net Lease, Inc. insiders. 7 insiders bought $636,281 at about $6.04: Weil Edward M Jr. (CEO, President, Director) $200,221; Richardson Leon (Director) $150,238; Galloway Jesse Charles (See Remarks) $96,158 and 4 more. |
+| RMIX | Now $6.33, -0.6% vs. what the insiders paid. | REJECT Already at 5 open positions. | **SKIP** — Risk said no: Already at 5 open positions. |
+| OFRM | Now $12.27, +9.5% vs. what the insiders paid. | REJECT Already at 5 open positions. | **SKIP** — Risk said no: Already at 5 open positions. |
+| PAM | Now $60.72, -3.8% vs. what the insiders paid. | REJECT Already at 5 open positions. | **SKIP** — Risk said no: Already at 5 open positions. |
+| SEI | Now $61.68, +14.7% vs. what the insiders paid. | -  | **SKIP** — Price already up 15% since the insiders bought (limit 10%). Too late to copy. |
+| GLXY | Now $13.23, +12.5% vs. what the insiders paid. | -  | **SKIP** — Price already up 13% since the insiders bought (limit 10%). Too late to copy. |
 
 ## Notes
-- Spotter read 22 new insider filings and found 10 purchases (7 by officers or directors). Watchlist: 112 stocks, 75 big enough to copy.
-- Stock market closed; picks wait for the next open.
+- Spotter read 20 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 112 stocks, 75 big enough to copy.
 
 _Copycat uses no AI._
