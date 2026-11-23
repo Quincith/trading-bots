@@ -11,7 +11,7 @@
   "day": "2026-11-23",
   "day_start_equity": 91.26,
   "halted_reason": null,
-  "last_scan": "2026-11-23T00:45:59+00:00",
+  "last_scan": "2026-11-23T01:15:59+00:00",
   "plans": {
     "BBT": {
       "asset_class": "stocks",
@@ -6344,22 +6344,6 @@
       "company": "MEDIFAST INC",
       "score": 2.05,
       "ticker": "MED"
-    },
-    "MP": {
-      "buys": [
-        {
-          "accession": "0001831686-26-000014",
-          "date": "2026-11-17",
-          "filed": "2026-11-17T20:08:52-05:00",
-          "price": 34.86,
-          "role": "Chief Financial Officer",
-          "usd": 91577.22,
-          "who": "Corbett Ryan"
-        }
-      ],
-      "company": "MP Materials Corp. / DE",
-      "score": 1.46,
-      "ticker": "MP"
     },
     "MRBK": {
       "buys": [
