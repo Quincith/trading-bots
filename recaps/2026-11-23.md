@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 24 times.
+- Scout scanned 0 coins, 25 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 24 times.
+- Scout scanned 0 coins, 25 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,10 +36,10 @@ Watchful day. Insiders bought some stocks, but none passed the copy checks yet. 
 
 - Account value: $91.26 → $91.55 (+$0.29, +0.32%).
 - Profit / loss since start: -$8.45 on $100.00 money put in.
-- Spotter read 24 insider filings from the SEC and found 9 insider purchases. Watchlist at day end: 111 stocks.
-- Top pick: RMIX (Suncrete, Inc.). 5 insiders bought $1,030,996 at about $6.37: Rees-Jones David (Director) $731,172; Heyer Andrew R (Director) $182,800; Matteson Mark R (Director) $55,100 and 2 more.
-- Sent for review: RMIX (24x), OFRM (24x), PAM (24x).
-- Decisions: 0 buy, 72 wait, 0 skip.
+- Spotter read 35 insider filings from the SEC and found 20 insider purchases. Watchlist at day end: 111 stocks.
+- Top pick: GNL (Global Net Lease, Inc.). 7 insiders bought $636,281 at about $6.04: Weil Edward M Jr. (CEO, President, Director) $200,221; Richardson Leon (Director) $150,238; Galloway Jesse Charles (See Remarks) $96,158 and 4 more.
+- Sent for review: RMIX (25x), OFRM (25x), PAM (24x), GNL (1x).
+- Decisions: 0 buy, 75 wait, 0 skip.
 - Passed on RMIX (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on OFRM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
