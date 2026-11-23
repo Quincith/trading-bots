@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 45 times.
+- Scout scanned 0 coins, 46 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 45 times.
+- Scout scanned 0 coins, 46 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,7 +36,7 @@ Active day. The bots bought 1 time. The account ended up $2.11 (+2.31%) at $93.3
 
 - Account value: $91.26 → $93.37 (+$2.11, +2.31%).
 - Profit / loss since start: -$6.63 on $100.00 money put in.
-- Spotter read 867 insider filings from the SEC and found 125 insider purchases. Watchlist at day end: 115 stocks.
+- Spotter read 1037 insider filings from the SEC and found 138 insider purchases. Watchlist at day end: 113 stocks.
 - Top pick: RMIX (Suncrete, Inc.). 5 insiders bought $1,030,996 at about $6.37: Rees-Jones David (Director) $731,172; Heyer Andrew R (Director) $182,800; Matteson Mark R (Director) $55,100 and 2 more.
 - Sent for review: RMIX (32x), OFRM (32x), PAM (25x), GNL (8x), SEI (1x), GLXY (1x).
 - Decisions: 1 buy, 93 wait, 5 skip.
