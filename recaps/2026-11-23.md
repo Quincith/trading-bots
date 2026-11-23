@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 30 times.
+- Scout scanned 0 coins, 31 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,27 +23,27 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 30 times.
+- Scout scanned 0 coins, 31 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.65 (+0.71%)
+## Copycat: up $0.56 (+0.61%)
 
-Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended up $0.65 (+0.71%) at $91.91. Paper money only.
+Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended up $0.56 (+0.61%) at $91.82. Paper money only.
 
 **Key takeaways**
 
-- Account value: $91.26 → $91.91 (+$0.65, +0.71%).
-- Profit / loss since start: -$8.09 on $100.00 money put in.
-- Spotter read 79 insider filings from the SEC and found 31 insider purchases. Watchlist at day end: 111 stocks.
+- Account value: $91.26 → $91.82 (+$0.56, +0.61%).
+- Profit / loss since start: -$8.18 on $100.00 money put in.
+- Spotter read 101 insider filings from the SEC and found 41 insider purchases. Watchlist at day end: 112 stocks.
 - Top pick: GNL (Global Net Lease, Inc.). 7 insiders bought $636,281 at about $6.04: Weil Edward M Jr. (CEO, President, Director) $200,221; Richardson Leon (Director) $150,238; Galloway Jesse Charles (See Remarks) $96,158 and 4 more.
-- Sent for review: RMIX (30x), OFRM (30x), PAM (24x), GNL (6x).
-- Decisions: 0 buy, 90 wait, 0 skip.
+- Sent for review: RMIX (31x), OFRM (31x), PAM (24x), GNL (7x).
+- Decisions: 0 buy, 93 wait, 0 skip.
 - Passed on RMIX (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on OFRM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
-- Holding: BBT $19.25 (-$0.69 unrealized); CHCO $19.04 (-$0.95 unrealized); LRN $15.33 (-$0.78 unrealized); STC $20.47 (+$0.56 unrealized).
+- Holding: BBT $19.25 (-$0.69 unrealized); CHCO $19.04 (-$0.95 unrealized); LRN $15.33 (-$0.78 unrealized); STC $20.38 (+$0.47 unrealized).
 
 ## Forex: flat
 
