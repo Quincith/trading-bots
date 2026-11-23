@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 40 times.
+- Scout scanned 0 coins, 41 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,27 +23,27 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 40 times.
+- Scout scanned 0 coins, 41 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.89 (+0.98%)
+## Copycat: up $1.34 (+1.47%)
 
-Active day. The bots bought 1 time. The account ended up $0.89 (+0.98%) at $92.15. Paper money only.
+Active day. The bots bought 1 time. The account ended up $1.34 (+1.47%) at $92.60. Paper money only.
 
 **Key takeaways**
 
-- Account value: $91.26 → $92.15 (+$0.89, +0.98%).
-- Profit / loss since start: -$7.85 on $100.00 money put in.
-- Spotter read 480 insider filings from the SEC and found 83 insider purchases. Watchlist at day end: 114 stocks.
+- Account value: $91.26 → $92.60 (+$1.34, +1.47%).
+- Profit / loss since start: -$7.40 on $100.00 money put in.
+- Spotter read 535 insider filings from the SEC and found 88 insider purchases. Watchlist at day end: 116 stocks.
 - Top pick: RMIX (Suncrete, Inc.). 5 insiders bought $1,030,996 at about $6.37: Rees-Jones David (Director) $731,172; Heyer Andrew R (Director) $182,800; Matteson Mark R (Director) $55,100 and 2 more.
 - Sent for review: RMIX (32x), OFRM (32x), PAM (25x), GNL (8x), SEI (1x), GLXY (1x).
 - Decisions: 1 buy, 93 wait, 5 skip.
 - Passed on RMIX (SKIP, 0% confident): Risk said no: Already at 5 open positions.
 - Passed on OFRM (SKIP, 0% confident): Risk said no: Already at 5 open positions.
 - Bought $17.82 of GNL at 6.105. Reason: Copying Global Net Lease, Inc. insiders. 7 insiders bought $636,281 at about $6.04: Weil Edward M Jr. (CEO, President, Director) $200,221; Richardson Leon (Director) $150,238; Galloway Jesse Charles (See Remarks) $96,158 and 4 more.
-- Holding: BBT $19.29 (-$0.65 unrealized); CHCO $18.99 (-$1.00 unrealized); GNL $17.91 (+$0.10 unrealized); LRN $15.70 (-$0.41 unrealized); STC $20.25 (+$0.34 unrealized).
+- Holding: BBT $19.35 (-$0.59 unrealized); CHCO $19.02 (-$0.97 unrealized); GNL $17.97 (+$0.16 unrealized); LRN $15.72 (-$0.39 unrealized); STC $20.52 (+$0.61 unrealized).
 
 ## Forex: flat
 

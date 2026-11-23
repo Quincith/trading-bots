@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-23 18:47 UTC
+# Copycat strategy — 2026-11-23 19:17 UTC
 
 | | |
 |---|---|
-| Account value | $92.15 |
+| Account value | $92.60 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$7.85 (-7.85%) |
-| Time-weighted return (ignores when deposits happened) | -7.85% |
+| Strategy profit / loss | -$7.40 (-7.40%) |
+| Time-weighted return (ignores when deposits happened) | -7.40% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 40 new SEC filings this run. 114 stocks on the watchlist.
+Read 55 new SEC filings this run. 116 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 40 new SEC filings this run. 114 stocks on the watchlist.
 | GLXY (Galaxy Digital Inc.) | 3.95 | 2 insiders bought $4,968,843 at about $11.76: Novogratz Michael & Galaxy Group Investments Llc (Chief Executive Officer, Director, 10% owner) $4,869,468; Deason Douglas R (Director) $99,375. |
 
 ## Notes
-- Spotter read 40 new insider filings and found 6 purchases (5 by officers or directors). Watchlist: 114 stocks, 77 big enough to copy.
+- Spotter read 55 new insider filings and found 5 purchases (5 by officers or directors). Watchlist: 116 stocks, 76 big enough to copy.
 
 _Copycat uses no AI._
