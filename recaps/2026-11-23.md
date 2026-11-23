@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 27 times.
+- Scout scanned 0 coins, 28 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 27 times.
+- Scout scanned 0 coins, 28 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -38,8 +38,8 @@ Watchful day. Insiders bought some stocks, but none passed the copy checks yet. 
 - Profit / loss since start: -$8.22 on $100.00 money put in.
 - Spotter read 45 insider filings from the SEC and found 25 insider purchases. Watchlist at day end: 113 stocks.
 - Top pick: GNL (Global Net Lease, Inc.). 7 insiders bought $636,281 at about $6.04: Weil Edward M Jr. (CEO, President, Director) $200,221; Richardson Leon (Director) $150,238; Galloway Jesse Charles (See Remarks) $96,158 and 4 more.
-- Sent for review: RMIX (27x), OFRM (27x), PAM (24x), GNL (3x).
-- Decisions: 0 buy, 81 wait, 0 skip.
+- Sent for review: RMIX (28x), OFRM (28x), PAM (24x), GNL (4x).
+- Decisions: 0 buy, 84 wait, 0 skip.
 - Passed on RMIX (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on OFRM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
