@@ -1,4 +1,4 @@
-# Daily recap: Monday, November 23, 2026
+# Daily recap: Tuesday, November 24, 2026
 
 _Times are UTC. Paper money only._
 
@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 50 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,26 +23,23 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 50 times.
+- Scout scanned 0 coins, 1 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $2.11 (+2.31%)
+## Copycat: flat
 
-Active day. The bots bought 1 time. The account ended up $2.11 (+2.31%) at $93.37. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended flat at $93.37. Paper money only.
 
 **Key takeaways**
 
-- Account value: $91.26 → $93.37 (+$2.11, +2.31%).
+- Account value: $93.37 → $93.37 (no change).
 - Profit / loss since start: -$6.63 on $100.00 money put in.
-- Spotter read 1278 insider filings from the SEC and found 181 insider purchases. Watchlist at day end: 104 stocks.
-- Top pick: RMIX (Suncrete, Inc.). 5 insiders bought $1,030,996 at about $6.37: Rees-Jones David (Director) $731,172; Heyer Andrew R (Director) $182,800; Matteson Mark R (Director) $55,100 and 2 more.
-- Sent for review: RMIX (32x), OFRM (32x), PAM (25x), GNL (8x), SEI (1x), GLXY (1x).
-- Decisions: 1 buy, 93 wait, 5 skip.
-- Passed on RMIX (SKIP, 0% confident): Risk said no: Already at 5 open positions.
-- Passed on OFRM (SKIP, 0% confident): Risk said no: Already at 5 open positions.
-- Bought $17.82 of GNL at 6.105. Reason: Copying Global Net Lease, Inc. insiders. 7 insiders bought $636,281 at about $6.04: Weil Edward M Jr. (CEO, President, Director) $200,221; Richardson Leon (Director) $150,238; Galloway Jesse Charles (See Remarks) $96,158 and 4 more.
+- Spotter read 16 insider filings from the SEC and found 4 insider purchases. Watchlist at day end: 104 stocks.
+- Top pick: PAM (Pampa Energy Inc.). 3 insiders bought $11,378,351 at about $62.12: Mindlin Marcos Marcelo (Director, 10% owner) $7,316,744; Mariani Gustavo (Vicepresident) $2,039,468; Mindlin Damian Miguel (Vicepresident) $2,022,139.
+- Nothing was ready to copy, so no trade was considered.
+- No trades.
 - Holding: BBT $19.42 (-$0.52 unrealized); CHCO $19.07 (-$0.92 unrealized); GNL $18.30 (+$0.49 unrealized); LRN $15.72 (-$0.39 unrealized); STC $20.85 (+$0.94 unrealized).
 
 ## Forex: flat
@@ -53,20 +50,17 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 
 - Account value: $99.83 → $99.83 (no change).
 - Profit / loss since start: -$0.17 on $100.00 money put in.
-- Marked the opening range on 7 currency pairs at the London open.
-- Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (skip), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
+- No opening range marked today (a weekend, a holiday, or the check came too late).
 - No trades.
 - Open trades: none, all cash.
 
-## Fxcopy: no runs logged on 2026-11-23.
+## Fxcopy: no runs logged on 2026-11-24.
 
 ## Words to know
 
 - **account value**: What everything in the account is worth right now: cash plus coins, at today's prices.
 - **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
-- **confidence**: How sure the Decision bot is, from 0% to 100%. Each strategy only buys above its own minimum.
 - **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
-- **entry**: The price we buy at.
 - **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
 - **insider**: A company's own bosses (CEO, CFO and so on) and board members. They know the company best.
@@ -75,7 +69,5 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.
-- **stop-loss**: A safety exit. If the price falls to this level, the bots sell to keep the loss small.
-- **target**: The profit goal. If the price rises to this level, the bots sell and keep the gain.
 - **unrealized**: A gain or loss on a coin we still own. It only becomes real when we sell.
 - **volume**: How much of a coin is being bought and sold. A jump in volume means lots of people suddenly care.
