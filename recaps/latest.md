@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 18 times.
+- Scout scanned 0 coins, 19 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,19 +23,19 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 18 times.
+- Scout scanned 0 coins, 19 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: flat
+## Copycat: down $0.01 (-0.01%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended flat at $93.37. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.01 (-0.01%) at $93.36. Paper money only.
 
 **Key takeaways**
 
-- Account value: $93.37 → $93.37 (no change).
-- Profit / loss since start: -$6.63 on $100.00 money put in.
+- Account value: $93.37 → $93.36 (-$0.01, -0.01%).
+- Profit / loss since start: -$6.64 on $100.00 money put in.
 - Spotter read 97 insider filings from the SEC and found 19 insider purchases. Watchlist at day end: 106 stocks.
 - Top pick: PAM (Pampa Energy Inc.). 3 insiders bought $11,378,351 at about $62.12: Mindlin Marcos Marcelo (Director, 10% owner) $7,316,744; Mariani Gustavo (Vicepresident) $2,039,468; Mindlin Damian Miguel (Vicepresident) $2,022,139.
 - Nothing was ready to copy, so no trade was considered.
@@ -50,7 +50,8 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 
 - Account value: $99.83 → $99.83 (no change).
 - Profit / loss since start: -$0.17 on $100.00 money put in.
-- No opening range marked today (a weekend, a holiday, or the check came too late).
+- Marked the opening range on 7 currency pairs at the London open.
+- Signals: EUR/USD (skip), GBP/USD (skip), USD/JPY (skip), AUD/USD (skip), USD/CAD (skip), USD/CHF (skip), NZD/USD (skip).
 - No trades.
 - Open trades: none, all cash.
 
