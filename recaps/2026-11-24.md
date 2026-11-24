@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 36 times.
+- Scout scanned 0 coins, 37 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 36 times.
+- Scout scanned 0 coins, 37 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $1.49 (+1.60%)
+## Copycat: up $1.67 (+1.79%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $1.49 (+1.60%) at $94.86. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended up $1.67 (+1.79%) at $95.04. Paper money only.
 
 **Key takeaways**
 
-- Account value: $93.37 → $94.86 (+$1.49, +1.60%).
-- Profit / loss since start: -$5.14 on $100.00 money put in.
-- Spotter read 415 insider filings from the SEC and found 55 insider purchases. Watchlist at day end: 108 stocks.
+- Account value: $93.37 → $95.04 (+$1.67, +1.79%).
+- Profit / loss since start: -$4.96 on $100.00 money put in.
+- Spotter read 468 insider filings from the SEC and found 56 insider purchases. Watchlist at day end: 108 stocks.
 - Top pick: PAM (Pampa Energy Inc.). 3 insiders bought $11,378,351 at about $62.12: Mindlin Marcos Marcelo (Director, 10% owner) $7,316,744; Mariani Gustavo (Vicepresident) $2,039,468; Mindlin Damian Miguel (Vicepresident) $2,022,139.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.63 (-$0.31 unrealized); CHCO $19.21 (-$0.78 unrealized); GNL $18.44 (+$0.63 unrealized); LRN $16.03 (-$0.08 unrealized); STC $21.55 (+$1.64 unrealized).
+- Holding: BBT $19.66 (-$0.28 unrealized); CHCO $19.21 (-$0.78 unrealized); GNL $18.52 (+$0.71 unrealized); LRN $16.03 (-$0.08 unrealized); STC $21.61 (+$1.70 unrealized).
 
 ## Forex: flat
 
