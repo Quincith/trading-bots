@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 25 times.
+- Scout scanned 0 coins, 26 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 25 times.
+- Scout scanned 0 coins, 26 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $93.37 → $93.36 (-$0.01, -0.01%).
 - Profit / loss since start: -$6.64 on $100.00 money put in.
-- Spotter read 122 insider filings from the SEC and found 22 insider purchases. Watchlist at day end: 106 stocks.
+- Spotter read 125 insider filings from the SEC and found 25 insider purchases. Watchlist at day end: 106 stocks.
 - Top pick: PAM (Pampa Energy Inc.). 3 insiders bought $11,378,351 at about $62.12: Mindlin Marcos Marcelo (Director, 10% owner) $7,316,744; Mariani Gustavo (Vicepresident) $2,039,468; Mindlin Damian Miguel (Vicepresident) $2,022,139.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
