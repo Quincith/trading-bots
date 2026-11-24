@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-24 23:19 UTC
+# Copycat strategy — 2026-11-24 23:49 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 38 new SEC filings this run. 113 stocks on the watchlist.
+Read 24 new SEC filings this run. 113 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 38 new SEC filings this run. 113 stocks on the watchlist.
 | GLXY (Galaxy Digital Inc.) | 3.95 | 2 insiders bought $4,968,843 at about $11.76: Novogratz Michael & Galaxy Group Investments Llc (Chief Executive Officer, Director, 10% owner) $4,869,468; Deason Douglas R (Director) $99,375. |
 
 ## Notes
-- Spotter read 38 new insider filings and found 13 purchases (8 by officers or directors). Watchlist: 113 stocks, 75 big enough to copy.
+- Spotter read 24 new insider filings and found 1 purchases (0 by officers or directors). Watchlist: 113 stocks, 75 big enough to copy.
 
 _Copycat uses no AI._
