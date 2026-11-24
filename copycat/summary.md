@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-24 20:19 UTC
+# Copycat strategy — 2026-11-24 20:49 UTC
 
 | | |
 |---|---|
-| Account value | $94.72 |
+| Account value | $94.83 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$5.28 (-5.28%) |
-| Time-weighted return (ignores when deposits happened) | -5.28% |
+| Strategy profit / loss | -$5.17 (-5.17%) |
+| Time-weighted return (ignores when deposits happened) | -5.17% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 50 new SEC filings this run. 106 stocks on the watchlist.
+Read 71 new SEC filings this run. 106 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 50 new SEC filings this run. 106 stocks on the watchlist.
 | BH (Biglari Holdings Inc.) | 3.61 | 1 insider bought $12,807,035 at about $395.21: Biglari, Sardar & Biglari Capital Corp. & Lion Fund, L.P. (Chairman and CEO, Director, 10% owner) $12,807,035. |
 
 ## Notes
-- Spotter read 50 new insider filings and found 3 purchases (1 by officers or directors). Watchlist: 106 stocks, 70 big enough to copy.
+- Spotter read 71 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 106 stocks, 70 big enough to copy.
 
 _Copycat uses no AI._
