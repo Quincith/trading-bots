@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-24 13:18 UTC
+# Copycat strategy — 2026-11-24 13:48 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 6 new SEC filings this run. 105 stocks on the watchlist.
+Read 11 new SEC filings this run. 104 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 6 new SEC filings this run. 105 stocks on the watchlist.
 | BH (Biglari Holdings Inc.) | 3.61 | 1 insider bought $12,807,035 at about $395.21: Biglari, Sardar & Biglari Capital Corp. & Lion Fund, L.P. (Chairman and CEO, Director, 10% owner) $12,807,035. |
 
 ## Notes
-- Spotter read 6 new insider filings and found 3 purchases (3 by officers or directors). Watchlist: 105 stocks, 74 big enough to copy.
+- Spotter read 11 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 104 stocks, 73 big enough to copy.
 
 _Copycat uses no AI._
