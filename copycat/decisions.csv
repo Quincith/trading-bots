@@ -235,3 +235,9 @@ time,symbol,decision,confidence,risk,size_usd,note
 2026-11-25T17:51:03+00:00,PRE,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash)
 2026-11-25T17:51:03+00:00,PLTR,SKIP,0.00,,0.00,Price already up 12% since the insiders bought (limit 10%). Too late to copy.
 2026-11-25T17:51:03+00:00,GLXY,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash)
+2026-11-25T18:21:03+00:00,CTSO,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
+2026-11-25T18:21:03+00:00,PAM,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
+2026-11-25T18:21:03+00:00,SEI,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash)
+2026-11-25T18:21:03+00:00,PRE,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
+2026-11-25T18:21:03+00:00,PLTR,SKIP,0.00,,0.00,Price already up 13% since the insiders bought (limit 10%). Too late to copy.
+2026-11-25T18:21:03+00:00,GLXY,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash)
