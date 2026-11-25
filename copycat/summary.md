@@ -1,17 +1,18 @@
-# Copycat strategy — 2026-11-25 14:20 UTC
+# Copycat strategy — 2026-11-25 14:50 UTC
 
 | | |
 |---|---|
-| Account value | $94.72 |
+| Account value | $94.67 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$5.28 (-5.28%) |
-| Time-weighted return (ignores when deposits happened) | -5.28% |
+| Strategy profit / loss | -$5.33 (-5.33%) |
+| Time-weighted return (ignores when deposits happened) | -5.33% |
 
-**Risk:** Max open positions reached; only managing exits.
+## Open trades managed
+- SOLD CHCO: held 721h, past the 720h limit
 
 ## Insider buys on the watchlist
 
-Read 25 new SEC filings this run. 113 stocks on the watchlist.
+Read 40 new SEC filings this run. 113 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -21,7 +22,18 @@ Read 25 new SEC filings this run. 113 stocks on the watchlist.
 | SEI (Solaris Energy Infrastructure, Inc.) | 4.58 | 4 insiders bought $671,911 at about $53.67: Brock Amanda M (Co-Chief Executive Officer, Director) $268,900; Zartler William A (Chairman and Co-CEO, Director, 10% owner) $212,440; Ramachandran Kyle S. (President) $159,750 and 1 more. |
 | PRE (Prenetics Global Ltd) | 4.1 | 3 insiders bought $1,264,440 at about $9.92: Yeung Danny Sheng Wu (Chief Executive Officer, Director) $733,100; Rosin Brian J (CFO of IM8 (US) LLC) $404,200; Lo Hoi Chun (Chief Financial Officer) $127,140. |
 
+## Copy decisions
+
+| Stock | Price check | Risk | Decision |
+|---|---|---|---|
+| SHMD | - | -  | **SKIP** — Alpaca can't buy part of a share of this stock. |
+| CTSO | Now $4.24, -18.1% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by available cash) |
+| PAM | Now $61.27, -1.4% vs. what the insiders paid. | REJECT Size too small after limits. (limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by available cash) |
+| SEI | Now $52.42, -2.3% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by available cash) |
+| PRE | Now $9.40, -5.2% vs. what the insiders paid. | REJECT Size too small after limits. (limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by available cash) |
+| PLTR | Now $151.94, +5.7% vs. what the insiders paid. | REJECT Size too small after limits. (limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by available cash) |
+
 ## Notes
-- Spotter read 25 new insider filings and found 13 purchases (8 by officers or directors). Watchlist: 113 stocks, 78 big enough to copy.
+- Spotter read 40 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 113 stocks, 77 big enough to copy.
 
 _Copycat uses no AI._

@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 30 times.
+- Scout scanned 0 coins, 31 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,27 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 30 times.
+- Scout scanned 0 coins, 31 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.23 (-0.24%)
+## Copycat: down $0.28 (-0.29%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.23 (-0.24%) at $94.72. Paper money only.
+Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended down $0.28 (-0.29%) at $94.67. Paper money only.
 
 **Key takeaways**
 
-- Account value: $94.95 → $94.72 (-$0.23, -0.24%).
-- Profit / loss since start: -$5.28 on $100.00 money put in.
-- Spotter read 281 insider filings from the SEC and found 62 insider purchases. Watchlist at day end: 113 stocks.
+- Account value: $94.95 → $94.67 (-$0.28, -0.29%).
+- Profit / loss since start: -$5.33 on $100.00 money put in.
+- Spotter read 321 insider filings from the SEC and found 62 insider purchases. Watchlist at day end: 113 stocks.
 - Top pick: SHMD (SCHMID Group N.V.). 1 insider bought $103,885,740,000 at about $1,731,429.00: Schuetz Arthur Josef Hermann (CFO Schmid Group N.V.) $103,885,740,000.
-- Nothing was ready to copy, so no trade was considered.
-- No trades.
-- Holding: BBT $19.55 (-$0.39 unrealized); CHCO $19.11 (-$0.88 unrealized); GNL $18.92 (+$1.11 unrealized); LRN $15.91 (-$0.20 unrealized); STC $21.23 (+$1.32 unrealized).
+- Sent for review: SHMD (1x), CTSO (1x), PAM (1x), SEI (1x), PRE (1x), PLTR (1x).
+- Decisions: 0 buy, 0 wait, 6 skip.
+- Passed on SHMD (SKIP, 0% confident): Alpaca can't buy part of a share of this stock.
+- Passed on CTSO (SKIP, 0% confident): Risk said no: Size too small after limits. (capped at 20% position size; limited by available cash)
+- Sold CHCO for $19.13: it was held as long as this strategy allows, so the bots sold it. Loss: -$0.87.
+- Holding: BBT $19.36 (-$0.58 unrealized); GNL $18.90 (+$1.09 unrealized); LRN $16.02 (-$0.09 unrealized); STC $21.30 (+$1.39 unrealized).
 
 ## Forex: flat
 
@@ -61,6 +64,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 
 - **account value**: What everything in the account is worth right now: cash plus coins, at today's prices.
 - **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
+- **confidence**: How sure the Decision bot is, from 0% to 100%. Each strategy only buys above its own minimum.
 - **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
 - **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
