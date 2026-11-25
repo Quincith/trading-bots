@@ -11,3 +11,4 @@ time,symbol,side,usd,price,reason
 2026-11-20T14:41:28+00:00,MSM,sell,17.87,105.83,stop hit (105.83 <= 106.132)
 2026-11-23T14:47:06+00:00,GNL,buy,17.82,6.105,"Copying Global Net Lease, Inc. insiders. 7 insiders bought $636,281 at about $6.04: Weil Edward M Jr. (CEO, President, Director) $200,221; Richardson Leon (Director) $150,238; Galloway Jesse Charles (See Remarks) $96,158 and 4 more."
 2026-11-25T14:50:50+00:00,CHCO,sell,19.13,138.93,"held 721h, past the 720h limit"
+2026-11-25T20:21:08+00:00,BBT,sell,19.70,30.405,"held 720h, past the 720h limit"
