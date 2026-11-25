@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-25 01:49 UTC
+# Copycat strategy — 2026-11-25 02:19 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 10 new SEC filings this run. 113 stocks on the watchlist.
+Read 15 new SEC filings this run. 113 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 10 new SEC filings this run. 113 stocks on the watchlist.
 | PLTR (Palantir Technologies Inc.) | 4.09 | 1 insider bought $122,253,519 at about $143.81: Thiel Peter (Director) $122,253,519. |
 
 ## Notes
-- Spotter read 10 new insider filings and found 5 purchases (3 by officers or directors). Watchlist: 113 stocks, 77 big enough to copy.
+- Spotter read 15 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 113 stocks, 77 big enough to copy.
 
 _Copycat uses no AI._
