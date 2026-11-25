@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-25 13:20 UTC
+# Copycat strategy — 2026-11-25 13:50 UTC
 
 | | |
 |---|---|
-| Account value | $94.70 |
+| Account value | $94.69 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$5.30 (-5.30%) |
-| Time-weighted return (ignores when deposits happened) | -5.30% |
+| Strategy profit / loss | -$5.31 (-5.31%) |
+| Time-weighted return (ignores when deposits happened) | -5.31% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 15 new SEC filings this run. 115 stocks on the watchlist.
+Read 50 new SEC filings this run. 113 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 15 new SEC filings this run. 115 stocks on the watchlist.
 | PLTR (Palantir Technologies Inc.) | 4.09 | 1 insider bought $122,253,519 at about $143.81: Thiel Peter (Director) $122,253,519. |
 
 ## Notes
-- Spotter read 15 new insider filings and found 4 purchases (2 by officers or directors). Watchlist: 115 stocks, 78 big enough to copy.
+- Spotter read 50 new insider filings and found 5 purchases (0 by officers or directors). Watchlist: 113 stocks, 77 big enough to copy.
 
 _Copycat uses no AI._

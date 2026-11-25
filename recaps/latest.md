@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 28 times.
+- Scout scanned 0 coins, 29 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 28 times.
+- Scout scanned 0 coins, 29 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.25 (-0.26%)
+## Copycat: down $0.26 (-0.27%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.25 (-0.26%) at $94.70. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.26 (-0.27%) at $94.69. Paper money only.
 
 **Key takeaways**
 
-- Account value: $94.95 → $94.70 (-$0.25, -0.26%).
-- Profit / loss since start: -$5.30 on $100.00 money put in.
-- Spotter read 206 insider filings from the SEC and found 44 insider purchases. Watchlist at day end: 115 stocks.
+- Account value: $94.95 → $94.69 (-$0.26, -0.27%).
+- Profit / loss since start: -$5.31 on $100.00 money put in.
+- Spotter read 256 insider filings from the SEC and found 49 insider purchases. Watchlist at day end: 113 stocks.
 - Top pick: SHMD (SCHMID Group N.V.). 1 insider bought $103,885,740,000 at about $1,731,429.00: Schuetz Arthur Josef Hermann (CFO Schmid Group N.V.) $103,885,740,000.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: BBT $19.58 (-$0.36 unrealized); CHCO $19.11 (-$0.88 unrealized); GNL $18.92 (+$1.11 unrealized); LRN $15.85 (-$0.26 unrealized); STC $21.24 (+$1.33 unrealized).
+- Holding: BBT $19.56 (-$0.38 unrealized); CHCO $19.11 (-$0.88 unrealized); GNL $18.92 (+$1.11 unrealized); LRN $15.88 (-$0.23 unrealized); STC $21.23 (+$1.32 unrealized).
 
 ## Forex: flat
 
