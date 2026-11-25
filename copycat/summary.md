@@ -1,11 +1,11 @@
-# Copycat strategy — 2026-11-25 18:51 UTC
+# Copycat strategy — 2026-11-25 19:21 UTC
 
 | | |
 |---|---|
-| Account value | $96.39 |
+| Account value | $96.40 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$3.61 (-3.61%) |
-| Time-weighted return (ignores when deposits happened) | -3.61% |
+| Strategy profit / loss | -$3.60 (-3.60%) |
+| Time-weighted return (ignores when deposits happened) | -3.60% |
 
 ## Insider buys on the watchlist
 
@@ -24,13 +24,13 @@ Read 41 new SEC filings this run. 110 stocks on the watchlist.
 | Stock | Price check | Risk | Decision |
 |---|---|---|---|
 | CTSO | Now $4.24, -18.1% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| PAM | Now $62.49, +0.6% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| SEI | Now $58.29, +8.6% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
-| PRE | Now $10.34, +4.2% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
-| PLTR | Now $164.03, +14.1% vs. what the insiders paid. | -  | **SKIP** — Price already up 14% since the insiders bought (limit 10%). Too late to copy. |
-| GLXY | Now $11.45, -2.6% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| PAM | Now $62.12, -0.0% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| SEI | Now $58.55, +9.1% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
+| PRE | Now $10.51, +5.9% vs. what the insiders paid. | REJECT Size too small after limits. (limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (limited by 100% total exposure; limited by available cash) |
+| PLTR | Now $164.25, +14.2% vs. what the insiders paid. | -  | **SKIP** — Price already up 14% since the insiders bought (limit 10%). Too late to copy. |
+| GLXY | Now $11.64, -1.0% vs. what the insiders paid. | REJECT Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) | **SKIP** — Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash) |
 
 ## Notes
-- Spotter read 41 new insider filings and found 2 purchases (0 by officers or directors). Watchlist: 110 stocks, 73 big enough to copy.
+- Spotter read 41 new insider filings and found 1 purchases (1 by officers or directors). Watchlist: 110 stocks, 72 big enough to copy.
 
 _Copycat uses no AI._
