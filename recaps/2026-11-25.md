@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 36 times.
+- Scout scanned 0 coins, 37 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,27 +23,27 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 36 times.
+- Scout scanned 0 coins, 37 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $1.68 (+1.77%)
+## Copycat: up $1.44 (+1.52%)
 
-Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended up $1.68 (+1.77%) at $96.63. Paper money only.
+Active day. The bots closed 1 trade (0 wins, 1 loss). The account ended up $1.44 (+1.52%) at $96.39. Paper money only.
 
 **Key takeaways**
 
-- Account value: $94.95 → $96.63 (+$1.68, +1.77%).
-- Profit / loss since start: -$3.37 on $100.00 money put in.
-- Spotter read 567 insider filings from the SEC and found 75 insider purchases. Watchlist at day end: 111 stocks.
+- Account value: $94.95 → $96.39 (+$1.44, +1.52%).
+- Profit / loss since start: -$3.61 on $100.00 money put in.
+- Spotter read 609 insider filings from the SEC and found 75 insider purchases. Watchlist at day end: 111 stocks.
 - Top pick: CTSO (Cytosorbents Corp). 7 insiders bought $499,984 at about $5.18: Chan Phillip P. (Chief Executive Officer, Director) $355,001; Bator Michael G. (Director) $49,997; Mariani Peter J (Chief Financial Officer) $35,001 and 4 more.
-- Sent for review: CTSO (6x), PAM (6x), SEI (6x), PRE (6x), PLTR (6x), GLXY (5x), SHMD (1x).
-- Decisions: 0 buy, 0 wait, 36 skip.
+- Sent for review: CTSO (7x), PAM (7x), SEI (7x), PRE (7x), PLTR (7x), GLXY (6x), SHMD (1x).
+- Decisions: 0 buy, 0 wait, 42 skip.
 - Passed on SHMD (SKIP, 0% confident): Alpaca can't buy part of a share of this stock.
 - Passed on CTSO (SKIP, 0% confident): Risk said no: Size too small after limits. (capped at 20% position size; limited by 100% total exposure; limited by available cash)
 - Sold CHCO for $19.13: it was held as long as this strategy allows, so the bots sold it. Loss: -$0.87.
-- Holding: BBT $19.65 (-$0.29 unrealized); GNL $19.22 (+$1.41 unrealized); LRN $16.50 (+$0.39 unrealized); STC $22.16 (+$2.25 unrealized).
+- Holding: BBT $19.57 (-$0.37 unrealized); GNL $19.21 (+$1.40 unrealized); LRN $16.48 (+$0.37 unrealized); STC $22.04 (+$2.13 unrealized).
 
 ## Forex: flat
 
