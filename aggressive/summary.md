@@ -1,4 +1,4 @@
-# Aggressive strategy — 2026-11-26 04:51 UTC
+# Aggressive strategy — 2026-11-26 05:21 UTC
 
 | | |
 |---|---|
@@ -8,6 +8,6 @@
 | Time-weighted return (ignores when deposits happened) | -28.65% |
 
 ## Notes
-- QQQ closed at $638.10 on 2026-11-24, below its 200-day average of $682.42 (-6.5%). No uptrend, so the rule holds cash.
+- QQQ closed at $633.93 on 2026-11-25, below its 200-day average of $682.54 (-7.1%). No uptrend, so the rule holds cash.
 
 _Claude calls this run: 0_
