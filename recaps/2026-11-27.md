@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 6 times.
+- Scout scanned 0 coins, 7 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 6 times.
+- Scout scanned 0 coins, 7 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -38,8 +38,8 @@ Watchful day. Insiders bought some stocks, but none passed the copy checks yet. 
 - Profit / loss since start: -$3.77 on $100.00 money put in.
 - Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 106 stocks.
 - Top pick: CTSO (Cytosorbents Corp). 7 insiders bought $499,984 at about $5.18: Chan Phillip P. (Chief Executive Officer, Director) $355,001; Bator Michael G. (Director) $49,997; Mariani Peter J (Chief Financial Officer) $35,001 and 4 more.
-- Sent for review: CTSO (6x), PAM (6x), PRE (6x).
-- Decisions: 0 buy, 18 wait, 0 skip.
+- Sent for review: CTSO (7x), PAM (7x), PRE (7x).
+- Decisions: 0 buy, 21 wait, 0 skip.
 - Passed on CTSO (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on PAM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
