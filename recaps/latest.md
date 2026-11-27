@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 22 times.
+- Scout scanned 0 coins, 23 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,27 +23,27 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 22 times.
+- Scout scanned 0 coins, 23 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.03 (+0.03%)
+## Copycat: up $0.08 (+0.08%)
 
-Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended up $0.03 (+0.03%) at $96.26. Paper money only.
+Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended up $0.08 (+0.08%) at $96.31. Paper money only.
 
 **Key takeaways**
 
-- Account value: $96.23 → $96.26 (+$0.03, +0.03%).
-- Profit / loss since start: -$3.74 on $100.00 money put in.
+- Account value: $96.23 → $96.31 (+$0.08, +0.08%).
+- Profit / loss since start: -$3.69 on $100.00 money put in.
 - Spotter read 0 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 106 stocks.
 - Top pick: CTSO (Cytosorbents Corp). 7 insiders bought $499,984 at about $5.18: Chan Phillip P. (Chief Executive Officer, Director) $355,001; Bator Michael G. (Director) $49,997; Mariani Peter J (Chief Financial Officer) $35,001 and 4 more.
-- Sent for review: CTSO (22x), PAM (22x), PRE (22x).
-- Decisions: 0 buy, 66 wait, 0 skip.
+- Sent for review: CTSO (23x), PAM (23x), PRE (23x).
+- Decisions: 0 buy, 69 wait, 0 skip.
 - Passed on CTSO (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - Passed on PAM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
 - No trades.
-- Holding: GNL $19.06 (+$1.25 unrealized); LRN $16.42 (+$0.31 unrealized); STC $22.01 (+$2.10 unrealized).
+- Holding: GNL $19.06 (+$1.25 unrealized); LRN $16.42 (+$0.31 unrealized); STC $22.06 (+$2.15 unrealized).
 
 ## Forex: flat
 
