@@ -1,17 +1,17 @@
-# Copycat strategy — 2026-11-27 21:24 UTC
+# Copycat strategy — 2026-11-27 21:55 UTC
 
 | | |
 |---|---|
-| Account value | $96.63 |
+| Account value | $96.97 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$3.37 (-3.37%) |
-| Time-weighted return (ignores when deposits happened) | -3.37% |
+| Strategy profit / loss | -$3.03 (-3.03%) |
+| Time-weighted return (ignores when deposits happened) | -3.03% |
 
 **Risk:** Max open positions reached; only managing exits.
 
 ## Insider buys on the watchlist
 
-Read 56 new SEC filings this run. 113 stocks on the watchlist.
+Read 84 new SEC filings this run. 114 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 56 new SEC filings this run. 113 stocks on the watchlist.
 | TEAM (Atlassian Corp) | 3.37 | 1 insider bought $7,463,555 at about $139.25: Cannon-Brookes Michael (CEO, Co-Founder, Director, 10% owner) $7,463,555. |
 
 ## Notes
-- Spotter read 56 new insider filings and found 7 purchases (7 by officers or directors). Watchlist: 113 stocks, 68 big enough to copy.
+- Spotter read 84 new insider filings and found 5 purchases (2 by officers or directors). Watchlist: 114 stocks, 69 big enough to copy.
 
 _Copycat uses no AI._
