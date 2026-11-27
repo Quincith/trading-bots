@@ -277,3 +277,9 @@ time,symbol,decision,confidence,risk,size_usd,note
 2026-11-27T14:54:28+00:00,PLTR,WAIT,0.00,,0.00,Already copied enough this run; next run.
 2026-11-27T14:54:28+00:00,RMIX,WAIT,0.00,,0.00,Already copied enough this run; next run.
 2026-11-27T14:54:28+00:00,COHR,WAIT,0.00,,0.00,Already copied enough this run; next run.
+2026-11-27T15:24:20+00:00,PRE,BUY,1.00,APPROVE,19.11,"Copying Prenetics Global Ltd insiders. 3 insiders bought $1,264,440 at about $9.92: Yeung Danny Sheng Wu (Chief Executive Officer, Director) $733,100; Rosin Brian J (CFO of IM8 (US) LLC) $404,200; Lo Hoi Chun (Chief Financial Officer) $127,140."
+2026-11-27T15:24:20+00:00,PLTR,SKIP,0.00,,0.00,Price already up 18% since the insiders bought (limit 10%). Too late to copy.
+2026-11-27T15:24:20+00:00,RMIX,SKIP,0.00,REJECT,0.00,Risk said no: Already at 5 open positions.
+2026-11-27T15:24:20+00:00,COHR,SKIP,0.00,REJECT,0.00,Risk said no: Already at 5 open positions.
+2026-11-27T15:24:20+00:00,BH,SKIP,0.00,REJECT,0.00,Risk said no: Already at 5 open positions.
+2026-11-27T15:24:20+00:00,TEAM,SKIP,0.00,REJECT,0.00,Risk said no: Already at 5 open positions.

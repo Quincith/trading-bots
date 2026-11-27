@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 32 times.
+- Scout scanned 0 coins, 33 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,29 +23,30 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 32 times.
+- Scout scanned 0 coins, 33 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: down $0.02 (-0.02%)
+## Copycat: down $0.69 (-0.72%)
 
-Active day. The bots bought 2 times and closed 1 trade (1 win, 0 losses). The account ended down $0.02 (-0.02%) at $96.21. Paper money only.
+Active day. The bots bought 3 times and closed 1 trade (1 win, 0 losses). The account ended down $0.69 (-0.72%) at $95.54. Paper money only.
 
 **Key takeaways**
 
-- Account value: $96.23 → $96.21 (-$0.02, -0.02%).
-- Profit / loss since start: -$3.79 on $100.00 money put in.
-- Spotter read 174 insider filings from the SEC and found 21 insider purchases. Watchlist at day end: 109 stocks.
-- Top pick: CTSO (Cytosorbents Corp). 7 insiders bought $499,984 at about $5.18: Chan Phillip P. (Chief Executive Officer, Director) $355,001; Bator Michael G. (Director) $49,997; Mariani Peter J (Chief Financial Officer) $35,001 and 4 more.
-- Sent for review: CTSO (32x), PAM (32x), PRE (32x), PLTR (1x), RMIX (1x), COHR (1x).
-- Decisions: 2 buy, 97 wait, 0 skip.
-- Passed on PRE (WAIT, 0% confident): Already copied enough this run; next run.
-- Passed on PLTR (WAIT, 0% confident): Already copied enough this run; next run.
+- Account value: $96.23 → $95.54 (-$0.69, -0.72%).
+- Profit / loss since start: -$4.46 on $100.00 money put in.
+- Spotter read 263 insider filings from the SEC and found 24 insider purchases. Watchlist at day end: 107 stocks.
+- Top pick: PRE (Prenetics Global Ltd). 3 insiders bought $1,264,440 at about $9.92: Yeung Danny Sheng Wu (Chief Executive Officer, Director) $733,100; Rosin Brian J (CFO of IM8 (US) LLC) $404,200; Lo Hoi Chun (Chief Financial Officer) $127,140.
+- Sent for review: PRE (33x), CTSO (32x), PAM (32x), PLTR (2x), RMIX (2x), COHR (2x), BH (1x), TEAM (1x).
+- Decisions: 3 buy, 97 wait, 5 skip.
+- Passed on PLTR (SKIP, 0% confident): Price already up 18% since the insiders bought (limit 10%). Too late to copy.
+- Passed on RMIX (SKIP, 0% confident): Risk said no: Already at 5 open positions.
 - Bought $19.24 of CTSO at 4.24. Reason: Copying Cytosorbents Corp insiders. 7 insiders bought $499,984 at about $5.18: Chan Phillip P. (Chief Executive Officer, Director) $355,001; Bator Michael G. (Director) $49,997; Mariani Peter J (Chief Financial Officer) $35,001 and 4 more.
 - Bought $19.24 of PAM at 64.43. Reason: Copying Pampa Energy Inc. insiders. 3 insiders bought $11,378,351 at about $62.12: Mindlin Marcos Marcelo (Director, 10% owner) $7,316,744; Mariani Gustavo (Vicepresident) $2,039,468; Mindlin Damian Miguel (Vicepresident) $2,022,139.
+- Bought $19.11 of PRE at 10.01. Reason: Copying Prenetics Global Ltd insiders. 3 insiders bought $1,264,440 at about $9.92: Yeung Danny Sheng Wu (Chief Executive Officer, Director) $733,100; Rosin Brian J (CFO of IM8 (US) LLC) $404,200; Lo Hoi Chun (Chief Financial Officer) $127,140.
 - Sold STC for $21.80: it was held as long as this strategy allows, so the bots sold it. Gain: $1.88.
-- Holding: GNL $18.87 (+$1.06 unrealized); LRN $16.76 (+$0.65 unrealized).
+- Holding: CTSO $18.71 (-$0.52 unrealized); GNL $18.92 (+$1.11 unrealized); LRN $16.75 (+$0.64 unrealized); PAM $19.05 (-$0.18 unrealized).
 
 ## Forex: flat
 
