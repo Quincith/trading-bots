@@ -1,4 +1,4 @@
-# Forex office — 2026-11-26 23:53 UTC
+# Forex office — 2026-11-27 00:23 UTC
 
 _OANDA practice account. This office counts only its own trades, starting from $100.00._
 
@@ -9,19 +9,7 @@ _OANDA practice account. This office counts only its own trades, starting from $
 | Strategy profit / loss | -$0.17 (-0.17%) |
 | Time-weighted return (ignores when deposits happened) | -0.17% |
 
-## Today's read on each pair
-
-| Pair | Price | What the rule sees | Risk | Decision |
-|---|---|---|---|---|
-| AUD/USD | 0.66400 | Range 0.66304 to 0.66362 (5.8 pips): too narrow, fees would be over 10% of the risk. Skipped today. |  | **SKIP** |
-| EUR/USD | 1.09696 | Range 1.09668 to 1.09800 (13.2 pips): too narrow, fees would be over 10% of the risk. Skipped today. |  | **SKIP** |
-| GBP/USD | 1.31092 | Range 1.31002 to 1.31096 (9.4 pips): too narrow, fees would be over 10% of the risk. Skipped today. |  | **SKIP** |
-| NZD/USD | 0.54848 | Range 0.54764 to 0.54826 (6.2 pips): too narrow, fees would be over 10% of the risk. Skipped today. |  | **SKIP** |
-| USD/CAD | 1.42201 | Range 1.42202 to 1.42273 (7.1 pips): too narrow, fees would be over 10% of the risk. Skipped today. |  | **SKIP** |
-| USD/CHF | 0.83320 | Range 0.83210 to 0.83333 (12.3 pips): too narrow, fees would be over 10% of the risk. Skipped today. |  | **SKIP** |
-| USD/JPY | 159.132 | Range 159.136 to 159.210 (7.4 pips): too narrow, fees would be over 10% of the risk. Skipped today. |  | **SKIP** |
-
 ## Notes
-- After 16:00 London time: nothing is held overnight. Next session tomorrow.
+- Waiting for the opening range: 08:00 to 08:30 London time.
 
 _No AI is used in the Forex wing._
