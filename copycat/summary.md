@@ -1,15 +1,22 @@
-# Copycat strategy — 2026-11-27 14:24 UTC
+# Copycat strategy — 2026-11-27 14:54 UTC
 
 | | |
 |---|---|
-| Account value | $96.49 |
+| Account value | $96.21 |
 | Money put in (deposits minus withdrawals) | $100.00 |
-| Strategy profit / loss | -$3.51 (-3.51%) |
-| Time-weighted return (ignores when deposits happened) | -3.51% |
+| Strategy profit / loss | -$3.79 (-3.79%) |
+| Time-weighted return (ignores when deposits happened) | -3.79% |
+
+## Open trades managed
+- SOLD STC: held 745h, past the 720h limit
+
+## New buys
+- BUY CTSO $19.24 entry 4.24 stop 3.816 target 5.088
+- BUY PAM $19.24 entry 64.43 stop 57.987 target 77.316
 
 ## Insider buys on the watchlist
 
-Read 33 new SEC filings this run. 109 stocks on the watchlist.
+Read 53 new SEC filings this run. 109 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -23,12 +30,14 @@ Read 33 new SEC filings this run. 109 stocks on the watchlist.
 
 | Stock | Price check | Risk | Decision |
 |---|---|---|---|
-| CTSO | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
-| PAM | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
-| PRE | - | -  | **WAIT** — Stock market is closed. Will copy when it opens if it still checks out. |
+| CTSO | Now $4.24, -18.1% vs. what the insiders paid. | APPROVE $19.24 position, risking $1.92 (2.0% of account); capped at 20% position size | **BUY** — Copying Cytosorbents Corp insiders. 7 insiders bought $499,984 at about $5.18: Chan Phillip P. (Chief Executive Officer, Director) $355,001; Bator Michael G. (Director) $49,997; Mariani Peter J (Chief Financial Officer) $35,001 and 4 more. |
+| PAM | Now $64.43, +3.7% vs. what the insiders paid. | APPROVE $19.24 position, risking $1.92 (2.0% of account); capped at 20% position size | **BUY** — Copying Pampa Energy Inc. insiders. 3 insiders bought $11,378,351 at about $62.12: Mindlin Marcos Marcelo (Director, 10% owner) $7,316,744; Mariani Gustavo (Vicepresident) $2,039,468; Mindlin Damian Miguel (Vicepresident) $2,022,139. |
+| PRE | - | -  | **WAIT** — Already copied enough this run; next run. |
+| PLTR | - | -  | **WAIT** — Already copied enough this run; next run. |
+| RMIX | - | -  | **WAIT** — Already copied enough this run; next run. |
+| COHR | - | -  | **WAIT** — Already copied enough this run; next run. |
 
 ## Notes
-- Spotter read 33 new insider filings and found 5 purchases (1 by officers or directors). Watchlist: 109 stocks, 69 big enough to copy.
-- Stock market closed; picks wait for the next open.
+- Spotter read 53 new insider filings and found 1 purchases (0 by officers or directors). Watchlist: 109 stocks, 69 big enough to copy.
 
 _Copycat uses no AI._

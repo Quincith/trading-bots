@@ -271,3 +271,9 @@ time,symbol,decision,confidence,risk,size_usd,note
 2026-11-25T20:51:09+00:00,PLTR,SKIP,0.00,,0.00,Price already up 14% since the insiders bought (limit 10%). Too late to copy.
 2026-11-25T20:51:09+00:00,GLXY,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (limited by available cash)
 2026-11-25T20:51:09+00:00,RMIX,SKIP,0.00,REJECT,0.00,Risk said no: Size too small after limits. (capped at 20% position size; limited by available cash)
+2026-11-27T14:54:28+00:00,CTSO,BUY,1.00,APPROVE,19.24,"Copying Cytosorbents Corp insiders. 7 insiders bought $499,984 at about $5.18: Chan Phillip P. (Chief Executive Officer, Director) $355,001; Bator Michael G. (Director) $49,997; Mariani Peter J (Chief Financial Officer) $35,001 and 4 more."
+2026-11-27T14:54:28+00:00,PAM,BUY,1.00,APPROVE,19.24,"Copying Pampa Energy Inc. insiders. 3 insiders bought $11,378,351 at about $62.12: Mindlin Marcos Marcelo (Director, 10% owner) $7,316,744; Mariani Gustavo (Vicepresident) $2,039,468; Mindlin Damian Miguel (Vicepresident) $2,022,139."
+2026-11-27T14:54:28+00:00,PRE,WAIT,0.00,,0.00,Already copied enough this run; next run.
+2026-11-27T14:54:28+00:00,PLTR,WAIT,0.00,,0.00,Already copied enough this run; next run.
+2026-11-27T14:54:28+00:00,RMIX,WAIT,0.00,,0.00,Already copied enough this run; next run.
+2026-11-27T14:54:28+00:00,COHR,WAIT,0.00,,0.00,Already copied enough this run; next run.

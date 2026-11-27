@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 31 times.
+- Scout scanned 0 coins, 32 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,27 +23,29 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 31 times.
+- Scout scanned 0 coins, 32 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: up $0.26 (+0.27%)
+## Copycat: down $0.02 (-0.02%)
 
-Watchful day. Insiders bought some stocks, but none passed the copy checks yet. The account ended up $0.26 (+0.27%) at $96.49. Paper money only.
+Active day. The bots bought 2 times and closed 1 trade (1 win, 0 losses). The account ended down $0.02 (-0.02%) at $96.21. Paper money only.
 
 **Key takeaways**
 
-- Account value: $96.23 → $96.49 (+$0.26, +0.27%).
-- Profit / loss since start: -$3.51 on $100.00 money put in.
-- Spotter read 121 insider filings from the SEC and found 20 insider purchases. Watchlist at day end: 109 stocks.
+- Account value: $96.23 → $96.21 (-$0.02, -0.02%).
+- Profit / loss since start: -$3.79 on $100.00 money put in.
+- Spotter read 174 insider filings from the SEC and found 21 insider purchases. Watchlist at day end: 109 stocks.
 - Top pick: CTSO (Cytosorbents Corp). 7 insiders bought $499,984 at about $5.18: Chan Phillip P. (Chief Executive Officer, Director) $355,001; Bator Michael G. (Director) $49,997; Mariani Peter J (Chief Financial Officer) $35,001 and 4 more.
-- Sent for review: CTSO (31x), PAM (31x), PRE (31x).
-- Decisions: 0 buy, 93 wait, 0 skip.
-- Passed on CTSO (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
-- Passed on PAM (WAIT, 0% confident): Stock market is closed. Will copy when it opens if it still checks out.
-- No trades.
-- Holding: GNL $19.24 (+$1.43 unrealized); LRN $16.42 (+$0.31 unrealized); STC $22.06 (+$2.15 unrealized).
+- Sent for review: CTSO (32x), PAM (32x), PRE (32x), PLTR (1x), RMIX (1x), COHR (1x).
+- Decisions: 2 buy, 97 wait, 0 skip.
+- Passed on PRE (WAIT, 0% confident): Already copied enough this run; next run.
+- Passed on PLTR (WAIT, 0% confident): Already copied enough this run; next run.
+- Bought $19.24 of CTSO at 4.24. Reason: Copying Cytosorbents Corp insiders. 7 insiders bought $499,984 at about $5.18: Chan Phillip P. (Chief Executive Officer, Director) $355,001; Bator Michael G. (Director) $49,997; Mariani Peter J (Chief Financial Officer) $35,001 and 4 more.
+- Bought $19.24 of PAM at 64.43. Reason: Copying Pampa Energy Inc. insiders. 3 insiders bought $11,378,351 at about $62.12: Mindlin Marcos Marcelo (Director, 10% owner) $7,316,744; Mariani Gustavo (Vicepresident) $2,039,468; Mindlin Damian Miguel (Vicepresident) $2,022,139.
+- Sold STC for $21.80: it was held as long as this strategy allows, so the bots sold it. Gain: $1.88.
+- Holding: GNL $18.87 (+$1.06 unrealized); LRN $16.76 (+$0.65 unrealized).
 
 ## Forex: flat
 
@@ -66,6 +68,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - **breakout**: When a price moves past its highest (or lowest) point of recent weeks. Trend followers trade in that direction.
 - **confidence**: How sure the Decision bot is, from 0% to 100%. Each strategy only buys above its own minimum.
 - **currency pair**: Two currencies priced against each other. EUR/USD at 1.10 means 1 euro costs 1.10 US dollars.
+- **entry**: The price we buy at.
 - **forex**: Trading one country's money for another's, like euros for dollars. The biggest market in the world.
 - **Form 4**: The form insiders must send the SEC within 2 business days of trading their company's stock. It's public.
 - **insider**: A company's own bosses (CEO, CFO and so on) and board members. They know the company best.
@@ -74,5 +77,7 @@ Quiet day. No new currency trade. The office ended flat at $99.83. Practice mone
 - **paper trading**: Practice trading with pretend money. Prices are real, the money isn't.
 - **position**: A coin the account currently owns.
 - **profit / loss**: Account value minus money put in. Adding money never counts as profit.
+- **stop-loss**: A safety exit. If the price falls to this level, the bots sell to keep the loss small.
+- **target**: The profit goal. If the price rises to this level, the bots sell and keep the gain.
 - **unrealized**: A gain or loss on a coin we still own. It only becomes real when we sell.
 - **volume**: How much of a coin is being bought and sold. A jump in volume means lots of people suddenly care.
