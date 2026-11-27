@@ -1,4 +1,4 @@
-# Copycat strategy — 2026-11-27 18:54 UTC
+# Copycat strategy — 2026-11-27 18:57 UTC
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 
 ## Insider buys on the watchlist
 
-Read 113 new SEC filings this run. 108 stocks on the watchlist.
+Read 9 new SEC filings this run. 108 stocks on the watchlist.
 
 | Stock | Score | Who bought |
 |---|---|---|
@@ -22,6 +22,6 @@ Read 113 new SEC filings this run. 108 stocks on the watchlist.
 | TEAM (Atlassian Corp) | 3.37 | 1 insider bought $7,463,555 at about $139.25: Cannon-Brookes Michael (CEO, Co-Founder, Director, 10% owner) $7,463,555. |
 
 ## Notes
-- Spotter read 113 new insider filings and found 2 purchases (0 by officers or directors). Watchlist: 108 stocks, 67 big enough to copy.
+- Spotter read 9 new insider filings and found 0 purchases (0 by officers or directors). Watchlist: 108 stocks, 67 big enough to copy.
 
 _Copycat uses no AI._
