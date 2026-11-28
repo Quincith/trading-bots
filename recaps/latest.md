@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 1 times.
+- Scout scanned 0 coins, 2 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,7 +23,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 1 times.
+- Scout scanned 0 coins, 2 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -36,7 +36,7 @@ Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The
 
 - Account value: $96.97 → $96.97 (no change).
 - Profit / loss since start: -$3.03 on $100.00 money put in.
-- Spotter read 9 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 115 stocks.
+- Spotter read 14 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 115 stocks.
 - Top pick: PLTR (Palantir Technologies Inc.). 1 insider bought $122,253,519 at about $143.81: Thiel Peter (Director) $122,253,519.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
