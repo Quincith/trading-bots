@@ -10,7 +10,7 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $71.35 → $71.35 (no change).
 - Profit / loss since start: -$28.65 on $100.00 money put in.
-- Scout scanned 0 coins, 7 times.
+- Scout scanned 0 coins, 8 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
@@ -23,24 +23,24 @@ Quiet day. The market showed no setup strong enough to look at, so the bots stay
 
 - Account value: $80.48 → $80.48 (no change).
 - Profit / loss since start: -$19.52 on $100.00 money put in.
-- Scout scanned 0 coins, 7 times.
+- Scout scanned 0 coins, 8 times.
 - Nothing passed Scout's filter, so no trade was considered.
 - No trades.
 - Holding: nothing, all cash.
 
-## Copycat: flat
+## Copycat: down $0.34 (-0.35%)
 
-Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended flat at $96.97. Paper money only.
+Quiet day. No insider buy was big enough to copy, so Copycat stayed in cash. The account ended down $0.34 (-0.35%) at $96.63. Paper money only.
 
 **Key takeaways**
 
-- Account value: $96.97 → $96.97 (no change).
-- Profit / loss since start: -$3.03 on $100.00 money put in.
+- Account value: $96.97 → $96.63 (-$0.34, -0.35%).
+- Profit / loss since start: -$3.37 on $100.00 money put in.
 - Spotter read 23 insider filings from the SEC and found 0 insider purchases. Watchlist at day end: 115 stocks.
 - Top pick: PLTR (Palantir Technologies Inc.). 1 insider bought $122,253,519 at about $143.81: Thiel Peter (Director) $122,253,519.
 - Nothing was ready to copy, so no trade was considered.
 - No trades.
-- Holding: CTSO $19.83 (+$0.60 unrealized); GNL $19.00 (+$1.19 unrealized); LRN $16.67 (+$0.56 unrealized); PAM $18.84 (-$0.39 unrealized); PRE $19.61 (+$0.51 unrealized).
+- Holding: CTSO $19.83 (+$0.60 unrealized); GNL $19.00 (+$1.19 unrealized); LRN $16.67 (+$0.56 unrealized); PAM $18.84 (-$0.39 unrealized); PRE $19.27 (+$0.17 unrealized).
 
 ## Forex: flat
 
